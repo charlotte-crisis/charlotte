@@ -1,0 +1,8 @@
+Reference: https://www.youtube.com/playlist?list=PL3viUl9h9k78KsDxXoAzgQ1yRjhm7p8kl
+
+Resources on Ink editor: 
+https://github.com/inkle/ink/blob/6a512190365002f54bd501b0863ded40123cb8e5/Documentation/WritingWithInk.md
+
+https://github.com/inkle/ink/blob/6a512190365002f54bd501b0863ded40123cb8e5/Documentation/RunningYourInk.md
+
+https://github.com/videlais/learning-ink-unity/tree/master (check chapter 8 on how to download Ink)
