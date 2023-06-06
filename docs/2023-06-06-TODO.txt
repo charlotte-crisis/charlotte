@@ -7,8 +7,8 @@ I forgot the term, which was covered in NM3216. haha!
 
 - Move stats into the PlayerStats script/game object. The stats should now be accessed and handled from this single object.
 
-- The slider functionality for selecting stats, upon first glance, can be optimised. But this can be put on the backburner.
-
 - Consider the need for jumping in this game.
 
 - TODO: Instructions (for testers - maybe put in Document)
+
+- TODO: for zhan hong: Look into how Story inkStory object works.

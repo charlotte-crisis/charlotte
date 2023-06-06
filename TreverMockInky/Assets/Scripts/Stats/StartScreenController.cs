@@ -27,50 +27,21 @@ public class StartScreenController : MonoBehaviour
     {
         Debug.Log("Let's-a go!");
 
-        // Set initial values for the sliders
-        intelligenceSlider.value = intelligence;
-        charismaSlider.value = charisma;
-        confidenceSlider.value = confidence;
-        empathySlider.value = empathy;
-
         // Load the Ink story from the JSON file
         inkStory = new Story(inkJSONAsset.text);
 
     }
 
-    // Update the corresponding stat when the sliders are adjusted
-
-    private void UpdateInkVariables()
+    private void SetStats()
     {
-        // Set the values of Ink variables with the updated stats
-        inkStory.variablesState["intelligence"] = intelligence;
-        inkStory.variablesState["charisma"] = charisma;
-        inkStory.variablesState["confidence"] = confidence;
-        inkStory.variablesState["empathy"] = empathy;
-    }
+        // RoundToInt as value is a float.
+        // Alternatively, can cast as such:
+        // (int)slider.value
 
-    public void AdjustIntelligence(float value)
-    {
-        intelligence = Mathf.RoundToInt(value);
-        Debug.Log("intelligence is: " + intelligence);
-    }
-
-    public void AdjustCharisma(float value)
-    {
-        charisma = Mathf.RoundToInt(value);
-        Debug.Log("charisma is: " + charisma);
-    }
-
-    public void AdjustConfidence(float value)
-    {
-        confidence = Mathf.RoundToInt(value);
-        Debug.Log("confidence is: " + confidence);
-    }
-
-    public void AdjustEmpathy(float value)
-    {
-        empathy = Mathf.RoundToInt(value);
-        Debug.Log("empathy is: " + empathy);
+        intelligence = Mathf.RoundToInt(intelligenceSlider.value);
+        charisma = Mathf.RoundToInt(charismaSlider.value);
+        confidence = Mathf.RoundToInt(confidenceSlider.value);
+        empathy = Mathf.RoundToInt(empathySlider.value);
     }
 
     // Update the static PlayerStats object
@@ -83,19 +54,33 @@ public class StartScreenController : MonoBehaviour
                 empathy);
     }
 
+    private void UpdateInkVariables()
+    {
+        // Set the values of Ink variables with the updated stats
+        inkStory.variablesState["intelligence"] = intelligence;
+        inkStory.variablesState["charisma"] = charisma;
+        inkStory.variablesState["confidence"] = confidence;
+        inkStory.variablesState["empathy"] = empathy;
+    }
+
     // Method to handle the button click event to finalize stat adjustments
     public void FinalizeStatAdjustments()
     {
-        // Update the Ink variables with the updated stat values
+        // Get the current slider values.
+        SetStats();
+
+        // Update the Ink variables with the updated stat values.
         UpdateInkVariables();
 
-        // Update the GameObject PlayerStats
+        // Update the GameObject PlayerStats.
         UpdatePlayerStats();
 
         // Continue the Ink story from where it left off
         inkStory.Continue();
         Debug.Log("intelligence is: " + intelligence + "\n charisma is: " + charisma + "\n confidence is: " + confidence + "\n empathy is: " + empathy);
     }
+
+    // TODO: put this in FinalizeStatAdjustments and also hard code the scene name inside.
     public void TransitionToScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
