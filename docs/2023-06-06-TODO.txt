@@ -1,0 +1,14 @@
+=== Notes by Zhan Hong on 06 June 2023 ===
+
+- It might be good to come up with a scene flow diagram. Helps to demarcate which is the scene to start at, and which scenes are connected to which ones.
+I forgot the term, which was covered in NM3216. haha!
+
+-- In fact, any good practices (documentation or whatever) that might serve us well that were taught in NM3216 might be good to apply here. Although I may have forgotten some of what we've learned.
+
+- Move stats into the PlayerStats script/game object. The stats should now be accessed and handled from this single object.
+
+- The slider functionality for selecting stats, upon first glance, can be optimised. But this can be put on the backburner.
+
+- Consider the need for jumping in this game.
+
+- TODO: Instructions (for testers - maybe put in Document)
