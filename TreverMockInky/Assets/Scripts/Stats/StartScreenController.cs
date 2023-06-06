@@ -73,11 +73,24 @@ public class StartScreenController : MonoBehaviour
         Debug.Log("empathy is: " + empathy);
     }
 
+    // Update the static PlayerStats object
+    private void UpdatePlayerStats()
+    {
+        PlayerStats.Instance.UpdatePlayerStats(
+                intelligence,
+                charisma,
+                confidence,
+                empathy);
+    }
+
     // Method to handle the button click event to finalize stat adjustments
     public void FinalizeStatAdjustments()
     {
         // Update the Ink variables with the updated stat values
         UpdateInkVariables();
+
+        // Update the GameObject PlayerStats
+        UpdatePlayerStats();
 
         // Continue the Ink story from where it left off
         inkStory.Continue();
