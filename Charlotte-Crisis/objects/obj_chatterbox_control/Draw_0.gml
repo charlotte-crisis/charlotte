@@ -10,7 +10,7 @@ draw_set_valign(fa_middle);
 
 if (IsChatterbox(chatterbox) && text != undefined) {
 	var _me = (speaker == "Player");
-	var _narrator = (speaker == "Narrator");
+	var _narrator = (speaker == "" || speaker == "Narrator");
 	// draw_sprite_ext(characters, 0, _margin_char,				 room_height, size[_me], size[_me], 0, colour[_me], 1);
 	// draw_sprite_ext(characters, 1, room_width - _margin_char, room_height, size[!_me], size[!_me], 0, colour[!_me], 1);
 	

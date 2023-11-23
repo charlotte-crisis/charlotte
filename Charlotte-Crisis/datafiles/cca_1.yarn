@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 520,320
+__PrivCrochet_position: 600,480
 __PrivCrochet_tags: 
 title: CCA_1
 ---
@@ -58,21 +58,26 @@ Eleanor: "Today our prompt is, LOGO. How do you represent yourself through art?"
 Eleanor: Maybe find something significant to you. Or just go wild and express your creativity!
 
 Narrator; You grab a sheet of paper. What will you draw?
+<<declare $logo = "">>
 -> Duality.
     Narrator: Deep down, you know what this means to you.
     Narrator: The pink and blue form a harmonious circle, with the "add-ons" flaring out to the sides.
+    <<set $logo = "duality">>
 
 -> A strong sense of purpose.
     You've seen a million logos like this, real and fictional alike.
     Can't go wrong with swords crossing a shield. Badass! But also grand.
+    <<set $logo = "purpose">>
 
 -> Peace.
     What everyone aspires to.
     And for you, that means greenery with splashes of yellow flowers, for some reason.
+    <<set $logo = "peace">>
 
 -> Fun.
     Oh yeah! Let’s get crazy.
     You can’t even describe what you’ve put to paper. A modern art masterpiece.
+    <<set $logo = "fun">>
 <<endif>>
 
 // Jump to the respective Node with deskmate.
@@ -83,19 +88,43 @@ __PrivCrochet_position: 800,200
 __PrivCrochet_tags: 
 title: vera
 ---
+// VERA + DUALITY
 Vera: That logo... Is that what I think it is?
 Player: ...what do you mean?
 Vera: It's Very Gender.
 Narrator: Why did she just emphasise those two words?
 Vera: So. Tell me about it. What's the logo mean?
 
-Player: It's nothing.
-Vera raises an eyebrow.
+-> Player: It's nothing.  //2
+    Vera raises an eyebrow.
+    VERA: Oh really?
+    You're under a microscope, and she's scrutinising you.
+    You're being X-rayed by her; she's seeing right through your facade.
+    But you don't really feel this is the time to explain.
+    Player: "Yes..."
+    VERA lowers her eyebrow, and smiles. She's not convinced, but is content to leave you be for now.
+    VERA: "Alright then, keep your secrets.”
+    VERA: “Wanna see my logo?”
+    <<jump vera_duality_end>>
 
-<<jump CCA_1>>
+-> Player: Well, I don't know how you'll take this but... I'm a crossdresser. //3
+    To your surprise, she smiles and nods.
+    VERA: I thought as much. The pink and the blue, the mix of male and female symbols...
+    VERA: Clearly, it’s super important to you.
+    You nod.
+    VERA: Okay, what should I call you then?
+
+-> YOU: Why not take a guess at it?
+    VERA smirks. She looks amused.
+    VERA: Well, if I were to guess, you're making a statement on gender.
+    VERA: Maybe... that you are both male and female, somehow?
+    YOU: Bingo.
+    VERA: Very interesting. Looks like there's more of us out there than we realise. So, how should I really address you?
+
+<<jump vera_duality_namechoice>> // This only triggers for the last 2 options. Choosing the 1st option will jump to the end.
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 800,400
+__PrivCrochet_position: 1000,440
 __PrivCrochet_tags: 
 title: anthony
 ---
@@ -104,7 +133,7 @@ Empty Text
 <<jump CCA_1>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 800,600
+__PrivCrochet_position: 1000,680
 __PrivCrochet_tags: 
 title: bailey
 ---
@@ -113,11 +142,141 @@ Empty Text
 <<jump CCA_1>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 800,800
+__PrivCrochet_position: 1000,920
 __PrivCrochet_tags: 
 title: sage
 ---
 Empty Text
 
 <<jump CCA_1>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1920,200
+__PrivCrochet_tags: 
+title: vera_duality_end
+---
+// 15 and 16
+Eleanor: Hey guys, have y'all showed each other your logos yet?
+Vera: Oh, yes! I need to show you my logo.
+VERA unfolds her paper.
+YOU: You had to fold your paper for this?
+VERA: There's more.
+Glitter falls off the paper, glistening under the lights.
+VERA: Okay, maybe a bit too much, but, y'know, art, right?
+Her design is nothing short of psychedelic. The folds helped to imprint colour symmetrically across the whole paper.
+And in the middle of it all, a familiar symbol...
+VERA: That's on yours, too.
+YOU: Yeah, maybe it's kind of obvious.
+VERA: Well, sometimes being female is the most important thing we have.
+She gets up from her chair.
+VERA: Even if some of us have to be incognito to do it.
+
+ZHAN HONG: This shit's over. Looping back to the start.
+<<jump CCA_1>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1040,0
+__PrivCrochet_tags: 
+title: vera_duality_namechoice
+---
+// 5 or 13
+-> Player: Call me Jiayu.
+    VERA: Hmm, okay. Looks like you’re okay with your… birth name, I’m guessing?
+    VERA: It's a nice name, by the way. I would have had difficulty guessing the gender from it.
+    YOU: Oh yeah. I get misgendered occasionally. You know, people using 'she' with my name.
+    VERA: Hmm? And how does that make you feel?
+
+    -> YOU: Annoyed. //6
+        VERA: Oh? Why?
+        YOU: Like, I guess there's this side of me. But it's not like I want to be called by a female name while being male, right?
+        VERA: Fair enough, no one likes to be called a name they don't identify with. Still, I'm curious...
+        YOU: Yeah?
+        VERA: You keep your male and female personas strictly separate?
+            //at this point might be good to split it up into different nodes.
+            -> YOU: “Is this another ‘how does this make you feel’ question?” //7
+                VERA: "I'm sorry if I'm going too far. I just think it's interesting."
+                Before you can ask why, ELEANOR pops out from around the corner.
+                <<jump vera_duality_end>>
+            
+            -> YOU: “Yes, it’s easier that way.” //8
+                VERA: "I see. Well, I can relate."
+                YOU: "Are you saying...?"
+                VERA: "Isn't it obvious?"
+                You're not sure if it is. 
+                But before you've got time to consider it further, Eleanor pops out from around the corner.
+                <<jump vera_duality_end>>
+
+    -> YOU: Empowered. //9
+        VERA puts her hand on her chest.
+        VERA: Yass slay queen.
+        YOU: Yeah, even though I'm not presenting as female now...
+        VERA: That's okay. You are female if you want to be.
+
+        -> YOU: But doesn't that go against, like, basic biology? // 10
+            VERA: Well, being female isn't basic biology, it's... 
+            You can tell VERA wants to elaborate, but she decides against it.
+            Maybe she has a lot to say?
+            VERA: ... you know what, let's just say none of this is basic. Especially not the biology.
+            VERA: I simply believe that people should be who they're allowed to be.
+            Before you've got time to internalise that, ELEANOR comes around the corner. 
+            <<jump vera_duality_end>>
+
+        -> YOU: Yass slay queen. // 11
+            VERA: That felt good to say, didn’t it?
+            YOU: Yeah! I bet you say it so often.
+            VERA: Well, I do have my moments, but, still... life gets tough.
+            VERA: Some moments are decidedly not yass slay queen.
+            VERA: So like... naur unslay king? You know, the direct opposite.
+            YOU: Oh dear. Is everything... alright?
+            Before Vera can answer, ELEANOR comes around the corner.
+            <<jump vera_duality_end>>
+    
+    -> YOU: I just think it’s funny. // 12
+        VERA: Oh yass, assigned female at school or work or wherever. Just not at birth.
+        YOU: And you would know?
+        VERA: Maybe.
+        Could she be...
+        VERA: But yeah, I'm glad that you're taking it in stride.
+        YOU: You seem to be quite well-versed in these issues.
+        VERA: Let's just say I know what it feels like.
+        <<jump vera_duality_reveal>>
+
+-> Player: Call me Charlotte.
+    VERA: Charlotte! That's a pretty name. I love how it rolls off the tongue.
+    YOU: Thank you! But, uh… Don’t you think I'm weird for calling myself a female name in male form?
+    VERA: You're Charlotte whenever you want to be.
+    YOU: Uh… thanks!
+    VERA: You don't usually hear that, do you?
+    YOU: Nope.
+    VERA: All the more we have to stand up for each other.
+    <<jump vera_duality_reveal>>
+
+
+<<jump vera_duality_end>> //15 and 16
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1720,800
+__PrivCrochet_tags: 
+title: vera_duality_reveal
+---
+YOU: You're a crossdresser too?
+VERA: Well... used to be.
+YOU: Oh… so you used to wear… like, guy clothes?
+VERA smirks to herself.
+VERA: In a way, yes. But that was a long time ago.
+YOU: Then... you stopped?
+VERA: Yes.
+YOU: That’s kinda sad. Why, though?
+VERA: Because I found I could be much happier without them.
+YOU: Now you’re just making me more confused.
+VERA: Is it really so hard to tell?
+YOU: Well, yes! You look totally femme now.
+VERA: Thank you. Then, I’ll spare you the confusion. I’m trans.
+YOU are too stunned to speak.
+VERA: A secret for a secret, okay?
+YOU simply nod. This was a lot to take in.
+VERA: You really are stunned, are you?
+YOU: Yeah... it reminds me of my first time seeing a trans person.
+VERA looks like she's going to ask about it, but ELEANOR steps in.
+<<jump vera_duality_end>>
 ===

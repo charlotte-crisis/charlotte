@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 ChatterboxLoadFromFile("cca_1.yarn");
-ChatterboxAddFunction("bg", background_set_index)
+ChatterboxAddFunction("bg", background_set_index);
 chatterbox = ChatterboxCreate();
 ChatterboxJump(chatterbox, "CCA_1");
 chatterbox_update();
