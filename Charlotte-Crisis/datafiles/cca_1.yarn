@@ -1,0 +1,47 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 537,385
+__PrivCrochet_tags: 
+title: CCA_1
+---
+Narrator: You walk into the classroom. The chairs and tables, previously arranged in neat little rows, are haphazardly arranged into a circle. 
+Narrator: There are some people sitting apart from each other. Who do you sit next to?
+
+-> Player: THE GUY IN THE SPORTS SINGLET.
+    Sports: Hey, what's up, bro.
+    Player: Hello! I'm Jiayu. What's your name?
+    Sports: I'm Anthony.
+    Narrator: How is this guy not freezing to death in his tight singlet? Not even a shirt, let alone a jacket.
+
+-> Player: THE PERSON IN THE BLACK HOODIE.
+    Black Hoodie: Hi...?
+    Player: Hello! I'm Jiayu. What's your name?
+    Black Hoodie: Sage.
+    Narrator: You get the feeling Sage doesn't quite want to talk to you.
+
+-> Player: THE GIRL IN THE LAVENDER T-SHIRT.
+    Lavender T-shirt: Hi!
+    Player: Hello! I'm Jiayu. What's your name?
+    Lavender T-shirt: Bailey! Like the ice cream. Is this your first time here?
+    Player: Yeah, it is. I'm... kind of unsure what to expect?
+
+-> Player; THE GIRL WITH HER HAIR IN A BUN.
+    Hair Bun: Hi, I'm Vera. What's your name?
+    Player: Hello! I'm Jiayu. Nice to meet you.
+    Narrator: Her voice sounds a little low, despite her attempts to make it higher. As though she was dragging out each word.
+
+<<jump CCA1_3>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 869,331
+__PrivCrochet_tags: 
+title: CCA1_3
+---
+Narrator: Before you, there are a few boxes of art materials. Colour pencils, paintbrushes, reams of paper and little canvases atop sheets of newspaper spread out to catch any errant spillage.
+
+Narrator: This club is a little... unorthodox. You’ve heard the reputation. You see one word scrawled across the whiteboard, "LOGO".
+
+Narrator: What could it mean?
+
+<<stop>>
+===
