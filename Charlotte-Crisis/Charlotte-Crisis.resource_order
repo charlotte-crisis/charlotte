@@ -40,6 +40,7 @@
     {"name":"ChatterboxGetOptionArray","order":1,"path":"scripts/ChatterboxGetOptionArray/ChatterboxGetOptionArray.yy",},
     {"name":"ChatterboxVariablesImport","order":9,"path":"scripts/ChatterboxVariablesImport/ChatterboxVariablesImport.yy",},
     {"name":"obj_wall","order":1,"path":"objects/obj_wall/obj_wall.yy",},
+    {"name":"spr_temp_bg","order":3,"path":"sprites/spr_temp_bg/spr_temp_bg.yy",},
     {"name":"__ChatterboxSplitBody","order":13,"path":"scripts/__ChatterboxSplitBody/__ChatterboxSplitBody.yy",},
     {"name":"ChatterboxGetCurrentMetadata","order":2,"path":"scripts/ChatterboxGetCurrentMetadata/ChatterboxGetCurrentMetadata.yy",},
     {"name":"spr_bottoms_f","order":1,"path":"sprites/spr_bottoms_f/spr_bottoms_f.yy",},

@@ -5,8 +5,6 @@
 var _margin_text = room_width * 0.1;
 var _margin_char = 200;
 
-
-
 draw_set_font(font_body);
 draw_set_valign(fa_middle);
 

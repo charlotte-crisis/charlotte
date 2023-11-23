@@ -60,6 +60,7 @@
     {"id":{"name":"ChatterboxGetOptionArray","path":"scripts/ChatterboxGetOptionArray/ChatterboxGetOptionArray.yy",},},
     {"id":{"name":"ChatterboxVariablesImport","path":"scripts/ChatterboxVariablesImport/ChatterboxVariablesImport.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
+    {"id":{"name":"spr_temp_bg","path":"sprites/spr_temp_bg/spr_temp_bg.yy",},},
     {"id":{"name":"__ChatterboxSplitBody","path":"scripts/__ChatterboxSplitBody/__ChatterboxSplitBody.yy",},},
     {"id":{"name":"ChatterboxGetCurrentMetadata","path":"scripts/ChatterboxGetCurrentMetadata/ChatterboxGetCurrentMetadata.yy",},},
     {"id":{"name":"spr_mc_female_idle","path":"sprites/spr_mc_female_idle/spr_mc_female_idle.yy",},},

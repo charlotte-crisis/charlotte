@@ -4,7 +4,7 @@ function wrap(_val, _min, _max) {
 	if (_val > _max) {
 		return _min;
 	} else if (_val < _min) {
-		return max;
+		return _max;
 	} else {
 		return _val;	
 	}
@@ -33,7 +33,7 @@ function background_set_index(_arr) {
 
 function chatterbox_update() {
 	node = ChatterboxGetCurrent(chatterbox);
-	text = ChatterboxGetContentSpeech(chatterbox, 0);
+	text = ChatterboxGetContent(chatterbox, 0);
 	speaker = ChatterboxGetContentSpeaker(chatterbox, 0);
-	// use ChatterboxGetContent if you want the speaker too.
+	// use ChatterboxGetContentSpeech if you want just the text.
 }

@@ -1,47 +1,123 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 537,385
+__PrivCrochet_position: 520,320
 __PrivCrochet_tags: 
 title: CCA_1
 ---
 Narrator: You walk into the classroom. The chairs and tables, previously arranged in neat little rows, are haphazardly arranged into a circle. 
 Narrator: There are some people sitting apart from each other. Who do you sit next to?
 
--> Player: THE GUY IN THE SPORTS SINGLET.
+<<declare $deskmate = "">>
+-> THE GUY IN THE SPORTS SINGLET.
     Sports: Hey, what's up, bro.
     Player: Hello! I'm Jiayu. What's your name?
     Sports: I'm Anthony.
     Narrator: How is this guy not freezing to death in his tight singlet? Not even a shirt, let alone a jacket.
+    <<set $deskmate to "anthony">>
 
--> Player: THE PERSON IN THE BLACK HOODIE.
+-> THE PERSON IN THE BLACK HOODIE.
     Black Hoodie: Hi...?
     Player: Hello! I'm Jiayu. What's your name?
     Black Hoodie: Sage.
     Narrator: You get the feeling Sage doesn't quite want to talk to you.
+    <<set $deskmate to "sage">>
 
--> Player: THE GIRL IN THE LAVENDER T-SHIRT.
+-> THE GIRL IN THE LAVENDER T-SHIRT.
     Lavender T-shirt: Hi!
     Player: Hello! I'm Jiayu. What's your name?
     Lavender T-shirt: Bailey! Like the ice cream. Is this your first time here?
     Player: Yeah, it is. I'm... kind of unsure what to expect?
+    <<set $deskmate to "bailey">>
 
--> Player; THE GIRL WITH HER HAIR IN A BUN.
+-> THE GIRL WITH HER HAIR IN A BUN.
     Hair Bun: Hi, I'm Vera. What's your name?
     Player: Hello! I'm Jiayu. Nice to meet you.
     Narrator: Her voice sounds a little low, despite her attempts to make it higher. As though she was dragging out each word.
+    <<set $deskmate to "vera">>
 
-<<jump CCA1_3>>
+Narrator: Before you, there are a few boxes of art materials. Colour pencils, paintbrushes, reams of paper and little canvases atop sheets of newspaper spread out to catch any errant spillage.
+Narrator: This club is a little... unorthodox. You've heard the reputation. You see one word scrawled across the whiteboard, "LOGO".
+Narrator: What could it mean?
+Eleanor: Okay, everyone! Welcome to our first session of the year!
+
+Narrator: You recognise her as the President of the Art Club. Her face is on the notice board outside.
+Eleanor: "Today our prompt is, LOGO. How do you represent yourself through art?"
+
+<<if $deskmate == "anthony">>
+    Narrator: Anthony folds his arms and looks deep in thought.
+    Eleanor: Maybe find something significant to you. Or just go wild and express your creativity!
+<<elseif $deskmate == "sage">>
+    Narrator: Sage scoffs.
+    Sage: Not in 2 hours.
+<<elseif $deskmate == "bailey">>
+    Narrator: Bailey is already Googling images.
+    Narrator: Glancing over at her phone, you see black bottles.
+<<elseif $deskmate == "vera">>
+    Narrator: Vera is deep in thought.
+
+Eleanor: Maybe find something significant to you. Or just go wild and express your creativity!
+
+Narrator; You grab a sheet of paper. What will you draw?
+-> Duality.
+    Narrator: Deep down, you know what this means to you.
+    Narrator: The pink and blue form a harmonious circle, with the "add-ons" flaring out to the sides.
+
+-> A strong sense of purpose.
+    You've seen a million logos like this, real and fictional alike.
+    Can't go wrong with swords crossing a shield. Badass! But also grand.
+
+-> Peace.
+    What everyone aspires to.
+    And for you, that means greenery with splashes of yellow flowers, for some reason.
+
+-> Fun.
+    Oh yeah! Let’s get crazy.
+    You can’t even describe what you’ve put to paper. A modern art masterpiece.
+<<endif>>
+
+// Jump to the respective Node with deskmate.
+<<jump $deskmate>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 869,331
+__PrivCrochet_position: 800,200
 __PrivCrochet_tags: 
-title: CCA1_3
+title: vera
 ---
-Narrator: Before you, there are a few boxes of art materials. Colour pencils, paintbrushes, reams of paper and little canvases atop sheets of newspaper spread out to catch any errant spillage.
+Vera: That logo... Is that what I think it is?
+Player: ...what do you mean?
+Vera: It's Very Gender.
+Narrator: Why did she just emphasise those two words?
+Vera: So. Tell me about it. What's the logo mean?
 
-Narrator: This club is a little... unorthodox. You’ve heard the reputation. You see one word scrawled across the whiteboard, "LOGO".
+Player: It's nothing.
+Vera raises an eyebrow.
 
-Narrator: What could it mean?
+<<jump CCA_1>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 800,400
+__PrivCrochet_tags: 
+title: anthony
+---
+Empty Text
 
-<<stop>>
+<<jump CCA_1>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 800,600
+__PrivCrochet_tags: 
+title: bailey
+---
+Empty Text
+
+<<jump CCA_1>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 800,800
+__PrivCrochet_tags: 
+title: sage
+---
+Empty Text
+
+<<jump CCA_1>>
 ===
