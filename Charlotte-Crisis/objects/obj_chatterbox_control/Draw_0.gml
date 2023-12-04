@@ -14,6 +14,7 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 	// draw_sprite_ext(characters, 1, room_width - _margin_char, room_height, size[!_me], size[!_me], 0, colour[!_me], 1);
 	
 	var _yy = room_height - (_margin_text / 2);
+	var _xx; // to be set below.
 	
 	draw_rectangle_center(room_width / 2, _yy, room_width, _margin_text, false, c_black, 0.5);
 	
@@ -22,11 +23,16 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 	var _player = speaker_is_player();
 	var _narrator = speaker_is_narrator();
 	var _monologue = speaker_is_inner_monologue();
-	
-	draw_set_halign((_player || _narrator || _monologue) ? fa_left : fa_right);
-	
-	// Margin from left or from right.
-	var _xx = (_player || _narrator) ? _margin_text : room_width - _margin_text;
+
+	// Left align and left margin if it's player, narrator, or monologue
+	// right algin otherwise.
+	if (_player || _narrator || _monologue) {
+		draw_set_halign(fa_left);
+		_xx = _margin_text;
+	} else {
+		draw_set_halign(fa_right);
+		_xx = room_width - _margin_text;
+	}
 	
 	// Draw the text.
 	// If inner monologue: Set italic and do not print speaker, only speech
