@@ -13,3 +13,4 @@ size = [0.7, 0.75];
 colour = [c_ltgray, c_white];
 
 
+obj_Player.set_is_talking(true);

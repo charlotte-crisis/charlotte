@@ -23,6 +23,7 @@ if (ChatterboxIsWaiting(chatterbox) && keyboard_check_pressed(vk_space)) {
 }
 
 if ChatterboxIsStopped(chatterbox) {
+	obj_Player.set_is_talking(false);
 	instance_destroy();
 }
 

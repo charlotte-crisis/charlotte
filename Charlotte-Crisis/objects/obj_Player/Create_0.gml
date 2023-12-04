@@ -11,4 +11,8 @@ key_left = 0;
 key_right = 0;
 key_jump = 0;
 
+is_talking = false;
 
+set_is_talking = function(_is_talk) {
+	is_talking = _is_talk;
+}
