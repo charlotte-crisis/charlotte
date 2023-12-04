@@ -1,7 +1,7 @@
 {
   "resourceType": "GMFont",
   "resourceVersion": "1.0",
-  "name": "font_body",
+  "name": "font_body_italic",
   "AntiAlias": 1,
   "applyKerning": 0,
   "ascender": 15,

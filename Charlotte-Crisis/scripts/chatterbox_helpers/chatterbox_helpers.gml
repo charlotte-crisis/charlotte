@@ -33,7 +33,26 @@ function background_set_index(_arr) {
 
 function chatterbox_update() {
 	node = ChatterboxGetCurrent(chatterbox);
-	text = ChatterboxGetContent(chatterbox, 0);
+	speaker_and_speech = ChatterboxGetContent(chatterbox, 0);
+	speech = ChatterboxGetContentSpeech(chatterbox, 0);
 	speaker = ChatterboxGetContentSpeaker(chatterbox, 0);
 	// use ChatterboxGetContentSpeech if you want just the text.
+}
+
+// If you want to show dialogue history
+function chatterbox_store_previous_speech() {
+	previous_speech = ChatterboxGetContentSpeech(chatterbox, 0);
+	previous_speaker = ChatterboxGetContentSpeaker(chatterbox, 0);
+}
+
+function speaker_is_player() {
+	return (speaker == "YOU");
+}
+
+function speaker_is_inner_monologue() {
+	return (speaker == "INNER_MONOLOGUE");
+}
+
+function speaker_is_narrator() {
+	return (speaker == "" || speaker == "NARRATOR");
 }

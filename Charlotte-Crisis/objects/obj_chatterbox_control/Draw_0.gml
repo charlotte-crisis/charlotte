@@ -4,13 +4,12 @@
 // Base it off of room width.
 var _margin_text = room_width * 0.1;
 var _margin_char = 200;
+var _linesep = 15;
 
-draw_set_font(font_body);
+draw_set_font(fnt_body);
 draw_set_valign(fa_middle);
 
-if (IsChatterbox(chatterbox) && text != undefined) {
-	var _me = (speaker == "Player");
-	var _narrator = (speaker == "" || speaker == "Narrator");
+if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 	// draw_sprite_ext(characters, 0, _margin_char,				 room_height, size[_me], size[_me], 0, colour[_me], 1);
 	// draw_sprite_ext(characters, 1, room_width - _margin_char, room_height, size[!_me], size[!_me], 0, colour[!_me], 1);
 	
@@ -18,10 +17,27 @@ if (IsChatterbox(chatterbox) && text != undefined) {
 	
 	draw_rectangle_center(room_width / 2, _yy, room_width, _margin_text, false, c_black, 0.5);
 	
-	draw_set_halign((_me || _narrator) ? fa_left : fa_right);
-	var _xx = (_me || _narrator) ? _margin_text : room_width - _margin_text;
+	// Align text left if speaker is Player, Narrator, or Inner Monologue
+	// Align right otherwise
+	var _player = speaker_is_player();
+	var _narrator = speaker_is_narrator();
+	var _monologue = speaker_is_inner_monologue();
 	
-	draw_text_ext(_xx, _yy, text, 15, room_width - 2 * _margin_text);
+	draw_set_halign((_player || _narrator || _monologue) ? fa_left : fa_right);
+	
+	// Margin from left or from right.
+	var _xx = (_player || _narrator) ? _margin_text : room_width - _margin_text;
+	
+	// Draw the text.
+	// If inner monologue: Set italic and do not print speaker, only speech
+	if (_monologue) {
+		draw_set_font(fnt_body_italic);
+		draw_text_ext(_xx, _yy, speech, _linesep, room_width - 2 * _margin_text);	
+		draw_set_font(fnt_body);
+		
+	} else {
+		draw_text_ext(_xx, _yy, speaker_and_speech, _linesep, room_width - 2 * _margin_text);	
+	}
 	
 	if (ChatterboxGetOptionCount(chatterbox)) {
 		draw_set_halign(fa_center);
