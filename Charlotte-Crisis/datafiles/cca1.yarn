@@ -1,9 +1,13 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 520,360
+__PrivCrochet_position: 320,360
 __PrivCrochet_tags: 
 title: 1
 ---
+<<declare $int = 3>>
+<<declare $cha = 3>>
+<<declare $emp = 3>>
+
 You enter the club room for the first time.
 The words "self-portrait" are projected onto the screen.
 You should probably explore what and who is in the club room first.
@@ -18,7 +22,7 @@ Set your name and presentation.
 <<stop>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 720,160
+__PrivCrochet_position: 520,160
 __PrivCrochet_tags: 
 title: 2
 ---
@@ -32,7 +36,7 @@ Vera: "Hi, {$name}, I'm Vera."
 <<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 920,160
+__PrivCrochet_position: 760,360
 __PrivCrochet_tags: 
 title: 5
 ---
@@ -56,7 +60,7 @@ Eleanor: "Today's theme is quite simple; self-portrait."
 <<jump 6>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1120,160
+__PrivCrochet_position: 960,360
 __PrivCrochet_tags: 
 title: 6
 ---
@@ -67,7 +71,7 @@ You start drawing. Before you know it, 20 minutes have passed.
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1320,160
+__PrivCrochet_position: 1160,360
 __PrivCrochet_tags: 
 title: 7
 ---
@@ -105,5 +109,130 @@ You feel the pressure of four pairs of eyes on you… what will you say?
 -> You: "It's okay, I guess. Not much else to say."
     Vera: "Alright then. Next person?"
     <<jump 8>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1360,360
+__PrivCrochet_tags: 
+title: 8
+---
+Nadia: "Uh... Okay, I'll go next! I'm Nadia, and this is my self-portrait."
+Nadia pulls out... a picture of a man drawn in anime style?
+Anthony: "Uh... wrong picture?"
+Nadia: "Oh! So silly of me. Or is it?"
+Nadia raises an eyebrow with a devious grin on her face.
+She pulls out another drawing, this time of her side profile.
+Nadia: "Yep, here's mine. I'm sorry I'm worse at drawing female than male faces..."
+Vera: "It looks good!"
+Anthony: "Even if it's very anime-styled."
+Your turn to comment...
 
+-> You: "Hmm. Why did you draw in anime style?"
+    Nadia: "Well... I guess it's easier, right?"
+    Nadia: "After all, it was designed for 2D artists."
+    -> You: "So cliche."
+        Anthony: "Well, I didn't want to say that out loud."
+        Nadia: "Oh no..." (-5% Nadia relationship)
+        Vera: "That's so rude. Let her live."
+        Nadia: "I should have known people would laugh at me for being a weeb."
+        Eleanor: "Please, {$name}. Let's be respectful. Anyway, Anthony, what do you have?"
+        <<jump 9>>
+    -> You: "The anime style makes it good."
+        Nadia: "Really?"
+        You: "Yeah. It's your own style. Just like Vera with her rainbows."
+        You: "Take pride in it."
+        Nadia: "Thanks! It's rare to hear that." (+5% Nadia relationship)
+        You: "Let me guess, people laugh at you for being a weeb."
+        Nadia: "Ya..."
+        Eleanor: "Well, anime is pretty mainstream, right?"
+        Eleanor: "Who knows, maybe we'll do anime in a future week! Then you can really cook."
+        Nadia: "Uh... that's a lot, but thanks!!! Okay, shouldn't we go to the next person already?"
+        <<jump 9>>
+    
+    -> You: "What about the hot guy?" (3 CHA required 3)
+        <<if $cha  > 3>>
+            Nadia: "Huh? What? It's nothing! I'm just experimenting!"
+            Vera: "Yeah, coming from Miss 'I'm better at drawing male faces'..."
+            Nadia: "Uh... I'll show you guys when I'm free! Let's move on to the next person!"
+        <<else>>
+            Nadia: "Hey... that's intrusive."
+            You: "But you just showed it just now!"
+            Eleanor: "{$name}, if Nadia's not okay with showing her personal art, don't press her."
+        <<endif>>
+        <<jump 9>>
+
+-> You: "It's okay, I guess. Not much else to say."
+    Nadia: "Alright then. Next person?"
+
+// dont know how the options are supposed to be laid out so i tried my best
+<<jump 9>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 520,360
+__PrivCrochet_tags: 
+title: 3
+---
+You: "Hi! I'm {$name}."
+Anthony: "Hi, I'm Anthony. Please don't disturb me."
+Anthony seems very engrossed in his art. Let him be.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 520,560
+__PrivCrochet_tags: 
+title: 4
+---
+You: "Hi! I'm {$name}."
+Nadia: "Hi, {$name}! I'm Nadia."
+<<if $name == "Charlotte">>
+    Nadia: "By the way, nice outfit!"
+    You: "Thanks!" (+ 5% confidence)
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1560,360
+__PrivCrochet_tags: 
+title: 9
+---
+Anthony pulls out a picture of an anthill, with ants all around it.
+Anthony: "Hi, I'm Anthony. Ant-thony. Get it?"
+Eleanor: "Uh... are you sure that's your self-portrait?"
+Anthony: "What? It represents me, what. Insignificant, destined to be squished."
+Vera: "Don't say that."
+Nadia: "Yeah, that's quite self-pitying."
+Your turn to comment.
+
+-> You: "It's okay, I guess. Not much else to say."
+    Anthony: "Alright then."
+    Eleanor: "Okay, next is you, {$name}! Show us what you got."
+
+-> You: "I'll be honest, that sounds kind of pathetic."
+    Anthony: "What?"
+    You: "Yeah. It's almost like you're begging for our pity."
+    Vera: "Okay, that's quite uncalled for..."
+    Nadia: "The art isn't all bad."
+    Eleanor: "Yeah, please, let's focus on the art here."
+    Eleanor: "Let's see your piece."
+
+-> You: "At least Vera and Nadia drew themselves. You just drew something generic."
+    Vera: "Nah, don't drag us into this. He drew what he wanted to."
+    Eleanor: "We all have to start somewhere, {$name}. Please respect that."
+    Anthony: "It's okay. I know I'm useless." (-5% Anthony relationship)
+    Eleanor: "Please, let's focus on the art here."
+    Eleanor: "Let's see your piece."
+
+-> You: "Well, ants aren't all bad, right?" (3 INT required)
+    <<if $int >= 3>>
+        Anthony: "What?"
+        You: "Yeah. Hardworking, can lift 100 times their body weight, all that stuff."
+        Anthony: "Okay, and?"
+        You: "That's just another way to interpret your art."
+        You: "Why see only the bad side when there's a good side to it too?"
+        Anthony: "I guess so..." (+5% Anthony relationship)
+        Eleanor: "Exactly. Okay, what about you, what did you draw?"
+    <<else>>
+        Anthony: "What?"
+        You: "Uh... ants are..."
+        Anthony: "Trash. Pests. Like me."
+        You feel like you haven't contributed to this conversation. Moving on...
+        Eleanor: "Okay, what about you, what did you draw?"
+    <<endif>>
 ===
