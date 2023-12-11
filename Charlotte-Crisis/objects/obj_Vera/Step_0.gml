@@ -3,11 +3,19 @@
 
 // interact with vera
 if (!obj_Player.is_talking) {
+	if (keyboard_check_pressed(vk_space) && place_meeting(x,y,obj_Player)) {
+		obj_chatterbox_control.chatterbox_set("2");
+	}
 	
-if (keyboard_check_pressed(vk_space) && place_meeting(x,y,obj_Player)) {
-	obj_chatterbox_control.chatterbox_set("2");
+	if (place_meeting(x,y,obj_Player)) {
+		indicator.visible = true;
+	} else {
+		indicator.visible = false;	
+	}
 }
-}
+
+
+
 
 
 
