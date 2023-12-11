@@ -22,11 +22,10 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 	// Align right otherwise
 	var _player = speaker_is_player();
 	var _narrator = speaker_is_narrator();
-	var _monologue = speaker_is_inner_monologue();
 
 	// Left align and left margin if it's player, narrator, or monologue
 	// right algin otherwise.
-	if (_player || _narrator || _monologue) {
+	if (_player || _narrator) {
 		draw_set_halign(fa_left);
 		_xx = _margin_text;
 	} else {
@@ -36,13 +35,13 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 	
 	// Draw the text.
 	// If inner monologue: Set italic and do not print speaker, only speech
-	if (_monologue) {
+	if (_narrator) {
 		draw_set_font(fnt_body_italic);
 		draw_text_ext(_xx, _yy, speech, _linesep, room_width - 2 * _margin_text);	
 		draw_set_font(fnt_body);
 		
 	} else {
-		draw_text_ext(_xx, _yy, speaker_and_speech, _linesep, room_width - 2 * _margin_text);	
+		draw_text_ext(_xx, _yy, speaker + ": " + speech, _linesep, room_width - 2 * _margin_text);	
 	}
 	
 	if (ChatterboxGetOptionCount(chatterbox)) {

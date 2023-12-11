@@ -35,7 +35,7 @@ function chatterbox_update() {
 	node = ChatterboxGetCurrent(chatterbox);
 	speaker_and_speech = ChatterboxGetContent(chatterbox, 0);
 	speech = ChatterboxGetContentSpeech(chatterbox, 0);
-	speaker = ChatterboxGetContentSpeaker(chatterbox, 0);
+	speaker = string_upper(ChatterboxGetContentSpeaker(chatterbox, 0));
 	// use ChatterboxGetContentSpeech if you want just the text.
 }
 
@@ -47,10 +47,6 @@ function chatterbox_store_previous_speech() {
 
 function speaker_is_player() {
 	return (speaker == "YOU");
-}
-
-function speaker_is_inner_monologue() {
-	return (speaker == "INNER_MONOLOGUE");
 }
 
 function speaker_is_narrator() {

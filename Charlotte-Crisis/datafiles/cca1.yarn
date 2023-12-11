@@ -1,0 +1,109 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 520,360
+__PrivCrochet_tags: 
+title: 1
+---
+You enter the club room for the first time.
+The words "self-portrait" are projected onto the screen.
+You should probably explore what and who is in the club room first.
+
+(A and D to move left and right. Press Space to interact with a person.)
+
+Set your name and presentation.
+-> Charles (Male)
+    <<set $name = "Charles">>
+-> Charlotte (Female)
+    <<set $name = "Charlotte">>
+<<stop>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 720,160
+__PrivCrochet_tags: 
+title: 2
+---
+You: "Hi! I'm {$name}."
+Vera: "Hi, {$name}, I'm Vera."
+<<if $name == "Charlotte">>
+    Vera: "Wow, you look great!"
+    You: "Thanks!" + 5% confidence)
+<<else>>
+    Vera: You look... Male.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 920,160
+__PrivCrochet_tags: 
+title: 5
+---
+There's a few pieces of paper and a box of colour pencils before you.
+Before you can ask what you should do with them, a girl you've never seen before enters the room.
+New Girl: "Hi! Wait. I don't think I've seen you before..."
+You: "Hi, I'm {$name}."
+New Girl: "Hello! I'm Eleanor. I kind of keep this club going, I guess."
+Eleanor: "Today's theme is quite simple; self-portrait."
+
+-> You: "Isn't that quite hard?"
+    Eleanor: "Nah, don't doubt yourself!"
+    Eleanor: "We all have to start somewhere."
+    Eleanor: "Don't worry about whether your work is good, just get it out there." (+ 5% confidence)
+    You: "Thank you for that."
+    Eleanor: "No problem! We'll share our art in 20 minutes."
+
+-> You: "That sounds simple enough."
+    Eleanor: "Awesome! We'll share our art in 20 minutes."
+    Eleanor: "Can't wait to see what you'll make!"
+<<jump 6>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1120,160
+__PrivCrochet_tags: 
+title: 6
+---
+You take out your phone for a reference image. Is it going to be your male, or female self?
+-> Male
+-> Female
+You start drawing. Before you know it, 20 minutes have passed.
+<<jump 7>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1320,160
+__PrivCrochet_tags: 
+title: 7
+---
+Eleanor: "Alright, let's pause, everyone."
+Eleanor: "Shall we share what we've drawn? Who would like to go first?"
+There's an awkward silence...
+Eleanor: "I know we're all new here, but someone's gotta start first. Don't worry! No judgement."
+Vera: "Alright, fine. Hi everyone, I'm Vera, she/her, and here's what I got."
+Vera reveals her drawing. It's her face on a very psychedelic background.
+Vera: "Yes, I know, lots of rainbows."
+Nadia: "Hmm, it's a bit hard to see your face, but still, really nice!"
+Anthony just shrugs.
+You feel the pressure of four pairs of eyes on you… what will you say?
+
+-> You: "What do the rainbows mean?"
+    Vera: "It represents my freedom to love, and to be myself." (+ 10 XP)
+    Anthony: "Of course. Coming from someone who needs to introduce herself with pronouns."
+    Vera: "I'll pretend I didn't hear that. Anyway..."
+    -> You: "It looks nice!"
+        Vera: "Thank you~ You like rainbows too?" (+5% Vera relationship)
+        You: "I don't see a lot of them around. But yours looks good."
+        Vera: "Yes, the world could do with a lot more colour."
+        Vera: "I guess that's what I want to say through my art, too."
+        Vera: "Anyway, who's next?"
+        <<jump 8>>
+    
+    -> You: "It looks excessive."
+        Vera: "Excuse me?"
+        You: "Yeah. Too many rainbows. And you didn't finish your face."
+        Vera: "Okay, fine. You didn't need to put it down like that, though." (-5% Vera relationship)
+        Anthony: "Actually, I agree also. So many colours for what?" (+5% Anthony relationship)
+        Eleanor: "Okay, moving on..."
+        <<jump 8>>
+
+-> You: "It's okay, I guess. Not much else to say."
+    Vera: "Alright then. Next person?"
+    <<jump 8>>
+
+===
