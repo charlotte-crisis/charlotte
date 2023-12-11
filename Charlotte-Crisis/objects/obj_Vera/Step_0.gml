@@ -5,6 +5,7 @@
 if (!obj_Player.is_talking) {
 	if (keyboard_check_pressed(vk_space) && place_meeting(x,y,obj_Player)) {
 		obj_chatterbox_control.chatterbox_set("2");
+		indicator.visible = false;
 	}
 	
 	if (place_meeting(x,y,obj_Player)) {
