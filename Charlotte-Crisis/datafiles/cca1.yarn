@@ -34,6 +34,7 @@ Vera: "Hi, {$name}, I'm Vera."
 <<else>>
     Vera: You look... Male.
 <<endif>>
+<<stop>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 760,360
@@ -60,18 +61,20 @@ Eleanor: "Today's theme is quite simple; self-portrait."
 <<jump 6>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 960,360
+__PrivCrochet_position: 1000,360
 __PrivCrochet_tags: 
 title: 6
 ---
 You take out your phone for a reference image. Is it going to be your male, or female self?
 -> Male
+    <<set $drawing = "Male">>
 -> Female
+    <<set $drawing = "Female">>
 You start drawing. Before you know it, 20 minutes have passed.
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1160,360
+__PrivCrochet_position: 1240,360
 __PrivCrochet_tags: 
 title: 7
 ---
@@ -111,7 +114,7 @@ You feel the pressure of four pairs of eyes on you… what will you say?
     <<jump 8>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1360,360
+__PrivCrochet_position: 1480,360
 __PrivCrochet_tags: 
 title: 8
 ---
@@ -188,7 +191,7 @@ Nadia: "Hi, {$name}! I'm Nadia."
 <<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1560,360
+__PrivCrochet_position: 1720,360
 __PrivCrochet_tags: 
 title: 9
 ---
@@ -235,4 +238,58 @@ Your turn to comment.
         You feel like you haven't contributed to this conversation. Moving on...
         Eleanor: "Okay, what about you, what did you draw?"
     <<endif>>
+
+// At the end of Anthony's, it's your turn.
+<<if $name == "Charlotte">>
+    <<if $drawing == "Female">>
+        <<jump 10>>
+    <<else>>
+        <<jump 15>>
+    <<endif>>
+<<else>>
+    <<if $drawing == "Female">>
+        <<jump 13>>
+    <<else>>
+        <<jump 18>>
+    <<endif>>
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1960,160
+__PrivCrochet_tags: 
+title: 10
+---
+You: "Hi, I'm Charlotte, and this drawing is me. I tried my best..."
+Nadia: "Ooh. I can see some resemblance, but... I'm not sure if I should say it..."
+You: "What is it?"
+Nadia: "Well, I may not be the best at drawing female bodies."
+Nadia: "But your drawing seems a little more... rectangular? Like, it's not curvy."
+
+-> You: "I'm just built different." (3 CHA Required)
+    <<if $cha < 3>>
+        -5% confidence
+    <<endif>>
+    Anthony: "Yeah, can tell. Your voice is as low as mine - "
+    Vera: "Hey. Every woman has a different body shape. Not everyone's got an hourglass figure, or a high voice." (+ 10 XP)
+    Nadia: "Yeah, I suppose..."
+    Anthony: "Then what about you, Vera? How is it that you're taller than me even though you're a woman?"
+    Eleanor: "Anthony, enough. We're not here to comment on appearances. Only art."
+    Anthony: "Fine. But I think Nadia is right. The art doesn't look womanly enough."
+    Nadia: "Charlotte, I'm so sorry..."
+
+    -> You: "It's fine, you were coming from an artistic perspective."
+        Nadia: "Yeah, that was my only intent. I didn't want to offend you personally."
+        Nadia: "I can recommend some websites where I learned to draw, maybe they would help?" (+ 5 XP)
+        Anthony smirks.
+        Eleanor: "Thanks Nadia. Please remember, we're just here to create."
+        Eleanor: "Oh dear, look at the time, we're almost done!"
+        (go to 11)
+    
+    -> You: "Just stop."
+        Nadia: "Okay..."
+        Anthony: "Wow, you can't even take feedback."
+        Vera: "Charlotte's feelings are valid."
+        Anthony: "Sure, whatever. Men in dresses defending each other." (-5% Anthony relationship)
+        Eleanor: "Anthony, stop!"
+        Eleanor: "Sorry, everyone, we're out of time..."
 ===
