@@ -6,6 +6,8 @@ chatterbox = ChatterboxCreate();
 ChatterboxJump(chatterbox, "1");
 chatterbox_update();
 
+ChatterboxAddFunction("setGender", set_player_gender); 
+
 option_index = 0;
 
 size = [0.7, 0.75];

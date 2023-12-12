@@ -17,8 +17,10 @@ You should probably explore what and who is in the club room first.
 Set your name and presentation.
 -> Charles (Male)
     <<set $name = "Charles">>
+    <<setGender(0)>>
 -> Charlotte (Female)
     <<set $name = "Charlotte">>
+    <<setGender(1)>>
 <<stop>>
 ===
 __PrivCrochet_colorID: 0

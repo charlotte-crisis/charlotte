@@ -32,8 +32,8 @@
   "nineSlice": null,
   "origin": 1,
   "parent": {
-    "name": "Moving",
-    "path": "folders/Sprites/Male MC/Moving.yy",
+    "name": "Walking",
+    "path": "folders/Sprites/Male MC/Walking.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

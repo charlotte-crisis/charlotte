@@ -11,16 +11,16 @@ if (_move > 0) {
 	facing_direction = 1;	
 }
 
-var _frame = ++img_frame/10 % 8
+var _frame = ++img_frame/10 % num_of_frames;
 
 if (_move != 0) {
-	draw_sprite_ext(spr_mc_male_walking_legs, _frame, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(spr_mc_male_walking_torso, _frame, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(spr_mc_male_walking_shorts, _frame, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(spr_mc_male_walking_head, _frame, x, y, facing_direction, 1, 0, c_white, 1);	
+	draw_sprite_ext(walking_legs[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
+	draw_sprite_ext(walking_torso[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
+	draw_sprite_ext(walking_shorts[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
+	draw_sprite_ext(walking_head[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);	
 } else {
-	draw_sprite_ext(spr_mc_male_idle_legs, -1, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(spr_mc_male_idle_torso, -1, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(spr_mc_male_idle_shorts, -1, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(spr_mc_male_idle_head, -1, x, y, facing_direction, 1, 0, c_white, 1);
+	draw_sprite_ext(idle_legs[gender], -1, x, y, facing_direction, 1, 0, c_white, 1);
+	draw_sprite_ext(idle_torso[gender], -1, x, y, facing_direction, 1, 0, c_white, 1);
+	draw_sprite_ext(idle_shorts[gender], -1, x, y, facing_direction, 1, 0, c_white, 1);
+	draw_sprite_ext(idle_head[gender], -1, x, y, facing_direction, 1, 0, c_white, 1);
 }
