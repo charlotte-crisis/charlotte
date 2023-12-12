@@ -1,8 +1,9 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_vera",
+  "name": "obj_npc",
   "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
@@ -11,10 +12,7 @@
     "name": "NPC",
     "path": "folders/Objects/NPC.yy",
   },
-  "parentObjectId": {
-    "name": "obj_npc",
-    "path": "objects/obj_npc/obj_npc.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -30,10 +28,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_classmate_f",
-    "path": "sprites/spr_classmate_f/spr_classmate_f.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

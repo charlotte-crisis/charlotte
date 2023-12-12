@@ -48,6 +48,7 @@
     {"name":"ChatterboxVariablesExport","order":7,"path":"scripts/ChatterboxVariablesExport/ChatterboxVariablesExport.yy",},
     {"name":"ChatterboxLocalizationLoad","order":2,"path":"scripts/ChatterboxLocalizationLoad/ChatterboxLocalizationLoad.yy",},
     {"name":"ChatterboxLoadFromString","order":5,"path":"scripts/ChatterboxLoadFromString/ChatterboxLoadFromString.yy",},
+    {"name":"obj_npc","order":2,"path":"objects/obj_npc/obj_npc.yy",},
     {"name":"ChatterboxGetContentCount","order":3,"path":"scripts/ChatterboxGetContentCount/ChatterboxGetContentCount.yy",},
     {"name":"ChatterboxSourceNodeExists","order":10,"path":"scripts/ChatterboxSourceNodeExists/ChatterboxSourceNodeExists.yy",},
     {"name":"__ChatterboxMetadataStringIsLineHash","order":12,"path":"scripts/__ChatterboxMetadataStringIsLineHash/__ChatterboxMetadataStringIsLineHash.yy",},

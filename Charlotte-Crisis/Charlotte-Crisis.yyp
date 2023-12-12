@@ -72,6 +72,7 @@
     {"id":{"name":"ChatterboxVariablesExport","path":"scripts/ChatterboxVariablesExport/ChatterboxVariablesExport.yy",},},
     {"id":{"name":"ChatterboxLocalizationLoad","path":"scripts/ChatterboxLocalizationLoad/ChatterboxLocalizationLoad.yy",},},
     {"id":{"name":"ChatterboxLoadFromString","path":"scripts/ChatterboxLoadFromString/ChatterboxLoadFromString.yy",},},
+    {"id":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},},
     {"id":{"name":"ChatterboxGetContentCount","path":"scripts/ChatterboxGetContentCount/ChatterboxGetContentCount.yy",},},
     {"id":{"name":"ChatterboxSourceNodeExists","path":"scripts/ChatterboxSourceNodeExists/ChatterboxSourceNodeExists.yy",},},
     {"id":{"name":"__ChatterboxMetadataStringIsLineHash","path":"scripts/__ChatterboxMetadataStringIsLineHash/__ChatterboxMetadataStringIsLineHash.yy",},},
