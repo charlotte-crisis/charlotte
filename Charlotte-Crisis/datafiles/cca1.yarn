@@ -255,7 +255,7 @@ Your turn to comment.
 <<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1960,160
+__PrivCrochet_position: 1960,0
 __PrivCrochet_tags: 
 title: 10
 ---
@@ -351,7 +351,7 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
 <<jump 11>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2200,160
+__PrivCrochet_position: 2200,0
 __PrivCrochet_tags: 
 title: 11
 ---
@@ -373,7 +373,7 @@ Vera: "Hey Charlotte. Are you feeling okay?"
 <<jump 12>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2440,160
+__PrivCrochet_position: 2440,0
 __PrivCrochet_tags: 
 title: 12
 ---
@@ -461,5 +461,309 @@ Vera: "You know, trans women."
         Vera: "Let's meet up soon?"
         You: "Sure, I'll let you know." (END)
 
+<<stop>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1960,240
+__PrivCrochet_tags: 
+title: 13
+---
+You: "Hi, I'm Charlie, but I also go by Charlotte when I feel female, so here's what I drew..."
+Anthony: "Wait... why?"
+You: "Why what?"
+Anthony: "Why do you feel female?"
+
+-> You: "Don't you ever wonder what it's like to be the other gender?"
+    Anthony: "Sounds kinda sus to me."
+    Vera: "Well, you're just missing out then. I'm sure Charlotte is living her best life."
+    Anthony: "You're just delusional. How can a man look pretty in a dress?"
+    Nadia: "I don't know, I've seen some anime guys in maid dresses - "
+    Anthony: "Seriously? Those are all just jokes and fan art."
+
+    -> You: "You should try it. After all, I have." 
+        Vera: "So that's the real inspiration for Charlotte."
+        Anthony: "Oh my god, that's so weird."
+        Eleanor: "That's enough, Anthony."
+    
+    -> You: "Yeah, just jokes."
+        Anthony: "Right? It's not like you actually are deluded enough to think you can look like a girl."
+        Anthony: "I've seen them before, they're all super tall and their faces are super square - "
+        Eleanor: "That's enough, Anthony."
+
+-> You: "I'm genderqueer."
+    Anthony: "What the hell is that even? Some alphabet mafia shit?" 
+    Vera: "You got a problem with queer people?"
+    Nadia: "Guys... please... chill out..."
+    Eleanor: "Okay, everyone, enough."
+    Anthony: "See la, so agitated for what?"
+    Vera: "You'd better respect everyone's identity here."
+    Anthony: "Who made you the boss?"
+    Eleanor: "No, Anthony, she's right. You started this."
+    Anthony: "Fine, I'll just shut up then."
+
+-> You: "Cannot ah?" (CHA 3)
+    You felt confident saying that. Anthony certainly doesn't, upon hearing it. (+5% confidence) <<if $cha >= 3>>
+    Anthony: "Does no one else feel weirded out by this?"
+    Vera: "What's so weird about it? Charlotte is a woman if she wants to be."
+    Nadia: "You look good, Charlotte."
+    Anthony: "Fine. The whole goddamn world is upside down anyway."
+    Vera: "You are Charlotte if you want to be. Don't let anyone tell you otherwise."
+    Eleanor: "That's enough, Anthony."
+
+-> You: "I don't know... I just feel like it."
+    Anthony: "Wow. Your drawing sure doesn't show it."
+    Nadia: "Come on, he had 20 minutes. That's barely enough time."
+    Anthony: "Then stick to drawing a male. You can see that in the mirror already."
+    Vera: "I think Charlotte's drawing is good!"
+    Anthony: "Don't be delusional. It's out of proportion."
+    Anthony: "And come to think of it, your proportions are also kinda weird, aren't they, Vera?"
+    Eleanor: "Enough! Anthony, that's going too far."
+    Anthony: "Fine. I stand by what I said."
+    Vera: "Charlotte, don't listen to him. You're valid."
+
+<<jump 14>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2200,240
+__PrivCrochet_tags: 
+title: 14
+---
+Eleanor: "We didn't even get to comment on Charlotte's art... if you want to talk about it, I can have a look later."
+Eleanor: "Anyway, our time's up for this week. See you next week!"
+<<stop>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1960,480
+__PrivCrochet_tags: 
+title: 15
+---
+You: "Hi, I'm Charlotte, but this is how I usually look like."
+Anthony: "So you're actually a guy."
+You're really being put on the spot here. How will you respond?
+
+-> You: "Yeah..."
+    Anthony: "Is this some kind of fetish?"
+    Eleanor: "Anthony, please."
+    Anthony: "Men don't wear dresses." (-5% Anthony relationship; -5% confidence)
+
+    -> You: "Why not?"
+        Anthony: "What, did you not get taught this when you were a child?"
+        Vera: "Let people wear what they want. It's not your business."
+        Anthony: "Neither is it yours."
+        Vera: "It's my business if you're offending people - "
+        Eleanor: "Thank you, Vera, that's quite enough."
+    
+    -> You: "Yeah, I guess..."
+        Anthony: "You're seriously messed up in the head. You need mental help." (-5% confidence)
+        Vera: "You're saying that as if mental health support is a bad thing."
+        Anthony: "It's not. Whatever the hell he's doing is, though."
+        Vera: "Oh, you have a problem with queer people?"
+        Eleanor: "Vera, enough! Anthony, you too."
+
+-> You: "But what is a guy?" (INT 3)
+    Anthony: "What?"
+    <<if $int >= 3>>
+        You: "I'm a crossdresser, so I go between guy and girl. It's that easy."
+        Vera: "Love that for you! Charlie and Charlotte."
+        Anthony: "Does anyone not see how weird this is?"
+        He is met with silence.
+        Anthony: "Guess I'm the only one with any common sense left."
+    <<else>>
+        You: "Yeah. Why can't a guy wear dresses and makeup too?"
+        Anthony: "I'm not gonna sugarcoat it. That's really weird."
+        Anthony: "How many guys do you see do that? I certainly don't."
+        Vera: "Hey, let Charlotte wear whatever she wants."
+        Anthony: "Why are you referring to him by that name? His name is Charlie. Let's not feed into delusions here." (-5% confidence)
+    <<endif>>
+
+-> You: "Anything wrong with that?"
+    Anthony: "Does no one else feel weirded out by this?"
+    Vera: "What's so weird about it? Charlotte is a woman if she wants to be."
+    Nadia: "You look good, Charlotte."
+    Anthony: "Fine. The whole goddamn world is upside down anyway."
+
+<<jump 16>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2200,480
+__PrivCrochet_tags: 
+title: 16
+---
+Vera: "You are Charlotte if you want to be. Don't let anyone tell you otherwise."
+Vera: "I am curious, though. Why not draw Charlotte?"
+
+-> You: "Drawing girls is hard."
+    Nadia: "Big mood. It's so weird, I like guys, but I have this..." 
+    Nadia: "I guess you could call it pressure on myself to draw girls well?"
+    Vera: "Yeah. Doesn't help that a lot of reference models for girls don't resemble our bodies."
+    Anthony: "Ya, like yours. You're so damn tall. And you, your voice is so low - "
+    Vera: "You know, Anthony, maybe you're insecure about your own height, since you like to point out mine so much."
+    Eleanor: "That's enough! Both of you."
+
+-> You: "I'm not Charlotte all the time."
+    Vera: "Oh?"
+    You: "Yeah... I still need to maintain my responsibilities as a guy."
+    You: "I've seen what it's like for people to transition and... well, I'm still scared of that."
+    Vera: "Well, I guess that's fair. But..."
+    Eleanor: "I hate to stop this discussion, but... our room booking is about to end."
+    Eleanor: "Maybe we can continue this outside?"
+
+<<jump 17>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2440,480
+__PrivCrochet_tags: 
+title: 17
+---
+Eleanor: "We didn't even get to comment on Charlotte's art... if you want to talk about it, I can have a look."
+Eleanor: "Either way, see you next week!"
+<<stop>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1960,720
+__PrivCrochet_tags: 
+title: 18
+---
+You: "Hi, I'm Charlie, and this is me. I tried my best..."
+Vera: "Well, that's not a bad attempt."
+Nadia: "Do you want an anime styled drawing? I can try that!"
+Anthony: "So, just an average dude."
+Eleanor: "For something drawn in 20 minutes, that's pretty good!"
+Eleanor: "Come for more sessions and you'll learn more."
+Eleanor looks at the clock.
+Eleanor: "Well, that's everyone." 
+Eleanor: "We've still got a bit of time, and I brought snacks, so please help yourselves!" 
+Eleanor: "Get to know each other, yeah?"
+
+Vera and Nadia leave first, Anthony waits for them to go before he comes over to you.
+Anthony: "Hey. Didn't you realise something was... off about that girl?"
+
+-> You: "Like what?"
+
+-> You: "Yeah, she doesn't look normal."
+    Anthony: "Right? Anyone can see it from a mile away." (+5% Anthony relationship)
+
+<<jump 19>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2200,720
+__PrivCrochet_tags: 
+title: 19
+---
+Anthony: "She's taller than both of us, her voice is lower than other girls'..."
+Anthony: "Maybe she's an ah gua."
+
+-> You: "Oh my goodness, that's so disgusting."
+    Anthony: "Right? It's all this gender and feminism bullshit that's going around."
+    You: "Yes, it's very confusing."
+    Anthony: "It's also the reason why I don't have a girlfriend."
+    Anthony: "Tell you ah, there's this influencer that I watch, he says women are too liberal and free already."
+    Anthony: "Here's the link. I think it's very helpful. Especially if you don't have a girlfriend also." (+ 5 XP)
+    You: "Thanks, I'll take a look."
+    Anthony: "You'll see the truth. See you around."
+    (+5% Anthony relationship)
+
+-> You: "That's not very nice..."
+    Anthony: "I'm just saying it as it is. Females don't look like that."
+    Anthony: "I didn't want to say it during the session, later Eleanor get angry at me."
+    Anthony: "But you agree, right? This Vera is not normal."
+    -> You: "Yes."
+        Anthony: "The world has really turned upside down."
+        Anthony: "Here, watch this influencer when you go back." (+ 5 XP)
+        Anthony: "I think he is very helpful in understanding what to do in this fucked up world."
+        You: "Thanks."
+        Anthony: "See you next week."
+        (+5% Anthony relationship)
+    
+    -> You: "I mean, she has every right to exist."
+        Anthony: "You must have heard too much woke content. Men can be women, there are 76 genders, all that bullshit."
+        Anthony: "You need to break out of the filter bubble."
+        Anthony: "Here, watch this influencer when you go back." (+ 5 XP)
+        Anthony: "I think he is very helpful in understanding what to do in this fucked up world."
+        -> You: "Okay, I'll give it a shot."
+            Anthony: "He helped me. I hope he helps you too."
+        -> You: "Wait, isn't this just incel content?" <<if $int >= 3>>
+            Anthony: "Yes. I'm an incel."
+            Anthony: "I don't say it out loud, but I think you'd understand."
+            Anthony: "It's not safe out there with all the woke opinions. The only truth is in people like this influencer."
+            Anthony: "We should leave, the room's going to close. See you around."
+
+-> You: "She's beautiful in her own way."
+    Anthony: "That is the most cliche thing I have ever heard."
+    -> You: "I mean, people are sometimes just built different."
+        Anthony: "Yeah, not so different that they become freaks."
+        You: "Let me finish. What about you? Ever heard people say you're too short before?" (+ 5 XP)
+        Anthony: "All the time. It's not something I can change."
+        -> You: "That didn't feel very good, did it?" (EMP 3)
+            <<if $emp >= 3>>
+                Anthony: "Of course. I feel like shit every time I think of those stupid femoids who don't want to date me."
+                You: "Then if you don't want people to say you short, why you say Vera tall and all that?"
+                Anthony: "I just - I just..."
+                You: "You gotta respect other people if you want respect in return." (+ 5 XP)
+                You: "Anyway, room's closing already. Time to go."
+            <<else>>
+                Anthony: "What to do? The world sucks."
+                Anthony: "Should just lie down and rot."
+                You: "If that's what you want, I guess."
+                You realise you can't really continue from here. It's time to leave.
+            <<endif>>
+
+        -> You: "But it's just what people say, isn't it? Do you listen to everything other people say?" (INT 3)
+            Anthony: "But it's proven what. Females aren't attracted to you if you're not 6-6-6."
+            <<if $int >= 3>>
+                You: "Then what about all the men below 6 feet who are married?"
+                Anthony: "They... they're the lucky few! Or they're rich! Or something!"
+                You: "Yep, you don't have an answer."
+                You: "I'm sure there are guys out there who aren't 6-6-6. And they're still happy."
+                You: "And Vera is still happy, too. Regardless of what you say about her."
+                You: "So why don't you look within yourself and find out why you're unhappy?"
+                You: "Maybe that'll change what you say about people around us."
+                You walk off. That was... strangely liberating!
+            <<else>>
+                Anthony: "I mean, do you have a girlfriend?"
+                You: "No..."
+                Anthony: "You don't understand how hard it is to be a man like me."
+                Anthony: "No girlfriend, not valued for being myself."
+                You: "Well, that's tough."
+                Anthony: "Where were we? Oh right, Vera."
+                Anthony: "She's weird. That's all. See you next week."
+                You're back to square one...
+            <<endif>>
+    -> You: "Haven't you ever seen any transgender people before?"
+        Anthony: "Oh, so that's what they look like. Men in dresses, trying to be women."
+        Anthony: "It's disgusting."
+
+        -> You: "Yeah, why don't you say that in front of Vera and Eleanor. I'm sure they'll absolutely love it." (CHA 3)
+            <<if $cha >= 3>>
+                Anthony wants to say something, but can't bring himself to say it.
+                You: "That's what I thought."
+                It's time to leave.
+            <<else>>
+                Anthony: "Why should I care that they want to be delusional and PC?"
+                Anthony: "You should let go of being woke also. Before it's too late."
+                You: "Yeah, we're done here. Time to leave."
+            <<endif>>
+            
+        -> You: "We're done here."
+            You: "I'm not comfortable with how you're speaking about them."
+            Anthony: "So be it." (-5% Anthony relationship)
+            (END)
+
+    -> You: "I mean, I dress up sometimes, too." (CHA 3)
+        Anthony: "Wow. Another one." (-5% Anthony relationship)
+        Anthony: "You all are delusional."
+        <<if $cha >= 3>>
+            You: "I'm proud of who I am." (+5% confidence)
+            Anthony: "Proud of being a freak."
+            Anthony: "Proud of denying that you are a man."
+            Anthony: "There's nothing more pathetic and weird than that."
+            You: "Keep talking. I'm gonna leave."
+
+        <<else>>
+            You: "Don't say that..." (-5% confidence)
+            Anthony: "I didn't know this Art Club was such a woke gender circus."
+            Anthony: "I'm sure there will be many more opportunities to laugh at how cringe the two of you are."
+            Anthony: "See you next week."
+        <<endif>>
 <<stop>>
 ===
