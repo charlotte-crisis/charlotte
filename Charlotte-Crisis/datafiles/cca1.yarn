@@ -292,4 +292,174 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
         Anthony: "Sure, whatever. Men in dresses defending each other." (-5% Anthony relationship)
         Eleanor: "Anthony, stop!"
         Eleanor: "Sorry, everyone, we're out of time..."
+
+-> You: "You're right, my drawing isn't that good..."
+    Nadia: "Oh I'm so sorry!"
+    Anthony: "Nah, she's got a point. Females don't look like that." (-5% confidence)
+    Vera: "Hey, let Charlotte draw however she wants to."
+    Anthony: "What? I'm just telling the truth. How is he supposed to improve if he can't even take a few knocks?"
+    Anthony: "Or is he just trying to get pity from us?"
+    Nadia: "I guess so..."
+    
+    -> You: "This isn't just a drawing issue, isn't it?"
+        Anthony: "What are you talking about?"
+        You: "You hate the way I dress."
+        Anthony: "Don't put words in my mouth."
+        Vera: "But you used 'he/him' for Charlotte - "
+        Anthony: "Ya what. His voice so deep - "
+        Eleanor: "Okay guys, enough! Charlotte, I'm sorry you had to hear all that."
+        Eleanor: "Anyway, our time's almost up, so..."
+    
+    -> You: "Forget it. My drawing sucks anyway."
+        Eleanor: "Come on, Charlotte..."
+        Anthony: "How about learning what people look like first? That way your art won't look so cui." (-5% confidence)
+        Eleanor: "That's enough, Anthony."
+        Nadia: "Charlotte, there's some videos I can recommend for drawing. Maybe you wanna watch those to start?"
+        You: "Thanks, Nadia."
+        Eleanor: "Yeah... looks like our time's also about up."
+
+-> You: "Thanks for the feedback, I guess."
+Nadia: "Yeah, maybe you can cinch the waist a little? That would bring out the figure a bit."
+Vera: "Isn't she wearing a rather straight dress, though?"
+Anthony: "Yeah, it really makes you wonder what's under it."
+Eleanor: "Anthony!"
+
+    -> You: "I don't think I'll change it, though."
+        Nadia: "Oh?"
+        You: "Yeah. Art is up to us to create. If my body looks more rigid than a normal girl's, so be it."
+        Vera: "Love that for you! Be proud of your body." (+5% confidence)
+        Nadia: "Of course. We're here for you, Charlotte."
+        Anthony rolls his eyes.
+        Eleanor: "Okay looks like we're all out of time!"
+        
+    
+    -> You: "I'll see what I can do to change that."
+        Nadia: "Up to you. We all draw what we like to see."
+        Vera: "Yeah, even my drawing is quite stylised. Doesn't need to be accurate."
+        Anthony: "Of course. Look at all the rainbows..."
+        Vera: "You got a problem with that, Anthony?"
+        Eleanor: "Okay looks like we're all out of time!"
+
+    -> You: "The truth is that I'm Charlotte." (CHA 3. If below, -5% confidence)
+        Vera: "Love that for you! Charlotte is who you really are." (+5% confidence)
+        Nadia: "You have our support."
+        Anthony is looking at his phone, clearly eager for the session to end.
+        Nadia: "You know, I'm trying to get better at drawing female bodies too." 
+        Nadia: "Here's some videos that I'm procrastinating on watching. Hope they help you!"
+        Eleanor: "Thanks Nadia. Anyway, our time is almost up, so..."
+
+<<jump 11>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2200,160
+__PrivCrochet_tags: 
+title: 11
+---
+Eleanor: "Thanks for coming and see you next week!"
+
+As Nadia and Anthony leave, Vera stops you for a quick chat.
+Vera: "Hey Charlotte. Are you feeling okay?"
+
+-> You: "Yeah, I'm still fine."
+    Vera: "That's good. "
+    Vera: "Still, it doesn't excuse Anthony from being an asshole back there."
+
+-> You: "Uh... not really..."
+    Vera: "Oh dear..."
+    Vera: "Some people are just terrible. Anthony's one of them, I guess."
+    Vera: "You should take the night off. And the next few days, if you can. Text me if you need, like, emotional support."
+    You: "Thanks Vera... I appreciate the help." (+5% confidence)
+
+<<jump 12>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2440,160
+__PrivCrochet_tags: 
+title: 12
+---
+Vera: "People like us shouldn't be living like this. And that's why I want to do something about it."
+You: "Wait... people like us?"
+Vera: "You know, trans women."
+
+-> You: "Uh, I'm not sure I identify with that..."
+    Vera: "Oh?"
+    You: "Yeah, don't I need to do, like, hormones and surgery before I reach there?"
+    Vera: "Well, that's what some of us would do."
+    Vera: "But it's not compulsory. You are Charlotte as long as you want to be Charlotte." (+ 10 XP)
+    -> You: "Are you saying that just to be nice?"
+        Vera: "Absolutely not."
+        Vera: "Your body, your opinion. Don't strictly follow what anyone else says."
+        Vera: "This may be our first meeting, but already I see a lot of my early life in what you're going through."
+        Vera: "But I don't think I can tell you everything now."
+        Vera: "Let's meet up soon?"
+        You: "Sure, I'll let you know." (END)
+    
+    -> You: "Even if I identify as male sometimes?"
+        Vera: "That's totally valid. After all, it's your choice."
+        Vera: "Or maybe it's not. Maybe you have to perform the male gender for school, or home, or any other societal reason."
+        You: "Yeah, I think that's how I'd put it."
+        Vera: "Mm. Just know that you shouldn't feel shame for it."
+        Vera: "Anyway, I don't think I can tell you everything now."
+        Vera: "Let's meet up soon?"
+        You: "Sure, I'll let you know." (END)
+    
+    -> You: "Thank you for that."
+        Vera: "Yeah, I think you needed to hear that after just now."
+        Vera: "Anyway, I don't think I can tell you everything now."
+        Vera: "Let's meet up soon?"
+        You: "Sure, I'll let you know." (END)
+
+-> You: "Right."
+    Vera: "We've got to stand up for each other."
+    Vera: "And I'm guessing you've only just started your journey?"
+    You: "It's not my first time crossdressing."
+    Vera: "Oh, so no HRT?"
+    You: "What's that?"
+    Vera: "Hormones. Estrogen. You don't know anything about it?"
+
+    -> You: "I just know it's the female hormone." (INT: 3. Option not available if INT lower than 3)
+        Vera: "Yeah. So I'm guessing you haven't started that?"
+        You: "Nope."
+        Vera: "That's valid. It's a big step to take."
+        Vera: "I can't tell you all about it now, but we could meet to talk about it soon?"
+        You: "Sure, I'll let you know."
+        Vera: "Okay! Here's a video that should inform you more about it."
+        You: "Thanks!" (END)
+    
+    -> You: "No..."
+        Vera: "Woah. You've never Googled this?"
+        Vera: "Anyway, here's a video that'll tell you more." 
+        Vera: "Basically there's a few hormones that can turn your body into the one that you want."
+        Vera: "I can't tell you all about it now, but we could meet to talk about it soon."
+        You: "Sure, I'll let you know. Thanks!" (END)
+
+-> You: "So what do you want to do about it?"
+    Vera: "Advocacy. Petitions. Civil unrest, question mark."
+    Vera: "But even surviving this far, is my personal form of resistance against a system that won't accept me for who I am." (+ 10 XP)
+    -> You: "I'm proud of you for that." (EMP 3)
+        <<if $emp < 3>>
+            Vera: "Thanks."
+        <<else>>
+            Vera: "Thank you, dear. Being a girl is tough." (+5% Vera relationship)
+        <<endif>>
+        Vera: "There's lots of stuff I have to do daily, but it's worth it to wake up in the right body every morning."
+        You: "Like what?"
+        Vera: "I can't tell you all about it now, but we could meet to talk about it soon."
+        You: "Sure, I'll let you know. Thanks!" (END)
+    
+    -> You: "I'm not sure I got all of that."
+        Vera: "Ahh, I'm sorry... I tend to overshare when I get excited."
+        Vera: "I can't tell you all about it now, but we could meet to talk about it soon."
+        You: "Sure, I'll let you know. Thanks!" (END)
+        
+    -> You: "Wait, civil unrest?"
+        Vera: "Relax, I'm not doing anything illegal."
+        Vera: "After all, it's already tough enough to get by, I don't need legal troubles on top of that."
+        You: "I'm sorry..."
+        Vera: "It's okay." 
+        Vera: "Anyway, I don't think I can tell you everything now."
+        Vera: "Let's meet up soon?"
+        You: "Sure, I'll let you know." (END)
+
+<<stop>>
 ===
