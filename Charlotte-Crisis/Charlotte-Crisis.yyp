@@ -27,6 +27,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Notes","folderPath":"folders/Notes.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/Objects.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Helper","folderPath":"folders/Objects/Helper.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"NPC","folderPath":"folders/Objects/NPC.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Particle Systems","folderPath":"folders/Particle Systems.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Paths","folderPath":"folders/Paths.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Rooms","folderPath":"folders/Rooms.yy",},
@@ -40,7 +41,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Clothes","folderPath":"folders/Sprites/Clothes.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"NPC","folderPath":"folders/Objects/NPC.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"cca_1.yarn","CopyToMask":-1,"filePath":"datafiles",},
@@ -49,7 +49,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.2.108",
+    "IDEVersion": "2023.11.0.121",
   },
   "resources": [
     {"id":{"name":"ChatterboxGetContent","path":"scripts/ChatterboxGetContent/ChatterboxGetContent.yy",},},
@@ -66,7 +66,7 @@
     {"id":{"name":"__ChatterboxSplitBody","path":"scripts/__ChatterboxSplitBody/__ChatterboxSplitBody.yy",},},
     {"id":{"name":"ChatterboxGetCurrentMetadata","path":"scripts/ChatterboxGetCurrentMetadata/ChatterboxGetCurrentMetadata.yy",},},
     {"id":{"name":"spr_mc_female_idle","path":"sprites/spr_mc_female_idle/spr_mc_female_idle.yy",},},
-    {"id":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},},
+    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"spr_bottoms_f","path":"sprites/spr_bottoms_f/spr_bottoms_f.yy",},},
     {"id":{"name":"ChatterboxHop","path":"scripts/ChatterboxHop/ChatterboxHop.yy",},},
     {"id":{"name":"ChatterboxVariablesExport","path":"scripts/ChatterboxVariablesExport/ChatterboxVariablesExport.yy",},},
@@ -134,7 +134,7 @@
     {"id":{"name":"__ChatterboxClassLine","path":"scripts/__ChatterboxClassLine/__ChatterboxClassLine.yy",},},
     {"id":{"name":"ChatterboxGetOptionConditionBool","path":"scripts/ChatterboxGetOptionConditionBool/ChatterboxGetOptionConditionBool.yy",},},
     {"id":{"name":"ChatterboxVariablesFind","path":"scripts/ChatterboxVariablesFind/ChatterboxVariablesFind.yy",},},
-    {"id":{"name":"obj_Vera","path":"objects/obj_Vera/obj_Vera.yy",},},
+    {"id":{"name":"obj_vera","path":"objects/obj_vera/obj_vera.yy",},},
     {"id":{"name":"fnt_body_italic","path":"fonts/fnt_body_italic/fnt_body_italic.yy",},},
     {"id":{"name":"ChatterboxVariableSet","path":"scripts/ChatterboxVariableSet/ChatterboxVariableSet.yy",},},
     {"id":{"name":"ChatterboxCreate","path":"scripts/ChatterboxCreate/ChatterboxCreate.yy",},},

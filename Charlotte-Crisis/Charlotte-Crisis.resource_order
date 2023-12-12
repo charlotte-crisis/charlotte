@@ -16,6 +16,7 @@
     {"name":"Notes","order":13,"path":"folders/Notes.yy",},
     {"name":"Objects","order":9,"path":"folders/Objects.yy",},
     {"name":"Helper","order":3,"path":"folders/Objects/Helper.yy",},
+    {"name":"NPC","order":4,"path":"folders/Objects/NPC.yy",},
     {"name":"Particle Systems","order":15,"path":"folders/Particle Systems.yy",},
     {"name":"Paths","order":4,"path":"folders/Paths.yy",},
     {"name":"Rooms","order":10,"path":"folders/Rooms.yy",},
@@ -28,7 +29,6 @@
     {"name":"Clothes","order":2,"path":"folders/Sprites/Clothes.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"NPC","order":4,"path":"folders/Objects/NPC.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"ChatterboxGetContent","order":1,"path":"scripts/ChatterboxGetContent/ChatterboxGetContent.yy",},
