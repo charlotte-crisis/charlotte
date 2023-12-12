@@ -55,16 +55,18 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 			if (ChatterboxGetOptionConditionBool(chatterbox, i)) {
 				_xx = room_width / 2;
 				_yy = (room_height / 8) * (i + 3);
-				
-				draw_rectangle_center(_xx, _yy, _width, _height, false, c_black, 0.5);
-				
 				var _icon = "";
+				// Highlight option being selected
 				if (option_index == i) {
-					_icon = "> ";	
+					_icon = "> ";
+					draw_rectangle_center(_xx, _yy, _width, _height, false, c_blue, 0.5);
+				} else {
+					draw_rectangle_center(_xx, _yy, _width, _height, false, c_black, 0.5);	
 				}
+				
 				var _option = ChatterboxGetOption(chatterbox, i);
 				
-				draw_text(_xx, _yy, _icon + _option);
+				draw_text_ext(_xx, _yy, _icon + _option, _linesep, _width - 2  *_margin_text);
 				
 			}
 		}
