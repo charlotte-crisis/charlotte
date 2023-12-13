@@ -19,8 +19,8 @@ if (_move != 0) {
 	draw_sprite_ext(walking_shorts[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
 	draw_sprite_ext(walking_head[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);	
 } else {
-	draw_sprite_ext(idle_legs[gender], -1, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(idle_torso[gender], -1, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(idle_shorts[gender], -1, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(idle_head[gender], -1, x, y, facing_direction, 1, 0, c_white, 1);
+	draw_sprite_ext(idle_legs[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
+	draw_sprite_ext(idle_torso[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
+	draw_sprite_ext(idle_shorts[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
+	draw_sprite_ext(idle_head[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
 }
