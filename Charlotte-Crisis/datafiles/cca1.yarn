@@ -129,47 +129,8 @@ She pulls out another drawing, this time of her side profile.
 Nadia: "Yep, here's mine. I'm sorry I'm worse at drawing female than male faces..."
 Vera: "It looks good!"
 Anthony: "Even if it's very anime-styled."
-Your turn to comment...
-
--> You: "Hmm. Why did you draw in anime style?"
-    Nadia: "Well... I guess it's easier, right?"
-    Nadia: "After all, it was designed for 2D artists."
-    -> You: "So cliche."
-        Anthony: "Well, I didn't want to say that out loud."
-        Nadia: "Oh no..." (-5% Nadia relationship)
-        Vera: "That's so rude. Let her live."
-        Nadia: "I should have known people would laugh at me for being a weeb."
-        Eleanor: "Please, {$name}. Let's be respectful. Anyway, Anthony, what do you have?"
-        <<jump 9>>
-    -> You: "The anime style makes it good."
-        Nadia: "Really?"
-        You: "Yeah. It's your own style. Just like Vera with her rainbows."
-        You: "Take pride in it."
-        Nadia: "Thanks! It's rare to hear that." (+5% Nadia relationship)
-        You: "Let me guess, people laugh at you for being a weeb."
-        Nadia: "Ya..."
-        Eleanor: "Well, anime is pretty mainstream, right?"
-        Eleanor: "Who knows, maybe we'll do anime in a future week! Then you can really cook."
-        Nadia: "Uh... that's a lot, but thanks!!! Okay, shouldn't we go to the next person already?"
-        <<jump 9>>
-    
-    -> You: "What about the hot guy?" (3 CHA required 3)
-        <<if $cha  > 3>>
-            Nadia: "Huh? What? It's nothing! I'm just experimenting!"
-            Vera: "Yeah, coming from Miss 'I'm better at drawing male faces'..."
-            Nadia: "Uh... I'll show you guys when I'm free! Let's move on to the next person!"
-        <<else>>
-            Nadia: "Hey... that's intrusive."
-            You: "But you just showed it just now!"
-            Eleanor: "{$name}, if Nadia's not okay with showing her personal art, don't press her."
-        <<endif>>
-        <<jump 9>>
-
--> You: "It's okay, I guess. Not much else to say."
-    Nadia: "Alright then. Next person?"
-
-// dont know how the options are supposed to be laid out so i tried my best
-<<jump 9>>
+<<declare $askedAboutAnime = false>>
+<<jump 8_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 520,360
@@ -768,4 +729,59 @@ Anthony: "Maybe she's an ah gua."
             Anthony: "See you next week."
         <<endif>>
 <<stop>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1480,120
+__PrivCrochet_tags: 
+title: 8_options
+---
+Your turn to comment...
+
+// Will not show if you have already asked once.
+-> You: "Hmm. Why did you draw in anime style?" <<if $askedAboutAnime == false>>
+    Nadia: "Well... I guess it's easier, right?"
+    Nadia: "After all, it was designed for 2D artists."
+    You: "That's fair."
+    <<set $askedAboutAnime = true>>
+    // jump back to "Your turn to comment..."
+    <<jump 8_options>>
+
+-> You: "It's okay, I guess. Not much else to say."
+    Nadia: "Alright then. Next person?"
+    <<jump 9>>
+
+// The below options only show up if you ask about anime style (choose the first option)
+-> You: "So cliche." <<if $askedAboutAnime == true>>
+    Anthony: "Well, I didn't want to say that out loud."
+    Nadia: "Oh no..." (-5% Nadia relationship)
+    Vera: "That's so rude. Let her live."
+    Nadia: "I should have known people would laugh at me for being a weeb."
+    Eleanor: "Please, {$name}. Let's be respectful. Anyway, Anthony, what do you have?"
+    <<jump 9>>
+
+-> You: "The anime style makes it good." <<if $askedAboutAnime == true>>
+    Nadia: "Really?"
+    You: "Yeah. It's your own style. Just like Vera with her rainbows."
+    You: "Take pride in it."
+    Nadia: "Thanks! It's rare to hear that." (+5% Nadia relationship)
+    You: "Let me guess, people laugh at you for being a weeb."
+    Nadia: "Ya..."
+    Eleanor: "Well, anime is pretty mainstream, right?"
+    Eleanor: "Who knows, maybe we'll do anime in a future week! Then you can really cook."
+    Nadia: "Uh... that's a lot, but thanks!!! Okay, shouldn't we go to the next person already?"
+    <<jump 9>>
+
+-> You: "What about the hot guy?" (3 CHA required) <<if $askedAboutAnime == true>>
+    <<if $cha  > 3>>
+        Nadia: "Huh? What? It's nothing! I'm just experimenting!"
+        Vera: "Yeah, coming from Miss 'I'm better at drawing male faces'..."
+        Nadia: "Uh... I'll show you guys when I'm free! Let's move on to the next person!"
+    <<else>>
+        Nadia: "Hey... that's intrusive."
+        You: "But you just showed it just now!"
+        Eleanor: "{$name}, if Nadia's not okay with showing her personal art, don't press her."
+    <<endif>>
+    <<jump 9>>
+
+<<jump 9>>
 ===
