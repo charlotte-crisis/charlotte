@@ -116,7 +116,7 @@ You feel the pressure of four pairs of eyes on you… what will you say?
     <<jump 8>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1480,360
+__PrivCrochet_position: 1480,480
 __PrivCrochet_tags: 
 title: 8
 ---
@@ -731,7 +731,7 @@ Anthony: "Maybe she's an ah gua."
 <<stop>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1480,120
+__PrivCrochet_position: 1480,240
 __PrivCrochet_tags: 
 title: 8_options
 ---
