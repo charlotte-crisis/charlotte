@@ -52,8 +52,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Characters",
-    "path": "folders/Sprites/Characters.yy",
+    "name": "Characters (old)",
+    "path": "folders/Sprites/Characters (old).yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

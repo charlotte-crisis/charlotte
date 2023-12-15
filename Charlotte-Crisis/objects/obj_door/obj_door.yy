@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "NPC",
-    "path": "folders/Objects/NPC.yy",
+    "name": "Interactables",
+    "path": "folders/Objects/Interactables.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_wall",
-    "path": "sprites/spr_wall/spr_wall.yy",
+    "name": "spr_placeholder",
+    "path": "sprites/spr_placeholder/spr_placeholder.yy",
   },
   "spriteMaskId": null,
   "visible": true,

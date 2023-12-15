@@ -1,8 +1,10 @@
 /// @description Draw and piece together player's various sprites.
 // You can write your code in this editor
+var _move = 0;
+if (can_move()) {
+	_move = key_right - key_left;
+}
 
-var _move = key_right - key_left;
-	
 // right
 if (_move > 0) {
 	facing_direction = -1;	

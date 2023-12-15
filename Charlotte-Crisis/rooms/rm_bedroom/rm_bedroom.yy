@@ -11,6 +11,7 @@
     {"name":"inst_416B103F","path":"rooms/rm_bedroom/rm_bedroom.yy",},
     {"name":"inst_4AE1EEF3","path":"rooms/rm_bedroom/rm_bedroom.yy",},
     {"name":"inst_741BB5E2","path":"rooms/rm_bedroom/rm_bedroom.yy",},
+    {"name":"inst_64F34CA7","path":"rooms/rm_bedroom/rm_bedroom.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -21,6 +22,7 @@
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Interactable","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4AE1EEF3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"properties":[],"rotation":0.0,"scaleX":1.125,"scaleY":3.9375,"x":207.79031,"y":56.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_64F34CA7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wardrobe","path":"objects/obj_wardrobe/obj_wardrobe.yy",},"properties":[],"rotation":0.0,"scaleX":1.5,"scaleY":4.625,"x":117.0,"y":55.198112,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_hostel_room","path":"sprites/spr_hostel_room/spr_hostel_room.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

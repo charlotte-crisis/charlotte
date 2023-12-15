@@ -3,7 +3,7 @@
 
 
 // move if not talking
-if (!is_talking) {
+if (can_move()) {
 
 	key_left = keyboard_check(vk_left);
 	key_right = keyboard_check(vk_right);

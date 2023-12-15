@@ -12,14 +12,24 @@ key_right = 0;
 key_jump = 0;
 
 is_talking = false;
+is_interacting = false;
 
 #region Functions to alter stats and other stuff
 set_is_talking = function(_is_talk) {
 	is_talking = _is_talk;
 }
 
+set_is_interacting = function(_is_interact) {
+	is_interacting = _is_interact;
+}
+
 set_gender = function(_gender) {
 	gender = _gender;
+}
+
+// Return true only if not talking and not interacting.
+can_move = function() {
+	return !(is_talking || is_interacting);	
 }
 
 #endregion

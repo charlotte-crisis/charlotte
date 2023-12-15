@@ -1,10 +1,10 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_mc_female_idle",
-  "bbox_bottom": 59,
+  "name": "spr_selection_button_2",
+  "bbox_bottom": 31,
   "bbox_left": 0,
-  "bbox_right": 33,
+  "bbox_right": 31,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,26 +13,26 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cf372b11-5439-434e-ad32-03333e7a22e6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c113fc9d-2e32-42b7-991e-7c5ed191a2e6",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 60,
+  "height": 32,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ca018552-a291-4b68-9bfa-d7168b6b2c4a","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c22ee245-feb4-49ee-a652-89745e3fed62","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Characters (old)",
-    "path": "folders/Sprites/Characters (old).yy",
+    "name": "Wardrobe",
+    "path": "folders/Sprites/Wardrobe.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_mc_female_idle",
+    "name": "spr_selection_button_2",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cf372b11-5439-434e-ad32-03333e7a22e6","path":"sprites/spr_mc_female_idle/spr_mc_female_idle.yy",},},},"Disabled":false,"id":"b67fd200-775c-4bd8-877f-4bea29eb9dca","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c113fc9d-2e32-42b7-991e-7c5ed191a2e6","path":"sprites/spr_selection_button_2/spr_selection_button_2.yy",},},},"Disabled":false,"id":"d92b657d-463a-4bbb-b454-86dec46e9c3d","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 34,
+  "width": 32,
 }

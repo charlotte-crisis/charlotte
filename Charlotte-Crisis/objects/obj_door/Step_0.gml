@@ -4,8 +4,7 @@
 
 // If player is not talking and presses up
 if (!obj_player.is_talking) {
-	if (place_meeting(x,y,obj_player) && keyboard_check_pressed(vk_up) {
-		
+	if (place_meeting(x,y,obj_player) && keyboard_check_pressed(vk_up)) {
 		
 		switch(room) {
 			case rm_bedroom:
