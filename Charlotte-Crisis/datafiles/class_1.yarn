@@ -1,0 +1,248 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 280,360
+__PrivCrochet_tags: 
+title: 1
+---
+You arrive just in time for class.
+This course is quite popular so almost all the seats are already filled.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 520,120
+__PrivCrochet_tags: 
+title: 2
+---
+You: "Hey, is this seat taken?"
+Sage: "Oh, nah. You can sit here."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 520,360
+__PrivCrochet_tags: 
+title: 3
+---
+You: "Hello!"
+Chenjie: "Hi! Class is starting soon. You should sit down."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 520,600
+__PrivCrochet_tags: 
+title: 4
+---
+Joanne: Hello! I don’t think we’ve met. I’m Joanne by the way. 
+You: I’m {$name}!
+<<if $name == "Charlotte">>
+    Joanne hesitates for a second.
+<<endif>>
+Joanne: "Class will start soon. I think that’s the only seat left."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,360
+__PrivCrochet_tags: 
+title: 5
+---
+Prof Lim: "Hello, everyone! Welcome to the Gender and Feminism in Media course."
+Prof Lim: "I’m Lim Shu Hwa, and I’ll be your prof for this semester."
+
+Prof Lim goes through the administrative details for the course. Standard stuff.
+The final assessment for this class is a group project to write a research paper.
+She also reiterates the rules of this course to ensure everyone keeps it a safe space for discussion.
+
+Part of you wishes you could bring all these rules to your upcoming "talk" with your sister.
+Maybe things will be easier then.
+You still don’t really know how she’ll react.
+
+-> It’s hard to tell her tone through text.
+    There’s no use worrying now. We’ll wait till the weekends to properly talk with her.
+    Prof Lim: "Alright! Let’s start the lesson with some icebreakers."
+
+-> I think she sounded angry.
+    She probably thinks I’m a freak or something now. 
+    Why did I post that photo? What was I even thinking? 
+    Prof Lim: "Alright! Let’s start the lesson with some icebreakers."
+
+    First lesson of the semester and your attention is already drifting. Shame on you!
+    # use a function in gamemaker better
+    # <<set $confidence = $confidence - 5>>
+
+<<jump 6>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1000,360
+__PrivCrochet_tags: 
+title: 6
+---
+Prof Lim: "Get together in groups of three or four, and introduce yourselves with your pronouns."
+Prof Lim: "Tell us a hobby, and a TV show that you like."
+You turn your chair around.
+Joanne: "Okay, hi! I’m Joanne, Year 4."
+Joanne: "My hobby is gaming, and for TV show... I like Squid Game!"
+Chenjie: "Chenjie. Also Year 4. I like to gym. But I'm not like a gym bro or anything."
+Chenjie: "And I like Rick and Morty."
+Sage: "Uh, I’m Sage. I’m in Year 3. I go by she/her. I mostly just doomscroll TikTok these days, and I also like Single's Inferno."
+
+-> Introduce yourself without pronouns
+    You: "I'm {$name}, Year 4."
+    <<jump 8>>
+
+-> Introduce yourself with pronouns
+    You: "I'm {$name}, Year 4."
+    <<if $name == "Charlotte">>
+        You: "She/her."
+    <<else>>
+        You: "He/him."
+    <<endif>>
+    <<jump 8>>
+
+-> Introduce yourself as both Charlotte and Charles.
+    You: "I'm {$name}, Year 4. I'm a crossdresser actually so I go by both she/her and he/him pronouns."
+    You: "It depends on if I'm dressed as Charlotte or Charles on that day."
+    Sage: "Oh! Crossdressing? That's honestly so cool." 
+    # (+5% Sage relationship) 
+    # (+ 5% confidence)
+    Joanne: "Wait, so you're a guy, right?"
+    <<if $name == "Charlotte">>
+        You: "Not right now. But when I'm in boy mode, yes."
+    <<else>>
+        You: "Right now. But when I'm in girl mode, I use she/her and go by Charlotte."
+    <<endif>>
+    Joanne is silent. 
+    #(-5% Joanne relationship)
+    <<jump 7>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1120,600
+__PrivCrochet_tags: 
+title: 7
+---
+-> You: "Do you have a problem with that?"
+    Joanne: "What? I didn't even say anything."
+    You: "You look like you have something to say."
+    Chenjie: "Guys, come on. Let's chill, okay?" 
+    # (-5% Chenjie relationship)
+    Maybe it's best not to push it.
+
+-> Move on.
+
+<<jump 8>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1240,360
+__PrivCrochet_tags: 
+title: 8
+---
+Chenjie: "What about your favourite show and hobby?"
+You: "My favourite show is…"
+
+-> Squid Game, like Joanne
+    Joanne: "You like it too?"
+    You: "I like the social commentary of it."
+    Joanne: "Yeah, that's really good. Just the tragedy of the entire setup breaks your heart. I get chills thinking about it." 
+    # (+5% Joanne relationship)
+
+-> Single's Inferno, like Sage
+    Sage: "Oh, you too?"
+    You: "It's a breath of fresh air for dating shows."
+    Sage: "Yeah, it's a lot less drama than the western dating shows. Not to mention, everyone in there is an eye candy."
+    You: "You're not wrong."
+    # (+5% Sage relationship)
+
+-> Rick and Morty, like Chenjie
+    Chenjie: "It's so funny and sarcastic, right? But at the same time, the characters are really well-written."
+    You: "And the relationship between all of them are also complex because of how real the characters are by themselves."
+    Chenjie: "Yeah, and that stuff hits a bit close to home sometimes. I like that it does that." 
+    # (+5% Chenjie relationship)
+
+-> None
+    You: "Nothing comes to mind actually..."
+    Chenjie: "Really? Nothing at all?"
+    Joanne: "I totally get it though… It's hard to find time to watch anything these days."
+    Sage: "Yeah, I mostly watch things while I eat. I don't have much time to go out of my way to watch stuff."
+    Joanne: "So much for being media students, right?"
+
+<<jump 9>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1480,360
+__PrivCrochet_tags: 
+title: 9
+---
+As for hobbies, you like playing table tennis, crossdressing and gaming. Which should you say here?
+
+-> Table tennis
+    Chenjie: "Ooh!"
+    Sage: "I think the last time I played table tennis was in primary school."
+    Joanne: "Yeah, it's a bit tricky arranging to play table tennis because you need equipment and an opponent, right?"
+    You: "If any of you want, you could come to my RC. We have a table."
+    Chenjie: "Really? Sweet!" 
+    # (+5% Chenjie relationship)
+
+
+-> Crossdressing
+    Chenjie: "How did you start?"
+    You: "It was just a costume for a Halloween party at first, but then it turned out to be more fun than I thought."
+    You: "And now it's a part of me and my life."
+    Sage: "Do you crossdress for special events only?"
+    You: "Not only for events. I sometimes do it in school or when I'm out with friends."
+    Joanne: "Don't you get weird stares?"
+    You: "Sometimes... But I think it's bothering me less and less these days."
+    Sage: "That's nice." 
+    # (+5% Sage relationship)
+
+
+-> Gaming
+    Chenjie: "What kind of games?"
+    You: "League, mostly."
+    Joanne: "Oh... I'm not really into that. I play cosy games."
+    You: "Oh, like Stardew Valley or Spiritfarer?"
+    Joanne: "Yes! Both of those!" 
+    # (+5% Joanne relationship)
+    Joanne: " I logged sooo many hours into Stardew already."
+    You: "I've played a bit of Spiritfarer but not Stardew Valley yet."
+    Joanne: "If you need any tips and tricks or advice on what mods to use, just ask me."
+    You: "Sure!"
+
+<<jump 10>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1720,360
+__PrivCrochet_tags: 
+title: 10
+---
+Chenjie: "Hey, do either of you have a group for the final project already? Joanne and I were thinking of grouping up."
+You: "I don't mind joining your group."
+Sage: "Me too."
+Chenjie: "Nice! I'll email the prof about our group after class."
+Prof Lim: "Okay, everyone. Now that we've all gotten to know each other. I'd like to begin the first class activity."
+Prof Lim: "I'm sure you all have read the readings on what feminist studies is."
+Prof Lim casts a knowing look over everyone and some quiet nervous laughter bubbles up.
+Prof Lim: "But, right now, I want you to take ten minutes to discuss with your group mates what feminism is in your own words. What is feminism to you and how is it related to you?"
+Chairs shuffle again and the class goes back to talking with their group mates.
+Chenjie: "Did you guys do the readings?"
+Joanne: "I only read the one about research methodology. Seriously, why do profs expect their students to be doing so much reading in Week 0?"
+Sage: "I skimmed through them. But there's really so much to read..."
+Chenjie: "The semester's barely started and I already have a backlog."
+
+-> "I read both readings." 
+    Chenjie: "Then we're counting on you if Prof calls on us."
+    Sage: "She's not asking us for the dictionary definition. It's what it means to us, right?"
+    Chenjie: "Okay, okay. I'm just pulling your leg."
+    (go to 11)
+
+-> "There were readings?"
+    Joanne: "It's sent to our emails. You should probably check that."
+    Sage: "It's okay. It's not a lot. It's like... about 25 pages each?"
+    Chenjie: "It gets worse from here. I hear some weeks we have 5 readings."
+    You feel exhausted even from the sound of that. (-5% confidence)
+    (go to 11)
+
+-> (joking) "That's it. I'm quitting to flip burgers for the rest of my life."
+    (if CHA < 3) Sage: "The readings aren't *that* bad."
+    Chenjie: "We just have to suck it up."
+    (go to 11)
+
+    (if CHA >= 3) 
+    Chenjie: "Bro, recommend me to your branch manager. I also need that job."
+    Joanne: "And me!"
+    Everyone's mood is a bit better. (+5 XP)
+    (go to 11)
+===
