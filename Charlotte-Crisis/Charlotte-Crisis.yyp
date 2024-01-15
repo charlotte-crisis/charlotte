@@ -27,6 +27,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Notes","folderPath":"folders/Notes.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/Objects.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Helper","folderPath":"folders/Objects/Helper.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Interactables","folderPath":"folders/Objects/Interactables.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"NPC","folderPath":"folders/Objects/NPC.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Particle Systems","folderPath":"folders/Particle Systems.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Paths","folderPath":"folders/Paths.yy",},
@@ -47,11 +48,10 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Idle","folderPath":"folders/Sprites/Male MC/Idle.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sitting","folderPath":"folders/Sprites/Male MC/Sitting.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Walking","folderPath":"folders/Sprites/Male MC/Walking.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"NPC","folderPath":"folders/Sprites/NPC.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Wardrobe","folderPath":"folders/Sprites/Wardrobe.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Interactables","folderPath":"folders/Objects/Interactables.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Wardrobe","folderPath":"folders/Sprites/Wardrobe.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"NPC","folderPath":"folders/Sprites/NPC.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"cca_1_old.yarn","CopyToMask":-1,"filePath":"datafiles",},
@@ -60,7 +60,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.11.0.121",
+    "IDEVersion": "2023.11.1.129",
   },
   "resources": [
     {"id":{"name":"spr_mc_female_idle_legs","path":"sprites/spr_mc_female_idle_legs/spr_mc_female_idle_legs.yy",},},
