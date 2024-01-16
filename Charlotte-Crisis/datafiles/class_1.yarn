@@ -226,23 +226,112 @@ Chenjie: "The semester's barely started and I already have a backlog."
     Chenjie: "Then we're counting on you if Prof calls on us."
     Sage: "She's not asking us for the dictionary definition. It's what it means to us, right?"
     Chenjie: "Okay, okay. I'm just pulling your leg."
-    (go to 11)
 
 -> "There were readings?"
     Joanne: "It's sent to our emails. You should probably check that."
     Sage: "It's okay. It's not a lot. It's like... about 25 pages each?"
     Chenjie: "It gets worse from here. I hear some weeks we have 5 readings."
-    You feel exhausted even from the sound of that. (-5% confidence)
-    (go to 11)
+    You feel exhausted even from the sound of that. 
+    # (-5% confidence)
 
--> (joking) "That's it. I'm quitting to flip burgers for the rest of my life."
-    (if CHA < 3) Sage: "The readings aren't *that* bad."
-    Chenjie: "We just have to suck it up."
-    (go to 11)
+-> (joking) "That's it. I'm quitting to flip burgers for the rest of my life." [CHA required: 3]
+    <<if $CHA < 3>>
+        Sage: "The readings aren't *that* bad."
+        Chenjie: "We just have to suck it up."
+    <<else>>
+        Chenjie: "Bro, recommend me to your branch manager. I also need that job."
+        Joanne: "And me!"
+        Everyone's mood is a bit better. 
+        # (+5 XP)
+    <<endif>>
 
-    (if CHA >= 3) 
-    Chenjie: "Bro, recommend me to your branch manager. I also need that job."
-    Joanne: "And me!"
-    Everyone's mood is a bit better. (+5 XP)
-    (go to 11)
+<<jump 11>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1960,360
+__PrivCrochet_tags: 
+title: 11
+---
+Joanne: "So back to the discussion question. What's feminism to you?"
+Chenjie: "For me, it's about equality, right? We want equal rights for all genders and sexualities."
+Joanne: "Yeah... I hate it when women aren't treated as equals. When I hear girls being discriminated against heavily overseas, I get quite frustrated."
+Joanne: "Especially things like job or education opportunities."
+Sage: "I mean, according to the readings, it's also about race, disability and class."
+You: "Yeah, so feminism to me is..."
+
+-> "Equal rights for all." 
+    Joanne: "Yeah, agreed."
+    Chenjie: "Yeah, so regardless of gender, sexuality, race and all that."
+    Chenjie: "Everyone is treated equally."
+    Sage looks like she has something to add, but she is hesitating.
+
+    -> Press her.
+        You: "Sage, do you have something to add?"
+        Sage: "What?"
+        She stutters for a bit.
+        Sage: "Maybe, not just equally? Different people have different circumstances and needs, right?"
+        Sage: "Like, um, there's a difference between allowing straight pride parades and gay pride parades, right?"
+        Chenjie: "In what way?"
+        Joanne: "Because one is reinforcing rigid social norms and the other is celebrating LGB people."
+        Chenjie: "Oh, that makes sense. It's like the thing where we don't give $500 to both the rich person and the poor person."
+        Chenjie: "We give the poor person more because they need it more."
+        You: "So it's about equity, not just equality."
+        Sage: "Uh... Uh, right!"
+        Sage still looks a bit uncomfortable.
+        <<jump 12>>
+    
+    -> Let her be.
+        Chenjie: "So we're done!"
+        Joanne: "Can't believe it's the second last semester for me already... I hardly got to enjoy myself during the sem break."
+        You: "Ugh, don't remind me."
+        With plenty of time left, your group starts some small talk about what you did over the semester break.
+        Sage looks a bit distracted.
+        <<jump 12>>
+
+-> "About changing society for the better."
+    Sage: "Wow. That sounds very idealistic."
+    You: "Feminism is trying to change a whole society, right? Doesn't that in itself sound pretty ambitious?"
+    Joanne: "When you put it that way, it kind of does."
+    <<jump 16>>
+
+-> "Creating a society that accepts and empowers all people." [EMP: 3]
+    You: "It's also about inclusivity. Not just giving equal rights, but also including marginalised people and respecting their differences." 
+    # (+ 5 XP)
+    Chenjie: "Right... Like how gay and lesbian people are scared they'll lose their jobs, right?"
+    Sage: "Yeah, and I feel that in Singapore, it's always about tolerance."
+    Sage: "Like, we sometimes have this very 'not in my backyard' way of looking at things."
+    Sage fidgets with a pen in her hand.
+    Sage: "But as a result, people can't imagine there being LGBTQ+ people ever being in their own community or own family."
+    Joanne: "Yeah, people in Singapore tend to feel uncomfortable about these things."
+    Joanne: "We're still a largely conservative country, and family values are important to a lot of Singaporeans."
+    Chenjie: "There aren't that many LGBT in Singapore. So it's difficult to get used to them."
+
+        -> "Don't say 'get used to them'. That's dehumanising."
+            Chenjie: "Dehumanising?"
+            You: "Yeah. You're saying 'get used to' like LGBTQ people are a nuisance."
+            Joanne: "I'm sure he didn't mean it that way."
+            Chenjie: "Yeah, man. Sorry, okay?"
+            Chenjie: "I also don't really have much experience talking to gay and lesbian people. I don't really know what the right way of saying things is."
+            Joanne: "It's okay. I think it goes back to the whole thing about tolerance versus inclusivity though, right?"
+            Joanne: "So we need more conversations about this issue."
+            Sage: "It's hard to even have any conversations about it though."
+            Sage: "On top of all the homophobia, the government actually has media laws in place to prevent proper discussions about it."
+            Chenjie: "I mean, on an individual level, we can talk to people and find out more."
+            Sage: "Honestly, there are too many people who don't even want to talk to people who are LGBTQ+."
+            <<jump 19>>
+        
+        -> "It's a chicken and egg problem."
+            You: "People don't want to come out because it's risky to be out."
+            You: "But also, it's risky because not enough LGBT people are coming out to talk about their experiences."
+            Sage: "I don't know... It's not necessary for you to be out before you can advocate for a cause, right?"
+            Sage: "You don't even have to be LGBTQ+ to do it."
+            Chenjie: "True. True. It's not like animal rights activists are animals themselves."
+            Chenjie: "I'm an ally!"
+            <<jump 20>>
+        
+        -> "Not many LGBTQ people who are *out* at least."
+            You: "I think it's just difficult to come out in general."
+            Sage: "Yeah, it's a commitment, right? And also because people tend to be quite kaypoh."
+            <<jump 18>>
+
 ===
