@@ -335,3 +335,29 @@ You: "Yeah, so feminism to me is..."
             <<jump 18>>
 
 ===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2200,360
+__PrivCrochet_tags: 
+title: 12
+---
+Prof Lim: "Time's up!"
+Prof Lim: "Let's hear from some of you. I heard some interesting discussions over there..."
+She does not call on your group for the rest of the lecture for anything else.
+She goes on to explain the foundational theories and historical contexts for feminism and feminist studies. 
+Lecture proceeds uneventfully after that. 
+# (+ 5 XP)
+Prof Lim: "And that's it for class! Thank you, everyone. Remember that you will need to form groups of three or four for the group project."
+Finally, the end of class. This class had been strangely draining.
+TIP: If your relationship with someone in class is good enough, you can choose to walk to the bus stop with them.
+Who will you walk with today?
+
+# TODO: Implement function to check if there's enough relationship.
+-> Chenjie (Chenjie relationship > 10)
+    <<jump 13>>
+
+-> Joanne (Joanne relationship > 10)
+    <<jump 14>>
+
+-> Sage (Sage relationship > 10)
+    <<jump 15>>
+===
