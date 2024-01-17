@@ -482,3 +482,60 @@ Joanne: "Out of curiosity, what made you choose this course?"
         Joanne: "Okay, bye."
         You: "Um, bye!"
 ===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2480,600
+__PrivCrochet_tags: 
+title: 15
+---
+You: "Sage, wanna walk to the bus stop together?"
+Sage: "Why not?"
+## (switch scene to bus stop)
+You: "You're only Year 3, right? You usually don't take a level 4 course in Year 3, right?"
+Sage: "Yeah, I guess. But I was really eager to try this course. I heard a lot of good things online about it."
+You: "Like what?"
+Sage: "I hear the prof is really knowledgeable and the stuff covered in this course is interesting."
+Sage: "I feel I have a personal stake in this conversation, so I thought I should educate myself."
+
+-> "Me too!"
+    You: "Since I crossdress, I think it's important for me to have a better understanding of gender especially."
+    Sage: "Hm... Yeah, true."
+    Sage: "So are you trans?"
+    You had forgotten about it for a second, but suddenly you remember your text from your sister, demanding to talk to you.
+    Your hands are clammy. 
+    Do you even have any idea how to explain yourself to her? You don't even know what you are.
+    -> "I'm just a crossdresser."
+        Sage: "I see. I think it's cool though. The way crossdressers bend gender a little bit."
+        Sage: "I always admired them a little bit. Like, breaking out of the mould."
+        Sage: "Good for you." (+ 5 XP)
+        You: "Thanks. Breaking out of the mould is fun anyway." 
+        You: "I think it challenges you to think of things more broadly. From more angles."
+        Sage: "For sure!"
+        Sage: "Anyway, my bus is here."
+        You: "Ah. Okay, bye!"
+        Sage: "Yup! Bye!"
+
+    -> "I might be trans."
+        Sage: "Might be?"
+        You: "I don't know... I'm figuring things out. That's the whole point of signing up for this course actually."
+        Sage: "I hope you figure it out soon. Self-discovery is a rough journey."
+        Sage: "Although honestly figuring out what to do after the self-discovery is super rough as well."
+        Sage: "The world's just a rough place."
+        That... doesn't fill you with a lot of hope.
+        Sage: "Should I call you Charlotte or Charles then?"
+        You: "Um... Maybe just continue calling me by how I'm presenting."
+        Sage: "Okie dokes!"
+        Sage: "Also, my bus is here."
+        Sage: "Bye for now!"
+        You: "Bye." 
+
+-> "I'm just here to clear my requirements."
+    Sage: "And might as well take something interesting, right?"
+    Sage: "I hope I'll learn something useful in this course."
+    You: "Is there a particular topic you're interested in?"
+    Sage thinks for a while.
+    Sage: "I think the LGBTQ+ one. That one sounds the most interesting to me."
+    You: "I think so too."
+    Sage: "Nice. We'll see how it goes then."
+    Sage: "Oh! That's my bus. Bye!"
+    You: "Bye!"
+===
