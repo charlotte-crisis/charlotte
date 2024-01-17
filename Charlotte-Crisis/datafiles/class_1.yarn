@@ -361,3 +361,124 @@ Who will you walk with today?
 -> Sage (Sage relationship > 10)
     <<jump 15>>
 ===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2480,120
+__PrivCrochet_tags: 
+title: 13
+---
+You: "Chenjie, wanna walk to the bus stop together?"
+Chenjie: "Yeah, okay!"
+## (switch scene to bus stop)
+## <<changeScene(bus_stop)>>
+## TODO!
+Chenjie: "Oh, yikes."
+You: "What?"
+Chenjie: "My mom said she saw a cockroach in the living room. And she's asking me to hurry back to kill it."
+Chenjie: "I hate cockroaches."
+
+-> "But a man's gotta do what a man's gotta do."
+    Chenjie: "I know."
+    Chenjie: "The worst thing is that they're so hard to kill. And even when you spray Baygon, they still run around for a while."
+    You: "I usually just smack them with a slipper. More direct that way."
+    Chenjie: "I guess..."
+    Chenjie: "Hey, look. My bus is here. See you next week."
+    You: "See you!"
+
+-> "Eurgh! Cockroaches."
+    Chenjie: "Yeah, cockroaches are so disgusting. Worse than literally any other bug."
+    Chenjie: "I've gotten a lot better after NS but I still get the jitters when I see a cockroach."
+    You: "I get that. Good thing your mom has you though."
+    Chenjie: "I guess so!"
+    Chenjie: "Oh! That's my bus. See you next week!"
+    You: "See you! And all the best with that cockroach."
+    Chenjie: "Thanks! Haha!" 
+    # (+5% Chenjie relationship)
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2480,360
+__PrivCrochet_tags: 
+title: 14
+---
+You: "Joanne, wanna walk to the bus stop together?"
+Joanne: "Yeah, okay!"
+## (switch scene to bus stop)
+# TODO!
+Joanne: "What other classes are you taking?"
+You: "4249, 4255, and 4260."
+Joanne: "Aww... We only share this class."
+Joanne: "Out of curiosity, what made you choose this course?"
+
+-> "Just to clear requirements honestly."
+    Joanne: "I see..."
+    Joanne: "Still, I think it's good exposure to different perspectives, right?"
+    You: "I guess so. We rarely talk about these topics in our daily life."
+    Joanne: "We don't talk enough about it. For sure!"
+    Joanne: "It's why so many women's issues are swept under the rug."
+    You: "The lecture today was quite dry though. Hopefully the next few weeks will be more interesting."
+    Joanne: "Yeah, agreed. The topics for each week sound quite interesting though. I'm sure it will get better."
+    You: "Oh."
+    You: "I think that's my bus. See you next week?"
+    Joanne: "See you!"
+
+-> "I wanted to educate myself more on topics about women's rights."
+    Joanne: "That's great!"
+    Joanne: "It's nice to see more guys who are actively learning more about women's rights."
+    You: "Half the human population are women so of course these issues are important to talk about."
+    Joanne: "Exactly!" 
+    # (+5% Joanne relationship)
+    Joanne: "It really makes me angry when people dismiss our problems."
+    Joanne: "Of course, I don't think all men are like that. But there are just a select few who are just..."
+    You: "Particularly depraved?"
+    Joanne: "Yeah, I don't know how anyone could be like that."
+    You: "Hey, I think that's my bus. See you next week?"
+    Joanne: "Yeah! See you! It was nice talking to you."
+
+-> "I'm interested in queer issues, especially in gender."
+    Joanne: "Gender? Like the transgenders?"
+    You: "I guess so? But also gender nonconformity."
+    You: "As a crossdresser, I like examining gender expressions and how we perform gender."
+    Joanne: "Like... how to imitate a girl...?" 
+    # (-5% Joanne relationship)
+    You: "Not just that. There are days when I actually feel like a girl, and that's when I dress up as Charlotte."
+    Joanne: "Okay... So you actually think that you're a girl?"
+    You sense her backing away.
+
+    -> "No, I know I'm not a girl."
+        You: "I just think dresses are nice."
+        Joanne: "Yeah... Being a girl isn't as simple as just putting on a dress though."
+        Joanne: "I mean, if it's just dressing up for a cosplay or something, it's probably fine."
+        You: "Yeah, you're right..." (-5% confidence)
+        Joanne: "Is that your bus?"
+        You: "Oh, yeah. I think it is. See you next week."
+        Joanne: "Yeah, bye!"
+    
+    -> "I don't know. I just feel that way sometimes."
+        Joanne: "What? Like when?"
+        You: "It depends from day to day."
+        Joanne: "That sounds very fickle..."
+        You: "Maybe. But I think it's important to consider my feelings, no matter how fickle they may be."
+        Joanne: "I don't know. Feeling like a girl once in a while is..."
+        Joanne: "I mean, there are days when I'm envious of guys. But that doesn't mean I am one."
+        Joanne: "The grass is greener on the other side."
+        You: "Maybe."
+        But you have the feeling it's not as simple as plain envy.
+        You: "Oh, my bus is here. See you next week."
+        Joanne: "Yeah, see you!"
+    
+    -> "That's something I've been thinking about myself."
+        Joanne: "What do you mean by that?"
+        You: "Truthfully, I haven't been giving much thought."
+        But given the fact that even your sister knows about your crossdressing habit...
+        You: "I think it's about time I started seriously questioning why I'm crossdressing."
+        Joanne: "Yeah, you should properly evaluate your motivation behind pretending to be a girl."
+        You: "What?"
+        Joanne: "Women fought so hard just to get equal standing as men today. Being a girl is not as easy as just putting on a skirt."
+        Joanne: "And also, you don't want people to mistake you for a pervert, right?"
+        You: "I don't think..."
+        Joanne: "I think it's a bit disrespectful to take advantage of the feminist movement for your own agenda."
+        You: "I..." 
+        # (-5% confidence)
+        You: "Um... I think that's my bus. Bye."
+        Joanne: "Okay, bye."
+        You: "Um, bye!"
+===
