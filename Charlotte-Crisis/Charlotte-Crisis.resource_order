@@ -40,6 +40,7 @@
     {"name":"Wardrobe","order":6,"path":"folders/Sprites/Wardrobe.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"Player","order":6,"path":"folders/Objects/Player.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_mc_female_idle_legs","order":1,"path":"sprites/spr_mc_female_idle_legs/spr_mc_female_idle_legs.yy",},
@@ -115,7 +116,9 @@
     {"name":"__ChatterboxXORShift32Random","order":16,"path":"scripts/__ChatterboxXORShift32Random/__ChatterboxXORShift32Random.yy",},
     {"name":"obj_door","order":1,"path":"objects/obj_door/obj_door.yy",},
     {"name":"spr_mc_female_idle_torso","order":3,"path":"sprites/spr_mc_female_idle_torso/spr_mc_female_idle_torso.yy",},
+    {"name":"rm_bedroom_1","order":3,"path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},
     {"name":"spr_mc_male_idle_legs","order":1,"path":"sprites/spr_mc_male_idle_legs/spr_mc_male_idle_legs.yy",},
+    {"name":"obj_stats","order":1,"path":"objects/obj_stats/obj_stats.yy",},
     {"name":"ChatterboxIsWaiting","order":5,"path":"scripts/ChatterboxIsWaiting/ChatterboxIsWaiting.yy",},
     {"name":"spr_mc_female_sitting_torso","order":3,"path":"sprites/spr_mc_female_sitting_torso/spr_mc_female_sitting_torso.yy",},
     {"name":"__ChatterboxEscapeForCSV","order":8,"path":"scripts/__ChatterboxEscapeForCSV/__ChatterboxEscapeForCSV.yy",},

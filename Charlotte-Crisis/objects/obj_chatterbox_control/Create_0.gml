@@ -1,15 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
-if instance_number(object_index) > 1{
+if instance_number(object_index) > 1 {
     instance_destroy();
     exit;
 }
-ChatterboxLoadFromFile("cca1.yarn");
+ChatterboxLoadFromFile("room_1.yarn");
 chatterbox = ChatterboxCreate();
-ChatterboxJump(chatterbox, "1");
+ChatterboxJump(chatterbox, "0");
 chatterbox_update();
-
-ChatterboxAddFunction("setGender", set_player_gender); 
 
 option_index = 0;
 
@@ -24,3 +22,11 @@ function chatterbox_set(_node_name) {
 	chatterbox_update();
 	obj_player.set_is_talking(true);
 }
+
+#region ChatterboxAddFunction defined here
+
+	ChatterboxAddFunction("setGender", set_player_gender); 
+	
+	
+
+#endregion

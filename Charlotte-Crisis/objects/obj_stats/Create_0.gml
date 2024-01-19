@@ -20,10 +20,3 @@ experience = 0;
 // Gender Meter
 // lets say its a scale from 1 to 100.
 gender = 50;
-
-// instance method or script better?
-// TODO: create script or something
-add_empathy = function() {
-	empathy += 1;
-	return;
-}
