@@ -16,9 +16,10 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 	// draw_sprite_ext(characters, 1, view_wport[0] - _margin_char, room_height, size[!_me], size[!_me], 0, colour[!_me], 1);
 	
 	var _yy = view_hport[0] - (_margin_text / 2);
+	var _text_yy = view_hport[0] - (_margin_text);
 	var _xx; // to be set below.
 	
-	draw_rectangle_center(view_wport[0] / 2, _yy, view_wport[0], _margin_text, false, c_black, BG_ALPHA);
+	draw_rectangle_center(view_wport[0] / 2, _yy, view_wport[0], _margin_text * 2, false, c_black, BG_ALPHA);
 	
 	// Align text left if speaker is Player, Narrator, or Inner Monologue
 	// Align right otherwise
@@ -39,11 +40,11 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 	// If inner monologue: Set italic and do not print speaker, only speech
 	if (_narrator) {
 		draw_set_font(fnt_body_italic);
-		draw_text_ext(_xx, _yy, speech, _linesep, view_wport[0] - 2 * _margin_text);	
+		draw_text_ext(_xx, _text_yy, speech, _linesep, view_wport[0] - 2 * _margin_text);	
 		draw_set_font(fnt_body);
 		
 	} else {
-		draw_text_ext(_xx, _yy, speaker + ": " + speech, _linesep, view_wport[0] - 2 * _margin_text);	
+		draw_text_ext(_xx, _text_yy, speaker + ": " + speech, _linesep, view_wport[0] - 2 * _margin_text);	
 	}
 	
 	if (ChatterboxGetOptionCount(chatterbox)) {
