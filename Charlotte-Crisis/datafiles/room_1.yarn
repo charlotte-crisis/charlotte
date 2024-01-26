@@ -6,22 +6,16 @@ __PrivCrochet_position: 920,200
 __PrivCrochet_tags: 
 title: 0
 ---
-<<if visited("0")>>
-    # visited_count not working?
-    It's not a good look to miss your first week of lectures.
-    (Left and Right arrow keys to move. Press the spacebar near an object or person to interact. Press the Up arrow key near a door to travel.)
-<<else>>
-    You hop out of bed. (Press the spacebar to continue.)
-    It's the first day of the semester.
-    You'd just moved in to the dormitory yesterday.
-    It was a lot of stuff to move from home, but you're glad your belongings are safe here with you.
-    And with that, your first class is today. You didn't waste much time (of which you had precious little to begin with) unpacking last night.
-    
-    You got as much sleep as you could manage. You stare at the bed.
-    It draws you back in, but you withstand its pull.
-    Well, no use idling around.
-    (Left and Right arrow keys to move. Press the spacebar near an object or person to interact. Press the Up arrow key near a door to travel.)
-<<endif>>
+You hop out of bed. (Press the spacebar to continue.)
+It's the first day of the semester.
+You'd just moved in to the dormitory yesterday.
+It was a lot of stuff to move from home, but you're glad your belongings are safe here with you.
+And with that, your first class is today. You didn't waste much time (of which you had precious little to begin with) unpacking last night.
+
+You got as much sleep as you could manage. You stare at the bed.
+It draws you back in, but you withstand its pull.
+Well, no use idling around.
+(Left and Right arrow keys to move. Press the spacebar near an object or person to interact. Press the Up arrow key near a door to travel.)
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1160,200
