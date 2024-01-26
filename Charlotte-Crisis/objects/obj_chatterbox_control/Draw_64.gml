@@ -1,5 +1,7 @@
 /// @description Draw text from Chatterbox.
 
+
+
 // Margin of text from left and right. 
 // Base it off of room width.
 var _margin_text = view_wport[0] * 0.1;
@@ -16,7 +18,7 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 	var _yy = view_hport[0] - (_margin_text / 2);
 	var _xx; // to be set below.
 	
-	draw_rectangle_center(view_wport[0] / 2, _yy, view_wport[0], _margin_text, false, c_black, 0.5);
+	draw_rectangle_center(view_wport[0] / 2, _yy, view_wport[0], _margin_text, false, c_black, BG_ALPHA);
 	
 	// Align text left if speaker is Player, Narrator, or Inner Monologue
 	// Align right otherwise
@@ -59,9 +61,9 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 				// Highlight option being selected
 				if (option_index == i) {
 					_icon = "> ";
-					draw_rectangle_center(_xx, _yy, _width, _height, false, c_blue, 0.5);
+					draw_rectangle_center(_xx, _yy, _width, _height, false, c_blue, BG_ALPHA);
 				} else {
-					draw_rectangle_center(_xx, _yy, _width, _height, false, c_black, 0.5);	
+					draw_rectangle_center(_xx, _yy, _width, _height, false, c_black, BG_ALPHA);	
 				}
 				
 				var _option = ChatterboxGetOption(chatterbox, i);

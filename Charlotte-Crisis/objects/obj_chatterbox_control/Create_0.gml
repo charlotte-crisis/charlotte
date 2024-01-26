@@ -30,3 +30,9 @@ function chatterbox_set(_node_name) {
 	
 
 #endregion
+
+#region constants
+// Draw step
+BG_ALPHA = 0.9;
+#endregion
+
