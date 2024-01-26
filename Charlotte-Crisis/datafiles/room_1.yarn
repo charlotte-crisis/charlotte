@@ -22,9 +22,10 @@ __PrivCrochet_position: 1160,200
 __PrivCrochet_tags: 
 title: 1
 ---
-<<if visited("1")>>
+<<if false>> #visited("1") currently not working
     On second thought, you feel like changing it up again.
     Who are you today? (Use the Up and Down arrow keys to choose an option, and spacebar to continue.)
+    <<jump 1_choice>>
 <<else>>
     You stare at the mirror.
     It's you.
@@ -36,23 +37,8 @@ title: 1
     At the start of the day, he's not sure what compels him, but he chooses to be Charles or Charlotte.
 
     Who are you today? (Use the Up and Down arrow keys to choose an option, and spacebar to continue.)
+    <<jump 1_choice>>
 <<endif>>
-
--> Charles
-    <<set $name = "Charles">>
-    <<setGender(0)>>    
-    You put on a T-shirt and jeans.
-    This is what you normally look like.
-    The original, the default skin, so to speak.
-    
--> Charlotte
-    <<set $name = "Charlotte">>
-    <<setGender(1)>>
-    You made sure to bring all your clothes to school.
-    Here, you're free to wear them, and no one can stop you.
-    You put on a dress. It fits you well, which has always been part of what motivated you to continue this hobby in the first place.
-
-(You can interact with the mirror again if you change your mind.)
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1400,200
@@ -68,4 +54,25 @@ title: 2
 <<else>>
     You should probably get dressed before you head out.
 <<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1080,520
+__PrivCrochet_tags: 
+title: 1_choice
+---
+-> Charles
+    <<set $name = "Charles">>
+    <<setGender(0)>>    
+    You put on a T-shirt and jeans.
+    This is what you normally look like.
+    The original, the default skin, so to speak.
+    
+-> Charlotte
+    <<set $name = "Charlotte">>
+    <<setGender(1)>>
+    You made sure to bring all your clothes to school.
+    Here, you're free to wear them, and no one can stop you.
+    You put on a dress. It fits you well, which has always been part of what motivated you to continue this hobby in the first place.
+
+(You can interact with the mirror again if you change your mind.)
 ===

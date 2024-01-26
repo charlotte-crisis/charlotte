@@ -15,6 +15,7 @@
     {"name":"inst_16CE69C6","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},
     {"name":"inst_7A5231B2","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},
     {"name":"inst_2B64EC89","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},
+    {"name":"inst_641C4A37","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -32,7 +33,8 @@
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Interactable","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4AE1EEF3_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"properties":[],"rotation":0.0,"scaleX":1.375,"scaleY":3.9375,"x":232.96594,"y":92.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_64F34CA7_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wardrobe","path":"objects/obj_wardrobe/obj_wardrobe.yy",},"properties":[],"rotation":0.0,"scaleX":1.625,"scaleY":4.625,"x":129.0,"y":89.19811,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_64F34CA7_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wardrobe","path":"objects/obj_wardrobe/obj_wardrobe.yy",},"properties":[],"rotation":0.0,"scaleX":0.6875,"scaleY":4.625,"x":100.0,"y":90.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_641C4A37","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_mirror","path":"objects/obj_mirror/obj_mirror.yy",},"properties":[],"rotation":0.0,"scaleX":0.8125,"scaleY":4.625,"x":131.0,"y":90.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_hostel_bars","path":"sprites/spr_hostel_bars/spr_hostel_bars.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
