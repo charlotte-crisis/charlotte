@@ -57,7 +57,7 @@ title: 2
 <<if visited("1")>>
     Are you ready to head out? (This will end the tutorial.)
     -> Yes (Go to school)
-        ## change_room()
+        <<goto_room_class_1()>>
     -> No (Go back)
         ## exit.
 <<else>>
