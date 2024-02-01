@@ -9,5 +9,3 @@ indicator = instance_create_layer(x,y,"Instances", obj_indicator);
 indicator.visible = false;
 
 
-
-

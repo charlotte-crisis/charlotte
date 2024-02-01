@@ -1,10 +1,12 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_vera",
+  "name": "obj_sage",
   "eventList": [],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"propertyId":{"name":"node","path":"objects/obj_npc/obj_npc.yy",},"value":"2",},
+  ],
   "parent": {
     "name": "NPC",
     "path": "folders/Objects/NPC.yy",
@@ -29,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_classmate_f",
-    "path": "sprites/spr_classmate_f/spr_classmate_f.yy",
+    "name": "S_sat_strip2",
+    "path": "sprites/S_sat_strip2/S_sat_strip2.yy",
   },
   "spriteMaskId": null,
   "visible": true,
