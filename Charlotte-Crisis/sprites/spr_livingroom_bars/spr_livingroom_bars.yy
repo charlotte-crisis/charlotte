@@ -1,8 +1,8 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_classroom",
-  "bbox_bottom": 107,
+  "name": "spr_livingroom_bars",
+  "bbox_bottom": 191,
   "bbox_left": 0,
   "bbox_right": 399,
   "bbox_top": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"02c72a25-b2ee-42dc-95af-c1fcf399a069",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bc7acc6b-3730-4d3c-b417-420af79de826",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 108,
+  "height": 192,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e9cbcb00-a2ab-4832-9e75-50ff858ef45e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8d13cbef-5631-4098-9a8c-871c35ed1b8f","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_classroom",
+    "name": "spr_livingroom_bars",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"02c72a25-b2ee-42dc-95af-c1fcf399a069","path":"sprites/spr_classroom/spr_classroom.yy",},},},"Disabled":false,"id":"c1262c84-1a3a-46ec-a507-2f650dfe5ad0","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bc7acc6b-3730-4d3c-b417-420af79de826","path":"sprites/spr_livingroom_bars/spr_livingroom_bars.yy",},},},"Disabled":false,"id":"9bbac4b2-3d03-4e08-80e7-4ac4956707dd","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
