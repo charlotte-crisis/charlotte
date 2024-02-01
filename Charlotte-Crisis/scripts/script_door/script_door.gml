@@ -4,6 +4,9 @@ function goto_room_class_1(){
 	room_goto(rm_class_1);
 	obj_player.x = 296;
 	obj_player.y = 74;
+	
+	// Need to load then create.
 	ChatterboxLoadFromFile("class_1.yarn");
-	ChatterboxJump(chatterbox, "0");
+	obj_chatterbox_control.chatterbox = ChatterboxCreate("class_1.yarn");
+	ChatterboxJump(chatterbox, "1");
 }
