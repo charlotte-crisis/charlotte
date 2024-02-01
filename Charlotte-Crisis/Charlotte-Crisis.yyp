@@ -74,6 +74,7 @@
     {"id":{"name":"spr_livingroom_bars","path":"sprites/spr_livingroom_bars/spr_livingroom_bars.yy",},},
     {"id":{"name":"__ChatterboxCompile","path":"scripts/__ChatterboxCompile/__ChatterboxCompile.yy",},},
     {"id":{"name":"fnt_body","path":"fonts/fnt_body/fnt_body.yy",},},
+    {"id":{"name":"obj_Interactable","path":"objects/obj_Interactable/obj_Interactable.yy",},},
     {"id":{"name":"spr_shirt_m_1","path":"sprites/spr_shirt_m_1/spr_shirt_m_1.yy",},},
     {"id":{"name":"ChatterboxGetOptionMetadata","path":"scripts/ChatterboxGetOptionMetadata/ChatterboxGetOptionMetadata.yy",},},
     {"id":{"name":"spr_mc_female_sitting_head","path":"sprites/spr_mc_female_sitting_head/spr_mc_female_sitting_head.yy",},},

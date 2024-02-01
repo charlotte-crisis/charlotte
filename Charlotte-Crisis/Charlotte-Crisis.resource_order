@@ -50,6 +50,7 @@
     {"name":"__ChatterboxLocalizationLoadIntoMap","order":11,"path":"scripts/__ChatterboxLocalizationLoadIntoMap/__ChatterboxLocalizationLoadIntoMap.yy",},
     {"name":"spr_livingroom_bars","order":6,"path":"sprites/spr_livingroom_bars/spr_livingroom_bars.yy",},
     {"name":"__ChatterboxCompile","order":7,"path":"scripts/__ChatterboxCompile/__ChatterboxCompile.yy",},
+    {"name":"obj_Interactable","order":4,"path":"objects/obj_Interactable/obj_Interactable.yy",},
     {"name":"spr_shirt_m_1","order":7,"path":"sprites/spr_shirt_m_1/spr_shirt_m_1.yy",},
     {"name":"ChatterboxGetOptionMetadata","order":5,"path":"scripts/ChatterboxGetOptionMetadata/ChatterboxGetOptionMetadata.yy",},
     {"name":"ChatterboxSourceNodeCount","order":9,"path":"scripts/ChatterboxSourceNodeCount/ChatterboxSourceNodeCount.yy",},
