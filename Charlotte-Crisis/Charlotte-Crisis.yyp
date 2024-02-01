@@ -207,6 +207,7 @@
     {"id":{"name":"ChatterboxUnload","path":"scripts/ChatterboxUnload/ChatterboxUnload.yy",},},
     {"id":{"name":"spr_shirt_f","path":"sprites/spr_shirt_f/spr_shirt_f.yy",},},
     {"id":{"name":"ChatterboxIsLoaded","path":"scripts/ChatterboxIsLoaded/ChatterboxIsLoaded.yy",},},
+    {"id":{"name":"obj_bed","path":"objects/obj_bed/obj_bed.yy",},},
     {"id":{"name":"ChatterboxLocalizationClear","path":"scripts/ChatterboxLocalizationClear/ChatterboxLocalizationClear.yy",},},
     {"id":{"name":"spr_placeholder","path":"sprites/spr_placeholder/spr_placeholder.yy",},},
     {"id":{"name":"IsChatterbox","path":"scripts/IsChatterbox/IsChatterbox.yy",},},

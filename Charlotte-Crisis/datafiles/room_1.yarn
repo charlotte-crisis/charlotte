@@ -22,9 +22,6 @@ __PrivCrochet_position: 1160,200
 __PrivCrochet_tags: 
 title: 1
 ---
-On second thought, you feel like changing it up again.
-Who are you today? (Use the Up and Down arrow keys to choose an option, and spacebar to continue.)
-
 You stare at the mirror.
 It's you.
 The man in the reflection is called Charles.
@@ -68,9 +65,10 @@ title: 2
 <<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1160,400
+__PrivCrochet_position: 920,440
 __PrivCrochet_tags: 
-title: 1_choice
+title: 0_revisit
 ---
-`
+Well, no use going back to bed. (Press the spacebar to continue)
+(Left and Right arrow keys to move. Press the spacebar near an object or person to interact. Press the Up arrow key near a door to travel.)
 ===

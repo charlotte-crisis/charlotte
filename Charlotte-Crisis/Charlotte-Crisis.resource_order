@@ -161,6 +161,7 @@
     {"name":"ChatterboxUnload","order":11,"path":"scripts/ChatterboxUnload/ChatterboxUnload.yy",},
     {"name":"spr_shirt_f","order":2,"path":"sprites/spr_shirt_f/spr_shirt_f.yy",},
     {"name":"ChatterboxIsLoaded","order":2,"path":"scripts/ChatterboxIsLoaded/ChatterboxIsLoaded.yy",},
+    {"name":"obj_bed","order":2,"path":"objects/obj_bed/obj_bed.yy",},
     {"name":"ChatterboxLocalizationClear","order":1,"path":"scripts/ChatterboxLocalizationClear/ChatterboxLocalizationClear.yy",},
     {"name":"spr_placeholder","order":2,"path":"sprites/spr_placeholder/spr_placeholder.yy",},
     {"name":"IsChatterbox","order":5,"path":"scripts/IsChatterbox/IsChatterbox.yy",},
