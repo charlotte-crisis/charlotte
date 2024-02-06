@@ -333,6 +333,7 @@ __PrivCrochet_tags:
 title: 3_2
 ---
 # NOTE THIS IS A TEMPORARY NODE JUST TO BE MORE ORGANISED
+# I want to fight.
 
 -> "I want to fight."
     Vera: "As you should!"
@@ -455,4 +456,117 @@ title: 3_2
     Vera: "And I just wanted to say..."
     Vera: "I am so proud of you for standing up for yourself."
     Vera: "Just don't leave any bodies in your wake."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2600,120
+__PrivCrochet_tags: 
+title: 4
+---
+Vera: "Well, I gotta go."
+# (if Vera relationship decreased overall) 
+Vera: "You sure did say some pretty nasty stuff back there."
+Vera: "Please, have a little more empathy for the people around you."
+# (if Vera relationship increased overall)
+Vera: "Thanks for inviting me here. It was nice talking to you!"
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2280,120
+__PrivCrochet_tags: 
+title: 3_3
+---
+# I want to give in.
+
+-> "I want to give in."
+    Vera: "Am I hearing you right?"
+    Vera: "You'd give up Charlotte just to appease your mother?"
+
+    -> "I'm also tired of being a woman."
+        Vera: "Is it the makeup and dresses?"
+        Vera: "I know, it's very hard to get ready every morning..."
+        Vera: "But don't you think it's worth it to see Charlotte as her best self?"
+
+        -> "It's the stress of living a double life."
+            You: "I mean, I have to present male at home."
+            You: "So why bother, right?"
+            Vera: "Heh. This is where I'd suggest you start HRT..."
+            Vera: "But maybe I shouldn't."
+            Vera: "That would be solving one problem with what could be a bigger problem."
+    
+        ->  "Maybe Charlotte was just a phase."
+            Vera: "Be very careful of where you're going with that phrase."
+            Vera: "Don't say that in front of other trans people."
+            Vera: "You wouldn't want to say that their transition is a phase..."
+            Vera: "And if you say that about me, you're done."
+            
+        -> "Nah, I'm done."
+            You: "I feel like I'm on a trial version of femininity."
+            You: "And it's expiring soon."
+            You: "I'm ready to go back to my male life now."
+            Vera: "Hmm. That's not something I thought I'd hear."
+            Vera: "I hope it's really you speaking, then."
+            Vera: "Not any external forces pressuring you to give up Charlotte..."
+            Vera: "But a decision made with Charlotte's consent too."
+
+    -> "I prioritise my mother."
+        Vera: "Heh. Well, it's your choice."
+        Vera: "I personally could never do that."
+        Vera: "To be saccharinely sweet to your mother..."
+        Vera: "To the extent where you'd give up who you are to get there..."
+        Vera: "Ugh. Not my thing."
+    
+    Vera: "Still... you had a good thing going on, Charlotte."
+    Vera: "Regardless of your reasons, I hope you don't do something you regret."
+    Vera: "And, please, remember this vibrant period of self-expression."
+    Vera: "It's probably the happiest part of your life. So far."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2280,360
+__PrivCrochet_tags: 
+title: 3_4
+---
+-> "Actually, I just want to hide."
+    Vera: "Heh. That's kind of what I'm doing, too."
+    Vera: "My parents are entire time zones away."
+    Vera: "But, yours are only MRT stations away..."
+    Vera: "And before long, you'll be staying with them again."
+    Vera: "So how do you think you can hide?"
+
+    -> "Plastic box under the bed."
+        Vera: "What?"
+        Vera: "Oh, you mean like, literally hiding everything in a box."
+        Vera: "Well, that's one way to do it, but..."
+        Vera: "Wouldn't it be hard to access your stuff?"
+        Vera: "And besides, this isn't really a long-term solution, isn't it?"
+        Vera: "You're still under your parents' control."
+        Vera: "Charlotte would still have to live with them."
+        
+    -> "Rent my own place."
+        Vera: "Oh, that'd be nice."
+        Vera: "But I hear rentals here are super high..."
+        Vera: "I mean, I'm not one to ask for budgeting advice."
+        Vera: "Still, I'm sure there are other reasons you'd want to have your own place."
+        Vera: "We're in our twenties, gonna graduate from university..."
+        Vera: "Yet we're still dependent on our parents?"
+        You: "Doesn't sit well with me, yeah."
+        
+    -> "Move overseas."
+        Vera: "Yass! Love that for you."
+        Vera: "I mean, if I could travel anywhere in the world, it would be back to California."
+        Vera: "That was really peak Vera."
+        Vera: "But, you know, I've been moving around since I was little."
+        Vera: "Countries, allegiances, all that doesn't matter to me unless citizenship gives benefits."
+        Vera: "But, as far as I know, you're not that type of person, right?"
+
+        -> "Yeah, I'll miss this place."
+            You: "It's not perfect, but I've invested too much of my life here to just up and leave."
+            Vera: "Ah. That's... a pity."
+
+        -> "Nope. Screw this place."
+            You: "So many of us are moving overseas after all."
+            You: "What's one more person?"
+            You: "Besides, I know this society will never be happy with Charlotte."
+
+    Vera: "Well, either way, it would be good to travel the world first."
+    Vera: "Get a sense of what life's like in other countries and then decide."
+    Vera: "Which ultimately comes back to money, doesn't it..."
 ===
