@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_placeholder",
-    "path": "sprites/spr_placeholder/spr_placeholder.yy",
+    "name": "chair_turned",
+    "path": "sprites/chair_turned/chair_turned.yy",
   },
   "spriteMaskId": null,
   "visible": true,

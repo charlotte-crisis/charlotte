@@ -43,6 +43,7 @@
     {"name":"Wardrobe","order":6,"path":"folders/Sprites/Wardrobe.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"MISC","order":9,"path":"folders/Sprites/MISC.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_mc_female_idle_legs","order":1,"path":"sprites/spr_mc_female_idle_legs/spr_mc_female_idle_legs.yy",},
@@ -190,6 +191,7 @@
     {"name":"A_Portraits","order":3,"path":"sprites/A_Portraits/A_Portraits.yy",},
     {"name":"E_Portraits","order":18,"path":"sprites/E_Portraits/E_Portraits.yy",},
     {"name":"ChatterboxVariablesFind","order":8,"path":"scripts/ChatterboxVariablesFind/ChatterboxVariablesFind.yy",},
+    {"name":"chair","order":1,"path":"sprites/chair/chair.yy",},
     {"name":"CJ_Portraits","order":14,"path":"sprites/CJ_Portraits/CJ_Portraits.yy",},
     {"name":"fnt_body_italic","order":1,"path":"fonts/fnt_body_italic/fnt_body_italic.yy",},
     {"name":"ChatterboxVariableSet","order":5,"path":"scripts/ChatterboxVariableSet/ChatterboxVariableSet.yy",},
