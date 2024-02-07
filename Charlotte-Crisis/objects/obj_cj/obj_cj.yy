@@ -4,12 +4,17 @@
   "name": "obj_cj",
   "eventList": [],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"propertyId":{"name":"node","path":"objects/obj_npc/obj_npc.yy",},"value":"3",},
+  ],
   "parent": {
     "name": "NPC",
     "path": "folders/Objects/NPC.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_npc",
+    "path": "objects/obj_npc/obj_npc.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -25,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "CJ_idle_strip2",
+    "path": "sprites/CJ_idle_strip2/CJ_idle_strip2.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

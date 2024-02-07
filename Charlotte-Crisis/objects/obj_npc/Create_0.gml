@@ -5,7 +5,7 @@
 
 friendship = 0;
 
-indicator = instance_create_layer(x,y,"Instances", obj_indicator);
+indicator = instance_create_layer(x,y,"Helpers", obj_indicator);
 indicator.visible = false;
 
 

@@ -29,6 +29,7 @@
     {"name":"Sounds","order":3,"path":"folders/Sounds.yy",},
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
     {"name":"Characters (old)","order":1,"path":"folders/Sprites/Characters (old).yy",},
+    {"name":"Characters","order":8,"path":"folders/Sprites/Characters.yy",},
     {"name":"Clothes","order":2,"path":"folders/Sprites/Clothes.yy",},
     {"name":"Female MC","order":5,"path":"folders/Sprites/Female MC.yy",},
     {"name":"Idle","order":1,"path":"folders/Sprites/Female MC/Idle.yy",},
@@ -42,7 +43,6 @@
     {"name":"Wardrobe","order":6,"path":"folders/Sprites/Wardrobe.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"Characters","order":8,"path":"folders/Sprites/Characters.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_mc_female_idle_legs","order":1,"path":"sprites/spr_mc_female_idle_legs/spr_mc_female_idle_legs.yy",},

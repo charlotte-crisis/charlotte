@@ -12,6 +12,7 @@
     {"name":"inst_741BB5E2_1_1","path":"rooms/rm_class_1/rm_class_1.yy",},
     {"name":"inst_7F9825AA","path":"rooms/rm_class_1/rm_class_1.yy",},
     {"name":"inst_76CD30F9","path":"rooms/rm_class_1/rm_class_1.yy",},
+    {"name":"inst_22630423","path":"rooms/rm_class_1/rm_class_1.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -20,6 +21,7 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Interactable","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7F9825AA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_sage","path":"objects/obj_sage/obj_sage.yy",},"properties":[],"rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"x":213.0,"y":71.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_76CD30F9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_joanne","path":"objects/obj_joanne/obj_joanne.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":108.0,"y":72.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_22630423","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_cj","path":"objects/obj_cj/obj_cj.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":82.0,"y":71.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Walls","depth":300,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5DDBE41A_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"rotation":0.0,"scaleX":25.0,"scaleY":3.5,"x":200.0,"y":164.0,},
