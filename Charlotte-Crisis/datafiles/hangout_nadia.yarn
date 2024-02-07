@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 320,-440
+__PrivCrochet_position: 360,-360
 __PrivCrochet_tags: 
 title: 1_1
 ---
@@ -28,9 +28,12 @@ Nadia: "So, what are we talking about today?"
 
 -> "How's school?"
     <<jump 1_1>>
+
+-> "So... you really like anime, right?"
+    <<jump 1_2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 320,-200
+__PrivCrochet_position: 600,-600
 __PrivCrochet_tags: 
 title: 1_1_3
 ---
@@ -95,7 +98,7 @@ Nadia: "What's the best part about staying?"
     You: "You really would."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 320,-680
+__PrivCrochet_position: 120,-600
 __PrivCrochet_tags: 
 title: 1_1_1
 ---
@@ -137,7 +140,7 @@ Nadia: "What about your major?"
     Nadia: "Oh slay! It's like the module was custom-made for you."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 560,-440
+__PrivCrochet_position: 360,-640
 __PrivCrochet_tags: 
 title: 1_1_2
 ---
@@ -398,4 +401,131 @@ Nadia: "Do you think being Charlotte halted your professional development?"
         You: "Are you saying being Charlotte is a waste of time?"
         Nadia: "No, I..."
         Nadia: "Never mind, I'm sorry. I shouldn't have asked that." (-5% Nadia relationship)
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 360,-80
+__PrivCrochet_tags: 
+title: 1_2
+---
+Nadia: "Oh yes. What about it?"
+
+-> "Got any to recommend?"
+    Nadia: "Hmm... depends what you're into."
+    Nadia: "Perhaps give me a prompt? So I can think of what I'd like."
+
+    -> "Genderswap is an anime thing, right?"
+        Nadia: "Ooh, that's a fun one!"
+        Nadia: "I remember there's one where the protagonist changes gender when water is splashed on them..."
+        Nadia: "And one where a guy and a girl just straight up switch bodies."
+
+        -> "So did you ever think of yourself in that situation?"
+            Nadia: "Hmm... Well, recreationally, yes, I do."
+            Nadia: "But it never goes beyond a fleeting 'what-if' situation."
+            Nadia: "I wouldn't even call it a fantasy."
+            Nadia: "I'm good with being a girl, I guess?"
+        
+        -> "Do you think it's good trans representation?"
+            Nadia: "Uh... I mean, I can't tell."
+            Nadia: "After all, I'm not trans..."
+            Nadia: "Maybe we could ask Vera to watch it!"
+            Nadia: "Or you could watch it yourself... if you have time..."
+    
+    -> "Action."
+        Nadia: "Hmm, that's more of the shonen stuff. I never really looked into that..."
+        Nadia: "But I know some are really popular!"
+        Nadia: "There's the one about pirates, and another one about ninjas..."
+        Nadia: "And the very long running one with all the crazy poses and memes."
+        Nadia: "There's a lot to pick from to get your blood pumping."
+        
+    -> "Romance...?"
+        Nadia: "Ahh yes, my favourite!"
+        Nadia: "Hmm... I don't really like telling people this, but..."
+        Nadia: "I like the BL stuff."
+        You: "Ah, so is that the stuff you're drawing in Art Club?"
+        Nadia: "No! I promise, no."
+        Nadia: "I wouldn't want the world to see the BL that I draw."
+
+        -> "Yes, because it's kinda weird."
+            Nadia: "No, it's not hentai!"
+            Nadia: "Uh... okay, I'm probably digging myself deeper, right?"
+            You: "Yeah. Why do you like to see boys kissing?"
+            Nadia: "What's wrong with that?"
+
+            -> "It just weirds me out."
+                Nadia: "Well then it's you say, I say, isn't it?"
+                Nadia: "Just let a girl have her own hobbies, okay?"
+                Nadia: "And I thought Charlotte would understand that." (-5% Nadia relationship)
+                
+            -> "It's so risque."
+                Nadia: "Where got? It's not NSFW. No naughty bits on display."
+                Nadia: "Well then I guess we can't have fanservice either."
+                Nadia: "Are you so conservative that you can't accept PDA?"
+        
+        -> "What's wrong with that?"
+            Nadia: "I don't know! But people don't like it."
+            You: "Is it just homophobia?"
+            Nadia: "Not really also! I know people who are supportive but they still don't like it."
+
+            -> "Regardless, it sucks that you gotta hide your preferences."
+                You: "I mean, I'd know what that feels like. Charlotte would."
+                Nadia: "Yeah, it's not like I'm hurting anyone with it..."
+        
+            -> "Haters gonna hate."
+                You: "There's always gonna be people taking issue with what you do, what you like."
+                Nadia: "So why care, right?"
+                You: "Exactly. And it's not like BL is new..."
+                You: "It wouldn't even be the first time gay people are depicted in media."
+                Nadia: "Yes! Just let people be happy."
+            
+            Nadia: "I'm glad I have your support on this... others kinda just think I'm weird."
+            You: "Can't be weirder than me."
+            Nadia: "Don't say that! But yeah, thank you." (+5% Nadia relationship)
+            
+    -> "Give me something unconventional."
+        Nadia: "Ooh, interesting."
+        Nadia: "Well, there's one which I watched recently about talking animals."
+        Nadia: "But it's not kiddy! It's super mature."
+        Nadia: "The protagonist is a taxi-driving walrus and he's involved in some disappearance case."
+        Nadia: "Everyone's super complex in that series and the ending really wraps up all the plot threads nicely."
+        Nadia: "Okay... uh... that was quite long. Sorry."
+        Nadia: "I don't usually monologue like that but it's so good!!"
+
+-> "I don't get the appeal, honestly."
+    Nadia: "Uh... okay..."
+    Nadia: "I mean, to each their own. I like to watch stuff that makes me happy."
+    Nadia: "You know, taking the stress out of life."
+
+    -> "But, of all things, anime..."
+        Nadia: "Well it's just a medium."
+        Nadia: "There's as many types of anime as there are films..."
+        Nadia: "And you don't see people criticising movies for being childish or degenerate or whatever."
+
+        -> "You have a point."
+            Nadia: "Go try out some anime. You may like it."
+        
+        -> "Nope, still cringe."
+            Nadia: "I guess we shouldn't talk about this." (-5% Nadia relationship)
+        
+    -> "I just don't like the fans."
+        Nadia: "I know what you're talking about."
+        Nadia: "Those guys who are obsessed with just one character or series..."
+        Nadia: "And they shove it in everyone's faces."
+        Nadia: "But we aren't all like that!"
+
+        -> "You're like that."
+            Nadia: "Really? I don't think so..."
+            You: "Oh yeah? What else have you drawn at CCA aside from anime?"
+            Nadia: "Uh..."
+            You: "Doesn't that count as pushing anime on all of us?"
+            Nadia sighs. (-5% Nadia relationship)
+        
+        -> "Yeah, you're right."
+            Nadia: "We aren't all degens."
+            Nadia: "I thought you'd understand that..."
+            Nadia: "Understand what it feels like to be the odd one out."
+        
+    -> "Yes, to each our own."
+        You: "I'm glad you found your happy place in anime."
+        Nadia: "We all deserve our own happy places."
+        Nadia: "I mean, your crossdressing is a happy place of its own, isn't it?"
 ===
