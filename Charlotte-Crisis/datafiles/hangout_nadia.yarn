@@ -529,3 +529,209 @@ Nadia: "Oh yes. What about it?"
         Nadia: "We all deserve our own happy places."
         Nadia: "I mean, your crossdressing is a happy place of its own, isn't it?"
 ===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 240,200
+__PrivCrochet_tags: 
+title: 2
+---
+-> "What do you think of Anthony?"
+    Nadia: "Honestly... I'm not sure..."
+    Nadia: "He's so annoying but I don't dare to say that to his face."
+
+-> "What do you think of Vera?"
+    Nadia: "She is so smart. I don't know how Eleanor got her into the club..."
+    Nadia: "Sometimes, a little too smart. But that's not really a bad thing!"
+
+-> "What do you think of Eleanor?"
+    Nadia: "I recently found out we share some classes!"
+    Nadia: "She's also a business student, so I'll see her around more, I think."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 480,200
+__PrivCrochet_tags: 
+title: 3
+---
+-> "I need your opinion on my family situation."
+    Nadia: "Uh... okay. I'll try to help. What's up at home?"
+    You: "My mother hates Charlotte. I think I'll have to confront her about this soon."
+    Nadia: "Oh dear... that does sound really tough."
+    Nadia: "Well, why do you want to do it in the first place?"
+
+    -> "Actually, maybe not."
+        Nadia: "Well that was quick."
+        You: "I'm just wondering if confronting her is worth it."
+        Nadia: "What do you mean?"
+        You: "If I confront her, that's gonna be a lot of emotional damage."
+        You: "And I'm okay with hiding Charlotte."
+        Nadia: "How are you gonna do that, though?"
+
+        -> "I'll hide her outside the house."
+            Nadia: "You mean, only dress up outside the house?"
+            You: "Yep."
+            Nadia: "Isn't that gonna be really hard, though?"
+            Nadia: "All your girl stuff needs to fit into one bag."
+            Nadia: "And dressing up is gonna be so difficult..."
+
+            -> "You're right, there's gotta be another way."
+                Nadia: "Yeah, that option doesn't seem good."
+            
+            -> "I'm okay with that."
+                Nadia: "Well, I guess you'll find a way."
+                Nadia: "Handicapped toilet, maybe?" 
+                Nadia: "Though maybe don't use it if someone else really needs it."
+                Nadia: "Ahh... I'd let you use my house but my parents are probably gonna give you weird stares."
+                Nadia: "Still, all the best and let me know how it goes, yeah?"
+                
+        -> "I'll suppress her."
+            Nadia: "Oh no... that's kind of like throwing away a part of yourself, isn't it?"
+            Nadia: "It's like if you asked me to stop liking anime!"
+
+            -> "I'm always Charlotte."
+                Nadia: "What do you mean?"
+                You: "I'm Charlotte when I tell myself I am."
+                You: "You can throw away my dresses and makeup, but I'll still have that feminine essence in me."
+                Nadia: "Woah. Is that a rehearsal for your mom?"
+                Nadia: "It sounds super strong."
+                You: "Ooh, thanks!"
+                
+            -> "Nah, I think it's time to stop."
+                Nadia: "Aww... why?"
+                You: "All good things gotta come to an end."
+                You: "I just don't see a solution where I can crossdress and still have my parents' approval."
+                You: "I guess work will keep me busy..."
+                Nadia: "Yeah, you could distract yourself."
+                Nadia: "But I don't know how long that'll last..."
+            
+            -> "This is for the greater good."
+                Nadia: "I don't like where this is going..."
+                You: "I've got to stop this addiction."
+                Nadia: "I really don't think you should be seeing it that way..."
+                Nadia: "But hey, it's your life, I guess."
+                
+            -> "You're right, there's gotta be another way."
+                Nadia: "Yeah, that option doesn't seem good."
+        
+    -> "I want to compromise."
+        You: "I don't want to hurt her entirely, but I cannot let her hurt me."
+        Nadia: "Yeah, I guess that's the best solution. But it's gonna be hard."
+        Nadia: "Are you willing to accept the terms she gives you?"
+
+        -> "I just won't transition."
+            Nadia: "Yeah, I guess that's a reasonable starting point."
+            Nadia: "But, you know, what if you really want to in the future?"
+            Nadia: "Not sure if it's good to close that option off immediately."
+
+            -> "That's for Future Charlotte to decide."
+                Nadia: "Future Charlotte... damn. Where will you be in 5 or 10 years?"
+                Nadia: "Okay, that sounded like some financial planner's opening pitch."
+                Nadia: "But yeah, you have a point, it's not like we can see where we're headed."
+        
+            -> "You're right, there's gotta be another way."
+                Nadia: "Yeah, that option doesn't seem good."
+        
+        -> "She won't ever see me crossdress."
+            Nadia: "Ah, but doesn't that mean you can only do it occasionally?"
+            Nadia: "And when you do it, you'll need to be super secret..."
+            Nadia: "Kinda like a superhero living a double life."
+            Nadia: "You ready for that, Super-Charlotte?"
+
+            -> "Whatever it takes."
+                You: "It's gonna be a lot of work."
+                You: "I can already see it: plastic box under my bed, closet closed at all times..."
+                Nadia: "But it might just be worth it."
+            
+            -> "Quick! To the Charlotte-mobile!" (CHA >= 5)
+                Nadia: "I understood that reference!" (+10 XP)
+                You: "Yeah, if my superpower was wealth I wouldn't need to care what others thought about Charlotte."
+                Nadia: "Haha, yeah, if only."
+            
+            -> "You're right, there's gotta be another way."
+                Nadia: "Yeah, that option doesn't seem good."
+            
+        -> "I'm sure she still wants a child that will take care of her into her old age."
+            Nadia: "Ah, you're playing the 'retirement plan' card."
+            Nadia: "But, uh... are you really gonna throw her to the curb if she doesn't accept you?"
+
+            -> "I owe that woman nothing."
+                You: "Yes, she raised me from childhood to now, but that is not something that needs to be repaid."
+                You: "If she doesn't want to accept Charlotte, then I don't want to accept her either."
+                Nadia: "Uh... that is kinda harsh, to be honest..."
+                Nadia: "I've argued with my parents before but never to this extent."
+                Nadia: "You know what, this is between you and your mother to settle.
+                Nadia: "I shouldn't be intervening as a third party."
+                Nadia: "Just... don't do anything you'll regret, okay?"
+            
+            -> "Hmm, probably not..."
+                Nadia: "Phew."
+                Nadia: "You seemed very vengeful just now..."
+                Nadia: "I guess it'd be justified, but still, I can't imagine abandoning my elderly parents."
+                You: "Yeah, I can't do that either."
+                Nadia: "They're still family, no matter how shitty they are."
+        
+    -> "I want to assert myself as Charlotte."
+        You: "I'm tired of hiding. It's time my family lived with the reality that is Charlotte."
+        Nadia: "Okay, but... this isn't going to be easy, you know."
+        Nadia: "How will your parents react? And are you ready for it?"
+
+        -> "I've been exposed already."
+            Nadia: "What do you mean?"
+            You: "My sister told me. She saw my pictures."
+            You: "How much worse can it get?"
+            Nadia: "A lot worse, don't you think?"
+            Nadia: "Seeing your pictures is just the tip of the iceberg."
+            Nadia: "Is that really a path you want to go down?"
+            Nadia: "Just... stay safe."
+        
+        -> "I want her to understand, fully, what being Charlotte means to me."
+            Nadia: "So... gender studies for boomers?"
+            You: "Yep. Exactly that."
+            Nadia: "I hope it works out... parents can be so stubborn sometimes."
+            Nadia: "Please... prepare well before you start with her."
+            Nadia: "And if it works, let me know!"
+            Nadia: "I'd be so happy to see that mindset change."
+            Nadia: "Kinda gives me hope that everyone can change, no matter how old you are." (+10 XP)
+            
+        -> "I might get disowned."
+            Nadia looks away. She's clearly feeling your pain.
+            You: "I mean, I guess I am already an adult, after all..."
+            Nadia: "No, it's not that!"
+            Nadia: "You're really gonna sacrifice your relationship with your mom for this?"
+
+            -> "You're right."
+                You: "It'll be a last resort."
+                Nadia: "It should never be an option."
+            
+            -> "This is how it is."
+                You: "If we cannot accept each other, someone's gotta go."
+                Nadia sighs.
+                Nadia: "I don't know... it just doesn't seem right."
+                Nadia: "Just don't do anything you'll regret, okay?"
+            
+        -> "You have a point..."
+            Nadia: "This kind of family thing can always be mediated."
+            Nadia: "No need to resort to extreme measures..."
+
+-> "What do you think about Charlotte? Honest opinion."
+    Nadia: "I think you're very brave to express yourself this way!"
+    Nadia: "You're also really pretty..."
+
+    -> "You mean Charlotte doesn't clash with any of your values?"
+        Nadia: "I mean, we're in Gen Z."
+        Nadia: "We're supposed to be more tolerant and all that, right?"
+        Nadia: "And even for those who don't like it... it's your life, not theirs."
+        Nadia: "So yeah! Be brave! Be Charlotte!"
+        You: "Heh, that's a whole marketing slogan in there." (+10 XP)
+    
+    -> "What if I told you I wanted to stop?"
+        Nadia: "Uh... I guess that's your choice?"
+        Nadia: "I'm sure you are still a good person, crossdressed or not."
+        Nadia: "I just hope it's your own choice, okay?" 
+        Nadia: "And not something society forced onto you."
+        Nadia: "And that you'll never regret Charlotte."
+    
+    -> "Got any girl tips for me?"
+        Nadia: "Hmm... Well, maybe fashion-wise, you could try more female tops and pants?"
+        Nadia: "We don't wear dresses all the time."
+        Nadia: "But like... there's so many different ways to be a girl, right?"
+        Nadia: "Just let Charlotte be her own woman, I guess."
+===
