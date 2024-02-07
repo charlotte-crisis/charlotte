@@ -51,11 +51,11 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Idle","folderPath":"folders/Sprites/Male MC/Idle.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sitting","folderPath":"folders/Sprites/Male MC/Sitting.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Walking","folderPath":"folders/Sprites/Male MC/Walking.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"MISC","folderPath":"folders/Sprites/MISC.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"NPC","folderPath":"folders/Sprites/NPC.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Wardrobe","folderPath":"folders/Sprites/Wardrobe.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"MISC","folderPath":"folders/Sprites/MISC.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"cca_1_old.yarn","CopyToMask":-1,"filePath":"datafiles",},

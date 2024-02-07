@@ -39,11 +39,11 @@
     {"name":"Idle","order":4,"path":"folders/Sprites/Male MC/Idle.yy",},
     {"name":"Sitting","order":6,"path":"folders/Sprites/Male MC/Sitting.yy",},
     {"name":"Walking","order":5,"path":"folders/Sprites/Male MC/Walking.yy",},
+    {"name":"MISC","order":9,"path":"folders/Sprites/MISC.yy",},
     {"name":"NPC","order":7,"path":"folders/Sprites/NPC.yy",},
     {"name":"Wardrobe","order":6,"path":"folders/Sprites/Wardrobe.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"MISC","order":9,"path":"folders/Sprites/MISC.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_mc_female_idle_legs","order":1,"path":"sprites/spr_mc_female_idle_legs/spr_mc_female_idle_legs.yy",},
