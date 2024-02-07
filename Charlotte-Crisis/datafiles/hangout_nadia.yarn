@@ -1,0 +1,401 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 320,-440
+__PrivCrochet_tags: 
+title: 1_1
+---
+Nadia: "Well, uh… I'm in year 2 now! So things are getting more stressful, I guess?"
+Nadia: "And apart from Art Club, I'm taking on more CCAs."
+Nadia: "So I'm going back quite late every night."
+
+-> "Tell me about your major."
+    <<jump 1_1_1>>
+-> "What other CCAs are you involved in?"
+    <<jump 1_1_2>>
+-> "Ever thought of staying on campus?"
+    <<jump 1_1_3>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 80,-280
+__PrivCrochet_tags: 
+title: 0
+---
+Nadia: "Hey $name!"
+You: "Hey Nadia! Great to see you."
+Nadia: "Yeah, same. Let's get some food!"
+Food acquired
+Nadia: "So, what are we talking about today?"
+
+-> "How's school?"
+    <<jump 1_1>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 320,-200
+__PrivCrochet_tags: 
+title: 1_1_3
+---
+Nadia: "Oh yes, absolutely. I stay so far from school!"
+Nadia: "I'm cramming all my lessons into just 3 days to minimise travel time, you know?"
+Nadia: "And besides, I'm still in year 2. There's still time."
+
+-> "So what's stopping you?"
+    Nadia: "Can't get a room… It's super competitive."
+    Nadia: "And, to be honest, I dread having to move so many things."
+    Nadia: "So many heavy suitcases…"
+    
+-> "You should go for it."
+    Nadia: "It's not that easy…"
+    Nadia: "I need to be super involved in the hall activities, right?"
+    Nadia: "and it's super expensive…"
+    Nadia: "Whatever. I'll think about it later."
+
+Nadia: "Anyway! What about you? You're still staying on campus, right?"
+You: "Yep. Been here 4 years."
+Nadia: "What's the best part about staying?"
+
+-> "There isn't really one."
+    Nadia: "Really?"
+    You: "Well, not anything that comes to mind."
+    Nadia: "Oh… then why did you stay all 4 years?"
+    You: "I don't know… felt consistent, I guess."
+    Nadia: "Okay…"
+
+-> "The privacy."
+    You: "Even before Charlotte, I appreciated being away from my family."
+    You: "There was one weekend where I really needed to finish a project…"
+    You: "I just sat in my room and kept going at it until it was done."
+    You: "I swear, time flows differently when you don't have distractions."
+    You: "And when I discovered Charlotte, I also discovered I needed a space to be Charlotte…"
+    You: "So my room's the perfect place."
+    Nadia: "Ah, I see… I'm sorry to hear about your family."
+    Nadia: "But yes! Sounds like you're really enjoying yourself."
+
+    -> "Would you enjoy time away from family, though?"
+        You: "You seem pretty close to them."
+        Nadia: "I mean, I could always call home."
+        Nadia: "Besides, it's not like we're in different countries…"
+        <<if $cha > 4>>
+            You: "You sure? Travelling from east to west?"
+            Nadia: "Right, I need to bring passport!" (+5% Nadia relationship)
+        <<endif>>
+
+    -> "Do you also need your own private space?"
+        Nadia: "Hmm, kinda? We should all have that."
+        Nadia: "I'm currently still sharing a room with my siblings…"
+        Nadia: "So maybe it's time to change that up."
+        You: "Yeah, with all the stuff you're doing in school…"
+        You: "You definitely need that space."
+
+-> "The people."
+    You: "They're all super fun to be around."
+    You: "And most importantly they accept Charlotte."
+    Nadia: "Oh? No one gives you trouble?"
+    You: "Nah, people are kind. Not like in other places, though…"
+    Nadia: "Ah, I think I'd fit in well!"
+    You: "You really would."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 320,-680
+__PrivCrochet_tags: 
+title: 1_1_1
+---
+Nadia: "Accountancy… well, it's stable enough, I guess."
+Nadia: "Sometimes there's a whole lot of studying."
+Nadia: "You would not believe how many tax regulations I need to read weekly."
+Nadia: "Still, at least I'm not in the more cutthroat courses."
+
+-> "Do you enjoy it?"
+    Nadia: "Enjoy? I don't really enjoy studying."
+    Nadia: "It's just kinda easy enough for me to do…"
+    Nadia: "And a source of employment."
+
+-> "What do you mean cutthroat?"
+    Nadia: "Those modules which take note of everything you do…"
+    Nadia: "Even your day-to-day appearance, not to mention your presentation attire…"
+    Nadia: "Don't even get me started on the people."
+    Nadia: "Like, it's not in the grading and all, but you can feel the pressure there."
+
+Nadia: "What about your major?"
+
+-> "Nothing remarkable about it."
+    You: "I'm just a communications student."
+    Nadia: "Uh… I guess you can communicate better then?"
+    You: "Perhaps. But I don't see it."
+    You: "At the end of the day, it's just a degree."
+    Nadia: "I guess so…"
+
+-> "Kind of a waste of time, honestly."
+    You: "Maybe I should have studied something more employable."
+    Nadia: "Eh? I thought communications should have quite a lot of jobs?"
+    You: "None that I'm interested in."
+    Nadia: "Hmm… well, hope you still found something useful."
+    You: "If not, those school fees are all going down the drain, right?"
+
+-> "It's great! I can study what I want."
+    You: "There's a whole gender studies module within it."
+    You: "I'm definitely going to tap on my experiences as Charlotte to do well."
+    Nadia: "Oh slay! It's like the module was custom-made for you."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 560,-440
+__PrivCrochet_tags: 
+title: 1_1_2
+---
+Nadia: "I signed up for some fintech stuff."
+Nadia: "And I also signed up for the school's exchanger buddies thing."
+Nadia: "So, yeah. Lots of things keep me super super busy."
+
+-> "Hope you don't forget about us."
+    Nadia: "Oh, of course not!"
+    Nadia: "Art club is like the one place where I can nerd out."
+    Nadia: "You know, unleash that otaku side of me that I can't show in public."
+
+-> "Why fintech?"
+    Nadia: "Honestly, I don't know what they're going on about..."
+    Nadia: "But I'm there to learn, right?"
+    Nadia: "Who knows, I could be a girlboss someday!"
+    
+    -> "Is it related to your major?"
+        You: "Both are kind of business related, right?"
+        Nadia: "Hmm, not really?"
+        Nadia: "Like, ya, I can see some connections, but these guys really look to the future."
+        Nadia: "They always talk about earning big la, 'hustle culture' la..."
+        Nadia: "They'd fit right into business school, if they weren't already there."
+        Nadia: "It's worse when they speak in their own jargon."
+        Nadia: "There's so many terms I can't even remember, let alone understand..."
+    
+        -> "Hey, it's okay." # (EMP > 4)
+            You: "I understand what it's like to be lost."
+            You: "The stupidest person in the room."
+            You: "Or, for Charlotte, the girl with the messy dress and unkempt wig."
+            Nadia: "Where got! You look super slay."
+            Nadia: "Like, it would take me so much effort to get to your level."
+            You: "Thanks, but you don't need to be kind."
+            You: "I know that some people look at me like I'm some kind of freak."
+            You: "But still I persist in being Charlotte."
+            You: "So if that's what you wanna aim for in your own CCA..."
+            You: "Then own it, and I hope you really thrive there."
+            Nadia: "Thanks for all that!"
+            Nadia: "I'm surprised you managed to weave it in with Charlotte."
+            Nadia: "Now I feel slightly less bad about being lost."
+        
+        -> "Heh, maybe it's time to leave."
+            Nadia: "Uh... that'd be giving up, though..."
+            You: "You gotta know when to fold your cards sometimes."
+            You: "Besides, is hustling really what you want to do?"
+            Nadia: "Well, no, but... we gotta do it to survive, right?"
+            You: "I don't think so."
+            You: "If not, it'd be part of your curriculum, right?"
+            Nadia: "Hmm... yeah, I guess that's one thing to let go of."
+            You: "Some battles just aren't worth fighting."
+    
+    -> "It must be difficult to understand."
+      Nadia: "Yeah, but I just need to keep working at it, right?"
+
+        -> "All the best with that."
+            You: "I know with your determination, you can do it!"
+            Nadia: "Aww, thanks!"
+            <<if $cha > 4>>
+                You: "When you make your first million, remember me ah?"
+                Nadia: "Onz! I buy you a nice dress~" (+5% Nadia relationship)
+            <<endif>>
+
+        -> "Don't burn yourself out."
+            Nadia: "But they're all working so hard..."
+            Nadia: "Some of them even don't care about their studies to do their fintech stuff."
+            Nadia: "If only I had their determination..."
+
+            -> "So are your school fees going towards fintech?"
+                Nadia: "What?"
+                You: "At the end of the day, are you studying for a degree or just to make friends with them?"
+                You: "A few thousand dollars per sem is a lot of money..."
+                Nadia: "Yeah... I guess I shouldn't just give up on my degree."
+                Nadia: "I know some of them are studying purely for that undergrad status..."
+                Nadia: "But I also want to do well conventionally."
+                You: "Yep. So you can't do that if all your attention is on which coin is going up or whatever they care about."
+                Nadia: "That's true."
+                
+            -> "You're not them."
+                You: "They don't know what it's like to be Nadia."
+                You: "And you might not have the capacity or resources to be investing like they do."
+                Nadia: "Yeah, I know, but..."
+                Nadia: "Can't I be like them?"
+                You: "Only if you really want to."
+                You: "Besides, what's wrong with being Nadia?"
+                You: "Just like, what's wrong with being Charlotte?"
+                Nadia: "That's true..."
+                Nadia: "Wow, being Charlotte really taught you a lot."
+                You: "Nah, not really."
+                You: "It was interacting with y'all that got me thinking, too."
+            
+            -> "Yeah, if only, right?"
+                Nadia: "Well, I'll try my best to reach there!"
+                Nadia: "But honestly, I'm starting to think if it's worth it at all..."
+
+        -> "Do they at least try to explain to you how it works?"
+            Nadia: "Yeah, but still it's really hard to understand..."
+            Nadia: "At times I feel like they're still the ones holding all the knowledge."
+
+            -> "Huh... that's kinda sus."
+                Nadia: "Really?"
+                You: "I mean, they should at least share their secrets with you, right?"
+                You: "If not why are you even there? Just to fill seats?"
+                You: "It's not like this is some esoteric martial art or something..."
+                Nadia: "Heh, that would be funny."
+                Nadia: "'With this high kick you will profit off crypto!'"
+                You: "Still, I guess try to learn what you can?"
+                You: "Because if you're not learning much then what's the point, right?"
+            
+            -> "You'll get it with time."
+                Nadia: "I sure hope so..."
+                Nadia: "Sometimes I wonder if I'm just setting myself up for failure."
+                Nadia: "Accounting rules are hard enough to understand sometimes..."
+                Nadia: "Let alone all this web3 stuff."
+            
+            -> "You sure it's not just you?"
+                Nadia: "What do you mean?"
+                You: "If you're the only one struggling, I mean..."
+                You: "Maybe the issue is with you?"
+                Nadia: "Uh... I guess so..."
+                Nadia looks subdued. Did you say something wrong? # (-5% Nadia relationship)
+
+-> "Why the exchanger buddy programme?"
+Nadia: "I'm always super intrigued by exchangers and their perspectives."
+Nadia: "Who knows? It could help me with my own exchange in future."
+    -> "Sure you're not just there to find some hot exchanger guy?" [4 CHA required]
+    <<if $cha < 4>>
+        Nadia: "Hey... I'm not that desperate..." (-5% Nadia relationship)
+        You: "Uh... okay... sorry..."
+    <<else>>
+        Nadia: "Hahaha! I must be really desperate to need that."
+        Nadia: "Besides, that would be really short term, wouldn't it?"
+        Nadia: "They fly back, and that's it..."
+        You: "Heh. You could fly with them..."
+        Nadia: "Aww, that's so romantic. Alright, let's get our heads out of the clouds."
+    <<endif>>
+
+    -> "Oh? Where do you wanna go?"
+        Nadia: "Japan! First choice."
+        Nadia: "Thought you could tell from all the anime stuff."
+        Nadia: "Though, I haven't thought through it very carefully..."
+        Nadia: "Sure, Europe and America seem very appealing but maybe I'd miss home."
+        Nadia: "Where would you wanna go? Or, where did you go?"
+
+        -> "I'm too old for that already."
+            You: "I made my choice to stay on campus."
+            You: "Wouldn't have been convenient for me to also have gone overseas."
+            Nadia: "Ah... hope you get to go overseas soon then!"
+            You: "Grad trip!"
+    
+        -> "I would wanna go to America!"
+            You: "Land of the free and all that."
+            Nadia: "Ah yes. And Charlotte would be super welcome there!"
+            You: "Heh, in some parts... I can't say that for the whole country."
+            Nadia: "That's just life, I guess."
+        
+        -> "Somewhere in Europe would be nice, I think."
+            Nadia: "That sounds great!"
+            Nadia: "Can travel to a lot of different countries at the same time."
+        
+        -> "Also Japan!"
+            Nadia: "Sugoi desu ne!!"
+
+            -> "I read that crossdressing is also a big thing there."
+                Nadia: "Right, like cosplays. Oh, the cosplay possibilities are endless!"
+                You: "It's more than that... but yeah."
+            
+            -> "Heh, well don't forget that exchange isn't just tourism."
+                Nadia: "Oh right..."
+                Nadia: "Well that's a problem for future Nadia!"
+    
+    -> "I wonder what the exchangers would think about Charlotte."
+        Nadia: "I'm sure they'd be super accepting!"
+        Nadia: "Oh wait... unless they aren't, I guess, but..."
+        Nadia: "I mean, if you're already travelling the world, I guess you'd be a little more open-minded?"
+        Nadia: "So they wouldn't be like 'ew that's a man in a dress'."
+
+-> "Uh... are you doing okay under all those commitments?"
+    Nadia: "Well, I gotta maximise what I'm doing, right?"
+    Nadia: "That's called enjoying campus life."
+
+    -> "Heh. I remember that part of my life."
+        Nadia: "What do you mean?"
+        You: "I used to do a lot of CCAs and projects too."
+        You: "But I found myself being torn apart between all of them."
+        You: "Was it worth it in the end? I don't know."
+        Nadia: "I'm sure it was!"
+        Nadia: "Well... as long as you tried your best, I guess?"
+        You: "I had my fair share of mistakes. But I try not to think about that."
+
+    -> "Take care of yourself."
+        You: "My lowest point was when I was just lying on my room's floor..."
+        You: "Wondering what the hell I was even doing."
+        You: "It was as though the weight of the world was pressing down on me."
+        Nadia: "I will, but... there's so much I wanna do!"
+        You: "That's why you gotta stretch it out. Slowly enjoy the process."
+
+You: "Anyway, all of that was before Charlotte."
+<<if CHA > 4>>
+    You: "Heh. Another meaning of 'BC'."
+<<endif>>
+Nadia: "Oh... then, could I ask you something sensitive?"
+You: "Go on..."
+Nadia: "Do you think being Charlotte halted your professional development?"
+
+-> "Not at all!"
+    You: "I mean, I still gotta find a job, don't I?"
+    You: "And I'm still paying school fees, and studying here."
+    You: "It's not like I'm a full-time drag queen. Not that there's anything wrong with that."
+    Nadia: "Ah... haha, okay."
+    Nadia: "I've heard some guys in my fintech CCA say 'any time spent not learning is time wasted' but..."
+    Nadia: "That never sat right with me."
+    Nadia: "And I don't wanna judge you by that statement either."
+
+    -> "I mean, I've learned a lot as Charlotte, too."
+        Nadia: "For sure! You're more slay than all of us."
+        You: "Yeah, but also about gender stuff, I guess."
+        You: "Living life as Charlotte is... very unique."
+        Nadia: "Ya, right?"
+        You: "Still, there's a lot to learn."
+        
+    -> "Damn, I don't think I'd wanna hang around them."
+        You: "Can you imagine your entire life being work? Ugh."
+        Nadia: "Don't say so fast. Later they become your colleagues how?"
+        Nadia: "It's not like we can choose, what."
+        You: "Heh. That would be a really toxic environment."
+        Nadia: "Yeah, I'm glad you have something to do aside from work!"
+
+-> "Yeah, probably."
+    You: "You should know. Preparing your looks takes time."
+    You: "Not just that, but I definitely wouldn't fit in as Charlotte at, for example, a business meeting."
+    You: "CCA and classes still can, but..."
+    You: "I think people would question me if they saw Charlotte in a corporate setting."
+    Nadia: "Wah... imagine you in an OL outfit."
+    Nadia: "But yeah, I get what you mean."
+
+    -> "But I don't regret that at all."
+        You: "I know I've missed out on projects and opportunities and stuff..."
+        You: "But all those aren't as important as finding myself."
+        You: "I'm glad to be Charlotte."
+        Nadia: "Ya! For sure you're a lot happier when you're Charlotte."
+        Nadia: "Gotta take it easy where we can."
+    
+    -> "OL outfit nice lah." (CHA > 5)
+        You: "Tight blouse and skirt, stockings and heels..."
+        You: "Heh. I'm getting ahead of myself."
+        Nadia: "You should try it some time!"
+        Nadia: "Even if you can't bring Charlotte to your future job."
+        You: "Onz."
+    
+    -> "I'm not sure that was the right thing to do."
+        You: "How many events, how many opportunities did I miss..."
+        You: "Just because I decided to pursue this desire to be Charlotte?"
+        Nadia: "Yeah... I guess that's the trade-off."
+        Nadia: "Still, I hope it's worth it."
+    
+    -> "Oi. What you saying?"
+        Nadia: "Uh... I..."
+        You: "Are you saying being Charlotte is a waste of time?"
+        Nadia: "No, I..."
+        Nadia: "Never mind, I'm sorry. I shouldn't have asked that." (-5% Nadia relationship)
+===
