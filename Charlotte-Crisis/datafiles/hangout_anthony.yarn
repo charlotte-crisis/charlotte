@@ -1,0 +1,100 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2160,320
+__PrivCrochet_tags: 
+title: 0
+---
+Anthony: "Hi."
+You: "Hey Anthony."
+Anthony: "I don't know why you asked me here but… whatever."
+Food acquired.
+
+-> "How's school?"
+    <<jump 1_1>>
+
+-> "Tell me about what you like to do."
+    <<jump 1_2>>
+
+-> "You're kind of a quiet guy, huh?"
+    <<jump 1_3>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2400,80
+__PrivCrochet_tags: 
+title: 1_1
+---
+Anthony: "Same lor. Just study only."
+You: "What are you studying, again?"
+Anthony: "Engineering."
+
+-> "What's it like?"
+    Anthony: "A lot of math. And studying."
+    Anthony: "Some mods got project."
+    Anthony: "It's boring but what to do?"
+
+    -> "Do you like it?"
+        Anthony: "It's okay. But I just want to get out of here."
+        Anthony: "School is a waste of time."
+
+        -> "You must be eager to enter the workforce then."
+            Anthony: "I wish. I also don't know where to go."
+            Anthony: "But I know at least I will get a job."
+            Anthony: "Unlike those crazy liberal arts people…"
+        
+        -> "So you don't like it."
+            Anthony: "I don't have a choice."
+            Anthony: "Just lan lan suck thumb until grad."
+    
+    -> "Then why did you pick this?"
+        Anthony: "What else can I choose?"
+        Anthony: "I'm not smart enough for computer science…"
+        Anthony: "But I don't want to do any of those stupid arts degrees."
+        Anthony: "Every day write essay still cannot get job after grad."
+
+        -> "Are you insulting my degree?"
+            Anthony: "It's the truth. And you choose to be insulted by it."
+
+            -> "You're not making any sense."
+                You: "If degrees like mine are so unemployable…"
+                You: "The school wouldn't offer them in the first place, right?"
+                Anthony: "The school shouldn't."
+                Anthony: "All they're doing is making burger flippers."
+            
+            -> "Really can't make one sentence without an insult, huh?"
+                You: "And it's really sad. You're not just insulting me, but yourself."
+    
+        -> "I guess you made the right choice."
+            Anthony: "Hmph. Right choice but still suffering."
+            Anthony: "Not like you… you didn't major in something employable."
+            Anthony: "You not scared cannot find job ah?"
+
+            -> "Yeah, maybe I made the wrong choice…"
+                Anthony: "GG."
+    
+            -> "I'll find something, I'm sure."
+                Anthony: "Job market so bad now how to find?"
+                You: "Hey, a bad job market affects you too."
+                You: "And it'll affect the thousands of Computer Science kids or whatever is 'trending' now."
+                You: "So why don't you do us all a favour…"
+                You: "And have some empathy for those of us who are unsure."
+                You: "You know, instead of punching down."
+
+    -> "Was it your first choice?"
+        Anthony: "No such thing as choice."
+        Anthony: "It's just the standard route."
+        Anthony: "Get a degree, get a job, work for 40 years and die."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2400,320
+__PrivCrochet_tags: 
+title: 1_2
+---
+Empty Text
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2400,560
+__PrivCrochet_tags: 
+title: 1_3
+---
+Empty Text
+===
