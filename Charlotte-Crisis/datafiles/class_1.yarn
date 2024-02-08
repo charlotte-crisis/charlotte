@@ -137,11 +137,10 @@ You: "My favourite show is..."
 -> Squid Game, like Joanne
     Joanne: "You like it too?"
     You: "I like the social commentary of it."
-    (if did 7; then
-    Joanne: "I see...")
-    (if else; then
-    Joanne: "Yeah, that's really good. Just the tragedy of the entire setup breaks your heart. I get chills thinking about it." (+5% Joanne relationship))
-    (go to 9)
+    Joanne: "I see..."
+    
+    # Joanne: "Yeah, that's really good. Just the tragedy of the entire setup breaks your heart. I get chills thinking about it." (+5% Joanne relationship))
+    
 
 -> Single's Inferno, like Sage
     Sage: "Oh, you too?"
@@ -729,7 +728,7 @@ Chenjie: "Right?"
         Chenjie: "We won't be able to come to a conclusion in just one class."
         You: "Obviously we won't be able to solve it in a day..."
     
-    -> You: "What about unpaid female labour?" <<if skillCheck($int) >= 5>>
+    -> You: "What about unpaid female labour?" <<if diceRoll($int) >= 5>>
         You: "Gender pay gaps exclude the women who are unemployed in order to do domestic labour."
         You: "Are they not also doing something for the nation by doing the labour that allows men to be in the workforce?"
         Joanne: "Must there be monetary value attached before a work becomes valuable?"
