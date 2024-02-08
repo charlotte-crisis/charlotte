@@ -56,15 +56,7 @@ The final assessment for this class is a group project to write a research paper
 She also reiterates the rules of this course to ensure everyone keeps it a safe space for discussion.
 Bored, you start fiddling with your laptop.
 
--> Start a minesweeper game [INT 5 Check] <<if visited("5_1") == false>>
-    <<jump 5_1>>
-    
--> Scroll through Shopee
-    As you scroll through your recommended, a cute skirt catches your eye. 
-    It's a long dark blue skirt with small starry prints.
-    The option for your size is out of stock though.
-    What a shame... You can think of several blouses that would work well with that skirt.
-    <<jump 20>>
+<<jump 5_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1000,360
@@ -588,7 +580,7 @@ Sage: "I feel I have a personal stake in this conversation, so I thought I shoul
 <<stop>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 760,80
+__PrivCrochet_position: 1080,80
 __PrivCrochet_tags: 
 title: 5_1
 ---
@@ -602,7 +594,7 @@ title: 5_1
     Boohoo!
 <<endif>>
 Alright, probably time to pay attention.
-<<jump 5>>
+<<jump 5_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 760,760
@@ -872,4 +864,19 @@ title: pre-5
 ---
 You take a seat.
 <<goto_room_class_1_seated()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,80
+__PrivCrochet_tags: 
+title: 5_options
+---
+-> Start a minesweeper game [INT 5 Check] <<if visited("5_1") == false>>
+    <<jump 5_1>>
+    
+-> Scroll through Shopee
+    As you scroll through your recommended, a cute skirt catches your eye. 
+    It's a long dark blue skirt with small starry prints.
+    The option for your size is out of stock though.
+    What a shame... You can think of several blouses that would work well with that skirt.
+    <<jump 20>>
 ===
