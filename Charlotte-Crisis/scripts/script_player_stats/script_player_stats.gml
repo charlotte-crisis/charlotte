@@ -78,7 +78,6 @@ function dice_roll(_parameters) {
 	
 	function get_npc_relationship(_parameters) {
 		var _name = _parameters[0];
-		var _amount = real(_parameters[1]);
 		
 		npc = get_npc(_name);
 		return npc.relationship;
