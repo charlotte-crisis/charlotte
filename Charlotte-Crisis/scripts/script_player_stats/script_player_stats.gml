@@ -53,24 +53,35 @@ function dice_roll(_parameters) {
 
 #endregion
 
-#region Player Relationship
+#region NPC Functions
+	function get_npc(_name) {
+		switch(_name) {
+			case "CJ":
+				return obj_cj;
+			case "J":
+				return obj_joanne;
+			case "S":
+				return obj_sage;
+		}
+	}
 
 	/// @param {Array} _parameters {Name, amount}
 	function change_npc_relationship(_parameters) {
 		var _name = _parameters[0];
 		var _amount = real(_parameters[1]);
 		
-		switch(_name) {
-			case "CJ":
-				obj_cj.change_relationship(_amount);
-				break;
-			case "J":
-				obj_joanne.change_relationship(_amount);
-				break;
-			case "S":
-				obj_sage.change_relationship(_amount);
-				break;
-		}
+		npc = get_npc(_name);
+		npc.change_relationship(_amount);
+
+		return npc.relationship;
+	}
+	
+	function get_npc_relationship(_parameters) {
+		var _name = _parameters[0];
+		var _amount = real(_parameters[1]);
+		
+		npc = get_npc(_name);
+		return npc.relationship;
 	}
 
 #endregion

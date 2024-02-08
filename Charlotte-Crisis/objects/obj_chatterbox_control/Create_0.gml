@@ -33,8 +33,11 @@ function chatterbox_set(_node_name) {
 	ChatterboxAddFunction("goto_room_class_1", goto_room_class_1);
 	
 	ChatterboxAddFunction("changeRelationship", change_npc_relationship);
+	ChatterboxAddFunction("getRelationship", get_npc_relationship);
+	
 	ChatterboxAddFunction("changeConfidence", change_confidence);
 	ChatterboxAddFunction("addExperience", add_experience);
+	
 
 #endregion
 
