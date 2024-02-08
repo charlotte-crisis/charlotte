@@ -13,6 +13,7 @@ key_jump = 0;
 
 is_talking = false;
 is_interacting = false;
+is_sitting = false;
 
 #region Functions to alter stats and other stuff
 set_is_talking = function(_is_talk) {
@@ -62,5 +63,11 @@ walking_torso  = [spr_mc_male_walking_torso,  spr_mc_female_walking_torso];
 walking_legs   = [spr_mc_male_walking_legs,   spr_mc_female_walking_legs];
 walking_shorts = [spr_mc_male_walking_shorts, spr_mc_female_walking_shorts];
 walking_head   = [spr_mc_male_walking_head,   spr_mc_female_walking_head];
+
+sitting_torso  = [spr_mc_male_sitting_torso,  spr_mc_female_sitting_torso];
+sitting_legs      = [spr_mc_male_sitting_legs,   spr_mc_female_sitting_legs];
+sitting_shorts    = [spr_mc_male_sitting_shorts, spr_mc_female_sitting_shorts];
+sitting_head      = [spr_mc_male_sitting_head,   spr_mc_female_sitting_head];
+
 
 #endregion

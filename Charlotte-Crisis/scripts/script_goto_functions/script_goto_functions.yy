@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "script_door",
+  "name": "script_goto_functions",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

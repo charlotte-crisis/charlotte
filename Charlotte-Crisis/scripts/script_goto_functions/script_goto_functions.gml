@@ -10,3 +10,13 @@ function goto_room_class_1(){
 	obj_chatterbox_control.chatterbox = ChatterboxCreate("class_1.yarn");
 	ChatterboxJump(chatterbox, "1");
 }
+
+function goto_room_class_1_seated(){
+	room_goto(rm_class_1_seated);
+	obj_player.x = 223;
+	obj_player.y = 73;
+	obj_player.facing_direction = 1;
+	obj_player.is_sitting = true;
+	
+	ChatterboxJump(chatterbox, "5");
+}

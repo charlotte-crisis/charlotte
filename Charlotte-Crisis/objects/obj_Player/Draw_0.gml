@@ -15,7 +15,12 @@ if (_move > 0) {
 
 var _frame = ++img_frame/10 % num_of_frames;
 
-if (_move != 0) {
+if (is_sitting) {
+	draw_sprite_ext(sitting_legs[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
+	draw_sprite_ext(sitting_torso[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
+	draw_sprite_ext(sitting_shorts[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
+	draw_sprite_ext(sitting_head[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
+} else if (_move != 0) {
 	draw_sprite_ext(walking_legs[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
 	draw_sprite_ext(walking_torso[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
 	draw_sprite_ext(walking_shorts[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);

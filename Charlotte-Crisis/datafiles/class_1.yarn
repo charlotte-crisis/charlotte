@@ -5,10 +5,10 @@ __PrivCrochet_tags:
 title: 1
 ---
 # Global Variables here
-<<declare $cha = 3>>
-<<declare $int = 3>>
-<<declare $emp = 3>>
-<<declare $name = "Charlotte">>
+<<set $cha = 3>>
+<<set $int = 3>>
+<<set $emp = 3>>
+<<set $name = "Charlotte">>
 
 You arrive just in time for class.
 This course is quite popular so almost all the seats are already filled.
@@ -864,4 +864,12 @@ Prof Lim: "Okay, everyone!"
 The discussion is forcibly cut short as everyone's attention snaps back to the front.
 
 <<jump 12>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 520,840
+__PrivCrochet_tags: 
+title: pre-5
+---
+You take a seat.
+<<goto_room_class_1_seated()>>
 ===
