@@ -4,6 +4,10 @@ __PrivCrochet_position: 280,360
 __PrivCrochet_tags: 
 title: 1
 ---
+<<declare $cha = 3>>
+<<declare $int = 3>>
+<<declare $emp = 3>>
+
 You arrive just in time for class.
 This course is quite popular so almost all the seats are already filled.
 ===
@@ -41,7 +45,7 @@ __PrivCrochet_tags:
 title: 5
 ---
 Prof Lim: "Hello, everyone! Welcome to the Gender and Feminism in Media course."
-Prof Lim: "I’m Lim Shu Hwa, and I’ll be your prof for this semester."
+Prof Lim: "I'm Lim Shu Hwa, and I’ll be your prof for this semester."
 
 Prof Lim goes through the administrative details for the course. Standard stuff.
 The final assessment for this class is a group project to write a research paper.
@@ -74,11 +78,11 @@ title: 6
 Prof Lim: "Get together in groups of three or four, and introduce yourselves with your pronouns."
 Prof Lim: "Tell us a hobby, and a TV show that you like."
 You turn your chair around.
-Joanne: "Okay, hi! I’m Joanne, Year 4."
+Joanne: "Okay, hi! I'm Joanne, Year 4."
 Joanne: "My hobby is gaming, and for TV show... I like Squid Game!"
 Chenjie: "Chenjie. Also Year 4. I like to gym. But I'm not like a gym bro or anything."
 Chenjie: "And I like Rick and Morty."
-Sage: "Uh, I’m Sage. I’m in Year 3. I go by she/her. I mostly just doomscroll TikTok these days, and I also like Single's Inferno."
+Sage: "Uh, I’m Sage. I'm in Year 3. I go by she/her. I mostly just doomscroll TikTok these days, and I also like Single's Inferno."
 
 -> Introduce yourself without pronouns
     You: "I'm {$name}, Year 4."

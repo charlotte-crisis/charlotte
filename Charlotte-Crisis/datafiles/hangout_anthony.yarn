@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2160,320
+__PrivCrochet_position: 1680,280
 __PrivCrochet_tags: 
 title: 0
 ---
@@ -9,14 +9,7 @@ You: "Hey Anthony."
 Anthony: "I don't know why you asked me here but... whatever."
 Food acquired.
 
--> "How's school?"
-    <<jump 1_1>>
-
--> "Tell me about what you like to do."
-    <<jump 1_2>>
-
--> "You're kind of a quiet guy, huh?"
-    <<jump 1_3>>
+<<jump 1>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2440,-120
@@ -79,10 +72,12 @@ Anthony: "Engineering."
                 You: "And have some empathy for those of us who are unsure."
                 You: "You know, instead of punching down."
 
-    -> "Was it your first choice?"
-        Anthony: "No such thing as choice."
-        Anthony: "It's just the standard route."
-        Anthony: "Get a degree, get a job, work for 40 years and die."
+-> "Was it your first choice?"
+    Anthony: "No such thing as choice."
+    Anthony: "It's just the standard route."
+    Anthony: "Get a degree, get a job, work for 40 years and die."
+
+<<jump 1>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2400,320
@@ -660,4 +655,18 @@ title: 3
         Anthony: "Here are more video links."
         Anthony: "Or you can go find those Twitter accounts with the statue profile pictures."
         Anthony: "They're from the West but they are very helpful also."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1960,280
+__PrivCrochet_tags: 
+title: 1
+---
+-> "How's school?" <<if visited("1_1") == false>>
+    <<jump 1_1>>
+
+-> "Tell me about what you like to do."
+    <<jump 1_2>>
+
+-> "You're kind of a quiet guy, huh?"
+    <<jump 1_3>>
 ===
