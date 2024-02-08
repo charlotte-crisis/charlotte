@@ -36,12 +36,12 @@ __PrivCrochet_position: 520,600
 __PrivCrochet_tags: 
 title: 4
 ---
-Joanne: Hello! I don’t think we’ve met. I’m Joanne by the way. 
+Joanne: Hello! I don’t think we've met. I'm Joanne by the way. 
 You: I’m {$name}!
 <<if $name == "Charlotte">>
     Joanne hesitates for a second.
 <<endif>>
-Joanne: "Class will start soon. I think that’s the only seat left."
+Joanne: "Class will start soon. I think that's the only seat left."
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 760,360
