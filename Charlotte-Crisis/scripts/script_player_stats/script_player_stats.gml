@@ -21,6 +21,11 @@ function add_intelligence() {
 	return;
 }
 
+function add_experience(_amount) {
+	obj_stats.experience += _amount[0];
+	return;	
+}
+
 #endregion
 
 #region Skill checks, Diceroll

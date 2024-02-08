@@ -14,7 +14,6 @@ You arrive just in time for class.
 This course is quite popular so almost all the seats are already filled.
 Maybe you can talk to some of your classmates before sitting down.
 Press UP to interact with characters or objects.
-
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 520,120
@@ -86,49 +85,53 @@ You're in girl mode, so saying you're Charles is weird, right?
 But do you even want to be Charlotte, right now?
 
 
--> Introduce yourself without pronouns
-    You: "I'm {$name}, Year 4."
-    <<jump 8>>
+-> Introduce yourself as Charlotte
+    You: "I'm Charlotte, Year 4. She/her."
+    Joanne: "Are you a dude?"
+    You: "Um... Not right now."
 
--> Introduce yourself with pronouns
-    You: "I'm {$name}, Year 4."
-    <<if $name == "Charlotte">>
-        You: "She/her."
-    <<else>>
-        You: "He/him."
-    <<endif>>
-    <<jump 8>>
+-> Introduce yourself as Charles
+    You: "I'm Charles, Year 4. He/him."
+    Chenjie: "As in Charles? You're a dude?"
+
+    -> You: "Strictly speaking, yes."
+        Sage: "What do you prefer though?"
+        You: "Um... I'm not sure right now."
+        Chenjie: "That's okay. But you want us to call you Charles, right?"
+        You: "Actually... I go by Charlotte when I'm dressed as a girl."
+        Chenjie: "Okay."
+
+    -> You: "Honestly, I'm not sure."
+        You: "I'm still trying to figure out if I'm a crossdresser or if I'm trans."
+        Chenjie: "Oh, I see. That's interesting. But you want us to call you Charles, right?"
+        You: "Actually... I go by Charlotte when I'm dressed as a girl."
+        Chenjie: "Okay."
 
 -> Introduce yourself as both Charlotte and Charles.
     You: "I'm {$name}, Year 4. I'm a crossdresser actually so I go by both she/her and he/him pronouns."
     You: "It depends on if I'm dressed as Charlotte or Charles on that day."
-    Sage: "Oh! Crossdressing? That's honestly so cool." 
-    # (+5% Sage relationship) 
-    # (+ 5% confidence)
-    Joanne: "Wait, so you're a guy, right?"
-    <<if $name == "Charlotte">>
-        You: "Not right now. But when I'm in boy mode, yes."
-    <<else>>
-        You: "Right now. But when I'm in girl mode, I use she/her and go by Charlotte."
-    <<endif>>
-    Joanne is silent. 
-    #(-5% Joanne relationship)
-    <<jump 7>>
+    Sage: "Oh! Crossdressing? That's honestly so cool." (+5% Sage relationship) 
+    <<changeConfidence(5)>>
+    <<changeRelationship("S",5)>>
+
+<<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1120,600
+__PrivCrochet_position: 1160,680
 __PrivCrochet_tags: 
 title: 7
 ---
+Joanne: "Wait, so you're a guy, right?"
+You: "Not right now. But when I'm in boy mode, yes."
+Joanne is silent. <<changeRelationship("J", -5)>>
+
 -> You: "Do you have a problem with that?"
     Joanne: "What? I didn't even say anything."
     You: "You look like you have something to say."
-    Chenjie: "Guys, come on. Let's chill, okay?" 
-    # (-5% Chenjie relationship)
+    Chenjie: "Guys, come on. Let's chill, okay?" <<changeRelationship("CJ", -5)>>
     Maybe it's best not to push it.
 
--> Move on.
-
+-> Move on
 <<jump 8>>
 ===
 __PrivCrochet_colorID: 0
@@ -137,31 +140,32 @@ __PrivCrochet_tags:
 title: 8
 ---
 Chenjie: "What about your favourite show and hobby?"
-You: "My favourite show is…"
+You: "My favourite show is..."
 
 -> Squid Game, like Joanne
     Joanne: "You like it too?"
     You: "I like the social commentary of it."
-    Joanne: "Yeah, that's really good. Just the tragedy of the entire setup breaks your heart. I get chills thinking about it." 
-    # (+5% Joanne relationship)
+    (if did 7; then
+    Joanne: "I see...")
+    (if else; then
+    Joanne: "Yeah, that's really good. Just the tragedy of the entire setup breaks your heart. I get chills thinking about it." (+5% Joanne relationship))
+    (go to 9)
 
 -> Single's Inferno, like Sage
     Sage: "Oh, you too?"
     You: "It's a breath of fresh air for dating shows."
     Sage: "Yeah, it's a lot less drama than the western dating shows. Not to mention, everyone in there is an eye candy."
-    You: "You're not wrong."
-    # (+5% Sage relationship)
+    You: "You're not wrong." <<changeRelationship("S", 5)>>
 
 -> Rick and Morty, like Chenjie
     Chenjie: "It's so funny and sarcastic, right? But at the same time, the characters are really well-written."
     You: "And the relationship between all of them are also complex because of how real the characters are by themselves."
-    Chenjie: "Yeah, and that stuff hits a bit close to home sometimes. I like that it does that." 
-    # (+5% Chenjie relationship)
+    Chenjie: "Yeah, and that stuff hits a bit close to home sometimes. I like that it does that." <<changeRelationship("CJ", 5)>>
 
 -> None
     You: "Nothing comes to mind actually..."
     Chenjie: "Really? Nothing at all?"
-    Joanne: "I totally get it though… It's hard to find time to watch anything these days."
+    Joanne: "I totally get it though... It's hard to find time to watch anything these days."
     Sage: "Yeah, I mostly watch things while I eat. I don't have much time to go out of my way to watch stuff."
     Joanne: "So much for being media students, right?"
 
@@ -179,9 +183,7 @@ As for hobbies, you like playing table tennis, crossdressing and gaming. Which s
     Sage: "I think the last time I played table tennis was in primary school."
     Joanne: "Yeah, it's a bit tricky arranging to play table tennis because you need equipment and an opponent, right?"
     You: "If any of you want, you could come to my RC. We have a table."
-    Chenjie: "Really? Sweet!" 
-    # (+5% Chenjie relationship)
-
+    Chenjie: "Really? Sweet!" <<changeRelationship("CJ", 5)>>
 
 -> Crossdressing
     Chenjie: "How did you start?"
@@ -191,17 +193,14 @@ As for hobbies, you like playing table tennis, crossdressing and gaming. Which s
     You: "Not only for events. I sometimes do it in school or when I'm out with friends."
     Joanne: "Don't you get weird stares?"
     You: "Sometimes... But I think it's bothering me less and less these days."
-    Sage: "That's nice." 
-    # (+5% Sage relationship)
-
+    Sage: "That's nice." <<changeRelationship("S", 5)>>
 
 -> Gaming
     Chenjie: "What kind of games?"
     You: "League, mostly."
     Joanne: "Oh... I'm not really into that. I play cosy games."
     You: "Oh, like Stardew Valley or Spiritfarer?"
-    Joanne: "Yes! Both of those!" 
-    # (+5% Joanne relationship)
+    Joanne: "Yes! Both of those!" <<changeRelationship("J", 5)>>
     Joanne: " I logged sooo many hours into Stardew already."
     You: "I've played a bit of Spiritfarer but not Stardew Valley yet."
     Joanne: "If you need any tips and tricks or advice on what mods to use, just ask me."
@@ -215,46 +214,50 @@ __PrivCrochet_tags:
 title: 10
 ---
 Chenjie: "Hey, do either of you have a group for the final project already? Joanne and I were thinking of grouping up."
-You: "I don't mind joining your group."
-Sage: "Me too."
+Sage: "Um, yeah, sure."
+Everyone else in class seems to also be forming their own groups, and you even overhear one group discussing ideas for the project already. 
+You feel pressured to quickly secure a group.
+You: "Oh, I guess, I don't mind joining your group."
 Chenjie: "Nice! I'll email the prof about our group after class."
 Prof Lim: "Okay, everyone. Now that we've all gotten to know each other. I'd like to begin the first class activity."
-Prof Lim: "I'm sure you all have read the readings on what feminist studies is."
+Prof Lim: "I'm sure you all have done the readings on what feminist studies is."
 Prof Lim casts a knowing look over everyone and some quiet nervous laughter bubbles up.
-Prof Lim: "But, right now, I want you to take ten minutes to discuss with your group mates what feminism is in your own words. What is feminism to you and how is it related to you?"
+Prof Lim: "So, right now, I want you to take ten minutes to discuss with your group mates what feminism is in your own words. What is feminism to you and how is it related to you?"
 Chairs shuffle again and the class goes back to talking with their group mates.
 Chenjie: "Did you guys do the readings?"
 Joanne: "I only read the one about research methodology. Seriously, why do profs expect their students to be doing so much reading in Week 0?"
 Sage: "I skimmed through them. But there's really so much to read..."
 Chenjie: "The semester's barely started and I already have a backlog."
 
--> "I read both readings." 
+-> You: "I read both readings." 
     Chenjie: "Then we're counting on you if Prof calls on us."
     Sage: "She's not asking us for the dictionary definition. It's what it means to us, right?"
     Chenjie: "Okay, okay. I'm just pulling your leg."
+    (go to 11)
 
--> "There were readings?"
+-> You: "There were readings?"
     Joanne: "It's sent to our emails. You should probably check that."
     Sage: "It's okay. It's not a lot. It's like... about 25 pages each?"
     Chenjie: "It gets worse from here. I hear some weeks we have 5 readings."
-    You feel exhausted even from the sound of that. 
-    # (-5% confidence)
+    You feel exhausted even from the sound of that. (-5% confidence)
+    (go to 11)
 
--> (joking) "That's it. I'm quitting to flip burgers for the rest of my life." [CHA required: 3]
-    <<if $CHA < 3>>
+-> You: (joking) "That's it. I'm quitting to flip burgers for the rest of my life." [CHA 5 check]
+    <<set $diceroll = diceRoll($cha)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll < 3>>
         Sage: "The readings aren't *that* bad."
         Chenjie: "We just have to suck it up."
     <<else>>
         Chenjie: "Bro, recommend me to your branch manager. I also need that job."
         Joanne: "And me!"
-        Everyone's mood is a bit better. 
-        # (+5 XP)
+        Everyone's mood is a bit better. (+5 XP) <<addExperience(5)>>
     <<endif>>
 
 <<jump 11>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1960,360
+__PrivCrochet_position: 1960,520
 __PrivCrochet_tags: 
 title: 11
 ---
@@ -265,44 +268,52 @@ Joanne: "Especially things like job or education opportunities."
 Sage: "I mean, according to the readings, it's also about race, disability and class."
 You: "Yeah, so feminism to me is..."
 
--> "Equal rights for all." 
+-> You: "Equal rights for all." 
     Joanne: "Yeah, agreed."
     Chenjie: "Yeah, so regardless of gender, sexuality, race and all that."
     Chenjie: "Everyone is treated equally."
-    Sage looks like she has something to add, but she is hesitating.
-
-    -> Press her.
+    
+    <<if skillCheck($emp, 5)>>
+    [EMPATHY] Sage looks like she has something to add, but she is hesitating. 
+    -> Press her. [5 CHA Check]
+        <<set $diceroll = diceRoll($cha)>>
+        [You rolled a {$diceroll}.]
         You: "Sage, do you have something to add?"
         Sage: "What?"
         She stutters for a bit.
-        Sage: "Maybe, not just equally? Different people have different circumstances and needs, right?"
-        Sage: "Like, um, there's a difference between allowing straight pride parades and gay pride parades, right?"
-        Chenjie: "In what way?"
-        Joanne: "Because one is reinforcing rigid social norms and the other is celebrating LGB people."
-        Chenjie: "Oh, that makes sense. It's like the thing where we don't give $500 to both the rich person and the poor person."
-        Chenjie: "We give the poor person more because they need it more."
-        You: "So it's about equity, not just equality."
-        Sage: "Uh... Uh, right!"
-        Sage still looks a bit uncomfortable.
-        <<jump 12>>
-    
-    -> Let her be.
+        <<if $diceroll < 5>>
+            Sage: "Maybe, not just equally? Different people have different circumstances and needs, right?"
+            Sage: "Like, um, there's a difference between allowing straight pride parades and gay pride parades, right?"
+            Chenjie: "In what way?"
+            Joanne: "Because one is reinforcing rigid social norms and the other is celebrating LGB people."
+            Chenjie: "Oh, that makes sense. It's like the thing where we don't give $500 to both the rich person and the poor person."
+            Chenjie: "We give the poor person more because they need it more."
+            You: "So it's about equity, not just equality."
+            Sage: "Uh... Uh, right!"
+            Sage still looks a bit uncomfortable.)
+        <<else>>
+            Sage: "No, nothing."
+            You really doubt that she has nothing to say but you don't press her any further.)
+        <<endif>>
+    <<endif>>
+
+    -> Say nothing.
         Chenjie: "So we're done!"
-        Joanne: "Can't believe it's the second last semester for me already... I hardly got to enjoy myself during the sem break."
+        Joanne: "Can't believe it's the second last semester already... I hardly got to enjoy myself during the sem break."
         You: "Ugh, don't remind me."
         With plenty of time left, your group starts some small talk about what you did over the semester break.
         Sage looks a bit distracted.
-        <<jump 12>>
 
--> "About changing society for the better."
+    <<jump 12>>
+
+-> You: "About changing society for the better."
     Sage: "Wow. That sounds very idealistic."
     You: "Feminism is trying to change a whole society, right? Doesn't that in itself sound pretty ambitious?"
     Joanne: "When you put it that way, it kind of does."
     <<jump 16>>
 
--> "Creating a society that accepts and empowers all people." [EMP: 3]
-    You: "It's also about inclusivity. Not just giving equal rights, but also including marginalised people and respecting their differences." 
-    # (+ 5 XP)
+-> You: "Creating a society that accepts and empowers all people." <<if skillCheck($emp, 3)>>
+    You: "It's also about inclusivity. Not just giving equal rights, but also including marginalised people and respecting their differences." (+ 5 XP) <<addExperience(5)>>
     Chenjie: "Right... Like how gay and lesbian people are scared they'll lose their jobs, right?"
     Sage: "Yeah, and I feel that in Singapore, it's always about tolerance."
     Sage: "Like, we sometimes have this very 'not in my backyard' way of looking at things."
@@ -312,33 +323,41 @@ You: "Yeah, so feminism to me is..."
     Joanne: "We're still a largely conservative country, and family values are important to a lot of Singaporeans."
     Chenjie: "There aren't that many LGBT in Singapore. So it's difficult to get used to them."
 
-        -> "Don't say 'get used to them'. That's dehumanising."
+    -> You: "'Get used to them' sounds rather dehumanising." [CHA 6 Check]
+        <<set $diceroll = diceRoll($cha)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll < 6>>
             Chenjie: "Dehumanising?"
             You: "Yeah. You're saying 'get used to' like LGBTQ people are a nuisance."
             Joanne: "I'm sure he didn't mean it that way."
-            Chenjie: "Yeah, man. Sorry, okay?"
-            Chenjie: "I also don't really have much experience talking to gay and lesbian people. I don't really know what the right way of saying things is."
-            Joanne: "It's okay. I think it goes back to the whole thing about tolerance versus inclusivity though, right?"
-            Joanne: "So we need more conversations about this issue."
-            Sage: "It's hard to even have any conversations about it though."
-            Sage: "On top of all the homophobia, the government actually has media laws in place to prevent proper discussions about it."
-            Chenjie: "I mean, on an individual level, we can talk to people and find out more."
-            Sage: "Honestly, there are too many people who don't even want to talk to people who are LGBTQ+."
-            <<jump 19>>
+            Chenjie: "Yeah, man. Sorry, okay?" <<changeRelationship("CJ", -5)>>
+            Chenjie: "I don't really have much experience talking to gay and lesbian people. I don't know what the right way of saying things is.")
+        <<else>>
+            You: "But you mean that you haven't personally seen many LGBTQ people out and about in Singapore often, right?"
+            Chenjie: "Yeah, that's what I meant. Sorry. Bad phrasing."
+        <<endif>>
+
+        Joanne: "It's okay. I think it goes back to the whole thing about tolerance versus inclusivity though, right?"
+        Joanne: "So we need more conversations about this issue."
+        Sage: "It's hard to even have any conversations about it though."
+        Sage: "On top of all the homophobia, the government actually has media laws in place to prevent proper discussions about it."
+        Chenjie: "I mean, on an individual level, we can talk to people and find out more."
+        Sage: "Yeah. And supporting people in your life who are LGBTQ+. Or maybe even participating in Pink Dot and such."
+        <<jump 19>>
         
-        -> "It's a chicken and egg problem."
-            You: "People don't want to come out because it's risky to be out."
-            You: "But also, it's risky because not enough LGBT people are coming out to talk about their experiences."
-            Sage: "I don't know... It's not necessary for you to be out before you can advocate for a cause, right?"
-            Sage: "You don't even have to be LGBTQ+ to do it."
-            Chenjie: "True. True. It's not like animal rights activists are animals themselves."
-            Chenjie: "I'm an ally!"
-            <<jump 20>>
-        
-        -> "Not many LGBTQ people who are *out* at least."
-            You: "I think it's just difficult to come out in general."
-            Sage: "Yeah, it's a commitment, right? And also because people tend to be quite kaypoh."
-            <<jump 18>>
+    -> You: "It's a chicken and egg problem."
+        You: "People don't want to come out because it's risky to be out."
+        You: "But also, it's risky because not enough LGBT people are coming out to talk about their experiences."
+        Sage: "I don't know... It's not necessary for you to be out before you can advocate for a cause, right?"
+        Sage: "You don't even have to be LGBTQ+ to do it."
+        Chenjie: "True. True. It's not like animal rights activists are animals themselves."
+        Chenjie: "I'm an ally!"
+        <<jump 19>>
+
+    -> You: "Not many LGBTQ people who are *out* at least."
+        You: "I think it's just difficult to come out in general."
+        Sage: "Yeah, it's a commitment, right? And also because people tend to be quite kaypoh."
+        <<jump 18>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2200,360
