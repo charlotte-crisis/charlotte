@@ -31,7 +31,7 @@ function chatterbox_set(_node_name) {
 	/// Door Functions here
 	ChatterboxAddFunction("goto_room_class_1", goto_room_class_1);
 	
-	
+	ChatterboxAddFunction("changeRelationship", change_npc_relationship);
 
 #endregion
 

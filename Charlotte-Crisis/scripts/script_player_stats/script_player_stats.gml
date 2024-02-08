@@ -37,3 +37,19 @@ function skill_check(_parameters) {
 }
 
 #endregion
+
+#region Player Relationship
+
+	/// @param {Array} _parameters {Name, amount}
+	function change_npc_relationship(_parameters) {
+		var _name = _parameters[0];
+		var _amount = real(_parameters[1]);
+		
+		switch(_name) {
+			case "CJ":
+				obj_cj.change_relationship(_amount);
+				break;
+		}
+	}
+
+#endregion
