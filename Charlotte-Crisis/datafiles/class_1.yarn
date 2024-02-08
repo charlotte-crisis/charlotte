@@ -870,6 +870,7 @@ __PrivCrochet_position: 760,80
 __PrivCrochet_tags: 
 title: 5_options
 ---
+What do you do?
 -> Start a minesweeper game [INT 5 Check] <<if visited("5_1") == false>>
     <<jump 5_1>>
     
