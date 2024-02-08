@@ -51,7 +51,7 @@ num_of_frames    = 8;
 	0: Male
 	1: Female
 */
-gender = 0;
+gender = 1;
 
 idle_torso     = [spr_mc_male_idle_torso,     spr_mc_female_idle_torso];
 idle_legs      = [spr_mc_male_idle_legs,      spr_mc_female_idle_legs];

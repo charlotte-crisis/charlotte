@@ -14,6 +14,7 @@ You arrive just in time for class.
 This course is quite popular so almost all the seats are already filled.
 Maybe you can talk to some of your classmates before sitting down.
 Press UP to interact with characters or objects.
+
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 520,120
@@ -78,7 +79,12 @@ Joanne: "Okay, hi! I'm Joanne, Year 4."
 Joanne: "My hobby is gaming, and for TV show... I like Squid Game!"
 Chenjie: "Chenjie. Also Year 4. I like to gym. But I'm not like a gym bro or anything."
 Chenjie: "And I like Rick and Morty."
-Sage: "Uh, I’m Sage. I'm in Year 3. I go by she/her. I mostly just doomscroll TikTok these days, and I also like Single's Inferno."
+Sage: "Uh, I'm Sage. I'm in Year 3. I go by she/her. I mostly just doomscroll TikTok these days, and I also like Single's Inferno."
+
+How should you introduce yourself now?
+You're in girl mode, so saying you're Charles is weird, right?
+But do you even want to be Charlotte, right now?
+
 
 -> Introduce yourself without pronouns
     You: "I'm {$name}, Year 4."
@@ -333,7 +339,6 @@ You: "Yeah, so feminism to me is..."
             You: "I think it's just difficult to come out in general."
             Sage: "Yeah, it's a commitment, right? And also because people tend to be quite kaypoh."
             <<jump 18>>
-
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2200,360
@@ -540,7 +545,7 @@ Sage: "I feel I have a personal stake in this conversation, so I thought I shoul
     You: "Bye!"
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 760,120
+__PrivCrochet_position: 760,80
 __PrivCrochet_tags: 
 title: 5_1
 ---
@@ -559,7 +564,60 @@ Alright, probably time to pay attention.
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 760,880
 __PrivCrochet_tags: 
-title: Node
+title: 20
 ---
-Empty Text
+Out of the corner of your eye, you see a notification on your laptop.
+A message from your sister. You open it.
+Sister: "Charles"
+Sister: "Is that actually you in that photo?"
+Sister: "What are you doing?"
+Below is a post about your JC class reunion. More specifically, a photo of you. 
+Wearing a dress and a full face of makeup.
+You had wanted to make your debut as Charlotte, your "girl mode".
+But you had totally forgotten that your sister is close friends with one of your ex-classmates.
+Shit. Your sister definitely knows you've read the message already.
+
+-> You: "I'm crossdressing."
+    Sister: "I know that. But why?"
+    Your sister's status is typing for a good 30 seconds. But then, the message that follows is short.
+    Sister: "Never mind. We'll talk on Saturday."
+
+-> You: "Crossdressing. It's for fun.."
+    Sister: "But why?"
+    Your sister's status is typing for a good 30 seconds. But then, the message that follows is short.
+    Sister: "We'll talk about this on Saturday."
+
+-> Leave it.
+    Unfortunately, your sister won't do the same. She is typing again.
+    Sister: "We'll talk about this on Saturday."
+
+<<jump 21>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,1120
+__PrivCrochet_tags: 
+title: 21
+---
+Talk? What does she even want to talk about?
+Dread pools in your stomach.
+How on earth do you explain that finding Charlotte was like finally finding a glove that fit?
+Usually, being Charlotte is like heaving a sigh of relief.
+However, as you stare at the photo, all you can see is how your masculine figure stretched out the evening gown. 
+Like a square peg in a round hole.
+You wonder if you look like that even now and curl your shoulders inward.
+Is your sister angry at you?
+
+-> It's hard to tell her tone through text.
+    There's no use worrying now. We'll wait till the weekends to properly talk with her.
+    Prof Lim: "Alright! Let's start the lesson with some icebreakers."
+
+-> She's definitely mad at me.
+    She probably thinks I'm a freak or something now. 
+    Why did I wear that dress? What was I even thinking? 
+    Prof Lim: "Alright! Let's start the lesson with some icebreakers."
+    First lesson of the semester and your attention is already drifting. Shame on you!
+    # zh note: I added this. Do we want the player to know?
+    You feel a little uneasy. <<changeConfidence(-5)>>
+
+<<jump 6>>
 ===
