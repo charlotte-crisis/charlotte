@@ -264,7 +264,7 @@ You: "Yeah, so feminism to me is..."
     Chenjie: "Yeah, so regardless of gender, sexuality, race and all that."
     Chenjie: "Everyone is treated equally."
     
-    <<set $diceroll = diceroll($emp)>>
+    <<set $diceroll = diceRoll($emp)>>
     [EMPATHY] Sage looks like she has something to add, but she is hesitating. <<if $diceroll >= 5>>
     -> Press her. [5 CHA Check] <<if $diceroll >= 5>>
         <<set $diceroll = diceRoll($cha)>>
@@ -369,6 +369,7 @@ Who will you walk with today?
     You don't seem comfortable enough to talk more with any of your classmates.
     You decide to head back to your room by yourself.
     Slinking away to the door, you make a quiet exit.
+    <<goto_room_bus()>>
 
 -> Chenjie <<if getRelationship("CJ") >= 60>>
     <<jump 13>>
@@ -878,4 +879,13 @@ What do you do?
     The option for your size is out of stock though.
     What a shame... You can think of several blouses that would work well with that skirt.
     <<jump 20>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 3040,840
+__PrivCrochet_tags: 
+title: 12_alone
+---
+Your sister's message still weighs heavily on you.
+Nonetheless, you head back to your room.
+<<goto_room_bedroom()>>
 ===

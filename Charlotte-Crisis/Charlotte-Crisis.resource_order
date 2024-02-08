@@ -117,6 +117,7 @@
     {"name":"ChatterboxWait","order":9,"path":"scripts/ChatterboxWait/ChatterboxWait.yy",},
     {"name":"H_sat_strip2","order":22,"path":"sprites/H_sat_strip2/H_sat_strip2.yy",},
     {"name":"spr_mc_female_idle_shorts","order":2,"path":"sprites/spr_mc_female_idle_shorts/spr_mc_female_idle_shorts.yy",},
+    {"name":"rm_bus","order":8,"path":"rooms/rm_bus/rm_bus.yy",},
     {"name":"spr_mc_female_walking_legs","order":1,"path":"sprites/spr_mc_female_walking_legs/spr_mc_female_walking_legs.yy",},
     {"name":"spr_mc_male_walking_shorts","order":3,"path":"sprites/spr_mc_male_walking_shorts/spr_mc_male_walking_shorts.yy",},
     {"name":"ChatterboxVariableGet","order":1,"path":"scripts/ChatterboxVariableGet/ChatterboxVariableGet.yy",},

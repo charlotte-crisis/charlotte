@@ -158,6 +158,7 @@
     {"id":{"name":"ChatterboxWait","path":"scripts/ChatterboxWait/ChatterboxWait.yy",},},
     {"id":{"name":"H_sat_strip2","path":"sprites/H_sat_strip2/H_sat_strip2.yy",},},
     {"id":{"name":"spr_mc_female_idle_shorts","path":"sprites/spr_mc_female_idle_shorts/spr_mc_female_idle_shorts.yy",},},
+    {"id":{"name":"rm_bus","path":"rooms/rm_bus/rm_bus.yy",},},
     {"id":{"name":"spr_mc_female_walking_legs","path":"sprites/spr_mc_female_walking_legs/spr_mc_female_walking_legs.yy",},},
     {"id":{"name":"spr_mc_male_walking_shorts","path":"sprites/spr_mc_male_walking_shorts/spr_mc_male_walking_shorts.yy",},},
     {"id":{"name":"ChatterboxVariableGet","path":"scripts/ChatterboxVariableGet/ChatterboxVariableGet.yy",},},
@@ -271,6 +272,7 @@
     {"roomId":{"name":"rm_bedroom_1","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},},
     {"roomId":{"name":"rm_bus_cj","path":"rooms/rm_bus_cj/rm_bus_cj.yy",},},
     {"roomId":{"name":"rm_class_1_seated","path":"rooms/rm_class_1_seated/rm_class_1_seated.yy",},},
+    {"roomId":{"name":"rm_bus","path":"rooms/rm_bus/rm_bus.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
