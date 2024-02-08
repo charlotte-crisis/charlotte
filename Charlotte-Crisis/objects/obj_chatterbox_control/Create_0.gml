@@ -4,9 +4,9 @@ if instance_number(object_index) > 1 {
     instance_destroy();
     exit;
 }
-ChatterboxLoadFromFile("room_1.yarn");
+ChatterboxLoadFromFile("class_1.yarn");
 chatterbox = ChatterboxCreate();
-ChatterboxJump(chatterbox, "0");
+ChatterboxJump(chatterbox, "1");
 chatterbox_update();
 
 option_index = 0;

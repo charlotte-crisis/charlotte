@@ -265,8 +265,8 @@
     {"id":{"name":"IsChatterbox","path":"scripts/IsChatterbox/IsChatterbox.yy",},},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_bedroom_1","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},},
     {"roomId":{"name":"rm_class_1","path":"rooms/rm_class_1/rm_class_1.yy",},},
+    {"roomId":{"name":"rm_bedroom_1","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
