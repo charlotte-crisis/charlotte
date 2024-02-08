@@ -25,15 +25,25 @@ function add_intelligence() {
 
 #region Skill checks, Diceroll
 
-/// @function					skill_check(_skill, _required)
-/// @description				Checks if Skill + Dice roll outcome is greater than or equal to required.
-///	@param {Array} _parameters	{Skill, Threshold}
-///	@return {Bool}				True if succeed (>=)
+/// @function				skill_check(_skill, _required)
+/// @description			Checks if Skill + Dice roll outcome is greater than or equal to required.
+///	@param _parameters		{Skill, Threshold}
+///	@return {Bool}			True if succeed (>=)
 function skill_check(_parameters) {
 	// Currently using 6-sided dice
 	var _score = _parameters[0] + irandom(6);
 	show_debug_message(_parameters);
 	return (_score >= _parameters[1]);
+}
+
+/// @function				skill_check(_skill, _required)
+/// @description			Checks if Skill + Dice roll outcome is greater than or equal to required.
+///	@param _parameters		{Skill, Threshold}
+///	@return {Real}			The outcome
+function dice_roll(_parameters) {
+	// Currently using 6-sided dice
+	return _parameters[0] + irandom(6);
+	
 }
 
 #endregion

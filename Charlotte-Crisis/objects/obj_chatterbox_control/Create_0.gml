@@ -24,7 +24,8 @@ function chatterbox_set(_node_name) {
 }
 
 #region ChatterboxAddFunction defined here
-	ChatterboxAddFunction("skillCheck", skill_check)
+	ChatterboxAddFunction("skillCheck", skill_check);
+	ChatterboxAddFunction("diceRoll", dice_roll);
 
 	ChatterboxAddFunction("setGender", set_player_gender);
 	

@@ -12,6 +12,8 @@ title: 1
 
 You arrive just in time for class.
 This course is quite popular so almost all the seats are already filled.
+Maybe you can talk to some of your classmates before sitting down.
+Press UP to interact with characters or objects.
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 520,120
@@ -47,30 +49,22 @@ __PrivCrochet_tags:
 title: 5
 ---
 Prof Lim: "Hello, everyone! Welcome to the Gender and Feminism in Media course."
-Prof Lim: "I'm Lim Shu Hwa, and I’ll be your prof for this semester."
+Prof Lim: "I'm Lim Shu Hwa, and I'll be your prof for this semester."
 
 Prof Lim goes through the administrative details for the course. Standard stuff.
 The final assessment for this class is a group project to write a research paper.
 She also reiterates the rules of this course to ensure everyone keeps it a safe space for discussion.
+Bored, you start fiddling with your laptop.
 
-Part of you wishes you could bring all these rules to your upcoming "talk" with your sister.
-Maybe things will be easier then.
-You still don’t really know how she’ll react.
-
--> It’s hard to tell her tone through text.
-    There’s no use worrying now. We’ll wait till the weekends to properly talk with her.
-    Prof Lim: "Alright! Let’s start the lesson with some icebreakers."
-
--> I think she sounded angry.
-    She probably thinks I’m a freak or something now. 
-    Why did I post that photo? What was I even thinking? 
-    Prof Lim: "Alright! Let’s start the lesson with some icebreakers."
-
-    First lesson of the semester and your attention is already drifting. Shame on you!
-    # use a function in gamemaker better
-    # <<set $confidence = $confidence - 5>>
-
-<<jump 6>>
+-> Start a minesweeper game [INT 5 Check] <<if visited("5_1") == false>>
+    <<jump 5_1>>
+    
+-> Scroll through Shopee
+    As you scroll through your recommended, a cute skirt catches your eye. 
+    It's a long dark blue skirt with small starry prints.
+    The option for your size is out of stock though.
+    What a shame... You can think of several blouses that would work well with that skirt.
+    <<jump 20>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1000,360
@@ -544,4 +538,28 @@ Sage: "I feel I have a personal stake in this conversation, so I thought I shoul
     Sage: "Nice. We'll see how it goes then."
     Sage: "Oh! That's my bus. Bye!"
     You: "Bye!"
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,120
+__PrivCrochet_tags: 
+title: 5_1
+---
+<<set $diceroll = diceRoll($int)>>
+[You rolled a {$diceroll}.]
+<<if $diceroll >= 5>>
+    You skillfully manage to flag up all the bombs.
+    You Win!
+<<else>>
+    You only clear the map before you click on a mine and lose. 
+    Boohoo!
+<<endif>>
+Alright, probably time to pay attention.
+<<jump 5>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,880
+__PrivCrochet_tags: 
+title: Node
+---
+Empty Text
 ===
