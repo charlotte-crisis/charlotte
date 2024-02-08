@@ -24,10 +24,11 @@ function chatterbox_set(_node_name) {
 }
 
 #region ChatterboxAddFunction defined here
+	ChatterboxAddFunction("skillCheck", skill_check)
 
 	ChatterboxAddFunction("setGender", set_player_gender);
 	
-	// Door Functions here
+	/// Door Functions here
 	ChatterboxAddFunction("goto_room_class_1", goto_room_class_1);
 	
 	
