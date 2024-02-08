@@ -273,7 +273,7 @@ You: "Yeah, so feminism to me is..."
         You: "Sage, do you have something to add?"
         Sage: "What?"
         She stutters for a bit.
-        <<if $diceroll < 5>>
+        <<if $diceroll >= 5>>
             Sage: "Maybe, not just equally? Different people have different circumstances and needs, right?"
             Sage: "Like, um, there's a difference between allowing straight pride parades and gay pride parades, right?"
             Chenjie: "In what way?"
@@ -282,10 +282,10 @@ You: "Yeah, so feminism to me is..."
             Chenjie: "We give the poor person more because they need it more."
             You: "So it's about equity, not just equality."
             Sage: "Uh... Uh, right!"
-            Sage still looks a bit uncomfortable.)
+            Sage still looks a bit uncomfortable.
         <<else>>
             Sage: "No, nothing."
-            You really doubt that she has nothing to say but you don't press her any further.)
+            You really doubt that she has nothing to say but you don't press her any further.
         <<endif>>
 
     -> Say nothing.
