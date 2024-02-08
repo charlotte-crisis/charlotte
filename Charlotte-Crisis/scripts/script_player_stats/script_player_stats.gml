@@ -49,7 +49,32 @@ function skill_check(_parameters) {
 			case "CJ":
 				obj_cj.change_relationship(_amount);
 				break;
+			case "J":
+				obj_joanne.change_relationship(_amount);
+				break;
+			case "S":
+				obj_sage.change_relationship(_amount);
+				break;
 		}
 	}
 
+#endregion
+
+#region Confidence
+/// @function change_confidence(_amount);
+/// @description	 Adds amount of relationship. Limit at 0 or 100.
+/// @param {Real} _amount
+/// @return {Real}
+function change_confidence(_parameters) {
+	var _total = obj_stats.confidence + real(_parameters[0]);
+	
+	// Ensure doesn't go past 0 or 100.
+	if (_total > 100) {
+		_total = 100;	
+	} else if (_total < 0) {
+		_total = 0;	
+	}
+	obj_stats.confidence = _total;	
+	return _total;
+}
 #endregion
