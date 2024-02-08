@@ -32,6 +32,7 @@ function chatterbox_set(_node_name) {
 	/// Door Functions here
 	ChatterboxAddFunction("goto_room_class_1", goto_room_class_1);
 	ChatterboxAddFunction("goto_room_class_1_seated", goto_room_class_1_seated);
+	ChatterboxAddFunction("goto_room_bus_cj", goto_room_bus_cj);
 	
 	ChatterboxAddFunction("changeRelationship", change_npc_relationship);
 	ChatterboxAddFunction("getRelationship", get_npc_relationship);

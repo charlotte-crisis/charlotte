@@ -50,7 +50,7 @@
     {"name":"spr_mc_male_walking_legs","order":1,"path":"sprites/spr_mc_male_walking_legs/spr_mc_male_walking_legs.yy",},
     {"name":"ChatterboxGetContent","order":1,"path":"scripts/ChatterboxGetContent/ChatterboxGetContent.yy",},
     {"name":"CJ_sat_strip2","order":15,"path":"sprites/CJ_sat_strip2/CJ_sat_strip2.yy",},
-    {"name":"rm_bus","order":6,"path":"rooms/rm_bus/rm_bus.yy",},
+    {"name":"rm_bus_cj","order":6,"path":"rooms/rm_bus_cj/rm_bus_cj.yy",},
     {"name":"__ChatterboxLocalizationLoadIntoMap","order":11,"path":"scripts/__ChatterboxLocalizationLoadIntoMap/__ChatterboxLocalizationLoadIntoMap.yy",},
     {"name":"spr_livingroom_bars","order":6,"path":"sprites/spr_livingroom_bars/spr_livingroom_bars.yy",},
     {"name":"__ChatterboxCompile","order":7,"path":"scripts/__ChatterboxCompile/__ChatterboxCompile.yy",},

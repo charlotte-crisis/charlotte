@@ -20,3 +20,13 @@ function goto_room_class_1_seated(){
 	
 	ChatterboxJump(chatterbox, "5");
 }
+
+function goto_room_bus_cj(){
+	room_goto(rm_bus_cj);
+	obj_player.x = 223;
+	obj_player.y = 73;
+	obj_player.facing_direction = -1;
+	obj_player.is_sitting = false;
+	
+	ChatterboxJump(chatterbox, "13");
+}

@@ -1,22 +1,22 @@
 {
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
-  "name": "rm_bus",
-  "creationCodeFile": "rooms/rm_bus/RoomCreationCode.gml",
+  "name": "rm_bus_cj",
+  "creationCodeFile": "rooms/rm_bus_cj/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,
   "instanceCreationOrder": [
-    {"name":"inst_5DDBE41A_1_2","path":"rooms/rm_bus/rm_bus.yy",},
-    {"name":"inst_416B103F_1_2","path":"rooms/rm_bus/rm_bus.yy",},
-    {"name":"inst_741BB5E2_1_2","path":"rooms/rm_bus/rm_bus.yy",},
-    {"name":"inst_6D95568F","path":"rooms/rm_bus/rm_bus.yy",},
+    {"name":"inst_5DDBE41A_1_2","path":"rooms/rm_bus_cj/rm_bus_cj.yy",},
+    {"name":"inst_416B103F_1_2","path":"rooms/rm_bus_cj/rm_bus_cj.yy",},
+    {"name":"inst_741BB5E2_1_2","path":"rooms/rm_bus_cj/rm_bus_cj.yy",},
+    {"name":"inst_6D95568F","path":"rooms/rm_bus_cj/rm_bus_cj.yy",},
   ],
   "isDnd": false,
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Interactable","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6D95568F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_cj","path":"objects/obj_cj/obj_cj.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":35.0,"y":73.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6D95568F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_cj","path":"objects/obj_cj/obj_cj.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":45.0,"y":73.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Walls","depth":200,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5DDBE41A_1_2","colour":4294967295,"frozen":true,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"rotation":0.0,"scaleX":16.0,"scaleY":3.5,"x":128.0,"y":164.0,},

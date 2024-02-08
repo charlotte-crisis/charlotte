@@ -1,10 +1,10 @@
 #__PrivCrochet_version:1
+# Global Variables here
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 280,360
 __PrivCrochet_tags: 
 title: 1
 ---
-# Global Variables here
 <<set $cha = 3>>
 <<set $int = 3>>
 <<set $emp = 3>>
@@ -265,9 +265,9 @@ You: "Yeah, so feminism to me is..."
     Chenjie: "Yeah, so regardless of gender, sexuality, race and all that."
     Chenjie: "Everyone is treated equally."
     
-    <<if skillCheck($emp, 5)>>
-    [EMPATHY] Sage looks like she has something to add, but she is hesitating. 
-    -> Press her. [5 CHA Check]
+    <<set $diceroll = diceroll($emp)>>
+    [EMPATHY] Sage looks like she has something to add, but she is hesitating. <<if $diceroll >= 5>>
+    -> Press her. [5 CHA Check] <<if $diceroll >= 5>>
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
         You: "Sage, do you have something to add?"
@@ -287,7 +287,6 @@ You: "Yeah, so feminism to me is..."
             Sage: "No, nothing."
             You really doubt that she has nothing to say but you don't press her any further.)
         <<endif>>
-    <<endif>>
 
     -> Say nothing.
         Chenjie: "So we're done!"
@@ -389,7 +388,7 @@ title: 13
 You: "Chenjie, wanna walk to the bus stop together?"
 Chenjie: "Yeah, okay!"
 
-# <<goto_room_bus_cj>>
+<<goto_room_bus_cj()>>
 Chenjie: "Oh, yikes."
 You: "What?"
 Chenjie: "My mom said she saw a cockroach in the living room. And she's asking me to hurry back to kill it."

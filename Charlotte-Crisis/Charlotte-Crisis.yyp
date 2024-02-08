@@ -76,7 +76,7 @@
     {"id":{"name":"spr_mc_male_walking_legs","path":"sprites/spr_mc_male_walking_legs/spr_mc_male_walking_legs.yy",},},
     {"id":{"name":"ChatterboxGetContent","path":"scripts/ChatterboxGetContent/ChatterboxGetContent.yy",},},
     {"id":{"name":"CJ_sat_strip2","path":"sprites/CJ_sat_strip2/CJ_sat_strip2.yy",},},
-    {"id":{"name":"rm_bus","path":"rooms/rm_bus/rm_bus.yy",},},
+    {"id":{"name":"rm_bus_cj","path":"rooms/rm_bus_cj/rm_bus_cj.yy",},},
     {"id":{"name":"__ChatterboxLocalizationLoadIntoMap","path":"scripts/__ChatterboxLocalizationLoadIntoMap/__ChatterboxLocalizationLoadIntoMap.yy",},},
     {"id":{"name":"spr_livingroom_bars","path":"sprites/spr_livingroom_bars/spr_livingroom_bars.yy",},},
     {"id":{"name":"__ChatterboxCompile","path":"scripts/__ChatterboxCompile/__ChatterboxCompile.yy",},},
@@ -269,7 +269,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_class_1","path":"rooms/rm_class_1/rm_class_1.yy",},},
     {"roomId":{"name":"rm_bedroom_1","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},},
-    {"roomId":{"name":"rm_bus","path":"rooms/rm_bus/rm_bus.yy",},},
+    {"roomId":{"name":"rm_bus_cj","path":"rooms/rm_bus_cj/rm_bus_cj.yy",},},
     {"roomId":{"name":"rm_class_1_seated","path":"rooms/rm_class_1_seated/rm_class_1_seated.yy",},},
   ],
   "templateType": "game",
