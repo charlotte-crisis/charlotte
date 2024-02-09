@@ -56,6 +56,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Wardrobe","folderPath":"folders/Sprites/Wardrobe.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Week 1","folderPath":"folders/Rooms/Week 1.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"cca_1.yarn","CopyToMask":-1,"filePath":"datafiles",},
@@ -113,6 +114,7 @@
     {"id":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},},
     {"id":{"name":"ChatterboxGetContentCount","path":"scripts/ChatterboxGetContentCount/ChatterboxGetContentCount.yy",},},
     {"id":{"name":"spr_mc_male_idle_head","path":"sprites/spr_mc_male_idle_head/spr_mc_male_idle_head.yy",},},
+    {"id":{"name":"rm_cca_1","path":"rooms/rm_cca_1/rm_cca_1.yy",},},
     {"id":{"name":"ChatterboxSourceNodeExists","path":"scripts/ChatterboxSourceNodeExists/ChatterboxSourceNodeExists.yy",},},
     {"id":{"name":"V_Portraits","path":"sprites/V_Portraits/V_Portraits.yy",},},
     {"id":{"name":"__ChatterboxMetadataStringIsLineHash","path":"scripts/__ChatterboxMetadataStringIsLineHash/__ChatterboxMetadataStringIsLineHash.yy",},},
@@ -276,6 +278,7 @@
     {"roomId":{"name":"rm_bus","path":"rooms/rm_bus/rm_bus.yy",},},
     {"roomId":{"name":"rm_bus_s","path":"rooms/rm_bus_s/rm_bus_s.yy",},},
     {"roomId":{"name":"rm_bus_j","path":"rooms/rm_bus_j/rm_bus_j.yy",},},
+    {"roomId":{"name":"rm_cca_1","path":"rooms/rm_cca_1/rm_cca_1.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
