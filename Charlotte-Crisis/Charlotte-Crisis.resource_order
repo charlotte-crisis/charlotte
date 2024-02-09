@@ -45,6 +45,7 @@
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
     {"name":"Week 1","order":12,"path":"folders/Rooms/Week 1.yy",},
+    {"name":"hangout","order":9,"path":"folders/Rooms/Week 1/hangout.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_mc_female_idle_legs","order":1,"path":"sprites/spr_mc_female_idle_legs/spr_mc_female_idle_legs.yy",},

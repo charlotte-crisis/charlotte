@@ -57,6 +57,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Week 1","folderPath":"folders/Rooms/Week 1.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"hangout","folderPath":"folders/Rooms/Week 1/hangout.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"cca_1.yarn","CopyToMask":-1,"filePath":"datafiles",},
@@ -112,6 +113,7 @@
     {"id":{"name":"spr_classroom_bars","path":"sprites/spr_classroom_bars/spr_classroom_bars.yy",},},
     {"id":{"name":"ChatterboxVariablesExport","path":"scripts/ChatterboxVariablesExport/ChatterboxVariablesExport.yy",},},
     {"id":{"name":"spr_mc_male_sitting_shorts","path":"sprites/spr_mc_male_sitting_shorts/spr_mc_male_sitting_shorts.yy",},},
+    {"id":{"name":"rm_hangout_anthony","path":"rooms/rm_hangout_anthony/rm_hangout_anthony.yy",},},
     {"id":{"name":"ChatterboxLocalizationLoad","path":"scripts/ChatterboxLocalizationLoad/ChatterboxLocalizationLoad.yy",},},
     {"id":{"name":"ChatterboxLoadFromString","path":"scripts/ChatterboxLoadFromString/ChatterboxLoadFromString.yy",},},
     {"id":{"name":"M_sat_strip2","path":"sprites/M_sat_strip2/M_sat_strip2.yy",},},
@@ -290,6 +292,7 @@
     {"roomId":{"name":"rm_bus_j","path":"rooms/rm_bus_j/rm_bus_j.yy",},},
     {"roomId":{"name":"rm_cca_1","path":"rooms/rm_cca_1/rm_cca_1.yy",},},
     {"roomId":{"name":"rm_cca_1_seated","path":"rooms/rm_cca_1_seated/rm_cca_1_seated.yy",},},
+    {"roomId":{"name":"rm_hangout_anthony","path":"rooms/rm_hangout_anthony/rm_hangout_anthony.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
