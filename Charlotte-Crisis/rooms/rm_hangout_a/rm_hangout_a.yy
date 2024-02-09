@@ -1,16 +1,16 @@
 {
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
-  "name": "rm_hangout_anthony",
-  "creationCodeFile": "rooms/rm_hangout_anthony/RoomCreationCode.gml",
+  "name": "rm_hangout_a",
+  "creationCodeFile": "rooms/rm_hangout_a/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,
   "instanceCreationOrder": [
-    {"name":"inst_5DDBE41A_1_2_3","path":"rooms/rm_hangout_anthony/rm_hangout_anthony.yy",},
-    {"name":"inst_416B103F_1_2_3","path":"rooms/rm_hangout_anthony/rm_hangout_anthony.yy",},
-    {"name":"inst_741BB5E2_1_2_3","path":"rooms/rm_hangout_anthony/rm_hangout_anthony.yy",},
-    {"name":"inst_7AC209BC","path":"rooms/rm_hangout_anthony/rm_hangout_anthony.yy",},
+    {"name":"inst_5DDBE41A_1_2_3","path":"rooms/rm_hangout_a/rm_hangout_a.yy",},
+    {"name":"inst_416B103F_1_2_3","path":"rooms/rm_hangout_a/rm_hangout_a.yy",},
+    {"name":"inst_741BB5E2_1_2_3","path":"rooms/rm_hangout_a/rm_hangout_a.yy",},
+    {"name":"inst_7AC209BC","path":"rooms/rm_hangout_a/rm_hangout_a.yy",},
   ],
   "isDnd": false,
   "layers": [

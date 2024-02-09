@@ -50,6 +50,8 @@ function chatterbox_set(_node_name) {
 	
 	/// Hangouts
 	ChatterboxAddFunction("goto_room_hangout_a", goto_room_hangout_a);
+	ChatterboxAddFunction("goto_room_hangout_v", goto_room_hangout_v);
+	ChatterboxAddFunction("goto_room_hangout_n", goto_room_hangout_n);
 #endregion
 
 #region constants

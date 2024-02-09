@@ -99,7 +99,7 @@ function goto_room_cca_1_seated(){
 
 #region hangouts
 	function goto_room_hangout_a() {
-		room_goto(rm_hangout_anthony);
+		room_goto(rm_hangout_a);
 		obj_player.x = 159;
 		obj_player.y = 74;
 		obj_player.facing_direction = 1;
@@ -107,6 +107,30 @@ function goto_room_cca_1_seated(){
 	
 		ChatterboxLoadFromFile("hangout_anthony.yarn");
 		obj_chatterbox_control.chatterbox = ChatterboxCreate("hangout_anthony.yarn");
+		ChatterboxJump(chatterbox, "0");
+	}
+	
+	function goto_room_hangout_n() {
+		room_goto(rm_hangout_n);
+		obj_player.x = 159;
+		obj_player.y = 74;
+		obj_player.facing_direction = 1;
+		obj_player.is_sitting = false;
+	
+		ChatterboxLoadFromFile("hangout_nadia.yarn");
+		obj_chatterbox_control.chatterbox = ChatterboxCreate("hangout_nadia.yarn");
+		ChatterboxJump(chatterbox, "0");
+	}
+	
+	function goto_room_hangout_v() {
+		room_goto(rm_hangout_v);
+		obj_player.x = 159;
+		obj_player.y = 74;
+		obj_player.facing_direction = 1;
+		obj_player.is_sitting = false;
+	
+		ChatterboxLoadFromFile("hangout_vera.yarn");
+		obj_chatterbox_control.chatterbox = ChatterboxCreate("hangout_vera.yarn");
 		ChatterboxJump(chatterbox, "0");
 	}
 
