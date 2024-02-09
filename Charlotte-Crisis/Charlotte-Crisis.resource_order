@@ -225,6 +225,7 @@
     {"name":"__ChatterboxEvaluate","order":9,"path":"scripts/__ChatterboxEvaluate/__ChatterboxEvaluate.yy",},
     {"name":"__ChatterboxClassText","order":6,"path":"scripts/__ChatterboxClassText/__ChatterboxClassText.yy",},
     {"name":"ChatterboxUnload","order":11,"path":"scripts/ChatterboxUnload/ChatterboxUnload.yy",},
+    {"name":"rm_class_1_discussion","order":13,"path":"rooms/rm_class_1_discussion/rm_class_1_discussion.yy",},
     {"name":"rm_cca_1_seated_18","order":11,"path":"rooms/rm_cca_1_seated_18/rm_cca_1_seated_18.yy",},
     {"name":"E_walking_strip8","order":19,"path":"sprites/E_walking_strip8/E_walking_strip8.yy",},
     {"name":"spr_shirt_f","order":2,"path":"sprites/spr_shirt_f/spr_shirt_f.yy",},
