@@ -55,6 +55,7 @@ function goto_room_bus_s(){
 	obj_player.is_sitting = false;
 }
 
+#region goto Bedrooms
 function goto_room_bedroom(){
 	room_goto(rm_bedroom_1);
 	obj_player.x = 230;
@@ -67,12 +68,25 @@ function goto_room_bedroom(){
 	ChatterboxJump(chatterbox, "after_class1");
 }
 
+function goto_room_bedroom_after_cca(){
+	room_goto(rm_bedroom_1_after_cca);
+	obj_player.x = 30;
+	obj_player.y = 74;
+	obj_player.facing_direction = 1;
+	obj_player.is_sitting = false;
+	
+	ChatterboxLoadFromFile("room_1_after_cca.yarn");
+	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_cca.yarn");
+	ChatterboxJump(chatterbox, "0");
+}
+
 function goto_room_bedroom_frombed() {
 	obj_player.x = 30;
 	obj_player.y = 74;
-	obj_player.facing_direction = -1;
+	obj_player.facing_direction = 1;
 	ChatterboxJump(chatterbox, "0");
 }
+#endregion
 
 function goto_room_cca_1(){
 	room_goto(rm_cca_1);

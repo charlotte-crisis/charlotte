@@ -65,6 +65,7 @@
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"hangout_anthony.yarn","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"hangout_nadia.yarn","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"hangout_vera.yarn","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"room_1_after_cca.yarn","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"room_1.yarn","CopyToMask":-1,"filePath":"datafiles",},
   ],
   "isEcma": false,
@@ -135,6 +136,7 @@
     {"id":{"name":"spr_bottom_f_1","path":"sprites/spr_bottom_f_1/spr_bottom_f_1.yy",},},
     {"id":{"name":"spr_mc_male_sitting_torso","path":"sprites/spr_mc_male_sitting_torso/spr_mc_male_sitting_torso.yy",},},
     {"id":{"name":"obj_cj","path":"objects/obj_cj/obj_cj.yy",},},
+    {"id":{"name":"rm_bedroom_1_after_cca","path":"rooms/rm_bedroom_1_after_cca/rm_bedroom_1_after_cca.yy",},},
     {"id":{"name":"spr_indicator","path":"sprites/spr_indicator/spr_indicator.yy",},},
     {"id":{"name":"speech_strip3","path":"sprites/speech_strip3/speech_strip3.yy",},},
     {"id":{"name":"E_idle_strip2","path":"sprites/E_idle_strip2/E_idle_strip2.yy",},},
@@ -298,6 +300,7 @@
     {"roomId":{"name":"rm_hangout_a","path":"rooms/rm_hangout_a/rm_hangout_a.yy",},},
     {"roomId":{"name":"rm_hangout_n","path":"rooms/rm_hangout_n/rm_hangout_n.yy",},},
     {"roomId":{"name":"rm_hangout_v","path":"rooms/rm_hangout_v/rm_hangout_v.yy",},},
+    {"roomId":{"name":"rm_bedroom_1_after_cca","path":"rooms/rm_bedroom_1_after_cca/rm_bedroom_1_after_cca.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [

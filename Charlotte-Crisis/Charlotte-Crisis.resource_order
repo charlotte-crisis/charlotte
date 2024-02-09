@@ -100,6 +100,7 @@
     {"name":"spr_bottom_f_1","order":3,"path":"sprites/spr_bottom_f_1/spr_bottom_f_1.yy",},
     {"name":"spr_mc_male_sitting_torso","order":3,"path":"sprites/spr_mc_male_sitting_torso/spr_mc_male_sitting_torso.yy",},
     {"name":"obj_cj","order":5,"path":"objects/obj_cj/obj_cj.yy",},
+    {"name":"rm_bedroom_1_after_cca","order":10,"path":"rooms/rm_bedroom_1_after_cca/rm_bedroom_1_after_cca.yy",},
     {"name":"spr_indicator","order":3,"path":"sprites/spr_indicator/spr_indicator.yy",},
     {"name":"speech_strip3","order":5,"path":"sprites/speech_strip3/speech_strip3.yy",},
     {"name":"E_idle_strip2","order":17,"path":"sprites/E_idle_strip2/E_idle_strip2.yy",},

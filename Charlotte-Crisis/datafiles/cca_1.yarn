@@ -328,7 +328,7 @@ Vera: "Hey Charlotte. Are you feeling okay?"
 <<jump 12>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2440,-2
+__PrivCrochet_position: 2440,0
 __PrivCrochet_tags: 
 title: 12
 ---
@@ -418,7 +418,7 @@ Vera: "You know, trans women."
         Vera: "Let's meet up soon?"
         You: "Sure, I'll let you know." (END)
 
-<<stop>>
+<<jump end>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1960,234
@@ -491,7 +491,7 @@ title: 14
 ---
 Eleanor: "We didn't even get to comment on Charlotte's art... if you want to talk about it, I can have a look later."
 Eleanor: "Anyway, our time's up for this week. See you next week!"
-<<stop>>
+<<jump end>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1958,480
@@ -581,7 +581,7 @@ title: 17
 ---
 Eleanor: "We didn't even get to comment on Charlotte's art... if you want to talk about it, I can have a look."
 Eleanor: "Either way, see you next week!"
-<<stop>>
+<<jump end>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1960,720
@@ -737,7 +737,7 @@ Anthony: "Maybe she's an ah gua."
             Anthony: "I'm sure there will be many more opportunities to laugh at how cringe the two of you are."
             Anthony: "See you next week."
         <<endif>>
-<<stop>>
+<<jump end>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1480,240
@@ -804,4 +804,14 @@ title: pre-5
 ---
 You take a seat.
 <<goto_room_cca_1_seated()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2720,280
+__PrivCrochet_tags: 
+title: end
+---
+# Maybe turn on a black overlay here
+You head back to your room.
+
+<<goto_room_bedroom_after_cca()>>
 ===
