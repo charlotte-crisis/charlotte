@@ -10,10 +10,10 @@ title: 1
 <<set $emp = 3>>
 <<set $name = "Charlotte">>
 
-You arrive just in time for class.
+You arrive just in time for class. (press Space to advance dialogue)
 This course is quite popular so almost all the seats are already filled.
 Maybe you can talk to some of your classmates before sitting down.
-Press UP to interact with characters or objects.
+(Press UP to interact with characters or objects.)
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 520,120

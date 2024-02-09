@@ -58,8 +58,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
   ],
   "IncludedFiles": [
-    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"cca_1_old.yarn","CopyToMask":-1,"filePath":"datafiles",},
-    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"cca1.yarn","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"cca_1.yarn","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"class_1.yarn","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"hangout_anthony.yarn","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"hangout_nadia.yarn","CopyToMask":-1,"filePath":"datafiles",},
@@ -69,7 +68,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.11.1.129",
+    "IDEVersion": "2023.11.0.121",
   },
   "resources": [
     {"id":{"name":"spr_mc_female_idle_legs","path":"sprites/spr_mc_female_idle_legs/spr_mc_female_idle_legs.yy",},},

@@ -1,27 +1,12 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 320,360
+__PrivCrochet_position: 240,360
 __PrivCrochet_tags: 
 title: 1
 ---
-<<declare $int = 3>>
-<<declare $cha = 3>>
-<<declare $emp = 3>>
-
 You enter the club room for the first time.
 The words "self-portrait" are projected onto the screen.
 You should probably explore what and who is in the club room first.
-
-(A and D to move left and right. Press Space to interact with a person.)
-
-Set your name and presentation.
--> Charles (Male)
-    <<set $name = "Charles">>
-    <<setGender(0)>>
--> Charlotte (Female)
-    <<set $name = "Charlotte">>
-    <<setGender(1)>>
-<<stop>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 520,160
@@ -32,11 +17,8 @@ You: "Hi! I'm {$name}."
 Vera: "Hi, {$name}, I'm Vera."
 <<if $name == "Charlotte">>
     Vera: "Wow, you look great!"
-    You: "Thanks!" + 5% confidence)
-<<else>>
-    Vera: You look... Male.
+    You: "Thanks!" <<changeConfidence(5)>>
 <<endif>>
-<<stop>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 760,360
@@ -48,12 +30,12 @@ Before you can ask what you should do with them, a girl you've never seen before
 New Girl: "Hi! Wait. I don't think I've seen you before..."
 You: "Hi, I'm {$name}."
 New Girl: "Hello! I'm Eleanor. I kind of keep this club going, I guess."
-Eleanor: "Today's theme is quite simple; self-portrait."
+Eleanor: "Today's theme is quite simple: self-portrait."
 
 -> You: "Isn't that quite hard?"
     Eleanor: "Nah, don't doubt yourself!"
     Eleanor: "We all have to start somewhere."
-    Eleanor: "Don't worry about whether your work is good, just get it out there." (+ 5% confidence)
+    Eleanor: "Don't worry about whether your work is good, just get it out there." <<changeConfidence(5)>>
     You: "Thank you for that."
     Eleanor: "No problem! We'll share our art in 20 minutes."
 
@@ -89,10 +71,10 @@ Vera reveals her drawing. It's her face on a very psychedelic background.
 Vera: "Yes, I know, lots of rainbows."
 Nadia: "Hmm, it's a bit hard to see your face, but still, really nice!"
 Anthony just shrugs.
-You feel the pressure of four pairs of eyes on you… what will you say?
+You feel the pressure of four pairs of eyes on you... what will you say?
 
 -> You: "What do the rainbows mean?"
-    Vera: "It represents my freedom to love, and to be myself." (+ 10 XP)
+    Vera: "It represents my freedom to love, and to be myself." (+ 10 XP) <<addExperience(10)>>
     Anthony: "Of course. Coming from someone who needs to introduce herself with pronouns."
     Vera: "I'll pretend I didn't hear that. Anyway..."
     -> You: "It looks nice!"
@@ -150,7 +132,7 @@ You: "Hi! I'm {$name}."
 Nadia: "Hi, {$name}! I'm Nadia."
 <<if $name == "Charlotte">>
     Nadia: "By the way, nice outfit!"
-    You: "Thanks!" (+ 5% confidence)
+    You: "Thanks!" <<changeConfidence(5)>>
 <<endif>>
 ===
 __PrivCrochet_colorID: 0
