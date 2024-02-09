@@ -1,13 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_indicator",
-  "eventList": [],
+  "name": "obj_chair19",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Helper",
-    "path": "folders/Objects/Helper.yy",
+    "name": "Interactables",
+    "path": "folders/Objects/Interactables.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -26,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "speech_strip3",
-    "path": "sprites/speech_strip3/speech_strip3.yy",
+    "name": "chair_turned",
+    "path": "sprites/chair_turned/chair_turned.yy",
   },
   "spriteMaskId": null,
   "visible": true,

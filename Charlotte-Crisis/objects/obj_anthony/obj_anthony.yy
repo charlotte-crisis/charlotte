@@ -1,15 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_indicator",
+  "name": "obj_anthony",
   "eventList": [],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"propertyId":{"name":"node","path":"objects/obj_npc/obj_npc.yy",},"value":"3",},
+  ],
   "parent": {
-    "name": "Helper",
-    "path": "folders/Objects/Helper.yy",
+    "name": "NPC",
+    "path": "folders/Objects/NPC.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_npc",
+    "path": "objects/obj_npc/obj_npc.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -26,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "speech_strip3",
-    "path": "sprites/speech_strip3/speech_strip3.yy",
+    "name": "A_sat_strip2",
+    "path": "sprites/A_sat_strip2/A_sat_strip2.yy",
   },
   "spriteMaskId": null,
   "visible": true,
