@@ -88,11 +88,11 @@ This is what you do every day, but with Sister's text today, you feel like every
 <<set $canGoToBed = true>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 649,194
+__PrivCrochet_position: 647,194
 __PrivCrochet_tags: 
 title: bed
 ---
-<<if $canGoToBed = true>>
+<<if $canGoToBed == true>>
     # start the next scene
     <<goto_room_bedroom_frombed()>>
 <<else>>

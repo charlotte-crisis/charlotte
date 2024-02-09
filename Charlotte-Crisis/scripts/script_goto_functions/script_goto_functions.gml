@@ -88,6 +88,10 @@ function goto_room_cca_1(){
 	obj_player.is_sitting = false;
 	
 	ChatterboxJump(chatterbox, "1");
+	
+	ChatterboxLoadFromFile("cca_1.yarn");
+	obj_chatterbox_control.chatterbox = ChatterboxCreate("cca_1.yarn");
+	ChatterboxJump(chatterbox, "1");
 }
 
 
