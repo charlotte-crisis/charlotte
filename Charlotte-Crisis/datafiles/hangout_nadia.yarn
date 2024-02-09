@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 360,-360
+__PrivCrochet_position: 160,-280
 __PrivCrochet_tags: 
 title: 1_1
 ---
@@ -16,11 +16,11 @@ Nadia: "So I'm going back quite late every night."
     <<jump 1_1_3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 79,-280
+__PrivCrochet_position: -320,-280
 __PrivCrochet_tags: 
 title: 0
 ---
-Nadia: "Hey $name!"
+Nadia: "Hey {$name}!"
 You: "Hey Nadia! Great to see you."
 Nadia: "Yeah, same. Let's get some food!"
 Food acquired
@@ -100,7 +100,7 @@ Nadia: "What's the best part about staying?"
 <<jump 0>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 120,-600
+__PrivCrochet_position: -40,-760
 __PrivCrochet_tags: 
 title: 1_1_1
 ---
@@ -144,7 +144,7 @@ Nadia: "What about your major?"
 <<jump 0>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 360,-641
+__PrivCrochet_position: 360,-640
 __PrivCrochet_tags: 
 title: 1_1_2
 ---
@@ -197,14 +197,15 @@ Nadia: "So, yeah. Lots of things keep me super super busy."
             You: "Some battles just aren't worth fighting."
     
     -> "It must be difficult to understand."
-      Nadia: "Yeah, but I just need to keep working at it, right?"
+        Nadia: "Yeah, but I just need to keep working at it, right?"
 
         -> "All the best with that."
             You: "I know with your determination, you can do it!"
             Nadia: "Aww, thanks!"
             <<if $cha > 4>>
                 You: "When you make your first million, remember me ah?"
-                Nadia: "Onz! I buy you a nice dress~" (+5% Nadia relationship) <<changeRelationship("N", 5)>>
+                Nadia: "Onz! I buy you a nice dress~" (+5% Nadia relationship) 
+                <<changeRelationship("N", 5)>>
             <<endif>>
 
         -> "Don't burn yourself out."
@@ -264,22 +265,24 @@ Nadia: "So, yeah. Lots of things keep me super super busy."
                 You: "If you're the only one struggling, I mean..."
                 You: "Maybe the issue is with you?"
                 Nadia: "Uh... I guess so..."
-                Nadia looks subdued. Did you say something wrong? (-5% Nadia relationship) <<changeRelationship("N", -5)>>
+                Nadia looks subdued. Did you say something wrong? (-5% Nadia relationship) 
+                <<changeRelationship("N", -5)>>
 
 -> "Why the exchanger buddy programme?"
-Nadia: "I'm always super intrigued by exchangers and their perspectives."
-Nadia: "Who knows? It could help me with my own exchange in future."
+    Nadia: "I'm always super intrigued by exchangers and their perspectives."
+    Nadia: "Who knows? It could help me with my own exchange in future."
     -> "Sure you're not just there to find some hot exchanger guy?" [4 CHA required]
-    <<if $cha < 4>>
-        Nadia: "Hey... I'm not that desperate..." (-5% Nadia relationship)<<changeRelationship("N", -5)>>
-        You: "Uh... okay... sorry..."
-    <<else>>
-        Nadia: "Hahaha! I must be really desperate to need that."
-        Nadia: "Besides, that would be really short term, wouldn't it?"
-        Nadia: "They fly back, and that's it..."
-        You: "Heh. You could fly with them..."
-        Nadia: "Aww, that's so romantic. Alright, let's get our heads out of the clouds."
-    <<endif>>
+        <<if $cha < 4>>
+            Nadia: "Hey... I'm not that desperate..." (-5% Nadia relationship) 
+            <<changeRelationship("N", -5)>>
+            You: "Uh... okay... sorry..."
+        <<else>>
+            Nadia: "Hahaha! I must be really desperate to need that."
+            Nadia: "Besides, that would be really short term, wouldn't it?"
+            Nadia: "They fly back, and that's it..."
+            You: "Heh. You could fly with them..."
+            Nadia: "Aww, that's so romantic. Alright, let's get our heads out of the clouds."
+        <<endif>>
 
     -> "Oh? Where do you wanna go?"
         Nadia: "Japan! First choice."
@@ -405,12 +408,13 @@ Nadia: "Do you think being Charlotte halted your professional development?"
         Nadia: "Uh... I..."
         You: "Are you saying being Charlotte is a waste of time?"
         Nadia: "No, I..."
-        Nadia: "Never mind, I'm sorry. I shouldn't have asked that." (-5% Nadia relationship) <<changeRelationship("N", -5)>>
+        Nadia: "Never mind, I'm sorry. I shouldn't have asked that." (-5% Nadia relationship) 
+        <<changeRelationship("N", -5)>>
 
 <<jump 0>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 360,-80
+__PrivCrochet_position: 440,-40
 __PrivCrochet_tags: 
 title: 1_2
 ---
