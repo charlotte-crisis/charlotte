@@ -78,7 +78,7 @@ You feel the pressure of four pairs of eyes on you... what will you say?
     Anthony: "Of course. Coming from someone who needs to introduce herself with pronouns."
     Vera: "I'll pretend I didn't hear that. Anyway..."
     -> You: "It looks nice!"
-        Vera: "Thank you~ You like rainbows too?" (+5% Vera relationship)
+        Vera: "Thank you~ You like rainbows too?" (+5% Vera relationship) <<changeRelationship("V", 5)>>
         You: "I don't see a lot of them around. But yours looks good."
         Vera: "Yes, the world could do with a lot more colour."
         Vera: "I guess that's what I want to say through my art, too."

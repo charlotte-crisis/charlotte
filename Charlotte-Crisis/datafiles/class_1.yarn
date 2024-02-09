@@ -109,18 +109,20 @@ But do you even want to be Charlotte, right now?
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1240,360
+__PrivCrochet_position: 1239,360
 __PrivCrochet_tags: 
 title: 7
 ---
 Joanne: "Wait, so you're a guy, right?"
 You: "Not right now. But when I'm in boy mode, yes."
-Joanne is silent. <<changeRelationship("J", -5)>>
+<<changeRelationship("J", -5)>>
+Joanne is silent. 
 
 -> You: "Do you have a problem with that?"
     Joanne: "What? I didn't even say anything."
     You: "You look like you have something to say."
-    Chenjie: "Guys, come on. Let's chill, okay?" <<changeRelationship("CJ", -5)>>
+    <<changeRelationship("CJ", -5)>>
+    Chenjie: "Guys, come on. Let's chill, okay?" 
     Maybe it's best not to push it.
 
 -> Move on
@@ -350,7 +352,7 @@ You: "Yeah, so feminism to me is..."
         <<jump 18>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2720,360
+__PrivCrochet_position: 2719,359
 __PrivCrochet_tags: 
 title: 12
 ---
@@ -371,13 +373,13 @@ Who will you walk with today?
     Slinking away to the door, you make a quiet exit.
     <<goto_room_bus()>>
 
--> Chenjie <<if getRelationship("CJ") >= 60>>
+-> Chenjie <<if getRelationship("CJ") >= 55>>
     <<jump 13>>
 
--> Joanne <<if getRelationship("J") >= 60>>
+-> Joanne <<if getRelationship("J") >= 55>>
     <<jump 14>>
 
--> Sage <<if getRelationship("S") >= 60>>
+-> Sage <<if getRelationship("S") >= 55>>
     <<jump 15>>
 ===
 __PrivCrochet_colorID: 0
@@ -596,7 +598,7 @@ Alright, probably time to pay attention.
 <<jump 5_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 760,760
+__PrivCrochet_position: 758,760
 __PrivCrochet_tags: 
 title: 20
 ---
