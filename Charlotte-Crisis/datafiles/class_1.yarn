@@ -65,6 +65,7 @@ title: 6
 ---
 Prof Lim: "Get together in groups of three or four, and introduce yourselves with your pronouns."
 Prof Lim: "Tell us a hobby, and a TV show that you like."
+<<goto_room_class_1_discussion()>>
 You turn your chair around.
 Joanne: "Okay, hi! I'm Joanne, Year 4."
 Joanne: "My hobby is gaming, and for TV show... I like Squid Game!"
