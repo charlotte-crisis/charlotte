@@ -14,7 +14,7 @@ function goto_room_class_1(){
 function goto_room_class_1_seated(){
 	room_goto(rm_class_1_seated);
 	obj_player.x = 223;
-	obj_player.y = 73;
+	obj_player.y = 74;
 	obj_player.facing_direction = 1;
 	obj_player.is_sitting = true;
 	
@@ -24,7 +24,7 @@ function goto_room_class_1_seated(){
 function goto_room_bus(){
 	room_goto(rm_bus);
 	obj_player.x = 223;
-	obj_player.y = 73;
+	obj_player.y = 74;
 	obj_player.facing_direction = -1;
 	obj_player.is_sitting = false;
 	
@@ -34,7 +34,7 @@ function goto_room_bus(){
 function goto_room_bus_cj(){
 	room_goto(rm_bus_cj);
 	obj_player.x = 223;
-	obj_player.y = 73;
+	obj_player.y = 74;
 	obj_player.facing_direction = -1;
 	obj_player.is_sitting = false;
 	
@@ -44,7 +44,7 @@ function goto_room_bus_cj(){
 function goto_room_bus_j(){
 	room_goto(rm_bus_j);
 	obj_player.x = 223;
-	obj_player.y = 73;
+	obj_player.y = 74;
 	obj_player.facing_direction = -1;
 	obj_player.is_sitting = false;
 	
@@ -54,7 +54,7 @@ function goto_room_bus_j(){
 function goto_room_bus_s(){
 	room_goto(rm_bus_s);
 	obj_player.x = 223;
-	obj_player.y = 73;
+	obj_player.y = 74;
 	obj_player.facing_direction = -1;
 	obj_player.is_sitting = false;
 	
@@ -64,11 +64,21 @@ function goto_room_bus_s(){
 function goto_room_bedroom(){
 	room_goto(rm_bedroom_1);
 	obj_player.x = 223;
-	obj_player.y = 73;
+	obj_player.y = 74;
 	obj_player.facing_direction = 1;
 	obj_player.is_sitting = false;
 	
 	ChatterboxLoadFromFile("room_1.yarn");
 	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1.yarn");
 	ChatterboxJump(chatterbox, "0");
+}
+
+function goto_room_cca_1_seated(){
+	room_goto(rm_cca_1_seated);
+	obj_player.x = 112;
+	obj_player.y = 74;
+	obj_player.facing_direction = 1;
+	obj_player.is_sitting = true;
+	
+	ChatterboxJump(chatterbox, "5");
 }

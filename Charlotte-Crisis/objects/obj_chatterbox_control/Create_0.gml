@@ -35,6 +35,7 @@ function chatterbox_set(_node_name) {
 	ChatterboxAddFunction("goto_room_bus_cj", goto_room_bus_cj);
 	ChatterboxAddFunction("goto_room_bus", goto_room_bus);
 	ChatterboxAddFunction("goto_room_bedroom", goto_room_bedroom);
+	ChatterboxAddFunction("goto_room_cca_1_seated", goto_room_cca_1_seated);
 	
 	ChatterboxAddFunction("changeRelationship", change_npc_relationship);
 	ChatterboxAddFunction("getRelationship", get_npc_relationship);
