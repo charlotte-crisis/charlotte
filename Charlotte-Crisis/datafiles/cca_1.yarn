@@ -392,7 +392,7 @@ Vera: "You know, trans women."
     Vera: "Advocacy. Petitions. Civil unrest, question mark."
     Vera: "But even surviving this far, is my personal form of resistance against a system that won't accept me for who I am." (+ 10 XP) <<addExperience(10)>>
     -> You: "I'm proud of you for that." (EMP check)
- <<set $diceroll = diceRoll($emp)>>
+        <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll < 6>>        
             Vera: "Thanks."
@@ -806,7 +806,7 @@ You take a seat.
 <<goto_room_cca_1_seated()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2720,280
+__PrivCrochet_position: 3040,440
 __PrivCrochet_tags: 
 title: end
 ---
