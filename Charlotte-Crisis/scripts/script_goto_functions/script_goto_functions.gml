@@ -22,7 +22,7 @@ function goto_room_class_1_seated(){
 }
 
 function goto_room_class_1_discussion() {
-	room_goto(rm_cca_1_discussion);
+	room_goto(rm_class_1_discussion);
 	obj_player.x = 203;
 	obj_player.y = 75;
 	obj_player.facing_direction = -1;
