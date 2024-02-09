@@ -99,3 +99,21 @@ title: bed
     <<jump 0_revisit>>
 <<endif>>
 ===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 640,720
+__PrivCrochet_tags: 
+title: hangout
+---
+You feel like hanging out with a friend this week, for a quick meal.
+Who will you ask out?
+-> Anthony <<if getRelationship("A") >= 30>>
+    You call Anthony up for a hangout.
+
+-> Nadia <<if getRelationship("N") >= 30>>
+
+-> Vera <<if getRelationship("V") >= 30>>
+
+-> On second thought, nevermind.
+    Hmm… you don't seem to be friendly enough with anyone.
+    You can stay in today, but please try to understand and befriend people around you…
+===
