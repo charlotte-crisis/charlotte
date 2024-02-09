@@ -5,15 +5,15 @@
   "eventList": [],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Interactable","path":"objects/obj_Interactable/obj_Interactable.yy",},"propertyId":{"name":"node","path":"objects/obj_Interactable/obj_Interactable.yy",},"value":"0_revisit",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_interactable","path":"objects/obj_interactable/obj_interactable.yy",},"propertyId":{"name":"node","path":"objects/obj_interactable/obj_interactable.yy",},"value":"0_revisit",},
   ],
   "parent": {
     "name": "Room",
     "path": "folders/Objects/Interactables/Room.yy",
   },
   "parentObjectId": {
-    "name": "obj_Interactable",
-    "path": "objects/obj_Interactable/obj_Interactable.yy",
+    "name": "obj_interactable",
+    "path": "objects/obj_interactable/obj_interactable.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
