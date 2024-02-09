@@ -108,12 +108,15 @@ You feel like hanging out with a friend this week, for a quick meal.
 Who will you ask out?
 -> Anthony <<if getRelationship("A") >= 30>>
     You call Anthony up for a hangout.
+    <<goto_room_hangout_a()>>
 
 -> Nadia <<if getRelationship("N") >= 30>>
     You call Nadia up for a hangout.
+    <<goto_room_hangout_n()>>
 
 -> Vera <<if getRelationship("V") >= 30>>
     You call Vera up for a hangout.
+    <<goto_room_hangout_v()>>
 
 -> On second thought, nevermind.
     Hmm… you don't seem to be friendly enough with anyone.

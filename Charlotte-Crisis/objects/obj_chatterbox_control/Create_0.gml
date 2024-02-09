@@ -48,7 +48,8 @@ function chatterbox_set(_node_name) {
 	ChatterboxAddFunction("changeConfidence", change_confidence);
 	ChatterboxAddFunction("addExperience", add_experience);
 	
-
+	/// Hangouts
+	ChatterboxAddFunction("goto_room_hangout_a", goto_room_hangout_a);
 #endregion
 
 #region constants

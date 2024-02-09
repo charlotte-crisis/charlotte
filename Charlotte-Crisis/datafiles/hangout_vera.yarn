@@ -1,8 +1,12 @@
 #__PrivCrochet_version:1
 # Choose 2 out of 3
 # so need to count total visits.
+# Anthony
+# NOTE THIS IS A TEMPORARY NODE JUST TO BE MORE ORGANISED
+# I want to fight.
+# I want to give in.
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1080,120
+__PrivCrochet_position: 1080,118
 __PrivCrochet_tags: 
 title: 0
 ---
@@ -26,7 +30,7 @@ title: 0_options
     <<jump 1_2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1560,-40
+__PrivCrochet_position: 1559,-41
 __PrivCrochet_tags: 
 title: 1_1
 ---
@@ -97,7 +101,10 @@ Vera: "We're people with hopes and dreams like yourselves."
                 You: "I'm not sure..."
                 Vera: "You will be. Some day."
             
-            -> "Come on, Vera. I already said I'm fine." (EMP >= 4)
+            -> "Come on, Vera. I already said I'm fine." (EMP 7 check)
+                <<set $diceroll = diceRoll($emp)>>
+                [You rolled a {$diceroll}.]
+                <<if $diceroll > 6>>
                 Vera: "But don't you want to transition?"
                 You: "Vera. Please. I'm not you."
                 You: "I appreciate your help, but... this is my fight."
@@ -111,7 +118,15 @@ Vera: "We're people with hopes and dreams like yourselves."
                 Vera: "But I know it's not so for you... and I will remember that."
                 Vera: "Anyway, I also want you to know that you're valid and I support you."
                 Vera: "Even if you want to be called Charles."
-                You: "Thanks, Vera... you're a good friend." (+5% Vera relationship)
+                You: "Thanks, Vera... you're a good friend." (+5% Vera relationship) <<changeRelationship("V", 5)>>
+                
+                <<else>>
+                Vera: "Nah, that doesn't convince me."
+                Vera: "You'd still want to transition, right?"
+                Vera: "Don't tell me you're comfortable ageing into some old uncle."
+                You're really not sure. (-5% confidence) <<changeConfidence(-5)>>
+                
+                <<endif>>
             
             -> "I guess..."
                 Vera: "I mean, to me, it looks like you're probably gonna funnel down into that."
@@ -121,7 +136,7 @@ Vera: "We're people with hopes and dreams like yourselves."
                 Vera: "Then make up your mind."
                 Vera: "Your trial version of femininity will expire soon."
                 Vera: "Why not make your subscription... permanent?"
-                Despite everything, you're not sure. (-5% confidence)
+                Despite everything, you're not sure.
 
 
         -> "Yes, I do."
@@ -148,10 +163,10 @@ Vera: "We're people with hopes and dreams like yourselves."
             Vera: "I told you, I don't want to share."
             Vera: "Just know that I get my medication, and you probably shouldn't use my way."
             -> "But I want to know."
-                Vera looks agitated. (-5% Vera relationship)
+                Vera looks agitated. (-5% Vera relationship) <<changeRelationship("V", -5)>>
                 Vera: "Last chance, Charlotte."
                 Vera: "I'm walking away if you keep pressing."
-                -> "What do you have to hide?" (-10% Vera relationship) 
+                -> "What do you have to hide?" (-10% Vera relationship) <<changeRelationship("V", -10)>>
                     Vera slams her palm on the table.
                     Vera: "That's it."
                     Vera: "If you can't respect my boundary on this, I'm sorry, we can't talk."
@@ -224,7 +239,6 @@ __PrivCrochet_position: 1800,120
 __PrivCrochet_tags: 
 title: 2
 ---
-# Anthony
 -> "What do you think of Anthony?"
     Vera: "Heh. It's like his life mission to get under my nerves."
     Vera: "Like, honestly, I'm not sure if he's just trolling or he genuinely believes the stuff he says."
@@ -332,8 +346,6 @@ __PrivCrochet_position: 2040,360
 __PrivCrochet_tags: 
 title: 3_2
 ---
-# NOTE THIS IS A TEMPORARY NODE JUST TO BE MORE ORGANISED
-# I want to fight.
 
 -> "I want to fight."
     Vera: "As you should!"
@@ -474,7 +486,6 @@ __PrivCrochet_position: 2280,120
 __PrivCrochet_tags: 
 title: 3_3
 ---
-# I want to give in.
 
 -> "I want to give in."
     Vera: "Am I hearing you right?"

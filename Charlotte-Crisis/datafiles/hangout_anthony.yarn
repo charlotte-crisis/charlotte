@@ -62,7 +62,7 @@ Anthony: "Engineering."
             Anthony: "You not scared cannot find job ah?"
 
             -> "Yeah, maybe I made the wrong choice..."
-                Anthony: "GG."
+                Anthony: "GG." (-5% confidence) <<changeConfidence(-5)>>
     
             -> "I'll find something, I'm sure."
                 Anthony: "Job market so bad now how to find?"
@@ -114,7 +114,7 @@ Anthony: "Every time I say something people want to say I'm an incel, weird or w
     <<jump 1_3_3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2880,80
+__PrivCrochet_position: 2878,80
 __PrivCrochet_tags: 
 title: 1_2_1
 ---
@@ -139,14 +139,15 @@ Anthony: "Like that how to continue???"
         Anthony: "I didn't know that could be a good thing."
 
         -> "Alright, if you're gonna insult Charlotte, we're not going anywhere."
-            Anthony: "Fine. F*ggot."
+            Anthony: "Fine. F****t."
 
         -> "I mean, I'm happy, right?"
             Anthony: "You're delulu."
             You: "And you're unhappy. Who's really suffering here?"
             You: "At least I'm proud of who I am."
             You: "So, you either keep going at what you want to do, or you turn around and find something else."
-            You: "Both options are legit. But complaining like this..." You: "That's not gonna get you anywhere."
+            You: "Both options are legit. But complaining like this..." 
+            You: "That's not gonna get you anywhere."
 
     -> "It's okay to fail."
         You: "I mean, I don't think anyone's benching 100 kg or whatever on their first shot..."
@@ -156,8 +157,8 @@ Anthony: "Like that how to continue???"
     -> "Well, you're never gonna get anywhere with that attitude."
         Anthony: "Fine. I'll just rot."
 
--> "Yeah, maybe gymming isn't your thing."
-    Anthony: "I knew it. I'm just weak."
+-> "Yeah, maybe gymming isn't your thing." 
+    Anthony: "I knew it. I'm just weak." (-5% Anthony relationship) <<changeRelationship("A", 5)>>
 
     -> "I mean, why does it need to be?"
         Anthony: "Because that's how you get girls."
@@ -323,7 +324,7 @@ Anthony: "Seriously? All I ever did was say hi and ask if they are interested."
         Anthony: "I can understand why people shoot up schools now."
         
     -> "You are indeed useless."
-        You: "Like, seriously, who can't get a girlfriend if they're not actively trying?"
+        You: "Like, seriously, who can't get a girlfriend if they're not actively trying?" (-5% Anthony relationship)<<changeRelationship("A",5)>>
         Anthony: "I am trying! It's impossible."
         You: "Heh."
         
