@@ -312,6 +312,7 @@ title: 11
 ---
 Eleanor: "Thanks for coming and see you next week!"
 
+<<goto_room_cca_1_seated_11()>>
 As Nadia and Anthony leave, Vera stops you for a quick chat.
 Vera: "Hey Charlotte. Are you feeling okay?"
 
@@ -584,7 +585,7 @@ Eleanor: "Either way, see you next week!"
 <<jump end>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1960,720
+__PrivCrochet_position: 1920,720
 __PrivCrochet_tags: 
 title: 18
 ---
@@ -598,7 +599,7 @@ Eleanor looks at the clock.
 Eleanor: "Well, that's everyone." 
 Eleanor: "We've still got a bit of time, and I brought snacks, so please help yourselves!" 
 Eleanor: "Get to know each other, yeah?"
-
+<<goto_room_cca_1_seated_18()>>
 Vera and Nadia leave first, Anthony waits for them to go before he comes over to you.
 Anthony: "Hey. Didn't you realise something was... off about that girl?"
 

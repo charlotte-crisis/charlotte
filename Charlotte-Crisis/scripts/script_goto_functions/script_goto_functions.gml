@@ -88,6 +88,7 @@ function goto_room_bedroom_frombed() {
 }
 #endregion
 
+#region CCA1
 function goto_room_cca_1(){
 	room_goto(rm_cca_1);
 	obj_player.x = 46;
@@ -110,6 +111,16 @@ function goto_room_cca_1_seated(){
 	
 	ChatterboxJump(chatterbox, "5");
 }
+
+function goto_room_cca_1_seated_18() {
+	room_goto(rm_cca_1_seated_18);
+}
+
+function goto_room_cca_1_seated_11() {
+	room_goto(rm_cca_1_seated_11);
+}
+
+#endregion
 
 #region hangouts
 	function goto_room_hangout_a() {

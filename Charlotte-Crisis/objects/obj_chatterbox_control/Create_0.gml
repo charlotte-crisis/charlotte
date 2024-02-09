@@ -44,6 +44,9 @@ function chatterbox_set(_node_name) {
 	
 	ChatterboxAddFunction("goto_room_cca_1", goto_room_cca_1);
 	ChatterboxAddFunction("goto_room_cca_1_seated", goto_room_cca_1_seated);
+	ChatterboxAddFunction("goto_room_cca_1_seated_18", goto_room_cca_1_seated_18);
+	ChatterboxAddFunction("goto_room_cca_1_seated_11", goto_room_cca_1_seated_11);
+	
 	
 	ChatterboxAddFunction("changeRelationship", change_npc_relationship);
 	ChatterboxAddFunction("getRelationship", get_npc_relationship);
