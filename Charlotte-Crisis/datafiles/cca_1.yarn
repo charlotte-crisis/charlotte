@@ -9,7 +9,7 @@ The words "self-portrait" are projected onto the screen.
 You should probably explore what and who is in the club room first.
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 520,159
+__PrivCrochet_position: 520,160
 __PrivCrochet_tags: 
 title: 2
 ---
@@ -114,7 +114,7 @@ Anthony: "Even if it's very anime-styled."
 <<declare $askedAboutAnime = false>>
 <<jump 8_options>>
 ===
-__PrivCrochet_colorID: 1
+__PrivCrochet_colorID: 0
 __PrivCrochet_position: 520,360
 __PrivCrochet_tags: 
 title: 3
@@ -796,4 +796,12 @@ Your turn to comment...
     <<jump 9>>
 
 <<jump 9>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,600
+__PrivCrochet_tags: 
+title: pre-5
+---
+You take a seat.
+<<goto_room_cca_1_seated()>>
 ===
