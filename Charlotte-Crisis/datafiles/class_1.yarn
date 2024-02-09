@@ -388,7 +388,7 @@ Who will you walk with today?
     <<jump 15>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2999,123
+__PrivCrochet_position: 3000,121
 __PrivCrochet_tags: 
 title: 13
 ---
@@ -447,7 +447,7 @@ title: 14
 ---
 You: "Joanne, wanna walk to the bus stop together?"
 Joanne: "Yeah, okay!"
-<<room_goto_bus_j()>>
+<<goto_room_bus_j()>>
 Joanne: "What other classes are you taking?"
 You: "4249, 4255, and 4206."
 Joanne: "Aww... We only share this class."
@@ -533,7 +533,7 @@ title: 15
 ---
 You: "Sage, wanna walk to the bus stop together?"
 Sage: "Why not?"
-<<room_goto_bus_s()>>
+<<goto_room_bus_s()>>
 You: "You're only Year 3, right? You usually don't take a level 4 course in Year 3, right?"
 Sage: "Yeah, I guess. But I was really eager to try this course. I heard a lot of good things online about it."
 You: "Like what?"

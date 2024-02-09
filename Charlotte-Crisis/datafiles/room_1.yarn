@@ -16,7 +16,7 @@ You have to get dressed and go back to school.
 You signed up for art club. Wouldn't want to miss the first day.
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1159,200
+__PrivCrochet_position: 1162,200
 __PrivCrochet_tags: 
 title: 1
 ---
@@ -52,14 +52,18 @@ __PrivCrochet_position: 1401,200
 __PrivCrochet_tags: 
 title: 2
 ---
-<<if visited("1")>>
-    Are you ready to head out?
-    -> Yes (Go to school)
-        <<goto_room_cca_1()>>
-    -> No (Go back)
-        ## exit.
+<<if $canGoToBed == true>>
+    You just got back!
 <<else>>
-    You should probably get dressed before you head out.
+    <<if visited("1")>>
+        Are you ready to head out?
+        -> Yes (Go to school)
+            <<goto_room_cca_1()>>
+        -> No (Go back)
+            ## exit.
+    <<else>>
+        You should probably get dressed before you head out.
+    <<endif>>
 <<endif>>
 ===
 __PrivCrochet_colorID: 0
@@ -81,7 +85,7 @@ In it, there are two most familiar things; your CLOSET and your BED.
 You should probably go to BED first.
 And when you wake up, you'll prepare your look in the CLOSET.
 This is what you do every day, but with Sister's text today, you feel like everything is about to change...
-<<$set canGoToBed = true>>
+<<set $canGoToBed = true>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 649,194

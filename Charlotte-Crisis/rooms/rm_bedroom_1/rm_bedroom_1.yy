@@ -11,14 +11,12 @@
     {"name":"inst_416B103F_1","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},
     {"name":"inst_741BB5E2_1","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},
     {"name":"inst_25737353","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},
-    {"name":"inst_4B81302A","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},
     {"name":"inst_788BD8AC","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},
     {"name":"inst_5AE3FABB","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},
   ],
   "isDnd": false,
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4B81302A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":30.0,"y":74.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_788BD8AC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":3.4375,"x":235.0,"y":96.5,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5AE3FABB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_mirror","path":"objects/obj_mirror/obj_mirror.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":3.34375,"x":128.0,"y":101.274506,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
