@@ -441,7 +441,7 @@ Chenjie: "I hate cockroaches."
 <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 3000,358
+__PrivCrochet_position: 3000,360
 __PrivCrochet_tags: 
 title: 14
 ---
@@ -547,30 +547,33 @@ Sage: "I feel I have a personal stake in this conversation, so I thought I shoul
     You had forgotten about it for a second, but suddenly you remember your text from your sister, demanding to talk to you.
     Your hands are clammy. 
     Do you even have any idea how to explain yourself to her? You don't even know what you are.
-    -> You: "I'm just a crossdresser."
-    Sage: "I see. I think it's cool though. The way crossdressers bend gender a little bit."
-    Sage: "I always admired them a little bit. Like, breaking out of the mould."
-    Sage: "Good for you." (+5 XP) <<addExperience(5)>>
-    You: "Thanks. Breaking out of the mould is fun anyway." 
-    You: "I think it challenges you to think of things more broadly. From more angles."
-    Sage: "For sure!"
-    Sage: "Anyway, my bus is here."
-    You: "Ah. Okay, bye!"
-    Sage: "Yup! Bye!"
 
--> You: "I might be trans."
-    Sage: "Might be?"
-    You: "I don't know... I'm figuring things out. That's the whole point of signing up for this course actually."
-    Sage: "I hope you figure it out soon. Self-discovery is a rough journey."
-    Sage: "Although honestly figuring out what to do after self-discovery is super rough as well."
-    Sage: "The world's just a rough place."
-    That... doesn't fill you with a lot of hope.
-    Sage: "Should I call you Charlotte or Charles then?"
-    You: "Um... Maybe just continue calling me based on how I'm presenting." 
-    Sage: "Okie dokes! Feel free to correct me if I get it wrong." (+5 XP) <<addExperience(5)>>
-    Sage: "Also, my bus is here."
-    Sage: "Bye for now!"
-    You: "Bye." 
+    -> You: "I'm just a crossdresser."
+        Sage: "I see. I think it's cool though. The way crossdressers bend gender a little bit."
+        Sage: "I always admired them a little bit. Like, breaking out of the mould."
+        Sage: "Good for you." (+5 XP) <<addExperience(5)>>
+        You: "Thanks. Breaking out of the mould is fun anyway." 
+        You: "I think it challenges you to think of things more broadly. From more angles."
+        Sage: "For sure!"
+        Sage: "Anyway, my bus is here."
+        You: "Ah. Okay, bye!"
+        Sage: "Yup! Bye!"
+        <<goto_room_bedroom()>>
+
+    -> You: "I might be trans."
+        Sage: "Might be?"
+        You: "I don't know... I'm figuring things out. That's the whole point of signing up for this course actually."
+        Sage: "I hope you figure it out soon. Self-discovery is a rough journey."
+        Sage: "Although honestly figuring out what to do after self-discovery is super rough as well."
+        Sage: "The world's just a rough place."
+        That... doesn't fill you with a lot of hope.
+        Sage: "Should I call you Charlotte or Charles then?"
+        You: "Um... Maybe just continue calling me based on how I'm presenting." 
+        Sage: "Okie dokes! Feel free to correct me if I get it wrong." (+5 XP) <<addExperience(5)>>
+        Sage: "Also, my bus is here."
+        Sage: "Bye for now!"
+        You: "Bye." 
+        <<goto_room_bedroom()>>
 
 -> You: "I'm just here to clear my requirements."
     Sage: "And might as well take something interesting, right?"
@@ -582,8 +585,7 @@ Sage: "I feel I have a personal stake in this conversation, so I thought I shoul
     Sage: "Nice. We'll see how it goes then."
     Sage: "Oh! That's my bus. Bye!"
     You: "Bye!"
-
-<<goto_room_bedroom()>>
+    <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1080,80
