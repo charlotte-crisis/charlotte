@@ -2,23 +2,21 @@
 # if you've already visited then it will show the concise version.
 # Interacting with mirror
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 920,200
+__PrivCrochet_position: 898,125
 __PrivCrochet_tags: 
 title: 0
 ---
-You hop out of bed. (Press the spacebar to continue.)
-It's the first day of the semester.
-You'd just moved in to the dormitory yesterday.
-It was a lot of stuff to move from home, but you're glad your belongings are safe here with you.
-And with that, your first class is today. You didn't waste much time (of which you had precious little to begin with) unpacking last night.
+You hop out of bed.
+<<set $canGoToBed = false>>
 
 You got as much sleep as you could manage. You stare at the bed.
 It draws you back in, but you withstand its pull.
 Well, no use idling around.
-(Left and Right arrow keys to move. Press the spacebar near an object or person to interact. Press the Up arrow key near a door to travel.)
+You have to get dressed and go back to school.
+You signed up for art club. Wouldn't want to miss the first day.
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1160,200
+__PrivCrochet_position: 1159,200
 __PrivCrochet_tags: 
 title: 1
 ---
@@ -50,14 +48,14 @@ Who are you today? (Use the Up and Down arrow keys to choose an option, and spac
 (You can interact with the mirror again if you change your mind.)
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1400,200
+__PrivCrochet_position: 1401,200
 __PrivCrochet_tags: 
 title: 2
 ---
 <<if visited("1")>>
-    Are you ready to head out? (This will end the tutorial.)
+    Are you ready to head out?
     -> Yes (Go to school)
-        <<goto_room_class_1()>>
+        <<goto_room_cca_1()>>
     -> No (Go back)
         ## exit.
 <<else>>
@@ -69,6 +67,31 @@ __PrivCrochet_position: 920,440
 __PrivCrochet_tags: 
 title: 0_revisit
 ---
-Well, no use going back to bed. (Press the spacebar to continue)
-(Left and Right arrow keys to move. Press the spacebar near an object or person to interact. Press the Up arrow key near a door to travel.)
+Well, no use going back to bed.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 704,-147
+__PrivCrochet_tags: 
+title: after_class1
+---
+Try as you might, you cannot forget what Sister sent.
+You knew this conflict was gonna come at some point, but not this soon...
+Regardless, you're back in your room, protected from everything outside. For now.
+In it, there are two most familiar things; your CLOSET and your BED.
+You should probably go to BED first.
+And when you wake up, you'll prepare your look in the CLOSET.
+This is what you do every day, but with Sister's text today, you feel like everything is about to change...
+<<$set canGoToBed = true>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 649,194
+__PrivCrochet_tags: 
+title: bed
+---
+<<if $canGoToBed = true>>
+    # start the next scene
+    <<goto_room_bedroom_frombed()>>
+<<else>>
+    <<jump 0_revisit>>
+<<endif>>
 ===

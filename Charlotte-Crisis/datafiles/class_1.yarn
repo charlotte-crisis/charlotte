@@ -441,7 +441,7 @@ Chenjie: "I hate cockroaches."
 <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2998,360
+__PrivCrochet_position: 3000,358
 __PrivCrochet_tags: 
 title: 14
 ---

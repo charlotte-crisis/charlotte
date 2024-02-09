@@ -55,7 +55,7 @@ function goto_room_bus_s(){
 	room_goto(rm_bus_s);
 	obj_player.x = 223;
 	obj_player.y = 74;
-	obj_player.facing_direction = 1;
+	obj_player.facing_direction = -1;
 	obj_player.is_sitting = false;
 	
 	ChatterboxJump(chatterbox, "15");
@@ -63,15 +63,33 @@ function goto_room_bus_s(){
 
 function goto_room_bedroom(){
 	room_goto(rm_bedroom_1);
-	obj_player.x = 223;
+	obj_player.x = 230;
 	obj_player.y = 74;
-	obj_player.facing_direction = 1;
+	obj_player.facing_direction = -1;
 	obj_player.is_sitting = false;
 	
 	ChatterboxLoadFromFile("room_1.yarn");
 	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1.yarn");
+	ChatterboxJump(chatterbox, "after_class1");
+}
+
+function goto_room_bedroom_frombed() {
+	obj_player.x = 30;
+	obj_player.y = 74;
+	obj_player.facing_direction = -1;
 	ChatterboxJump(chatterbox, "0");
 }
+
+function goto_room_cca_1(){
+	room_goto(rm_cca_1);
+	obj_player.x = 46;
+	obj_player.y = 74;
+	obj_player.facing_direction = 1;
+	obj_player.is_sitting = false;
+	
+	ChatterboxJump(chatterbox, "1");
+}
+
 
 function goto_room_cca_1_seated(){
 	room_goto(rm_cca_1_seated);
@@ -82,3 +100,4 @@ function goto_room_cca_1_seated(){
 	
 	ChatterboxJump(chatterbox, "5");
 }
+
