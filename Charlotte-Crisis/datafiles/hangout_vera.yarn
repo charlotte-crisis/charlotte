@@ -20,7 +20,7 @@ Vera: "Shoot."
 <<jump 0_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1320,120
+__PrivCrochet_position: 1200,400
 __PrivCrochet_tags: 
 title: 0_options
 ---
@@ -30,7 +30,7 @@ title: 0_options
     <<jump 1_2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1559,-41
+__PrivCrochet_position: 1560,-40
 __PrivCrochet_tags: 
 title: 1_1
 ---
@@ -194,6 +194,8 @@ Vera: "We're people with hopes and dreams like yourselves."
         Vera: "I know that's something boomers would say..."
         Vera: "But I'm re-appropriating it."
         Vera: "Trans healthcare is the same as any other form of healthcare."
+
+<<jump 0_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1560,280
@@ -233,6 +235,8 @@ Vera: "Ooh, that's fun! How's that going?"
     Vera: "Heh, what else would you have said, anyway?"
     Vera: "Queer people in gender studies class... it's our natural habitat."
     Vera: "It's literally our life."
+
+<<jump 0_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1800,120

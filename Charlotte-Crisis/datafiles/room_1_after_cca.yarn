@@ -36,16 +36,16 @@ __PrivCrochet_tags:
 title: 2
 ---
 You feel like hanging out with a friend this week, for a quick meal.
-Who will you ask out?
--> Anthony <<if getRelationship("A") >= 30>>
+Who will you ask out? #temporarily dont put relationship (normally has to be above 30)
+-> Anthony
     You call Anthony up for a hangout.
     <<goto_room_hangout_a()>>
 
--> Nadia <<if getRelationship("N") >= 30>>
+-> Nadia
     You call Nadia up for a hangout.
     <<goto_room_hangout_n()>>
 
--> Vera <<if getRelationship("V") >= 30>>
+-> Vera 
     You call Vera up for a hangout.
     <<goto_room_hangout_v()>>
 

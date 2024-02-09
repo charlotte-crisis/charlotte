@@ -201,9 +201,11 @@ Anthony: "Like that how to continue???"
             Anthony: "How do you know that?"
             You: "I know I would, if I was a gym bro."
             You: "You won't know if you don't try."
+
+<<jump 1>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2880,320
+__PrivCrochet_position: 2840,320
 __PrivCrochet_tags: 
 title: 1_2_2
 ---
@@ -249,6 +251,8 @@ Anthony: "But I also don't like that the club is so woke."
             You: "Do you want to get expelled?"
             Anthony sighs.
             Anthony: "Fine. Too much trouble."
+
+<<jump 1>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2880,560
@@ -298,6 +302,8 @@ Anthony: "Then those games which are actually good get called racist just becaus
     Anthony: "Waste money only."
     Anthony: "For like 1% chance of getting some hot waifu, I need to spend thousands of dollars?"
     Anthony: "Just search on Google Images if you're so despo."
+
+<<jump 1>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2600,960
@@ -408,6 +414,8 @@ Anthony: "Seriously? All I ever did was say hi and ask if they are interested."
                 You: "Reflect a bit and you'll see why you're lonely."
                 You: "A girlfriend isn't needed to feel complete..."
                 You: "But there's a LOT of steps you need before you get there."
+
+<<jump 1>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2320,960
@@ -475,6 +483,8 @@ Anthony: "I just don't shove my lifestyle in other people's faces."
     
     -> "Okay, fine, won't say that to you anymore."
         Anthony: "Okay."
+
+<<jump 1>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2080,960
@@ -544,6 +554,8 @@ Anthony: "Why should I feel sorry for telling the truth?"
 -> "You know what, you've got a point."
     You: "They are the ones being over sensitive."
     Anthony: "Exactly."
+
+<<jump 1>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2240,1280

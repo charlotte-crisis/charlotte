@@ -96,9 +96,11 @@ Nadia: "What's the best part about staying?"
     You: "Nah, people are kind. Not like in other places, though…"
     Nadia: "Ah, I think I'd fit in well!"
     You: "You really would."
+
+<<jump 0>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 119,-601
+__PrivCrochet_position: 120,-600
 __PrivCrochet_tags: 
 title: 1_1_1
 ---
@@ -138,6 +140,8 @@ Nadia: "What about your major?"
     You: "There's a whole gender studies module within it."
     You: "I'm definitely going to tap on my experiences as Charlotte to do well."
     Nadia: "Oh slay! It's like the module was custom-made for you."
+
+<<jump 0>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 360,-641
@@ -402,6 +406,8 @@ Nadia: "Do you think being Charlotte halted your professional development?"
         You: "Are you saying being Charlotte is a waste of time?"
         Nadia: "No, I..."
         Nadia: "Never mind, I'm sorry. I shouldn't have asked that." (-5% Nadia relationship) <<changeRelationship("N", -5)>>
+
+<<jump 0>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 360,-80
@@ -529,6 +535,8 @@ Nadia: "Oh yes. What about it?"
         You: "I'm glad you found your happy place in anime."
         Nadia: "We all deserve our own happy places."
         Nadia: "I mean, your crossdressing is a happy place of its own, isn't it?"
+
+<<jump 0>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 240,200
