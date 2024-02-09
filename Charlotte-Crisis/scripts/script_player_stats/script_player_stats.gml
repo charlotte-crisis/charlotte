@@ -62,6 +62,12 @@ function dice_roll(_parameters) {
 				return obj_joanne;
 			case "S":
 				return obj_sage;
+			case "A":
+				return obj_anthony;
+			case "N":
+				return obj_nadia;
+			case "V":
+				return obj_vera;
 		}
 	}
 

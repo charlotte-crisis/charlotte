@@ -110,8 +110,10 @@ Who will you ask out?
     You call Anthony up for a hangout.
 
 -> Nadia <<if getRelationship("N") >= 30>>
+    You call Nadia up for a hangout.
 
 -> Vera <<if getRelationship("V") >= 30>>
+    You call Vera up for a hangout.
 
 -> On second thought, nevermind.
     Hmm… you don't seem to be friendly enough with anyone.
