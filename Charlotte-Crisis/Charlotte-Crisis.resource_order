@@ -216,6 +216,7 @@
     {"name":"ChatterboxSourceGetNodeMetadata","order":6,"path":"scripts/ChatterboxSourceGetNodeMetadata/ChatterboxSourceGetNodeMetadata.yy",},
     {"name":"__ChatterboxConfig","order":9,"path":"scripts/__ChatterboxConfig/__ChatterboxConfig.yy",},
     {"name":"spr_cafe_bars","order":8,"path":"sprites/spr_cafe_bars/spr_cafe_bars.yy",},
+    {"name":"fnt_body_small","order":2,"path":"fonts/fnt_body_small/fnt_body_small.yy",},
     {"name":"ChatterboxGetContentSpeaker","order":5,"path":"scripts/ChatterboxGetContentSpeaker/ChatterboxGetContentSpeaker.yy",},
     {"name":"__ChatterboxEvaluate","order":9,"path":"scripts/__ChatterboxEvaluate/__ChatterboxEvaluate.yy",},
     {"name":"__ChatterboxClassText","order":6,"path":"scripts/__ChatterboxClassText/__ChatterboxClassText.yy",},

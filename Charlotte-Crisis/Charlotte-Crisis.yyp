@@ -269,6 +269,7 @@
     {"id":{"name":"ChatterboxSourceGetNodeMetadata","path":"scripts/ChatterboxSourceGetNodeMetadata/ChatterboxSourceGetNodeMetadata.yy",},},
     {"id":{"name":"__ChatterboxConfig","path":"scripts/__ChatterboxConfig/__ChatterboxConfig.yy",},},
     {"id":{"name":"spr_cafe_bars","path":"sprites/spr_cafe_bars/spr_cafe_bars.yy",},},
+    {"id":{"name":"fnt_body_small","path":"fonts/fnt_body_small/fnt_body_small.yy",},},
     {"id":{"name":"ChatterboxGetContentSpeaker","path":"scripts/ChatterboxGetContentSpeaker/ChatterboxGetContentSpeaker.yy",},},
     {"id":{"name":"__ChatterboxEvaluate","path":"scripts/__ChatterboxEvaluate/__ChatterboxEvaluate.yy",},},
     {"id":{"name":"__ChatterboxClassText","path":"scripts/__ChatterboxClassText/__ChatterboxClassText.yy",},},

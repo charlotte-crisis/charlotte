@@ -53,7 +53,7 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 		// Text box width and height
 		var _width = view_wport[0] * 0.6;
 		var _height = 50;
-		
+		draw_set_font(fnt_body_small);
 		for (var i = 0; i < ChatterboxGetOptionCount(chatterbox); i++) {
 			if (ChatterboxGetOptionConditionBool(chatterbox, i)) {
 				_xx = view_wport[0] / 2;
