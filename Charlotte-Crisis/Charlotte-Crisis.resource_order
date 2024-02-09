@@ -71,6 +71,7 @@
     {"name":"spr_mc_male_idle_torso","order":3,"path":"sprites/spr_mc_male_idle_torso/spr_mc_male_idle_torso.yy",},
     {"name":"ChatterboxGetCurrentMetadata","order":2,"path":"scripts/ChatterboxGetCurrentMetadata/ChatterboxGetCurrentMetadata.yy",},
     {"name":"obj_indicator_up","order":3,"path":"objects/obj_indicator_up/obj_indicator_up.yy",},
+    {"name":"rm_cca_1_seated","order":8,"path":"rooms/rm_cca_1_seated/rm_cca_1_seated.yy",},
     {"name":"S_walking_strip8","order":4,"path":"sprites/S_walking_strip8/S_walking_strip8.yy",},
     {"name":"N_idle_strip2","order":35,"path":"sprites/N_idle_strip2/N_idle_strip2.yy",},
     {"name":"spr_bottoms_f","order":1,"path":"sprites/spr_bottoms_f/spr_bottoms_f.yy",},

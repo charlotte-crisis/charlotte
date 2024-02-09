@@ -102,6 +102,7 @@
     {"id":{"name":"spr_mc_female_idle","path":"sprites/spr_mc_female_idle/spr_mc_female_idle.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_indicator_up","path":"objects/obj_indicator_up/obj_indicator_up.yy",},},
+    {"id":{"name":"rm_cca_1_seated","path":"rooms/rm_cca_1_seated/rm_cca_1_seated.yy",},},
     {"id":{"name":"S_walking_strip8","path":"sprites/S_walking_strip8/S_walking_strip8.yy",},},
     {"id":{"name":"N_idle_strip2","path":"sprites/N_idle_strip2/N_idle_strip2.yy",},},
     {"id":{"name":"spr_bottoms_f","path":"sprites/spr_bottoms_f/spr_bottoms_f.yy",},},
@@ -288,6 +289,7 @@
     {"roomId":{"name":"rm_bus_s","path":"rooms/rm_bus_s/rm_bus_s.yy",},},
     {"roomId":{"name":"rm_bus_j","path":"rooms/rm_bus_j/rm_bus_j.yy",},},
     {"roomId":{"name":"rm_cca_1","path":"rooms/rm_cca_1/rm_cca_1.yy",},},
+    {"roomId":{"name":"rm_cca_1_seated","path":"rooms/rm_cca_1_seated/rm_cca_1_seated.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
