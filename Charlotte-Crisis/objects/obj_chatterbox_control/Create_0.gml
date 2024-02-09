@@ -33,6 +33,8 @@ function chatterbox_set(_node_name) {
 	ChatterboxAddFunction("goto_room_class_1", goto_room_class_1);
 	ChatterboxAddFunction("goto_room_class_1_seated", goto_room_class_1_seated);
 	ChatterboxAddFunction("goto_room_bus_cj", goto_room_bus_cj);
+	ChatterboxAddFunction("goto_room_bus_s", goto_room_bus_s);
+	ChatterboxAddFunction("goto_room_bus_j", goto_room_bus_j);
 	ChatterboxAddFunction("goto_room_bus", goto_room_bus);
 	ChatterboxAddFunction("goto_room_bedroom", goto_room_bedroom);
 	ChatterboxAddFunction("goto_room_cca_1_seated", goto_room_cca_1_seated);

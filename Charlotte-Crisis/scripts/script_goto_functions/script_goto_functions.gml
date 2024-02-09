@@ -55,7 +55,7 @@ function goto_room_bus_s(){
 	room_goto(rm_bus_s);
 	obj_player.x = 223;
 	obj_player.y = 74;
-	obj_player.facing_direction = -1;
+	obj_player.facing_direction = 1;
 	obj_player.is_sitting = false;
 	
 	ChatterboxJump(chatterbox, "15");
