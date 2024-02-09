@@ -1,4 +1,5 @@
 #__PrivCrochet_version:1
+# Maybe turn on a black overlay here
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 240,358
 __PrivCrochet_tags: 
@@ -168,7 +169,7 @@ Your turn to comment.
     Eleanor: "Let's see your piece."
 
 -> You: "Well, ants aren't all bad, right?" (INT 6 check)
-<<set $diceroll = diceRoll($int)>>
+    <<set $diceroll = diceRoll($int)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll > 5>>
         Anthony: "What?"
@@ -810,7 +811,6 @@ __PrivCrochet_position: 2720,280
 __PrivCrochet_tags: 
 title: end
 ---
-# Maybe turn on a black overlay here
 You head back to your room.
 
 <<goto_room_bedroom_after_cca()>>
