@@ -6,7 +6,7 @@
 // Base it off of room width.
 var _margin_text = view_wport[0] * 0.1;
 var _margin_char = 200;
-var _linesep = 15;
+var _linesep = 25;
 
 draw_set_font(fnt_body);
 draw_set_valign(fa_middle);
