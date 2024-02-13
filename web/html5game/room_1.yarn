@@ -1,0 +1,124 @@
+#__PrivCrochet_version:1
+# if you've already visited then it will show the concise version.
+# Interacting with mirror
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 898,126
+__PrivCrochet_tags: 
+title: 0
+---
+You hop out of bed.
+<<set $canGoToBed = false>>
+
+You got as much sleep as you could manage. You stare at the bed.
+It draws you back in, but you withstand its pull.
+Well, no use idling around.
+You have to get dressed and go back to school.
+You signed up for art club. Wouldn't want to miss the first day.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1162,200
+__PrivCrochet_tags: 
+title: 1
+---
+You stare at the mirror.
+It's you.
+The man in the reflection is called Charles.
+That's you, sometimes.
+Other times, you see Charlotte in the mirror.
+That's when Charles dresses in girl's clothing and stops calling himself Charles.
+It's just a hobby, though.
+At the start of the day, he's not sure what compels him, but he chooses to be Charles or Charlotte.
+
+Who are you today? (Use the Up and Down arrow keys to choose an option, and spacebar to continue.)
+
+-> Charles
+    <<set $name = "Charles">>
+    <<setGender(0)>>    
+    You put on a T-shirt and jeans.
+    This is what you normally look like.
+    The original, the default skin, so to speak.
+    
+-> Charlotte
+    <<set $name = "Charlotte">>
+    <<setGender(1)>>
+    You made sure to bring all your clothes to school.
+    Here, you're free to wear them, and no one can stop you.
+    You put on a dress. It fits you well, which has always been part of what motivated you to continue this hobby in the first place.
+
+(You can interact with the mirror again if you change your mind.)
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1403,200
+__PrivCrochet_tags: 
+title: 2
+---
+<<if $canGoToBed == true>>
+    You just got back!
+<<else>>
+    <<if visited("1")>>
+        Are you ready to head out?
+        -> Yes (Go to school)
+            <<goto_room_cca_1()>>
+        -> No (Go back)
+            ## exit.
+    <<else>>
+        You should probably get dressed before you head out.
+    <<endif>>
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 920,440
+__PrivCrochet_tags: 
+title: 0_revisit
+---
+Well, no use going back to bed.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 704,-147
+__PrivCrochet_tags: 
+title: after_class1
+---
+Try as you might, you cannot forget what Sister sent.
+You knew this conflict was gonna come at some point, but not this soon...
+Regardless, you're back in your room, protected from everything outside. For now.
+In it, there are two most familiar things; your CLOSET and your BED.
+You should probably go to BED first.
+And when you wake up, you'll prepare your look in the CLOSET.
+This is what you do every day, but with Sister's text today, you feel like everything is about to change...
+<<set $canGoToBed = true>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 647,194
+__PrivCrochet_tags: 
+title: bed
+---
+<<if $canGoToBed == true>>
+    # start the next scene
+    <<goto_room_bedroom_frombed()>>
+<<else>>
+    <<jump 0_revisit>>
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 640,720
+__PrivCrochet_tags: 
+title: hangout
+---
+You feel like hanging out with a friend this week, for a quick meal.
+Who will you ask out?
+-> Anthony <<if getRelationship("A") >= 30>>
+    You call Anthony up for a hangout.
+    <<goto_room_hangout_a()>>
+
+-> Nadia <<if getRelationship("N") >= 30>>
+    You call Nadia up for a hangout.
+    <<goto_room_hangout_n()>>
+
+-> Vera <<if getRelationship("V") >= 30>>
+    You call Vera up for a hangout.
+    <<goto_room_hangout_v()>>
+
+-> On second thought, nevermind.
+    Hmm… you don't seem to be friendly enough with anyone.
+    You can stay in today, but please try to understand and befriend people around you…
+===

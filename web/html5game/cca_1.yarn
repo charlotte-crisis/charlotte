@@ -1,0 +1,817 @@
+#__PrivCrochet_version:1
+# Maybe turn on a black overlay here
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 240,358
+__PrivCrochet_tags: 
+title: 1
+---
+You enter the club room for the first time.
+The words "self-portrait" are projected onto the screen.
+You should probably explore what and who is in the club room first.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 520,160
+__PrivCrochet_tags: 
+title: 2
+---
+You: "Hi! I'm {$name}."
+Vera: "Hi, {$name}, I'm Vera."
+<<if $name == "Charlotte">>
+    Vera: "Wow, you look great!"
+    You: "Thanks!" (+5% confidence) <<changeConfidence(5)>>
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 759,358
+__PrivCrochet_tags: 
+title: 5
+---
+There's a few pieces of paper and a box of colour pencils before you.
+Before you can ask what you should do with them, a girl you've never seen before enters the room.
+New Girl: "Hi! Wait. I don't think I've seen you before..."
+You: "Hi, I'm {$name}."
+New Girl: "Hello! I'm Eleanor. I kind of keep this club going, I guess."
+Eleanor: "Today's theme is quite simple: self-portrait."
+
+-> You: "Isn't that quite hard?"
+    Eleanor: "Nah, don't doubt yourself!"
+    Eleanor: "We all have to start somewhere."
+    Eleanor: "Don't worry about whether your work is good, just get it out there." (+5% confidence) <<changeConfidence(5)>>
+    You: "Thank you for that."
+    Eleanor: "No problem! We'll share our art in 20 minutes."
+
+-> You: "That sounds simple enough."
+    Eleanor: "Awesome! We'll share our art in 20 minutes."
+    Eleanor: "Can't wait to see what you'll make!"
+<<jump 6>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 997,359
+__PrivCrochet_tags: 
+title: 6
+---
+You take out your phone for a reference image. Is it going to be your male, or female self?
+-> Male
+    <<set $drawing = "Male">>
+-> Female
+    <<set $drawing = "Female">>
+You start drawing. Before you know it, 20 minutes have passed.
+<<jump 7>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1238,359
+__PrivCrochet_tags: 
+title: 7
+---
+Eleanor: "Alright, let's pause, everyone."
+Eleanor: "Shall we share what we've drawn? Who would like to go first?"
+There's an awkward silence...
+Eleanor: "I know we're all new here, but someone's gotta start first. Don't worry! No judgement."
+Vera: "Alright, fine. Hi everyone, I'm Vera, she/her, and here's what I got."
+Vera reveals her drawing. It's her face on a very psychedelic background.
+Vera: "Yes, I know, lots of rainbows."
+Nadia: "Hmm, it's a bit hard to see your face, but still, really nice!"
+Anthony just shrugs.
+You feel the pressure of four pairs of eyes on you... what will you say?
+
+-> You: "What do the rainbows mean?"
+    Vera: "It represents my freedom to love, and to be myself." (+ 10 XP) <<addExperience(10)>>
+    Anthony: "Of course. Coming from someone who needs to introduce herself with pronouns."
+    Vera: "I'll pretend I didn't hear that. Anyway..."
+    -> You: "It looks nice!"
+        Vera: "Thank you~ You like rainbows too?" (+5% Vera relationship) <<changeRelationship("V", 5)>>
+        You: "I don't see a lot of them around. But yours looks good."
+        Vera: "Yes, the world could do with a lot more colour."
+        Vera: "I guess that's what I want to say through my art, too."
+        Vera: "Anyway, who's next?"
+        <<jump 8>>
+    
+    -> You: "It looks excessive."
+        Vera: "Excuse me?"
+        You: "Yeah. Too many rainbows. And you didn't finish your face."
+        Vera: "Okay, fine. You didn't need to put it down like that, though." (-5% Vera relationship) <<changeRelationship("V", -5)>>
+        Anthony: "Actually, I agree also. So many colours for what?" (+5% Anthony relationship) <<changeRelationship("A", 5)>>
+        Eleanor: "Okay, moving on..."
+        <<jump 8>>
+
+-> You: "It's okay, I guess. Not much else to say."
+    Vera: "Alright then. Next person?"
+    <<jump 8>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1480,479
+__PrivCrochet_tags: 
+title: 8
+---
+Nadia: "Uh... Okay, I'll go next! I'm Nadia, and this is my self-portrait."
+Nadia pulls out... a picture of a man drawn in anime style?
+Anthony: "Uh... wrong picture?"
+Nadia: "Oh! So silly of me. Or is it?"
+Nadia raises an eyebrow with a devious grin on her face.
+She pulls out another drawing, this time of her side profile.
+Nadia: "Yep, here's mine. I'm sorry I'm worse at drawing female than male faces..."
+Vera: "It looks good!"
+Anthony: "Even if it's very anime-styled."
+<<declare $askedAboutAnime = false>>
+<<jump 8_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 520,360
+__PrivCrochet_tags: 
+title: 3
+---
+You: "Hi! I'm {$name}."
+Anthony: "Hi, I'm Anthony. Please don't disturb me."
+Anthony seems very engrossed in his art. Let him be.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 519,557
+__PrivCrochet_tags: 
+title: 4
+---
+You: "Hi! I'm {$name}."
+Nadia: "Hi, {$name}! I'm Nadia."
+<<if $name == "Charlotte">>
+    Nadia: "By the way, nice outfit!"
+    You: "Thanks!" (+5% confidence) <<changeConfidence(5)>>
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1720,360
+__PrivCrochet_tags: 
+title: 9
+---
+Anthony pulls out a picture of an anthill, with ants all around it.
+Anthony: "Hi, I'm Anthony. Ant-thony. Get it?"
+Eleanor: "Uh... are you sure that's your self-portrait?"
+Anthony: "What? It represents me, what. Insignificant, destined to be squished."
+Vera: "Don't say that."
+Nadia: "Yeah, that's quite self-pitying."
+Your turn to comment.
+
+-> You: "It's okay, I guess. Not much else to say."
+    Anthony: "Alright then."
+    Eleanor: "Okay, next is you, {$name}! Show us what you got."
+
+-> You: "I'll be honest, that sounds kind of pathetic."
+    Anthony: "What?"
+    You: "Yeah. It's almost like you're begging for our pity."
+    Vera: "Okay, that's quite uncalled for..."
+    Nadia: "The art isn't all bad."
+    Eleanor: "Yeah, please, let's focus on the art here."
+    Eleanor: "Let's see your piece."
+
+-> You: "At least Vera and Nadia drew themselves. You just drew something generic."
+    Vera: "Nah, don't drag us into this. He drew what he wanted to."
+    Eleanor: "We all have to start somewhere, {$name}. Please respect that."
+    Anthony: "It's okay. I know I'm useless." (-5% Anthony relationship) <<changeRelationship("A", -5)>>
+    Eleanor: "Please, let's focus on the art here."
+    Eleanor: "Let's see your piece."
+
+-> You: "Well, ants aren't all bad, right?" (INT 6 check)
+    <<set $diceroll = diceRoll($int)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll > 5>>
+        Anthony: "What?"
+        You: "Yeah. Hardworking, can lift 100 times their body weight, all that stuff."
+        Anthony: "Okay, and?"
+        You: "That's just another way to interpret your art."
+        You: "Why see only the bad side when there's a good side to it too?"
+        Anthony: "I guess so..." (+5% Anthony relationship) <<changeRelationship("A", 5)>>
+        Eleanor: "Exactly. Okay, what about you, what did you draw?"
+    <<else>>
+        Anthony: "What?"
+        You: "Uh... ants are..."
+        Anthony: "Trash. Pests. Like me."
+        You feel like you haven't contributed to this conversation. Moving on...
+        Eleanor: "Okay, what about you, what did you draw?"
+    <<endif>>
+
+// At the end of Anthony's, it's your turn.
+<<if $name == "Charlotte">>
+    <<if $drawing == "Female">>
+        <<jump 10>>
+    <<else>>
+        <<jump 15>>
+    <<endif>>
+<<else>>
+    <<if $drawing == "Female">>
+        <<jump 13>>
+    <<else>>
+        <<jump 18>>
+    <<endif>>
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1960,0
+__PrivCrochet_tags: 
+title: 10
+---
+You: "Hi, I'm Charlotte, and this drawing is me. I tried my best..."
+Nadia: "Ooh. I can see some resemblance, but... I'm not sure if I should say it..."
+You: "What is it?"
+Nadia: "Well, I may not be the best at drawing female bodies."
+Nadia: "But your drawing seems a little more... rectangular? Like, it's not curvy."
+
+-> You: "I'm just built different." (CHA check)
+    <<set $diceroll = diceRoll($cha)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll < 6>>
+            Damn, that wasn't good.    
+            <<changeConfidence(-5)>>    
+        <<endif>>
+    Anthony: "Yeah, can tell. Your voice is as low as mine - "
+    Vera: "Hey. Every woman has a different body shape. Not everyone's got an hourglass figure, or a high voice." (+ 10 XP) <<addExperience(10)>>
+    Nadia: "Yeah, I suppose..."
+    Anthony: "Then what about you, Vera? How is it that you're taller than me even though you're a woman?"
+    Eleanor: "Anthony, enough. We're not here to comment on appearances. Only art."
+    Anthony: "Fine. But I think Nadia is right. The art doesn't look womanly enough."
+    Nadia: "Charlotte, I'm so sorry..."
+
+    -> You: "It's fine, you were coming from an artistic perspective."
+        Nadia: "Yeah, that was my only intent. I didn't want to offend you personally."
+        Nadia: "I can recommend some websites where I learned to draw, maybe they would help?" (+ 5 XP) <<addExperience(5)>>
+        Anthony smirks.
+        Eleanor: "Thanks Nadia. Please remember, we're just here to create."
+        Eleanor: "Oh dear, look at the time, we're almost done!"
+    
+    -> You: "Just stop."
+        Nadia: "Okay..."
+        Anthony: "Wow, you can't even take feedback."
+        Vera: "Charlotte's feelings are valid."
+        Anthony: "Sure, whatever. Men in dresses defending each other." (-5% Anthony relationship) <<changeRelationship("A", -5)>>
+        Eleanor: "Anthony, stop!"
+        Eleanor: "Sorry, everyone, we're out of time..."
+
+-> You: "You're right, my drawing isn't that good..."
+    Nadia: "Oh I'm so sorry!"
+    Anthony: "Nah, she's got a point. Females don't look like that." (-5% confidence) <<changeConfidence(-5)>>
+    Vera: "Hey, let Charlotte draw however she wants to."
+    Anthony: "What? I'm just telling the truth. How is he supposed to improve if he can't even take a few knocks?"
+    Anthony: "Or is he just trying to get pity from us?"
+    Nadia: "I guess so..."
+    
+    -> You: "This isn't just a drawing issue, isn't it?"
+        Anthony: "What are you talking about?"
+        You: "You hate the way I dress."
+        Anthony: "Don't put words in my mouth."
+        Vera: "But you used 'he/him' for Charlotte - "
+        Anthony: "Ya what. His voice so deep - "
+        Eleanor: "Okay guys, enough! Charlotte, I'm sorry you had to hear all that."
+        Eleanor: "Anyway, our time's almost up, so..."
+    
+    -> You: "Forget it. My drawing sucks anyway."
+        Eleanor: "Come on, Charlotte..."
+        Anthony: "How about learning what people look like first? That way your art won't look so cui." (-5% confidence) <<changeConfidence(-5)>>
+        Eleanor: "That's enough, Anthony."
+        Nadia: "Charlotte, there's some videos I can recommend for drawing. Maybe you wanna watch those to start?"
+        You: "Thanks, Nadia."
+        Eleanor: "Yeah... looks like our time's also about up."
+
+-> You: "Thanks for the feedback, I guess."
+    Nadia: "Yeah, maybe you can cinch the waist a little? That would bring out the figure a bit."
+    Vera: "Isn't she wearing a rather straight dress, though?"
+    Anthony: "Yeah, it really makes you wonder what's under it."
+    Eleanor: "Anthony!"
+
+    -> You: "I don't think I'll change it, though."
+        Nadia: "Oh?"
+        You: "Yeah. Art is up to us to create. If my body looks more rigid than a normal girl's, so be it."
+        Vera: "Love that for you! Be proud of your body." (+5% confidence) <<changeConfidence(5)>>
+        Nadia: "Of course. We're here for you, Charlotte."
+        Anthony rolls his eyes.
+        Eleanor: "Okay looks like we're all out of time!"
+        
+    
+    -> You: "I'll see what I can do to change that."
+        Nadia: "Up to you. We all draw what we like to see."
+        Vera: "Yeah, even my drawing is quite stylised. Doesn't need to be accurate."
+        Anthony: "Of course. Look at all the rainbows..."
+        Vera: "You got a problem with that, Anthony?"
+        Eleanor: "Okay looks like we're all out of time!"
+
+    -> You: "The truth is that I'm Charlotte."
+    <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 6>>
+                You say that, but do you really feel it? (-5% confidence) <<changeConfidence(-5)>>    
+            <<endif>>
+        Vera: "Love that for you! Charlotte is who you really are." (+5% confidence) <<changeConfidence(5)>>
+        Nadia: "You have our support."
+        Anthony is looking at his phone, clearly eager for the session to end.
+        Nadia: "You know, I'm trying to get better at drawing female bodies too." 
+        Nadia: "Here's some videos that I'm procrastinating on watching. Hope they help you!"
+        Eleanor: "Thanks Nadia. Anyway, our time is almost up, so..."
+
+<<jump 11>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2200,0
+__PrivCrochet_tags: 
+title: 11
+---
+Eleanor: "Thanks for coming and see you next week!"
+
+<<goto_room_cca_1_seated_11()>>
+As Nadia and Anthony leave, Vera stops you for a quick chat.
+Vera: "Hey Charlotte. Are you feeling okay?"
+
+-> You: "Yeah, I'm still fine."
+    Vera: "That's good. "
+    Vera: "Still, it doesn't excuse Anthony from being an asshole back there."
+
+-> You: "Uh... not really..."
+    Vera: "Oh dear..."
+    Vera: "Some people are just terrible. Anthony's one of them, I guess."
+    Vera: "You should take the night off. And the next few days, if you can. Text me if you need, like, emotional support."
+    You: "Thanks Vera... I appreciate the help." (+5% confidence)  <<changeConfidence(5)>>
+
+<<jump 12>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2440,0
+__PrivCrochet_tags: 
+title: 12
+---
+Vera: "People like us shouldn't be living like this. And that's why I want to do something about it."
+You: "Wait... people like us?"
+Vera: "You know, trans women."
+
+-> You: "Uh, I'm not sure I identify with that..."
+    Vera: "Oh?"
+    You: "Yeah, don't I need to do, like, hormones and surgery before I reach there?"
+    Vera: "Well, that's what some of us would do."
+    Vera: "But it's not compulsory. You are Charlotte as long as you want to be Charlotte." (+ 10 XP)<<addExperience(10)>>
+    -> You: "Are you saying that just to be nice?"
+        Vera: "Absolutely not."
+        Vera: "Your body, your opinion. Don't strictly follow what anyone else says."
+        Vera: "This may be our first meeting, but already I see a lot of my early life in what you're going through."
+        Vera: "But I don't think I can tell you everything now."
+        Vera: "Let's meet up soon?"
+        You: "Sure, I'll let you know." (END)
+    
+    -> You: "Even if I identify as male sometimes?"
+        Vera: "That's totally valid. After all, it's your choice."
+        Vera: "Or maybe it's not. Maybe you have to perform the male gender for school, or home, or any other societal reason."
+        You: "Yeah, I think that's how I'd put it."
+        Vera: "Mm. Just know that you shouldn't feel shame for it."
+        Vera: "Anyway, I don't think I can tell you everything now."
+        Vera: "Let's meet up soon?"
+        You: "Sure, I'll let you know." (END)
+    
+    -> You: "Thank you for that."
+        Vera: "Yeah, I think you needed to hear that after just now."
+        Vera: "Anyway, I don't think I can tell you everything now."
+        Vera: "Let's meet up soon?"
+        You: "Sure, I'll let you know." (END)
+
+-> You: "Right."
+    Vera: "We've got to stand up for each other."
+    Vera: "And I'm guessing you've only just started your journey?"
+    You: "It's not my first time crossdressing."
+    Vera: "Oh, so no HRT?"
+    You: "What's that?"
+    Vera: "Hormones. Estrogen. You don't know anything about it?"
+
+    -> You: "I just know it's the female hormone."
+        Vera: "Yeah. So I'm guessing you haven't started that?"
+        You: "Nope."
+        Vera: "That's valid. It's a big step to take."
+        Vera: "I can't tell you all about it now, but we could meet to talk about it soon?"
+        You: "Sure, I'll let you know."
+        Vera: "Okay! Here's a video that should inform you more about it."
+        You: "Thanks!" (END)
+    
+    -> You: "No..."
+        Vera: "Woah. You've never Googled this?"
+        Vera: "Anyway, here's a video that'll tell you more." 
+        Vera: "Basically there's a few hormones that can turn your body into the one that you want."
+        Vera: "I can't tell you all about it now, but we could meet to talk about it soon."
+        You: "Sure, I'll let you know. Thanks!" (END)
+
+-> You: "So what do you want to do about it?"
+    Vera: "Advocacy. Petitions. Civil unrest, question mark."
+    Vera: "But even surviving this far, is my personal form of resistance against a system that won't accept me for who I am." (+ 10 XP) <<addExperience(10)>>
+    -> You: "I'm proud of you for that." (EMP check)
+        <<set $diceroll = diceRoll($emp)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll < 6>>        
+            Vera: "Thanks."
+        <<else>>
+            Vera: "Thank you, dear. Being a girl is tough." (+5% Vera relationship) <<changeRelationship("V", 5)>>
+        <<endif>>
+        Vera: "There's lots of stuff I have to do daily, but it's worth it to wake up in the right body every morning."
+        You: "Like what?"
+        Vera: "I can't tell you all about it now, but we could meet to talk about it soon."
+        You: "Sure, I'll let you know. Thanks!" (END)
+    
+    -> You: "I'm not sure I got all of that."
+        Vera: "Ahh, I'm sorry... I tend to overshare when I get excited."
+        Vera: "I can't tell you all about it now, but we could meet to talk about it soon."
+        You: "Sure, I'll let you know. Thanks!" (END)
+        
+    -> You: "Wait, civil unrest?"
+        Vera: "Relax, I'm not doing anything illegal."
+        Vera: "After all, it's already tough enough to get by, I don't need legal troubles on top of that."
+        You: "I'm sorry..."
+        Vera: "It's okay." 
+        Vera: "Anyway, I don't think I can tell you everything now."
+        Vera: "Let's meet up soon?"
+        You: "Sure, I'll let you know." (END)
+
+<<jump end>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1960,234
+__PrivCrochet_tags: 
+title: 13
+---
+You: "Hi, I'm Charles, but I also go by Charlotte when I feel female, so here's what I drew..."
+Anthony: "Wait... why?"
+You: "Why what?"
+Anthony: "Why do you feel female?"
+
+-> You: "Don't you ever wonder what it's like to be the other gender?"
+    Anthony: "Sounds kinda sus to me."
+    Vera: "Well, you're just missing out then. I'm sure Charlotte is living her best life."
+    Anthony: "You're just delusional. How can a man look pretty in a dress?"
+    Nadia: "I don't know, I've seen some anime guys in maid dresses - "
+    Anthony: "Seriously? Those are all just jokes and fan art."
+
+    -> You: "You should try it. After all, I have." 
+        Vera: "So that's the real inspiration for Charlotte."
+        Anthony: "Oh my god, that's so weird."
+        Eleanor: "That's enough, Anthony."
+    
+    -> You: "Yeah, just jokes."
+        Anthony: "Right? It's not like you actually are deluded enough to think you can look like a girl."
+        Anthony: "I've seen them before, they're all super tall and their faces are super square - "
+        Eleanor: "That's enough, Anthony."
+
+-> You: "I'm genderqueer."
+    Anthony: "What the hell is that even? Some alphabet mafia shit?" 
+    Vera: "You got a problem with queer people?"
+    Nadia: "Guys... please... chill out..."
+    Eleanor: "Okay, everyone, enough."
+    Anthony: "See la, so agitated for what?"
+    Vera: "You'd better respect everyone's identity here."
+    Anthony: "Who made you the boss?"
+    Eleanor: "No, Anthony, she's right. You started this."
+    Anthony: "Fine, I'll just shut up then."
+
+-> You: "Cannot ah?" (CHA 6 check)
+<<set $diceroll = diceRoll($cha)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll > 5>>
+    You felt confident saying that. Anthony certainly doesn't, upon hearing it. (+5% confidence) <<addConfidence(5)>>
+    <<endif>>
+    Anthony: "Does no one else feel weirded out by this?"
+    Vera: "What's so weird about it? Charlotte is a woman if she wants to be."
+    Nadia: "You look good, Charlotte."
+    Anthony: "Fine. The whole goddamn world is upside down anyway."
+    Vera: "You are Charlotte if you want to be. Don't let anyone tell you otherwise."
+    Eleanor: "That's enough, Anthony."
+
+-> You: "I don't know... I just feel like it."
+    Anthony: "Wow. Your drawing sure doesn't show it."
+    Nadia: "Come on, he had 20 minutes. That's barely enough time."
+    Anthony: "Then stick to drawing a male. You can see that in the mirror already."
+    Vera: "I think Charlotte's drawing is good!"
+    Anthony: "Don't be delusional. It's out of proportion."
+    Anthony: "And come to think of it, your proportions are also kinda weird, aren't they, Vera?"
+    Eleanor: "Enough! Anthony, that's going too far."
+    Anthony: "Fine. I stand by what I said."
+    Vera: "Charlotte, don't listen to him. You're valid."
+
+<<jump 14>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2198,239
+__PrivCrochet_tags: 
+title: 14
+---
+Eleanor: "We didn't even get to comment on Charlotte's art... if you want to talk about it, I can have a look later."
+Eleanor: "Anyway, our time's up for this week. See you next week!"
+<<jump end>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1958,480
+__PrivCrochet_tags: 
+title: 15
+---
+You: "Hi, I'm Charlotte, but this is how I usually look like."
+Anthony: "So you're actually a guy."
+You're really being put on the spot here. How will you respond?
+
+-> You: "Yeah..."
+    Anthony: "Is this some kind of fetish?"
+    Eleanor: "Anthony, please."
+    Anthony: "Men don't wear dresses." (-5% Anthony relationship; -5% confidence) <<changeRelationship("A", -5)>> <<changeConfidence(-5)>>
+
+    -> You: "Why not?"
+        Anthony: "What, did you not get taught this when you were a child?"
+        Vera: "Let people wear what they want. It's not your business." (+10 XP) <<addExperience(10)>>
+        Anthony: "Neither is it yours."
+        Vera: "It's my business if you're offending people - "
+        Eleanor: "Thank you, Vera, that's quite enough."
+    
+    -> You: "Yeah, I guess..."
+        Anthony: "You're seriously messed up in the head. You need mental help." (-5% confidence) <<changeConfidence(-5)>>
+        Vera: "You're saying that as if mental health support is a bad thing."
+        Anthony: "It's not. Whatever the hell he's doing is, though."
+        Vera: "Oh, you have a problem with queer people?"
+        Eleanor: "Vera, enough! Anthony, you too."
+
+-> You: "But what is a guy?" (INT 6 check)
+    Anthony: "What?"
+    <<set $diceroll = diceRoll($cha)>>
+    [You rolled a {$diceroll}.]
+    <<if $int > 5>>
+        You: "That definition always changes, right? It's not as easy as just 'what's down there'."
+        You: "I'm a crossdresser, so I go between guy and girl. It's that easy." (+10 XP) <<addExperience(10)>>
+        Vera: "Love that for you! Charles and Charlotte."
+        Anthony: "Does anyone not see how weird this is?"
+        He is met with silence.
+        Anthony: "Guess I'm the only one with any common sense left."
+    <<else>>
+        You: "Yeah. Why can't a guy wear dresses and makeup too?"
+        Anthony: "I'm not gonna sugarcoat it. That's really weird."
+        Anthony: "How many guys do you see do that? I certainly don't."
+        Vera: "Hey, let Charlotte wear whatever she wants."
+        Anthony: "Why are you referring to him by that name? His name is Charlie. Let's not feed into delusions here." (-5% confidence) <<changeConfidence(-5)>>
+    <<endif>>
+
+-> You: "Anything wrong with that?"
+    Anthony: "Does no one else feel weirded out by this?"
+    Vera: "What's so weird about it? Charlotte is a woman if she wants to be."
+    Nadia: "You look good, Charlotte."
+    Anthony: "Fine. The whole goddamn world is upside down anyway."
+
+<<jump 16>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2200,480
+__PrivCrochet_tags: 
+title: 16
+---
+Vera: "You are Charlotte if you want to be. Don't let anyone tell you otherwise."
+Vera: "I am curious, though. Why not draw Charlotte?"
+
+-> You: "Drawing girls is hard."
+    Nadia: "Big mood. It's so weird, I like guys, but I have this..." 
+    Nadia: "I guess you could call it pressure on myself to draw girls well?"
+    Vera: "Yeah. Doesn't help that a lot of reference models for girls don't resemble our bodies."
+    Anthony: "Ya, like yours. You're so damn tall. And you, your voice is so low - "
+    Vera: "You know, Anthony, maybe you're insecure about your own height, since you like to point out mine so much."
+    Eleanor: "That's enough! Both of you."
+
+-> You: "I'm not Charlotte all the time."
+    Vera: "Oh?"
+    You: "Yeah... I still need to maintain my responsibilities as a guy."
+    You: "I've seen what it's like for people to transition and... well, I'm still scared of that."
+    Vera: "Well, I guess that's fair. But..."
+    Eleanor: "I hate to stop this discussion, but... our room booking is about to end."
+    Eleanor: "Maybe we can continue this outside?"
+
+<<jump 17>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2440,480
+__PrivCrochet_tags: 
+title: 17
+---
+Eleanor: "We didn't even get to comment on Charlotte's art... if you want to talk about it, I can have a look."
+Eleanor: "Either way, see you next week!"
+<<jump end>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1920,720
+__PrivCrochet_tags: 
+title: 18
+---
+You: "Hi, I'm Charles, and this is me. I tried my best..."
+Vera: "Well, that's not a bad attempt."
+Nadia: "Do you want an anime styled drawing? I can try that!"
+Anthony: "So, just an average dude."
+Eleanor: "For something drawn in 20 minutes, that's pretty good!"
+Eleanor: "Come for more sessions and you'll learn more."
+Eleanor looks at the clock.
+Eleanor: "Well, that's everyone." 
+Eleanor: "We've still got a bit of time, and I brought snacks, so please help yourselves!" 
+Eleanor: "Get to know each other, yeah?"
+<<goto_room_cca_1_seated_18()>>
+Vera and Nadia leave first, Anthony waits for them to go before he comes over to you.
+Anthony: "Hey. Didn't you realise something was... off about that girl?"
+
+-> You: "Like what?"
+
+-> You: "Yeah, she doesn't look normal."
+    Anthony: "Right? Anyone can see it from a mile away." (+5% Anthony relationship) <<changeRelationship("A", 5)>>
+
+<<jump 19>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2200,720
+__PrivCrochet_tags: 
+title: 19
+---
+Anthony: "She's taller than both of us, her voice is lower than other girls'..."
+Anthony: "Maybe she's an ah gua."
+
+-> You: "Oh my goodness, that's so disgusting."
+    Anthony: "Right? It's all this gender and feminism bullshit that's going around."
+    You: "Yes, it's very confusing."
+    Anthony: "It's also the reason why I don't have a girlfriend."
+    Anthony: "Tell you ah, there's this influencer that I watch, he says women are too liberal and free already."
+    Anthony: "Here's the link. I think it's very helpful. Especially if you don't have a girlfriend also." (+ 5 XP) <<addExperience(5)>>
+    You: "Thanks, I'll take a look."
+    Anthony: "You'll see the truth. See you around."
+    (+5% Anthony relationship) <<changeRelationship("A", 5)>>
+
+-> You: "That's not very nice..."
+    Anthony: "I'm just saying it as it is. Females don't look like that."
+    Anthony: "I didn't want to say it during the session, later Eleanor get angry at me."
+    Anthony: "But you agree, right? This Vera is not normal."
+    -> You: "Yes."
+        Anthony: "The world has really turned upside down."
+        Anthony: "Here, watch this influencer when you go back." (+ 5 XP) <<addExperience(5)>>
+        Anthony: "I think he is very helpful in understanding what to do in this fucked up world."
+        You: "Thanks."
+        Anthony: "See you next week."
+        (+5% Anthony relationship) <<changeRelationship("A", 5)>>
+    
+    -> You: "I mean, she has every right to exist."
+        Anthony: "You must have heard too much woke content. Men can be women, there are 76 genders, all that bullshit."
+        Anthony: "You need to break out of the filter bubble."
+        Anthony: "Here, watch this influencer when you go back." (+ 5 XP) <<addExperience(5)>>
+        Anthony: "I think he is very helpful in understanding what to do in this fucked up world."
+        -> You: "Okay, I'll give it a shot."
+            Anthony: "He helped me. I hope he helps you too."
+        -> You: "Wait, isn't this just incel content?"
+            Anthony: "Yes. I'm an incel."
+            Anthony: "I don't say it out loud, but I think you'd understand."
+            Anthony: "It's not safe out there with all the woke opinions. The only truth is in people like this influencer."
+            Anthony: "We should leave, the room's going to close. See you around."
+
+-> You: "She's beautiful in her own way."
+    Anthony: "That is the most cliche thing I have ever heard."
+    -> You: "I mean, people are sometimes just built different."
+        Anthony: "Yeah, not so different that they become freaks."
+        You: "Let me finish. What about you? Ever heard people say you're too short before?" (+ 10 XP) <<addExperience(10)>>
+        Anthony: "All the time. It's not something I can change."
+        -> You: "That didn't feel very good, did it?" (EMP 6 check)
+            <<set $diceroll = diceRoll($emp)>>
+                [You rolled a {$diceroll}.]
+                <<if $diceroll >= 6>>
+                Anthony: "Of course. I feel like shit every time I think of those stupid femoids who don't want to date me."
+                You: "Then if you don't want people to say you short, why you say Vera tall and all that?"
+                Anthony: "I just - I just..."
+                You: "You gotta respect other people if you want respect in return." (+ 10 XP) <<addExperience(10)>>
+                You: "Anyway, room's closing already. Time to go."
+            <<else>>
+                Anthony: "What to do? The world sucks."
+                Anthony: "Should just lie down and rot."
+                You: "If that's what you want, I guess."
+                You realise you can't really continue from here. It's time to leave.
+            <<endif>>
+
+        -> You: "But it's just what people say, isn't it? Do you listen to everything other people say?" (INT 6 check)
+            Anthony: "But it's proven what. Females aren't attracted to you if you're not 6-6-6."
+            <<set $diceroll = diceRoll($int)>>
+                [You rolled a {$diceroll}.]
+                <<if $diceroll >= 6>>
+                You: "Then what about all the men below 6 feet who are married?"
+                Anthony: "They... they're the lucky few! Or they're rich! Or something!"
+                You: "Yep, you don't have an answer."
+                You: "I'm sure there are guys out there who aren't 6-6-6. And they're still happy."
+                You: "And Vera is still happy, too. Regardless of what you say about her."
+                You: "So why don't you look within yourself and find out why you're unhappy?" (+10 XP) <<addExperience(10)>>
+                You: "Maybe that'll change what you say about people around us."
+                You walk off. That was... strangely liberating!
+            <<else>>
+                Anthony: "I mean, do you have a girlfriend?"
+                You: "No..."
+                Anthony: "You don't understand how hard it is to be a man like me."
+                Anthony: "No girlfriend, not valued for being myself."
+                You: "Well, that's tough."
+                Anthony: "Where were we? Oh right, Vera."
+                Anthony: "She's weird. That's all. See you next week."
+                You're back to square one...
+            <<endif>>
+    -> You: "Haven't you ever seen any transgender people before?"
+        Anthony: "Oh, so that's what they look like. Men in dresses, trying to be women."
+        Anthony: "It's disgusting."
+
+        -> You: "Yeah, why don't you say that in front of Vera and Eleanor. I'm sure they'll absolutely love it." (CHA 6 check)
+            <<set $diceroll = diceRoll($cha)>>
+                [You rolled a {$diceroll}.]
+                <<if $diceroll >= 6>>
+                Anthony wants to say something, but can't bring himself to say it.
+                You: "That's what I thought." (+10 XP) <<addExperience(10)>>
+                It's time to leave.
+            <<else>>
+                Anthony: "Why should I care that they want to be delusional and PC?"
+                Anthony: "You should let go of being woke also. Before it's too late."
+                You: "Yeah, we're done here. Time to leave."
+            <<endif>>
+            
+        -> You: "We're done here."
+            You: "I'm not comfortable with how you're speaking about them."
+            Anthony: "So be it." (-5% Anthony relationship) <<changeRelationship("A", 5)>>
+            (END)
+
+    -> You: "I mean, I dress up sometimes, too." (CHA 6 check)
+        Anthony: "Wow. Another one." (-5% Anthony relationship) <<changeRelationship("A", 5)>>
+        Anthony: "You all are delusional."
+        <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 6>>            
+            You: "I'm proud of who I am." (+5% confidence) <<changeConfidence(5)>>
+            Anthony: "Proud of being a freak."
+            Anthony: "Proud of denying that you are a man."
+            Anthony: "There's nothing more pathetic and weird than that."
+            You: "Keep talking. I'm gonna leave."
+
+        <<else>>
+            You: "Don't say that..." (-5% confidence) <<changeConfidence(-5)>>
+            Anthony: "I didn't know this Art Club was such a woke gender circus."
+            Anthony: "I'm sure there will be many more opportunities to laugh at how cringe the two of you are."
+            Anthony: "See you next week."
+        <<endif>>
+<<jump end>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1480,240
+__PrivCrochet_tags: 
+title: 8_options
+---
+Your turn to comment...
+
+// Will not show if you have already asked once.
+-> You: "Hmm. Why did you draw in anime style?" <<if $askedAboutAnime == false>>
+    Nadia: "Well... I guess it's easier, right?"
+    Nadia: "After all, it was designed for 2D artists."
+    You: "That's fair."
+    <<set $askedAboutAnime = true>>
+    // jump back to "Your turn to comment..."
+    <<jump 8_options>>
+
+-> You: "It's okay, I guess. Not much else to say."
+    Nadia: "Alright then. Next person?"
+    <<jump 9>>
+
+// The below options only show up if you ask about anime style (choose the first option)
+-> You: "So cliche." <<if $askedAboutAnime == true>>
+    Anthony: "Well, I didn't want to say that out loud."
+    Nadia: "Oh no..." (-5% Nadia relationship) <<changeRelationship("N", -5)>>
+    Vera: "That's so rude. Let her live."
+    Nadia: "I should have known people would laugh at me for being a weeb."
+    Eleanor: "Please, {$name}. Let's be respectful. Anyway, Anthony, what do you have?"
+    <<jump 9>>
+
+-> You: "The anime style makes it good." <<if $askedAboutAnime == true>>
+    Nadia: "Really?"
+    You: "Yeah. It's your own style. Just like Vera with her rainbows."
+    You: "Take pride in it."
+    Nadia: "Thanks! It's rare to hear that." (+5% Nadia relationship) <<changeRelationship("N", 5)>>
+    You: "Let me guess, people laugh at you for being a weeb."
+    Nadia: "Ya..."
+    Eleanor: "Well, anime is pretty mainstream, right?"
+    Eleanor: "Who knows, maybe we'll do anime in a future week! Then you can really cook."
+    Nadia: "Uh... that's a lot, but thanks!!! Okay, shouldn't we go to the next person already?"
+    <<jump 9>>
+
+-> You: "What about the hot guy?" (CHA 6 check) <<if $askedAboutAnime == true>>
+ <<set $diceroll = diceRoll($cha)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll > 5>>        
+    Nadia: "Huh? What? It's nothing! I'm just experimenting!"
+        Vera: "Yeah, coming from Miss 'I'm better at drawing male faces'..."
+        Nadia: "Uh... I'll show you guys when I'm free! Let's move on to the next person!"
+        Well done, that came across as humorous and inoffensive. (+10 XP) <<addExperience(10)>>
+    <<else>>
+        Nadia: "Hey... that's intrusive."
+        You: "But you just showed it just now!"
+        Eleanor: "{$name}, if Nadia's not okay with showing her personal art, don't press her."
+    <<endif>>
+    <<jump 9>>
+
+<<jump 9>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,600
+__PrivCrochet_tags: 
+title: pre-5
+---
+You take a seat.
+<<goto_room_cca_1_seated()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 3040,440
+__PrivCrochet_tags: 
+title: end
+---
+You head back to your room.
+
+<<goto_room_bedroom_after_cca()>>
+===

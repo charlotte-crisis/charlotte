@@ -1,0 +1,69 @@
+#__PrivCrochet_version:1
+# if you've already visited then it will show the concise version.
+# Interacting with mirror
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 903,124
+__PrivCrochet_tags: 
+title: 0
+---
+After a short nap, you hop out of bed.
+<<set $canGoToBed = false>>
+
+You kind of feel like going out.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1159,202
+__PrivCrochet_tags: 
+title: 1
+---
+Who are you today? (Use the Up and Down arrow keys to choose an option, and spacebar to continue.)
+
+-> Charles
+    <<set $name = "Charles">>
+    <<setGender(0)>>    
+    You put on a T-shirt and jeans.
+    
+-> Charlotte
+    <<set $name = "Charlotte">>
+    <<setGender(1)>>
+    You put on a dress. It fits you well, which has always been part of what motivated you to continue this hobby in the first place.
+
+(You can interact with the mirror again if you change your mind.)
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1400,200
+__PrivCrochet_tags: 
+title: 2
+---
+You feel like hanging out with a friend this week, for a quick meal.
+Who will you ask out? #temporarily dont put relationship (normally has to be above 30)
+-> Anthony
+    You call Anthony up for a hangout.
+    <<goto_room_hangout_a()>>
+
+-> Nadia
+    You call Nadia up for a hangout.
+    <<goto_room_hangout_n()>>
+
+-> Vera 
+    You call Vera up for a hangout.
+    <<goto_room_hangout_v()>>
+
+-> On second thought, nevermind.
+    Hmm... you don't seem to be friendly enough with anyone.
+    You can stay in today, but please try to understand and befriend people around you...
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 920,440
+__PrivCrochet_tags: 
+title: 0_revisit
+---
+Well, no use going back to bed.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 646,190
+__PrivCrochet_tags: 
+title: bed
+---
+<<jump 0_revisit>>
+===

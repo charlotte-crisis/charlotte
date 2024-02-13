@@ -1,0 +1,587 @@
+#__PrivCrochet_version:1
+# Choose 2 out of 3
+# so need to count total visits.
+# Anthony
+# NOTE THIS IS A TEMPORARY NODE JUST TO BE MORE ORGANISED
+# I want to fight.
+# I want to give in.
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1080,118
+__PrivCrochet_tags: 
+title: 0
+---
+Vera: "Hey Charlotte."
+You: "Hi Vera. How's it going?"
+Vera: "It's going."
+Vera: "Heh. Really though, it's nice to sit down and talk like this."
+Vera: "So, I guess you came here with a purpose other than just coffee, right?"
+You: "Yeah, kinda. I wanted to ask you some questions."
+Vera: "Shoot."
+<<jump 0_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1200,400
+__PrivCrochet_tags: 
+title: 0_options
+---
+-> "So... what's it like being trans?"
+    <<jump 1_1>>
+-> "How's school?"
+    <<jump 1_2>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1560,-40
+__PrivCrochet_tags: 
+title: 1_1
+---
+Vera: "Heh. Where do I even begin?"
+Vera: "I think the most important thing is, just treat us as normal human beings."
+Vera: "We're people with hopes and dreams like yourselves."
+
+-> "When did you know you were trans?"
+    Vera: "Hmm, very early on."
+    Vera: "It's a classic trans story."
+    Vera: "In elementary school, I felt... different from the boys."
+    You: "Elementary school?"
+    Vera: "I'm not from here, remember?"
+    Vera: "Wow, I can't imagine having to go through National Service."
+    Vera: "Anyway, I grew out my hair in middle school."
+    Vera: "By the time I came here, I was already presenting femme enough to pass."
+    Vera: "Thankfully my school back then allowed me to present how I wanted."
+    -> "Hmm, my story is different..."
+        Vera: "How so?"
+        You: "I never really thought about Charlotte until university."
+        You: "I didn't have that eureka moment in primary school..."
+        You: "So am I... you know, like you?"
+        Vera: "Well, everyone takes a different path through this."
+        Vera: "Your path is totally valid, Charlotte."
+    
+    -> "You're so brave."
+        Vera: "Heh, thanks."
+        Vera: "That's a cliche 'straight-to-queer' thing to say, but..."
+        Vera: "I'll accept it, because I know you mean it."
+        Vera: "And you're brave too. Aren't we all?"
+        Vera: "Just don't put me on a pedestal. I'm not a hero."
+    
+    -> "Did you ever get bullied for it?"
+        Vera: "Hmm... thankfully, not really?"
+        Vera: "When I was a kid, I already didn't like to hang out with the boys."
+        Vera: "There's just something about... aggression, masculinity, competition..."
+        Vera: "It's so off-putting, don't you think?"
+        You: "Absolutely."
+        Vera: "I mean, not to say those feelings are totally disgusting."
+        Vera: "But that life, it just wasn't for me."
+        Vera: "And when that happens, you befriend kinder people."
+        Vera: "So thankfully I already had a good grasp of myself and the people around me..."
+        Vera: "Which isn't something other folks might have."
+
+-> "I heard you need to like, medicate, or something?"
+    Vera: "Sure I do."
+    Vera: "You might see me consume my estrogen medication sometimes."
+    Vera: "But that's simply healthcare."
+    Vera: "I mean, no one judges you for taking Panadol if you have a fever, right?"
+    You: "Yeah, I guess..."
+    Vera: "So it's the same. Except the medication is supposed to fix dysphoria."
+
+    -> "Isn't it painful?"
+        Vera: "Being trapped in a male body is more painful."
+        Vera: "I mean, you probably know a thing or two about that."
+        -> "Uh, not really..."
+            Vera: "Oh?"
+            You: "Yeah. I'm fine with being a guy."
+            Vera: "Hmm. Not even a bit of discomfort?"
+            You: "Not really... I've lived as a guy for 25 years."
+            You: "Why stop?"
+            Vera: "That's so egg of you."
+            Vera: "I mean, why not just start HRT if you're already dressing so femininely?"
+            -> "Uh, isn't that a little sudden..."
+                Vera: "What do you mean?"
+                Vera: "You're already quite far down the rabbit hole."
+                Vera: "You can finish this and be the girl you always wanted to be."
+                You: "I'm not sure..."
+                Vera: "You will be. Some day."
+            
+            -> "Come on, Vera. I already said I'm fine." (EMP 7 check)
+                <<set $diceroll = diceRoll($emp)>>
+                [You rolled a {$diceroll}.]
+                <<if $diceroll > 6>>
+                Vera: "But don't you want to transition?"
+                You: "Vera. Please. I'm not you."
+                You: "I appreciate your help, but... this is my fight."
+                You: "If I don't feel comfortable with hormones, please don't pressure me into them."
+                Vera: "But..."
+                You: "Vera, just stop. I'm scared of this."
+                Vera sighs.
+                Vera: "Sorry. I went a little too far there."
+                Vera: "I didn't mean to make you feel uncomfortable..."
+                Vera: "HRT seemed like such a natural option to me when I started."
+                Vera: "But I know it's not so for you... and I will remember that."
+                Vera: "Anyway, I also want you to know that you're valid and I support you."
+                Vera: "Even if you want to be called Charles."
+                You: "Thanks, Vera... you're a good friend." (+5% Vera relationship) <<changeRelationship("V", 5)>>
+                
+                <<else>>
+                Vera: "Nah, that doesn't convince me."
+                Vera: "You'd still want to transition, right?"
+                Vera: "Don't tell me you're comfortable ageing into some old uncle."
+                You're really not sure. (-5% confidence) <<changeConfidence(-5)>>
+                
+                <<endif>>
+            
+            -> "I guess..."
+                Vera: "I mean, to me, it looks like you're probably gonna funnel down into that."
+                Vera: "So why not start now?"
+                Vera: "You'd be a lot happier if you did. I know I was."
+                You: "You're just making me more confused..."
+                Vera: "Then make up your mind."
+                Vera: "Your trial version of femininity will expire soon."
+                Vera: "Why not make your subscription... permanent?"
+                Despite everything, you're not sure.
+
+
+        -> "Yes, I do."
+            Vera: "Hmm."
+            Vera: "Would you consider HRT then?"
+            You: "Maybe."
+            Vera: "Well, there are some medications that might be reversible..."
+            Vera: "I mean, what would I know, I don't want to reverse my transition."
+            Vera: "But maybe you would."
+            Vera: "Either way, don't ever try to start this on your own."
+            Vera: "Or even with me. I'm not studying for a doctorate in medicine."
+            You: "Yeah, I'll find someone qualified."
+            Vera: "Mhmm. Charlotte... really..."
+            Vera: "This is a difficult journey. From one girl to another..."
+            Vera: "I wish you the best."
+
+    -> "Isn't it expensive?"
+        Vera: "Yeah, it is..."
+        Vera: "I'm not gonna elaborate on my own ways of getting money for this."
+        Vera: "It's... stuff you'd better not know."
+        Vera: "But all the folks I know have their own means of raising funds."
+        -> "What do you do?"
+            Vera looks annoyed.
+            Vera: "I told you, I don't want to share."
+            Vera: "Just know that I get my medication, and you probably shouldn't use my way."
+            -> "But I want to know."
+                Vera looks agitated. (-5% Vera relationship) <<changeRelationship("V", -5)>>
+                Vera: "Last chance, Charlotte."
+                Vera: "I'm walking away if you keep pressing."
+                -> "What do you have to hide?" (-10% Vera relationship) <<changeRelationship("V", -10)>>
+                    Vera slams her palm on the table.
+                    Vera: "That's it."
+                    Vera: "If you can't respect my boundary on this, I'm sorry, we can't talk."
+                    Vera walks off.
+                    <<stop>>
+                
+                -> "Okay, fine..."
+                    Vera: "I'm sorry. I didn't mean to be rude."
+                    Vera: "But I am serious, if you need HRT, my way is probably not the best way."
+                
+            -> "Okay, fine..."
+                Vera: "I'm sorry. I didn't mean to be rude."
+                Vera: "But I am serious, if you need HRT, my way is probably not the best way."
+                Vera: "Any way except mine..."
+
+        -> "Like what?"
+            Vera: "Some work two jobs. Others do sex work."
+            Vera: "What, did you think I was going to say sex work was the sus thing?"
+            Vera: "It isn't. They deserve our respect."
+            Vera: "And sometimes that's all trans people can do..."
+            Vera: "That should never be the case."
+
+        Vera: "Still, please prioritise your own healthcare over money."
+        Vera: "Money can be earned... but you've only got one body."
+        Vera: "I know that's something boomers would say..."
+        Vera: "But I'm re-appropriating it."
+        Vera: "Trans healthcare is the same as any other form of healthcare."
+
+<<jump 0_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1560,280
+__PrivCrochet_tags: 
+title: 1_2
+---
+Vera: "School is schooling, I guess."
+Vera: "I'm passionate about what I study, but..."
+Vera: "Sometimes my views clash with the prof's."
+Vera: "Some profs have been here long enough for you to feel their age."
+Vera: "And it's really annoying when they think they know it all, but..."
+Vera: "Well, you play games, right? So you'll probably get this reference, even if I don't."
+Vera: "Profs are kind of like level 100 players and we're the level 1 players."
+Vera: "They're teaching us how to get to level 100, but..."
+Vera: "Who said that was the highest level possible?"
+Vera: "Anyway, that was just a sidetrack. What about you?"
+You: "Oh, I'm taking a gender studies class."
+Vera: "Ooh, that's fun! How's that going?"
+-> "It's boring."
+    Vera: "Huh, I didn't expect that."
+    Vera: "I thought gender issues would be very relevant to Charlotte."
+    -> "It's kinda woke."
+        Vera: "A queer person thinks this class is woke?"
+        Vera: "I wonder what kind of crazy stuff they're teaching in there."
+        You: "Nah, i just don't understand it."'
+        Vera: "Hmm, well... all the best then!"
+        Vera: "I can try to explain concepts if you need me to."
+
+    -> "The teaching isn't great."
+        You: "The prof lectures for way too long."
+        You: "Then she throws us a question to discuss, which doesn't turn out very well a lot of times."
+        Vera: "It's that bad?"
+        You: "Sometimes my group mates go off on very long, self-absorbed tangents."
+        You: "It just makes my brain tired."
+
+-> "It's fantastic!"
+    Vera: "Heh, what else would you have said, anyway?"
+    Vera: "Queer people in gender studies class... it's our natural habitat."
+    Vera: "It's literally our life."
+
+<<jump 0_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1800,120
+__PrivCrochet_tags: 
+title: 2
+---
+-> "What do you think of Anthony?"
+    Vera: "Heh. It's like his life mission to get under my nerves."
+    Vera: "Like, honestly, I'm not sure if he's just trolling or he genuinely believes the stuff he says."
+    -> "I think he's a victim too."
+        Vera: "Hmm. Tell me more."
+            -> "Well, he definitely doesn't know how to show his emotions." (EMP >= 4)
+                Vera: "Yeah, that was kinda obvious."
+                You: "When he's cornered, he gets defensive."
+            
+            -> "The patriarchy weighs down heavily on him." (INT >= 4)
+        
+    -> "Some people just can't change."
+        
+    -> "I think he has some valid points."
+
+# Nadia
+-> "What do you think of Nadia?"
+    Vera: "Such a sweet girl."
+    Vera: "I'm not much of an anime fan, but I can feel her passion for it."
+
+# Eleanor
+-> "What do you think of Eleanor?"
+    Vera: "She's trying her best."
+    Vera: "Heh, sometimes I feel bad that she's in the middle of all the drama."
+    Vera: "But at the same time, I wonder if this is what leaders feel when they have to deal with discrimination."
+    Vera: "Sure, for us it's easy to point out the hate."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2040,120
+__PrivCrochet_tags: 
+title: 3
+---
+You: "I need some advice on how to deal with my family."
+# (if Vera doesn't know about Charlotte) --> TODO: Need a check for this
+You very briefly tell Vera that you're a crossdresser.
+Vera: "Well, I guess all queer people need to cross that bridge. Tell me more."
+You: "My mother hates Charlotte. And I need options."
+Vera: "Hmm... I hate to say this, but..."
+Vera: "You do know that I'm also not on good terms with my parents, right?"
+Vera: "They're so far from here that there's nothing they can do about it."
+Vera: "Unfortunately, the threat is closer to your shores."
+Vera: "So... what do you want to do?"
+
+-> "I want to heal."
+    Vera: "Huh. That's... gonna be hard."
+    Vera: "Like, what do you even mean by that?"
+    -> "I'm sorry. That just sounded like something badass to say."
+        Vera: "Heh. That's the stuff of movies."
+        Vera: "But your life isn't one."
+        Vera: "So you gotta get your head out of the clouds, girl."
+
+    -> "I don't want to hurt my mother."
+        Vera: "Uh... you do realise that's next to impossible, right?"
+        Vera: "Especially if she's a boomer."
+        Vera: "Hate to say it, but it's quite hard to change their mindset."
+        Vera: "It's either you, or her."
+
+        -> "We can compromise."
+            Vera: "On what?"
+            Vera: "Your right to exist the way you want to?"
+            Vera: "She wants Charlotte gone, doesn't she?"
+            Vera: "There's no negotiating with her."
+            
+            -> "I'm only Charlotte 10% of the time..."
+                You: "I can present as male 90% of the time."
+                You: "She doesn't need to know about the 10%."
+                Vera: "Oh, we're talking numbers now, are we?"
+                Vera: "My parents wanted me to be Vera 0% of the time."
+                Vera: "So don't be surprised if your parents want that too."
+            
+            -> "She knows I'm her retirement plan."
+                Vera: "So your relationship with her is purely monetary."
+                Vera: "And she acknowledges that she's got limited time left."
+                Vera: "So, if the both of you really think that..."
+                Vera: "Isn't Charlotte just in jail with an undetermined release date?"
+            
+            Vera: "Well, I'm not sure what you want to compromise on."
+            Vera: "But I wish you the best of luck."
+        
+        -> "I know she wants the best for me."
+            Vera: "Is a life without Charlotte really the best for you?"
+            Vera: "And besides, we came to university and lived away from our parents for a reason."
+            Vera: "To be independent of them."
+
+            -> "She's taken care of me since I was young."
+                Vera: "That was her obligation as a parent."
+                Vera: "It isn't something she can hold over your head as a threat."
+            
+            -> "I can't fight my own mother."
+                Vera: "Well, you're not killing or injuring her."
+                Vera: "But below that, I'd say anything else is fair game."
+                Vera: "You have to make yourself heard, Charlotte."
+            
+            Vera: "Even if she wants the best for you..."
+            Vera: "Isn't that something you need to achieve for yourself?"
+            
+            -> "I guess you're right..."
+                Vera: "I know you might be close to her."
+                Vera: "But if she isn't respecting who you are..."
+                Vera: "If she cannot see Charlotte as her child..."
+                Vera: "Then does she deserve any respect that you give her?"
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2040,360
+__PrivCrochet_tags: 
+title: 3_2
+---
+
+-> "I want to fight."
+    Vera: "As you should!"
+    Vera: "We will not go gently into the night, et cetera."
+    Vera: "But you gotta be ready, girl. This may be the toughest fight of your life."
+    You: "What do you think she'll say?"
+    Vera: "If she's as conservative as my mum..."
+    Vera: "She may pose ultimatums."
+    Vera: "Or she may appeal to your sentimentality."
+    Vera: "Or she may threaten to reveal Charlotte to your dad..."
+    Vera: "Wait, is your dad supportive?"
+    You: "Hell no!"
+    Vera: "Heh. One more thing we have in common."
+    Vera: "So, which situation do you want to explore?"
+
+    -> "Sentimentality."
+        Vera: "She's gonna plead with you."
+        Vera: "Expect her to exclusively identify you as her son."
+        Vera: "I don't know about you, but that messed with me. A lot."
+        Vera: ""
+
+    -> "Ultimatums."
+        Vera: "She's gonna play the disown card."
+        Vera: "This is gonna be hard to defend against."
+        Vera: "Other than that, she'll ask for your promise to not transition."
+        Vera: "So the question is, which of these are you willing to accept?"
+
+        -> "None of them!"
+            Vera: "Well, we can't have a cake and eat it at the same time."
+            Vera: "At some point, we need to choose."
+
+        -> "I'd rather be disowned."
+            Vera: "Woah. That's... tough."
+            Vera: "I don't think I've ever heard anyone say that."
+            Vera: "It's different from leaving an abusive household willingly..."
+            Vera: "Even I wouldn't dare go through with it."
+        
+        -> "I'd rather promise to not transition."
+            Vera: "I mean, I guess that's fair."
+            Vera: "But consider this, is she gonna stop there?"
+            Vera: "If she already cannot accept her son turning into a woman..."
+            Vera: "Will she really accept her son just dressing like one?"
+
+    -> "The one where my dad gets involved."
+        Vera: "Heh. Well, you know how masculinity is, right?"
+        Vera: "Replace sentimentality with aggression."
+        Vera: "But just know, if things get violent, call the police, alright?"
+        Vera: "As much as I study about how it's a flawed institution..."
+        Vera: "At least they can provide some legal protection if hands start flying."
+        Vera: "Wait. I'm sorry... I didn't even consider if your dad was abusive."
+        Vera: "I'm really sorry if he isn't..."
+
+        -> "He still is."
+            Vera: "Oh my goodness. I'm so sorry to hear that..."
+            Vera: "No wonder you still stay in school."
+
+        -> "He was."
+            Vera: "Ugh... well, I guess that's common."
+            Vera: "And note, common, not normal."
+            Vera: "I know there's lots of takes on this, but a parent should never abuse their kid..."
+            Vera: "Sorry to hear about that, Charlotte."
+
+        -> "He never was."
+            Vera: "Huh. And I thought all Asian parents would take out the cane, or the slipper, at some point."
+            Vera: "Well, you're luckier than most."
+            Vera: "Sorry for assuming the worst from the get go."
+
+        <<if $cha >= 5>> #$ (if CHA >= 5)
+            You: "It's okay, Vera. No need to keep saying sorry."
+            You: "What are you, Canadian?"
+            Vera laughs. # (+5% Vera relationship)
+            Vera: "Who knows, I might move there."
+        <<endif>>
+
+        Vera: "Well, either way, it might be best to not involve your dad at all."
+        Vera: "One aggravated parent is already enough..."
+
+    -> "The one that minimises damage."
+        Vera: "What? That's not possible."
+        Vera: "I know it's not right to stereotype the older generation..."
+        Vera: "But it seems you and I both got the strictest kind of parents."
+        Vera: "Minimising damage means hiding and repressing Charlotte."
+        Vera: "Does that sound like a long-term solution to you?"
+
+        -> "Yes."
+            Vera: "No it isn't!"
+            Vera: "Even if you hide carefully and diligently, at some point..."
+            Vera: "You're gonna slip up."
+            Vera: "For me it was when my mother found my medication."
+            Vera: "And for you, it might be your mother finding your dresses."
+
+            -> "You're right."
+                You: "I should be ready for damage."
+                Vera: "Unfortunately, yes."
+                Vera: "We can only hope that the damage is worth it..."
+                Vera: "Sometimes, it isn't. But most times we can learn from it."
+                Vera: "Even if the lesson is 'don't trust the boomers'."
+            
+            -> "I will be even more conscientious."
+                Vera: "Then you're gonna repress and hide until you can't take it anymore?"
+                Vera: "That level of repression rarely ends well, Charlotte."
+                Vera: "Please, just take my word for it and face this problem head-on."
+        
+        -> "No."
+            Vera: "Exactly."
+            Vera: "I know it's gonna be tough."
+            Vera: "But this conflict is inevitable..."
+            Vera: "Hell, I'm probably not even in its most advanced stages yet."
+
+            -> "We'll get through it together."
+                You: "Even though we're on different paths..."
+                You: "I appreciate the help and support."
+                Vera: "Aww, thanks, Charlotte."
+        
+            -> "That sounds scary."
+                Vera: "It is. This journey was never meant to be easy."
+                Vera: "But for people like us, the light at the end of the tunnel is what makes it worth it."
+
+    Vera: "Well, either way, this is the biggest decision you'll make in your life."
+    Vera: "And I just wanted to say..."
+    Vera: "I am so proud of you for standing up for yourself."
+    Vera: "Just don't leave any bodies in your wake."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2600,120
+__PrivCrochet_tags: 
+title: 4
+---
+Vera: "Well, I gotta go."
+# (if Vera relationship decreased overall) 
+Vera: "You sure did say some pretty nasty stuff back there."
+Vera: "Please, have a little more empathy for the people around you."
+# (if Vera relationship increased overall)
+Vera: "Thanks for inviting me here. It was nice talking to you!"
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2280,120
+__PrivCrochet_tags: 
+title: 3_3
+---
+
+-> "I want to give in."
+    Vera: "Am I hearing you right?"
+    Vera: "You'd give up Charlotte just to appease your mother?"
+
+    -> "I'm also tired of being a woman."
+        Vera: "Is it the makeup and dresses?"
+        Vera: "I know, it's very hard to get ready every morning..."
+        Vera: "But don't you think it's worth it to see Charlotte as her best self?"
+
+        -> "It's the stress of living a double life."
+            You: "I mean, I have to present male at home."
+            You: "So why bother, right?"
+            Vera: "Heh. This is where I'd suggest you start HRT..."
+            Vera: "But maybe I shouldn't."
+            Vera: "That would be solving one problem with what could be a bigger problem."
+    
+        ->  "Maybe Charlotte was just a phase."
+            Vera: "Be very careful of where you're going with that phrase."
+            Vera: "Don't say that in front of other trans people."
+            Vera: "You wouldn't want to say that their transition is a phase..."
+            Vera: "And if you say that about me, you're done."
+            
+        -> "Nah, I'm done."
+            You: "I feel like I'm on a trial version of femininity."
+            You: "And it's expiring soon."
+            You: "I'm ready to go back to my male life now."
+            Vera: "Hmm. That's not something I thought I'd hear."
+            Vera: "I hope it's really you speaking, then."
+            Vera: "Not any external forces pressuring you to give up Charlotte..."
+            Vera: "But a decision made with Charlotte's consent too."
+
+    -> "I prioritise my mother."
+        Vera: "Heh. Well, it's your choice."
+        Vera: "I personally could never do that."
+        Vera: "To be saccharinely sweet to your mother..."
+        Vera: "To the extent where you'd give up who you are to get there..."
+        Vera: "Ugh. Not my thing."
+    
+    Vera: "Still... you had a good thing going on, Charlotte."
+    Vera: "Regardless of your reasons, I hope you don't do something you regret."
+    Vera: "And, please, remember this vibrant period of self-expression."
+    Vera: "It's probably the happiest part of your life. So far."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2280,360
+__PrivCrochet_tags: 
+title: 3_4
+---
+-> "Actually, I just want to hide."
+    Vera: "Heh. That's kind of what I'm doing, too."
+    Vera: "My parents are entire time zones away."
+    Vera: "But, yours are only MRT stations away..."
+    Vera: "And before long, you'll be staying with them again."
+    Vera: "So how do you think you can hide?"
+
+    -> "Plastic box under the bed."
+        Vera: "What?"
+        Vera: "Oh, you mean like, literally hiding everything in a box."
+        Vera: "Well, that's one way to do it, but..."
+        Vera: "Wouldn't it be hard to access your stuff?"
+        Vera: "And besides, this isn't really a long-term solution, isn't it?"
+        Vera: "You're still under your parents' control."
+        Vera: "Charlotte would still have to live with them."
+        
+    -> "Rent my own place."
+        Vera: "Oh, that'd be nice."
+        Vera: "But I hear rentals here are super high..."
+        Vera: "I mean, I'm not one to ask for budgeting advice."
+        Vera: "Still, I'm sure there are other reasons you'd want to have your own place."
+        Vera: "We're in our twenties, gonna graduate from university..."
+        Vera: "Yet we're still dependent on our parents?"
+        You: "Doesn't sit well with me, yeah."
+        
+    -> "Move overseas."
+        Vera: "Yass! Love that for you."
+        Vera: "I mean, if I could travel anywhere in the world, it would be back to California."
+        Vera: "That was really peak Vera."
+        Vera: "But, you know, I've been moving around since I was little."
+        Vera: "Countries, allegiances, all that doesn't matter to me unless citizenship gives benefits."
+        Vera: "But, as far as I know, you're not that type of person, right?"
+
+        -> "Yeah, I'll miss this place."
+            You: "It's not perfect, but I've invested too much of my life here to just up and leave."
+            Vera: "Ah. That's... a pity."
+
+        -> "Nope. Screw this place."
+            You: "So many of us are moving overseas after all."
+            You: "What's one more person?"
+            You: "Besides, I know this society will never be happy with Charlotte."
+
+    Vera: "Well, either way, it would be good to travel the world first."
+    Vera: "Get a sense of what life's like in other countries and then decide."
+    Vera: "Which ultimately comes back to money, doesn't it..."
+===
