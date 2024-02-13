@@ -1,6 +1,10 @@
 # charlotte
 The project file
 
+# Info
+We periodically release the game's executable under Releases.
+We also host the game on HTML5 on our github page: https://charlotte-crisis.github.io/charlotte/
+
 Gamemaker project is under the file `Charlotte-Crisis`
 
 Arrow keys left and right to move.
