@@ -36,12 +36,12 @@ draw_text(_viewport_width - _x_margin + _x_text_margin,
 #endregion
 
 #region Confidence Bar
-var _bar_length = 150;
+var _bar_length = 180;
 var _bar_height = 16;
 var _rect_offset = 32;
 
 draw_set_color(c_white);
-draw_text(_x_text_margin, _y_padding, string("CONFIDENCE: {0}", confidence));
+draw_text(_x_text_margin, _y_padding, string("CONFIDENCE: {0}/100", confidence));
 
 // Outline rectangle
 draw_rectangle(_x_text_margin,
