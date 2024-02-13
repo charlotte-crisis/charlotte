@@ -209,6 +209,7 @@
     {"name":"E_Portraits","order":18,"path":"sprites/E_Portraits/E_Portraits.yy",},
     {"name":"ChatterboxVariablesFind","order":8,"path":"scripts/ChatterboxVariablesFind/ChatterboxVariablesFind.yy",},
     {"name":"obj_anthony","order":7,"path":"objects/obj_anthony/obj_anthony.yy",},
+    {"name":"fnt_mono","order":3,"path":"fonts/fnt_mono/fnt_mono.yy",},
     {"name":"spr_ui_emp","order":3,"path":"sprites/spr_ui_emp/spr_ui_emp.yy",},
     {"name":"chair","order":1,"path":"sprites/chair/chair.yy",},
     {"name":"CJ_Portraits","order":14,"path":"sprites/CJ_Portraits/CJ_Portraits.yy",},

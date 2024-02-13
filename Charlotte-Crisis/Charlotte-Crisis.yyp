@@ -261,6 +261,7 @@
     {"id":{"name":"E_Portraits","path":"sprites/E_Portraits/E_Portraits.yy",},},
     {"id":{"name":"ChatterboxVariablesFind","path":"scripts/ChatterboxVariablesFind/ChatterboxVariablesFind.yy",},},
     {"id":{"name":"obj_anthony","path":"objects/obj_anthony/obj_anthony.yy",},},
+    {"id":{"name":"fnt_mono","path":"fonts/fnt_mono/fnt_mono.yy",},},
     {"id":{"name":"obj_vera","path":"objects/obj_vera/obj_vera.yy",},},
     {"id":{"name":"spr_ui_emp","path":"sprites/spr_ui_emp/spr_ui_emp.yy",},},
     {"id":{"name":"chair","path":"sprites/chair/chair.yy",},},
