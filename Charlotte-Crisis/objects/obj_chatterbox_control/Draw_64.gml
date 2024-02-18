@@ -19,7 +19,7 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 	var _text_yy = view_hport[0] - (_margin_text) - 16;
 	var _xx; // to be set below.
 	
-	draw_rectangle_center(view_wport[0] / 2, _yy, view_wport[0], _margin_text * 2, false, c_black, BG_ALPHA);
+	draw_rectangle_center(view_wport[0] / 2, _yy, view_wport[0], _margin_text * 2, false, c_dkgray, 1);//BG_ALPHA);
 	
 	// Align text left if speaker is Player, Narrator, or Inner Monologue
 	// Align right otherwise
@@ -48,6 +48,7 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 	}
 	
 	if (ChatterboxGetOptionCount(chatterbox)) {
+		draw_set_valign(fa_middle); // Set text align middle
 		draw_set_halign(fa_center);
 		
 		// Text box width and height
