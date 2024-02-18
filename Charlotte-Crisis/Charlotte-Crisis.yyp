@@ -294,8 +294,8 @@
     {"id":{"name":"IsChatterbox","path":"scripts/IsChatterbox/IsChatterbox.yy",},},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_menu_main","path":"rooms/rm_menu_main/rm_menu_main.yy",},},
     {"roomId":{"name":"rm_class_1","path":"rooms/rm_class_1/rm_class_1.yy",},},
+    {"roomId":{"name":"rm_menu_main","path":"rooms/rm_menu_main/rm_menu_main.yy",},},
     {"roomId":{"name":"rm_bedroom_1","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},},
     {"roomId":{"name":"rm_bus_cj","path":"rooms/rm_bus_cj/rm_bus_cj.yy",},},
     {"roomId":{"name":"rm_class_1_seated","path":"rooms/rm_class_1_seated/rm_class_1_seated.yy",},},
