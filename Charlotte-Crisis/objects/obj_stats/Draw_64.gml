@@ -38,7 +38,7 @@ draw_text(_viewport_width - _x_margin + _x_text_margin,
 #region Confidence Bar
 var _bar_length = 180;
 var _bar_height = 16;
-var _rect_offset = 32;
+var _rect_offset = 24;
 
 draw_set_color(c_white);
 draw_text(_x_text_margin, _y_padding, string("CONFIDENCE: {0}/100", confidence));
@@ -60,6 +60,36 @@ if (confidence < 30) {
 draw_set_color(_rectangle_color);
 
 var _fill_length = confidence/100 * _bar_length;
+// Fill rectangle
+draw_rectangle(_x_text_margin,
+			   _y_padding + _rect_offset,
+			   _x_text_margin + _fill_length, 
+			   _y_padding + _rect_offset + _bar_height,
+			   false);
+
+// Set it back to white just in case.
+draw_set_color(c_white);
+#endregion
+
+#region Experience Bar
+//reuse variables
+_bar_length = 180;
+_bar_height = 8;
+_rect_offset = 80;
+
+draw_set_color(c_white);
+draw_text(_x_text_margin, _y_padding + 56, string("EXPERIENCE: {0}/50", experience%50));
+
+// Outline rectangle
+draw_rectangle(_x_text_margin,
+			   _y_padding + _rect_offset,
+			   _x_text_margin + _bar_length,
+			   _y_padding + _rect_offset + _bar_height,
+			   true) // true as white outline
+
+draw_set_color(c_aqua);
+
+_fill_length = (experience%level_up_amount) * _bar_length;
 // Fill rectangle
 draw_rectangle(_x_text_margin,
 			   _y_padding + _rect_offset,
