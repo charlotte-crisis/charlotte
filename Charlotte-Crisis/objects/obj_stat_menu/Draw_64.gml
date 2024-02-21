@@ -17,7 +17,7 @@ if (current_option < 3) {
 	draw_rectangle_center(_xx, _yy + _yy * current_option, _rect_width, _rect_height, false, c_blue, 1);
 	if (stats_array[current_option] <= 0) {
 		draw_text(_xx, _yy + _yy * current_option, "                          -->");	
-	} else if (levels <= 0) {
+	} else if ((levels <= 0) || (stats_array[current_option] >= 9)) {
 		draw_text(_xx, _yy + _yy * current_option, "<--                          ");	
 	} else {
 		draw_text(_xx, _yy + _yy * current_option, "<--                       -->");	

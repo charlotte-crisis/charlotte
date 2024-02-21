@@ -36,7 +36,8 @@ if (current_option < 3) {
 	
 	// Right key pressed
 	if (_left_right_key == 1) {
-		if (levels > 0) {
+		// only allow level up if enough levels and stat isn't maxed out alr
+		if (levels > 0) && (stats_array[current_option] < 9) {
 			stats_array[current_option] += 1;
 			levels -= 1;
 			levels_used += 1;
