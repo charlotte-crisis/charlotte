@@ -7,7 +7,7 @@ draw_set_font(fnt_mono);
 
 var _yy = (view_hport[0] / 8); // Split options into 1/8 of the screen
 var _xx = (view_wport[0] / 2); // draw in the middle of the screen
-var _y_offset = 128;
+var _y_offset = 96;
 
 var _rect_width = 300;
 var _rect_height = 65;
@@ -50,9 +50,9 @@ switch (current_option) {
 		_description = "Empathy. Truly understand what people feel and connect to them on a deeper level.";
 		break;
 	case 3:
-		_description = "Press Spacebar to confirm your stat allocations.";
+		_description = "Press Spacebar to confirm your stat allocations. Escape to cancel and discard changes.";
 		break;
 }
 
 draw_text_box(_description);
-draw_text(_xx, view_hport[0] - _yy + 16, string("Points allocateable: {0}", levels));
+draw_text(_xx, _yy-16, string("Points available: {0}", levels));
