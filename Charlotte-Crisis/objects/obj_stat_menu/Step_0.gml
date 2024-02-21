@@ -1,7 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// cancel
 if (keyboard_check_pressed(vk_escape)) {
+	obj_player.set_is_interacting(false);
 	instance_destroy(self);
 }
 
@@ -9,6 +11,7 @@ if (keyboard_check_pressed(vk_escape)) {
 if ((current_option == 3) && (keyboard_check_pressed(vk_space))) {
 	obj_stats.set_stats(stats_array);
 	obj_stats.subtract_experience(levels_used);
+	obj_player.set_is_interacting(false);
 	instance_destroy(self);
 }
 

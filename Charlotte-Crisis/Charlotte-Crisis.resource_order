@@ -148,6 +148,7 @@
     {"name":"J_Portraits","order":25,"path":"sprites/J_Portraits/J_Portraits.yy",},
     {"name":"obj_chair_cca","order":5,"path":"objects/obj_chair_cca/obj_chair_cca.yy",},
     {"name":"M_walking_strip8","order":34,"path":"sprites/M_walking_strip8/M_walking_strip8.yy",},
+    {"name":"script_drawing","order":4,"path":"scripts/script_drawing/script_drawing.yy",},
     {"name":"L_idle_strip2","order":28,"path":"sprites/L_idle_strip2/L_idle_strip2.yy",},
     {"name":"ChatterboxGetContentArray","order":2,"path":"scripts/ChatterboxGetContentArray/ChatterboxGetContentArray.yy",},
     {"name":"H_Portraits","order":21,"path":"sprites/H_Portraits/H_Portraits.yy",},

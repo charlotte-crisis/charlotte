@@ -12,7 +12,10 @@ var _y_offset = 128;
 var _rect_width = 300;
 var _rect_height = 65;
 
-draw_text(_xx, view_hport[0] - _yy, string("Points allocateable: {0}", levels));
+for (var _i = 1; _i <= 4; _i++) {
+	draw_rectangle_center(_xx, _y_offset + _yy * _i, _rect_width, _rect_height, false, c_black, 1);	
+}
+
 
 if (current_option < 3) {
 	draw_rectangle_center(_xx, _y_offset + _yy * (current_option + 1), _rect_width, _rect_height, false, c_blue, 1);
@@ -34,6 +37,22 @@ draw_text(_xx, _y_offset + _yy*3, string("Empathy: {0}", stats_array[2]));
 draw_rectangle_center(_xx, _y_offset + _yy*4, _rect_width, _rect_height, true, c_white, 1);	
 draw_text(_xx, _y_offset + _yy*4, "Confirm Allocation");
 
+var _description = "";
+// draw description
+switch (current_option) {
+	case 0:
+		_description = "Intellect. Helps you become (or appear to be) knowledgeable and logical.";
+		break;
+	case 1:
+		_description = "Charisma. Enhances your ability to read the room and charm people accordingly.";
+		break;
+	case 2:
+		_description = "Empathy. Truly understand what people feel and connect to them on a deeper level.";
+		break;
+	case 3:
+		_description = "Press Spacebar to confirm your stat allocations.";
+		break;
+}
 
-
-
+draw_text_box(_description);
+draw_text(_xx, view_hport[0] - _yy + 16, string("Points allocateable: {0}", levels));

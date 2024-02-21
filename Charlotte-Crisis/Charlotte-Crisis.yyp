@@ -191,6 +191,7 @@
     {"id":{"name":"J_Portraits","path":"sprites/J_Portraits/J_Portraits.yy",},},
     {"id":{"name":"obj_chair_cca","path":"objects/obj_chair_cca/obj_chair_cca.yy",},},
     {"id":{"name":"M_walking_strip8","path":"sprites/M_walking_strip8/M_walking_strip8.yy",},},
+    {"id":{"name":"script_drawing","path":"scripts/script_drawing/script_drawing.yy",},},
     {"id":{"name":"L_idle_strip2","path":"sprites/L_idle_strip2/L_idle_strip2.yy",},},
     {"id":{"name":"ChatterboxGetContentArray","path":"scripts/ChatterboxGetContentArray/ChatterboxGetContentArray.yy",},},
     {"id":{"name":"H_Portraits","path":"sprites/H_Portraits/H_Portraits.yy",},},
