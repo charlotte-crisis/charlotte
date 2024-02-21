@@ -283,6 +283,7 @@
     {"id":{"name":"spr_cafe_bars","path":"sprites/spr_cafe_bars/spr_cafe_bars.yy",},},
     {"id":{"name":"fnt_body_small","path":"fonts/fnt_body_small/fnt_body_small.yy",},},
     {"id":{"name":"ChatterboxGetContentSpeaker","path":"scripts/ChatterboxGetContentSpeaker/ChatterboxGetContentSpeaker.yy",},},
+    {"id":{"name":"rm_menu_bedroom","path":"rooms/rm_menu_bedroom/rm_menu_bedroom.yy",},},
     {"id":{"name":"__ChatterboxEvaluate","path":"scripts/__ChatterboxEvaluate/__ChatterboxEvaluate.yy",},},
     {"id":{"name":"__ChatterboxClassText","path":"scripts/__ChatterboxClassText/__ChatterboxClassText.yy",},},
     {"id":{"name":"ChatterboxUnload","path":"scripts/ChatterboxUnload/ChatterboxUnload.yy",},},
@@ -297,8 +298,8 @@
     {"id":{"name":"IsChatterbox","path":"scripts/IsChatterbox/IsChatterbox.yy",},},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_class_1","path":"rooms/rm_class_1/rm_class_1.yy",},},
     {"roomId":{"name":"rm_menu_main","path":"rooms/rm_menu_main/rm_menu_main.yy",},},
+    {"roomId":{"name":"rm_class_1","path":"rooms/rm_class_1/rm_class_1.yy",},},
     {"roomId":{"name":"rm_bedroom_1","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},},
     {"roomId":{"name":"rm_bus_cj","path":"rooms/rm_bus_cj/rm_bus_cj.yy",},},
     {"roomId":{"name":"rm_class_1_seated","path":"rooms/rm_class_1_seated/rm_class_1_seated.yy",},},
@@ -314,6 +315,7 @@
     {"roomId":{"name":"rm_cca_1_seated_18","path":"rooms/rm_cca_1_seated_18/rm_cca_1_seated_18.yy",},},
     {"roomId":{"name":"rm_cca_1_seated_11","path":"rooms/rm_cca_1_seated_11/rm_cca_1_seated_11.yy",},},
     {"roomId":{"name":"rm_class_1_discussion","path":"rooms/rm_class_1_discussion/rm_class_1_discussion.yy",},},
+    {"roomId":{"name":"rm_menu_bedroom","path":"rooms/rm_menu_bedroom/rm_menu_bedroom.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
