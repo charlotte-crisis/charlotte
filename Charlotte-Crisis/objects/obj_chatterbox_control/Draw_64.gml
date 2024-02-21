@@ -54,10 +54,13 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 		var _width = view_wport[0] * 0.6;
 		var _height = 50;
 		draw_set_font(fnt_body_small);
+		var _row = 0;
 		for (var i = 0; i < ChatterboxGetOptionCount(chatterbox); i++) {
 			if (ChatterboxGetOptionConditionBool(chatterbox, i)) {
 				_xx = view_wport[0] / 2;
-				_yy = (view_hport[0] / 8) * (i + 2);
+				_yy = (view_hport[0] / 8) * (_row + 2); 
+				// Increment row ONLY if an option was displayed
+				// Prevent gaps
 				var _icon = "";
 				// Highlight option being selected
 				if (option_index == i) {
@@ -70,6 +73,7 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 				var _option = ChatterboxGetOption(chatterbox, i);
 				
 				draw_text_ext(_xx, _yy, _icon + _option, _linesep, _width - 2  *_margin_text);
+				_row++;
 				
 			}
 		}
