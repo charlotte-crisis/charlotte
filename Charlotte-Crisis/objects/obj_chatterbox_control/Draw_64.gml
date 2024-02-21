@@ -12,14 +12,13 @@ draw_set_font(fnt_body);
 draw_set_valign(fa_top); // text aligned from top to bottom
 
 if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
-	// draw_sprite_ext(characters, 0, _margin_char,				 room_height, size[_me], size[_me], 0, colour[_me], 1);
-	// draw_sprite_ext(characters, 1, view_wport[0] - _margin_char, room_height, size[!_me], size[!_me], 0, colour[!_me], 1);
-	
 	var _yy = view_hport[0] - (_margin_text / 2);
 	var _text_yy = view_hport[0] - (_margin_text) - 16;
 	var _xx; // to be set below.
 	
 	draw_rectangle_center(view_wport[0] / 2, _yy, view_wport[0], _margin_text * 2, false, c_dkgray, 1);//BG_ALPHA);
+	
+	draw_speaker_portrait(speaker);
 	
 	// Align text left if speaker is Player, Narrator, or Inner Monologue
 	// Align right otherwise

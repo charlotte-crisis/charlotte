@@ -8,6 +8,7 @@ if (keyboard_check_pressed(vk_escape)) {
 // confirm choices
 if ((current_option == 3) && (keyboard_check_pressed(vk_space))) {
 	obj_stats.set_stats(stats_array);
+	obj_stats.subtract_experience(levels_used);
 	instance_destroy(self);
 }
 
@@ -29,6 +30,7 @@ if (current_option < 3) {
 		if (_stat_amount > 0) {
 			stats_array[current_option] -= 1;
 			levels += 1;
+			levels_used -= 1;
 		}
 	}
 	
@@ -37,6 +39,7 @@ if (current_option < 3) {
 		if (levels > 0) {
 			stats_array[current_option] += 1;
 			levels -= 1;
+			levels_used += 1;
 		}
 	}
 

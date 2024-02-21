@@ -10,12 +10,12 @@ if instance_number(object_index) > 1{
 confidence = 50;
 
 // Priamry stats
-intelligence = 3;
-charisma = 3;
-empathy = 3;
+intelligence = 2;
+charisma = 2;
+empathy = 2;
 
 // XP
-experience = 155;
+experience = 150;
 
 // Gender Meter
 // lets say its a scale from 1 to 100.
@@ -35,5 +35,9 @@ set_stats = function(_stat_array) {
 	intelligence = _stat_array[0];	
 	charisma = _stat_array[1];
 	empathy = _stat_array[2];
+}
+
+subtract_experience = function(_levels) {
+	experience -= _levels * 50;	
 }
 #endregion
