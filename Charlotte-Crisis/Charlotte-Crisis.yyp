@@ -61,6 +61,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
   ],
   "IncludedFiles": [
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"cca_1 caa 190224.yarn","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"cca_1.yarn","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"class_1.yarn","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"hangout_anthony.yarn","CopyToMask":-1,"filePath":"datafiles",},
@@ -75,6 +76,7 @@
     "IDEVersion": "2023.11.1.129",
   },
   "resources": [
+    {"id":{"name":"obj_stat_menu","path":"objects/obj_stat_menu/obj_stat_menu.yy",},},
     {"id":{"name":"spr_mc_female_idle_legs","path":"sprites/spr_mc_female_idle_legs/spr_mc_female_idle_legs.yy",},},
     {"id":{"name":"spr_mc_male_walking_legs","path":"sprites/spr_mc_male_walking_legs/spr_mc_male_walking_legs.yy",},},
     {"id":{"name":"ChatterboxGetContent","path":"scripts/ChatterboxGetContent/ChatterboxGetContent.yy",},},
@@ -206,6 +208,7 @@
     {"id":{"name":"spr_shoes_1","path":"sprites/spr_shoes_1/spr_shoes_1.yy",},},
     {"id":{"name":"J_walking_strip8","path":"sprites/J_walking_strip8/J_walking_strip8.yy",},},
     {"id":{"name":"ChatterboxFastForward","path":"scripts/ChatterboxFastForward/ChatterboxFastForward.yy",},},
+    {"id":{"name":"script_getters","path":"scripts/script_getters/script_getters.yy",},},
     {"id":{"name":"spr_mc_female_idle_head","path":"sprites/spr_mc_female_idle_head/spr_mc_female_idle_head.yy",},},
     {"id":{"name":"__ChatterboxXORShift32Random","path":"scripts/__ChatterboxXORShift32Random/__ChatterboxXORShift32Random.yy",},},
     {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},},
@@ -294,8 +297,8 @@
     {"id":{"name":"IsChatterbox","path":"scripts/IsChatterbox/IsChatterbox.yy",},},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_class_1","path":"rooms/rm_class_1/rm_class_1.yy",},},
     {"roomId":{"name":"rm_menu_main","path":"rooms/rm_menu_main/rm_menu_main.yy",},},
+    {"roomId":{"name":"rm_class_1","path":"rooms/rm_class_1/rm_class_1.yy",},},
     {"roomId":{"name":"rm_bedroom_1","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},},
     {"roomId":{"name":"rm_bus_cj","path":"rooms/rm_bus_cj/rm_bus_cj.yy",},},
     {"roomId":{"name":"rm_class_1_seated","path":"rooms/rm_class_1_seated/rm_class_1_seated.yy",},},
