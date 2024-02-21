@@ -89,7 +89,7 @@ draw_rectangle(_x_text_margin,
 
 draw_set_color(c_aqua);
 
-_fill_length = (experience%level_up_amount) * _bar_length;
+_fill_length = (experience%level_up_amount)/level_up_amount * _bar_length;
 // Fill rectangle
 draw_rectangle(_x_text_margin,
 			   _y_padding + _rect_offset,
