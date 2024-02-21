@@ -16,6 +16,8 @@ empathy = 2;
 
 // XP
 experience = 150;
+// amount of XP needed to level up
+level_up_amount = 50;
 
 // Gender Meter
 // lets say its a scale from 1 to 100.
@@ -28,7 +30,7 @@ get_stats = function() {
 }
 
 get_number_of_levels = function() {
-	return floor(experience/50);	
+	return floor(experience/level_up_amount);	
 }
 
 set_stats = function(_stat_array) {
@@ -38,6 +40,6 @@ set_stats = function(_stat_array) {
 }
 
 subtract_experience = function(_levels) {
-	experience -= _levels * 50;	
+	experience -= _levels * level_up_amount;	
 }
 #endregion
