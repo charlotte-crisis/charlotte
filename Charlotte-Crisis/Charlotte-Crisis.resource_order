@@ -176,6 +176,7 @@
     {"name":"obj_stats","order":1,"path":"objects/obj_stats/obj_stats.yy",},
     {"name":"spr_hostel_bars","order":4,"path":"sprites/spr_hostel_bars/spr_hostel_bars.yy",},
     {"name":"V_idle_strip2","order":9,"path":"sprites/V_idle_strip2/V_idle_strip2.yy",},
+    {"name":"obj_desk","order":3,"path":"objects/obj_desk/obj_desk.yy",},
     {"name":"space_strip4","order":4,"path":"sprites/space_strip4/space_strip4.yy",},
     {"name":"ChatterboxIsWaiting","order":5,"path":"scripts/ChatterboxIsWaiting/ChatterboxIsWaiting.yy",},
     {"name":"spr_mc_female_sitting_torso","order":3,"path":"sprites/spr_mc_female_sitting_torso/spr_mc_female_sitting_torso.yy",},
