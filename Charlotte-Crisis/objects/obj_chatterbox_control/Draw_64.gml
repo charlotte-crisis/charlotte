@@ -42,11 +42,11 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 	// If inner monologue: Set italic and do not print speaker, only speech
 	if (_narrator) {
 		draw_set_font(fnt_body_italic);
-		draw_text_ext(_xx, _text_yy, speech, _linesep, view_wport[0] - (4 * _margin_text));	
+		draw_text_ext(_xx, _text_yy, speech, _linesep, view_wport[0] - 2*_xx);	
 		draw_set_font(fnt_body);
 		
 	} else {
-		draw_text_ext(_xx, _text_yy, speaker + ": " + speech, _linesep, view_wport[0] - (4 * _margin_text));	
+		draw_text_ext(_xx, _text_yy, speaker + ": " + speech, _linesep, view_wport[0] - 2*_xx);	
 	}
 	
 	if (ChatterboxGetOptionCount(chatterbox)) {
