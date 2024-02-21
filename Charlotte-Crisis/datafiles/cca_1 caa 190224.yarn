@@ -401,7 +401,7 @@ Vera: "Hey Charlotte. Are you feeling okay?"
 <<jump 12>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2061,-40
+__PrivCrochet_position: 2080,-40
 __PrivCrochet_tags: 
 title: 12
 ---
@@ -463,9 +463,10 @@ Vera: "You know, trans women."
 
 -> You: "So what do you want to do about it?"
     Vera: "Advocacy. Petitions. Civil unrest, question mark."
-    Vera: "But even surviving this far, is my personal form of resistance against a system that won't accept me for who I am." (+ 10 XP) <<addExperience(10)>>
+    <<addExperience(10)>>
+    Vera: "But even surviving this far, is my personal form of resistance against a system that won't accept me for who I am." (+ 10 XP) 
     -> You: "I'm proud of you for that." (EMP check)
- <<set $diceroll = diceRoll($emp)>>
+        <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll < 6>>        
             Vera: "Thanks."
@@ -494,7 +495,7 @@ Vera: "You know, trans women."
 <<stop>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1571,215
+__PrivCrochet_position: 1560,200
 __PrivCrochet_tags: 
 title: 13
 ---
@@ -648,7 +649,7 @@ Vera: "I am curious, though. Why not draw Charlotte?"
 <<jump 17>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2061,442
+__PrivCrochet_position: 2080,440
 __PrivCrochet_tags: 
 title: 17
 ---
@@ -683,7 +684,7 @@ Anthony: "Hey. Didn't you realise something was... off about that girl?"
 <<jump 19>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1821,682
+__PrivCrochet_position: 1840,680
 __PrivCrochet_tags: 
 title: 19
 ---
