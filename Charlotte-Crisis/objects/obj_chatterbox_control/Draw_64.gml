@@ -56,15 +56,15 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 		draw_set_font(fnt_body_small);
 		var _row = 0;
 		
-		/* This extra bit of code is to change the option_index to the first
-		** available option. But better to just put hidden options not at the front.
+		//This extra bit of code is to change the option_index to the first
+		//** available option. But better to just put hidden options not at the front.
 		
 		for (var i = 0; i < ChatterboxGetOptionCount(chatterbox); i++) {
 			if (ChatterboxGetOptionConditionBool(chatterbox, i)) {
 				option_index = i;
 			}
 		}
-		*/
+		
 		
 		for (var i = 0; i < ChatterboxGetOptionCount(chatterbox); i++) {
 			if (ChatterboxGetOptionConditionBool(chatterbox, i)) {
