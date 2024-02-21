@@ -62,6 +62,7 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 		for (var i = 0; i < ChatterboxGetOptionCount(chatterbox); i++) {
 			if (ChatterboxGetOptionConditionBool(chatterbox, i)) {
 				option_index = i;
+				break;
 			}
 		}
 		
