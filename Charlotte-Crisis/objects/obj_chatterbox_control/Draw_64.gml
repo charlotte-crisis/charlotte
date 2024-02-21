@@ -57,7 +57,7 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 		for (var i = 0; i < ChatterboxGetOptionCount(chatterbox); i++) {
 			if (ChatterboxGetOptionConditionBool(chatterbox, i)) {
 				_xx = view_wport[0] / 2;
-				_yy = (view_hport[0] / 8) * (i + 3);
+				_yy = (view_hport[0] / 8) * (i + 2);
 				var _icon = "";
 				// Highlight option being selected
 				if (option_index == i) {
