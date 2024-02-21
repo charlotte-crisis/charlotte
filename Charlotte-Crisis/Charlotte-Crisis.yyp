@@ -59,6 +59,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Wardrobe","folderPath":"folders/Sprites/Wardrobe.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Bedroom","folderPath":"folders/Rooms/Bedroom.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"cca_1 caa 190224.yarn","CopyToMask":-1,"filePath":"datafiles",},
@@ -206,6 +207,7 @@
     {"id":{"name":"obj_sage","path":"objects/obj_sage/obj_sage.yy",},},
     {"id":{"name":"ChatterboxIsStopped","path":"scripts/ChatterboxIsStopped/ChatterboxIsStopped.yy",},},
     {"id":{"name":"ChatterboxGetAllContentString","path":"scripts/ChatterboxGetAllContentString/ChatterboxGetAllContentString.yy",},},
+    {"id":{"name":"rm_bedroom_1_Child_0","path":"rooms/rm_bedroom_1_Child_0/rm_bedroom_1_Child_0.yy",},},
     {"id":{"name":"spr_ui_cha","path":"sprites/spr_ui_cha/spr_ui_cha.yy",},},
     {"id":{"name":"spr_shoes_1","path":"sprites/spr_shoes_1/spr_shoes_1.yy",},},
     {"id":{"name":"J_walking_strip8","path":"sprites/J_walking_strip8/J_walking_strip8.yy",},},
@@ -319,6 +321,7 @@
     {"roomId":{"name":"rm_cca_1_seated_18","path":"rooms/rm_cca_1_seated_18/rm_cca_1_seated_18.yy",},},
     {"roomId":{"name":"rm_cca_1_seated_11","path":"rooms/rm_cca_1_seated_11/rm_cca_1_seated_11.yy",},},
     {"roomId":{"name":"rm_class_1_discussion","path":"rooms/rm_class_1_discussion/rm_class_1_discussion.yy",},},
+    {"roomId":{"name":"rm_bedroom_1_Child_0","path":"rooms/rm_bedroom_1_Child_0/rm_bedroom_1_Child_0.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
