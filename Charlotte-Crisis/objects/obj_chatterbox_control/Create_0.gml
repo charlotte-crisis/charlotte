@@ -4,18 +4,20 @@ if instance_number(object_index) > 1 {
     instance_destroy();
     exit;
 }
-ChatterboxLoadFromFile("class_1.yarn");
+
+ChatterboxLoadFromFile("menu.yarn");
 chatterbox = ChatterboxCreate();
-ChatterboxJump(chatterbox, "1");
-chatterbox_update();
+// ChatterboxJump(chatterbox, "1");
+// chatterbox_update();
 
 option_index = 0;
 
 size = [0.7, 0.75];
 colour = [c_ltgray, c_white];
 
+speaker_and_speech = undefined;
 
-obj_player.set_is_talking(true);
+// obj_player.set_is_talking(true);
 
 function chatterbox_set(_node_name) {
 	ChatterboxJump(chatterbox, _node_name);
@@ -28,6 +30,11 @@ function chatterbox_set(_node_name) {
 	ChatterboxAddFunction("diceRoll", dice_roll);
 
 	ChatterboxAddFunction("setGender", set_player_gender);
+	
+	ChatterboxAddFunction("getIntelligence", get_intelligence);
+	ChatterboxAddFunction("getCharisma", get_charisma);
+	ChatterboxAddFunction("getEmpathy", get_empathy);
+	
 	
 	/// Door Functions here
 	ChatterboxAddFunction("goto_room_class_1", goto_room_class_1);

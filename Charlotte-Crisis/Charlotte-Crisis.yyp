@@ -67,6 +67,7 @@
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"hangout_anthony.yarn","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"hangout_nadia.yarn","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"hangout_vera.yarn","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"menu.yarn","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"room_1_after_cca.yarn","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"room_1.yarn","CopyToMask":-1,"filePath":"datafiles",},
   ],

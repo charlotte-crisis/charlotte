@@ -1,0 +1,25 @@
+#__PrivCrochet_version:1
+# if you've already visited then it will show the concise version.
+# Interacting with mirror
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 600,360
+__PrivCrochet_tags: 
+title: door
+---
+Leaving this room will begin the game. (Press space to continue)
+Make sure you have allocated your stats at your desk.
+
+<<set $cha = getCharisma()>>
+<<set $int = getIntelligence()>>
+<<set $emp = getEmpathy()>>
+
+You have {$int} Intelligence (INT), {$cha} Charisma (CHA), and {$emp} Empathy (EMP).
+Do you wish to continue?
+
+
+-> Yes (Start the game!)
+    
+    <<goto_room_class_1()>>
+
+-> No (Close this dialogue)
+===

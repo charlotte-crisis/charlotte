@@ -26,6 +26,18 @@ function add_experience(_amount) {
 	return;	
 }
 
+function get_intelligence() {
+	return obj_stats.intelligence;	
+}
+
+function get_charisma() {
+	return obj_stats.charisma;	
+}
+
+function get_empathy() {
+	return obj_stats.empathy;	
+}
+
 #endregion
 
 #region Skill checks, Diceroll

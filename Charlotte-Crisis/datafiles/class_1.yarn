@@ -1,16 +1,13 @@
 #__PrivCrochet_version:1
 # Global Variables here
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 280,360
+__PrivCrochet_position: 281,360
 __PrivCrochet_tags: 
 title: 1
 ---
-<<set $cha = 3>>
-<<set $int = 3>>
-<<set $emp = 3>>
 <<set $name = "Charlotte">>
 
-You arrive just in time for class. (press Space to advance dialogue)
+You arrive just in time for class.
 This course is quite popular so almost all the seats are already filled.
 Maybe you can talk to some of your classmates before sitting down.
 (Press UP to interact with characters or objects.)
@@ -589,7 +586,7 @@ Sage: "I feel I have a personal stake in this conversation, so I thought I shoul
     <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1080,80
+__PrivCrochet_position: 1082,84
 __PrivCrochet_tags: 
 title: 5_1
 ---
