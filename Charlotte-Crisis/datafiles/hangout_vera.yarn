@@ -24,6 +24,8 @@ __PrivCrochet_position: 1200,400
 __PrivCrochet_tags: 
 title: 0_options
 ---
+What do you want to talk about?
+
 -> "So... what's it like being trans?"
     <<jump 1_1>>
 -> "How's school?"
