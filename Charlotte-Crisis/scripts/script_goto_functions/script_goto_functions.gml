@@ -8,12 +8,14 @@ function fade_room(_room) {
 	_inst.target_room = _room;
 }
 
+#region Classroom Gotos
 function goto_room_class_1(){
 	fade_room(rm_class_1);
 	
 	// room_goto(rm_class_1);
 	obj_player.x = 296;
 	obj_player.y = 74;
+	obj_player.facing_direction = -1;
 	
 	// Need to load then create.
 	ChatterboxLoadFromFile("class_1.yarn");
@@ -39,6 +41,9 @@ function goto_room_class_1_discussion() {
 	obj_player.is_sitting = true;
 }
 
+#endregion
+
+#region Bus Gotos
 function goto_room_bus(){
 	room_goto(rm_bus);
 	obj_player.x = 223;
@@ -72,6 +77,7 @@ function goto_room_bus_s(){
 	obj_player.facing_direction = -1;
 	obj_player.is_sitting = false;
 }
+#endregion
 
 #region goto Bedrooms
 function goto_room_bedroom(){

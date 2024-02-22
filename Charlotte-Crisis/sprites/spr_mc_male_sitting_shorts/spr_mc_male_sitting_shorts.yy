@@ -27,7 +27,7 @@
   "origin": 1,
   "parent": {
     "name": "Sitting",
-    "path": "folders/Sprites/Male MC/Sitting.yy",
+    "path": "folders/Sprites/Male MC (Old)/Sitting.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
