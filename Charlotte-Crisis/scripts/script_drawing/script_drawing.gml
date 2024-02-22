@@ -20,10 +20,3 @@ function draw_text_box(_speech){
 }
 
 
-/// @function fade_room(_room, _duration, _colour)
-/// @param _room The target room to move to
-function fade_room(_room) {
-	// Create fade object at top left corner at highest depth
-	var _inst = instance_create_depth(0, 0, 0, obj_fade);
-	_inst.target_room = _room;
-}
