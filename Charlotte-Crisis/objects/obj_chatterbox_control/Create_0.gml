@@ -17,6 +17,7 @@ colour = [c_ltgray, c_white];
 
 speaker_and_speech = undefined;
 speaker = "";
+speech = "";
 
 // obj_player.set_is_talking(true);
 

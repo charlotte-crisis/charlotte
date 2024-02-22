@@ -65,29 +65,6 @@ function dice_roll(_parameters) {
 
 #endregion
 
-#region NPC Functions
-	
-
-	/// @param {Array} _parameters {Name, amount}
-	function change_npc_relationship(_parameters) {
-		var _name = _parameters[0];
-		var _amount = real(_parameters[1]);
-		
-		npc = get_npc(_name);
-		npc.change_relationship(_amount);
-
-		return npc.relationship;
-	}
-	
-	function get_npc_relationship(_parameters) {
-		var _name = _parameters[0];
-		
-		npc = get_npc(_name);
-		return npc.relationship;
-	}
-
-#endregion
-
 #region Confidence
 /// @function change_confidence(_amount);
 /// @description	 Adds amount of relationship. Limit at 0 or 100.
