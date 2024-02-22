@@ -1,7 +1,6 @@
 #__PrivCrochet_version:1
-# Maybe turn on a black overlay here
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 240,358
+__PrivCrochet_position: 238,358
 __PrivCrochet_tags: 
 title: 1
 ---
@@ -10,7 +9,7 @@ The words "self-portrait" are projected onto the screen.
 You should probably explore what and who is in the club room first.
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 520,160
+__PrivCrochet_position: 527,49
 __PrivCrochet_tags: 
 title: 2
 ---
@@ -20,9 +19,61 @@ Vera: "Hi, {$name}, I'm Vera."
     Vera: "Wow, you look great!"
     You: "Thanks!" (+5% confidence) <<changeConfidence(5)>>
 <<endif>>
+-> "How are things here?" <<if !optionChosen()>>
+Vera: "Are you new? I've never seen you before."
+Vera: "Well, we usually have a prompt for the week which we try to draw out."
+Vera: "Then we can walk around and see each others' progress."
+<<jump 2>>
+
+-> "What are you drawing?"
+Vera reveals her drawing. It's her face on a very psychedelic background.
+Vera: "Yes, I know, lots of rainbows."
+
+    -> "Did it take you long to make this?" <<if !optionChosen()>>
+    Vera: "Haha, I guess not... I had the idea in mind already."
+    Vera: "But it's more complex than just spreading colour over paper."
+    <<jump 2>>
+    
+    -> "What do the rainbows mean?" (INT check)
+    Vera: "Take a guess."
+    <<set $diceroll = diceRoll($int)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll < 5>>
+        You: "Uh... is it a weather thing? Or some art movement I've never heard of?"
+        Vera: "Haha, neither of those."
+        Vera: "Don't worry, I'm not offended. Though I am a bit surprised you don't know."
+        You: "Don't know what?"
+        Vera: "Rainbows? LGBT? You've never seen the pride flag before?"
+        You: "Uh..."
+        Vera: "But yeah, that's what it means. I'm queer and proud."
+        <<else>>
+        You: "It's an LGBT thing." (+10 XP)
+        Vera: "Yes, absolutely. I'm a queer woman."
+        You: "Oh, that's cool."
+        Vera: "Thank you!" (+5% Vera relationship)
+        (if presenting as Charlotte) Vera: "I'm guessing you'd know a thing or two about that too."
+        <<endif>>
+    
+    -> "It looks nice!"
+    Vera: "Thank you~ You like rainbows too?" (+5% Vera relationship)
+    You: "I don't see a lot of them around. But yours looks good."
+    Vera: "Yes, the world could do with a lot more colour."
+    Vera: "I guess that's what I want to say through my art, too."
+    Vera: "You should start your drawing! Don't wanna hold you up any longer."
+    #(end Vera interaction)
+    
+    -> "It looks excessive."
+    Vera: "Excuse me?"
+    You: "Yeah. Too many rainbows. And you didn't finish your face."
+    Vera: "Okay, fine. It's just a work in progress."
+    Vera: "But damn, I didn't know you were the sort to take offence at rainbows." (-5% Vera relationship)
+    #(end Vera interaction)
+
+-> "Alright, I'll leave you be then."
+Vera: "See you."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 759,358
+__PrivCrochet_position: 756,359
 __PrivCrochet_tags: 
 title: 5
 ---
@@ -46,7 +97,7 @@ Eleanor: "Today's theme is quite simple: self-portrait."
 <<jump 6>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 997,359
+__PrivCrochet_position: 994,358
 __PrivCrochet_tags: 
 title: 6
 ---
@@ -59,73 +110,122 @@ You start drawing. Before you know it, 20 minutes have passed.
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1238,359
+__PrivCrochet_position: 1238,353
 __PrivCrochet_tags: 
 title: 7
 ---
-Eleanor: "Alright, let's pause, everyone."
-Eleanor: "Shall we share what we've drawn? Who would like to go first?"
-There's an awkward silence...
-Eleanor: "I know we're all new here, but someone's gotta start first. Don't worry! No judgement."
-Vera: "Alright, fine. Hi everyone, I'm Vera, she/her, and here's what I got."
-Vera reveals her drawing. It's her face on a very psychedelic background.
-Vera: "Yes, I know, lots of rainbows."
-Nadia: "Hmm, it's a bit hard to see your face, but still, really nice!"
-Anthony just shrugs.
-You feel the pressure of four pairs of eyes on you... what will you say?
+Eleanor: "Wow, {$name}! That's a nice drawing."
+Eleanor: "Wanna show it to the rest of us?"
+-> "Okay, sure."
+Eleanor: "Alright, everyone, {$name} has something for us to see!"
+    <<if $name == "Charlotte">>
+    <<if $drawing == "Female">>
+        <<jump 10>>
+    <<else>>
+        <<jump 15>>
+    <<endif>>
+    <<else>>
+    <<if $drawing == "Female">>
+        <<jump 13>>
+    <<else>>
+        <<jump 18>>
+    <<endif>>
+    <<endif>>
 
--> You: "What do the rainbows mean?"
-    Vera: "It represents my freedom to love, and to be myself." (+ 10 XP) <<addExperience(10)>>
-    Anthony: "Of course. Coming from someone who needs to introduce herself with pronouns."
-    Vera: "I'll pretend I didn't hear that. Anyway..."
-    -> You: "It looks nice!"
-        Vera: "Thank you~ You like rainbows too?" (+5% Vera relationship) <<changeRelationship("V", 5)>>
-        You: "I don't see a lot of them around. But yours looks good."
-        Vera: "Yes, the world could do with a lot more colour."
-        Vera: "I guess that's what I want to say through my art, too."
-        Vera: "Anyway, who's next?"
-        <<jump 8>>
+-> "No thanks."
+Eleanor: "You sure? I mean, with you being new here, it'd be nice to introduce yourself..."
+    -> "No and stop asking."
+    Eleanor: "Okay, whatever you're comfortable with."
+    The rest of the session passes uneventfully.
+    <<stop>>
     
-    -> You: "It looks excessive."
-        Vera: "Excuse me?"
-        You: "Yeah. Too many rainbows. And you didn't finish your face."
-        Vera: "Okay, fine. You didn't need to put it down like that, though." (-5% Vera relationship) <<changeRelationship("V", -5)>>
-        Anthony: "Actually, I agree also. So many colours for what?" (+5% Anthony relationship) <<changeRelationship("A", 5)>>
-        Eleanor: "Okay, moving on..."
-        <<jump 8>>
-
--> You: "It's okay, I guess. Not much else to say."
-    Vera: "Alright then. Next person?"
-    <<jump 8>>
+    -> "Okay, fine."
+    Eleanor: "Don't worry about it, we won't judge."
+    <<if $name == "Charlotte">>
+        <<if $drawing == "Female">>
+            <<jump 10>>
+        <<else>>
+            <<jump 15>>
+        <<endif>>
+    <<else>>
+        <<if $drawing == "Female">>
+            <<jump 13>>
+        <<else>>
+            <<jump 18>>
+        <<endif>>
+    <<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1480,479
-__PrivCrochet_tags: 
-title: 8
----
-Nadia: "Uh... Okay, I'll go next! I'm Nadia, and this is my self-portrait."
-Nadia pulls out... a picture of a man drawn in anime style?
-Anthony: "Uh... wrong picture?"
-Nadia: "Oh! So silly of me. Or is it?"
-Nadia raises an eyebrow with a devious grin on her face.
-She pulls out another drawing, this time of her side profile.
-Nadia: "Yep, here's mine. I'm sorry I'm worse at drawing female than male faces..."
-Vera: "It looks good!"
-Anthony: "Even if it's very anime-styled."
-<<declare $askedAboutAnime = false>>
-<<jump 8_options>>
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 520,360
+__PrivCrochet_position: 517,322
 __PrivCrochet_tags: 
 title: 3
 ---
 You: "Hi! I'm {$name}."
 Anthony: "Hi, I'm Anthony. Please don't disturb me."
 Anthony seems very engrossed in his art. Let him be.
+
+-> "How are things here?"<<if !optionChosen()>>
+Anthony dismissively points to the whiteboard.
+Anthony: "Draw something based on the prompt. We usually talk about it later."
+<<jump 3>>
+
+-> "What are you drawing?"
+Anthony shows you a picture of an anthill, with ants all around it.
+Anthony: "Ant-thony. Get it?"
+    -> "Are you sure you want that as your self-portrait...?" <<if !optionChosen()>>
+    Anthony: "It works. I'm insignificant and should be squished."
+    You: "Isn't that quite pessimistic..."
+    Anthony: "It's just the truth."
+    <<jump 3>>
+    
+    -> "Ants aren't all bad, right?" (INT check) <<if !optionChosen()>>
+    Anthony: "What?"
+    <<set $diceroll = diceRoll($int)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll > 5>>
+        You: "Yeah. Hardworking, can lift 100 times their body weight, all that stuff." 
+        Anthony: "Okay, and?"
+        You: "That's just another way to interpret your art."
+        You: "Why see only the bad side when there's a good side to it too?" (+10 XP) <<addExperience(10)>>
+        Anthony: "I guess so..."
+        
+        <<else>>
+        You: "Uh... ants are..."
+        Anthony: "Trash. Pests. Like me."
+        <<endif>>
+    <<jump 3>>
+    
+    -> "Is everything okay?" (EMP check)
+    Anthony: "What would you know?"
+    
+    <<set $diceroll = diceRoll($emp)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll > 5>>
+        You: "Well, I know enough to ask about people who aren't feeling too good."
+        You: "But it's okay if you don't want to share."
+        Anthony sighs.
+        Anthony: "I'm the ant, and the world is the one squishing me."
+        Anthony: "School, friends, relationship, future... all of that is super stressful to think about."
+        You: "I guess you can put your feelings to paper here."
+        Anthony: "I guess..." (+5% Anthony relationship)
+        
+        <<else>>    
+        Anthony: "I don't wanna talk about it."
+        You: "Well, that's kinda pathetic."
+        Anthony: "What?"
+        You: "So emo for what?"
+        Anthony: "Hmph. As if you care." (-5% Anthony relationship) <<changeRelationship("A", -5)>>
+        <<endif>>
+    
+    -> "I guess it works."
+    You: "And it's your art, so shouldn't you be proud of it?"
+    Anthony: "I guess so."
+
+-> "Alright, I'll leave you be then."
+Anthony: "Mm."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 519,557
+__PrivCrochet_position: 514,582
 __PrivCrochet_tags: 
 title: 4
 ---
@@ -135,75 +235,47 @@ Nadia: "Hi, {$name}! I'm Nadia."
     Nadia: "By the way, nice outfit!"
     You: "Thanks!" (+5% confidence) <<changeConfidence(5)>>
 <<endif>>
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1720,360
-__PrivCrochet_tags: 
-title: 9
----
-Anthony pulls out a picture of an anthill, with ants all around it.
-Anthony: "Hi, I'm Anthony. Ant-thony. Get it?"
-Eleanor: "Uh... are you sure that's your self-portrait?"
-Anthony: "What? It represents me, what. Insignificant, destined to be squished."
-Vera: "Don't say that."
-Nadia: "Yeah, that's quite self-pitying."
-Your turn to comment.
 
--> You: "It's okay, I guess. Not much else to say."
-    Anthony: "Alright then."
-    Eleanor: "Okay, next is you, {$name}! Show us what you got."
+-> "How are things here?" <<if !optionChosen()>>
+Nadia: "You're new, right?"
+Nadia: "Don't worry, it's not too hard. We're all about exploration here."
+Nadia: "There's a prompt on the board, but even that's optional if you've got a better idea!"
+<<jump 4>>
 
--> You: "I'll be honest, that sounds kind of pathetic."
-    Anthony: "What?"
-    You: "Yeah. It's almost like you're begging for our pity."
-    Vera: "Okay, that's quite uncalled for..."
-    Nadia: "The art isn't all bad."
-    Eleanor: "Yeah, please, let's focus on the art here."
-    Eleanor: "Let's see your piece."
-
--> You: "At least Vera and Nadia drew themselves. You just drew something generic."
-    Vera: "Nah, don't drag us into this. He drew what he wanted to."
-    Eleanor: "We all have to start somewhere, {$name}. Please respect that."
-    Anthony: "It's okay. I know I'm useless." (-5% Anthony relationship) <<changeRelationship("A", -5)>>
-    Eleanor: "Please, let's focus on the art here."
-    Eleanor: "Let's see your piece."
-
--> You: "Well, ants aren't all bad, right?" (INT 6 check)
+-> "What are you drawing?"
+Nadia: "Oh, I'm just drawing myself."
+Nadia: "I'm still in the work-in-progress stage, though, so bear with me!"
+    -> "Hmm. Why did you draw in anime style?" <<if !optionChosen()>>
+    Nadia: "Well... I guess it's easier, right?"
+    Nadia: "After all, it was designed for 2D artists."
+    You: "That's fair."
+    <<jump 4>>
+    
+    -> "It's okay, I guess. Not much else to say."
+    Nadia: "Alright then."
+    Nadia: "Have fun with your own artwork too."
+    
+    -> "You've got some hot guys on that sheet of paper too." (CHA check)
+    Nadia: "Huh? What? It's nothing! I'm just experimenting!"
+    You: "Come on, I won't judge."
     <<set $diceroll = diceRoll($int)>>
-    [You rolled a {$diceroll}.]
-    <<if $diceroll > 5>>
-        Anthony: "What?"
-        You: "Yeah. Hardworking, can lift 100 times their body weight, all that stuff."
-        Anthony: "Okay, and?"
-        You: "That's just another way to interpret your art."
-        You: "Why see only the bad side when there's a good side to it too?"
-        Anthony: "I guess so..." (+5% Anthony relationship) <<changeRelationship("A", 5)>>
-        Eleanor: "Exactly. Okay, what about you, what did you draw?"
-    <<else>>
-        Anthony: "What?"
-        You: "Uh... ants are..."
-        Anthony: "Trash. Pests. Like me."
-        You feel like you haven't contributed to this conversation. Moving on...
-        Eleanor: "Okay, what about you, what did you draw?"
+        [You rolled a {$diceroll}.]
+        <<if $diceroll > 5>>
+        Nadia: "Okay, fine... I like anime. Especially those with hot guys..."
+        You: "You should take pride in that! It's your own style."
+        You: "I think the drawings look good! Both your husbandos and yourself."
+        Nadia: "Thank you... it's rare to hear that. Usually people just judge me." (+5% Nadia relationship)
+        
+        <<else>>
+        Nadia: "Ugh... I'm not comfortable sharing that."
+        Nadia: "Please... don't intrude on my work. I'll show it when I'm ready."
     <<endif>>
 
-// At the end of Anthony's, it's your turn.
-<<if $name == "Charlotte">>
-    <<if $drawing == "Female">>
-        <<jump 10>>
-    <<else>>
-        <<jump 15>>
-    <<endif>>
-<<else>>
-    <<if $drawing == "Female">>
-        <<jump 13>>
-    <<else>>
-        <<jump 18>>
-    <<endif>>
-<<endif>>
+-> "Alright, I'll leave you be then."
+Nadia: "Okay!"
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1960,0
+__PrivCrochet_position: 1546,-36
 __PrivCrochet_tags: 
 title: 10
 ---
@@ -234,6 +306,7 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
         Anthony smirks.
         Eleanor: "Thanks Nadia. Please remember, we're just here to create."
         Eleanor: "Oh dear, look at the time, we're almost done!"
+        (go to 11)
     
     -> You: "Just stop."
         Nadia: "Okay..."
@@ -306,13 +379,12 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
 <<jump 11>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2200,0
+__PrivCrochet_position: 1821,-38
 __PrivCrochet_tags: 
 title: 11
 ---
 Eleanor: "Thanks for coming and see you next week!"
 
-<<goto_room_cca_1_seated_11()>>
 As Nadia and Anthony leave, Vera stops you for a quick chat.
 Vera: "Hey Charlotte. Are you feeling okay?"
 
@@ -329,7 +401,7 @@ Vera: "Hey Charlotte. Are you feeling okay?"
 <<jump 12>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2440,0
+__PrivCrochet_position: 2080,-40
 __PrivCrochet_tags: 
 title: 12
 ---
@@ -391,7 +463,8 @@ Vera: "You know, trans women."
 
 -> You: "So what do you want to do about it?"
     Vera: "Advocacy. Petitions. Civil unrest, question mark."
-    Vera: "But even surviving this far, is my personal form of resistance against a system that won't accept me for who I am." (+ 10 XP) <<addExperience(10)>>
+    <<addExperience(10)>>
+    Vera: "But even surviving this far, is my personal form of resistance against a system that won't accept me for who I am." (+ 10 XP) 
     -> You: "I'm proud of you for that." (EMP check)
         <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
@@ -419,10 +492,10 @@ Vera: "You know, trans women."
         Vera: "Let's meet up soon?"
         You: "Sure, I'll let you know." (END)
 
-<<jump end>>
+<<stop>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1960,234
+__PrivCrochet_position: 1560,200
 __PrivCrochet_tags: 
 title: 13
 ---
@@ -486,16 +559,16 @@ Anthony: "Why do you feel female?"
 <<jump 14>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2198,239
+__PrivCrochet_position: 1819,201
 __PrivCrochet_tags: 
 title: 14
 ---
 Eleanor: "We didn't even get to comment on Charlotte's art... if you want to talk about it, I can have a look later."
 Eleanor: "Anyway, our time's up for this week. See you next week!"
-<<jump end>>
+<<stop>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1958,480
+__PrivCrochet_position: 1546,433
 __PrivCrochet_tags: 
 title: 15
 ---
@@ -550,7 +623,7 @@ You're really being put on the spot here. How will you respond?
 <<jump 16>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2200,480
+__PrivCrochet_position: 1821,442
 __PrivCrochet_tags: 
 title: 16
 ---
@@ -576,16 +649,16 @@ Vera: "I am curious, though. Why not draw Charlotte?"
 <<jump 17>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2440,480
+__PrivCrochet_position: 2080,440
 __PrivCrochet_tags: 
 title: 17
 ---
 Eleanor: "We didn't even get to comment on Charlotte's art... if you want to talk about it, I can have a look."
 Eleanor: "Either way, see you next week!"
-<<jump end>>
+<<stop>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1920,720
+__PrivCrochet_position: 1581,682
 __PrivCrochet_tags: 
 title: 18
 ---
@@ -599,7 +672,7 @@ Eleanor looks at the clock.
 Eleanor: "Well, that's everyone." 
 Eleanor: "We've still got a bit of time, and I brought snacks, so please help yourselves!" 
 Eleanor: "Get to know each other, yeah?"
-<<goto_room_cca_1_seated_18()>>
+
 Vera and Nadia leave first, Anthony waits for them to go before he comes over to you.
 Anthony: "Hey. Didn't you realise something was... off about that girl?"
 
@@ -611,7 +684,7 @@ Anthony: "Hey. Didn't you realise something was... off about that girl?"
 <<jump 19>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2200,720
+__PrivCrochet_position: 1840,680
 __PrivCrochet_tags: 
 title: 19
 ---
@@ -738,85 +811,18 @@ Anthony: "Maybe she's an ah gua."
             Anthony: "I'm sure there will be many more opportunities to laugh at how cringe the two of you are."
             Anthony: "See you next week."
         <<endif>>
-<<jump end>>
+<<stop>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1480,240
+__PrivCrochet_position: 760,640
 __PrivCrochet_tags: 
-title: 8_options
+title: Pre-5
 ---
-Your turn to comment...
-
-// Will not show if you have already asked once.
--> You: "Hmm. Why did you draw in anime style?" <<if $askedAboutAnime == false>>
-    Nadia: "Well... I guess it's easier, right?"
-    Nadia: "After all, it was designed for 2D artists."
-    You: "That's fair."
-    <<set $askedAboutAnime = true>>
-    // jump back to "Your turn to comment..."
-    <<jump 8_options>>
-
--> You: "It's okay, I guess. Not much else to say."
-    Nadia: "Alright then. Next person?"
-    <<jump 9>>
-
-// The below options only show up if you ask about anime style (choose the first option)
--> You: "So cliche." <<if $askedAboutAnime == true>>
-    Anthony: "Well, I didn't want to say that out loud."
-    Nadia: "Oh no..." (-5% Nadia relationship) <<changeRelationship("N", -5)>>
-    Vera: "That's so rude. Let her live."
-    Nadia: "I should have known people would laugh at me for being a weeb."
-    Eleanor: "Please, {$name}. Let's be respectful. Anyway, Anthony, what do you have?"
-    <<jump 9>>
-
--> You: "The anime style makes it good." <<if $askedAboutAnime == true>>
-    Nadia: "Really?"
-    You: "Yeah. It's your own style. Just like Vera with her rainbows."
-    You: "Take pride in it."
-    Nadia: "Thanks! It's rare to hear that." (+5% Nadia relationship) <<changeRelationship("N", 5)>>
-    You: "Let me guess, people laugh at you for being a weeb."
-    Nadia: "Ya..."
-    Eleanor: "Well, anime is pretty mainstream, right?"
-    Eleanor: "Who knows, maybe we'll do anime in a future week! Then you can really cook."
-    Nadia: "Uh... that's a lot, but thanks!!! Okay, shouldn't we go to the next person already?"
-    <<jump 9>>
-
--> You: "What about the hot guy?" (CHA 6 check) <<if $askedAboutAnime == true>>
- <<set $diceroll = diceRoll($cha)>>
-    [You rolled a {$diceroll}.]
-    <<if $diceroll > 5>>        
-    Nadia: "Huh? What? It's nothing! I'm just experimenting!"
-        Vera: "Yeah, coming from Miss 'I'm better at drawing male faces'..."
-        Nadia: "Uh... I'll show you guys when I'm free! Let's move on to the next person!"
-        Well done, that came across as humorous and inoffensive. (+10 XP) <<addExperience(10)>>
-    <<else>>
-        Nadia: "Hey... that's intrusive."
-        You: "But you just showed it just now!"
-        Eleanor: "{$name}, if Nadia's not okay with showing her personal art, don't press her."
-    <<endif>>
-    <<jump 9>>
-
-<<jump 9>>
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 760,600
-__PrivCrochet_tags: 
-title: pre-5
----
-Do you wish to take a seat?
+Do you wish to take a seat? (You can talk to the others first!)
 
 -> No (Go back).
 
 -> Yes
     You take a seat.
     <<goto_room_cca_1_seated()>>
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 3040,440
-__PrivCrochet_tags: 
-title: end
----
-You head back to your room.
-
-<<goto_room_bedroom_after_cca()>>
 ===
