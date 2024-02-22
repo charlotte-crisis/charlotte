@@ -7,14 +7,26 @@ if (can_move()) {
 
 // right
 if (_move > 0) {
-	facing_direction = -1;	
+	facing_direction = 1;	
 // left
 } else if (_move < 0) {
-	facing_direction = 1;	
+	facing_direction = -1;	
 }
 
 var _frame = ++img_frame/10 % num_of_frames;
 
+for (var i = 3; i >= 0; i--) {
+	// draw from layer 4 to layer 1
+	if (is_sitting) {
+		draw_sprite_ext(sitting_sprites[i], _frame, x, y, facing_direction, 1, 0, c_white, 1);
+	} else if (_move != 0) {
+		draw_sprite_ext(walking_sprites[i], _frame, x, y, facing_direction, 1, 0, c_white, 1);
+	} else {
+		draw_sprite_ext(idle_sprites[i], _frame, x, y, facing_direction, 1, 0, c_white, 1);	
+	}
+}
+
+/*
 if (is_sitting) {
 	draw_sprite_ext(sitting_legs[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
 	draw_sprite_ext(sitting_torso[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
@@ -30,4 +42,4 @@ if (is_sitting) {
 	draw_sprite_ext(idle_torso[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
 	draw_sprite_ext(idle_shorts[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
 	draw_sprite_ext(idle_head[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
-}
+}*/

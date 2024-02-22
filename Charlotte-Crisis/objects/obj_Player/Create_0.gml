@@ -52,9 +52,31 @@ num_of_frames    = 8;
 	0: Male
 	1: Female
 */
-gender = 1;
+gender = 0;
+current_outfit = 1;
 
-idle_torso     = [spr_mc_male_idle_torso,     spr_mc_female_idle_torso];
+sitting_sprites = [
+	spr_mc_male_sit_1_1,
+	spr_mc_male_sit_2,
+	spr_mc_male_sit_3_1,
+	spr_mc_male_sit_4_1,
+]
+
+idle_sprites = [
+	spr_mc_male_idle_1_1,
+	spr_mc_male_idle_2,
+	spr_mc_male_idle_3_1,
+	spr_mc_male_idle_4_1,
+]
+
+walking_sprites = [
+	spr_mc_male_walking_1_1,
+	spr_mc_male_walking_2,
+	spr_mc_male_walking_3_1,
+	spr_mc_male_walking_4_1,
+]
+
+idle_torso     = [spr_mc_male_idle_3_1,     spr_mc_female_idle_torso];
 idle_legs      = [spr_mc_male_idle_legs,      spr_mc_female_idle_legs];
 idle_shorts    = [spr_mc_male_idle_shorts,    spr_mc_female_idle_shorts];
 idle_head      = [spr_mc_male_idle_head,      spr_mc_female_idle_head];

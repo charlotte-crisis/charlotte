@@ -19,4 +19,7 @@ function draw_text_box(_speech){
 	draw_text_ext(_xx, _text_yy, _speech, _linesep, view_wport[0] - 2 * _margin_text);	
 }
 
-
+/// @function get_mc_sprite(_gender, _layer, _outfit)
+function get_mc_sprite(_gender, _layer, _outfit) {
+	return spr_mc_0_idle_0_1;	
+}
