@@ -886,7 +886,7 @@ __PrivCrochet_tags:
 title: 5_options
 ---
 What do you do?
--> [INT 5] Start a minesweeper game <<if visited("5_1") == false>> #skillcheck #int 
+-> [INT 5] Start a minesweeper game ({calculateOdds($int, 5)}% success) <<if visited("5_1") == false>> #skillcheck #int 
     <<jump 5_1>>
     
 -> Scroll through Shopee
