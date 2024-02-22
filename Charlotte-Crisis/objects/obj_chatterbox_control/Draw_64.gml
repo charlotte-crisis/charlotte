@@ -77,7 +77,7 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 				
 				var _option = ChatterboxGetOption(chatterbox, i);
 				
-				draw_text_ext(_xx, _yy, _icon + _option, _linesep, _width - 2  *_margin_text);
+				draw_text_ext(_xx, _yy, _icon + _option, _linesep - 10, _width - _margin_text);
 				_row++;
 				
 			}
