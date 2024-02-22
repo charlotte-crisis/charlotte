@@ -586,7 +586,7 @@ Sage: "I feel I have a personal stake in this conversation, so I thought I shoul
     <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1082,84
+__PrivCrochet_position: 1120,80
 __PrivCrochet_tags: 
 title: 5_1
 ---
@@ -883,7 +883,7 @@ Choose one...
     <<goto_room_class_1_seated()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 760,-40
+__PrivCrochet_position: 1080,-240
 __PrivCrochet_tags: 
 title: 5_options
 ---
@@ -908,11 +908,11 @@ Nonetheless, you head back to your room.
 <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 880,-320
+__PrivCrochet_position: 800,-40
 __PrivCrochet_tags: 
 title: 5_tutorial
 ---
-TUTORIAL: In this game, you can attempt skill checks.
+TUTORIAL: In this game, you can attempt skill checks with a dice roll (6 sided).
 TUTORIAL: The stat required and the difficulty level is indicated, for example, [INT 5].
 TUTORIAL: In this case, a 6-sided dice is rolled and added to your INT.
 TUTORIAL: If the result is equal or greater to 5, then you succeed.
