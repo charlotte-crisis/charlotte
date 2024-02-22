@@ -76,6 +76,9 @@ function draw_speaker_portrait(name) {
 		draw_rectangle(32, view_hport[0] - 128, 128, view_hport[0] - 33, false);
 	}
 	switch (name) {
+		case "TUTORIAL":
+			draw_sprite_ext(spr_tutorial_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			break;
 		case "ANTHONY":
 			draw_sprite_ext(A_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
 			break;

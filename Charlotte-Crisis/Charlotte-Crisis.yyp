@@ -318,6 +318,7 @@
     {"id":{"name":"fnt_body_italic","path":"fonts/fnt_body_italic/fnt_body_italic.yy",},},
     {"id":{"name":"spr_mc_male_walking_1_1","path":"sprites/spr_mc_male_walking_1_1/spr_mc_male_walking_1_1.yy",},},
     {"id":{"name":"ChatterboxVariableSet","path":"scripts/ChatterboxVariableSet/ChatterboxVariableSet.yy",},},
+    {"id":{"name":"spr_tutorial_portrait","path":"sprites/spr_tutorial_portrait/spr_tutorial_portrait.yy",},},
     {"id":{"name":"M_idle_strip2","path":"sprites/M_idle_strip2/M_idle_strip2.yy",},},
     {"id":{"name":"ChatterboxCreate","path":"scripts/ChatterboxCreate/ChatterboxCreate.yy",},},
     {"id":{"name":"ChatterboxGetContentMetadata","path":"scripts/ChatterboxGetContentMetadata/ChatterboxGetContentMetadata.yy",},},

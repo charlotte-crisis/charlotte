@@ -53,7 +53,7 @@ The final assessment for this class is a group project to write a research paper
 She also reiterates the rules of this course to ensure everyone keeps it a safe space for discussion.
 Bored, you start fiddling with your laptop.
 
-<<jump 5_options>>
+<<jump 5_tutorial>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1000,360
@@ -586,7 +586,7 @@ Sage: "I feel I have a personal stake in this conversation, so I thought I shoul
     <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1082,84
+__PrivCrochet_position: 1120,80
 __PrivCrochet_tags: 
 title: 5_1
 ---
@@ -874,6 +874,8 @@ title: pre-5
 ---
 Do you want to take a seat? (Will continue the scene.)
 
+Choose one...
+
 -> No (Go back).
 
 -> Yes
@@ -881,12 +883,12 @@ Do you want to take a seat? (Will continue the scene.)
     <<goto_room_class_1_seated()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 760,80
+__PrivCrochet_position: 1080,-240
 __PrivCrochet_tags: 
 title: 5_options
 ---
 What do you do?
--> [INT 5] Start a minesweeper game <<if visited("5_1") == false>> #skillcheck #int 
+-> [INT 5] Start a minesweeper game ({calculateOdds($int, 5)}% success) <<if visited("5_1") == false>> #skillcheck #int 
     <<jump 5_1>>
     
 -> Scroll through Shopee
@@ -904,4 +906,24 @@ title: 12_alone
 Your sister's message still weighs heavily on you.
 Nonetheless, you head back to your room.
 <<goto_room_bedroom()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 800,-40
+__PrivCrochet_tags: 
+title: 5_tutorial
+---
+TUTORIAL: In this game, you can attempt skill checks with a dice roll (6 sided).
+TUTORIAL: The stat required and the difficulty level is indicated, for example, [INT 5].
+TUTORIAL: In this case, a 6-sided dice is rolled and added to your INT.
+TUTORIAL: If the result is equal or greater to 5, then you succeed.
+TUTORIAL: Skill checks are indicated by a red box and your percentage of success is indicated.
+TUTORIAL: The outcome is not always positive, so be careful!
+
+TUTORIAL: Would you like to repeat these instructions?
+
+-> Repeat this tutorial 
+    <<jump 5_tutorial>>
+
+-> Proceed.
+    <<jump 5_options>>
 ===

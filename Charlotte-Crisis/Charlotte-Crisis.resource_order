@@ -260,6 +260,7 @@
     {"name":"fnt_body_italic","order":1,"path":"fonts/fnt_body_italic/fnt_body_italic.yy",},
     {"name":"spr_mc_male_walking_1_1","order":8,"path":"sprites/spr_mc_male_walking_1_1/spr_mc_male_walking_1_1.yy",},
     {"name":"ChatterboxVariableSet","order":5,"path":"scripts/ChatterboxVariableSet/ChatterboxVariableSet.yy",},
+    {"name":"spr_tutorial_portrait","order":44,"path":"sprites/spr_tutorial_portrait/spr_tutorial_portrait.yy",},
     {"name":"M_idle_strip2","order":31,"path":"sprites/M_idle_strip2/M_idle_strip2.yy",},
     {"name":"ChatterboxGetContentMetadata","order":4,"path":"scripts/ChatterboxGetContentMetadata/ChatterboxGetContentMetadata.yy",},
     {"name":"spr_mc_female_sit_4_2","order":4,"path":"sprites/spr_mc_female_sit_4_2/spr_mc_female_sit_4_2.yy",},
