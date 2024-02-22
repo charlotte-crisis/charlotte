@@ -34,8 +34,8 @@
     "path": "sprites/spr_mc_male_idle_4_0/spr_mc_male_idle_4_0.yy",
   },
   "spriteMaskId": {
-    "name": "spr_mc_male_idle_legs",
-    "path": "sprites/spr_mc_male_idle_legs/spr_mc_male_idle_legs.yy",
+    "name": "spr_mc_male_idle_4_0",
+    "path": "sprites/spr_mc_male_idle_4_0/spr_mc_male_idle_4_0.yy",
   },
   "visible": true,
 }

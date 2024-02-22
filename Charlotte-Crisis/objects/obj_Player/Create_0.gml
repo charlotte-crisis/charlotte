@@ -76,20 +76,4 @@ walking_sprites = [
 	spr_mc_male_walking_4_1,
 ]
 
-idle_torso     = [spr_mc_male_idle_3_1,     spr_mc_female_idle_torso];
-idle_legs      = [spr_mc_male_idle_legs,      spr_mc_female_idle_legs];
-idle_shorts    = [spr_mc_male_idle_shorts,    spr_mc_female_idle_shorts];
-idle_head      = [spr_mc_male_idle_head,      spr_mc_female_idle_head];
-
-walking_torso  = [spr_mc_male_walking_torso,  spr_mc_female_walking_torso];
-walking_legs   = [spr_mc_male_walking_legs,   spr_mc_female_walking_legs];
-walking_shorts = [spr_mc_male_walking_shorts, spr_mc_female_walking_shorts];
-walking_head   = [spr_mc_male_walking_head,   spr_mc_female_walking_head];
-
-sitting_torso  = [spr_mc_male_sitting_torso,  spr_mc_female_sitting_torso];
-sitting_legs      = [spr_mc_male_sitting_legs,   spr_mc_female_sitting_legs];
-sitting_shorts    = [spr_mc_male_sitting_shorts, spr_mc_female_sitting_shorts];
-sitting_head      = [spr_mc_male_sitting_head,   spr_mc_female_sitting_head];
-
-
 #endregion
