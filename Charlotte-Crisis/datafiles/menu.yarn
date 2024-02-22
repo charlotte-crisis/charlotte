@@ -2,17 +2,13 @@
 # if you've already visited then it will show the concise version.
 # Interacting with mirror
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 600,366
+__PrivCrochet_position: 600,360
 __PrivCrochet_tags: 
 title: door
 ---
 You stand at the door. (Press space to continue)
 Before you leave, you make sure you have allocated your stats at your desk.
 Stats will be used for skill checks in the game.
-
-<<set $cha = getCharisma()>>
-<<set $int = getIntelligence()>>
-<<set $emp = getEmpathy()>>
 
 You have {$int} Intelligence (INT), {$cha} Charisma (CHA), and {$emp} Empathy (EMP).
 Do you wish to continue?

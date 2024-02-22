@@ -12,6 +12,7 @@ if ((current_option == 3) && (keyboard_check_pressed(vk_space))) {
 	obj_stats.set_stats(stats_array);
 	obj_stats.subtract_experience(levels_used);
 	obj_player.set_is_interacting(false);
+	set_chatterbox_stats();
 	instance_destroy(self);
 }
 

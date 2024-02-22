@@ -4,6 +4,11 @@ function set_player_gender(_gender) {
 	obj_player.gender = _gender[0];
 }
 
+function set_chatterbox_stats() {
+	ChatterboxVariableSet("int",obj_stats.intelligence);
+	ChatterboxVariableSet("cha",obj_stats.charisma);
+	ChatterboxVariableSet("emp",obj_stats.empathy);
+}
 #region stats,confidence, and experience
 // TODO: Separate obj_player functions and obj_stats functions
 function add_empathy() {
@@ -40,12 +45,12 @@ function get_empathy() {
 
 #endregion
 
-#region Skill checks, Diceroll
+#region Skill checks, Diceroll for use in chatterbox
 
-/// @function				skill_check(_skill, _required)
+/// @function				skill_check(_parameters)
 /// @description			Checks if Skill + Dice roll outcome is greater than or equal to required.
-///	@param _parameters		{Skill, Threshold}
-///	@return {Bool}			True if succeed (>=)
+///	@param _parameters		[Skill, Threshold]
+///	@return {Bool}			True if succeed (>=) against 1d6
 function skill_check(_parameters) {
 	// Currently using 6-sided dice
 	var _score = _parameters[0] + irandom(6);
@@ -53,13 +58,37 @@ function skill_check(_parameters) {
 	return (_score >= _parameters[1]);
 }
 
-/// @function				skill_check(_skill, _required)
+/// @function				dice_roll(_parameters)
 /// @description			Checks if Skill + Dice roll outcome is greater than or equal to required.
-///	@param _parameters		{Skill, Threshold}
-///	@return {Real}			The outcome
+///	@param _parameters		[Skill]
+///	@return {Real}			The outcome of diceroll against 1d6
 function dice_roll(_parameters) {
 	// Currently using 6-sided dice
 	return _parameters[0] + irandom(6);
+	
+}
+
+/// @function				skill_check(_skill, _required)
+/// @description			Checks if static skill meets threshold
+///	@param _parameters		[Skill, Threshold]
+///	@return {Bool}			The outcome
+function static_check(_parameters) {
+	// STATIC check.
+	return (_parameters[0] >= _parameters[1]);
+	
+}
+
+/// @function				calculate_odds(_parameters)
+/// @description			Checks if Skill + Dice roll outcome is greater than or equal to required.
+///	@param _parameters		[Skill, Threshold]
+///	@return {Real}			The percentage chance of success as an int
+function calculate_odds(_parameters) {
+	var _score = _parameters[0];
+	var _threshold = _parameters[1];
+	var _needed = _threshold - _score;
+	_needed = max(_needed, 0); //set to zero if it is negative
+	var _odds = (6 - _needed + 1)/6
+	return round(_odds * 100) // convert to 100%
 	
 }
 
