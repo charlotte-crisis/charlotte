@@ -803,8 +803,13 @@ __PrivCrochet_position: 760,600
 __PrivCrochet_tags: 
 title: pre-5
 ---
-You take a seat.
-<<goto_room_cca_1_seated()>>
+Do you wish to take a seat?
+
+-> No (Go back).
+
+-> Yes
+    You take a seat.
+    <<goto_room_cca_1_seated()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 3040,440
