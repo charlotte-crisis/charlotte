@@ -67,10 +67,17 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 				// Increment row ONLY if an option was displayed
 				// Prevent gaps
 				var _icon = "";
+				var _metadata = ChatterboxGetOptionMetadata(chatterbox, i);
 				// Highlight option being selected
 				if (option_index == i) {
 					_icon = "> ";
-					draw_rectangle_center(_xx, _yy, _width, _height, false, c_blue, BG_ALPHA);
+					if (array_length(_metadata) > 0) {
+						if (_metadata[0] == "skillcheck") {
+							draw_rectangle_center(_xx, _yy, _width, _height, false, c_maroon, BG_ALPHA);
+						}
+					} else {
+						draw_rectangle_center(_xx, _yy, _width, _height, false, c_blue, BG_ALPHA);
+					}
 				} else {
 					draw_rectangle_center(_xx, _yy, _width, _height, false, c_black, BG_ALPHA);	
 				}

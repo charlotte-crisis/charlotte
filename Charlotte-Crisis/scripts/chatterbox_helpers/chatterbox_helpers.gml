@@ -36,6 +36,15 @@ function chatterbox_update() {
 	speaker_and_speech = ChatterboxGetContent(chatterbox, 0);
 	speech = ChatterboxGetContentSpeech(chatterbox, 0);
 	speaker = string_upper(ChatterboxGetContentSpeaker(chatterbox, 0));
+	
+	// reset option to point to first item
+	for (var i = 0; i < ChatterboxGetOptionCount(chatterbox); i++) {
+		if (ChatterboxGetOptionConditionBool(chatterbox, i)) {
+			obj_chatterbox_control.option_index = i;
+			break; // stop at the first
+		}
+	}
+	
 	// use ChatterboxGetContentSpeech if you want just the text.
 }
 
