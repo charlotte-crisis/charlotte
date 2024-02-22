@@ -23,6 +23,7 @@
     {"name":"Particle Systems","order":15,"path":"folders/Particle Systems.yy",},
     {"name":"Paths","order":4,"path":"folders/Paths.yy",},
     {"name":"Rooms","order":10,"path":"folders/Rooms.yy",},
+    {"name":"Bedroom","order":14,"path":"folders/Rooms/Bedroom.yy",},
     {"name":"Menu","order":13,"path":"folders/Rooms/Menu.yy",},
     {"name":"Week 1","order":12,"path":"folders/Rooms/Week 1.yy",},
     {"name":"hangout","order":9,"path":"folders/Rooms/Week 1/hangout.yy",},
@@ -47,7 +48,6 @@
     {"name":"Wardrobe","order":6,"path":"folders/Sprites/Wardrobe.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"Bedroom","order":14,"path":"folders/Rooms/Bedroom.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_stat_menu","order":2,"path":"objects/obj_stat_menu/obj_stat_menu.yy",},
@@ -79,6 +79,7 @@
     {"name":"S_walking_strip8","order":4,"path":"sprites/S_walking_strip8/S_walking_strip8.yy",},
     {"name":"N_idle_strip2","order":35,"path":"sprites/N_idle_strip2/N_idle_strip2.yy",},
     {"name":"spr_bottoms_f","order":1,"path":"sprites/spr_bottoms_f/spr_bottoms_f.yy",},
+    {"name":"obj_fade","order":6,"path":"objects/obj_fade/obj_fade.yy",},
     {"name":"spr_shirt_f_1","order":4,"path":"sprites/spr_shirt_f_1/spr_shirt_f_1.yy",},
     {"name":"ChatterboxHop","order":2,"path":"scripts/ChatterboxHop/ChatterboxHop.yy",},
     {"name":"up_strip4","order":6,"path":"sprites/up_strip4/up_strip4.yy",},
