@@ -53,7 +53,7 @@ The final assessment for this class is a group project to write a research paper
 She also reiterates the rules of this course to ensure everyone keeps it a safe space for discussion.
 Bored, you start fiddling with your laptop.
 
-<<jump 5_options>>
+<<jump 5_tutorial>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1000,360
@@ -883,7 +883,7 @@ Choose one...
     <<goto_room_class_1_seated()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 760,80
+__PrivCrochet_position: 760,-40
 __PrivCrochet_tags: 
 title: 5_options
 ---
@@ -906,4 +906,24 @@ title: 12_alone
 Your sister's message still weighs heavily on you.
 Nonetheless, you head back to your room.
 <<goto_room_bedroom()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 880,-320
+__PrivCrochet_tags: 
+title: 5_tutorial
+---
+TUTORIAL: In this game, you can attempt skill checks.
+TUTORIAL: The stat required and the difficulty level is indicated, for example, [INT 5].
+TUTORIAL: In this case, a 6-sided dice is rolled and added to your INT.
+TUTORIAL: If the result is equal or greater to 5, then you succeed.
+TUTORIAL: Skill checks are indicated by a red box and your percentage of success is indicated.
+TUTORIAL: The outcome is not always positive, so be careful!
+
+TUTORIAL: Would you like to repeat these instructions?
+
+-> Repeat this tutorial 
+    <<jump 5_tutorial>>
+
+-> Proceed.
+    <<jump 5_options>>
 ===
