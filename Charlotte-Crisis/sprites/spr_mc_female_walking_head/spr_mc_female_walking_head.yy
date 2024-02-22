@@ -33,7 +33,7 @@
   "origin": 1,
   "parent": {
     "name": "Walking",
-    "path": "folders/Sprites/Female MC/Walking.yy",
+    "path": "folders/Sprites/Female MC (Old)/Walking.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

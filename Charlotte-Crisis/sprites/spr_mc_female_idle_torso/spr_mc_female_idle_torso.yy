@@ -27,7 +27,7 @@
   "origin": 1,
   "parent": {
     "name": "Idle",
-    "path": "folders/Sprites/Female MC/Idle.yy",
+    "path": "folders/Sprites/Female MC (Old)/Idle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
