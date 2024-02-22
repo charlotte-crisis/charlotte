@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+/// @description Scripts relating to DRAWING SPRITES on GUI
 
 /// For very simple drawing without interaction.
 function draw_text_box(_speech){
@@ -18,4 +17,13 @@ function draw_text_box(_speech){
 	draw_rectangle_center(view_wport[0] / 2, _yy, view_wport[0], _margin_text * 2, false, c_dkgray, 1);
 
 	draw_text_ext(_xx, _text_yy, _speech, _linesep, view_wport[0] - 2 * _margin_text);	
+}
+
+
+/// @function fade_room(_room, _duration, _colour)
+/// @param _room The target room to move to
+function fade_room(_room) {
+	// Create fade object at top left corner at highest depth
+	var _inst = instance_create_depth(0, 0, 0, obj_fade);
+	_inst.target_room = _room;
 }
