@@ -2,7 +2,7 @@
 # if you've already visited then it will show the concise version.
 # Interacting with mirror
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 898,126
+__PrivCrochet_position: 880,120
 __PrivCrochet_tags: 
 title: 0
 ---
@@ -14,6 +14,8 @@ It draws you back in, but you withstand its pull.
 Well, no use idling around.
 You have to get dressed and go back to school.
 You signed up for art club. Wouldn't want to miss the first day.
+
+<<jump tut_wardrobe>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1162,200
@@ -121,4 +123,21 @@ Who will you ask out?
 -> On second thought, nevermind.
     Hmm… you don't seem to be friendly enough with anyone.
     You can stay in today, but please try to understand and befriend people around you…
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1080,-160
+__PrivCrochet_tags: 
+title: tut_wardrobe
+---
+TUTORIAL: You can interact with the wardrobe to change your gender presentation and clothes.
+TUTORIAL: Depending on what you wear and present as, others might treat you differently.
+TUTORIAL: Go ahead and press "Up" near the wardrobe to try it out!
+
+TUTORIAL: Repeat this tutorial?
+
+-> Yes
+    <<jump tut_wardrobe>>
+
+-> No (Continue)
+    
 ===

@@ -94,10 +94,10 @@ function goto_room_bedroom(){
 }
 
 function goto_room_bedroom_after_cca(){
-	fade_room(rm_bedroom_1_after_cca);
+	fade_room(rm_bedroom_after_cca1);
 	obj_player.x = 30;
 	obj_player.y = 74;
-	obj_player.facing_direction = 1;
+	obj_player.facing_direction = -1;
 	obj_player.is_sitting = false;
 	
 	ChatterboxLoadFromFile("room_1_after_cca.yarn");
