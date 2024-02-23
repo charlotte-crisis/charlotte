@@ -5,7 +5,6 @@ __PrivCrochet_position: 281,360
 __PrivCrochet_tags: 
 title: 1
 ---
-<<set $name = "Charlotte">>
 
 You arrive just in time for class.
 This course is quite popular so almost all the seats are already filled.
@@ -231,7 +230,7 @@ Chenjie: "The semester's barely started and I already have a backlog."
     Chenjie: "It gets worse from here. I hear some weeks we have 5 readings."
     You feel exhausted even from the sound of that. (-5% confidence)
 
--> You: (joking) "That's it. I'm quitting to flip burgers for the rest of my life." [CHA 5 check]
+-> You: [CHA 5] (joking) "That's it. I'm quitting to flip burgers for the rest of my life." ({calculateOdds($cha, 5)}% success) #skillcheck #cha
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll < 3>>
@@ -265,7 +264,7 @@ You: "Yeah, so feminism to me is..."
     <<set $diceroll = diceRoll($emp)>>
     <<if $diceroll >= 5>>
         [EMPATHY] Sage looks like she has something to add, but she is hesitating.
-        -> Press her. [5 CHA Check]
+        -> [5 CHA] Press her. ({calculateOdds($cha, 5)}% success) #skillcheck #cha
             <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
             You: "Sage, do you have something to add?"
@@ -292,6 +291,8 @@ You: "Yeah, so feminism to me is..."
             With plenty of time left, your group starts some small talk about what you did over the semester break.
             Sage looks a bit distracted.
     <<else>>
+        What do you do? 
+
         -> Say nothing.
             Chenjie: "So we're done!"
             Joanne: "Can't believe it's the second last semester already... I hardly got to enjoy myself during the sem break."
@@ -308,7 +309,7 @@ You: "Yeah, so feminism to me is..."
     <<jump 16>>
 
 -> You: "Creating a society that accepts and empowers all people." <<if skillCheck($emp, 3)>>
-    You: "It's also about inclusivity. Not just giving equal rights, but also including marginalised people and respecting their differences." (+ 5 XP) <<addExperience(5)>>
+    You: "It's also about inclusivity. Not just giving equal rights, but also including marginalised people and respecting their differences." (+5 XP) <<addExperience(5)>>
     Chenjie: "Right... Like how gay and lesbian people are scared they'll lose their jobs, right?"
     Sage: "Yeah, and I feel that in Singapore, it's always about tolerance."
     Sage: "Like, we sometimes have this very 'not in my backyard' way of looking at things."
@@ -318,7 +319,7 @@ You: "Yeah, so feminism to me is..."
     Joanne: "We're still a largely conservative country, and family values are important to a lot of Singaporeans."
     Chenjie: "There aren't that many LGBT in Singapore. So it's difficult to get used to them."
 
-    -> You: "'Get used to them' sounds rather dehumanising." [CHA 6 Check]
+    -> You: [CHA 6] "'Get used to them' sounds rather dehumanising." ({calculateOdds($cha, 6)}% success) #skillcheck #cha
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll < 6>>
@@ -399,7 +400,7 @@ You: "What?"
 Chenjie: "My mom said she saw a cockroach in the living room. And she's asking me to hurry back to kill it."
 Chenjie: "I hate cockroaches."
 
--> You: "But a man's gotta do what a man's gotta do." [6 EMP Check]
+-> [EMP 6] You: "But a man's gotta do what a man's gotta do." ({calculateOdds($emp, 6)}% success)  #skillcheck #emp
     <<set $diceroll = diceRoll($emp)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll < 6>>
@@ -417,7 +418,8 @@ Chenjie: "I hate cockroaches."
         Chenjie: "The worst thing is that they're so hard to kill. And even when you spray Baygon, they still run around for a while."
         You: "I usually just smack them with a slipper. More direct that way."
         Chenjie: "I guess... I really hate seeing the squashed bits. Honestly, I can barely stomach it."
-        Chenjie: "A lot of people call me girly for that. But it's really too disgusting." <<changeRelationship("CJ", 5)>>
+	<<changeRelationship("CJ", 5)>>
+        Chenjie: "A lot of people call me girly for that. But it's really too disgusting." 
         You get the feeling he doesn't just tell this to anyone. (+5 XP) <<addExperience(5)>>
         Chenjie: "Hey, look. My bus is here. See you next week."
         You: "See you!"
@@ -707,7 +709,7 @@ Chenjie: "Right?"
         <<changeRelationship("CJ", -5)>>
         Chenjie: "Different people lead different lives, and what we may not experience may be a genuine problem."
         Chenjie: "While it's not so bad in Singapore, those occasional instances of sexism need to be properly addressed."
-        You: "Exactly. It's a matter of perspective and trying to find a middle ground." (+ 5 XP)
+        You: "Exactly. It's a matter of perspective and trying to find a middle ground." (+5 XP)
         <<addExperience(5)>>
         Sage: "I guess so..."
         <<jump 12>>>>
@@ -739,12 +741,12 @@ Chenjie: "Right?"
         Chenjie: "We won't be able to come to a conclusion in just one class."
         You: "Obviously we won't be able to solve it in a day..."
     
-    -> You: "What about unpaid female labour?" <<if diceRoll($int) >= 5>>
+    -> [INTELLIGENCE] You: "What about unpaid female labour?" <<if diceRoll($int) >= 5>>
         You: "Gender pay gaps exclude the women who are unemployed in order to do domestic labour."
         You: "Are they not also doing something for the nation by doing the labour that allows men to be in the workforce?"
         Joanne: "Must there be monetary value attached before a work becomes valuable?"
         Sage: "No, but it's basically evidence of a certain type of worker or work being undervalued. And also a measure of how much autonomy certain people have." 
-        Sage: "It's both a cause and symptom of gender inequality." (+ 5 XP) 
+        Sage: "It's both a cause and symptom of gender inequality." (+5 XP) 
         <<addExperience(5)>>
         Chenjie: "Okay, okay. Let's stop attacking Joanne already."
         Sage: "We're not attacking her."
@@ -905,6 +907,8 @@ title: 12_alone
 ---
 Your sister's message still weighs heavily on you.
 Nonetheless, you head back to your room.
+<<addExperience(30)>>
+(+30 XP) 
 <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0

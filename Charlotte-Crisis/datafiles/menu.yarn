@@ -16,7 +16,7 @@ Stats will be used for skill checks in the game.
 <<set $name = getName()>>
 
 You have {$int} Intelligence (INT), {$cha} Charisma (CHA), and {$emp} Empathy (EMP).
-You will identify yourself as {$name}.
+
 Do you wish to continue?
 
 -> No (Close this dialogue)

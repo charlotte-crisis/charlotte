@@ -13,8 +13,10 @@ Stats will be used for skill checks in the game.
 <<set $cha = getCharisma()>>
 <<set $int = getIntelligence()>>
 <<set $emp = getEmpathy()>>
+<<set $name = getName()>>
 
 You have {$int} Intelligence (INT), {$cha} Charisma (CHA), and {$emp} Empathy (EMP).
+
 Do you wish to continue?
 
 -> No (Close this dialogue)
