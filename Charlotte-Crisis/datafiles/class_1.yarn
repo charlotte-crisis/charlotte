@@ -230,7 +230,7 @@ Chenjie: "The semester's barely started and I already have a backlog."
     Chenjie: "It gets worse from here. I hear some weeks we have 5 readings."
     You feel exhausted even from the sound of that. (-5% confidence)
 
--> You: (joking) "That's it. I'm quitting to flip burgers for the rest of my life." [CHA 5 check]
+-> You: [CHA 5] (joking) "That's it. I'm quitting to flip burgers for the rest of my life." ({calculateOdds($cha, 5)}% success) #skillcheck #cha
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll < 3>>
@@ -264,7 +264,7 @@ You: "Yeah, so feminism to me is..."
     <<set $diceroll = diceRoll($emp)>>
     <<if $diceroll >= 5>>
         [EMPATHY] Sage looks like she has something to add, but she is hesitating.
-        -> Press her. [5 CHA Check]
+        -> [5 CHA] Press her. ({calculateOdds($cha, 5)}% success) #skillcheck #cha
             <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
             You: "Sage, do you have something to add?"
@@ -319,7 +319,7 @@ You: "Yeah, so feminism to me is..."
     Joanne: "We're still a largely conservative country, and family values are important to a lot of Singaporeans."
     Chenjie: "There aren't that many LGBT in Singapore. So it's difficult to get used to them."
 
-    -> You: "'Get used to them' sounds rather dehumanising." [CHA 6 Check]
+    -> You: [CHA 6] "'Get used to them' sounds rather dehumanising." ({calculateOdds($cha, 6)}% success) #skillcheck #cha
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll < 6>>
@@ -400,7 +400,7 @@ You: "What?"
 Chenjie: "My mom said she saw a cockroach in the living room. And she's asking me to hurry back to kill it."
 Chenjie: "I hate cockroaches."
 
--> You: "But a man's gotta do what a man's gotta do." [6 EMP Check]
+-> [EMP 6] You: "But a man's gotta do what a man's gotta do." ({calculateOdds($emp, 6)}% success)  #skillcheck #emp
     <<set $diceroll = diceRoll($emp)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll < 6>>
@@ -741,7 +741,7 @@ Chenjie: "Right?"
         Chenjie: "We won't be able to come to a conclusion in just one class."
         You: "Obviously we won't be able to solve it in a day..."
     
-    -> You: "What about unpaid female labour?" <<if diceRoll($int) >= 5>>
+    -> [INTELLIGENCE] You: "What about unpaid female labour?" <<if diceRoll($int) >= 5>>
         You: "Gender pay gaps exclude the women who are unemployed in order to do domestic labour."
         You: "Are they not also doing something for the nation by doing the labour that allows men to be in the workforce?"
         Joanne: "Must there be monetary value attached before a work becomes valuable?"
