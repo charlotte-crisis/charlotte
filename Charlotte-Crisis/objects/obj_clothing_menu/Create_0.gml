@@ -14,8 +14,8 @@ current_clothes = [0, 0, 0]; // 0 index
 
 // 0: male
 // 1: female
-current_gender = 1;
-//current_clothes = get_current_clothes();
+current_gender = obj_player.get_player_gender();
+current_clothes = obj_player.get_player_clothes();
 
 clothing_top = [ // Layer 3
 	[

@@ -37,6 +37,7 @@ function chatterbox_set(_node_name) {
 	ChatterboxAddFunction("getIntelligence", get_intelligence);
 	ChatterboxAddFunction("getCharisma", get_charisma);
 	ChatterboxAddFunction("getEmpathy", get_empathy);
+	ChatterboxAddFunction("getName", get_name);
 	
 	
 	/// Door Functions here

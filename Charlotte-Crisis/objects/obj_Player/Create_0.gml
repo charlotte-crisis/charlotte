@@ -28,6 +28,14 @@ set_gender = function(_gender) {
 	gender = _gender;
 }
 
+function get_player_clothes() {
+	return current_clothes;	
+}
+
+function get_player_gender() {
+	return gender;
+}
+
 // Return true only if not talking and not interacting.
 can_move = function() {
 	return !(is_talking || is_interacting);	
@@ -53,7 +61,7 @@ num_of_frames    = 8;
 	1: Female
 */
 gender = 1;
-current_clothes = [2, 3, 1]
+current_clothes = [1, 2, 0]
 // 0: Idle, 1: Sit, 2: Walk
 // In order of drawing layer
 
@@ -89,14 +97,10 @@ function set_player_sprites(_gender, _top, _bottom, _shoes) {
 	top_sprites = get_top_sprites(_gender, _top);
 	bottom_sprites = get_bottom_sprites(_gender, _bottom);
 	leg_sprites = get_leg_sprites(_gender, _shoes);
-}
-
-function get_player_current_clothes() {
-	return current_clothes;	
-}
-
-function get_player_gender() {
-	return gender;
+	gender = _gender;
+	
+	// set it in chatterbox itself
+	ChatterboxVariableSet("name", (_gender?"Charlotte":"Charles"));
 }
 
 #endregion

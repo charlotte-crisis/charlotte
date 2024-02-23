@@ -43,6 +43,10 @@ function get_empathy() {
 	return obj_stats.empathy;	
 }
 
+function get_name() {
+	return obj_player.get_player_gender() ?"Charlotte":"Charles";	
+}
+
 #endregion
 
 #region Skill checks, Diceroll for use in chatterbox
