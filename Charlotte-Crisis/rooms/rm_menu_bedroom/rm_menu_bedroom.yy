@@ -17,6 +17,7 @@
     {"name":"inst_27D4ECC2","path":"rooms/rm_menu_bedroom/rm_menu_bedroom.yy",},
     {"name":"inst_14AE7DFD","path":"rooms/rm_menu_bedroom/rm_menu_bedroom.yy",},
     {"name":"inst_7D4D4C88","path":"rooms/rm_menu_bedroom/rm_menu_bedroom.yy",},
+    {"name":"inst_1FA79073","path":"rooms/rm_menu_bedroom/rm_menu_bedroom.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -35,6 +36,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_14AE7DFD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_interactable","path":"objects/obj_interactable/obj_interactable.yy",},"propertyId":{"name":"node","path":"objects/obj_interactable/obj_interactable.yy",},"value":"door",},
           ],"rotation":0.0,"scaleX":1.0,"scaleY":3.9375,"x":232.0,"y":92.5,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1FA79073","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wardrobe","path":"objects/obj_wardrobe/obj_wardrobe.yy",},"properties":[],"rotation":0.0,"scaleX":0.875,"scaleY":4.6875,"x":102.0,"y":90.5,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Walls","depth":400,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5DDBE41A_1_4","colour":4294967295,"frozen":true,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"rotation":0.0,"scaleX":16.0,"scaleY":3.5,"x":128.0,"y":164.0,},
