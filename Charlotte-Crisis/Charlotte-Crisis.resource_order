@@ -281,7 +281,6 @@
     {"name":"spr_mc_male_walking_3_0","order":7,"path":"sprites/spr_mc_male_walking_3_0/spr_mc_male_walking_3_0.yy",},
     {"name":"ChatterboxGetContentSpeaker","order":5,"path":"scripts/ChatterboxGetContentSpeaker/ChatterboxGetContentSpeaker.yy",},
     {"name":"spr_mc_female_idle_3_3","order":2,"path":"sprites/spr_mc_female_idle_3_3/spr_mc_female_idle_3_3.yy",},
-    {"name":"rm_menu_bedroom","order":4,"path":"rooms/rm_menu_bedroom/rm_menu_bedroom.yy",},
     {"name":"spr_mc_female_idle_3_2","order":1,"path":"sprites/spr_mc_female_idle_3_2/spr_mc_female_idle_3_2.yy",},
     {"name":"__ChatterboxEvaluate","order":9,"path":"scripts/__ChatterboxEvaluate/__ChatterboxEvaluate.yy",},
     {"name":"__ChatterboxClassText","order":6,"path":"scripts/__ChatterboxClassText/__ChatterboxClassText.yy",},
