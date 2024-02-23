@@ -92,7 +92,8 @@ function calculate_odds(_parameters) {
 	var _needed = _threshold - _score;
 	_needed = max(_needed, 0); //set to zero if it is negative
 	var _odds = (6 - _needed + 1)/6
-	return round(_odds * 100) // convert to 100%
+	var _percentage = min(round(_odds * 100), 100); // dont let it go over 100%
+	return _percentage;
 	
 }
 
