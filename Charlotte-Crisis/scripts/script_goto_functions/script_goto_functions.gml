@@ -24,7 +24,8 @@ function goto_room_class_1(){
 }
 
 function goto_room_class_1_seated(){
-	room_goto(rm_class_1_seated);
+	fade_room(rm_class_1_seated);
+	
 	obj_player.x = 223;
 	obj_player.y = 74;
 	obj_player.facing_direction = 1;
@@ -34,7 +35,7 @@ function goto_room_class_1_seated(){
 }
 
 function goto_room_class_1_discussion() {
-	room_goto(rm_class_1_discussion);
+	fade_room(rm_class_1_discussion);
 	obj_player.x = 203;
 	obj_player.y = 75;
 	obj_player.facing_direction = -1;
@@ -45,7 +46,7 @@ function goto_room_class_1_discussion() {
 
 #region Bus Gotos
 function goto_room_bus(){
-	room_goto(rm_bus);
+	fade_room(rm_bus);
 	obj_player.x = 223;
 	obj_player.y = 74;
 	obj_player.facing_direction = -1;
@@ -55,7 +56,7 @@ function goto_room_bus(){
 }
 
 function goto_room_bus_cj(){
-	room_goto(rm_bus_cj);
+	fade_room(rm_bus_cj);
 	obj_player.x = 223;
 	obj_player.y = 74;
 	obj_player.facing_direction = -1;
@@ -63,7 +64,7 @@ function goto_room_bus_cj(){
 }
 
 function goto_room_bus_j(){
-	room_goto(rm_bus_j);
+	fade_room(rm_bus_j);
 	obj_player.x = 223;
 	obj_player.y = 74;
 	obj_player.facing_direction = -1;
@@ -71,7 +72,7 @@ function goto_room_bus_j(){
 }
 
 function goto_room_bus_s(){
-	room_goto(rm_bus_s);
+	fade_room(rm_bus_s);
 	obj_player.x = 223;
 	obj_player.y = 74;
 	obj_player.facing_direction = -1;
@@ -81,7 +82,7 @@ function goto_room_bus_s(){
 
 #region goto Bedrooms
 function goto_room_bedroom(){
-	room_goto(rm_bedroom_after_class1);
+	fade_room(rm_bedroom_after_class1);
 	obj_player.x = 230;
 	obj_player.y = 74;
 	obj_player.facing_direction = -1;
@@ -93,7 +94,7 @@ function goto_room_bedroom(){
 }
 
 function goto_room_bedroom_after_cca(){
-	room_goto(rm_bedroom_1_after_cca);
+	fade_room(rm_bedroom_1_after_cca);
 	obj_player.x = 30;
 	obj_player.y = 74;
 	obj_player.facing_direction = 1;
@@ -114,7 +115,7 @@ function goto_room_bedroom_frombed() {
 
 #region CCA1
 function goto_room_cca_1(){
-	room_goto(rm_cca_1);
+	fade_room(rm_cca_1);
 	obj_player.x = 46;
 	obj_player.y = 74;
 	obj_player.facing_direction = 1;
@@ -127,7 +128,7 @@ function goto_room_cca_1(){
 
 
 function goto_room_cca_1_seated(){
-	room_goto(rm_cca_1_seated);
+	fade_room(rm_cca_1_seated);
 	obj_player.x = 112;
 	obj_player.y = 74;
 	obj_player.facing_direction = 1;
@@ -137,18 +138,18 @@ function goto_room_cca_1_seated(){
 }
 
 function goto_room_cca_1_seated_18() {
-	room_goto(rm_cca_1_seated_18);
+	fade_room(rm_cca_1_seated_18);
 }
 
 function goto_room_cca_1_seated_11() {
-	room_goto(rm_cca_1_seated_11);
+	fade_room(rm_cca_1_seated_11);
 }
 
 #endregion
 
 #region hangouts
 	function goto_room_hangout_a() {
-		room_goto(rm_hangout_a);
+		fade_room(rm_hangout_a);
 		obj_player.x = 159;
 		obj_player.y = 74;
 		obj_player.facing_direction = 1;
@@ -160,7 +161,7 @@ function goto_room_cca_1_seated_11() {
 	}
 	
 	function goto_room_hangout_n() {
-		room_goto(rm_hangout_n);
+		fade_room(rm_hangout_n);
 		obj_player.x = 159;
 		obj_player.y = 74;
 		obj_player.facing_direction = 1;
@@ -172,7 +173,7 @@ function goto_room_cca_1_seated_11() {
 	}
 	
 	function goto_room_hangout_v() {
-		room_goto(rm_hangout_v);
+		fade_room(rm_hangout_v);
 		obj_player.x = 159;
 		obj_player.y = 74;
 		obj_player.facing_direction = 1;
