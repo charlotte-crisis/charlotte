@@ -50,7 +50,7 @@ Who are you today? (Use the Up and Down arrow keys to choose an option, and spac
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1403,200
 __PrivCrochet_tags: 
-title: 2
+title: door
 ---
 <<if $canGoToBed == true>>
     You just got back!

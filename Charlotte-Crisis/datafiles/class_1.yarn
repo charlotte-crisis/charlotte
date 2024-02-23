@@ -291,6 +291,8 @@ You: "Yeah, so feminism to me is..."
             With plenty of time left, your group starts some small talk about what you did over the semester break.
             Sage looks a bit distracted.
     <<else>>
+        What do you do? 
+
         -> Say nothing.
             Chenjie: "So we're done!"
             Joanne: "Can't believe it's the second last semester already... I hardly got to enjoy myself during the sem break."

@@ -81,7 +81,7 @@ function goto_room_bus_s(){
 
 #region goto Bedrooms
 function goto_room_bedroom(){
-	room_goto(rm_bedroom_1);
+	room_goto(rm_bedroom_after_class1);
 	obj_player.x = 230;
 	obj_player.y = 74;
 	obj_player.facing_direction = -1;
