@@ -15,31 +15,20 @@ if (_move > 0) {
 
 var _frame = ++img_frame/10 % num_of_frames;
 
-for (var i = 3; i >= 0; i--) {
-	// draw from layer 4 to layer 1
-	if (is_sitting) {
-		draw_sprite_ext(sitting_sprites[i], _frame, x, y, facing_direction, 1, 0, c_white, 1);
-	} else if (_move != 0) {
-		draw_sprite_ext(walking_sprites[i], _frame, x, y, facing_direction, 1, 0, c_white, 1);
-	} else {
-		draw_sprite_ext(idle_sprites[i], _frame, x, y, facing_direction, 1, 0, c_white, 1);	
-	}
+var _mode = 0;
+if (is_sitting) {
+	_mode = 1;	
+} else if (_move != 0) {
+	_mode = 2;	
 }
 
-/*
-if (is_sitting) {
-	draw_sprite_ext(sitting_legs[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(sitting_torso[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(sitting_shorts[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(sitting_head[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
-} else if (_move != 0) {
-	draw_sprite_ext(walking_legs[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(walking_torso[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(walking_shorts[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(walking_head[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);	
-} else {
-	draw_sprite_ext(idle_legs[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(idle_torso[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(idle_shorts[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
-	draw_sprite_ext(idle_head[gender], _frame, x, y, facing_direction, 1, 0, c_white, 1);
-}*/
+// draw character
+// legs first
+draw_sprite_ext(leg_sprites[_mode], _frame, x, y, facing_direction, 1, 0, c_white, 1);
+// torso
+draw_sprite_ext(top_sprites[_mode], _frame, x, y, facing_direction, 1, 0, c_white, 1);
+// head
+draw_sprite_ext(head_sprites[_mode], _frame, x, y, facing_direction, 1, 0, c_white, 1);
+// bottoms
+draw_sprite_ext(bottom_sprites[_mode], _frame, x, y, facing_direction, 1, 0, c_white, 1);
+

@@ -55,25 +55,28 @@ num_of_frames    = 8;
 gender = 0;
 current_outfit = 1;
 
-sitting_sprites = [
-	spr_mc_male_sit_1_1,
-	spr_mc_male_sit_2,
-	spr_mc_male_sit_3_1,
-	spr_mc_male_sit_4_1,
-]
+// 0: Idle, 1: Sit, 2: Walk
+// In order of drawing layer
 
-idle_sprites = [
-	spr_mc_male_idle_1_1,
-	spr_mc_male_idle_2,
-	spr_mc_male_idle_3_1,
-	spr_mc_male_idle_4_1,
-]
-
-walking_sprites = [
-	spr_mc_male_walking_1_1,
-	spr_mc_male_walking_2,
-	spr_mc_male_walking_3_1,
-	spr_mc_male_walking_4_1,
-]
+leg_sprites = [
+	spr_mc_female_idle_4_3,
+	spr_mc_female_sit_4_3,
+	spr_mc_female_walking_4_3,
+];
+top_sprites = [
+	spr_mc_female_idle_3_2,
+	spr_mc_female_sit_3_2,
+	spr_mc_female_walking_3_2,
+];
+head_sprites = [
+	spr_mc_female_idle_2_1,
+	spr_mc_female_sit_2_1,
+	spr_mc_female_walking_2_1,
+];
+bottom_sprites = [
+	spr_mc_female_idle_1_1,
+	spr_mc_female_sit_1_1,
+	spr_mc_female_walking_1_1,
+];
 
 #endregion
