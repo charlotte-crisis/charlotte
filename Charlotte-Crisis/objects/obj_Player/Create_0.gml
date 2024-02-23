@@ -53,8 +53,6 @@ num_of_frames    = 8;
 	1: Female
 */
 gender = 0;
-current_outfit = 1;
-
 // 0: Idle, 1: Sit, 2: Walk
 // In order of drawing layer
 
