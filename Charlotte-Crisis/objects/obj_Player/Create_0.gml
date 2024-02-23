@@ -52,7 +52,8 @@ num_of_frames    = 8;
 	0: Male
 	1: Female
 */
-gender = 0;
+gender = 1;
+current_clothes = [2, 3, 1]
 // 0: Idle, 1: Sit, 2: Walk
 // In order of drawing layer
 
@@ -76,5 +77,26 @@ bottom_sprites = [
 	spr_mc_female_sit_1_1,
 	spr_mc_female_walking_1_1,
 ];
+
+/// @function set_player_sprites(_gender, _top, _bottom, _shoes);
+/// @description Change the player's sprites based on the outfit and gender.
+/// @param {Real} _gender	The player's gender presentation (Affects head)
+/// @param {Real} _top		Top outfit
+/// @param {Real} _bottom	Pants outfit
+/// @param {Real} _shoes	Shoes outfit
+function set_player_sprites(_gender, _top, _bottom, _shoes) {
+	head_sprites = get_head_sprites(_gender);
+	top_sprites = get_top_sprites(_gender, _top);
+	bottom_sprites = get_bottom_sprites(_gender, _bottom);
+	leg_sprites = get_leg_sprites(_gender, _shoes);
+}
+
+function get_player_current_clothes() {
+	return current_clothes;	
+}
+
+function get_player_gender() {
+	return gender;
+}
 
 #endregion

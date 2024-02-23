@@ -10,7 +10,7 @@ MAX_ROW = 4;
 // Top, Bottom, Shoes
 // Currently 3 each
 MAX_CLOTHES = 3;
-current_clothes = [1, 1, 1];
+current_clothes = [0, 0, 0]; // 0 index
 
 // 0: male
 // 1: female

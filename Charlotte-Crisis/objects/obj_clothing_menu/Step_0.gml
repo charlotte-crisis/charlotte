@@ -9,6 +9,8 @@ if (keyboard_check_pressed(vk_escape)) {
 
 // confirm choices
 if ((select_row == MAX_ROW) && (keyboard_check_pressed(vk_space))) {
+	obj_player.set_player_sprites(current_gender,
+			current_clothes[0], current_clothes[1], current_clothes[2]);
 	obj_player.set_is_interacting(false);
 	instance_destroy(self);
 }
