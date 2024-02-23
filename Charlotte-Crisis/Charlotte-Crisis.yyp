@@ -212,6 +212,7 @@
     {"id":{"name":"CJ_walking_strip8","path":"sprites/CJ_walking_strip8/CJ_walking_strip8.yy",},},
     {"id":{"name":"ChatterboxGetContentSpeakerData","path":"scripts/ChatterboxGetContentSpeakerData/ChatterboxGetContentSpeakerData.yy",},},
     {"id":{"name":"script_npc_relationships","path":"scripts/script_npc_relationships/script_npc_relationships.yy",},},
+    {"id":{"name":"rm_bedroom_parent","path":"rooms/rm_bedroom_parent/rm_bedroom_parent.yy",},},
     {"id":{"name":"N_sat_strip2","path":"sprites/N_sat_strip2/N_sat_strip2.yy",},},
     {"id":{"name":"__ChatterboxVM","path":"scripts/__ChatterboxVM/__ChatterboxVM.yy",},},
     {"id":{"name":"J_Portraits","path":"sprites/J_Portraits/J_Portraits.yy",},},
@@ -268,6 +269,7 @@
     {"id":{"name":"obj_desk","path":"objects/obj_desk/obj_desk.yy",},},
     {"id":{"name":"space_strip4","path":"sprites/space_strip4/space_strip4.yy",},},
     {"id":{"name":"ChatterboxIsWaiting","path":"scripts/ChatterboxIsWaiting/ChatterboxIsWaiting.yy",},},
+    {"id":{"name":"rm_bedroom_menu","path":"rooms/rm_bedroom_menu/rm_bedroom_menu.yy",},},
     {"id":{"name":"__ChatterboxEscapeForCSV","path":"scripts/__ChatterboxEscapeForCSV/__ChatterboxEscapeForCSV.yy",},},
     {"id":{"name":"spr_clubroom_bars","path":"sprites/spr_clubroom_bars/spr_clubroom_bars.yy",},},
     {"id":{"name":"ChatterboxVariableReset","path":"scripts/ChatterboxVariableReset/ChatterboxVariableReset.yy",},},
@@ -358,6 +360,7 @@
     {"id":{"name":"IsChatterbox","path":"scripts/IsChatterbox/IsChatterbox.yy",},},
   ],
   "RoomOrderNodes": [
+    {"roomId":{"name":"rm_bedroom_menu","path":"rooms/rm_bedroom_menu/rm_bedroom_menu.yy",},},
     {"roomId":{"name":"rm_menu_bedroom","path":"rooms/rm_menu_bedroom/rm_menu_bedroom.yy",},},
     {"roomId":{"name":"rm_class_1","path":"rooms/rm_class_1/rm_class_1.yy",},},
     {"roomId":{"name":"rm_bedroom_1","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},},
@@ -376,6 +379,7 @@
     {"roomId":{"name":"rm_cca_1_seated_11","path":"rooms/rm_cca_1_seated_11/rm_cca_1_seated_11.yy",},},
     {"roomId":{"name":"rm_class_1_discussion","path":"rooms/rm_class_1_discussion/rm_class_1_discussion.yy",},},
     {"roomId":{"name":"rm_bedroom_1_Child_0","path":"rooms/rm_bedroom_1_Child_0/rm_bedroom_1_Child_0.yy",},},
+    {"roomId":{"name":"rm_bedroom_parent","path":"rooms/rm_bedroom_parent/rm_bedroom_parent.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
