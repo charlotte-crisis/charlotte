@@ -18,38 +18,6 @@ You signed up for art club. Wouldn't want to miss the first day.
 <<jump tut_wardrobe>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1162,200
-__PrivCrochet_tags: 
-title: 1
----
-You stare at the mirror.
-It's you.
-The man in the reflection is called Charles.
-That's you, sometimes.
-Other times, you see Charlotte in the mirror.
-That's when Charles dresses in girl's clothing and stops calling himself Charles.
-It's just a hobby, though.
-At the start of the day, he's not sure what compels him, but he chooses to be Charles or Charlotte.
-
-Who are you today? (Use the Up and Down arrow keys to choose an option, and spacebar to continue.)
-
--> Charles
-    <<set $name = "Charles">>
-    <<setGender(0)>>    
-    You put on a T-shirt and jeans.
-    This is what you normally look like.
-    The original, the default skin, so to speak.
-    
--> Charlotte
-    <<set $name = "Charlotte">>
-    <<setGender(1)>>
-    You made sure to bring all your clothes to school.
-    Here, you're free to wear them, and no one can stop you.
-    You put on a dress. It fits you well, which has always been part of what motivated you to continue this hobby in the first place.
-
-(You can interact with the mirror again if you change your mind.)
-===
-__PrivCrochet_colorID: 0
 __PrivCrochet_position: 1403,200
 __PrivCrochet_tags: 
 title: door
@@ -57,15 +25,13 @@ title: door
 <<if $canGoToBed == true>>
     You just got back!
 <<else>>
-    <<if visited("1")>>
         Are you ready to head out?
-        -> Yes (Go to school)
-            <<goto_room_cca_1()>>
+
         -> No (Go back)
             ## exit.
-    <<else>>
-        You should probably get dressed before you head out.
-    <<endif>>
+
+        -> Yes (Go to school)
+            <<goto_room_cca_1()>>        
 <<endif>>
 ===
 __PrivCrochet_colorID: 0
@@ -140,4 +106,11 @@ TUTORIAL: Repeat this tutorial?
 
 -> No (Continue)
     
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1200,120
+__PrivCrochet_tags: 
+title: 1
+---
+you shouldnt be seeing this
 ===
