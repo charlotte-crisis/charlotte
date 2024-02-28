@@ -288,6 +288,7 @@
     {"name":"rm_class_1_discussion","order":13,"path":"rooms/rm_class_1_discussion/rm_class_1_discussion.yy",},
     {"name":"rm_cca_1_seated_18","order":11,"path":"rooms/rm_cca_1_seated_18/rm_cca_1_seated_18.yy",},
     {"name":"E_walking_strip8","order":19,"path":"sprites/E_walking_strip8/E_walking_strip8.yy",},
+    {"name":"spr_mc_female_idle_4_1_strip2","order":9,"path":"sprites/spr_mc_female_idle_4_1_strip2/spr_mc_female_idle_4_1_strip2.yy",},
     {"name":"spr_mc_female_walking_4_2","order":7,"path":"sprites/spr_mc_female_walking_4_2/spr_mc_female_walking_4_2.yy",},
     {"name":"rm_bedroom_after_cca1","order":9,"path":"rooms/rm_bedroom_after_cca1/rm_bedroom_after_cca1.yy",},
     {"name":"spr_male_bottoms_3","order":2,"path":"sprites/spr_male_bottoms_3/spr_male_bottoms_3.yy",},
