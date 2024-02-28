@@ -106,6 +106,7 @@ function goto_room_bedroom_after_cca(){
 }
 
 function goto_room_bedroom_frombed() {
+	fade_room(room);
 	obj_player.x = 30;
 	obj_player.y = 74;
 	obj_player.facing_direction = 1;
