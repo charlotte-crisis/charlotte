@@ -395,6 +395,7 @@ You: "Chenjie, wanna walk to the bus stop together?"
 Chenjie: "Yeah, okay!"
 
 <<goto_room_bus_cj()>>
+
 Chenjie: "Oh, yikes."
 You: "What?"
 Chenjie: "My mom said she saw a cockroach in the living room. And she's asking me to hurry back to kill it."
@@ -441,7 +442,7 @@ Chenjie: "I hate cockroaches."
 <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 3000,360
+__PrivCrochet_position: 3040,360
 __PrivCrochet_tags: 
 title: 14
 ---
