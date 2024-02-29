@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_mc_female_idle_4_1_strip2",
+  "name": "spr_mc_female_idle_4_1",
   "bbox_bottom": 62,
   "bbox_left": 5,
   "bbox_right": 26,
@@ -33,7 +33,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_mc_female_idle_4_1_strip2",
+    "name": "spr_mc_female_idle_4_1",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -55,8 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ed904148-ae5e-47f6-8e27-92952d7b2dd7","path":"sprites/spr_mc_female_idle_4_1_strip2/spr_mc_female_idle_4_1_strip2.yy",},},},"Disabled":false,"id":"b99c0b95-b419-41ed-9867-8685f4e6f6d6","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"dd2b6b62-988b-48ae-a32d-f4e9fd992f3a","path":"sprites/spr_mc_female_idle_4_1_strip2/spr_mc_female_idle_4_1_strip2.yy",},},},"Disabled":false,"id":"9ff52d2a-24b5-4a04-bac7-0d1cee5e5ea9","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ed904148-ae5e-47f6-8e27-92952d7b2dd7","path":"sprites/spr_mc_female_idle_4_1/spr_mc_female_idle_4_1.yy",},},},"Disabled":false,"id":"b99c0b95-b419-41ed-9867-8685f4e6f6d6","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"dd2b6b62-988b-48ae-a32d-f4e9fd992f3a","path":"sprites/spr_mc_female_idle_4_1/spr_mc_female_idle_4_1.yy",},},},"Disabled":false,"id":"9ff52d2a-24b5-4a04-bac7-0d1cee5e5ea9","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
