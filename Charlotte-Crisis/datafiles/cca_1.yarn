@@ -413,7 +413,9 @@ Vera: "You know, trans women."
     Vera: "Oh?"
     You: "Yeah, don't I need to do, like, hormones and surgery before I reach there?"
     Vera: "Well, that's what some of us would do."
-    Vera: "But it's not compulsory. You are Charlotte as long as you want to be Charlotte." (+ 10 XP)<<addExperience(10)>>
+    <<addExperience(10)>>
+    Vera: "But it's not compulsory. You are Charlotte as long as you want to be Charlotte." (+ 10 XP)
+
     -> You: "Are you saying that just to be nice?"
         Vera: "Absolutely not."
         Vera: "Your body, your opinion. Don't strictly follow what anyone else says."
