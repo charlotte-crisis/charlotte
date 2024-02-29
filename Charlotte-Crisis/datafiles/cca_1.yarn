@@ -282,7 +282,7 @@ What do you want to say?
     Nadia: "Okay!"
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1546,-36
+__PrivCrochet_position: 1560,-40
 __PrivCrochet_tags: 
 title: 10
 ---
@@ -386,12 +386,13 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
 <<jump 11>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1821,-39
+__PrivCrochet_position: 1840,-40
 __PrivCrochet_tags: 
 title: 11
 ---
 Eleanor: "Thanks for coming and see you next week!"
 
+<<goto_room_cca_1_seated_11()>>
 As Nadia and Anthony leave, Vera stops you for a quick chat.
 Vera: "Hey Charlotte. Are you feeling okay?"
 
@@ -408,7 +409,7 @@ Vera: "Hey Charlotte. Are you feeling okay?"
 <<jump 12>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2061,-40
+__PrivCrochet_position: 2080,-40
 __PrivCrochet_tags: 
 title: 12
 ---
@@ -565,7 +566,7 @@ Anthony: "Why do you feel female?"
 <<jump 14>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1819,201
+__PrivCrochet_position: 1800,200
 __PrivCrochet_tags: 
 title: 14
 ---
@@ -629,7 +630,7 @@ You're really being put on the spot here. How will you respond?
 <<jump 16>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1821,442
+__PrivCrochet_position: 1840,440
 __PrivCrochet_tags: 
 title: 16
 ---
@@ -655,7 +656,7 @@ Vera: "I am curious, though. Why not draw Charlotte?"
 <<jump 17>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2061,442
+__PrivCrochet_position: 2080,440
 __PrivCrochet_tags: 
 title: 17
 ---
@@ -678,14 +679,16 @@ Eleanor looks at the clock.
 Eleanor: "Well, that's everyone." 
 Eleanor: "We've still got a bit of time, and I brought snacks, so please help yourselves!" 
 Eleanor: "Get to know each other, yeah?"
-
+<<goto_room_cca_1_seated_18()>>
 Vera and Nadia leave first, Anthony waits for them to go before he comes over to you.
 Anthony: "Hey. Didn't you realise something was... off about that girl?"
 
 -> You: "Like what?"
 
 -> You: "Yeah, she doesn't look normal."
-    Anthony: "Right? Anyone can see it from a mile away." (+5% Anthony relationship) <<changeRelationship("A", 5)>>
+    <<changeRelationship("A", 5)>>
+    Anthony: "Right? Anyone can see it from a mile away." (+5% Anthony relationship) 
+    
 
 <<jump 19>>
 ===
@@ -818,4 +821,16 @@ Anthony: "Maybe she's an ah gua."
             Anthony: "See you next week."
         <<endif>>
 <<stop>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,120
+__PrivCrochet_tags: 
+title: pre-5
+---
+Do you wish to sit?
+
+-> No (go back)
+
+-> Yes (continue...)
+    <<goto_room_cca_1_seated()>>
 ===
