@@ -140,7 +140,7 @@ Eleanor: "You sure? I mean, with you being new here, it'd be nice to introduce y
     -> "No and stop asking."
         Eleanor: "Okay, whatever you're comfortable with."
         The rest of the session passes uneventfully.
-        <<stop>>
+        <<jump end>>
     
     -> "Okay, fine."
         Eleanor: "Don't worry about it, we won't judge."
@@ -499,7 +499,7 @@ Vera: "You know, trans women."
         Vera: "Let's meet up soon?"
         You: "Sure, I'll let you know." (END)
 
-<<stop>>
+<<jump end>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1571,215
@@ -572,10 +572,10 @@ title: 14
 ---
 Eleanor: "We didn't even get to comment on Charlotte's art... if you want to talk about it, I can have a look later."
 Eleanor: "Anyway, our time's up for this week. See you next week!"
-<<stop>>
+<<jump end>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1546,433
+__PrivCrochet_position: 1560,440
 __PrivCrochet_tags: 
 title: 15
 ---
@@ -630,7 +630,7 @@ You're really being put on the spot here. How will you respond?
 <<jump 16>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1840,440
+__PrivCrochet_position: 1800,400
 __PrivCrochet_tags: 
 title: 16
 ---
@@ -662,7 +662,7 @@ title: 17
 ---
 Eleanor: "We didn't even get to comment on Charlotte's art... if you want to talk about it, I can have a look."
 Eleanor: "Either way, see you next week!"
-<<stop>>
+<<jump end>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1581,682
@@ -820,7 +820,7 @@ Anthony: "Maybe she's an ah gua."
             Anthony: "I'm sure there will be many more opportunities to laugh at how cringe the two of you are."
             Anthony: "See you next week."
         <<endif>>
-<<stop>>
+<<jump end>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 760,120
@@ -833,4 +833,13 @@ Do you wish to sit?
 
 -> Yes (continue...)
     <<goto_room_cca_1_seated()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2520,240
+__PrivCrochet_tags: 
+title: end
+---
+You head back to your room.
+
+<<goto_room_bedroom_after_cca()>>
 ===
