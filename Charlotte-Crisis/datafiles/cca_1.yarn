@@ -19,6 +19,9 @@ Vera: "Hi, {$name}, I'm Vera."
     Vera: "Wow, you look great!"
     You: "Thanks!" (+5% confidence) <<changeConfidence(5)>>
 <<endif>>
+
+What do you want to say?
+
 -> "How are things here?" <<if !optionChosen()>>
     Vera: "Are you new? I've never seen you before."
     Vera: "Well, we usually have a prompt for the week which we try to draw out."
@@ -164,7 +167,9 @@ You: "Hi! I'm {$name}."
 Anthony: "Hi, I'm Anthony. Please don't disturb me."
 Anthony seems very engrossed in his art. Let him be.
 
--> "How are things here?"
+What do you want to say?
+
+-> "How are things here?" <<if !optionChosen()>>
     Anthony dismissively points to the whiteboard.
     Anthony: "Draw something based on the prompt. We usually talk about it later."
     <<jump 3>>
@@ -178,7 +183,7 @@ Anthony seems very engrossed in his art. Let him be.
             Anthony: "It's just the truth."
             <<jump 3>>
         
-        -> "Ants aren't all bad, right?" (INT check)
+        -> "Ants aren't all bad, right?" (INT check) <<if !optionChosen()>>
             Anthony: "What?"
             <<set $diceroll = diceRoll($int)>>
                 [You rolled a {$diceroll}.]
@@ -224,7 +229,7 @@ Anthony seems very engrossed in his art. Let him be.
     Anthony: "Mm."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 520,600
+__PrivCrochet_position: 520,560
 __PrivCrochet_tags: 
 title: 4
 ---
@@ -236,7 +241,9 @@ Nadia: "Hi, {$name}! I'm Nadia."
     You: "Thanks!" (+5% confidence)
 <<endif>>
 
--> "How are things here?"
+What do you want to say?
+
+-> "How are things here?" <<if !optionChosen()>>
     Nadia: "You're new, right?"
     Nadia: "Don't worry, it's not too hard. We're all about exploration here."
     Nadia: "There's a prompt on the board, but even that's optional if you've got a better idea!"
