@@ -9,7 +9,7 @@ The words "self-portrait" are projected onto the screen.
 You should probably explore what and who is in the club room first.
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 514,77
+__PrivCrochet_position: 520,80
 __PrivCrochet_tags: 
 title: 2
 ---
@@ -156,7 +156,7 @@ Eleanor: "You sure? I mean, with you being new here, it'd be nice to introduce y
         <<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 517,322
+__PrivCrochet_position: 520,320
 __PrivCrochet_tags: 
 title: 3
 ---
@@ -164,7 +164,7 @@ You: "Hi! I'm {$name}."
 Anthony: "Hi, I'm Anthony. Please don't disturb me."
 Anthony seems very engrossed in his art. Let him be.
 
--> "How are things here?"<<if !optionChosen()>>
+-> "How are things here?"
     Anthony dismissively points to the whiteboard.
     Anthony: "Draw something based on the prompt. We usually talk about it later."
     <<jump 3>>
@@ -178,7 +178,7 @@ Anthony seems very engrossed in his art. Let him be.
             Anthony: "It's just the truth."
             <<jump 3>>
         
-        -> "Ants aren't all bad, right?" (INT check) <<if !optionChosen()>>
+        -> "Ants aren't all bad, right?" (INT check)
             Anthony: "What?"
             <<set $diceroll = diceRoll($int)>>
                 [You rolled a {$diceroll}.]
@@ -224,7 +224,7 @@ Anthony seems very engrossed in his art. Let him be.
     Anthony: "Mm."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 510,581
+__PrivCrochet_position: 520,600
 __PrivCrochet_tags: 
 title: 4
 ---
@@ -232,10 +232,11 @@ You: "Hi! I'm {$name}."
 Nadia: "Hi, {$name}! I'm Nadia."
 <<if $name == "Charlotte">>
     Nadia: "By the way, nice outfit!"
-    You: "Thanks!" (+5% confidence) <<changeConfidence(5)>>
+    <<changeConfidence(5)>>
+    You: "Thanks!" (+5% confidence)
 <<endif>>
 
--> "How are things here?" <<if !optionChosen()>>
+-> "How are things here?"
     Nadia: "You're new, right?"
     Nadia: "Don't worry, it's not too hard. We're all about exploration here."
     Nadia: "There's a prompt on the board, but even that's optional if you've got a better idea!"
