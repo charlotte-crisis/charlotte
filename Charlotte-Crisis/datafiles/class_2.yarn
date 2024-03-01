@@ -1,0 +1,132 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 160,280
+__PrivCrochet_tags: 
+title: 1
+---
+// Enter Classroom
+
+You arrived at the classroom with time to spare. 
+It seems all your group mates are already settled down.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 400,40
+__PrivCrochet_tags: 
+title: 2
+---
+You: "Morning!"
+Sage: "Good morning."
+<<if $name == "Charlotte">>
+    Sage: "That's a cute blouse."
+
+    <<changeConfidence(5)>>
+    You: "Thanks!" (+5% confidence)
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 400,280
+__PrivCrochet_tags: 
+title: 3
+---
+You: "Morning!"
+Chenjie: "Morning! God, isn't it a pain waking up this early just for this class?"
+You: "Definitely. Monday morning classes are the worst."
+Chenjie: "Luckily, this class is interesting enough to be worth the effort."
+You: "True!"
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 400,520
+__PrivCrochet_tags: 
+title: 4
+---
+You: "Morning!"
+<<if ($name == "Charlotte") or (getRelationship("J") < 10)>>
+    Joanne: "Morning..."
+    You: "How was your weekend?"
+    Joanne: "Nothing special." 
+    She seems reluctant to talk to you.
+<<else>>
+    <<if visited("4") <= 1>> // only do it once
+        <<changeRelationship("J", 5)>>
+    <<endif>>
+    Joanne: "Morning!" // (+5% Joanne relationship)
+    You: "How was your weekend?"
+    Joanne: "Good! Just watched a movie with my boyfriend."
+
+    -> "Ooh! What movie?"
+        Joanne: "Parasite. It's pretty good."
+    
+    -> "At the cinema?"
+        Joanne: "No, at home. We don't really like going to the cinema."
+        Joanne: "It's a bit expensive."
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 640,640
+__PrivCrochet_tags: 
+title: chair
+---
+Do you want to sit down?
+
+-> No (go back)
+
+-> Yes (continue scene)
+    <<jump 5>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 640,280
+__PrivCrochet_tags: 
+title: 5
+---
+Prof Lim: "Settle down, everyone!"
+Prof Lim: "Okay, today, the topic will be on Gender in Beauty."
+Prof Lim: "First, we shall start with a short video."
+
+Prof starts a clip of a South Korean game show, and it quickly becomes clear what the game show is about.
+Women getting plastic surgery makeovers, showcased in dramatic before-and-after photos and an energetic upbeat catwalk.
+All the women are confident and happy on the runway while the crowds and judges are wow-ed by the transformation.
+The video ends.
+
+Prof Lim: "Right, we shall start with discussion questions."
+Prof Lim: "First, do you think plastic surgery made the women in this show more beautiful?"
+Prof Lim: "Next, who determines what beauty is?"
+Prof Lim: "How does the concept of beauty affect people's lives?"
+Prof Lim: "Gather in your groups and discuss this."
+
+// Discussion arrangement
+Chenjie: "Okay, so... what do you think about the women after plastic surgeries, right?"
+Chenjie: "If they became prettier."
+There is a slightly uncomfortable silence, like no one wants to be the first to answer.
+
+-> "Um, they indeed became prettier."
+    You: "We don't like hearing it but... plastic surgeries do in fact make people more beautiful."
+    <<changeRelationship("J", 5)>>
+    Joanne: "Yeah... I mean, they did the surgery in the first place, right?" // (+5% Joanne relationship)
+    Joanne: "The transformations were all quite drastic. They didn't even look like the same person anymore."
+    Chenjie: "I think they were also pretty in their own way before and after."
+    Sage: "Yeah, but you usually only say 'in their own way' when one of them is a clear winner."
+    Chenjie winces.
+    Chenjie: "I guess so... It's really not nice to say though."
+    Joanne: "It's reality though. Women are judged against a certain beauty standard."
+    <<addExperience(5)>>
+    Joanne: "We just have to live with it." (+5 XP)
+    <<jump 7>>
+
+-> "They were beautiful both before and after."
+    <<changeRelationship("CJ", 5)>>
+    Chenjie: "Yeah, I agree." // (+5% Chenjie relationship)
+    Chenjie: "I think they are both beautiful in their own ways."
+    <<jump 6>>
+
+-> "I think natural beauty is the best, no plastic surgeries."
+    You: "The world would be a lot better if there were no plastic surgeries."
+    <<changeRelationship("CJ", -5)>>
+    Chenjie: "Maybe not though... What about people who need the surgery? Medically speaking." // (-5% Chenjie relationship)
+    Chenjie: "Personally, the women before and after are both beautiful in their own ways."
+    Joanne: "Do you really think so?"
+    Joanne: "No need to give the politically correct answer, you know?"
+    <<jump 6>>
+
+-> Keep silent
+    <<jump 6>>
+===

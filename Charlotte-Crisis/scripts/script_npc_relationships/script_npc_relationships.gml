@@ -8,7 +8,12 @@ function change_npc_relationship(_parameters) {
 	var _amount = real(_parameters[1]);
 	return obj_npc_relationships.change_relationship(_name, _amount);
 }
-	
+
+
+/// @function get_npc_relationship(_parameters)
+/// @description return relationship of name supplied e.g. "CJ"
+/// @param {Array} _parameters {Name}
+/// @return {Real} Relationship of character
 function get_npc_relationship(_parameters) {
 	var _name = _parameters[0];
 	return obj_npc_relationships.get_relationship(_name);
