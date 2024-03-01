@@ -435,7 +435,7 @@ Joanne: "And you get to just dress up and pretend to be a girl for fun?"
     <<jump 10>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1160,120
+__PrivCrochet_position: 1120,280
 __PrivCrochet_tags: 
 title: 10
 ---
@@ -476,14 +476,32 @@ You: "We talked about..."
 <<jump 13>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1280,-200
+__PrivCrochet_position: 1360,40
 __PrivCrochet_tags: 
 title: 13
 ---
+Lecture proceeds uneventfully after that. (+ 5 XP)
+Prof Lim: "And that's it for class! Thank you, everyone."
+That's it for class today. 
+Who will you walk with today?
 
+-> Go back alone.
+	You don't seem comfortable enough to talk more with any of your classmates.
+	You decide to head back to the hostel by yourself.
+	Slinking away to the door, you make a quiet exit.
+    // go home
+
+-> Chenjie <<if getRelationship("CJ") >= 10 >>
+<<jump 14>>
+
+-> Joanne <<if getRelationship("J") >= 10 >>
+<<jump 15>>
+
+-> Sage <<if getRelationship("S") >= 10 >>
+<<jump 16>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1440,400
+__PrivCrochet_position: 1360,520
 __PrivCrochet_tags: 
 title: 11
 ---
@@ -503,4 +521,345 @@ Prof Lim: "Perhaps, someone should check on her."
     Joanne: "I'll go check on her."
 
 <<jump 12>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1360,280
+__PrivCrochet_tags: 
+title: 12
+---
+//black screen//
+Joanne leaves to find Sage.
+Sage might not want to see Joanne... It looked like she left because of what Joanne said.
+Sure enough, a minute later, Joanne comes back alone.
+//classroom screen//
+Joanne: "She said she'll be back in a while."
+Chenjie: "How is she?"
+Joanne: "... She sounded quite upset... I don't know..."
+When Sage returns to the class, Prof Lim is explaining lookism in South Korea.
+She looks a bit exhausted.
+
+-> "Are you okay?"
+    <<if getRelationship("S") >= 40>>
+        Sage: "What Joanne said reminded me of something bad."
+        Sage: "I'm better though. Thanks for worrying."
+        You: "Okay... If there's anything you need me to do for you, let me know?"
+        <<changeRelationship("S", 5)>>
+        Sage nods. // (+5% Sage relationship)
+    <<else>>
+        Sage: "Yeah. Just a stomachache."
+        Sage: "Must have eaten something bad this morning."
+        You: "Get well soon."
+        <<changeRelationship("S", 5)>>
+        Sage: "Thanks." // (+5% Sage relationship)
+    <<endif>>
+
+-> Leave her alone
+
+<<jump 13>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1600,40
+__PrivCrochet_tags: 
+title: 14
+---
+Chenjie: "Yeah, sure."
+//Bus stop//
+Chenjie: "Beauty standards, huh..."
+Chenjie: "We mostly talked about beauty standards for women today, but..."
+Chenjie: "I wonder though... The standard for dudes."
+
+-> "Guys have it way easier."
+    Chenjie: "I mean, it's not a competition."
+    Chenjie: "I just think we have it different from girls."
+
+-> "It's honestly not much better."
+    <<changeRelationship("CJ", 5)>>
+    Chenjie: "Yeah, we have different kinds of standards we are expected to meet." // (+5% Chenjie relationship)
+
+-> "Honestly, guys have it worse."
+    You: "Ugly guys don't even get the time of day sometimes."
+    <<changeConfidence(-5)>>
+    You: "Women don't spare a single glance if you don't look like the ideal partner." (-5% confidence)
+    Chenjie: "I mean... I feel that while guys don't exactly have it worse, we have it worse in some ways."
+
+Chenjie: "I feel like men are expected to be big, tall and buff or something..."
+Chenjie: "I get criticised for that by some of my relatives sometimes."
+Chenjie: "I'm too lanky, and I just feel that no girl will be interested in a beanpole."
+You: "What brought this up?"
+Chenjie: "I don't know... It's just that I've never actually been in a serious relationship before even though it's literally my last schooling year."
+Chenjie: "And so today's lecture got me thinking about, well, if my physical appearance has something to do with it."
+
+-> "What constitutes a serious relationship?"
+    Chenjie: "I guess saying officially that you are going out and dating?"
+    Chenjie: "So far, I've only ever gone out on maybe one or two dates with some girls."
+    Chenjie: "But that's about it..."
+    <<if $emp >= 5>>
+        He's keeping his descriptions pretty vague...
+        <<addExperience(5)>>
+        He mustn't like talking about his love life. (+5 XP)
+    <<endif>>
+
+-> [CHA 6] Try to offer advice ({calculateOdds($cha, 6)}% success) #skillcheck #cha
+    <<set $diceroll = diceRoll($cha)>>
+    <<if $diceroll >= 6>>
+        You: "I think you should build up your self-confidence. Don't beat yourself up for something like this."
+        You: "You are a cool and kind guy so it's a shame that you don't see how amazing you are."
+        You: "Besides, people are naturally drawn to those who carry themselves with confidence."
+        You: "So you just have to have faith in yourself, and good things will follow."
+        Chenjie smiles.
+        <<changeConfidence(5)>>
+        Chenjie: "That's nice to hear." (+5% confidence)
+        The bus arrives.
+        Chenjie: "Bye! See you!"
+        You: "See you!"
+    <<else>>
+        You: "Maybe you could get buff. Go to the gym."
+        <<changeRelationship("CJ", -5)>>
+        Chenjie: "You sound like one of my aunties or something. I literally go to the gym every other day already." // (-5% Chenjie relationship)
+        You: "Oh... Maybe train different parts?"
+        Chenjie: "I've tried, okay?"
+        Chenjie: "It's not as easy as you think to build muscles in the right places."  
+        You: "I see..."
+        Chenjie: "Look. My bus is here. See you next week."
+        You: "Okay, bye."
+    <<endif>>
+
+-> "You're a good guy. I'm sure you'll get a girl soon."
+    You: "You gotta trust."
+    Chenjie: "I guess."
+    The bus arrives.
+    Chenjie: "Bye! See you!"
+    You: "See you!"
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1600,280
+__PrivCrochet_tags: 
+title: 15
+---
+Joanne: "Yup, okay. Wait while I pack up..."
+//Bus stop//
+Joanne: "My boyfriend's birthday is coming up soon."
+Joanne: "We've been together since secondary school but I still always struggle with buying him gifts..."
+You: "Coming up with a birthday gift is always tricky, isn't it?"
+You: "It's hard to predict what someone most wants to receive at the moment."
+Joanne: "Right now, I'm deciding between headphones, a limited edition song album, and a pair of sneakers."
+Joanne: "As a guy, what kind of gift would you appreciate most from your girlfriend?"
+
+-> Headphones
+-> Limited edition album
+-> A pair of sneakers
+
+Joanne: "Hm..."
+Joanne: "Several guys have told me that too..."
+Joanne: "I mean, I didn't think my boyfriend would appreciate that."
+
+-> "You know your boyfriend best."
+    You: "You've been dating him for years, right?"
+    You: "Each person is different so use your judgement of his likes and dislikes."
+    Joanne: "True..."
+    You: "Have faith in yourself and your judgement." 
+    <<changeRelationship("J", 5)>>
+    Joanne: "Hm, you're right. I do know him best. He liked all my gifts in the past too." // (+5% Joanne relationship)
+    Joanne: "Oh, the bus is here."
+    <<changeConfidence(5)>>
+    Joanne: "Thanks for the advice. Bye!" (+5% confidence)
+    Joanne: "Bye!"
+
+-> "In the end, it's the thought that matters."
+    You: "Whatever you get for him, I'm sure you put a lot of thought into it."
+    You: "The act of giving is the act of love in itself."
+    Joanne: "True. Usually, it matters more to me that I'm getting a present than the actual present itself."
+    Joanne: "Some years ago, I received a Cinnamoroll keychain, and now it's my favourite Sanrio character." 
+    <<addExperience(5)>>
+    You: "It's nice just to know that someone else thought of you, and what you would like." (+5 XP)
+    You: "Oh, is that your bus?"
+    Joanne: "Oh, yes!"
+    Joanne: "But thanks for your help. I know what to get for my boyfriend now."
+    You: "No problem. Bye!"
+
+-> "Majority vote, am I right?"
+    Joanne: "Yeah... I'm not a great gift giver..."
+    You: "I always struggle to figure out what others want..."
+    You: "I know people who keep a list of things their friends have mentioned needing or wanting over the year."
+    Joanne: "That's also a good idea! But... well..."
+    Joanne: "It's especially hard with guys because with girls I can just give a cute keychain or something."
+    Joanne: "But with guys, there just aren't that many things I feel they would like."
+    You: "Oh, is that your bus?"
+    Joanne: "Oh, yes!"
+    Joanne: "But thanks for your help. I know what to get for my boyfriend now."
+    You: "No problem. Bye!"
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1600,520
+__PrivCrochet_tags: 
+title: 16
+---
+Sage: "Okay, let's go then."
+//Bus stop//
+You: "How has your weekend been?"
+Sage: "Fine. I was a little busy helping a friend move house."
+Sage: "Who knew moving all that stuff would be so tiring? Even with a car."
+You: "Move house?"
+Sage: "Yeah, or more like moving to a rented room."
+
+-> "How old are they?"
+    Sage: "He's 22 this year."
+    You: "That is quite young."
+    Sage: "He's quite independent. He's always wanted to move out as soon as he was financially able."
+    You: "So he's working full-time already?"
+    Sage: "Sort of..."
+
+-> "Why did they ask you and not a mover?"
+    Sage: "He's my friend from primary school and we've stuck together ever since."
+    Sage: "You know, trying to save some money. And it's not that much stuff anyway."
+    You: "What about his family though?"
+    Sage: "They were... busy."
+
+-> "They were moving out of their parents' house?"
+    Sage: "I guess you could say so."
+    Sage: "It's complicated... He had a bit of a fight with his parents, and that's why he had to move out."
+
+Sage seemingly regrets speaking of this at all.
+<<if ($emp >= 6) or (getRelationship("S") >= 40)>>
+    <<addExperience(5)>>
+    Like she had accidentally spilled someone else's secret. (+5 XP)
+<<endif>>
+
+Sage: "What about you though? How's your weekend been?"
+
+-> "I had a talk with my sister about my crossdressing."
+    //if boss1 ending 2
+    You: "It went well. We had a good talk about my hobby and what it means to me."
+    Sage: "So she was accepting?"
+    You: "Yeah!"
+    Sage: "That's a relief. I'm glad you have such a supportive sister." (+5% Sage relationship)
+    You: "I still have my mum to convince..."
+    Sage: "Yeah, it can be harder with parents..."
+    Sage: "And that's my bus! But all the best, okay?"
+    You: "Yeah, bye!"
+    // end
+
+    //else 
+    You: "It... went poorly. She doesn't really like that I crossdress."
+    Sage: "Oh dear... I'm so sorry for that."
+    Sage: "Take care, okay? I know it's tough to face rejection like that..."
+    You: "I hope things will get better with time... I wish there were more people who understood."
+    Sage: "I don't know if things will get better necessarily but... I think you'll definitely find people who understand." (+5% Sage relationship)
+    Sage: "You just have to know where to look." (+5% confidence)
+    You: "Thanks..."
+    Sage: "That's my bus. All the best, okay? Take care." 
+    You: "Bye."
+    // end
+
+
+-> "It was okay. I didn't do much."
+    You: "I did some work, I guess."
+    Sage: "I see... Good for you."
+    Sage: "Oh, that's my bus."
+    Sage: "Good talk, okay? Uhm, see you next week!"
+    You: "Bye."
+    // ((END))
+
+-> "I started reading this non-fiction book."
+    You: "It's called 'The Body Keeps the Score.'"
+    Sage: "I think I've heard of it... Is it good?"
+    <<addExperience(5)>>
+    You: "Yeah, it's been interesting so far. It really explains in detail the effects of past experiences on a person's mind and body." (+5 XP)
+    Sage: "Huh. That is fascinating... I originally wanted to take psychology."
+    Sage: "But after taking the intro course, it felt like it was more fun as something to look into by yourself, and not as an examinable subject." 
+    <<changeRelationship("S", 5)>>
+    You: "Yeah, I get that sentiment." (+5% Sage relationship)
+    Sage: "Oh, that's my bus. See you next week!"
+    You: "Yeah, see you!"
+    // end
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 880,760
+__PrivCrochet_tags: 
+title: 17
+---
+Chenjie: "Then, next... How does the concept of beauty affect our daily lives..."
+Joanne: "Finding jobs... Studies show that more conventionally attractive people tend to have better hiring experiences, right?"
+Chenjie: "Right... Like pretty privilege is a real thing."
+Chenjie: "I know someone who had a glow-up and apparently the way people treat her is very different from before."
+Chenjie: "And since we talked about plastic surgery, there's also makeup culture..."
+Sage: "There's also this obsession with the no makeup look."
+Sage: "Like, it's weird that the guys who are the most adamant that no makeup is the best are also the ones who are only nice to pretty looking girls."
+Sage: "And somehow, us girls have to achieve that no makeup look while putting on makeup."
+Joanne: "God, I get it completely. I hate it when my mother keeps nagging at me to put on makeup."
+Joanne: "And makeup is actually so bad for your skin. Just caking your face with who-knows-what chemicals every day."
+
+-> "Makeup helps to increase self-confidence though."
+    <<addExperience(5)>>
+    You: "Maybe making such generalisations isn't helpful. What about the people who wear it as an art form or to boost their self-esteem?" (+5 XP)
+    <<changeRelationship("J", 5)>>
+    Joanne: "Yeah, I don't think it's all bad either." (+5% Joanne relationship)
+    Sage: "It's up to you whether you want to wear makeup. But when it becomes a social expectation, it really becomes quite toxic." 
+    Chenjie: "It is unfortunately ingrained in our culture... People are generally superficial."
+    <<jump 10>>
+
+-> Talk about your experiences with makeup
+    You: "Makeup helped me find myself... And I find it quite fun to apply makeup. Especially the colourful ones."
+    Joanne: "You're still wearing makeup these days...?"
+
+    -> "No. Back when I still dressed as Charlotte, but not anymore."
+        Sage: "You're not dressing as Charlotte anymore?"
+        Chenjie: "Why?"
+        You: "Yeah... I decided to stop. Enough is enough."
+        Sage: "I see... I mean, I guess that's... an understandable choice."
+        Chenjie: "Aren't you happier as Charlotte though?"
+        Who would ever feel happy holding a part of themself back out of fear and shame? 
+
+        -> Lie
+            You: "No, I feel better as Charles I think."
+            You: "Charlotte is the thing of the past now. More like a phase."
+            Sage: "Really?"
+            You: "Yeah, I mean, I honestly have no idea why I did all that. That was a weird time."
+            Joanne: "Oh, that's good. I'm glad you've gotten better and figured things out."
+            <<changeConfidence(-10)>>
+            It doesn't feel good to tell such a blatant lie. (-10% confidence)
+        
+        -> Tell a half truth
+            You: "I mean, I like being Charlotte but in the end, I'm choosing to be Charles."
+            You: "Being Charlotte taught me a lot about myself, but right now, I just want to be Charles."
+            You: "And I'm perfectly happy with that conclusion."
+            Chenjie: "Okay, good that you're happy!"
+            <<changeConfidence(-5)>>
+            Saying all that didn't feel good. It was like lying to yourself. (-5% confidence)
+            Sage looks at you in concern.
+
+        -> Tell the truth
+            You: "I decided to stop after my sister found out..."
+            You: "I just don't think Charlotte is worth tearing apart my personal relationships and my own future for."
+            You: "I think it's best moving forward to just leave Charlotte in the past."
+            Sage: "Oh... I... That sounds really tough." 
+            Chenjie: "It's your own choice though. It's your own body and life."
+            Chenjie: "You deserve to be living in a body and life that makes you happy." 
+            <<changeConfidence(5)>>
+            You: "I know, but I weighed the pros and cons and living as Charles 24/7 is the best for me." (+5% confidence)
+            Chenjie: "If you're sure then."
+
+        <<jump 10>> // go to 10 after the above 3 options
+
+    -> "Yes, when I dress up as Charlotte."
+        You: "It's difficult if I don't wear makeup because I pass even less."
+        You: "Wearing makeup helps send a signal of femininity. And contouring my face helps."
+        Chenjie: "I mean, it makes sense that wearing makeup is a confidence booster."
+        <<changeRelationship("S", 5)>>
+        Sage: "It kind of sucks that you have to put on makeup to even have your femininity acknowledged." // (+5% Sage relationship)
+        You: "I feel a huge pressure to apply makeup perfectly too."
+        You: "Because if I don't I'm not doing femininity well enough to qualify."
+        <<addExperience(5)>>
+        Sage: "I think that feeling is common for cis women too." (+5 XP)
+        <<jump 9>>
+
+-> Stay silent
+    Chenjie: "Makeup culture is both a product and also further feeding into the unfair beauty standards."
+    Joanne: "It is a cycle of sorts..."
+    Joanne: "And sometimes, when you bring it up, people will say you're complaining because you're just jealous."
+    Chenjie: "Jealous?"
+    Joanne: "Like, jealous of pretty people, or people who know how to apply makeup well."
+    Sage: "That happened to you?"
+    You: "God, that sucks..."
+    <<jump 10>>
 ===
