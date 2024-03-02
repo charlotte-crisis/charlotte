@@ -1,0 +1,292 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 80,240
+__PrivCrochet_tags: 
+title: 1
+---
+Sister: "Charles."
+You: "Hi, sis."
+Sister: "What... are you wearing?" <<if $name == "Charlotte">>
+Sister: "I have so many questions."
+
+-> "I will try my best to answer."
+    Sister: "Thanks. It's been a while since we met like this."
+
+-> "You'd better watch what you ask."
+    <<changeRelationship("Si", -5)>>
+    Sister: "Woah, why so defensive?" // (-5% Sister relationship)
+
+Sister: "Well, let's get food first."
+
+// After getting food... // Transition here
+
+Sister: "Well, we both know why we're meeting like this."
+
+-> "Wait, what are we doing here again?"
+    Sister rolls her eyes.
+    Sister: "Don't be sarcastic with me."
+    Sister: "Ever since you started dressing in girl clothes, Mother has been worried."
+    Sister: "And I wanna warn you about what she wants before things get really messy at home."
+    Sister: "Can you at least appreciate my efforts to do that?"
+    You: "Okay, sure."
+
+-> "Yeah."
+    Sister: "So let's get to it."
+
+<<jump 2>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 320,240
+__PrivCrochet_tags: 
+title: 2
+---
+Sister: "Mother has only one request for you."
+Sister: "She wants you to stop dressing as a girl."
+Sister: "I tried telling her that you're not doing it every day..."
+Sister: "...which is true, right?"
+
+-> "Yeah, it is."
+    Sister: "Okay, good, at least you're more normal."
+
+-> "Oh, no, I'm doing this every day!"
+    Sister: "I..."
+    Sister: "I don't know if you're just messing with me."
+    Sister: "You'd have to be better at makeup than I am, if you do this every day..."
+    <<changeConfidence(-5)>>
+    Sister: "And judging by what I'm seeing now, I don't think that's the case." (-5% confidence)
+
+<<jump 3>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 560,240
+__PrivCrochet_tags: 
+title: 3
+---
+Sister: "Anyway! Yes, she wants you to stop."
+Sister: "So the easiest thing to do would be to follow her instructions."
+Sister: "You wouldn't want things to blow up at home, would you?"
+
+-> "Okay, fine, I'll stop." #blue
+    Sister: "Good."
+    Sister: "Wait, really?"
+    Sister: "How was it this easy?"
+    <<jump 3_1>>
+
+-> "I'm sorry, but my happiness comes first." #pink
+    Sister: "Yeah... I can empathise."
+    Sister: "But ultimately we live in a society where happiness comes second."
+    Sister: "Don't you know about the social contract?"
+    Sister: "You must give up some freedom, for security."
+    <<jump 3_2>>
+
+-> "Our family situation is already bad enough. What's one more problem?"
+    Sister: "You really want to blow this up, don't you..."
+    <<changeConfidence(-5)>>
+    Sister: "Don't say I didn't warn you." (-5% confidence)
+    <<jump 3_3>>
+
+-> "Screw her and screw you."
+    Sister: "You weren't always like this. What happened?"
+    <<changeRelationship("Si", -5)>>
+    Sister: "It's like I don't even have a brother anymore." // (-5% Sister relationship)
+    Sister takes a while to compose herself, before asking the next question.
+    <<jump 4>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 560,0
+__PrivCrochet_tags: 
+title: 3_1
+---
+-> "I will be a good son."
+    You: "I guess family is more important than what I want."
+    Sister: "That's good."
+    Sister: "Should have thought of that before you put on that dress."
+    <<jump ending_1>>
+    
+-> "It's not that simple."
+    You: "I've got more conditions that I want to discuss before fully agreeing."
+    Sister: "Well, I guess you've got every right to that..."
+    Sister: "Just try not to make things difficult."
+    <<jump 4>> //assume
+
+-> "I regret my time pretending to be a woman." <<if $name == "Charles">>
+    You: "I'm ready to be a man now."
+    Sister: "If you say so."
+    Sister: "I hope you're not just lying to me..."
+    Sister: "Or worse, yourself..."
+    You: "I would never do that."
+    <<jump ending_1>>
+
+-> "Actually, no. I was joking with you."
+    <<if visited("3_1")>>
+        // only do it once.
+        <<changeRelationship("Si", -5)>>
+        (-5% Sister relationship)
+    <<endif>>
+    Sister: "Oi! Can you take this seriously or not?" 
+    Sister: "This is the only thing Mother can think about now."
+    Sister: "And it's a big decision."
+    Sister: "Haiya... I guess we're back to square one, then."
+    <<jump 3>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 800,-440
+__PrivCrochet_tags: 
+title: ending_1
+---
+You spend the remaining time with Sister making small talk about life.
+Actually, you know what? Why am I, Charlotte, tolerating this?
+I know you can't make that promise.
+If you just said this so you could end this interaction faster, then you lied to her.
+If you really mean this, then you're lying to yourself.
+Either way, I'm gonna haunt you in your dreams.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 560,480
+__PrivCrochet_tags: 
+title: 3_2
+---
+-> [CHA 4] "Those who give up liberty for security deserve neither." #skillcheck #cha #4
+    <<set $diceroll = diceRoll($cha)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll >= 4>>
+        Sister: "Yeah... I guess you're right."
+        Sister: "It's hard to see it now, but I can empathise with that statement."
+        You: "Don't you deserve happiness too?"
+        Sister: "That would require me to..."
+        Sister: "Wait. Why am I talking about me? We should be talking about you."
+        Sister: "Let's get back on track."
+    <<else>>
+        Sister: "That is very idealistic."
+        Sister: "You're just a uni student, you're not financially independent yet."
+        Sister: "You really think you can just distance yourself from family like this?"
+    <<endif>>
+
+-> "Alright, fine. I choose security." #blue
+    Sister: "Finally. You're starting to listen."
+    Sister: "I know our family isn't perfect, but we can find happiness together, right?"
+    Sister: "We shouldn't fight each other over small things like this."
+    -> "But who's starting this fight?"
+        (if CHA < 4)
+        Sister: "Seems to me like you are, honestly."
+        Sister: "Out of nowhere you dress as a girl, then Mother gets worried?"
+        Sister: "You started this." (-5% confidence)
+        (if CHA >= 4)
+        You: "I am just presenting as I want to."
+        You: "I didn't shove it in Mother's face. She found out on her own."
+        You: "And I'm not doing anything to aggravate her."
+        You: "So much of her suffering is self-inflicted."
+        Sister: "If you put it that way, I guess..."
+        You: "I don't want to tear apart the family."
+        You: "But I don't want to be torn apart by it, either."
+        
+    -> "How do I repair things with Mother?"
+        Sister: "Just follow what she says."
+        Sister: "Mother knows best, right?"
+        Sister: "I'll try my best to help, but ultimately it's up to you."
+
+-> "We find happiness where we can."
+    You: "Haven't we given up enough happiness for security?"
+    You: "I mean, you're working hard to be financially secure..."
+    You: "But you haven't been very happy, right?" 
+    Sister: "How did you know?"
+    You: "I see your messages on the family WhatsApp chat about how stressed you are at work."
+    (if CHA >= 4)
+    You: "They're the only messages I can read without straining my eyes and brain..."
+    You: "After all, they aren't marked as "forwarded many times", right?"
+    Sister chuckles. Your attempt at a joke has succeeded. (+5% Sister relationship)
+    (if CHA < 4, just continue)
+    You: "Anyway. Don't you have hobbies?"
+    Sister: "Hobbies? What are those?"
+    Sister: "You uni kids are too free already. Gonna get crushed by the working world."
+    You: "So you just spend all day slaving away at your job?"
+    You: "Come on. You gotta have something in your life that's not your spreadsheets."
+    Sister: "Well, there's this anime that I've gotten into."
+    You: "There we go."
+    Sister: "I've spent... a bit too much time on it."
+    Sister: "Time that could have been better spent working, right?"
+    -> "If you enjoyed that time, it's not wasted." (EMP >= 4)
+        Sister: "Still, I missed out on time spent studying or doing a side hustle or - "
+        You: "No. Stop."
+        You: "None of that is as important as what you want."
+        You: "Even if you made a lot of money, what's the point if you're not around to use it?"
+        Sister: "Wait, why are we discussing this?"
+        You: "Because none of the things that Mother wants, is as important as what I want for my life."
+        You: "And if I enjoyed my time dressing female, it's not wasted, is it?"
+        You: "We find happiness where we can."
+        Sister: "I guess so..."
+        Sister: "If I've got my hobbies, and if it's fair for me to enjoy them..."
+        Sister: "It's only fair that you can, too." (+10 XP)
+        Sister: "Still, I don't think Mother will see it that way."
+        Sister: "Regardless... thanks for making me feel better about my hobbies." (+5% Sister relationship)
+        
+    -> "You needed to rest at those points." (INT >= 4)
+        You: "Your job is tough. You can't just keep chugging along without rest and relaxation."
+        Sister: "But my colleagues - "
+        You: "They're not you."
+        You: "We all have our own capacities, and our own needs."
+        Sister: "I wish I had their resilience."
+        You: "And what are you willing to sacrifice to get that?"
+        You: "Wouldn't you feel more comfortable being yourself?"
+        Sister is silent.
+        You: "And if you were to bring that concept back to me..."
+        You: "Wouldn't I be happier in whatever form I'd like to take?"
+        Sister: "I guess so. But still..." (+10 XP)
+        Sister: "I don't think Mother will see it that way."
+        Sister: "Regardless... thanks for making me feel better about my hobbies." (+5% Sister relationship)
+        
+    -> "Since when did you become a slave?"
+        You: "Stop saying you need to keep working."
+        Sister: "You don't understand!"
+        Sister: "You will when you enter the workforce."
+        Sister: "Maybe you won't even have time to crossdress anymore." (-5% confidence)
+        
+    -> "I mean... it's not wrong to enjoy anime."
+        Sister: "Yeah, but I needed the time to work..."
+        Sister: "Anyway, where were we going with this?"
+
+<<jump 4>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 800,240
+__PrivCrochet_tags: 
+title: 3_3
+---
+-> "But I know you will be by my side." (EMP >= 4)
+    Sister sighs.
+    Sister: "Yeah, as much as I want to..."
+    Sister: "It's very tough when I have to bridge the gap between you and Mother."
+    You: "I will try my best, too."
+
+-> "Don't you think we should face our problems head-on?"
+    You: "And I don't mean the arguments that our parents always get into."
+    You: "It's time this house had a rational discussion about how we talk with each other."
+    Sister: "You know that's impossible. They're both too stubborn to see the other's perspective."
+    You: "I know. They've tried for nearly 30 years."
+    You: "But, you never know. Maybe this could be what they need."
+    Sister: "What do you mean?"
+
+    -> "Something they agree on; that I should stop crossdressing."
+        Sister laughs bitterly.
+        Sister: "You'd really sacrifice your own well-being to bring them together?"
+        Sister: "And that is an agreement built on hating you."
+        Sister: "Once you're out of the equation, they'll keep on hating each other."
+        You: "True... it's not a long-term solution."
+        
+    -> "The motivation to actually seek therapy."
+        Sister: "But isn't it, like, really expensive?"
+        You: "They're retired. They can't carry their savings into the grave, can they?"
+        Sister: "I guess so... I hope they'll be open to it, though."
+        You: "Only time can tell."
+        (if CHA >= 4)
+        You: "Hey, don't you think it'd be the funniest thing if they went, though?"
+        You: "Then father would be, like, lecturing the therapist for 2 hours."
+        You: "You know, like he does to us."
+        Sister: "Haha, that therapist definitely deserves a raise." (+5% Sister relationship)
+
+-> "You know it's true."
+    Sister: "You know, I'm actually trying to solve the problem here."
+    Sister: "So can you just cooperate for once?"
+
+<<jump 4>>
+===
