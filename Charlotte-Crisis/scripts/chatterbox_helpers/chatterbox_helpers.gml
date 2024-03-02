@@ -62,6 +62,24 @@ function speaker_is_narrator() {
 	return (speaker == "" || speaker == "NARRATOR");
 }
 
+/// @function format_odds_string(_stat, _threshold)
+/// @description gets a string to append at the end of your option
+///				 if it's a skill check.
+/// @return {String} "(%# chance success)"
+function format_odds_string(_stat, _threshold) {
+	var _stat_amt = ChatterboxVariableGet(_stat); // e.g. get("cha") returns $cha 
+	var _percent = calculate_odds([_stat_amt, _threshold]);
+	return string("(%{0} chance success)", _percent);
+}
+
+/// @function format_skillcheck_indicator(_stat, _threshold)
+/// @description gets a string to append at the beginning of your option
+///				 if it's a skill check.
+/// @return {String} "(%# chance success)"
+function format_skillcheck_indicator(_stat, _threshold) {
+	return string("[{0} {1}]", _stat, _threshold);
+}
+
 /// @function get_speaker_sprite(String name)
 /// @param name {String} Name of speaker
 /// @return {Asset.GMSprite} Sprite
