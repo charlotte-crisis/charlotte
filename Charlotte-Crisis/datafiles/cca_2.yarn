@@ -331,7 +331,227 @@ Nadia: "I guess so. I mean, maybe people will think we're some butterfly club."
         (if Anthony knows) Anthony: "You might as well stop pretending and just wear it."
 
 -> "Yeah, the logo is inappropriate."
-Anthony: "Exactly, our other members don't like it."
-Vera: "Speak for yourself. I like it."
-Anthony: "Your word against mine. And the others'."
+    Anthony: "Exactly, our other members don't like it."
+    Vera: "Speak for yourself. I like it."
+    Anthony: "Your word against mine. And the others'."
+
+<<jump 8>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1920,240
+__PrivCrochet_tags: 
+title: 8
+---
+Eleanor: "Okay, it seems like we haven't really come to a consensus here..."
+Eleanor: "Which is okay. Maybe we just need a bit more time to decide."
+Anthony: "Wait. Before we move on, there's something I want to ask Vera."
+Vera: "Shoot."
+Anthony: "Your logo talks about including everybody. But what about the straights?"
+Vera: "What?"
+Anthony: "Pride means gay, right? But where is the straight representation?"
+Vera: "You can't possibly be serious right now."
+
+-> "Rainbows don't just mean LGBTQ+. Didn't you listen to what she said?"
+    Vera: "Thanks, {$name}. At least you get it."
+    Anthony: "I still can't shake the association. I don't think our future members will either."
+
+    -> "You know what else is rainbow coloured? Gaming PCs." <<if $int >= 4>>
+        You: "Do you game, Anthony?"
+        Anthony: "Yeah, sometimes..."
+        You: "Think about it. If heterosexual men really hated rainbows, would they really buy a PC with lots of RGB lighting?"
+        Anthony: "I guess not..."
+        You: "But they do anyway. And it's not LGBTQ+ at all, not for them. They just wanna play games."
+        Anthony: "What's your point?"
+        <<addExperience(10)>>
+        You: "You just wanna draw. The concept is similar." (+ 10 XP)
+        Vera: "The fact that you're wearing a rainbow while doing it shouldn't make a difference."
+    
+    -> "I guess we'll have to agree to disagree."
+        Anthony: "Then I guess I won't ever wear the shirt in public. Shame."
+    
+    -> "That's a you problem."
+        Anthony: "Then I guess being a gay is also a Vera problem."
+        Vera: "I don't see it as a problem. Only you do."
+        Eleanor: "Enough! Guys."
+
+-> "The straight representation is inbuilt." <<if $int >= 4>>
+    Anthony: "What?"
+    You: "Isn't the pride flag about diversity, about accepting everybody?"
+    Vera: "Yes, that includes our straight allies."
+    Anthony: "Then why don't I see any straight people wearing rainbows?"
+    Nadia: "I will do it!"
+    Eleanor: "And you can do it too, Anthony. Nothing's stopping you from it."
+    Vera: "Is your masculinity so fragile that a rainbow will shatter it to pieces?"
+    -> "Good one, Vera."
+        Anthony: "Ugh. This club isn't the right place for me."
+        Vera: "Honestly? You've been rude and judgemental to multiple members of the club. It's classic douchebag alpha male behaviour, and I'm not surprised you'd be so opposed to the rainbow." 
+        Anthony: "I'm just saying my opinion. If you can't handle it, that says more about you than about me."
+        Vera: "I'm surprised Eleanor isn't doing anything about you."
+        Nadia: "Guys, please chill..."
+        Vera: "Nadia, didn't you feel insulted when he mocked your drawing style?"
+        Nadia falls silent.
+        Anthony: "Fine. If I'm not wanted, you won't see me here next week. Simple as that."
+
+        -> "She didn't mean that, Anthony."
+            Anthony: "Oh, of course. You praise her and then turn around to say she didn't mean that."
+            Eleanor: "We don't want to see a club member go. Especially so early in the term - "
+            Anthony: "So this is just about filling seats?"
+
+            -> You: "Fine. Anthony. We're sorry." (EMP => 4)
+                Vera: "What!?"
+                Anthony: "For once, I agree."
+                You: "Hear me out. I know LGBTQ+ stuff is complex."
+                Anthony: "Then you know it's all just made up."
+                You: "I know that it's something everyone struggles with at some point. Including you."
+                Anthony: "I'm not gay!"
+                You: "I never said you were. In fact, I want to ask, have you ever met a gay person before?"
+                Anthony: "I've seen them on Youtube - "
+                You: "No count. I meant, real life."
+                Anthony shakes his head.
+                You: "Then I know it's difficult to understand at first. And your first time getting to know a queer person, you got scolded. That must feel bad. So on behalf of Vera, I'd say sorry."
+                Vera: "I don't need you to apologise for me."
+
+                -> You: "Of course. I want you to apologise to him." (CHA/INT => 4)
+                    Vera: "You've made my jaw drop twice in one minute."
+                    You: "Go ahead, pick it up. You've got something to say."
+                    Vera: "Fine. Anthony, I am sorry I got mad. Can we be more polite to each other now?"
+                    Anthony looks at the rest of the club, their eyes squarely on him.
+                    Anthony: "Fine... Sorry also lor." (+ 10 XP)
+                
+                -> Say nothing.
+                    You're caught off guard by Vera's statement. The silence is deafening.
+            
+            -> Say nothing.
+            Eleanor: "You know that's not what we meant, Anthony."
+            Anthony: "I know that I'm not welcome here, and you weren't a strong enough leader to keep Vera in check." (-10% Anthony relationship)
+            
+        -> "Good riddance."
+        Eleanor: "Anthony, please."
+        Vera: "Eleanor, don't tell me you're really gonna kiss up to him."
+        Eleanor: "I leave it to you, Anthony."
+        Anthony: "The writing's on the wall, Eleanor. It's been fun, but as they say..."
+        He looks right at you.
+        Anthony: "Good riddance." (-10% Anthony relationship)
+
+    -> "Uh, Vera, that was kind of rude..." <<if $emp >= 4>>
+        You: "I know you're pissed off at Anthony. But we have to be the bigger person here."
+        Vera: "He refuses to understand what I'm saying. He taunted Nadia's art, and didn't produce any of his own."
+        Nadia: "Honestly... I understand where he's coming from..."
+        Vera: "You shouldn't just grin and bear it, Nadia. If I were you, I'd be a lot angrier."
+        Nadia: "Well, yes. But I don't want to lose a member of the club over this."
+        Eleanor: "Anger won't solve the problem, Vera. Your concerns are valid, but we don't want a full blown fight here."
+        Vera: "Ignoring the fact that you're all cishet people trying to tell a queer person how to be offended, fine. I'll stand down."
+        Nadia: "We're not invalidating your feelings, Vera. We just want peace and good vibes."
+        Vera: "Then you should really question how we get there."
+
+-> "That was a valid question, Vera."
+    Vera sighs in exasperation.
+    Vera: "Fine. Since you guys don't seem to get it, the rainbow is meant to represent our straight allies too. So it's not like pride flags exclude straight people."
+    Vera: "But why is it that you want to intrude in our spaces?"
+
+    -> "No, it's why you want to keep pushing your agenda onto us."
+        Anthony: "Exactly! Finally, someone gets it." (+5% Anthony relationship)
+        (if Vera knows) Vera: "Charlotte. I can't believe you'd say that." (-5% Vera relationship)
+        Vera: "If you don't like to see it, don't view it, simple."
+        Anthony: "Is this the part where you complain about not having enough 'representation'?"
+        Vera: "I'm okay with us not using my logo. But still, I want this club to be open to all."
+        Anthony: "Okay la okay la, any one of your 76 genders is welcome here, happy?"
+        Vera: "I know that's not what you really think."
+        Anthony: "Attack helicopter also can."
+        Vera: "We're really going with that joke, huh?"
+        Anthony: "Until you stop trying to make our club shirt a joke, sure."
+    
+    -> "We're not trying to do that."
+        Vera: "Then what do you want? Cishet people are so complex sometimes."
+        You: "I mean... weren't you ever confused about who you were?"
+        Vera: "Of course."
+        Nadia: "Then you should know that others are confused too. We don't mean harm. Straight people aren't the enemy."
+        You: "Yeah, I think we all need a bit more empathy towards one another instead of just fighting..."
+        Vera smirks.
+        Vera: "That's such a straight person answer. But fine. Whatever. As long as you accept me."
+        Anthony: "No one was rejecting you. You just gaslit yourself into thinking that."
+        Vera: "That in itself is gaslighting, but I'm not feeding the trolls."
+    
+    -> "Wait, weren't we talking about the logo?"
+        Eleanor: "Yes, thanks, let's get back on track."
+        Eleanor: "I think we should compromise on this. The rainbow can still exist, but as a background element."
+        Vera: "This isn't over, Eleanor."
+        Eleanor: "Please. Take it outside. If we continue here, I might as well hold a sleepover in this classroom."
+        Nadia: "Not a bad idea."
+        You: "Wait, which one? The sleepover or continuing outside?"
+        Nadia: "Yes." (+5% confidence)
+        The joke earns a smirk from both Vera and Anthony, but not much else.
+
+-> "Yeah Vera, don't you think this is a little too political?"
+    <<jump 8_why>>
+    
+
+-> "Vera, hold it together..."
+    Vera: "Sorry. It's just... so hard to explain this sometimes, you know?"
+    You realise the burden is now on you to explain.
+
+    -> "Anthony, no one's forcing you to wear this." (CHA => 4)
+        Anthony: "But it's the club shirt. You think all of our members are gonna like the gay shit too?"
+        You: "It's not just LGBTQ+. You gotta own the shirt. Make the design your own."
+        You: "Sure, if you don't like rainbows, that's fine. We can change that."
+        You: "But we gotta respect the people who put in effort to submit their stuff, right?"
+        Anthony: "Not if it's trash."
+        You: "You're standing on very shaky ground there, Mr logo finder dot com."
+        Anthony looks away. He can't meet your glance.
+        You: "All we're asking for is mutual respect, yeah? You don't like, you say it nicely. They don't like, they also say nicely. Okay?"
+        You've managed to explain this simply enough for Anthony to begrudgingly agree.
+        Anthony: "Fine. I'm sorry Vera, and Nadia."
+        Nadia: "It's okay."
+        Vera: "I'll let this go." (+ 10 XP)
+    
+    -> "Anthony, we're sorry." (EMP => 4)
+        Vera: "What!?"
+        Anthony: "For once, I agree."
+        You: "Both of you have been fighting a lot. Someone had to take the first step to apologise."
+        Anthony: "What's the use if it's an empty apology?"
+        You: "I understand how you feel."
+        You: "You're just a dude trying to make sense of the world, and enjoy it through art. We aren't so different."
+        Anthony: "I'm nothing like you."
+        You: "Are we? I'm new to our new friends here too, as new as you are."
+        Anthony: "You can call them friends. I wouldn't."
+        You: "If you'd taken the effort to know them, you could have." 
+        Nadia: "It's not too late to make friends; isn't that what you're here for?"
+        Anthony looks away, but you can see the doubt on his face.
+        You: "Don't you think you should return the favour?"
+        Anthony: "Fine. Sorry, Vera."
+        Vera: "Sorry, Anthony."
+        Eleanor: "That's a start." (+ 10 XP)
+    
+    -> "Actually, I think Anthony has some valid points."
+        <<jump 8_why>>
+
+<<jump 9>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1920,480
+__PrivCrochet_tags: 
+title: 8_why
+---
+Vera folds her arms.
+Vera: "Why?"
+
+-> You: "It's like those companies that only change their logo to rainbow in June and then change it back in July."
+    Vera: "Yeah, but for us, it's our permanent logo design."
+    You: "So it's political all months of the year. Which is worse. LGBTQ+ was never our identity."
+    Vera: "I never wanted it to be. This isn't Gay Arts Club, though that would certainly be interesting."
+    
+-> You: "Kinda seems like this is a design for you, not the club."
+    Vera is too flustered to answer.
+    Anthony: "Heh."
+    You: "Like, we get it, you're gay, but can you stop pushing it so openly?"
+    Anthony: "Yeah, we're tired of seeing it so often." (+5% Anthony relationship)
+    Vera: "What do you even mean?" (-5% Vera relationship)
+    (if Vera knows) Vera: "I thought you'd be better than this." (-5% Vera relationship) (-5% confidence)
+    Vera: "You seem to be overlooking the point that rainbows can also mean diversity and creativity. The stuff artists aspire to."
+    You: "Yeah, but what if people are uncomfortable with the theme?"
+    Vera: "Art is meant to disturb the comfortable and comfort the disturbed."
+    Anthony: "And you're gonna disturb a lot of comfortable people who want to join our club."
+    Vera: "That's just your personal biases getting in the way."
+
+<<jump 9>>
 ===
