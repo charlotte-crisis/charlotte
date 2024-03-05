@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 280,320
+__PrivCrochet_position: -200,40
 __PrivCrochet_tags: 
 title: 1
 ---
@@ -9,7 +9,7 @@ The words "self-portrait" are projected onto the screen.
 You should probably explore what and who is in the club room first.
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 320,-120
+__PrivCrochet_position: 40,40
 __PrivCrochet_tags: 
 title: 2_1
 ---
@@ -28,7 +28,7 @@ title: 2_1
 <<jump 2_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 756,359
+__PrivCrochet_position: 760,280
 __PrivCrochet_tags: 
 title: 5
 ---
@@ -111,7 +111,7 @@ Eleanor: "You sure? I mean, with you being new here, it'd be nice to introduce y
         <<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 320,80
+__PrivCrochet_position: 280,40
 __PrivCrochet_tags: 
 title: 2_2
 ---
@@ -663,7 +663,7 @@ Anthony: "Maybe she's an ah gua."
 <<jump end>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 840,120
+__PrivCrochet_position: 760,40
 __PrivCrochet_tags: 
 title: pre-5
 ---
@@ -684,7 +684,7 @@ You head back to your room.
 <<goto_room_bedroom_after_cca()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 560,-120
+__PrivCrochet_position: 40,280
 __PrivCrochet_tags: 
 title: 2_1_options
 ---
@@ -754,7 +754,7 @@ What do you say?
     // end interaction
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 560,80
+__PrivCrochet_position: 280,280
 __PrivCrochet_tags: 
 title: 2_2_options
 ---
@@ -774,47 +774,52 @@ What do you say?
         You: "Isn't that quite pessimistic..."
         Anthony: "It's just the truth."
     
-    -> "Ants aren't all bad, right?" (INT check)
-    Anthony: "What?"
-    (INT >= 6)
-    You: "Yeah. Hardworking, can lift 100 times their body weight, all that stuff." 
-    Anthony: "Okay, and?"
-    You: "That's just another way to interpret your art."
-    You: "Why see only the bad side when there's a good side to it too?" (+10 XP)
-    Anthony: "I guess so..."
-    
-    (INT < 6)
-    You: "Uh... ants are..."
-    Anthony: "Trash. Pests. Like me."
-    
-    -> "Is everything okay?" (EMP check)
-    Anthony: "What would you know?"
-    
-    (EMP >= 6)
-    You: "Well, I know enough to ask about people who aren't feeling too good."
-    You: "But it's okay if you don't want to share."
-    Anthony sighs.
-    Anthony: "I'm the ant, and the world is the one squishing me."
-    Anthony: "School, friends, relationship, future... all of that is super stressful to think about."
-    You: "I guess you can put your feelings to paper here."
-    Anthony: "I guess..." (+5% Anthony relationship)
-    
-    (EMP < 6)
-    Anthony: "I don't wanna talk about it."
-    You: "Well, that's kinda pathetic."
-    Anthony: "What?"
-    You: "So emo for what?"
-    Anthony: "Hmph. As if you care." (-5% Anthony relationship)
-    
+    -> "Ooh, that's a cool way to depict yourself." <<if !optionChosen()>> #skillcheck #int #6
+        <<set $diceroll = diceRoll($int)>>
+        [You rolled a {$diceroll}.]
+        Anthony: "What?"
+        <<if $diceroll >= 6>>
+            You: "Yeah. Hardworking, can lift 100 times their body weight, all that stuff." 
+            Anthony: "Okay, and?"
+            You: "That's just another way to interpret your art."
+            You: "Why see only the bad side when there's a good side to it too?" (+10 XP)
+            Anthony: "I guess so..."
+        <<else>>
+            You: "Uh... ants are..."
+            Anthony: "Trash. Pests. Like me."
+        <<endif>>
+
+    -> "Is everything okay?" #skillcheck #emp #6
+        <<set $diceroll = diceRoll($emp)>>
+        [You rolled a {$diceroll}.]
+        Anthony: "What would you know?"
+        <<if $diceroll >= 6>>
+            You: "Well, I know enough to ask about people who aren't feeling too good."
+            You: "But it's okay if you don't want to share."
+            Anthony sighs.
+            Anthony: "I'm the ant, and the world is the one squishing me."
+            Anthony: "School, friends, relationship, future... all of that is super stressful to think about."
+            You: "I guess you can put your feelings to paper here."
+            <<changeRelationship("A", 5)>>
+            Anthony: "I guess..." (+5% Anthony relationship)
+        <<else>>
+            Anthony: "I don't wanna talk about it."
+            You: "Well, that's kinda pathetic."
+            Anthony: "What?"
+            You: "So emo for what?"
+            <<changeRelationship("A", -5)>>
+            Anthony: "Hmph. As if you care." (-5% Anthony relationship)
+        <<endif>>
+
     -> "I guess it works."
-    You: "And it's your art, so shouldn't you be proud of it?"
-    Anthony: "I guess so."
+        You: "And it's your art, so shouldn't you be proud of it?"
+        Anthony: "I guess so."
 
 -> "Alright, I'll leave you be then."
-Anthony: "Mm."
+    Anthony: "Mm."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 320,-320
+__PrivCrochet_position: 520,40
 __PrivCrochet_tags: 
 title: 2_3
 ---
@@ -829,7 +834,7 @@ title: 2_3
 <<jump 2_3_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 560,-320
+__PrivCrochet_position: 520,280
 __PrivCrochet_tags: 
 title: 2_3_options
 ---
@@ -856,7 +861,7 @@ What do you say?
         Nadia: "Have fun with your own artwork too."
     
     -> "You've got some hot guys on that sheet of paper too." <<if !optionChosen()>> #skillcheck #cha #6
-        <<set $diceroll = diceRoll($int)>>
+        <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
         Nadia: "Huh? What? It's nothing! I'm just experimenting!"
         You: "Come on, I won't judge."
