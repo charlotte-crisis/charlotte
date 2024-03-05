@@ -13,7 +13,7 @@ __PrivCrochet_position: 320,-120
 __PrivCrochet_tags: 
 title: 2_1
 ---
-<<if visited("2")>>
+<<if visited("2_1")>>
     Vera: Hey again, {$name}.
 <<else>>
     You: "Hi! I'm {$name}."
@@ -111,68 +111,15 @@ Eleanor: "You sure? I mean, with you being new here, it'd be nice to introduce y
         <<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 280,760
+__PrivCrochet_position: 320,80
 __PrivCrochet_tags: 
-title: 3
+title: 2_2
 ---
 You: "Hi! I'm {$name}."
 Anthony: "Hi, I'm Anthony. Please don't disturb me."
 Anthony seems very engrossed in his art. Let him be.
 
-<<jump 3_options>>
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 520,560
-__PrivCrochet_tags: 
-title: 4
----
-You: "Hi! I'm {$name}."
-Nadia: "Hi, {$name}! I'm Nadia."
-<<if $name == "Charlotte">>
-    Nadia: "By the way, nice outfit!"
-    <<changeConfidence(5)>>
-    You: "Thanks!" (+5% confidence)
-<<endif>>
-
-What do you want to say?
-
--> "How are things here?" <<if !optionChosen()>>
-    Nadia: "You're new, right?"
-    Nadia: "Don't worry, it's not too hard. We're all about exploration here."
-    Nadia: "There's a prompt on the board, but even that's optional if you've got a better idea!"
-    <<jump 4>>
-
--> "What are you drawing?"
-    Nadia: "Oh, I'm just drawing myself."
-    Nadia: "I'm still in the work-in-progress stage, though, so bear with me!"
-        -> "Hmm. Why did you draw in anime style?" <<if !optionChosen()>>
-        Nadia: "Well... I guess it's easier, right?"
-        Nadia: "After all, it was designed for 2D artists."
-        You: "That's fair."
-        <<jump 4>>
-    
-    -> "It's okay, I guess. Not much else to say."
-        Nadia: "Alright then."
-        Nadia: "Have fun with your own artwork too."
-    
-    -> "You've got some hot guys on that sheet of paper too." (CHA check)
-        Nadia: "Huh? What? It's nothing! I'm just experimenting!"
-        You: "Come on, I won't judge."
-        <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
-            <<if $diceroll > 5>>
-            Nadia: "Okay, fine... I like anime. Especially those with hot guys..."
-            You: "You should take pride in that! It's your own style."
-            You: "I think the drawings look good! Both your husbandos and yourself."
-            Nadia: "Thank you... it's rare to hear that. Usually people just judge me." (+5% Nadia relationship)
-            
-            <<else>>
-            Nadia: "Ugh... I'm not comfortable sharing that."
-            Nadia: "Please... don't intrude on my work. I'll show it when I'm ready."
-        <<endif>>
-
--> "Alright, I'll leave you be then."
-    Nadia: "Okay!"
+<<jump 2_2_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1560,-40
@@ -716,7 +663,7 @@ Anthony: "Maybe she's an ah gua."
 <<jump end>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 760,120
+__PrivCrochet_position: 840,120
 __PrivCrochet_tags: 
 title: pre-5
 ---
@@ -737,13 +684,13 @@ You head back to your room.
 <<goto_room_bedroom_after_cca()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 520,-120
+__PrivCrochet_position: 560,-120
 __PrivCrochet_tags: 
 title: 2_1_options
 ---
 What do you say?
 
--> "How are things here?"
+-> "How are things here?" <<if !optionChosen()>>
     Vera: "Are you new? I've never seen you before."
     Vera: "Well, we usually have a prompt for the week which we try to draw out."
     Vera: "Then we can walk around and see each others' progress."
@@ -805,4 +752,125 @@ What do you say?
 -> "Alright, I'll leave you be then."
     Vera: "See you."
     // end interaction
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 560,80
+__PrivCrochet_tags: 
+title: 2_2_options
+---
+What do you say?
+
+-> "How are things here?" <<if !optionChosen()>>
+    Anthony dismissively points to the whiteboard.
+    Anthony: "Draw something based on the prompt. We usually talk about it later."
+    <<jump 2_2_options>>
+
+-> "What are you drawing?"
+    Anthony shows you a picture of an anthill, with ants all around it.
+    Anthony: "Ant-thony. Get it?"
+
+    -> "Are you sure you want that as your self-portrait...?"
+        Anthony: "It works. I'm insignificant and should be squished."
+        You: "Isn't that quite pessimistic..."
+        Anthony: "It's just the truth."
+    
+    -> "Ants aren't all bad, right?" (INT check)
+    Anthony: "What?"
+    (INT >= 6)
+    You: "Yeah. Hardworking, can lift 100 times their body weight, all that stuff." 
+    Anthony: "Okay, and?"
+    You: "That's just another way to interpret your art."
+    You: "Why see only the bad side when there's a good side to it too?" (+10 XP)
+    Anthony: "I guess so..."
+    
+    (INT < 6)
+    You: "Uh... ants are..."
+    Anthony: "Trash. Pests. Like me."
+    
+    -> "Is everything okay?" (EMP check)
+    Anthony: "What would you know?"
+    
+    (EMP >= 6)
+    You: "Well, I know enough to ask about people who aren't feeling too good."
+    You: "But it's okay if you don't want to share."
+    Anthony sighs.
+    Anthony: "I'm the ant, and the world is the one squishing me."
+    Anthony: "School, friends, relationship, future... all of that is super stressful to think about."
+    You: "I guess you can put your feelings to paper here."
+    Anthony: "I guess..." (+5% Anthony relationship)
+    
+    (EMP < 6)
+    Anthony: "I don't wanna talk about it."
+    You: "Well, that's kinda pathetic."
+    Anthony: "What?"
+    You: "So emo for what?"
+    Anthony: "Hmph. As if you care." (-5% Anthony relationship)
+    
+    -> "I guess it works."
+    You: "And it's your art, so shouldn't you be proud of it?"
+    Anthony: "I guess so."
+
+-> "Alright, I'll leave you be then."
+Anthony: "Mm."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 320,-320
+__PrivCrochet_tags: 
+title: 2_3
+---
+<<if visited("2_3")>>
+    Hi again, {$name}.
+<<else>>
+    You: "Hi! I'm {$name}."
+    Nadia: "Hi, {$name}! I'm Nadia."
+    Nadia: "By the way, nice outfit!" <<if $name == "Charlotte">>
+    You: "Thanks!" + 5% confidence)
+<<endif>>
+<<jump 2_3_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 560,-320
+__PrivCrochet_tags: 
+title: 2_3_options
+---
+What do you say?
+
+-> "How are things here?" <<if !optionChosen()>>
+    Nadia: "You're new, right?"
+    Nadia: "Don't worry, it's not too hard. We're all about exploration here."
+    Nadia: "There's a prompt on the board, but even that's optional if you've got a better idea!"
+    <<jump 2_3_options>>
+
+-> "What are you drawing?"
+    Nadia: "Oh, I'm just drawing myself."
+    Nadia: "I'm still in the work-in-progress stage, though, so bear with me!"
+
+    -> "Hmm. Why did you draw in anime style?" <<if !optionChosen()>>
+        Nadia: "Well... I guess it's easier, right?"
+        Nadia: "After all, it was designed for 2D artists."
+        You: "That's fair."
+        <<jump 2_3_options>>
+    
+    -> "It's okay, I guess. Not much else to say."
+        Nadia: "Alright then."
+        Nadia: "Have fun with your own artwork too."
+    
+    -> "You've got some hot guys on that sheet of paper too." <<if !optionChosen()>> #skillcheck #cha #6
+        <<set $diceroll = diceRoll($int)>>
+        [You rolled a {$diceroll}.]
+        Nadia: "Huh? What? It's nothing! I'm just experimenting!"
+        You: "Come on, I won't judge."
+        <<if $diceroll >= 6>>
+            Nadia: "Okay, fine... I like anime. Especially those with hot guys..."
+            You: "You should take pride in that! It's your own style."
+            You: "I think the drawings look good! Both your husbandos and yourself."
+            <<changeRelationship("N", 5)>>
+            Nadia: "Thank you... it's rare to hear that. Usually people just judge me." (+5% Nadia relationship)
+        <<else>>
+            Nadia: "Ugh... I'm not comfortable sharing that."
+            Nadia: "Please... don't intrude on my work. I'll show it when I'm ready."
+        <<endif>>
+
+-> "Alright, I'll leave you be then."
+    Nadia: "Okay!"
 ===
