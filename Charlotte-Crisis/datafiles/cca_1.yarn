@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 238,358
+__PrivCrochet_position: 280,320
 __PrivCrochet_tags: 
 title: 1
 ---
@@ -13,11 +13,16 @@ __PrivCrochet_position: 520,80
 __PrivCrochet_tags: 
 title: 2
 ---
-You: "Hi! I'm {$name}."
-Vera: "Hi, {$name}, I'm Vera."
-<<if $name == "Charlotte">>
-    Vera: "Wow, you look great!"
-    You: "Thanks!" (+5% confidence) <<changeConfidence(5)>>
+<<if visited("2")>>
+    Vera: Hey again, {$name}.
+<<else>>
+    You: "Hi! I'm {$name}."
+    Vera: "Hi, {$name}, I'm Vera."
+    <<if $name == "Charlotte">>
+        Vera: "Wow, you look great!"
+        You: "Thanks!" (+5% confidence)
+        <<changeConfidence(5)>>
+    <<endif>>
 <<endif>>
 
 What do you want to say?
