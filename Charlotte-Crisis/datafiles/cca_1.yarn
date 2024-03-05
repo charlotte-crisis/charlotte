@@ -52,7 +52,7 @@ Eleanor: "Today's theme is quite simple: self-portrait."
 <<jump 6>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 994,358
+__PrivCrochet_position: 1000,360
 __PrivCrochet_tags: 
 title: 6
 ---
@@ -363,7 +363,7 @@ Vera: "You know, trans women."
 <<jump end>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1571,215
+__PrivCrochet_position: 1560,200
 __PrivCrochet_tags: 
 title: 13
 ---
@@ -400,11 +400,12 @@ Anthony: "Why do you feel female?"
     Eleanor: "No, Anthony, she's right. You started this."
     Anthony: "Fine, I'll just shut up then."
 
--> You: "Cannot ah?" (CHA 6 check)
+-> You: "Cannot ah?" #diceroll #cha #6
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll > 5>>
-    You felt confident saying that. Anthony certainly doesn't, upon hearing it. (+5% confidence) <<addConfidence(5)>>
+    <<if $diceroll >= 6>>
+        You felt confident saying that. Anthony certainly doesn't, upon hearing it. (+5% confidence) 
+        <<changeConfidence(5)>>
     <<endif>>
     Anthony: "Does no one else feel weirded out by this?"
     Vera: "What's so weird about it? Charlotte is a woman if she wants to be."
@@ -424,10 +425,10 @@ Anthony: "Why do you feel female?"
     Anthony: "Fine. I stand by what I said."
     Vera: "Charlotte, don't listen to him. You're valid."
 
-<<jump 14>>
+<<jump 14>> //All go to 14.
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1800,200
+__PrivCrochet_position: 1840,200
 __PrivCrochet_tags: 
 title: 14
 ---
@@ -447,29 +448,35 @@ You're really being put on the spot here. How will you respond?
 -> You: "Yeah..."
     Anthony: "Is this some kind of fetish?"
     Eleanor: "Anthony, please."
-    Anthony: "Men don't wear dresses." (-5% Anthony relationship; -5% confidence) <<changeRelationship("A", -5)>> <<changeConfidence(-5)>>
+    <<changeRelationship("A", -5)>>
+    <<changeConfidence(-5)>>
+    Anthony: "Men don't wear dresses." (-5% Anthony relationship; -5% confidence) 
 
     -> You: "Why not?"
         Anthony: "What, did you not get taught this when you were a child?"
-        Vera: "Let people wear what they want. It's not your business." (+10 XP) <<addExperience(10)>>
+        <<addExperience(10)>>
+        Vera: "Let people wear what they want. It's not your business." (+10 XP) 
         Anthony: "Neither is it yours."
         Vera: "It's my business if you're offending people - "
         Eleanor: "Thank you, Vera, that's quite enough."
     
     -> You: "Yeah, I guess..."
-        Anthony: "You're seriously messed up in the head. You need mental help." (-5% confidence) <<changeConfidence(-5)>>
+        <<changeConfidence(-5)>>
+        Anthony: "You're seriously messed up in the head. You need mental help." (-5% confidence) 
         Vera: "You're saying that as if mental health support is a bad thing."
         Anthony: "It's not. Whatever the hell he's doing is, though."
         Vera: "Oh, you have a problem with queer people?"
         Eleanor: "Vera, enough! Anthony, you too."
 
--> You: "But what is a guy?" (INT 6 check)
-    Anthony: "What?"
-    <<set $diceroll = diceRoll($cha)>>
+-> You: "But what is a guy?" #skillcheck #int #6
+    <<set $diceroll = diceRoll($int)>>
     [You rolled a {$diceroll}.]
-    <<if $int > 5>>
+    Anthony: "What?"
+    
+    <<if $diceroll >= 5>>
         You: "That definition always changes, right? It's not as easy as just 'what's down there'."
-        You: "I'm a crossdresser, so I go between guy and girl. It's that easy." (+10 XP) <<addExperience(10)>>
+        You: "I'm a crossdresser, so I go between guy and girl. It's that easy." (+10 XP) 
+        <<addExperience(10)>>
         Vera: "Love that for you! Charles and Charlotte."
         Anthony: "Does anyone not see how weird this is?"
         He is met with silence.
@@ -479,7 +486,8 @@ You're really being put on the spot here. How will you respond?
         Anthony: "I'm not gonna sugarcoat it. That's really weird."
         Anthony: "How many guys do you see do that? I certainly don't."
         Vera: "Hey, let Charlotte wear whatever she wants."
-        Anthony: "Why are you referring to him by that name? His name is Charlie. Let's not feed into delusions here." (-5% confidence) <<changeConfidence(-5)>>
+        <<changeConfidence(-5)>>
+        Anthony: "Why are you referring to him by that name? His name is Charles. Let's not feed into delusions here." (-5% confidence) 
     <<endif>>
 
 -> You: "Anything wrong with that?"
@@ -491,7 +499,7 @@ You're really being put on the spot here. How will you respond?
 <<jump 16>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1800,400
+__PrivCrochet_position: 1840,440
 __PrivCrochet_tags: 
 title: 16
 ---
@@ -540,7 +548,9 @@ Eleanor looks at the clock.
 Eleanor: "Well, that's everyone." 
 Eleanor: "We've still got a bit of time, and I brought snacks, so please help yourselves!" 
 Eleanor: "Get to know each other, yeah?"
+
 <<goto_room_cca_1_seated_18()>>
+
 Vera and Nadia leave first, Anthony waits for them to go before he comes over to you.
 Anthony: "Hey. Didn't you realise something was... off about that girl?"
 
@@ -550,7 +560,6 @@ Anthony: "Hey. Didn't you realise something was... off about that girl?"
     <<changeRelationship("A", 5)>>
     Anthony: "Right? Anyone can see it from a mile away." (+5% Anthony relationship) 
     
-
 <<jump 19>>
 ===
 __PrivCrochet_colorID: 0
@@ -566,30 +575,36 @@ Anthony: "Maybe she's an ah gua."
     You: "Yes, it's very confusing."
     Anthony: "It's also the reason why I don't have a girlfriend."
     Anthony: "Tell you ah, there's this influencer that I watch, he says women are too liberal and free already."
-    Anthony: "Here's the link. I think it's very helpful. Especially if you don't have a girlfriend also." (+ 5 XP) <<addExperience(5)>>
+    <<addExperience(5)>>
+    Anthony: "Here's the link. I think it's very helpful. Especially if you don't have a girlfriend also." (+ 5 XP) 
     You: "Thanks, I'll take a look."
-    Anthony: "You'll see the truth. See you around."
-    (+5% Anthony relationship) <<changeRelationship("A", 5)>>
+    <<changeRelationship("A", 5)>>
+    Anthony: "You'll see the truth. See you around." (+5% Anthony relationship) 
 
 -> You: "That's not very nice..."
     Anthony: "I'm just saying it as it is. Females don't look like that."
     Anthony: "I didn't want to say it during the session, later Eleanor get angry at me."
     Anthony: "But you agree, right? This Vera is not normal."
+
     -> You: "Yes."
-        Anthony: "The world has really turned upside down."
-        Anthony: "Here, watch this influencer when you go back." (+ 5 XP) <<addExperience(5)>>
+        Anthony: "The world has really turned upside down."\
+        <<addExperience(5)>>
+        Anthony: "Here, watch this influencer when you go back." (+ 5 XP) 
         Anthony: "I think he is very helpful in understanding what to do in this fucked up world."
         You: "Thanks."
-        Anthony: "See you next week."
-        (+5% Anthony relationship) <<changeRelationship("A", 5)>>
+        <<changeRelationship("A", 5)>>
+        Anthony: "See you next week." (+5% Anthony relationship) 
     
     -> You: "I mean, she has every right to exist."
         Anthony: "You must have heard too much woke content. Men can be women, there are 76 genders, all that bullshit."
         Anthony: "You need to break out of the filter bubble."
-        Anthony: "Here, watch this influencer when you go back." (+ 5 XP) <<addExperience(5)>>
+        <<addExperience(5)>>
+        Anthony: "Here, watch this influencer when you go back." (+ 5 XP) 
         Anthony: "I think he is very helpful in understanding what to do in this fucked up world."
+
         -> You: "Okay, I'll give it a shot."
             Anthony: "He helped me. I hope he helps you too."
+
         -> You: "Wait, isn't this just incel content?"
             Anthony: "Yes. I'm an incel."
             Anthony: "I don't say it out loud, but I think you'd understand."
@@ -598,18 +613,22 @@ Anthony: "Maybe she's an ah gua."
 
 -> You: "She's beautiful in her own way."
     Anthony: "That is the most cliche thing I have ever heard."
+
     -> You: "I mean, people are sometimes just built different."
         Anthony: "Yeah, not so different that they become freaks."
-        You: "Let me finish. What about you? Ever heard people say you're too short before?" (+ 10 XP) <<addExperience(10)>>
+        <<addExperience(10)>>
+        You: "Let me finish. What about you? Ever heard people say you're too short before?" (+ 10 XP) 
         Anthony: "All the time. It's not something I can change."
-        -> You: "That didn't feel very good, did it?" (EMP 6 check)
+
+        -> You: "That didn't feel very good, did it?" #skillcheck #emp #6
             <<set $diceroll = diceRoll($emp)>>
-                [You rolled a {$diceroll}.]
-                <<if $diceroll >= 6>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 6>>
                 Anthony: "Of course. I feel like shit every time I think of those stupid femoids who don't want to date me."
                 You: "Then if you don't want people to say you short, why you say Vera tall and all that?"
                 Anthony: "I just - I just..."
-                You: "You gotta respect other people if you want respect in return." (+ 10 XP) <<addExperience(10)>>
+                <<addExperience(10)>>
+                You: "You gotta respect other people if you want respect in return." (+ 10 XP) 
                 You: "Anyway, room's closing already. Time to go."
             <<else>>
                 Anthony: "What to do? The world sucks."
@@ -618,17 +637,18 @@ Anthony: "Maybe she's an ah gua."
                 You realise you can't really continue from here. It's time to leave.
             <<endif>>
 
-        -> You: "But it's just what people say, isn't it? Do you listen to everything other people say?" (INT 6 check)
+        -> You: "But it's just what people say, isn't it? Do you listen to everything other people say?" #skilcheck #int #6
             Anthony: "But it's proven what. Females aren't attracted to you if you're not 6-6-6."
             <<set $diceroll = diceRoll($int)>>
-                [You rolled a {$diceroll}.]
-                <<if $diceroll >= 6>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 6>>
                 You: "Then what about all the men below 6 feet who are married?"
                 Anthony: "They... they're the lucky few! Or they're rich! Or something!"
                 You: "Yep, you don't have an answer."
                 You: "I'm sure there are guys out there who aren't 6-6-6. And they're still happy."
                 You: "And Vera is still happy, too. Regardless of what you say about her."
-                You: "So why don't you look within yourself and find out why you're unhappy?" (+10 XP) <<addExperience(10)>>
+                <<addExperience(10)>>
+                You: "So why don't you look within yourself and find out why you're unhappy?" (+10 XP) 
                 You: "Maybe that'll change what you say about people around us."
                 You walk off. That was... strangely liberating!
             <<else>>
@@ -641,16 +661,18 @@ Anthony: "Maybe she's an ah gua."
                 Anthony: "She's weird. That's all. See you next week."
                 You're back to square one...
             <<endif>>
+
     -> You: "Haven't you ever seen any transgender people before?"
         Anthony: "Oh, so that's what they look like. Men in dresses, trying to be women."
         Anthony: "It's disgusting."
 
-        -> You: "Yeah, why don't you say that in front of Vera and Eleanor. I'm sure they'll absolutely love it." (CHA 6 check)
+        -> You: "Yeah, why don't you say that in front of Vera and Eleanor. I'm sure they'll absolutely love it." #skillcheck #cha #6
             <<set $diceroll = diceRoll($cha)>>
-                [You rolled a {$diceroll}.]
-                <<if $diceroll >= 6>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 6>>
                 Anthony wants to say something, but can't bring himself to say it.
-                You: "That's what I thought." (+10 XP) <<addExperience(10)>>
+                <<addExperience(10)>>
+                You: "That's what I thought." (+10 XP) 
                 It's time to leave.
             <<else>>
                 Anthony: "Why should I care that they want to be delusional and PC?"
@@ -660,23 +682,24 @@ Anthony: "Maybe she's an ah gua."
             
         -> You: "We're done here."
             You: "I'm not comfortable with how you're speaking about them."
-            Anthony: "So be it." (-5% Anthony relationship) <<changeRelationship("A", 5)>>
-            (END)
+            <<changeRelationship("A", -5)>>
+            Anthony: "So be it." (-5% Anthony relationship) 
 
-    -> You: "I mean, I dress up sometimes, too." (CHA 6 check)
-        Anthony: "Wow. Another one." (-5% Anthony relationship) <<changeRelationship("A", 5)>>
-        Anthony: "You all are delusional."
+    -> You: "I mean, I dress up sometimes, too." #skillcheck #cha #6
         <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
-            <<if $diceroll >= 6>>            
-            You: "I'm proud of who I am." (+5% confidence) <<changeConfidence(5)>>
+        [You rolled a {$diceroll}.]
+        Anthony: "Wow. Another one." (-5% Anthony relationship) <<changeRelationship("A", -5)>>
+        Anthony: "You all are delusional."
+        <<if $diceroll >= 6>>            
+            <<changeConfidence(5)>>
+            You: "I'm proud of who I am." (+5% confidence) 
             Anthony: "Proud of being a freak."
             Anthony: "Proud of denying that you are a man."
             Anthony: "There's nothing more pathetic and weird than that."
             You: "Keep talking. I'm gonna leave."
-
         <<else>>
-            You: "Don't say that..." (-5% confidence) <<changeConfidence(-5)>>
+            <<changeConfidence(-5)>>
+            You: "Don't say that..." (-5% confidence) 
             Anthony: "I didn't know this Art Club was such a woke gender circus."
             Anthony: "I'm sure there will be many more opportunities to laugh at how cringe the two of you are."
             Anthony: "See you next week."
