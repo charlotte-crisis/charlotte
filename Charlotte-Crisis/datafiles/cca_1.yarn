@@ -28,7 +28,7 @@ title: 2_1
 <<jump 2_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 760,280
+__PrivCrochet_position: 760,560
 __PrivCrochet_tags: 
 title: 5
 ---
@@ -57,10 +57,12 @@ __PrivCrochet_tags:
 title: 6
 ---
 You take out your phone for a reference image. Is it going to be your male, or female self?
+
 -> Male
     <<set $drawing = "Male">>
 -> Female
     <<set $drawing = "Female">>
+
 You start drawing. Before you know it, 20 minutes have passed.
 <<jump 7>>
 ===
@@ -71,27 +73,29 @@ title: 7
 ---
 Eleanor: "Wow, {$name}! That's a nice drawing."
 Eleanor: "Wanna show it to the rest of us?"
+
 -> "Okay, sure."
     Eleanor: "Alright, everyone, {$name} has something for us to see!"
-        <<if $name == "Charlotte">>
+    <<if $name == "Charlotte">>
         <<if $drawing == "Female">>
             <<jump 10>>
         <<else>>
             <<jump 15>>
         <<endif>>
-        <<else>>
+    <<else>> //male 
         <<if $drawing == "Female">>
             <<jump 13>>
         <<else>>
             <<jump 18>>
         <<endif>>
-        <<endif>>
+    <<endif>>
 
 -> "No thanks."
-Eleanor: "You sure? I mean, with you being new here, it'd be nice to introduce yourself..."
+    Eleanor: "You sure? I mean, with you being new here, it'd be nice to introduce yourself..."
+
     -> "No and stop asking."
         Eleanor: "Okay, whatever you're comfortable with."
-        The rest of the session passes uneventfully.
+        The rest of the session passes uneventfully. Awkward...
         <<jump end>>
     
     -> "Okay, fine."
@@ -132,7 +136,7 @@ You: "What is it?"
 Nadia: "Well, I may not be the best at drawing female bodies."
 Nadia: "But your drawing seems a little more... rectangular? Like, it's not curvy."
 
--> You: "I'm just built different." (CHA check)
+-> You: "I'm just built different."
     <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll < 6>>
@@ -140,32 +144,35 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
             <<changeConfidence(-5)>>    
         <<endif>>
     Anthony: "Yeah, can tell. Your voice is as low as mine - "
-    Vera: "Hey. Every woman has a different body shape. Not everyone's got an hourglass figure, or a high voice." (+ 10 XP) <<addExperience(10)>>
+    <<addExperience(10)>>
+    Vera: "Hey. Every woman has a different body shape. Not everyone's got an hourglass figure, or a high voice." (+10 XP)
     Nadia: "Yeah, I suppose..."
-    Anthony: "Then what about you, Vera? How is it that you're taller than me even though you're a woman?"
+    Anthony: "Then what about you, Vera? How come you taller than me even though you're a girl?"
     Eleanor: "Anthony, enough. We're not here to comment on appearances. Only art."
-    Anthony: "Fine. But I think Nadia is right. The art doesn't look womanly enough."
+    Anthony: "Fine. But the art still doesn't look womanly enough."
     Nadia: "Charlotte, I'm so sorry..."
 
     -> You: "It's fine, you were coming from an artistic perspective."
         Nadia: "Yeah, that was my only intent. I didn't want to offend you personally."
-        Nadia: "I can recommend some websites where I learned to draw, maybe they would help?" (+ 5 XP) <<addExperience(5)>>
+        Nadia: "I can recommend some websites where I learned to draw, maybe they would help?" (+ 5 XP) 
+        <<addExperience(5)>>
         Anthony smirks.
         Eleanor: "Thanks Nadia. Please remember, we're just here to create."
         Eleanor: "Oh dear, look at the time, we're almost done!"
-        (go to 11)
     
     -> You: "Just stop."
         Nadia: "Okay..."
         Anthony: "Wow, you can't even take feedback."
         Vera: "Charlotte's feelings are valid."
-        Anthony: "Sure, whatever. Men in dresses defending each other." (-5% Anthony relationship) <<changeRelationship("A", -5)>>
+        Anthony: "Sure, whatever. Men in dresses defending each other." (-5% Anthony relationship) 
+        <<changeRelationship("A", -5)>>
         Eleanor: "Anthony, stop!"
         Eleanor: "Sorry, everyone, we're out of time..."
 
 -> You: "You're right, my drawing isn't that good..."
     Nadia: "Oh I'm so sorry!"
-    Anthony: "Nah, she's got a point. Females don't look like that." (-5% confidence) <<changeConfidence(-5)>>
+    Anthony: "Nah, she's got a point. Females don't look like that." (-5% confidence) 
+    <<changeConfidence(-5)>>
     Vera: "Hey, let Charlotte draw however she wants to."
     Anthony: "What? I'm just telling the truth. How is he supposed to improve if he can't even take a few knocks?"
     Anthony: "Or is he just trying to get pity from us?"
@@ -182,7 +189,8 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
     
     -> You: "Forget it. My drawing sucks anyway."
         Eleanor: "Come on, Charlotte..."
-        Anthony: "How about learning what people look like first? That way your art won't look so cui." (-5% confidence) <<changeConfidence(-5)>>
+        Anthony: "How about learning what people look like first? That way your art won't look so cui." (-5% confidence) 
+        <<changeConfidence(-5)>>
         Eleanor: "That's enough, Anthony."
         Nadia: "Charlotte, there's some videos I can recommend for drawing. Maybe you wanna watch those to start?"
         You: "Thanks, Nadia."
@@ -197,11 +205,11 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
     -> You: "I don't think I'll change it, though."
         Nadia: "Oh?"
         You: "Yeah. Art is up to us to create. If my body looks more rigid than a normal girl's, so be it."
-        Vera: "Love that for you! Be proud of your body." (+5% confidence) <<changeConfidence(5)>>
+        Vera: "Love that for you! Be proud of your body." (+5% confidence) 
+        <<changeConfidence(5)>>
         Nadia: "Of course. We're here for you, Charlotte."
         Anthony rolls his eyes.
         Eleanor: "Okay looks like we're all out of time!"
-        
     
     -> You: "I'll see what I can do to change that."
         Nadia: "Up to you. We all draw what we like to see."
@@ -210,20 +218,22 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
         Vera: "You got a problem with that, Anthony?"
         Eleanor: "Okay looks like we're all out of time!"
 
-    -> You: "The truth is that I'm Charlotte."
+    -> You: "The truth is that I'm Charlotte." #skillcheck #cha #6
         <<set $diceroll = diceRoll($cha)>>
-                [You rolled a {$diceroll}.]
-                <<if $diceroll < 6>>
-                    You say that, but do you really feel it? (-5% confidence) <<changeConfidence(-5)>>    
-                <<endif>>
-        Vera: "Love that for you! Charlotte is who you really are." (+5% confidence) <<changeConfidence(5)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll < 6>>
+            You say that, but do you really feel it? (-5% confidence) 
+            <<changeConfidence(-5)>>    
+        <<endif>>
+        Vera: "Love that for you! Charlotte is who you really are." (+5% confidence) 
+        <<changeConfidence(5)>>
         Nadia: "You have our support."
         Anthony is looking at his phone, clearly eager for the session to end.
         Nadia: "You know, I'm trying to get better at drawing female bodies too." 
         Nadia: "Here's some videos that I'm procrastinating on watching. Hope they help you!"
         Eleanor: "Thanks Nadia. Anyway, our time is almost up, so..."
 
-<<jump 11>>
+<<jump 11>> // They all go to 11.
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1840,-40
@@ -244,7 +254,8 @@ Vera: "Hey Charlotte. Are you feeling okay?"
     Vera: "Oh dear..."
     Vera: "Some people are just terrible. Anthony's one of them, I guess."
     Vera: "You should take the night off. And the next few days, if you can. Text me if you need, like, emotional support."
-    You: "Thanks Vera... I appreciate the help." (+5% confidence)  <<changeConfidence(5)>>
+    You: "Thanks Vera... I appreciate the help." (+5% confidence)  
+    <<changeConfidence(5)>>
 
 <<jump 12>>
 ===
@@ -261,14 +272,16 @@ Vera: "You know, trans women."
     Vera: "Oh?"
     You: "Yeah, don't I need to do, like, hormones and surgery before I reach there?"
     Vera: "Well, that's what some of us would do."
-    Vera: "But it's not compulsory. You are Charlotte as long as you want to be Charlotte." (+ 10 XP)<<addExperience(10)>>
+    <<addExperience(10)>>
+    Vera: "But it's not compulsory. You are Charlotte as long as you want to be Charlotte." (+ 10 XP)
+    
     -> You: "Are you saying that just to be nice?"
         Vera: "Absolutely not."
         Vera: "Your body, your opinion. Don't strictly follow what anyone else says."
         Vera: "This may be our first meeting, but already I see a lot of my early life in what you're going through."
         Vera: "But I don't think I can tell you everything now."
         Vera: "Let's meet up soon?"
-        You: "Sure, I'll let you know." (END)
+        You: "Sure, I'll let you know."
     
     -> You: "Even if I identify as male sometimes?"
         Vera: "That's totally valid. After all, it's your choice."
@@ -277,13 +290,15 @@ Vera: "You know, trans women."
         Vera: "Mm. Just know that you shouldn't feel shame for it."
         Vera: "Anyway, I don't think I can tell you everything now."
         Vera: "Let's meet up soon?"
-        You: "Sure, I'll let you know." (END)
+        You: "Sure, I'll let you know."
     
     -> You: "Thank you for that."
         Vera: "Yeah, I think you needed to hear that after just now."
         Vera: "Anyway, I don't think I can tell you everything now."
         Vera: "Let's meet up soon?"
-        You: "Sure, I'll let you know." (END)
+        You: "Sure, I'll let you know."
+    
+    <<jump end>>
 
 -> You: "Right."
     Vera: "We've got to stand up for each other."
@@ -300,35 +315,41 @@ Vera: "You know, trans women."
         Vera: "I can't tell you all about it now, but we could meet to talk about it soon?"
         You: "Sure, I'll let you know."
         Vera: "Okay! Here's a video that should inform you more about it."
-        You: "Thanks!" (END)
+        You: "Thanks!"
     
     -> You: "No..."
         Vera: "Woah. You've never Googled this?"
         Vera: "Anyway, here's a video that'll tell you more." 
         Vera: "Basically there's a few hormones that can turn your body into the one that you want."
         Vera: "I can't tell you all about it now, but we could meet to talk about it soon."
-        You: "Sure, I'll let you know. Thanks!" (END)
+        You: "Sure, I'll let you know. Thanks!"
+    
+    <<jump>>
 
 -> You: "So what do you want to do about it?"
     Vera: "Advocacy. Petitions. Civil unrest, question mark."
-    Vera: "But even surviving this far, is my personal form of resistance against a system that won't accept me for who I am." (+ 10 XP) <<addExperience(10)>>
-    -> You: "I'm proud of you for that." (EMP check)
-         <<set $diceroll = diceRoll($emp)>>
+    <<addExperience(10)>>
+    Vera: "But even surviving this far, is my personal form of resistance against a system that won't accept me for who I am." (+ 10 XP) 
+
+    -> You: "I'm proud of you for that." #skillcheck #emp #6
+        <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll < 6>>        
             Vera: "Thanks."
         <<else>>
-            Vera: "Thank you, dear. Being a girl is tough." (+5% Vera relationship) <<changeRelationship("V", 5)>>
+            <<changeRelationship("V", 5)>>
+            Vera: "Thank you, dear. Being a girl is tough." (+5% Vera relationship) 
         <<endif>>
+
         Vera: "There's lots of stuff I have to do daily, but it's worth it to wake up in the right body every morning."
         You: "Like what?"
         Vera: "I can't tell you all about it now, but we could meet to talk about it soon."
-        You: "Sure, I'll let you know. Thanks!" (END)
+        You: "Sure, I'll let you know. Thanks!"
     
     -> You: "I'm not sure I got all of that."
         Vera: "Ahh, I'm sorry... I tend to overshare when I get excited."
         Vera: "I can't tell you all about it now, but we could meet to talk about it soon."
-        You: "Sure, I'll let you know. Thanks!" (END)
+        You: "Sure, I'll let you know. Thanks!"
         
     -> You: "Wait, civil unrest?"
         Vera: "Relax, I'm not doing anything illegal."
@@ -337,7 +358,7 @@ Vera: "You know, trans women."
         Vera: "It's okay." 
         Vera: "Anyway, I don't think I can tell you everything now."
         Vera: "Let's meet up soon?"
-        You: "Sure, I'll let you know." (END)
+        You: "Sure, I'll let you know." 
 
 <<jump end>>
 ===
@@ -663,7 +684,7 @@ Anthony: "Maybe she's an ah gua."
 <<jump end>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 760,40
+__PrivCrochet_position: 520,560
 __PrivCrochet_tags: 
 title: pre-5
 ---
