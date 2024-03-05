@@ -1,5 +1,5 @@
 {
-  "FolderOrderSettings": [
+  "FolderOrderSettings":[
     {"name":"Animation Curves","order":12,"path":"folders/Animation Curves.yy",},
     {"name":"Chatterbox","order":16,"path":"folders/Chatterbox.yy",},
     {"name":"(System) (Don't look in here)","order":1,"path":"folders/Chatterbox/(System) (Don't look in here).yy",},
@@ -51,7 +51,7 @@
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
-  "ResourceOrderSettings": [
+  "ResourceOrderSettings":[
     {"name":"spr_mc_male_walking_4_0","order":7,"path":"sprites/spr_mc_male_walking_4_0/spr_mc_male_walking_4_0.yy",},
     {"name":"spr_mc_female_walking_3_1","order":6,"path":"sprites/spr_mc_female_walking_3_1/spr_mc_female_walking_3_1.yy",},
     {"name":"obj_stat_menu","order":1,"path":"objects/obj_stat_menu/obj_stat_menu.yy",},
