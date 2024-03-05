@@ -555,3 +555,151 @@ Vera: "Why?"
 
 <<jump 9>>
 ===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2160,240
+__PrivCrochet_tags: 
+title: 9
+---
+Eleanor: "Well... thanks for the discussions, everyone."
+Eleanor: "I know we've all been through a lot today, so please go home and don't think too much about it, okay?"
+Eleanor: "You can always text me if you want to talk about anything."
+// (from here, the NPCs can still be talked to, only if you have a Neutral/Good relationship with them)
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2400,240
+__PrivCrochet_tags: 
+title: 10
+---
+Vera: "I'm honestly still so angry at Anthony."
+(if Anthony didn't leave) Vera: "What do you think we should do about him?"
+
+-> "Complain to Eleanor."
+    Vera: "I don't think she can do anything. Poor girl. Her hands are tied."
+
+-> "Make it very clear he is not welcome here."
+    Vera: "You're right. We have to go beyond Eleanor for this."
+    You: "What will you do?"
+    Vera: "I mean, I'm not so hateful that I would actively ask him to get lost."
+    Vera: "But there are other ways to achieve that goal."
+
+-> "Vera. You have to let this go."
+    Vera: "Oh sure, let me just forget about the guy who's been making life so tough for us here. So simple!"
+    -> You: "Have you ever wanted to throw a hot coal at someone before?" (EMP => 4)
+    Vera: "That's oddly specific."
+    You: "Well I haven't either. But the fact that you're holding it, means you're the one getting burned."
+    Vera: "Then I'd just throw it already."
+    You: "Doesn't change the fact that you got burned by it."
+    Vera: "True..."
+    You: "The only winning move is not to hold the hot coal in the first place. And that means you don't get your revenge, but is it really worth it if it hurts you?"
+    Vera stays silent for a moment.
+    Vera: "Fine. I'll give that a shot."
+    Vera: "Surely that can't apply to all things, though."
+    You: "I don't think it does. But for such a small thing, you can afford to let the coal down." (+ 10 XP)
+
+-> You: "I'm sorry."
+    Vera: "These things aren't as easy to let go if you're caught in the middle of them."
+    Vera: "If he'd insulted me for being trans, I'd have left instead."
+    You: "Was he going to do that?"
+    Vera: "He was already picking up on my height and voice. I don't need more dysphoria."
+    You: "Yeah, I guess it's best to keep our distance."
+
+(if Anthony left) Vera: "Good riddance to him."
+    -> "Vera. You have to let this go."
+    (same options as "if Anthony stayed")
+
+-> "We have no place for bigotry here."
+    Vera: "I wish this wasn't so hard."
+    Vera: "I always thought uni was a safe space, but people like him still crawl out from under a rock to spew their poison."
+    -> "Don't lose hope. The world is becoming more accepting."
+        Vera: "It's so hard to tell who's accepting and who's not."
+        (if Vera knows) Vera: "I mean, you probably face a lot of shit for being Charlotte too."
+        You: "Yeah. I'll have to make a decision on her soon."
+        Vera: "Good luck with that."
+    
+    -> "Don't trust people like him from now on."
+        Vera: "It's easy to say men are trash. Unfortunately, we must continue to interact with them."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2400,480
+__PrivCrochet_tags: 
+title: 11
+---
+Nadia: "Oh my goodness, what just happened?"
+(if Anthony didn't leave) "We nearly lost a club member there!"
+(if Anthony left) "Did we really just lose a club member?"
+-> "Relax, he was on his way out anyway."
+    Nadia: "Well, we're still down to only 3 people. Excluding Eleanor."
+    -> "I know how you feel, but we'll get over this."
+    (copy below)
+
+    -> "That's her problem, not ours."
+        Nadia: "How can you say that? We should help her to solve this too."
+        Nadia: "Not just because we're her club members, but because we're her friends too."
+        Nadia: "And Anthony could have been a friend too. But look what happened."
+
+    -> "You're telling me you seriously want a guy who insulted everyone in the club to stay?"
+        Nadia is silent for a moment.
+        Nadia: "Well, if you put it that way... I guess not, but still..."
+        -> "You've got a good heart, Nadia."
+            You: "But you also need to draw boundaries and recognise who's being problematic."
+            Nadia: "Thanks... let's hope any future members we get aren't as toxic as he is."
+        
+        -> "Told you so."
+            Nadia sighs and leaves.
+
+-> "I think it's a damn shame he left."
+    Nadia: "I wouldn't call it that, but..."
+    You: "Vera is to blame. Look at how she was aggravating him."
+    Nadia: "I'm not sure about that either, didn't he start it?"
+    You: "He was perfectly in the right to express his opinion. That's a level of assertiveness we should aspire to."
+    You: "If not, who's to say we won't get cancelled for the smallest thing next?"
+    Nadia: "I guess..."
+    You can tell she's not entirely convinced, but this is about as far as it goes.
+    
+    -> "I know how you feel, but we'll get over this."
+        Nadia: "I guess so... let's hope that T-shirt design works."
+        -> "Who knows?"
+            Nadia: "I really don't want the club to shut down. It's a great place to make friends."
+            You: "Yeah, we can only hope."
+        
+        -> "Your idea might just save us all." (CHA => 4)
+            Nadia: "What do you mean?"
+            You: "Your design. It's cute, it appeals to a lot of people, and we can all tell you put effort into it."
+            Nadia smiles a bit.
+            Nadia: "Thanks, {$name}. Glad to see you really appreciate my art style."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2640,240
+__PrivCrochet_tags: 
+title: 12
+---
+Anthony: "That bitch, Vera."
+Anthony: "I'm so close to telling the whole world about her dirty little secret."
+You: "Wait, what's that?"
+Anthony: "Haven't you seen? She is actually he. How can a woman be taller than me, and have such a deep voice?"
+
+-> "Yes, you should spread the word. The people must know."
+    Anthony: "I'll spread it among my friends. We're all losers, but we can all laugh at him."
+
+-> "What the fuck, Anthony?"
+    Anthony: "What? Don't tell me you also cannot handle the truth."
+    You: "No, this just isn't right."
+    Anthony: "Sure, tell me why."
+
+    -> "Don't people have the right to secrets anymore?"
+        Anthony: "So you're telling me he's not proud to be an ah gua?"
+        You: "If she doesn't want to bring attention to it, that is her right."
+        Anthony: "So he's ashamed of what he does."
+        You: "You know what? You're impossible to deal with. I'm done here."
+    
+    -> "Why don't you bring that up to her face, huh? See how she reacts." (CHA => 4)
+        Anthony stays silent.
+        You: "You don't dare to."
+        Anthony: "It's not worth my time. Maybe he will start crying."
+        You: "You're just making excuses. All you dare to do is talk shit behind her back."
+        Anthony walks off. (-5% Anthony relationship)
+        Well done. You've exposed him for the coward he is. (+5% confidence)
+    
+    -> "It's just not right!"
+        Anthony: "If that's the only thing you can say, you don't have an argument."
+===
