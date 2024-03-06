@@ -28,7 +28,7 @@ title: 2_1
 <<jump 2_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 760,560
+__PrivCrochet_position: 1000,120
 __PrivCrochet_tags: 
 title: 5
 ---
@@ -223,10 +223,16 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
         [You rolled a {$diceroll}.]
         <<if $diceroll < 6>>
             You say that, but do you really feel it? (-5% confidence) 
-            <<changeConfidence(-5)>>    
+            <<changeConfidence(-5)>>
+            Vera: "Love that for you! Charlotte is who you really are."
+            Nice to hear, but are you sure she's genuine?
+        <<else>>
+            Yes, that's a good start.
+            Vera: "Love that for you! Charlotte is who you really are."
+            <<changeConfidence(5)>>
+            Aww, Vera... you're so nice. (+5% confidence)
         <<endif>>
-        Vera: "Love that for you! Charlotte is who you really are." (+5% confidence) 
-        <<changeConfidence(5)>>
+        
         Nadia: "You have our support."
         Anthony is looking at his phone, clearly eager for the session to end.
         Nadia: "You know, I'm trying to get better at drawing female bodies too." 
@@ -314,8 +320,6 @@ Vera: "You know, trans women."
         Vera: "That's valid. It's a big step to take."
         Vera: "I can't tell you all about it now, but we could meet to talk about it soon?"
         You: "Sure, I'll let you know."
-        Vera: "Okay! Here's a video that should inform you more about it."
-        You: "Thanks!"
     
     -> You: "No..."
         Vera: "Woah. You've never Googled this?"
@@ -707,7 +711,7 @@ Anthony: "Maybe she's an ah gua."
 <<jump end>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 520,560
+__PrivCrochet_position: 1000,-120
 __PrivCrochet_tags: 
 title: pre-5
 ---
@@ -744,7 +748,7 @@ What do you say?
     Vera reveals her drawing. It's her face on a very psychedelic background.
     Vera: "Yes, I know, lots of rainbows."
     
-    -> "Did it take you long to make this?"
+    -> "Did it take you long to make this?" <<if !optionChosen()>>
         Vera: "Haha, I guess not... I had the idea in mind already."
         Vera: "But it's more complex than just spreading colour over paper."
         <<Jump back to "2_options">>
@@ -812,52 +816,7 @@ What do you say?
 -> "What are you drawing?"
     Anthony shows you a picture of an anthill, with ants all around it.
     Anthony: "Ant-thony. Get it?"
-
-    -> "Are you sure you want that as your self-portrait...?"
-        Anthony: "It works. I'm insignificant and should be squished."
-        You: "Isn't that quite pessimistic..."
-        Anthony: "It's just the truth."
-    
-    -> "Ooh, that's a cool way to depict yourself." <<if !optionChosen()>> #skillcheck #int #6
-        <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
-        Anthony: "What?"
-        <<if $diceroll >= 6>>
-            You: "Yeah. Hardworking, can lift 100 times their body weight, all that stuff." 
-            Anthony: "Okay, and?"
-            You: "That's just another way to interpret your art."
-            You: "Why see only the bad side when there's a good side to it too?" (+10 XP)
-            Anthony: "I guess so..."
-        <<else>>
-            You: "Uh... ants are..."
-            Anthony: "Trash. Pests. Like me."
-        <<endif>>
-
-    -> "Is everything okay?" #skillcheck #emp #6
-        <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
-        Anthony: "What would you know?"
-        <<if $diceroll >= 6>>
-            You: "Well, I know enough to ask about people who aren't feeling too good."
-            You: "But it's okay if you don't want to share."
-            Anthony sighs.
-            Anthony: "I'm the ant, and the world is the one squishing me."
-            Anthony: "School, friends, relationship, future... all of that is super stressful to think about."
-            You: "I guess you can put your feelings to paper here."
-            <<changeRelationship("A", 5)>>
-            Anthony: "I guess..." (+5% Anthony relationship)
-        <<else>>
-            Anthony: "I don't wanna talk about it."
-            You: "Well, that's kinda pathetic."
-            Anthony: "What?"
-            You: "So emo for what?"
-            <<changeRelationship("A", -5)>>
-            Anthony: "Hmph. As if you care." (-5% Anthony relationship)
-        <<endif>>
-
-    -> "I guess it works."
-        You: "And it's your art, so shouldn't you be proud of it?"
-        Anthony: "I guess so."
+    <<jump 2_2_options2>>
 
 -> "Alright, I'll leave you be then."
     Anthony: "Mm."
@@ -891,35 +850,98 @@ What do you say?
     <<jump 2_3_options>>
 
 -> "What are you drawing?"
-    Nadia: "Oh, I'm just drawing myself."
-    Nadia: "I'm still in the work-in-progress stage, though, so bear with me!"
 
-    -> "Hmm. Why did you draw in anime style?" <<if !optionChosen()>>
-        Nadia: "Well... I guess it's easier, right?"
-        Nadia: "After all, it was designed for 2D artists."
-        You: "That's fair."
-        <<jump 2_3_options>>
-    
-    -> "It's okay, I guess. Not much else to say."
-        Nadia: "Alright then."
-        Nadia: "Have fun with your own artwork too."
-    
-    -> "You've got some hot guys on that sheet of paper too." <<if !optionChosen()>> #skillcheck #cha #6
-        <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
-        Nadia: "Huh? What? It's nothing! I'm just experimenting!"
-        You: "Come on, I won't judge."
-        <<if $diceroll >= 6>>
-            Nadia: "Okay, fine... I like anime. Especially those with hot guys..."
-            You: "You should take pride in that! It's your own style."
-            You: "I think the drawings look good! Both your husbandos and yourself."
-            <<changeRelationship("N", 5)>>
-            Nadia: "Thank you... it's rare to hear that. Usually people just judge me." (+5% Nadia relationship)
-        <<else>>
-            Nadia: "Ugh... I'm not comfortable sharing that."
-            Nadia: "Please... don't intrude on my work. I'll show it when I'm ready."
-        <<endif>>
+    Nadia: "Oh, I'm just drawing myself."
+    <<jump 2_3_options2>>
 
 -> "Alright, I'll leave you be then."
     Nadia: "Okay!"
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 240,520
+__PrivCrochet_tags: 
+title: 2_2_options2
+---
+Anthony shows you a picture of an anthill, with ants all around it.
+
+-> "Are you sure you want that as your self-portrait...?"
+    Anthony: "It works. I'm insignificant and should be squished."
+    You: "Isn't that quite pessimistic..."
+    Anthony: "It's just the truth."
+    <<jump 2_2_options>>
+
+-> "Ooh, that's a cool way to depict yourself." <<if !optionChosen()>> #skillcheck #int #6
+    <<set $diceroll = diceRoll($int)>>
+    [You rolled a {$diceroll}.]
+    Anthony: "What?"
+    <<if $diceroll >= 6>>
+        You: "Yeah. Hardworking, can lift 100 times their body weight, all that stuff." 
+        Anthony: "Okay, and?"
+        You: "That's just another way to interpret your art."
+        You: "Why see only the bad side when there's a good side to it too?" (+10 XP)
+        Anthony: "I guess so..."
+    <<else>>
+        You: "Uh... ants are..."
+        Anthony: "Trash. Pests. Like me."
+    <<endif>>
+    <<jump 2_2_options2>>
+
+-> "Is everything okay?" <<if !optionChosen()>> #skillcheck #emp #6
+    <<set $diceroll = diceRoll($emp)>>
+    [You rolled a {$diceroll}.]
+    Anthony: "What would you know?"
+    <<if $diceroll >= 6>>
+        You: "Well, I know enough to ask about people who aren't feeling too good."
+        You: "But it's okay if you don't want to share."
+        Anthony sighs.
+        Anthony: "I'm the ant, and the world is the one squishing me."
+        Anthony: "School, friends, relationship, future... all of that is super stressful to think about."
+        You: "I guess you can put your feelings to paper here."
+        <<changeRelationship("A", 5)>>
+        Anthony: "I guess..." (+5% Anthony relationship)
+    <<else>>
+        Anthony: "I don't wanna talk about it."
+        You: "Well, that's kinda pathetic."
+        Anthony: "What?"
+        You: "So emo for what?"
+        <<changeRelationship("A", -5)>>
+        Anthony: "Hmph. As if you care." (-5% Anthony relationship)
+    <<endif>>
+
+-> "I guess it works."
+    You: "And it's your art, so shouldn't you be proud of it?"
+    Anthony: "I guess so."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 520,520
+__PrivCrochet_tags: 
+title: 2_3_options2
+---
+Nadia: "I'm still in the work-in-progress stage, though, so bear with me!"
+
+-> "Hmm. Why did you draw in anime style?" <<if !optionChosen()>>
+    Nadia: "Well... I guess it's easier, right?"
+    Nadia: "After all, it was designed for 2D artists."
+    You: "That's fair."
+    <<jump 2_3_options2>>
+
+-> "It's okay, I guess. Not much else to say."
+    Nadia: "Alright then."
+    Nadia: "Have fun with your own artwork too."
+
+-> "You've got some hot guys on that sheet of paper too." <<if !optionChosen()>> #skillcheck #cha #6
+    <<set $diceroll = diceRoll($cha)>>
+    [You rolled a {$diceroll}.]
+    Nadia: "Huh? What? It's nothing! I'm just experimenting!"
+    You: "Come on, I won't judge."
+    <<if $diceroll >= 6>>
+        Nadia: "Okay, fine... I like anime. Especially those with hot guys..."
+        You: "You should take pride in that! It's your own style."
+        You: "I think the drawings look good! Both your husbandos and yourself."
+        <<changeRelationship("N", 5)>>
+        Nadia: "Thank you... it's rare to hear that. Usually people just judge me." (+5% Nadia relationship)
+    <<else>>
+        Nadia: "Ugh... I'm not comfortable sharing that."
+        Nadia: "Please... don't intrude on my work. I'll show it when I'm ready."
+    <<endif>>
 ===
