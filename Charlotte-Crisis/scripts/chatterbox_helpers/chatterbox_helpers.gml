@@ -70,7 +70,7 @@ function speaker_is_narrator() {
 function format_odds_string(_stat, _threshold) {
 	var _stat_amt = ChatterboxVariableGet(_stat); // e.g. get("cha") returns $cha 
 	var _percent = calculate_odds([_stat_amt, real(_threshold)]);
-	return string(" (%{0} chance success)", _percent);
+	return string(" ({0}% chance success)", _percent);
 }
 
 /// @function format_skillcheck_indicator(_stat, _threshold)
