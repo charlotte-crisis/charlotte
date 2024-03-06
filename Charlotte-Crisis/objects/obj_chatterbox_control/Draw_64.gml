@@ -59,7 +59,6 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 				if (array_length(_metadata) > 0) {
 					if (_metadata[0] == "skillcheck") {
 						_skillcheck = true;
-						show_debug_message(string(_metadata));
 						_prefix = format_skillcheck_indicator(_metadata[1], _metadata[2]);
 						_suffix = format_odds_string(_metadata[1], _metadata[2]);
 					}
