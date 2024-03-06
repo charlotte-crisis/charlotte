@@ -136,13 +136,13 @@ You: "What is it?"
 Nadia: "Well, I may not be the best at drawing female bodies."
 Nadia: "But your drawing seems a little more... rectangular? Like, it's not curvy."
 
--> You: "I'm just built different."
+-> You: "I'm just built different." #skillcheck #cha # 6
     <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
-        <<if $diceroll < 6>>
-            Damn, that wasn't good.    
-            <<changeConfidence(-5)>>    
-        <<endif>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll < 6>>
+        Damn, that wasn't good.    
+        <<changeConfidence(-5)>>    
+    <<endif>>
     Anthony: "Yeah, can tell. Your voice is as low as mine - "
     <<addExperience(10)>>
     Vera: "Hey. Every woman has a different body shape. Not everyone's got an hourglass figure, or a high voice." (+10 XP)
@@ -218,7 +218,7 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
         Vera: "You got a problem with that, Anthony?"
         Eleanor: "Okay looks like we're all out of time!"
 
-    -> You: "The truth is that I'm Charlotte." #skillcheck #cha #6
+    -> You: "The truth is that I'm Charlotte." #skillcheck #cha # 6
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll < 6>>
