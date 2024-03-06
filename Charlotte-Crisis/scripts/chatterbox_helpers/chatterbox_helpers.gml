@@ -44,14 +44,13 @@ function chatterbox_update() {
 			break; // stop at the first
 		}
 	}
-	
-	// use ChatterboxGetContentSpeech if you want just the text.
 }
 
 // If you want to show dialogue history
 function chatterbox_store_previous_speech() {
-	previous_speech = ChatterboxGetContentSpeech(chatterbox, 0);
-	previous_speaker = ChatterboxGetContentSpeaker(chatterbox, 0);
+// 	previous_speech = ChatterboxGetContentSpeech(chatterbox, 0);
+//	previous_speaker = ChatterboxGetContentSpeaker(chatterbox, 0);
+	previous_dialogue = ChatterboxGetContent(chatterbox, 0);
 }
 
 function speaker_is_player() {

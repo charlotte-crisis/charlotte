@@ -4,6 +4,7 @@ if (obj_player.is_talking) {
 	var _count = ChatterboxGetOptionCount(chatterbox);
 
 	if (ChatterboxIsWaiting(chatterbox) && keyboard_check_pressed(vk_space)) {
+		chatterbox_store_previous_speech();
 		ChatterboxContinue(chatterbox);
 		chatterbox_update();
 	} else if (_count) {
@@ -20,6 +21,8 @@ if (obj_player.is_talking) {
 			option_index = 0;
 			chatterbox_update();
 		}
+		
+	// only debug
 	} else if (ChatterboxIsWaiting(chatterbox) && keyboard_check_pressed(vk_enter)) {
 		ChatterboxFastForward(chatterbox);
 		chatterbox_update();

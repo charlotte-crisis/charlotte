@@ -15,9 +15,10 @@ option_index = 0;
 size = [0.7, 0.75];
 colour = [c_ltgray, c_white];
 
-speaker_and_speech = undefined;
+speaker_and_speech = "";
 speaker = "";
 speech = "";
+previous_dialogue = "";
 
 // obj_player.set_is_talking(true);
 
