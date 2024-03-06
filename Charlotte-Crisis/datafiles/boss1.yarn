@@ -101,7 +101,7 @@ Sister: "How was it this easy?"
     You: "I've got more conditions that I want to discuss before fully agreeing."
     Sister: "Well, I guess you've got every right to that..."
     Sister: "Just try not to make things difficult."
-    <<jump 4>> //assume
+    <<jump 4>>
 
 -> "I regret my time pretending to be a woman." <<if $name == "Charles">>
     You: "I'm ready to be a man now."
@@ -145,10 +145,10 @@ Sister: "But ultimately we live in a society where happiness comes second."
 Sister: "Don't you know about the social contract?"
 Sister: "You must give up some freedom, for security."
 
--> [CHA 4] "Those who give up liberty for security deserve neither." #skillcheck #cha #4
+-> [CHA 4] "Those who give up liberty for security deserve neither." #skillcheck #cha # 8
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll >= 4>>
+    <<if $diceroll >= 8>>
         Sister: "Yeah... I guess you're right."
         Sister: "It's hard to see it now, but I can empathise with that statement."
         You: "Don't you deserve happiness too?"
@@ -255,11 +255,22 @@ Sister: "You really want to blow this up, don't you..."
 <<changeConfidence(-5)>>
 Sister: "Don't say I didn't warn you." (-5% confidence)
 
--> "But I know you will be by my side." (EMP >= 4)
-    Sister sighs.
-    Sister: "Yeah, as much as I want to..."
-    Sister: "It's very tough when I have to bridge the gap between you and Mother."
-    You: "I will try my best, too."
+-> "But I know you will be by my side." #skillcheck #emp # 8
+    <<set $diceroll = diceRoll($emp)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll < 8>>
+        Sister sighs.
+        Sister: "Yeah, as much as I want to..."
+        Sister: "It's very tough when I have to bridge the gap between you and Mother."
+        You: "I will try my best, too."
+        <<jump 4>>
+    <<endif>>
+    You: "We've been helping each other since we were kids. Now is no different."
+    You: "Come on, if you really want the family to stay together, shouldn't the conversation be two way?"
+    Sister: "I guess so..."
+    You: "You're able to relate to me the best. Better than our parents. You're my only hope."
+    <<changeConfidence(5)>>
+    Sister: "Alright. We'll try it together." (+5% confidence)
 
 -> "Don't you think we should face our problems head-on?"
     You: "And I don't mean the arguments that our parents always get into."
@@ -286,6 +297,8 @@ Sister: "Don't say I didn't warn you." (-5% confidence)
         You: "Then father would be, like, lecturing the therapist for 2 hours."
         You: "You know, like he does to us."
         Sister: "Haha, that therapist definitely deserves a raise." (+5% Sister relationship)
+
+    <<jump 4>>
 
 -> "You know it's true."
     Sister: "You know, I'm actually trying to solve the problem here."
