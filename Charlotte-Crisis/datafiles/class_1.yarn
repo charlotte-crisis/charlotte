@@ -875,7 +875,8 @@ title: 5_options
 ---
 What do you do?
 
--> Start a minesweeper game <<if !optionChosen()>> #skillcheck #int # 5
+// There MUST be a space for numbers. #5 cannot but # 5 can. Weird
+-> Start a minesweeper game <<if !optionChosen()>> #skillcheck #int # 5 
     <<set $diceroll = diceRoll($int)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll >= 5>>
