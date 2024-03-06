@@ -589,23 +589,6 @@ Sage: "I feel I have a personal stake in this conversation, so I thought I shoul
     <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1120,80
-__PrivCrochet_tags: 
-title: 5_1
----
-<<set $diceroll = diceRoll($int)>>
-[You rolled a {$diceroll}.]
-<<if $diceroll >= 5>>
-    You skillfully manage to flag up all the bombs.
-    You Win!
-<<else>>
-    You only clear the map before you click on a mine and lose. 
-    Boohoo!
-<<endif>>
-Alright, probably time to pay attention.
-<<jump 5_options>>
-===
-__PrivCrochet_colorID: 0
 __PrivCrochet_position: 758,760
 __PrivCrochet_tags: 
 title: 20
@@ -891,8 +874,19 @@ __PrivCrochet_tags:
 title: 5_options
 ---
 What do you do?
--> [INT 5] Start a minesweeper game ({calculateOdds($int, 5)}% success) <<if visited("5_1") == false>> #skillcheck #int 
-    <<jump 5_1>>
+
+-> Start a minesweeper game <<if !optionChosen()>> #skillcheck #int # 5
+    <<set $diceroll = diceRoll($int)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll >= 5>>
+        You skillfully manage to flag up all the bombs.
+        You Win!
+    <<else>>
+        You only clear the map before you click on a mine and lose. 
+        Boohoo!
+    <<endif>>
+    Alright, probably time to pay attention.
+    <<jump 5_options>>
     
 -> Scroll through Shopee
     As you scroll through your recommended, a cute skirt catches your eye. 

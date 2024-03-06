@@ -52,9 +52,16 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 				var _metadata = ChatterboxGetOptionMetadata(chatterbox, i);
 				var _skillcheck = false;
 				
+				// any additional text to add to option string
+				var _prefix = "";
+				var _suffix = "";
+				
 				if (array_length(_metadata) > 0) {
 					if (_metadata[0] == "skillcheck") {
 						_skillcheck = true;
+						show_debug_message(string(_metadata));
+						_prefix = format_skillcheck_indicator(_metadata[1], _metadata[2]);
+						_suffix = format_odds_string(_metadata[1], _metadata[2]);
 					}
 				}
 				
@@ -70,6 +77,7 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 				}
 				
 				var _option = ChatterboxGetOption(chatterbox, i);
+				_option = _prefix + _option + _suffix;	
 				
 				draw_text_ext(_xx, _yy, _option, _linesep - 10, _width - _margin_text);
 				_row++;
