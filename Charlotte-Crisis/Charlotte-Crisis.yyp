@@ -277,6 +277,7 @@
     {"id":{"name":"spr_female_top_2","path":"sprites/spr_female_top_2/spr_female_top_2.yy",},},
     {"id":{"name":"spr_female_top_3","path":"sprites/spr_female_top_3/spr_female_top_3.yy",},},
     {"id":{"name":"spr_hostel_bars","path":"sprites/spr_hostel_bars/spr_hostel_bars.yy",},},
+    {"id":{"name":"spr_hostelnight_bars","path":"sprites/spr_hostelnight_bars/spr_hostelnight_bars.yy",},},
     {"id":{"name":"spr_indicator","path":"sprites/spr_indicator/spr_indicator.yy",},},
     {"id":{"name":"spr_livingroom_bars","path":"sprites/spr_livingroom_bars/spr_livingroom_bars.yy",},},
     {"id":{"name":"spr_male_bottoms_1","path":"sprites/spr_male_bottoms_1/spr_male_bottoms_1.yy",},},

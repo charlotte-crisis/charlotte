@@ -223,6 +223,7 @@
     {"name":"spr_female_top_2","order":7,"path":"sprites/spr_female_top_2/spr_female_top_2.yy",},
     {"name":"spr_female_top_3","order":8,"path":"sprites/spr_female_top_3/spr_female_top_3.yy",},
     {"name":"spr_hostel_bars","order":4,"path":"sprites/spr_hostel_bars/spr_hostel_bars.yy",},
+    {"name":"spr_hostelnight_bars","order":10,"path":"sprites/spr_hostelnight_bars/spr_hostelnight_bars.yy",},
     {"name":"spr_indicator","order":2,"path":"sprites/spr_indicator/spr_indicator.yy",},
     {"name":"spr_livingroom_bars","order":6,"path":"sprites/spr_livingroom_bars/spr_livingroom_bars.yy",},
     {"name":"spr_male_bottoms_2","order":1,"path":"sprites/spr_male_bottoms_2/spr_male_bottoms_2.yy",},
