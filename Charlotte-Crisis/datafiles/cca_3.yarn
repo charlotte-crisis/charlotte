@@ -35,7 +35,7 @@ Who do you want to talk to first?
     <<jump 6>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 760,680
+__PrivCrochet_position: 480,640
 __PrivCrochet_tags: 
 title: 6
 ---
@@ -573,4 +573,260 @@ Anthony: "'All it takes is one bad day' or 'The World is Yours'."
     (if Anthony doesn't know) Anthony: "But these are from people I want to be like."
     You: "Well, suit yourself. I'm not the art police."
     You: "I'd personally do something a little more positive, but you do you."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,640
+__PrivCrochet_tags: 
+title: 5
+---
+Nadia: "Hello, {$name}! I'm not done yet but feel free to chat."
+
+-> You: "Okay, I'll leave you to it then."
+    Nadia: "Sure. Feel free to come back any time."
+
+-> You: "I'm curious. What's your slogan?"
+    <<jump 5_1>>
+
+-> You: "Actually, I'm here to talk about something else."
+    <<jump 5_2>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1000,640
+__PrivCrochet_tags: 
+title: 5_1
+---
+Nadia: "Uh... I'm not sure you'd understand it..."
+You: "Come on. We're all university students."
+Nadia: "No, I don't mean it's very pretentious or whatever! It's in Japanese..."
+You: "Didn't know you spoke the language."
+Nadia: "Yeah, I don't. But some phrases really stand out, you know?"
+Nadia: "This one means 'a journey of a thousand miles starts with a single step'."
+
+-> "Really leaning into the anime here, huh..."
+    Nadia: "Well yes it came from an anime, so what?"
+
+    -> "Anthony was right. You're really a one-trick pony."
+        Nadia: "What, are you hanging out with him more now?"
+        Nadia: "He's rubbing off on you."
+        Nadia: "And I thought you had more of a filter to not say such things." (-5% Nadia relationship)
+    
+    -> "Don't you think it's very cliche?"
+        Nadia: "Maybe." (-5% Nadia relationship)
+        Nadia: "But it's my own thing. I decide how I want to define my message."
+        (if Nadia knows)
+        Nadia: "Honestly? I thought you'd be more sympathetic."
+        Nadia: "What with your crossdressing and all, you should be less judgemental."
+        Nadia: "You never know when you're gonna get judged next."
+    
+    -> "Nothing wrong with that..."
+        Nadia: "Are you just trying to backspace what you said?"
+        Nadia: "Look, if you don't like it, you don't like it."
+        Nadia: "Just don't be terrible about it, okay?"
+    
+    -> "I think it's great!"
+        Nadia: "Really?"
+        Nadia: "Well if you're true about it, I'm glad to hear that."
+        Nadia: "People can be terrible about our tastes and preferences."
+        (if Nadia knows) Nadia: "I'm sure Charlotte knows that well."
+
+-> "Wow, that's inspiring."
+    Nadia: "I know, right?"
+    Nadia: "Honestly, it's also kind of like a reminder to myself..."
+    Nadia: "I get distracted a lot. I can be watching anime and scrolling through TikTok at the same time..."
+    Nadia: "... when I'm supposed to be doing my homework."
+
+    -> "So relatable."
+        Nadia: "Right? The Internet has so much fun stuff."
+        Nadia: "Unfortunately, we live in a society."
+        You: "I understood that reference!"
+        Nadia: "Welcome to the Internet, right?"
+        Nadia: "Still, we gotta plug out and face our problems at some point."
+        Nadia: "That's just how life is."
+    
+    -> "Personally, I'm scared of making the first step."
+        Nadia: "Ah, that's another way to see it."
+        
+        (if Nadia knows and relationship with Nadia = Good/Neutral) Nadia: "Did that apply to Charlotte also?"
+        You: "Yep."
+        Nadia: "And here you are now. You made it!"
+        Nadia: "Charlotte is inspiring af."
+        
+        (if Nadia doesn't know) Nadia: "You mean like... for uni and stuff?"
+        You: "Yeah. Applying here was a big first step."
+        Nadia: "Ah. Even though you're in year 4, you're still thinking about it..."
+        Nadia: "That must have been a super big decision for you."
+        
+    -> "Damn, your GPA must be crying."
+        (if CHA < 4)
+        Nadia: "You didn't have to say that..."
+        You: "I'm sorry..."
+        
+        (if CHA => 4)
+        Nadia laughs nervously.
+        Nadia: "Here for a good time, not a long time, right?"
+        Nadia: "Cs get degrees and all that."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,880
+__PrivCrochet_tags: 
+title: 5_2
+---
+Nadia: "Go ahead. I'll just continue to draw in the meantime."
+-> "Have you ever felt a lot of nerves before a big conflict?"
+    Nadia: "Hmm? What's the big conflict?"
+    Nadia: "I mean, uh, sorry, that was not a good thing to ask."
+    Nadia: "Anyway, about nerves, I guess so? It's natural, isn't it?"
+    You: "Yeah."
+    Do you want to tell Nadia more?
+
+    -> "I'm sorry... I don't think I can say more about it."
+        Nadia: "No worries at all. We're all going through stuff."
+    
+    -> "I'm sure I'll get over this just like all the other conflicts."
+        Nadia: "Yeah, keep telling yourself that. Uh... I'm not being ironic. If you thought I was."
+        Nadia: "If you ever want to tell me more, I'm all ears. And no mouth."
+    
+    -> "I'm going to meet my mother about Charlotte." (option only available if Nadia knows)
+        Nadia: "Oh... that's tough. It's always tough to get through to parents."
+        Nadia: "I know my parents would be supportive, but I'm not sure about yours."
+
+        -> "I mean, it's not like I'm their kid."
+            Nadia: "What do you mean?"
+            You: "It's easy for people to support me from a distance. Or to shoot me down."
+            You: "But those closest to me hurt the hardest."
+            Nadia: "Oh no... I'm so sorry to hear that."
+            Nadia: "I guess it really is difficult for your mother, huh?"
+            Nadia: "23 years you've been her son, and now she might be seeing a daughter."
+            Nadia: "My parents might feel the same if it was me. Who knows."
+        
+        -> "Thanks, that's refreshing to hear."
+            Nadia: "Yeah, I just hope our generation does better than theirs."
+            Nadia: "We need more people like you who dare to be out there."
+            Nadia: "And though I'm not LGBT, I'll do all I can to support."
+            Nadia: "Anyway, I guess all I can say is... good luck, listen to her but also listen to your heart."
+    
+    -> "Recently I've been feeling more and more at odds with Charlotte." (option only available if Nadia knows)
+        Nadia: "Huh? But aren't you Charlotte?"
+        You: "Exactly."
+        Nadia: "I'm sorry... this is a gender dysphoria thing, isn't it?"
+        Nadia: "I'm no expert on it. You might be better off asking Vera..."
+        Nadia: "But if you just want my opinion as a friend..."
+        Nadia: "I support Charlotte. A lot."
+        Nadia: "When you dress up as Charlotte, I see bravery. And open-mindedness."
+        -> "What if I told you that Charlotte is going to die?"
+            Nadia: "What?"
+            Nadia: "Please don't do anything stupid, okay???"
+            Nadia: "Or, like, anything you'll regret."
+            Nadia: "What do you mean, die?"
+            You: "I mean, going back to being Charles. No more Charlotte."
+            Nadia: "Phew..."
+            Nadia: "Still, why do you want to do that?"
+
+            -> "I'm tired of being Charlotte."
+                Nadia: "Aww..."
+                Nadia: "Yeah, I get it. If it's hard enough for me to maintain my appearance every day, you must have had it even harder."
+                Nadia: "Just, you know, do what makes you happy, okay?"
+                Nadia: "And don't regret what you did for Charlotte. Or, as Charlotte."
+            
+            -> "Charlotte was just a huge waste of my time."
+                You: "I'm a man, and I should stay that way."
+                Nadia: "Oh my goodness, is this something that Anthony told you?"
+                Nadia: "You should know to filter out what he says..."
+                You: "It is the right thing to do."
+                Nadia: "I mean, sure, even if you're a man... men can still wear dresses and makeup, right? It's not illegal."
+                You: "But it's weird."
+                Nadia: "That's such a far cry from the Charlotte we once knew."
+                Nadia: "You know what, do what makes you happy." 
+                Nadia: "But I'm not sure forcing yourself back into society's mould, after stepping out of it, is gonna be that."
+            
+            -> "I don't want to fight my mother about this."
+                Nadia: "Oh... that's tough."
+                Nadia: "You're in final year, right? So you might be seeing her a lot more after graduation."
+                Nadia: "Then I guess school really is the last time you can freely be Charlotte."
+                Nadia: "Still, I hope you don't regret your time as Charlotte..."
+        
+        -> "Thank you, Nadia. That really means a lot to me."
+            Nadia: "No problem, glad I could help."
+            Nadia: "But, you know, go find Vera, okay?"
+
+-> "What happened to Eleanor?"
+    Nadia: "She said she had that leadership thing." 
+    Nadia: "You know how this school is. There's a thousand and one programmes to attend if you wanna get anything done."
+
+    -> "I hope she's okay after last week's big fight."
+        Nadia: "It's gonna take her a while, I think."
+        Nadia: "I'm in the same course as her, so I got to talk with her a little more."
+        Nadia: "Did you know this is her first leadership position?"
+        Nadia: "I've headed my fair share of clubs and societies, and if yesterday's incident broke out, I'd still be stunned."
+        Nadia: "We're just lucky this happened in school."
+        Nadia: "If this happened in the real world, there'd be greater consequences."
+    
+    -> "So you're in charge now?"
+        Nadia sighs.
+        Nadia: "Well, maybe."
+        Nadia: "I don't know how long she needs, but... actually, never mind."
+        Nadia: "She'll be back soon."
+        Nadia: "I'm not holding another leadership position. I just want to make friends here."
+        Nadia: "But yeah, enough about me."
+        
+    -> "She needed a backbone."
+        Nadia: "That's not as easy as you make it sound."
+        Nadia: "Even discounting all the politics, it's difficult to keep two very strong personalities under control."
+        Nadia: "Both sides made good points, and it's hard to tell either of them to leave."
+        -> "No. Anthony was garbage."
+            Nadia: "As much as I want to agree, isn't that a little extreme?"
+            Nadia: "He did come for club sessions and create with us..."
+
+            -> "Are you kidding me?"
+                You: "Look at how many times he insulted you, Vera, and even Eleanor."
+                You: "You really think he deserves to stay?"
+                Nadia: "I... "
+                You: "We shouldn't be wasting any more time on him. He clearly doesn't want to get with our program."
+                Nadia: "You're sounding quite extreme... I get where you're coming from, but is this really how it ends?" (-5% Nadia relationship)
+            
+            -> You: "That still doesn't justify his actions." (EMP >= 4)
+                You: "Let's not forget that he's insulted everyone here."
+                Nadia: "I guess."
+                You: "I'm not sure who can persuade him to be a nicer person, but it's definitely not any of us."
+                Nadia: "Not like we haven't tried, right?"
+                Nadia: "I guess some people just have different paths through life."
+                You: "We wish him well, but his actions have consequences."
+            
+            -> "Yeah, I guess we can't just expel him based on bad vibes."
+                Nadia: "He needs to at least apologise to all of us first."
+                Nadia: "And redemption arcs are never cheap, right?"
+                Nadia: "If you're truly redeemed, you're a far different person than you were before."
+        
+        -> "No. Vera was being histrionic."
+            Nadia: "What does that word even mean?"
+            You: "She's always been seeking attention. Even from the beginning."
+            Nadia: "I don't think so, it's not like she dominated our discussions, right?"
+
+            -> You: "Are you kidding me?"
+                You: "Every single facet of her personality has been about LGBT."
+                Nadia: "Yeah, but..."
+                You: "Tell me. What do you know about Vera that isn't about it?"
+                Nadia: "She's an anthropology major - "
+                You: "Which she took because she's LGBT."
+                Nadia: "Uh, she doesn't like AI art..."
+                You: "If she used it maybe she wouldn't be drawing rainbows all the damn time."
+                Nadia: "You know what? Vera is my friend. And so is Eleanor."
+                Nadia: "And I won't tolerate it if you talk shit about them."
+                Nadia: "Sure, they're flawed, but so is everyone else, and there's really no need to go so much into their issues."
+                Nadia: "So you can take your hate and fuck off." (-10% Nadia relationship)
+            
+            -> You: "Yeah, I guess she knew her place..."
+                Nadia: "That's... not how I'd put it, but sure."
+                Nadia: "Anyway, that's also a pretty harsh thing to say about her, isn't it?"
+                Nadia: "You're starting to sound more like Anthony. I'd watch myself if I were you." (-5% Nadia relationship)
+            
+        -> "I guess so..."
+            Nadia: "Even for me, I've held CCA leadership before."
+            Nadia: "But I've never had such fiery arguments happen in my organisations."
+            Nadia sighs.
+            Nadia: "Let's hope we're ready for them when we enter the real world."
+
+-> "Never mind."
+    Nadia: "Don't spoil me like that!"
+    Nadia: "Just kidding. Whenever you're ready."
 ===
