@@ -61,7 +61,10 @@ num_of_frames    = 8;
 	1: Female
 */
 gender = 1;
-current_clothes = [1, 2, 0]
+
+// Top bottom shoes
+current_clothes = [1, 0, 2] // zero indexed
+
 // 0: Idle, 1: Sit, 2: Walk
 // In order of drawing layer
 
