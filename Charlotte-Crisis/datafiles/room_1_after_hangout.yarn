@@ -2,27 +2,11 @@
 # if you've already visited then it will show the concise version.
 # Interacting with mirror
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1400,200
+__PrivCrochet_position: 920,200
 __PrivCrochet_tags: 
 title: door
 ---
-You feel like hanging out with a friend this week, for a quick meal.
-Who will you ask out? #temporarily dont put relationship (normally has to be above 30)
--> Anthony
-    You call Anthony up for a hangout.
-    <<goto_room_hangout_a()>>
-
--> Nadia
-    You call Nadia up for a hangout.
-    <<goto_room_hangout_n()>>
-
--> Vera 
-    You call Vera up for a hangout.
-    <<goto_room_hangout_v()>>
-
--> On second thought, nevermind.
-    Hmm... you don't seem to be friendly enough with anyone.
-    You can stay in today, but please try to understand and befriend people around you...
+You don't need to go out right now.
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 640,200

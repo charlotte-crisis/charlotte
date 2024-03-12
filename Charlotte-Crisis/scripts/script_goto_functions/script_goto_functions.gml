@@ -178,3 +178,9 @@ function goto_room_bedroom_frombed() {
 	}
 
 #endregion
+
+#region Boss
+	function goto_room_boss_1() {
+		fade_room(rm_black_screen);	
+	}
+#endregion
