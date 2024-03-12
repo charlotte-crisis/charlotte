@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 80,240
+__PrivCrochet_position: 40,240
 __PrivCrochet_tags: 
 title: 1
 ---
@@ -36,7 +36,7 @@ Sister: "Well, we both know why we're meeting like this."
 <<jump 2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 320,240
+__PrivCrochet_position: 280,240
 __PrivCrochet_tags: 
 title: 2
 ---
@@ -95,7 +95,7 @@ Sister: "How was it this easy?"
     You: "I guess family is more important than what I want."
     Sister: "That's good."
     Sister: "Should have thought of that before you put on that dress."
-    <<jump ending_1>>
+    <<jump ending_1>> 
     
 -> "It's not that simple."
     You: "I've got more conditions that I want to discuss before fully agreeing."
@@ -103,7 +103,7 @@ Sister: "How was it this easy?"
     Sister: "Just try not to make things difficult."
     <<jump 4>>
 
--> "I regret my time pretending to be a woman." <<if $name == "Charles">>
+-> "I regret my time pretending to be a woman." <<if $name == "Charles">> #blue
     You: "I'm ready to be a man now."
     Sister: "If you say so."
     Sister: "I hope you're not just lying to me..."
@@ -136,7 +136,7 @@ If you really mean this, then you're lying to yourself.
 Either way, I'm gonna haunt you in your dreams.
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 800,480
+__PrivCrochet_position: 800,240
 __PrivCrochet_tags: 
 title: 3_2
 ---
@@ -247,7 +247,7 @@ Sister: "You must give up some freedom, for security."
 <<jump 4>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 800,240
+__PrivCrochet_position: 800,480
 __PrivCrochet_tags: 
 title: 3_3
 ---
