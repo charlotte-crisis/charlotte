@@ -10,7 +10,7 @@ draw_set_font(fnt_body);
 draw_set_valign(fa_top); // text aligned from top to bottom
 
 if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
-	var _yy = view_hport[0] - (_margin_text / 2);
+	var _yy = view_hport[0] - 48;
 	var _text_yy = view_hport[0] - (_margin_text) - 16;
 	var _xx; // to be set below.
 	
