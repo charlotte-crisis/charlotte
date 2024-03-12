@@ -1,0 +1,358 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 240,400
+__PrivCrochet_tags: 
+title: 1
+---
+It's that time of the week again. You're in the clubroom.
+But Eleanor... isn't? Everyone is kind of just doing their own thing.
+Nadia: "Oh. Hey, {$name}."
+You: "Hi Nadia. Where's Eleanor?"
+Nadia: "She's... busy. Had some leadership thing with the school."
+Nadia: "According to her plan, we're doing typography this week."
+Nadia: "If you need examples, there are some on the board. Or you could just talk to us."
+Nadia: "But please... try not to start another fight, okay?"
+
+<<jump 2>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 480,400
+__PrivCrochet_tags: 
+title: 2
+---
+The room has always been quiet at this stage. Before the discussions began.
+But without Eleanor to start the ball rolling, you get the feeling this silence will persist.
+Nadia has put on Spotify's top 50, but it does little to assuage this feeling.
+
+Who do you want to talk to first?
+-> Vera
+    <<jump 3>>
+-> Anthony
+    <<jump 4>>
+-> Nadia
+    <<jump 5>>
+-> Do your own thing
+    <<jump 6>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,680
+__PrivCrochet_tags: 
+title: 6
+---
+You sit at the table, writing utensils in hand, paper before you.
+What do you want to write?
+-> "I see the woman within"
+    That'll be very useful to remind yourself.
+    It's almost as if Vera herself is telling you that.
+    You sketch it out in the silhouette of an eye, trying to incorporate the female symbol into the logo.
+
+-> "Trans rights are human rights"
+    Imitation is the sincerest form of flattery, isn't it?
+    Your design probably isn't gonna be as good as Vera's, but the message is clear.
+
+-> "All it takes is one bad day"
+    You think of what that one bad day would be.
+    You hang the words ominously over that scene.
+
+-> "The world is yours"
+    What would that world be? 
+    One full of glamour and riches, or with boundless frontiers to explore?
+    You try to strike a balance between both, with the words covering the whole scene.
+
+-> "A journey of a thousand miles starts with a single step."
+    You envision a road before you, winding through challenges and obstacles...
+    And you try to fit in this very long slogan into the shape of the road.
+
+-> "Do what makes you happy"
+    You could just put these words in the classic smiley face...
+    Or you could think of what happiness truly means to you.
+    Either way, it's a simple enough slogan to put to paper.
+
+-> Nothing.
+    Nothing comes to your mind.
+    You leave the clubroom with a blank sheet of paper.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,160
+__PrivCrochet_tags: 
+title: 3
+---
+// Might use a different way to check veraKnows, like npcKnows("V") since
+// The same check is done with the other characters
+
+Vera: "Hey, Charlotte." <<if $veraKnows>>
+Vera: "Hey, Charles." <<if $veraKnows or getRelationship("V") <= 30>>
+
+-> "You're always gonna call me Charlotte, huh?"
+    Vera: "I see the woman within."
+    You: "So mysterious."
+    Vera: "It's relevant. It's on brand. I would have chosen that for today's task, but I had something better."
+-> "Hey, Vera. How's it going?"
+    Vera: "It's going. Last week's... encounter... it still stings."
+    You: "Yeah... things got really too heated."
+    Vera: "That's why for this week's assignment, I drew this."
+
+Vera turns her paper around.
+"TRANS RIGHTS ARE HUMAN RIGHTS" is written in sparkling blue, white and pink.
+
+-> "That's awesome!"
+    Vera: "Thanks!"
+    Vera: "To me, being brave enough to stand up for what you believe in..."
+    Vera: "That's the most important thing I believe in."
+    Vera: "It's what keeps me alive."
+
+-> "You just like attracting attention with this stuff, don't you?"
+    Vera: "I don't see a problem. I'm trans and proud to be."
+    Vera: "What, are you uncomfortable with it?"
+    Vera: "I didn't think you'd say that, Charlotte." <<if $veraKnows>>
+
+    -> "You're right. That was unkind of me to say. I'm sorry, Vera."
+        Vera: "Thank you."
+        Vera: "I get it, people get tired of activism and politics."
+        Vera: "But for me, this is really important. And I hope you at least see that from my perspective."
+    
+    -> "Yeah. You made it your entire personality."
+        Vera: "You have no idea how important it is for me."
+        Vera: "I drew this precisely because of people who criticise me for being trans."
+        Vera: "Respect existence, or expect resistance."
+        Vera: "You know what? I'm drawing that too."
+        Vera: "I hope you have something good to draw."
+        Vera returns to her drawing. She doesn't want to talk to you.
+
+
+-> "How fitting, considering recent events."
+    Vera: "Yeah, I don't know what got into him."
+    Vera: "Then again, maybe he's just like that."
+
+    -> "Anthony isn't that bad."
+        Vera: "What do you mean?"
+        You: "He's clearly projecting some issues and covering up others."
+        Vera: "Mhmm, like what?"
+        You think back to the experiences you've had with Anthony.
+    
+        // If did both anthony hangouts
+        // Need to use gm code
+        You: "He's another victim of the whole manosphere thing." 
+        You: "No gf, watches sigma male influencers, feels bad about himself, hates people."
+        You: "You know, a vicious cycle."
+        Vera: "Well, he has my sympathy, I guess."
+        Vera: "He's a fool following a larger fool."
+        Vera: "But sympathy is different from forgiveness."
+        
+        // Else show this
+        You: "Uh... he doesn't have a girlfriend? He likes to complain about that."
+        Vera: "I don't have one either. And you don't see me harassing other people about it."
+        Vera: "He always likes to say I made being trans my whole personality..."
+        Vera: "While making inceldom his whole personality."
+        
+        // continue
+        Vera: "Regardless of what he thinks, I'll continue to represent myself how I want."
+        Vera: "And I hope you will too."
+        
+    -> "The signs were there from the beginning."
+        Vera: "Yeah, right? Why are men like this?"
+        Vera: "Well not you, obviously."
+        Vera: "But yes, there's a reason why I didn't want to grow old into one."
+        Vera: "Can you imagine? Being some old uncle who just complains all day..."
+        Vera: "That was the start for me, and now I'm covering white paper in blue and pink."
+
+-> "Actually, there's something else I wanted to talk about."
+    Vera: "Shoot."
+    <<jump 3_1>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,-80
+__PrivCrochet_tags: 
+title: 3_1
+---
+-> "I'm going to confront my mother about Charlotte."
+    Vera: "Why?"
+    You: "Why what?"
+    Vera: "Why bother? She's never gonna accept you. I know that from experience."
+    Vera: "Don't you feel unsafe going up against the one person who opposes your existence?"
+
+    -> "I've got to do this."
+        Vera: "You don't have to do anything. Some people just can't be convinced."
+        Vera: "Is this really worth it, Charlotte?"
+
+        -> "She is my mum, for better or for worse."
+            You: "And I can't run away from this forever."
+
+            -> "Especially since I'm gonna graduate soon..." 
+                You: "If I move back home, this conversation is going to happen anyway."
+                Vera: "I mean, you could rent your own place..."
+                Vera: "But that's if you have the money for it."
+                Vera: "Hmm, I guess you're right... I didn't consider you'd still be dependent on your parents for a while."
+            
+            -> "I can't keep lying to my mother."
+                Vera: "Girl, please. Don't tell me you reveal everything to mommy."
+                Vera: "Besides, you're being truthful to yourself. You want to be Charlotte."
+                Vera: "If mommy can't see the woman within, that's entirely her problem."
+                Vera: "But I guess keeping a secret forever is tiring..."
+        
+            Vera sighs.
+            Vera: "I think you need to be prepared. She may never fully accept Charlotte."
+            Vera: "I know I seem like a very extreme and publicly out person..."
+            Vera: "But even I know you've got to compromise sometimes."
+            Vera: "Any progress is better than none at all."
+            Vera: "That being said, I really hope it works out."
+            Vera: "If you can make it, if you can convince your mother that Charlotte is valid..."
+            <<changeConfidence(5)>>
+            Vera: "Maybe there's hope for us all." (+5% confidence)
+            You: "Thank you Vera, that means a lot to me."
+            You: "I'll let you know how it goes."
+    
+        -> "Yeah, you're right. I should just hide."
+            Vera: "I know it doesn't feel right."
+            Vera: "But remember, she's not your family if she doesn't accept you."
+            Vera: "You've got every right to cut her out of your life if you want to."
+            Vera: "Your happiness over hers. Especially for such a big part of your identity."
+
+            -> You: "Well, that still doesn't give me a lot of hope..."
+                Vera: "That's just called being queer."
+                Vera: "There are no easy answers to questions like these." 
+                Vera: "You're always gonna have to give up something."
+            
+            -> You: "But what will I do when I eventually have to talk to her about it?"
+                Vera: "You should buy yourself time till you figure out your own answer."
+                Vera: "An answer for Charlotte, by Charlotte."
+
+            Vera: "So all I can say is, don't ever let other people tell you what being happy should mean."
+            You: "Thanks, Vera... that was rather sobering."
+            Vera: "You know I'm not usually like this. But it needed to be said."
+        
+    // Literally copy pasted it over. 
+    -> "Yeah, you're right. I should just hide."
+        Vera: "I know it doesn't feel right."
+        Vera: "But remember, she's not your family if she doesn't accept you."
+        Vera: "You've got every right to cut her out of your life if you want to."
+        Vera: "Your happiness over hers. Especially for such a big part of your identity."
+
+        -> You: "Well, that still doesn't give me a lot of hope..."
+            Vera: "That's just called being queer."
+            Vera: "There are no easy answers to questions like these." 
+            Vera: "You're always gonna have to give up something."
+        
+        -> You: "But what will I do when I eventually have to talk to her about it?"
+            Vera: "You should buy yourself time till you figure out your own answer."
+            Vera: "An answer for Charlotte, by Charlotte."
+
+        Vera: "So all I can say is, don't ever let other people tell you what being happy should mean."
+        You: "Thanks, Vera... that was rather sobering."
+        Vera: "You know I'm not usually like this. But it needed to be said."
+
+-> "I've recently felt quite at odds about being Charlotte."
+    Vera: "Oh? Why?"
+
+    -> "Being Charlotte is stressful."
+        Vera: "Aww... I'm sorry to hear that."
+        Vera: "Like, for real. I'd know. The stress of passing, the 'attention' that others give you..."
+        Vera: "But I'm sure you had fun too, didn't you?" 
+        Vera: "You sure you just want to give up now?"
+
+        -> "Yes. I want out."
+            Vera: "That's a pity."
+            Vera: "But I won't judge. I know people who detransitioned. That's somewhat similar, I guess."
+            Vera: "And, hey, at least you didn't do anything irreversible to your body yet."
+            Vera: "It's like waking up from a dream, isn't it?"
+
+            -> "A good dream, yes."
+                Vera: "That's beautiful."
+                You: "Kinda tragic also..."
+                Vera: "Tragedies are beautiful in their own way."
+                Vera: "The Death of Charlotte... will you be face-up in a pond surrounded by flowers too?"
+                Vera: "I guess if you see it that way, and bury Charlotte under your male identity..."
+                Vera: "Charlotte won't rise from the dead."
+                Vera: "At least, until you want her to."
+            
+            -> "Waking up from a delusion."
+                Vera sighs.
+                Vera: "Why do you describe it like that?"
+                Vera: "I don't know why you'd regret being your best self..."
+                Vera: "But if this is what you want, then that's valid too."
+                Vera: "I'm sure you'll be dealing with a lot of self-loathing and uncertainty."
+                Vera: "And while I'll definitely try to help you where I can..."
+                Vera: "You should ask yourself how much of your suffering is self-inflicted."
+        
+        -> "Maybe I'll present as Charlotte again, but just not now."
+            Vera: "You don't need to promise anything. Especially not to me."
+            Vera: "Just promise yourself that you won't step over your happiness too much, to fit in."
+            Vera: "And even if Charlotte needs a break, I hope she will return."
+        
+    -> "Charlotte was a huge waste of my time."
+        Vera: "What?"
+        You: "Yes. I am male. There's no use lying about it."
+        Vera: "You are female if you want to be."
+
+        -> "You know that's just fluff to make people feel better."
+            Vera: "Are you calling the theory of gender performativity from Judith Butler, praise be their name, fluff?"
+            Vera: "And I thought being Charlotte would have made you more open-minded..."
+            Vera: "Whatever. It's fine. Who am I to judge?"
+            Vera: "I trust you at least have enough sense to not say that in front of me again."
+        
+        -> "I am male. My masculinity is important to me."
+            Vera: "Well, suit yourself, mister alpha chad."
+            Vera: "But there are positive ways to assert your masculinity, you know?"
+            Vera: "And there is nothing wrong with trying on makeup and dresses, even as a man."
+            Vera: "Just... try not to run over any women on your drive up to Mount Macho, alright?"
+            Vera: "Any other women aside from Charlotte, I meant."
+        
+    -> "I don't want to fight my mother regarding Charlotte."
+        Vera: "She should not be a factor in your happiness."
+        Vera: "You would give in so easily, just from her opinion?"
+
+        -> "This isn't easy! Don't you dare mock me on this."
+            Vera's eyes widen at your sudden outburst.
+            Vera: "I'm sorry..."
+            You: "The thought of confronting my mother is terrifying to me."
+            Vera: "That's valid. I didn't mean to downplay your struggle."
+            Vera: "But, if you're just gonna suppress your desires to fulfil hers..."
+            Vera: "Your desires will strike back."
+            Vera: "Are you ready for that fight?"
+            Vera: "It could just be one night of despair, or it could last your whole life."
+            Vera: "I will try to help if I can, but forgive me for saying this..."
+            Vera: "At the end of the day, it might seem that your pain is self-inflicted."
+        
+        -> "She is important to me."
+            Vera: "Well, I guess at least you've got a better relationship with her than I do with my parents."
+            Vera: "Still, if you were as important to her as she is to you..."
+            Vera: "Wouldn't she respect your choices no matter what?"
+            
+        -> "You're right. I should stand up to her."
+            Vera: "Yass slay! Your happiness comes first."
+            You: "It's not gonna be easy."
+            Vera: "The good things in life rarely are."
+            Vera: "I mean, she's a boomer, right? She won't love Charlotte."
+            Vera: "But what matters is that you tried to reach out to her."
+            Vera: "And if she doesn't like that, that's her problem."
+
+-> "Are you okay after last week's fight?"
+    Vera: "Honestly? Not the worst thrashing I've received."
+    Vera: "And I've learned that there are some things, some people, that you just gotta ignore."
+    -> "What about Eleanor?"
+        Vera: "What about her?"
+        You: "She tried so hard to keep the peace, but we could see her struggling."
+        You: "And then she's not here now..."
+        Vera: "Eh? I thought she's not here because of some leadership thing?"
+        You: "Yeah, but I can't help but wonder how she's doing."
+        Vera: "I'm sure she'll be fine."
+        Vera: "Honestly, even though I felt she didn't do enough..."
+        Vera: "At least she kept our little anthill there under check when she needed to."
+        Vera: "It's never easy to be a leader."
+    
+    -> "You were so strong for withstanding all that abuse."
+        (if Vera knows) Vera: "Thank you, Charlotte..."
+        Vera: "Truth be told, I did get some flashbacks to people who would misgender and deadname me."
+        Vera: "I'm surprised it didn't become that with Anthony."
+        You: "He's all bark, no bite."
+        Vera: "He's wounded. There's a lot of hate radiating off him."
+        Vera: "Like, usually the transphobes will try to make jokes about me, gain the public's approval..."
+        Vera: "He didn't do that. Maybe he thinks he's some kind of villain in the shadows."
+        You: "Then maybe there's hope for him yet?"
+        Vera: "Maybe. Who knows."
+        Vera: "But that is neither your nor my struggle. It is his."
+        Vera: "He needs to figure this out on his own."
+
+-> "Never mind."
+    Vera: "Uh, okay. Just let me know when you wanna talk."
+===
