@@ -18,20 +18,23 @@ You signed up for art club. Wouldn't want to miss the first day.
 <<jump tut_wardrobe>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1403,200
+__PrivCrochet_position: 1440,120
 __PrivCrochet_tags: 
 title: door
 ---
 <<if $canGoToBed == true>>
     You just got back!
 <<else>>
-        Are you ready to head out?
+    You're headed out to art club.
+    Your sister's words weight heavily on you.
+    You don't know if you should go out as Charlotte or Charles now.
+    Are you ready to head out?
 
-        -> No (Go back)
-            ## exit.
+    -> No (Go back)
+        ## exit.
 
-        -> Yes (Go to school)
-            <<goto_room_cca_1()>>        
+    -> Yes (Go to school)
+        <<goto_room_cca_1()>>        
 <<endif>>
 ===
 __PrivCrochet_colorID: 0

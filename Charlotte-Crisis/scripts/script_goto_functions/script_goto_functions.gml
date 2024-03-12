@@ -35,7 +35,7 @@
 	function goto_room_class_1(){
 		fade_room(rm_class_1);
 	
-		set_player_position(X_CLASS_DOOR, Y_HEIGHT, 1);
+		set_player_position(X_CLASS_DOOR, Y_HEIGHT, -1);
 	
 		// Need to load then create.
 		ChatterboxLoadFromFile("class_1.yarn");
@@ -92,7 +92,7 @@
 
 function goto_room_bedroom(){
 	room_goto(rm_bedroom_after_class1);
-	set_player_position();
+	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
 
 	ChatterboxLoadFromFile("room_1.yarn");
 	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1.yarn");
@@ -101,10 +101,7 @@ function goto_room_bedroom(){
 
 function goto_room_bedroom_after_cca(){
 	fade_room(rm_bedroom_after_cca1);
-	obj_player.x = 30;
-	obj_player.y = 74;
-	obj_player.facing_direction = -1;
-	obj_player.is_sitting = false;
+	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
 	
 	ChatterboxLoadFromFile("room_1_after_cca.yarn");
 	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_cca.yarn");
