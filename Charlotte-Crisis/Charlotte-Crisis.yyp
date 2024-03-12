@@ -64,7 +64,7 @@
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":"boss1.yarn","CopyToMask":-1,"filePath":"datafiles","name":"boss1.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"boss_1.yarn","CopyToMask":-1,"filePath":"datafiles","name":"boss_1.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"cca_1_old.yarn","CopyToMask":-1,"filePath":"datafiles","name":"cca_1_old.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"cca_1.yarn","CopyToMask":-1,"filePath":"datafiles","name":"cca_1.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"cca_2.yarn","CopyToMask":-1,"filePath":"datafiles","name":"cca_2.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
