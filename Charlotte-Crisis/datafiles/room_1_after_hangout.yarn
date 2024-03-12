@@ -1,0 +1,43 @@
+#__PrivCrochet_version:1
+# if you've already visited then it will show the concise version.
+# Interacting with mirror
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1400,200
+__PrivCrochet_tags: 
+title: door
+---
+You feel like hanging out with a friend this week, for a quick meal.
+Who will you ask out? #temporarily dont put relationship (normally has to be above 30)
+-> Anthony
+    You call Anthony up for a hangout.
+    <<goto_room_hangout_a()>>
+
+-> Nadia
+    You call Nadia up for a hangout.
+    <<goto_room_hangout_n()>>
+
+-> Vera 
+    You call Vera up for a hangout.
+    <<goto_room_hangout_v()>>
+
+-> On second thought, nevermind.
+    Hmm... you don't seem to be friendly enough with anyone.
+    You can stay in today, but please try to understand and befriend people around you...
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 640,200
+__PrivCrochet_tags: 
+title: bed
+---
+It's the end of the school week, and you usually head home for the weekend.
+This time, you know your sister's waiting for you.
+Dread it or run from it, the talk is going to happen.
+When you step out of this room tomorrow, you will face her.
+Have you learned enough from the previous days? We shall see.
+Going to bed will continue to the next scene. You may still change your stats or clothes. Do you wish to continue?
+
+-> Go back
+
+-> Continue
+    <<goto_room_boss_1()>>
+===

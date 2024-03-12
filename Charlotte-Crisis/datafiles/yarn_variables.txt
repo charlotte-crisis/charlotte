@@ -3,13 +3,13 @@ This document lists the variables used constantly in Yarn.
 ============================================================
 | Variable  | Description                                  |
 ============================================================
-| $cha      | Charisma stat (int)                          |
-| $int      | Intelligence stat (int)                      |
-| $emp      | Empathy stat (int)                           |
-| $name     | "Charlotte" or "Charles" (Case sensitive)    |
-| $diceroll | Can be replaced with outcome of diceroll     |
+|$cha       | Charisma stat (int)                          |
+|$int       | Intelligence stat (int)                      |
+|$emp       | Empathy stat (int)                           |
+|$name      | "Charlotte" or "Charles" (Case sensitive)    |
+|$diceroll  | Can be replaced with outcome of diceroll     |
 |           | Reuse the variable as previous outcomes are  |
 |           | not needed, save on memory                   |
-|           |                                              |
+|$canGoToBed| Can use the bed.                             |
 |           |                                              |
 ============================================================
