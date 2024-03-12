@@ -36,8 +36,8 @@
   ],
   "name":"rm_class_1",
   "parent":{
-    "name":"Week 1",
-    "path":"folders/Rooms/Week 1.yy",
+    "name":"Class",
+    "path":"folders/Rooms/Class.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -37,8 +37,8 @@
   ],
   "name":"rm_cca_1",
   "parent":{
-    "name":"Week 1",
-    "path":"folders/Rooms/Week 1.yy",
+    "name":"CCA",
+    "path":"folders/Rooms/CCA.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -32,8 +32,8 @@
   ],
   "name":"rm_bus_s",
   "parent":{
-    "name":"Week 1",
-    "path":"folders/Rooms/Week 1.yy",
+    "name":"Bus",
+    "path":"folders/Rooms/Bus.yy",
   },
   "parentRoom":{
     "name":"rm_bus",
