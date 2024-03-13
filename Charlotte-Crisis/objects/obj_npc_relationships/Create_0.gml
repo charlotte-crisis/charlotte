@@ -21,35 +21,35 @@ npc_knows = {
 
 #region Setters and Getters
 
-function change_relationship(_name, _amount) {
-	var _total = npc_relationships[$ _name] + real(_amount);
+	function change_relationship(_name, _amount) {
+		var _total = npc_relationships[$ _name] + real(_amount);
 	
-	// Ensure doesn't go past 0 or 100.
-	if (_total > 100) {
-		_total = 100;
-	} else if (_total < 0) {
-		_total = 0;	
+		// Ensure doesn't go past 0 or 100.
+		if (_total > 100) {
+			_total = 100;
+		} else if (_total < 0) {
+			_total = 0;	
+		}
+		npc_relationships[$ _name] = _total;	
+		return _total;
 	}
-	npc_relationships[$ _name] = _total;	
-	return _total;
-}
 
-function get_relationship(_name) {
-	return npc_relationships[$ _name];	
-}
+	function get_relationship(_name) {
+		return npc_relationships[$ _name];	
+	}
 
-/// @description the NPC's value will be set to "true"
-/// to indicate they know about charlotte
-/// @param {String} _name Name, initial e.g. "V"
-function set_npc_knows(_name) {
-	 npc_knows[$ _name] = true;
-}
+	/// @description the NPC's value will be set to "true"
+	/// to indicate they know about charlotte
+	/// @param {String} _name Name, initial e.g. "V"
+	function set_npc_knows(_name) {
+		 npc_knows[$ _name] = true;
+	}
 
-/// @description Returns true if npc knows about Charlotte
-/// @param {String} _name Name, initial e.g. "V"
-function get_npc_knows(_name) {
-	return npc_knows[$ _name];
-}
+	/// @description Returns true if npc knows about Charlotte
+	/// @param {String} _name Name, initial e.g. "V"
+	function get_npc_knows(_name) {
+		return npc_knows[$ _name];
+	}
 
 #endregion
 

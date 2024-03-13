@@ -20,26 +20,46 @@ experience = 150;
 level_up_amount = 50;
 
 // Gender Meter
-// lets say its a scale from 1 to 100.
-gender = 50;
+// lets say its a scale from 0 to 100.
+gender_meter = 50;
 
 #region SETTERS AND GETTERS
-/// @return ARRAY
-get_stats = function() {
-	return [intelligence, charisma, empathy]	
-}
+	/// @return ARRAY
+	get_stats = function() {
+		return [intelligence, charisma, empathy]	
+	}
 
-get_number_of_levels = function() {
-	return floor(experience/level_up_amount);	
-}
+	get_number_of_levels = function() {
+		return floor(experience/level_up_amount);	
+	}
 
-set_stats = function(_stat_array) {
-	intelligence = _stat_array[0];	
-	charisma = _stat_array[1];
-	empathy = _stat_array[2];
-}
+	set_stats = function(_stat_array) {
+		intelligence = _stat_array[0];	
+		charisma = _stat_array[1];
+		empathy = _stat_array[2];
+	}
 
-subtract_experience = function(_levels) {
-	experience -= _levels * level_up_amount;	
-}
+	subtract_experience = function(_levels) {
+		experience -= _levels * level_up_amount;	
+	}
+
+	/// @description Changes the gender meter of the player.
+	/// Accepts negative values. Will limit at 0 or 100.
+	function change_gender_meter(_amount) {
+		var _total = gender_meter + real(_amount);
+	
+		// Ensure doesn't go past 0 or 100.
+		if (_total > 100) {
+			_total = 100;
+		} else if (_total < 0) {
+			_total = 0;	
+		}
+		gender_meter = _total;	
+		return _total;
+	}
+
+	/// @return {Real} The gender [0, 100] int
+	function get_gender_meter() {
+		return gender_meter;
+	}
 #endregion
