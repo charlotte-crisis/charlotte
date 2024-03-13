@@ -7,8 +7,6 @@ if instance_number(object_index) > 1 {
 
 ChatterboxLoadFromFile("menu.yarn");
 chatterbox = ChatterboxCreate();
-// ChatterboxJump(chatterbox, "1");
-// chatterbox_update();
 
 option_index = 0;
 
@@ -20,26 +18,36 @@ speaker = "";
 speech = "";
 previous_dialogue = "";
 
-// obj_player.set_is_talking(true);
-
-function chatterbox_set(_node_name) {
-	ChatterboxJump(chatterbox, _node_name);
-	chatterbox_update();
-	obj_player.set_is_talking(true);
-}
+#region Functions
+	///@description Jump to a node and update.
+	///		To be used when the player is
+	///		starting a new dialogue
+	function chatterbox_set(_node_name) {
+		ChatterboxJump(chatterbox, _node_name);
+		chatterbox_update();
+		obj_player.set_is_talking(true);
+	}
+#endregion
 
 #region ChatterboxAddFunction defined here
 	ChatterboxAddFunction("skillCheck", skill_check);
 	ChatterboxAddFunction("diceRoll", dice_roll);
 	ChatterboxAddFunction("calculateOdds", calculate_odds);
-
+	
 	ChatterboxAddFunction("setGender", set_player_gender);
 	
 	ChatterboxAddFunction("getIntelligence", get_intelligence);
 	ChatterboxAddFunction("getCharisma", get_charisma);
 	ChatterboxAddFunction("getEmpathy", get_empathy);
 	ChatterboxAddFunction("getName", get_name);
+
+	ChatterboxAddFunction("changeRelationship", change_npc_relationship);
+	ChatterboxAddFunction("getRelationship", get_npc_relationship);
+	ChatterboxAddFunction("setNPCKnows", set_npc_knows);
+	ChatterboxAddFunction("getNPCKnows", get_npc_knows);
 	
+	ChatterboxAddFunction("changeConfidence", change_confidence);
+	ChatterboxAddFunction("addExperience", add_experience);
 	
 	/// Door Functions here
 	ChatterboxAddFunction("goto_room_class_1", goto_room_class_1);
@@ -59,13 +67,6 @@ function chatterbox_set(_node_name) {
 	ChatterboxAddFunction("goto_room_cca_1_seated", goto_room_cca_1_seated);
 	ChatterboxAddFunction("goto_room_cca_1_seated_18", goto_room_cca_1_seated_18);
 	ChatterboxAddFunction("goto_room_cca_1_seated_11", goto_room_cca_1_seated_11);
-	
-	
-	ChatterboxAddFunction("changeRelationship", change_npc_relationship);
-	ChatterboxAddFunction("getRelationship", get_npc_relationship);
-	
-	ChatterboxAddFunction("changeConfidence", change_confidence);
-	ChatterboxAddFunction("addExperience", add_experience);
 	
 	/// Hangouts
 	ChatterboxAddFunction("goto_room_hangout_a", goto_room_hangout_a);
