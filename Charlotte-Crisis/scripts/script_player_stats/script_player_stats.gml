@@ -100,9 +100,9 @@ function calculate_odds(_parameters) {
 #endregion
 
 #region Confidence
-/// @function change_confidence(_amount);
-/// @description	 Adds amount of relationship. Limit at 0 or 100.
-/// @param {Real} _amount
+/// @function				change_confidence(_amount);
+/// @description			Adds amount of relationship. Limit at 0 or 100.
+/// @param {Array}			_parameters [amount]
 /// @return {Real}
 function change_confidence(_parameters) {
 	var _total = obj_stats.confidence + real(_parameters[0]);
@@ -115,5 +115,25 @@ function change_confidence(_parameters) {
 	}
 	obj_stats.confidence = _total;	
 	return _total;
+}
+
+/// @description Changes the gender meter of the player.
+/// Accepts negative values. Will limit at 0 or 100.
+function change_gender_meter(_parameters) {
+	var _total = obj_stats.gender_meter + real(_parameters[0]);
+	
+	// Ensure doesn't go past 0 or 100.
+	if (_total > 100) {
+		_total = 100;
+	} else if (_total < 0) {
+		_total = 0;	
+	}
+	obj_stats.gender_meter = _total;	
+	return _total;
+}
+
+/// @return {Real} The gender [0, 100] int
+function get_gender_meter() {
+	return obj_stats.gender_meter;
 }
 #endregion

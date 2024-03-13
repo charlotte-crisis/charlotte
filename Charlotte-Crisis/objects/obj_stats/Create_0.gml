@@ -42,24 +42,4 @@ gender_meter = 50;
 	subtract_experience = function(_levels) {
 		experience -= _levels * level_up_amount;	
 	}
-
-	/// @description Changes the gender meter of the player.
-	/// Accepts negative values. Will limit at 0 or 100.
-	function change_gender_meter(_amount) {
-		var _total = gender_meter + real(_amount);
-	
-		// Ensure doesn't go past 0 or 100.
-		if (_total > 100) {
-			_total = 100;
-		} else if (_total < 0) {
-			_total = 0;	
-		}
-		gender_meter = _total;	
-		return _total;
-	}
-
-	/// @return {Real} The gender [0, 100] int
-	function get_gender_meter() {
-		return gender_meter;
-	}
 #endregion
