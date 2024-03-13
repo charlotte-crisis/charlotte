@@ -29,18 +29,25 @@ previous_dialogue = "";
 	}
 #endregion
 
+#region constants
+// Draw step
+BG_ALPHA = 0.9;
+#endregion
+
 #region ChatterboxAddFunction defined here
 	ChatterboxAddFunction("skillCheck", skill_check);
 	ChatterboxAddFunction("diceRoll", dice_roll);
 	ChatterboxAddFunction("calculateOdds", calculate_odds);
 	
 	ChatterboxAddFunction("setGender", set_player_gender);
-	
 	ChatterboxAddFunction("getIntelligence", get_intelligence);
 	ChatterboxAddFunction("getCharisma", get_charisma);
 	ChatterboxAddFunction("getEmpathy", get_empathy);
 	ChatterboxAddFunction("getName", get_name);
-
+	
+	ChatterboxAddFunction("changeGenderMeter", change_gender_meter);
+	ChatterboxAddFunction("getGenderMeter", get_gender_meter);
+	
 	ChatterboxAddFunction("changeRelationship", change_npc_relationship);
 	ChatterboxAddFunction("getRelationship", get_npc_relationship);
 	ChatterboxAddFunction("setNPCKnows", set_npc_knows);
@@ -74,8 +81,5 @@ previous_dialogue = "";
 	ChatterboxAddFunction("goto_room_hangout_n", goto_room_hangout_n);
 #endregion
 
-#region constants
-// Draw step
-BG_ALPHA = 0.9;
-#endregion
+
 
