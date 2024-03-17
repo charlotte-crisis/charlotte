@@ -22,7 +22,7 @@
 		obj_player.is_sitting = _sitting;
 	}
 
-	/// @function fade_room(_room, _duration, _colour)
+	/// @function fade_room(_room)
 	/// @param _room The target room to move to
 	function fade_room(_room) {
 		// Create fade object at top left corner at highest depth
