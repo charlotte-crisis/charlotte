@@ -69,6 +69,7 @@
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"_cca_1_old.yarn","CopyToMask":-1,"filePath":"datafiles","name":"_cca_1_old.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"boss_1.yarn","CopyToMask":-1,"filePath":"datafiles","name":"boss_1.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"boss2.2.yarn","CopyToMask":-1,"filePath":"datafiles","name":"boss2.2.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"cca_1.yarn","CopyToMask":-1,"filePath":"datafiles","name":"cca_1.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"cca_2.yarn","CopyToMask":-1,"filePath":"datafiles","name":"cca_2.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"cca_3.yarn","CopyToMask":-1,"filePath":"datafiles","name":"cca_3.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},

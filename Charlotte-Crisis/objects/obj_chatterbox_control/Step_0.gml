@@ -10,6 +10,8 @@ if (obj_player.is_talking) {
 	} else if (_count) {
 		var _key = keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
 	
+		// TODO: This only repeats up to two times. Means if you have
+		// 2 unavailable options it will not select it. Thx.
 		repeat(1 + 
 				(ChatterboxGetOptionConditionBool(
 				chatterbox, wrap(option_index + _key, 0, _count - 1)) == false)) {
