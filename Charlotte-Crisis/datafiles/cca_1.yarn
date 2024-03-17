@@ -714,6 +714,7 @@ __PrivCrochet_position: 1000,-120
 __PrivCrochet_tags: 
 title: pre-5
 ---
+There's one empty seat at the table.
 Do you wish to sit?
 
 -> No (go back)
