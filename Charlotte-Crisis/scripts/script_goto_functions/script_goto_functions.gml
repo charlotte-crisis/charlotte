@@ -97,6 +97,11 @@ function goto_room_bedroom(){
 	ChatterboxLoadFromFile("room_1.yarn");
 	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1.yarn");
 	ChatterboxJump(chatterbox, "after_class1");
+	
+	// Change background to night
+	var lay_id = layer_get_id("Background");
+	var back_id = layer_background_get_id(lay_id);
+	layer_background_sprite(back_id, 1);
 }
 
 function goto_room_bedroom_after_cca(){
@@ -118,7 +123,7 @@ function goto_room_bedroom_frombed() {
 	// Change background to day
 	var lay_id = layer_get_id("Background");
 	var back_id = layer_background_get_id(lay_id);
-	layer_background_sprite(back_id, spr_hostel_bars);
+	layer_background_sprite(back_id, 0);
 }
 
 function goto_room_bedroom_afterHangout(){
