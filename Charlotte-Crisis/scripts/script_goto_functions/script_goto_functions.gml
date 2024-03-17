@@ -114,6 +114,11 @@ function goto_room_bedroom_frombed() {
 	obj_player.y = 74;
 	obj_player.facing_direction = 1;
 	ChatterboxJump(chatterbox, "0");
+	
+	// Change background to day
+	var lay_id = layer_get_id("Background");
+	var back_id = layer_background_get_id(lay_id);
+	layer_background_sprite(back_id, spr_hostel_bars);
 }
 #endregion
 
