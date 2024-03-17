@@ -368,7 +368,7 @@ title: 3_3
     Vera: "It's probably the happiest part of your life. So far."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1049,1757
+__PrivCrochet_position: 1038,1814
 __PrivCrochet_tags: 
 title: 3_4
 ---
@@ -740,23 +740,23 @@ Vera: "Trans healthcare is the same as any other form of healthcare."
 #^all choices in this section are supposed to lead here except "what do you have to hide". if that don't work, create a new node
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1518,104
+__PrivCrochet_position: 1517,102
 __PrivCrochet_tags: 
 title: 1_2_options
 ---
 -> "Can't wait to graduate."
     Vera: "Ah well. School isn't for everyone."
-<<jump 1_2_1_options>>
+    <<jump 1_2_1_options>>
 
 -> "Same old stuff."
-<<jump 1_2_2>>
+    <<jump 1_2_2>>
 
 -> "I'm taking a gender studies class."
     Vera: "Ooh, that's fun! How's that going?"
-<<jump 1_2_3_options>>
+    <<jump 1_2_3_options>>
 
 -> "Let's talk about something else." <<if visited("1_2_1") or visited("1_2_2") or visited("1_2_3")>>
-<<jump 1_options>>
+    <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1784,103
@@ -882,7 +882,7 @@ title: 1_2_3_options
 <<jump 1_2_3_2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2044,156
+__PrivCrochet_position: 2043,155
 __PrivCrochet_tags: 
 title: 1_2_3_1
 ---
@@ -938,16 +938,19 @@ Vera: "I'm curious, though. What's it like?"
     <<jump 1_2_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2293,210
+__PrivCrochet_position: 2303,311
 __PrivCrochet_tags: 
 title: Vera_definitions
 ---
 -> "What is feminism?"
-<<jump Vera_feminism>>
+    <<jump Vera_feminism>>
 -> "What is beauty?"
-<<jump Vera_beauty>>
+    <<jump Vera_beauty>>
 -> "What is a woman?"
-<<jump Vera_woman>>
+    <<jump Vera_woman>>
+-> "I'm good."
+    Vera: "Right. Where were we..." 
+    <<jump 1_2_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2324,-157
