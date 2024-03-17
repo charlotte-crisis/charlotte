@@ -1,0 +1,832 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 240,400
+__PrivCrochet_tags: 
+title: 1
+---
+It's that time of the week again. You're in the clubroom.
+But Eleanor... isn't? Everyone is kind of just doing their own thing.
+Nadia: "Oh. Hey, {$name}."
+You: "Hi Nadia. Where's Eleanor?"
+Nadia: "She's... busy. Had some leadership thing with the school."
+Nadia: "According to her plan, we're doing typography this week."
+Nadia: "If you need examples, there are some on the board. Or you could just talk to us."
+Nadia: "But please... try not to start another fight, okay?"
+
+<<jump 2>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 480,400
+__PrivCrochet_tags: 
+title: 2
+---
+The room has always been quiet at this stage. Before the discussions began.
+But without Eleanor to start the ball rolling, you get the feeling this silence will persist.
+Nadia has put on Spotify's top 50, but it does little to assuage this feeling.
+
+Who do you want to talk to first?
+-> Vera
+    <<jump 3>>
+-> Anthony
+    <<jump 4>>
+-> Nadia
+    <<jump 5>>
+-> Do your own thing
+    <<jump 6>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 480,640
+__PrivCrochet_tags: 
+title: 6
+---
+You sit at the table, writing utensils in hand, paper before you.
+What do you want to write?
+-> "I see the woman within"
+    That'll be very useful to remind yourself.
+    It's almost as if Vera herself is telling you that.
+    You sketch it out in the silhouette of an eye, trying to incorporate the female symbol into the logo.
+
+-> "Trans rights are human rights"
+    Imitation is the sincerest form of flattery, isn't it?
+    Your design probably isn't gonna be as good as Vera's, but the message is clear.
+
+-> "All it takes is one bad day"
+    You think of what that one bad day would be.
+    You hang the words ominously over that scene.
+
+-> "The world is yours"
+    What would that world be? 
+    One full of glamour and riches, or with boundless frontiers to explore?
+    You try to strike a balance between both, with the words covering the whole scene.
+
+-> "A journey of a thousand miles starts with a single step."
+    You envision a road before you, winding through challenges and obstacles...
+    And you try to fit in this very long slogan into the shape of the road.
+
+-> "Do what makes you happy"
+    You could just put these words in the classic smiley face...
+    Or you could think of what happiness truly means to you.
+    Either way, it's a simple enough slogan to put to paper.
+
+-> Nothing.
+    Nothing comes to your mind.
+    You leave the clubroom with a blank sheet of paper.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,160
+__PrivCrochet_tags: 
+title: 3
+---
+// Might use a different way to check veraKnows, like npcKnows("V") since
+// The same check is done with the other characters
+
+Vera: "Hey, Charlotte." <<if $veraKnows>>
+Vera: "Hey, Charles." <<if $veraKnows or getRelationship("V") <= 30>>
+
+-> "You're always gonna call me Charlotte, huh?"
+    Vera: "I see the woman within."
+    You: "So mysterious."
+    Vera: "It's relevant. It's on brand. I would have chosen that for today's task, but I had something better."
+-> "Hey, Vera. How's it going?"
+    Vera: "It's going. Last week's... encounter... it still stings."
+    You: "Yeah... things got really too heated."
+    Vera: "That's why for this week's assignment, I drew this."
+
+Vera turns her paper around.
+"TRANS RIGHTS ARE HUMAN RIGHTS" is written in sparkling blue, white and pink.
+
+-> "That's awesome!"
+    Vera: "Thanks!"
+    Vera: "To me, being brave enough to stand up for what you believe in..."
+    Vera: "That's the most important thing I believe in."
+    Vera: "It's what keeps me alive."
+
+-> "You just like attracting attention with this stuff, don't you?"
+    Vera: "I don't see a problem. I'm trans and proud to be."
+    Vera: "What, are you uncomfortable with it?"
+    Vera: "I didn't think you'd say that, Charlotte." <<if $veraKnows>>
+
+    -> "You're right. That was unkind of me to say. I'm sorry, Vera."
+        Vera: "Thank you."
+        Vera: "I get it, people get tired of activism and politics."
+        Vera: "But for me, this is really important. And I hope you at least see that from my perspective."
+    
+    -> "Yeah. You made it your entire personality."
+        Vera: "You have no idea how important it is for me."
+        Vera: "I drew this precisely because of people who criticise me for being trans."
+        Vera: "Respect existence, or expect resistance."
+        Vera: "You know what? I'm drawing that too."
+        Vera: "I hope you have something good to draw."
+        Vera returns to her drawing. She doesn't want to talk to you.
+
+
+-> "How fitting, considering recent events."
+    Vera: "Yeah, I don't know what got into him."
+    Vera: "Then again, maybe he's just like that."
+
+    -> "Anthony isn't that bad."
+        Vera: "What do you mean?"
+        You: "He's clearly projecting some issues and covering up others."
+        Vera: "Mhmm, like what?"
+        You think back to the experiences you've had with Anthony.
+    
+        // If did both anthony hangouts
+        // Need to use gm code
+        You: "He's another victim of the whole manosphere thing." 
+        You: "No gf, watches sigma male influencers, feels bad about himself, hates people."
+        You: "You know, a vicious cycle."
+        Vera: "Well, he has my sympathy, I guess."
+        Vera: "He's a fool following a larger fool."
+        Vera: "But sympathy is different from forgiveness."
+        
+        // Else show this
+        You: "Uh... he doesn't have a girlfriend? He likes to complain about that."
+        Vera: "I don't have one either. And you don't see me harassing other people about it."
+        Vera: "He always likes to say I made being trans my whole personality..."
+        Vera: "While making inceldom his whole personality."
+        
+        // continue
+        Vera: "Regardless of what he thinks, I'll continue to represent myself how I want."
+        Vera: "And I hope you will too."
+        
+    -> "The signs were there from the beginning."
+        Vera: "Yeah, right? Why are men like this?"
+        Vera: "Well not you, obviously."
+        Vera: "But yes, there's a reason why I didn't want to grow old into one."
+        Vera: "Can you imagine? Being some old uncle who just complains all day..."
+        Vera: "That was the start for me, and now I'm covering white paper in blue and pink."
+
+-> "Actually, there's something else I wanted to talk about."
+    Vera: "Shoot."
+    <<jump 3_1>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,-80
+__PrivCrochet_tags: 
+title: 3_1
+---
+-> "I'm going to confront my mother about Charlotte."
+    Vera: "Why?"
+    You: "Why what?"
+    Vera: "Why bother? She's never gonna accept you. I know that from experience."
+    Vera: "Don't you feel unsafe going up against the one person who opposes your existence?"
+
+    -> "I've got to do this."
+        Vera: "You don't have to do anything. Some people just can't be convinced."
+        Vera: "Is this really worth it, Charlotte?"
+
+        -> "She is my mum, for better or for worse."
+            You: "And I can't run away from this forever."
+
+            -> "Especially since I'm gonna graduate soon..." 
+                You: "If I move back home, this conversation is going to happen anyway."
+                Vera: "I mean, you could rent your own place..."
+                Vera: "But that's if you have the money for it."
+                Vera: "Hmm, I guess you're right... I didn't consider you'd still be dependent on your parents for a while."
+            
+            -> "I can't keep lying to my mother."
+                Vera: "Girl, please. Don't tell me you reveal everything to mommy."
+                Vera: "Besides, you're being truthful to yourself. You want to be Charlotte."
+                Vera: "If mommy can't see the woman within, that's entirely her problem."
+                Vera: "But I guess keeping a secret forever is tiring..."
+        
+            Vera sighs.
+            Vera: "I think you need to be prepared. She may never fully accept Charlotte."
+            Vera: "I know I seem like a very extreme and publicly out person..."
+            Vera: "But even I know you've got to compromise sometimes."
+            Vera: "Any progress is better than none at all."
+            Vera: "That being said, I really hope it works out."
+            Vera: "If you can make it, if you can convince your mother that Charlotte is valid..."
+            <<changeConfidence(5)>>
+            Vera: "Maybe there's hope for us all." (+5% confidence)
+            You: "Thank you Vera, that means a lot to me."
+            You: "I'll let you know how it goes."
+    
+        -> "Yeah, you're right. I should just hide."
+            Vera: "I know it doesn't feel right."
+            Vera: "But remember, she's not your family if she doesn't accept you."
+            Vera: "You've got every right to cut her out of your life if you want to."
+            Vera: "Your happiness over hers. Especially for such a big part of your identity."
+
+            -> You: "Well, that still doesn't give me a lot of hope..."
+                Vera: "That's just called being queer."
+                Vera: "There are no easy answers to questions like these." 
+                Vera: "You're always gonna have to give up something."
+            
+            -> You: "But what will I do when I eventually have to talk to her about it?"
+                Vera: "You should buy yourself time till you figure out your own answer."
+                Vera: "An answer for Charlotte, by Charlotte."
+
+            Vera: "So all I can say is, don't ever let other people tell you what being happy should mean."
+            You: "Thanks, Vera... that was rather sobering."
+            Vera: "You know I'm not usually like this. But it needed to be said."
+        
+    // Literally copy pasted it over. 
+    -> "Yeah, you're right. I should just hide."
+        Vera: "I know it doesn't feel right."
+        Vera: "But remember, she's not your family if she doesn't accept you."
+        Vera: "You've got every right to cut her out of your life if you want to."
+        Vera: "Your happiness over hers. Especially for such a big part of your identity."
+
+        -> You: "Well, that still doesn't give me a lot of hope..."
+            Vera: "That's just called being queer."
+            Vera: "There are no easy answers to questions like these." 
+            Vera: "You're always gonna have to give up something."
+        
+        -> You: "But what will I do when I eventually have to talk to her about it?"
+            Vera: "You should buy yourself time till you figure out your own answer."
+            Vera: "An answer for Charlotte, by Charlotte."
+
+        Vera: "So all I can say is, don't ever let other people tell you what being happy should mean."
+        You: "Thanks, Vera... that was rather sobering."
+        Vera: "You know I'm not usually like this. But it needed to be said."
+
+-> "I've recently felt quite at odds about being Charlotte."
+    Vera: "Oh? Why?"
+
+    -> "Being Charlotte is stressful."
+        Vera: "Aww... I'm sorry to hear that."
+        Vera: "Like, for real. I'd know. The stress of passing, the 'attention' that others give you..."
+        Vera: "But I'm sure you had fun too, didn't you?" 
+        Vera: "You sure you just want to give up now?"
+
+        -> "Yes. I want out."
+            Vera: "That's a pity."
+            Vera: "But I won't judge. I know people who detransitioned. That's somewhat similar, I guess."
+            Vera: "And, hey, at least you didn't do anything irreversible to your body yet."
+            Vera: "It's like waking up from a dream, isn't it?"
+
+            -> "A good dream, yes."
+                Vera: "That's beautiful."
+                You: "Kinda tragic also..."
+                Vera: "Tragedies are beautiful in their own way."
+                Vera: "The Death of Charlotte... will you be face-up in a pond surrounded by flowers too?"
+                Vera: "I guess if you see it that way, and bury Charlotte under your male identity..."
+                Vera: "Charlotte won't rise from the dead."
+                Vera: "At least, until you want her to."
+            
+            -> "Waking up from a delusion."
+                Vera sighs.
+                Vera: "Why do you describe it like that?"
+                Vera: "I don't know why you'd regret being your best self..."
+                Vera: "But if this is what you want, then that's valid too."
+                Vera: "I'm sure you'll be dealing with a lot of self-loathing and uncertainty."
+                Vera: "And while I'll definitely try to help you where I can..."
+                Vera: "You should ask yourself how much of your suffering is self-inflicted."
+        
+        -> "Maybe I'll present as Charlotte again, but just not now."
+            Vera: "You don't need to promise anything. Especially not to me."
+            Vera: "Just promise yourself that you won't step over your happiness too much, to fit in."
+            Vera: "And even if Charlotte needs a break, I hope she will return."
+        
+    -> "Charlotte was a huge waste of my time."
+        Vera: "What?"
+        You: "Yes. I am male. There's no use lying about it."
+        Vera: "You are female if you want to be."
+
+        -> "You know that's just fluff to make people feel better."
+            Vera: "Are you calling the theory of gender performativity from Judith Butler, praise be their name, fluff?"
+            Vera: "And I thought being Charlotte would have made you more open-minded..."
+            Vera: "Whatever. It's fine. Who am I to judge?"
+            Vera: "I trust you at least have enough sense to not say that in front of me again."
+        
+        -> "I am male. My masculinity is important to me."
+            Vera: "Well, suit yourself, mister alpha chad."
+            Vera: "But there are positive ways to assert your masculinity, you know?"
+            Vera: "And there is nothing wrong with trying on makeup and dresses, even as a man."
+            Vera: "Just... try not to run over any women on your drive up to Mount Macho, alright?"
+            Vera: "Any other women aside from Charlotte, I meant."
+        
+    -> "I don't want to fight my mother regarding Charlotte."
+        Vera: "She should not be a factor in your happiness."
+        Vera: "You would give in so easily, just from her opinion?"
+
+        -> "This isn't easy! Don't you dare mock me on this."
+            Vera's eyes widen at your sudden outburst.
+            Vera: "I'm sorry..."
+            You: "The thought of confronting my mother is terrifying to me."
+            Vera: "That's valid. I didn't mean to downplay your struggle."
+            Vera: "But, if you're just gonna suppress your desires to fulfil hers..."
+            Vera: "Your desires will strike back."
+            Vera: "Are you ready for that fight?"
+            Vera: "It could just be one night of despair, or it could last your whole life."
+            Vera: "I will try to help if I can, but forgive me for saying this..."
+            Vera: "At the end of the day, it might seem that your pain is self-inflicted."
+        
+        -> "She is important to me."
+            Vera: "Well, I guess at least you've got a better relationship with her than I do with my parents."
+            Vera: "Still, if you were as important to her as she is to you..."
+            Vera: "Wouldn't she respect your choices no matter what?"
+            
+        -> "You're right. I should stand up to her."
+            Vera: "Yass slay! Your happiness comes first."
+            You: "It's not gonna be easy."
+            Vera: "The good things in life rarely are."
+            Vera: "I mean, she's a boomer, right? She won't love Charlotte."
+            Vera: "But what matters is that you tried to reach out to her."
+            Vera: "And if she doesn't like that, that's her problem."
+
+-> "Are you okay after last week's fight?"
+    Vera: "Honestly? Not the worst thrashing I've received."
+    Vera: "And I've learned that there are some things, some people, that you just gotta ignore."
+    -> "What about Eleanor?"
+        Vera: "What about her?"
+        You: "She tried so hard to keep the peace, but we could see her struggling."
+        You: "And then she's not here now..."
+        Vera: "Eh? I thought she's not here because of some leadership thing?"
+        You: "Yeah, but I can't help but wonder how she's doing."
+        Vera: "I'm sure she'll be fine."
+        Vera: "Honestly, even though I felt she didn't do enough..."
+        Vera: "At least she kept our little anthill there under check when she needed to."
+        Vera: "It's never easy to be a leader."
+    
+    -> "You were so strong for withstanding all that abuse."
+        (if Vera knows) Vera: "Thank you, Charlotte..."
+        Vera: "Truth be told, I did get some flashbacks to people who would misgender and deadname me."
+        Vera: "I'm surprised it didn't become that with Anthony."
+        You: "He's all bark, no bite."
+        Vera: "He's wounded. There's a lot of hate radiating off him."
+        Vera: "Like, usually the transphobes will try to make jokes about me, gain the public's approval..."
+        Vera: "He didn't do that. Maybe he thinks he's some kind of villain in the shadows."
+        You: "Then maybe there's hope for him yet?"
+        Vera: "Maybe. Who knows."
+        Vera: "But that is neither your nor my struggle. It is his."
+        Vera: "He needs to figure this out on his own."
+
+-> "Never mind."
+    Vera: "Uh, okay. Just let me know when you wanna talk."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,400
+__PrivCrochet_tags: 
+title: 4
+---
+Anthony: "Hi."
+You: "Hello, Anthony. How's it going?"
+Anthony: "Same lor."
+-> "What are you drawing?"
+    <<jump 4_1>>
+   
+-> "Actually, I wanted to talk about something else."
+    Anthony: "Yeah?"
+    -> "I have some... personal stuff that I want to talk about."
+        (if Anthony knows) Anthony: "Oh, about the girl clothes thing?"
+        Anthony: "Tell you already. If you just acted normal, none of these problems would surface."
+        -> "I want to know how to be normal."
+            Anthony: "Did you watch the influencers I sent you?"
+            Anthony: "They will teach you how to be a man again."
+            Anthony: "Honestly, I've never seen anyone like you, but maybe they have."
+            Anthony: "Even if you have to spend $100 per month on their course, I think it's a worthy investment."
+        
+        -> "Yeah, you know what? Never mind. Why did I even think you would help?"
+            Anthony: "You already know what I think. I'm not changing that."
+        
+        (if Anthony doesn't know) Anthony: "I'm not sure how I can help."
+        Anthony: "Why would you ask me?"
+        -> "Yeah, never mind."
+        
+        -> "You ever considered getting mental health support?"
+            Anthony: "What, is this a joke?"
+            Anthony: "My life sucks but I'm not getting some diagnosis that I'm crazy."
+            Anthony: "There's a reason why Redditors always call mental health support for crazy people on the site, right?"
+            Anthony: "I don't think therapy is the answer."
+        
+        -> "I wanted to tell you that I'm a crossdresser. Like, I wear girl clothes. And I feel bad about it." (if Anthony doesn't know)
+            Anthony: "Uh..."
+            Anthony: "That is just super weird."
+            Anthony: "Could you like, not put more of this LGBT stuff in my face?"
+            Anthony: "If you could just be normal, that would be best."
+        
+    -> "I'm about to confront my mother about something."
+        Anthony: "Why are you asking me about this?"
+        You: "I don't know. Thought you might have some insights."
+        Anthony: "I don't like my parents. They keep stressing me out."
+        Anthony: "I usually just hide stuff from them." 
+        Anthony: "They will never understand me anyway, so why bother?"
+    
+    -> "What do you think about what happened last week?"
+        Anthony: "That crazy transgender Vera, lah. Want to keep injecting the LGBT everywhere..."
+        Anthony: "No sane person would do that."
+
+        -> "So no change on your part."
+            Anthony: "I'm not the one at fault."
+            Anthony: "I said what I thought, she took offence."
+            Anthony: "Says more about her than about me."
+            You: "Yeah, I don't know why I asked you this, honestly."
+        
+        -> "Agree. Something's wrong with her."
+            Anthony: "Right?"
+            Anthony: "I think if she goes out into the world like this, she confirm kena laughed at."
+            Anthony: "Not sure why Eleanor can't see that, honestly."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1000,400
+__PrivCrochet_tags: 
+title: 4_1
+---
+Anthony: "I can't decide."
+You: "Between what?"
+Anthony: "These two movie quotes."
+Anthony: "'All it takes is one bad day' or 'The World is Yours'."
+
+-> "One bad day."
+    You: "It's so true."
+    Anthony: "Yeah. I'm not sure if you know where it's from."
+    Anthony: "It's from Batman. The Joker says it."
+    Anthony: "And I saw this pretty cool artwork of those words on Joker's shape."
+
+    -> You: "Still, a quote from a villain?"
+        Anthony: "It's an insightful quote."
+        Anthony: "If one bad day is all it takes, haven't we all had bad days?"
+        You: "So you're... justifying being an asshole?"
+        Anthony: "Is it really being an asshole if it's true?"
+        Anthony: "We live in a society where people are cruel and stupid."
+        Anthony: "Look at that chao ah gua Vera. Every day always complain oppression."
+        Anthony: "She doesn't see the true oppressed one is me."
+
+        -> "Power to you, I guess."
+            Anthony: "Someday she will learn."
+            Anthony: "All it takes is one bad day."
+        
+        -> "You know how annoying you are?" (CHA >= 4)
+            Anthony: "Huh?"
+            You: "Ever looked at yourself and wondered if you're the problem?"
+            Anthony: "Why would I do that?"
+            You: "You're just proving my point. If everyone you speak to has problems with you..."
+            You: "What's the common denominator here?"
+            Anthony: "I don't understand what this has to do with my art."
+            You: "You're trying to be the victim, but who is really doing the oppression?"
+            You: "Is it really everyone in society being dicks to you..."
+            You: "Or are you just making things difficult for yourself?"
+            Anthony looks away.
+    
+    -> You: "As long as it makes sense to you, I guess."
+        Anthony: "Yes, it does. I think it should make sense to everyone."
+        Anthony: "Just one bad day is enough to turn someone's life upside down."
+        Anthony: "I find it very relatable."
+
+-> "The World is Yours."
+    You: "At least it's not depressing."
+    Anthony: "Yeah. Do you know where it came from?"
+    Anthony: "It came from a 1980s movie about this dude who sold drugs and made it big."
+
+    -> You: "Why are you quoting a drug lord?"
+        Anthony: "Why not? It makes me feel badass."
+        Anthony: "There's even a huge sign of it in the movie."
+        -> "Aren't there better ways you can be happy?"
+            Anthony: "I guess. But I like this one."
+            Anthony: "If I just work a little harder, the world will be mine."
+
+            -> "That's a nice thing to believe."
+                Anthony: "I wish it would come faster."
+                Anthony: "Seeing people with money, with girls... it makes me very jealous."
+            -> "Are you sure that's how you'll be happy?"
+                Anthony: "Why wouldn't it be?"
+                Anthony: "The influencers that I watch all hustle very hard to get everything they own."
+                Anthony: "I want to someday get there too."
+            
+        -> "Tell me about the movie."
+            Anthony: "I actually didn't watch it."
+            Anthony: "But there's this one scene which I really like."
+            Anthony: "It's when the guy first starts making money. And he has everything he wants in life."
+            Anthony: "He's carrying out bags of cash from the bank, he gets married, he buys this big house..."
+            Anthony: "He even buys a pet tiger. If that's not rich, I don't know what is."
+
+            -> "That does seem pretty cool."
+                Anthony: "Right?"
+                Anthony: "The 80s were just built different. You didn't have so many modern problems."
+                Anthony: "You could get the girl, get rich, super easy."
+                Anthony: "Like those influencers I watch."
+            
+            -> "Is that the ending of the story?"
+                Anthony: "I don't think so."
+                Anthony: "But it's nice to see."
+                You: "Then... he loses his riches?"
+                Anthony: "I don't know."
+                You: "I mean, it would be kinda boring to just see him sit on his riches for the rest of the movie, right?"
+                Anthony: "I guess so..."
+                Anthony looks back at his paper again.
+                You can see him trying his best to not be disheartened.
+        
+    -> You: "As long as it makes you happy, I guess."
+        Anthony: "It makes me believe I can one day overcome my problems."
+        Anthony: "Get a girlfriend, get rich, not have to deal with stupid people anymore..."
+        Anthony: "Who wouldn't want that?"
+
+-> "What are you, twelve?" (INT > 5)
+    Anthony: "What?"
+    You: "I know these quotes. The Dark Knight, and Scarface."
+    You: "And I'd guess you want to sound badass with them, right?"
+    Anthony: "Well..."
+    You: "I mean, not like it's any of my business what you want to design."
+    You: "But you really sound like some fourteen year old cringelord."
+    You: "Those quotes are from damaged characters who ultimately want to break society apart. Thought you should know."
+    Anthony: "You wouldn't understand. I relate to these characters because society has broken me."
+
+    -> "Now I understand why you're so hostile to Vera and Nadia." (EMP > 4 && Vera relationship neutral && Nadia relationship neutral)
+        Anthony: "Why, because I'm the bad guy?"
+        You: "Worse. You think you're the bad guy."
+        Anthony: "Okay, so I'm the villain. So what?"
+        You: "You're just punching down."
+        You: "You think you're so cool because you can insult Vera for her identity and Nadia for liking anime, but at the end of the day..."
+        You: "Did you change them?"
+        Anthony: "Why should I bother? I'm just glad I'm not like them."
+        You: "But are you happy with who you are?"
+        Anthony: "No..."
+        You: "Exactly. Is that what you're telling us with your art?"
+        You: "That you're just a spiteful little man with no impact, no choices?"
+        You: "I don't think that's what The World is Yours really means, does it?"
+        You: "Or that all it takes is one bad day."
+        You: "If anything, you're having a bad time and the world isn't yours."
+        You: "But at the end of the day, whose fault is that?"
+        Anthony falls silent.
+    
+    -> "You think I don't know what that's like?" (Charlotte relationship > 50% && Anthony knows)
+        Anthony: "Oh yeah? What have you gone through?"
+        You: "Come on. You know about Charlotte already."
+        Anthony: "Right, your girl clothes fetish." 
+        Anthony: "I mean, you're kinda asking for it, aren't you?"
+        Anthony: "And you have all the gays supporting you also, while I'm being cancelled for just having common sense."
+        You: "You think this is easy for me?"
+        You: "With people like you staring at me and criticising my every move?"
+        You: "Still, I persist in being happy and being Charlotte."
+        You: "So it's a paradox, isn't it? Those who are oppressed find happiness in their own way..."
+        You: "Those who are not, like you, find ways to oppress yourselves."
+    
+    -> "You know, if you just eased up a bit, you wouldn't be suffering so much."
+        Anthony: "Yeah, so easy, why didn't I think of that before?"
+        Anthony: "I keep trying to explain my problems but keep getting the same answers."
+        Anthony: "I've already done everything the influencers tell me to and life is still the same."
+
+-> "I think they're both lame." (CHA > 5)
+    Anthony: "Huh?"
+    You: "Yeah. They're lame."
+    You: "You're trying too hard to be cool and it loops back around."
+    You: "Why not express who you truly are? Instead of trying to be someone you aren't."
+    
+    (if Anthony knows) Anthony: "You talk a lot of shit for someone who pretends to be a girl."
+    You: "Charlotte is part of who I am. I'm not pretending anything."
+    Anthony: "Sure, sissy."
+    You: "Call me whatever you want, I'm still happy with who I am." (+5% confidence)
+    You: "Can you say the same, Anthony?"
+    
+    (if Anthony doesn't know) Anthony: "But these are from people I want to be like."
+    You: "Well, suit yourself. I'm not the art police."
+    You: "I'd personally do something a little more positive, but you do you."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,640
+__PrivCrochet_tags: 
+title: 5
+---
+Nadia: "Hello, {$name}! I'm not done yet but feel free to chat."
+
+-> You: "Okay, I'll leave you to it then."
+    Nadia: "Sure. Feel free to come back any time."
+
+-> You: "I'm curious. What's your slogan?"
+    <<jump 5_1>>
+
+-> You: "Actually, I'm here to talk about something else."
+    <<jump 5_2>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1000,640
+__PrivCrochet_tags: 
+title: 5_1
+---
+Nadia: "Uh... I'm not sure you'd understand it..."
+You: "Come on. We're all university students."
+Nadia: "No, I don't mean it's very pretentious or whatever! It's in Japanese..."
+You: "Didn't know you spoke the language."
+Nadia: "Yeah, I don't. But some phrases really stand out, you know?"
+Nadia: "This one means 'a journey of a thousand miles starts with a single step'."
+
+-> "Really leaning into the anime here, huh..."
+    Nadia: "Well yes it came from an anime, so what?"
+
+    -> "Anthony was right. You're really a one-trick pony."
+        Nadia: "What, are you hanging out with him more now?"
+        Nadia: "He's rubbing off on you."
+        Nadia: "And I thought you had more of a filter to not say such things." (-5% Nadia relationship)
+    
+    -> "Don't you think it's very cliche?"
+        Nadia: "Maybe." (-5% Nadia relationship)
+        Nadia: "But it's my own thing. I decide how I want to define my message."
+        (if Nadia knows)
+        Nadia: "Honestly? I thought you'd be more sympathetic."
+        Nadia: "What with your crossdressing and all, you should be less judgemental."
+        Nadia: "You never know when you're gonna get judged next."
+    
+    -> "Nothing wrong with that..."
+        Nadia: "Are you just trying to backspace what you said?"
+        Nadia: "Look, if you don't like it, you don't like it."
+        Nadia: "Just don't be terrible about it, okay?"
+    
+    -> "I think it's great!"
+        Nadia: "Really?"
+        Nadia: "Well if you're true about it, I'm glad to hear that."
+        Nadia: "People can be terrible about our tastes and preferences."
+        (if Nadia knows) Nadia: "I'm sure Charlotte knows that well."
+
+-> "Wow, that's inspiring."
+    Nadia: "I know, right?"
+    Nadia: "Honestly, it's also kind of like a reminder to myself..."
+    Nadia: "I get distracted a lot. I can be watching anime and scrolling through TikTok at the same time..."
+    Nadia: "... when I'm supposed to be doing my homework."
+
+    -> "So relatable."
+        Nadia: "Right? The Internet has so much fun stuff."
+        Nadia: "Unfortunately, we live in a society."
+        You: "I understood that reference!"
+        Nadia: "Welcome to the Internet, right?"
+        Nadia: "Still, we gotta plug out and face our problems at some point."
+        Nadia: "That's just how life is."
+    
+    -> "Personally, I'm scared of making the first step."
+        Nadia: "Ah, that's another way to see it."
+        
+        (if Nadia knows and relationship with Nadia = Good/Neutral) Nadia: "Did that apply to Charlotte also?"
+        You: "Yep."
+        Nadia: "And here you are now. You made it!"
+        Nadia: "Charlotte is inspiring af."
+        
+        (if Nadia doesn't know) Nadia: "You mean like... for uni and stuff?"
+        You: "Yeah. Applying here was a big first step."
+        Nadia: "Ah. Even though you're in year 4, you're still thinking about it..."
+        Nadia: "That must have been a super big decision for you."
+        
+    -> "Damn, your GPA must be crying."
+        (if CHA < 4)
+        Nadia: "You didn't have to say that..."
+        You: "I'm sorry..."
+        
+        (if CHA => 4)
+        Nadia laughs nervously.
+        Nadia: "Here for a good time, not a long time, right?"
+        Nadia: "Cs get degrees and all that."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 760,880
+__PrivCrochet_tags: 
+title: 5_2
+---
+Nadia: "Go ahead. I'll just continue to draw in the meantime."
+-> "Have you ever felt a lot of nerves before a big conflict?"
+    Nadia: "Hmm? What's the big conflict?"
+    Nadia: "I mean, uh, sorry, that was not a good thing to ask."
+    Nadia: "Anyway, about nerves, I guess so? It's natural, isn't it?"
+    You: "Yeah."
+    Do you want to tell Nadia more?
+
+    -> "I'm sorry... I don't think I can say more about it."
+        Nadia: "No worries at all. We're all going through stuff."
+    
+    -> "I'm sure I'll get over this just like all the other conflicts."
+        Nadia: "Yeah, keep telling yourself that. Uh... I'm not being ironic. If you thought I was."
+        Nadia: "If you ever want to tell me more, I'm all ears. And no mouth."
+    
+    -> "I'm going to meet my mother about Charlotte." (option only available if Nadia knows)
+        Nadia: "Oh... that's tough. It's always tough to get through to parents."
+        Nadia: "I know my parents would be supportive, but I'm not sure about yours."
+
+        -> "I mean, it's not like I'm their kid."
+            Nadia: "What do you mean?"
+            You: "It's easy for people to support me from a distance. Or to shoot me down."
+            You: "But those closest to me hurt the hardest."
+            Nadia: "Oh no... I'm so sorry to hear that."
+            Nadia: "I guess it really is difficult for your mother, huh?"
+            Nadia: "23 years you've been her son, and now she might be seeing a daughter."
+            Nadia: "My parents might feel the same if it was me. Who knows."
+        
+        -> "Thanks, that's refreshing to hear."
+            Nadia: "Yeah, I just hope our generation does better than theirs."
+            Nadia: "We need more people like you who dare to be out there."
+            Nadia: "And though I'm not LGBT, I'll do all I can to support."
+            Nadia: "Anyway, I guess all I can say is... good luck, listen to her but also listen to your heart."
+    
+    -> "Recently I've been feeling more and more at odds with Charlotte." (option only available if Nadia knows)
+        Nadia: "Huh? But aren't you Charlotte?"
+        You: "Exactly."
+        Nadia: "I'm sorry... this is a gender dysphoria thing, isn't it?"
+        Nadia: "I'm no expert on it. You might be better off asking Vera..."
+        Nadia: "But if you just want my opinion as a friend..."
+        Nadia: "I support Charlotte. A lot."
+        Nadia: "When you dress up as Charlotte, I see bravery. And open-mindedness."
+        -> "What if I told you that Charlotte is going to die?"
+            Nadia: "What?"
+            Nadia: "Please don't do anything stupid, okay???"
+            Nadia: "Or, like, anything you'll regret."
+            Nadia: "What do you mean, die?"
+            You: "I mean, going back to being Charles. No more Charlotte."
+            Nadia: "Phew..."
+            Nadia: "Still, why do you want to do that?"
+
+            -> "I'm tired of being Charlotte."
+                Nadia: "Aww..."
+                Nadia: "Yeah, I get it. If it's hard enough for me to maintain my appearance every day, you must have had it even harder."
+                Nadia: "Just, you know, do what makes you happy, okay?"
+                Nadia: "And don't regret what you did for Charlotte. Or, as Charlotte."
+            
+            -> "Charlotte was just a huge waste of my time."
+                You: "I'm a man, and I should stay that way."
+                Nadia: "Oh my goodness, is this something that Anthony told you?"
+                Nadia: "You should know to filter out what he says..."
+                You: "It is the right thing to do."
+                Nadia: "I mean, sure, even if you're a man... men can still wear dresses and makeup, right? It's not illegal."
+                You: "But it's weird."
+                Nadia: "That's such a far cry from the Charlotte we once knew."
+                Nadia: "You know what, do what makes you happy." 
+                Nadia: "But I'm not sure forcing yourself back into society's mould, after stepping out of it, is gonna be that."
+            
+            -> "I don't want to fight my mother about this."
+                Nadia: "Oh... that's tough."
+                Nadia: "You're in final year, right? So you might be seeing her a lot more after graduation."
+                Nadia: "Then I guess school really is the last time you can freely be Charlotte."
+                Nadia: "Still, I hope you don't regret your time as Charlotte..."
+        
+        -> "Thank you, Nadia. That really means a lot to me."
+            Nadia: "No problem, glad I could help."
+            Nadia: "But, you know, go find Vera, okay?"
+
+-> "What happened to Eleanor?"
+    Nadia: "She said she had that leadership thing." 
+    Nadia: "You know how this school is. There's a thousand and one programmes to attend if you wanna get anything done."
+
+    -> "I hope she's okay after last week's big fight."
+        Nadia: "It's gonna take her a while, I think."
+        Nadia: "I'm in the same course as her, so I got to talk with her a little more."
+        Nadia: "Did you know this is her first leadership position?"
+        Nadia: "I've headed my fair share of clubs and societies, and if yesterday's incident broke out, I'd still be stunned."
+        Nadia: "We're just lucky this happened in school."
+        Nadia: "If this happened in the real world, there'd be greater consequences."
+    
+    -> "So you're in charge now?"
+        Nadia sighs.
+        Nadia: "Well, maybe."
+        Nadia: "I don't know how long she needs, but... actually, never mind."
+        Nadia: "She'll be back soon."
+        Nadia: "I'm not holding another leadership position. I just want to make friends here."
+        Nadia: "But yeah, enough about me."
+        
+    -> "She needed a backbone."
+        Nadia: "That's not as easy as you make it sound."
+        Nadia: "Even discounting all the politics, it's difficult to keep two very strong personalities under control."
+        Nadia: "Both sides made good points, and it's hard to tell either of them to leave."
+        -> "No. Anthony was garbage."
+            Nadia: "As much as I want to agree, isn't that a little extreme?"
+            Nadia: "He did come for club sessions and create with us..."
+
+            -> "Are you kidding me?"
+                You: "Look at how many times he insulted you, Vera, and even Eleanor."
+                You: "You really think he deserves to stay?"
+                Nadia: "I... "
+                You: "We shouldn't be wasting any more time on him. He clearly doesn't want to get with our program."
+                Nadia: "You're sounding quite extreme... I get where you're coming from, but is this really how it ends?" (-5% Nadia relationship)
+            
+            -> You: "That still doesn't justify his actions." (EMP >= 4)
+                You: "Let's not forget that he's insulted everyone here."
+                Nadia: "I guess."
+                You: "I'm not sure who can persuade him to be a nicer person, but it's definitely not any of us."
+                Nadia: "Not like we haven't tried, right?"
+                Nadia: "I guess some people just have different paths through life."
+                You: "We wish him well, but his actions have consequences."
+            
+            -> "Yeah, I guess we can't just expel him based on bad vibes."
+                Nadia: "He needs to at least apologise to all of us first."
+                Nadia: "And redemption arcs are never cheap, right?"
+                Nadia: "If you're truly redeemed, you're a far different person than you were before."
+        
+        -> "No. Vera was being histrionic."
+            Nadia: "What does that word even mean?"
+            You: "She's always been seeking attention. Even from the beginning."
+            Nadia: "I don't think so, it's not like she dominated our discussions, right?"
+
+            -> You: "Are you kidding me?"
+                You: "Every single facet of her personality has been about LGBT."
+                Nadia: "Yeah, but..."
+                You: "Tell me. What do you know about Vera that isn't about it?"
+                Nadia: "She's an anthropology major - "
+                You: "Which she took because she's LGBT."
+                Nadia: "Uh, she doesn't like AI art..."
+                You: "If she used it maybe she wouldn't be drawing rainbows all the damn time."
+                Nadia: "You know what? Vera is my friend. And so is Eleanor."
+                Nadia: "And I won't tolerate it if you talk shit about them."
+                Nadia: "Sure, they're flawed, but so is everyone else, and there's really no need to go so much into their issues."
+                Nadia: "So you can take your hate and fuck off." (-10% Nadia relationship)
+            
+            -> You: "Yeah, I guess she knew her place..."
+                Nadia: "That's... not how I'd put it, but sure."
+                Nadia: "Anyway, that's also a pretty harsh thing to say about her, isn't it?"
+                Nadia: "You're starting to sound more like Anthony. I'd watch myself if I were you." (-5% Nadia relationship)
+            
+        -> "I guess so..."
+            Nadia: "Even for me, I've held CCA leadership before."
+            Nadia: "But I've never had such fiery arguments happen in my organisations."
+            Nadia sighs.
+            Nadia: "Let's hope we're ready for them when we enter the real world."
+
+-> "Never mind."
+    Nadia: "Don't spoil me like that!"
+    Nadia: "Just kidding. Whenever you're ready."
+===

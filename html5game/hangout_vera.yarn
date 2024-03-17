@@ -17,12 +17,13 @@ Vera: "Heh. Really though, it's nice to sit down and talk like this."
 Vera: "So, I guess you came here with a purpose other than just coffee, right?"
 You: "Yeah, kinda. I wanted to ask you some questions."
 Vera: "Shoot."
-<<jump 0_options>>
+
+<<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1200,400
 __PrivCrochet_tags: 
-title: 0_options
+title: 1_options
 ---
 What do you want to talk about?
 
@@ -30,6 +31,11 @@ What do you want to talk about?
     <<jump 1_1>>
 -> "How's school?"
     <<jump 1_2>>
+-> "What do you like about Art Club?"
+    <<jump 1_3>>
+-> "Well, I gotta go. Thanks for today!" <<if visited("1_1") or visited("1_2") or visited("1_3")>>
+    Vera: "See you around, Charlotte."
+    <<goto_room_bedroom_afterHangout()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1560,-40
@@ -197,7 +203,7 @@ Vera: "We're people with hopes and dreams like yourselves."
         Vera: "But I'm re-appropriating it."
         Vera: "Trans healthcare is the same as any other form of healthcare."
 
-<<jump 0_options>>
+<<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1560,280
@@ -238,7 +244,7 @@ Vera: "Ooh, that's fun! How's that going?"
     Vera: "Queer people in gender studies class... it's our natural habitat."
     Vera: "It's literally our life."
 
-<<jump 0_options>>
+<<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1800,120
@@ -586,4 +592,80 @@ title: 3_4
     Vera: "Well, either way, it would be good to travel the world first."
     Vera: "Get a sense of what life's like in other countries and then decide."
     Vera: "Which ultimately comes back to money, doesn't it..."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1480,800
+__PrivCrochet_tags: 
+title: 1_3
+---
+Vera: "It's my personal way of letting loose. Art therapy is a thing, you know."
+Vera: "Everyone's gotta have an outlet. Mine just so happens to be estrogen and art."
+
+-> "What do you need to let loose?"
+    Vera: "The burden of existence?"
+    Vera: "Haha, I'm just kidding. To be more specific, it's dysphoria and living under capitalism."
+    You: "Is it really that bad..."
+    Vera: "Let's just say I've had my fair share of dark moments that I needed art to get through."
+
+-> "I mean, yeah, my outlet is crossdressing."
+    Vera: "Love that for you! Charlotte always looks more slay when she's confident." (+5% Vera relationship)
+    <<changeRelationship("V", 5)>>
+    Vera: "You should continue showing up for our sessions as Charlotte. It's a safe space."
+
+-> "Why are you saying that as if it's an addiction..."
+    Vera: "Come on, Charlotte. You know better than to say that." (-5% Vera relationship)
+    <<changeRelationship("V", -5)>>
+    Vera: "Estrogen is my medication. Art, too, in a sense."
+    Vera: "But anyway, that's a topic for another time."
+
+<<jump 1_3_1>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1800,800
+__PrivCrochet_tags: 
+title: 1_3_1
+---
+Vera: "Well, time to flip the question back to you. How have our sessions been?"
+
+-> "They're great!"
+    Vera: "Oh that's good to hear. Hope they helped you as much as they helped me."
+
+    -> "We should let more people in."
+        Vera: "Hmm, easier said than done. Art isn't everyone's thing."
+        Vera: "Though I have been telling Eleanor to expand, and she's considering it."
+        Vera: "Imagine that! We could do, like, friendship bracelets, pottery, all sorts of other activities."
+    
+    
+    -> "Oh, they've helped me lots."
+        You: "I'm glad to have the agency and freedom to express myself."
+        Vera: "So do I. It's a safe space to do that. Unlike other places..."
+
+
+-> "Could be better."
+    Vera: "Oh? Tell me more."
+
+    -> "The activities."
+        Vera: "Hmm yeah. They may not be everyone's thing."
+        You: "We could collab with other clubs, who knows? Maybe even do art for school events."
+        Vera: "Sounds like a plan... let's pitch it to Eleanor some time."
+    
+    -> "We're not big enough."
+        Vera: "Oh, hmm. Why would you say that?"
+        You: "I wanna make more friends through my club activities."
+        Vera: "I get it... university is a stressful place. So yeah, invite whoever you want over!"
+
+-> "Not my thing."
+    Vera: "Hmm, well... why, though?"
+
+    -> "The people."
+        You: "There's too much fighting. I'm sure you know."
+        Vera: "Yeah... I'm gonna tell Eleanor about it. A certain someone loves to cause trouble."
+        Vera: "If we're gonna be an inclusive, safe space, we have to walk the walk."
+    
+    -> "I'm not really getting better at art."
+        Vera: "Well, practice makes perfect. You've only been here recently, give it time."
+        Vera: "And besides, what is perfect? You don't need to aspire to someone else's ideal of perfection."
+        Vera: "As long as you think it's good enough, that's valid enough."
+
+<<jump 1_options>>
 ===

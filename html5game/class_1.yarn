@@ -230,10 +230,10 @@ Chenjie: "The semester's barely started and I already have a backlog."
     Chenjie: "It gets worse from here. I hear some weeks we have 5 readings."
     You feel exhausted even from the sound of that. (-5% confidence)
 
--> You: [CHA 5] (joking) "That's it. I'm quitting to flip burgers for the rest of my life." ({calculateOdds($cha, 5)}% success) #skillcheck #cha
+-> You: (joking) "That's it. I'm quitting to flip burgers for the rest of my life." #skillcheck #cha # 5
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll < 3>>
+    <<if $diceroll < 5>>
         Sage: "The readings aren't *that* bad."
         Chenjie: "We just have to suck it up."
     <<else>>
@@ -264,7 +264,7 @@ You: "Yeah, so feminism to me is..."
     <<set $diceroll = diceRoll($emp)>>
     <<if $diceroll >= 5>>
         [EMPATHY] Sage looks like she has something to add, but she is hesitating.
-        -> [5 CHA] Press her. ({calculateOdds($cha, 5)}% success) #skillcheck #cha
+        -> Press her. #skillcheck #cha # 5
             <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
             You: "Sage, do you have something to add?"
@@ -291,7 +291,7 @@ You: "Yeah, so feminism to me is..."
             With plenty of time left, your group starts some small talk about what you did over the semester break.
             Sage looks a bit distracted.
     <<else>>
-        What do you do? 
+        What do you say?
 
         -> Say nothing.
             Chenjie: "So we're done!"
@@ -319,7 +319,7 @@ You: "Yeah, so feminism to me is..."
     Joanne: "We're still a largely conservative country, and family values are important to a lot of Singaporeans."
     Chenjie: "There aren't that many LGBT in Singapore. So it's difficult to get used to them."
 
-    -> You: [CHA 6] "'Get used to them' sounds rather dehumanising." ({calculateOdds($cha, 6)}% success) #skillcheck #cha
+    -> You: "'Get used to them' sounds rather dehumanising." #skillcheck #cha # 6
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll < 6>>
@@ -401,7 +401,7 @@ You: "What?"
 Chenjie: "My mom said she saw a cockroach in the living room. And she's asking me to hurry back to kill it."
 Chenjie: "I hate cockroaches."
 
--> [EMP 6] You: "But a man's gotta do what a man's gotta do." ({calculateOdds($emp, 6)}% success)  #skillcheck #emp
+-> You: "But a man's gotta do what a man's gotta do." #skillcheck #emp # 6
     <<set $diceroll = diceRoll($emp)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll < 6>>
@@ -589,23 +589,6 @@ Sage: "I feel I have a personal stake in this conversation, so I thought I shoul
     <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1120,80
-__PrivCrochet_tags: 
-title: 5_1
----
-<<set $diceroll = diceRoll($int)>>
-[You rolled a {$diceroll}.]
-<<if $diceroll >= 5>>
-    You skillfully manage to flag up all the bombs.
-    You Win!
-<<else>>
-    You only clear the map before you click on a mine and lose. 
-    Boohoo!
-<<endif>>
-Alright, probably time to pay attention.
-<<jump 5_options>>
-===
-__PrivCrochet_colorID: 0
 __PrivCrochet_position: 758,760
 __PrivCrochet_tags: 
 title: 20
@@ -742,16 +725,25 @@ Chenjie: "Right?"
         Chenjie: "We won't be able to come to a conclusion in just one class."
         You: "Obviously we won't be able to solve it in a day..."
     
-    -> [INTELLIGENCE] You: "What about unpaid female labour?" <<if diceRoll($int) >= 5>>
-        You: "Gender pay gaps exclude the women who are unemployed in order to do domestic labour."
-        You: "Are they not also doing something for the nation by doing the labour that allows men to be in the workforce?"
-        Joanne: "Must there be monetary value attached before a work becomes valuable?"
-        Sage: "No, but it's basically evidence of a certain type of worker or work being undervalued. And also a measure of how much autonomy certain people have." 
-        Sage: "It's both a cause and symptom of gender inequality." (+5 XP) 
-        <<addExperience(5)>>
+    -> You: "What about unpaid female labour?" #skillcheck #int # 6
+        <<set $diceroll = diceRoll($int)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll >= 6>>
+            You: "Gender pay gaps exclude the women who are unemployed in order to do domestic labour."
+            You: "Are they not also doing something for the nation by doing the labour that allows men to be in the workforce?"
+            Joanne: "Must there be monetary value attached before that kind of work becomes valuable?"
+            Sage: "No, but it's basically evidence of a certain type of worker or work being undervalued." 
+            <<addExperience(5)>>
+            Sage: "It's both a cause and symptom of gender inequality." (+ 5 XP)
+        <<else>>
+            You: "Like, housewives who work for no pay?"
+            Joanne: "That has nothing to do with the pay gap though?"
+            Sage: "Maybe not."
+            Sage: "But it's both a cause of gender inequality because this causes them to lack a lot of financial freedom."
+        <<endif>>
+
         Chenjie: "Okay, okay. Let's stop attacking Joanne already."
-        Sage: "We're not attacking her."
-        Chenjie: "Okay, but we should talk civilly. And I think Joanne also raises some good points, like the NS thing."
+        Chenjie: "I think she also raises some good points, like the NS thing."
         Chenjie: "So let's just agree to disagree, okay?"
         Joanne: "Yeah."
         Sage looks like she wants to continue arguing, but she nods anyway.
@@ -891,8 +883,20 @@ __PrivCrochet_tags:
 title: 5_options
 ---
 What do you do?
--> [INT 5] Start a minesweeper game ({calculateOdds($int, 5)}% success) <<if visited("5_1") == false>> #skillcheck #int 
-    <<jump 5_1>>
+
+// There MUST be a space for numbers. #5 cannot but # 5 can. Weird
+-> Start a minesweeper game <<if !optionChosen()>> #skillcheck #int # 5 
+    <<set $diceroll = diceRoll($int)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll >= 5>>
+        You skillfully manage to flag up all the bombs.
+        You Win!
+    <<else>>
+        You only clear the map before you click on a mine and lose. 
+        Boohoo!
+    <<endif>>
+    Alright, probably time to pay attention.
+    <<jump 5_options>>
     
 -> Scroll through Shopee
     As you scroll through your recommended, a cute skirt catches your eye. 

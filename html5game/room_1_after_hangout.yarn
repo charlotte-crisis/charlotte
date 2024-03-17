@@ -1,0 +1,37 @@
+#__PrivCrochet_version:1
+# if you've already visited then it will show the concise version.
+# Interacting with mirror
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 920,201
+__PrivCrochet_tags: 
+title: door
+---
+You don't need to go out right now.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 640,200
+__PrivCrochet_tags: 
+title: bed
+---
+It's the end of the school week, and you usually head home for the weekend.
+This time, you know your sister's waiting for you.
+Dread it or run from it, the talk is going to happen.
+When you step out of this room tomorrow, you will face her.
+Have you learned enough from the previous days? We shall see.
+Going to bed will continue to the next scene. You may still change your stats or clothes. Do you wish to continue?
+
+-> Go back
+
+-> Continue
+    <<goto_room_boss_1()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 641,-59
+__PrivCrochet_tags: 
+title: 1
+---
+Well, that was a fun hangout.
+It served as a good enough distraction.
+But you're going home tomorrow, where you'll see your sister.
+(You can level up at your desk or change your clothes at your wardrobe.)
+===
