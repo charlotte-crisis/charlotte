@@ -72,7 +72,7 @@ Vera: "Anyway, that was just a sidetrack. What about you?"
 <<jump 1_2_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 3409,45
+__PrivCrochet_position: 1047,1601
 __PrivCrochet_tags: 
 title: 2
 ---
@@ -104,7 +104,7 @@ title: 2
     Vera: "Sure, for us it's easy to point out the hate."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 3320,-220
+__PrivCrochet_position: 958,1336
 __PrivCrochet_tags: 
 title: 3
 ---
@@ -179,7 +179,7 @@ Vera: "So... what do you want to do?"
                 Vera: "Then does she deserve any respect that you give her?"
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 3171,201
+__PrivCrochet_position: 809,1757
 __PrivCrochet_tags: 
 title: 3_2
 ---
@@ -307,7 +307,7 @@ title: 3_2
     Vera: "Just don't leave any bodies in your wake."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 3731,-39
+__PrivCrochet_position: 1369,1517
 __PrivCrochet_tags: 
 title: 4
 ---
@@ -319,7 +319,7 @@ Vera: "Please, have a little more empathy for the people around you."
 Vera: "Thanks for inviting me here. It was nice talking to you!"
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 3532,-228
+__PrivCrochet_position: 1170,1328
 __PrivCrochet_tags: 
 title: 3_3
 ---
@@ -368,7 +368,7 @@ title: 3_3
     Vera: "It's probably the happiest part of your life. So far."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 3411,201
+__PrivCrochet_position: 1049,1757
 __PrivCrochet_tags: 
 title: 3_4
 ---
