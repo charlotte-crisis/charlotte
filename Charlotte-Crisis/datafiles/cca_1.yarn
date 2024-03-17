@@ -334,7 +334,7 @@ Vera: "You know, trans women."
     <<addExperience(10)>>
     Vera: "But even surviving this far, is my personal form of resistance against a system that won't accept me for who I am." (+ 10 XP) 
 
-    -> You: "I'm proud of you for that." #skillcheck #emp #6
+    -> You: "I'm proud of you for that." #skillcheck #emp # 6
         <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll < 6>>        
@@ -403,7 +403,7 @@ Anthony: "Why do you feel female?"
     Eleanor: "No, Anthony, she's right. You started this."
     Anthony: "Fine, I'll just shut up then."
 
--> You: "Cannot ah?" #diceroll #cha #6
+-> You: "Cannot ah?" #skillcheck #cha # 6
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll >= 6>>
@@ -471,7 +471,7 @@ You're really being put on the spot here. How will you respond?
         Vera: "Oh, you have a problem with queer people?"
         Eleanor: "Vera, enough! Anthony, you too."
 
--> You: "But what is a guy?" #skillcheck #int #6
+-> You: "But what is a guy?" #skillcheck #int # 6
     <<set $diceroll = diceRoll($int)>>
     [You rolled a {$diceroll}.]
     Anthony: "What?"
@@ -623,7 +623,7 @@ Anthony: "Maybe she's an ah gua."
         You: "Let me finish. What about you? Ever heard people say you're too short before?" (+ 10 XP) 
         Anthony: "All the time. It's not something I can change."
 
-        -> You: "That didn't feel very good, did it?" #skillcheck #emp #6
+        -> You: "That didn't feel very good, did it?" #skillcheck #emp # 6
             <<set $diceroll = diceRoll($emp)>>
             [You rolled a {$diceroll}.]
             <<if $diceroll >= 6>>
@@ -640,7 +640,7 @@ Anthony: "Maybe she's an ah gua."
                 You realise you can't really continue from here. It's time to leave.
             <<endif>>
 
-        -> You: "But it's just what people say, isn't it? Do you listen to everything other people say?" #skilcheck #int #6
+        -> You: "But it's just what people say, isn't it? Do you listen to everything other people say?" #skilcheck #int # 6
             Anthony: "But it's proven what. Females aren't attracted to you if you're not 6-6-6."
             <<set $diceroll = diceRoll($int)>>
             [You rolled a {$diceroll}.]
@@ -669,7 +669,7 @@ Anthony: "Maybe she's an ah gua."
         Anthony: "Oh, so that's what they look like. Men in dresses, trying to be women."
         Anthony: "It's disgusting."
 
-        -> You: "Yeah, why don't you say that in front of Vera and Eleanor. I'm sure they'll absolutely love it." #skillcheck #cha #6
+        -> You: "Yeah, why don't you say that in front of Vera and Eleanor. I'm sure they'll absolutely love it." #skillcheck #cha # 6
             <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
             <<if $diceroll >= 6>>
@@ -688,7 +688,7 @@ Anthony: "Maybe she's an ah gua."
             <<changeRelationship("A", -5)>>
             Anthony: "So be it." (-5% Anthony relationship) 
 
-    -> You: "I mean, I dress up sometimes, too." #skillcheck #cha #6
+    -> You: "I mean, I dress up sometimes, too." #skillcheck #cha # 6
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
         Anthony: "Wow. Another one." (-5% Anthony relationship) <<changeRelationship("A", -5)>>
@@ -753,7 +753,7 @@ What do you say?
         Vera: "But it's more complex than just spreading colour over paper."
         <<Jump back to "2_options">>
     
-    -> "What do the rainbows mean?" <<if !optionChosen()>> #skillcheck #int #5
+    -> "What do the rainbows mean?" <<if !optionChosen()>> #skillcheck #int # 5
         Vera: "Take a guess."
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
@@ -870,7 +870,7 @@ Anthony shows you a picture of an anthill, with ants all around it.
     Anthony: "It's just the truth."
     <<jump 2_2_options>>
 
--> "Ooh, that's a cool way to depict yourself." <<if !optionChosen()>> #skillcheck #int #6
+-> "Ooh, that's a cool way to depict yourself." <<if !optionChosen()>> #skillcheck #int # 6
     <<set $diceroll = diceRoll($int)>>
     [You rolled a {$diceroll}.]
     Anthony: "What?"
@@ -886,7 +886,7 @@ Anthony shows you a picture of an anthill, with ants all around it.
     <<endif>>
     <<jump 2_2_options2>>
 
--> "Is everything okay?" <<if !optionChosen()>> #skillcheck #emp #6
+-> "Is everything okay?" <<if !optionChosen()>> #skillcheck #emp # 6
     <<set $diceroll = diceRoll($emp)>>
     [You rolled a {$diceroll}.]
     Anthony: "What would you know?"
@@ -929,7 +929,7 @@ Nadia: "I'm still in the work-in-progress stage, though, so bear with me!"
     Nadia: "Alright then."
     Nadia: "Have fun with your own artwork too."
 
--> "You've got some hot guys on that sheet of paper too." <<if !optionChosen()>> #skillcheck #cha #6
+-> "You've got some hot guys on that sheet of paper too." <<if !optionChosen()>> #skillcheck #cha # 6
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
     Nadia: "Huh? What? It's nothing! I'm just experimenting!"
