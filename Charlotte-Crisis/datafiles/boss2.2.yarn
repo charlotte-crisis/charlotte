@@ -88,14 +88,14 @@ Charlotte: "More lies! What's gotten into you?"
 <<jump 2_2_3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1485,-244
+__PrivCrochet_position: 1485,-246
 __PrivCrochet_tags: 
 title: 2_1_1
 ---
 You: "I dress for the occasion, and unfortunately this week didn't have any occasions for you."
 Charlotte: "Then when is my time to shine? Do you not want me anymore?"
 
--> "If it happens, it happens." (CHA roll)
+-> "If it happens, it happens." (CHA check)
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll >= 8>>
@@ -115,7 +115,7 @@ Charlotte: "Then when is my time to shine? Do you not want me anymore?"
 
 -> "It's tough to let you out, honestly."
     Charlotte: "So you're being lazy."
-    -> "What I just described isn't being lazy." (INT roll)
+    -> "What I just described isn't being lazy." (INT check)
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 8>>
@@ -125,7 +125,7 @@ Charlotte: "Then when is my time to shine? Do you not want me anymore?"
             You: "And every time I endure nonsense from the family…"
             You: "That's all for you."
             Charlotte: "Well, if you put it that way, I guess…"
-            You: "Please. Think about how tough it can be sometimes." (+ 10 XP)
+            You: "Please. Think about how tough it can be sometimes." (+ 10 XP) <<addExperience(10)>>
             <<jump 3>>
         <<else>>
             You: "It's just the truth."
@@ -140,7 +140,7 @@ Charlotte: "Then when is my time to shine? Do you not want me anymore?"
         Charlotte: "We weren't always like this. I wonder what changed…" (-5% gender meter) #needVariable
         <<jump 3>>
     
-    -> "This is precisely why I'm unhappy with you." (EMP roll)
+    -> "This is precisely why I'm unhappy with you." (EMP check)
         You: "You're so demanding. Even one week of not letting you out causes me trouble."
         Charlotte: "So you hate me? Fine!"
         Charlotte: "Try living without me. See what happens!"
@@ -197,7 +197,7 @@ Charlotte: "Do you, really?"
     <<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1488,-5
+__PrivCrochet_position: 1487,-7
 __PrivCrochet_tags: 
 title: 2_1_3
 ---
@@ -211,7 +211,7 @@ You: "Hate to say it this way, but you're not the only source of my happiness."
         Charlotte: "Well, as long as you're happy."
         Charlotte: "I should be glad, I guess…"
         Charlotte: "You're not so reliant on me that you can't function."
-        You: "And even if it reaches that stage, there's still hope." (+ 10 XP)
+        You: "And even if it reaches that stage, there's still hope." (+ 10 XP) <<addExperience(10)>>
         <<jump 3>>
     <<else>>
         Charlotte: "So you're saying that you can live life without me, is it?"
@@ -221,14 +221,14 @@ You: "Hate to say it this way, but you're not the only source of my happiness."
     <<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1710,-9
+__PrivCrochet_position: 1707,-12
 __PrivCrochet_tags: 
 title: 2_1_4
 ---
 Charlotte: "What does that even mean?"
 Charlotte: "How are you going to convince the rest of the world that I'm here…"
 Charlotte: "If you're not looking femme at all?"
--> "It's not rocket science." (INT roll)
+-> "It's not rocket science." (INT check)
     <<set $diceroll = diceRoll($int)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll >= 8>>
@@ -276,7 +276,7 @@ Charlotte: "If you're not looking femme at all?"
             Charlotte: "Damn, you tricked me."
             Charlotte: "You're able to trick your own subconscious? That's… impressive."
             You: "Yeah. So I'm not tricking you when I say…"
-            You: "Please chill out and let me present as male for a while." (+ 10 XP)
+            You: "Please chill out and let me present as male for a while." (+ 10 XP) <<addExperience(10)>>
             <<jump 3>>
 
     -> "That's pretty harsh…"
@@ -306,7 +306,7 @@ Charlotte: "If you're not looking femme at all?"
         You: "If the criticism is already so harsh from within…"
         You: "How are we supposed to tahan it from outside?"
         You: "You gotta love yourself. And me."
-        Charlotte: "I guess you're right…" (+ 10 XP)
+        Charlotte: "I guess you're right…" (+ 10 XP) <<addExperience(10)>>
         <<jump 3>>
 
 -> "My inner world - this realm we are speaking in now - is no one else's." (CHA check)
@@ -316,7 +316,7 @@ Charlotte: "If you're not looking femme at all?"
     <<if $diceroll >= 8>>
         Charlotte: "Well, it seems like you're very confident about that…"
         Charlotte: "Then I guess we'll meet here more often."
-        Charlotte: "I'm glad that you're not totally forgetting about me, I guess." (+ 10 XP)
+        Charlotte: "I'm glad that you're not totally forgetting about me, I guess." (+ 10 XP) <<addExperience(10)>>
 
         <<jump 3>>
     <<else>>
@@ -356,7 +356,7 @@ Charlotte: "But I want to hear from you first."
     <<jump 4>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1389,240
+__PrivCrochet_position: 1386,237
 __PrivCrochet_tags: 
 title: 2_2_1
 ---
@@ -386,7 +386,7 @@ Charlotte: "Nonsense. I don't control your life fully."
             Charlotte: "Why are you so uptight about this?"
             You: "My body, my rules. It's that simple."
             Charlotte: "It's my body too!"
-            You: "You don't own a damn thing here." (+ 10 XP) (-5% gender meter)
+            You: "You don't own a damn thing here." (+ 10 XP) <<addExperience(10)>> (-5% gender meter) #needsVariable
             <<jump 3>>        
         <<else>>
             Charlotte: "Just how out of touch with your emotions are you?"
@@ -422,7 +422,7 @@ Charlotte: "Nonsense. I don't control your life fully."
                 <<jump 3>>
             <<endif>>
 
-        -> "Every minute I spent on you was time wasted." (CHA roll)
+        -> "Every minute I spent on you was time wasted." (CHA check)
             You: "While I was exploring this useless hobby…"
             You: "My friends were doing projects, internships, and just succeeding in life."
             Charlotte: "Everyone is different. I'm sure you had fun too."
@@ -447,7 +447,7 @@ Charlotte: "Nonsense. I don't control your life fully."
             Charlotte: "Okay, since when were you such a prude?"
             Charlotte: "And even if I disappear, you're still gonna be attracted to girls."
             Charlotte: "I'm just making it more fun for you."
-            -> "Normal guys don't do this." (negative EMP roll)
+            -> "Normal guys don't do this." (INT check)
                 You: "Why can't I just be normal?"
                 Charlotte: "This is our normal. There's no need to feel ashamed."
                 <<set $diceroll = diceRoll($int)>>
@@ -476,7 +476,7 @@ Charlotte: "Nonsense. I don't control your life fully."
                 <<jump 3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1634,235
+__PrivCrochet_position: 1634,234
 __PrivCrochet_tags: 
 title: 2_2_2
 ---
@@ -517,7 +517,7 @@ Charlotte: "And are you saying women are not resilient?"
     Charlotte: "Why are you seeing it as a bad thing, anyway?"
     -> "This isn't what I truly want for myself."
         You: "And you know that too."
-        You: "If not, you would be a lot stronger and I'd be actively mutilating myself." (+10 XP)
+        You: "If not, you would be a lot stronger and I'd be actively mutilating myself." (+10 XP) <<addExperience(10)>>
         Charlotte: "Don't call it mutilation."
         You: "That's precisely what it is for me! And I will stop you before it happens."
     
@@ -539,14 +539,14 @@ Charlotte: "You are beautiful! We are beautiful together."
 -> "Not with my body."
     Charlotte: "We never cared about that."
     You: "Well it's time to start!"
-    -> "You think we can be pretty forever?"
+    -> "You think we can be pretty forever?" (INT check)
         You: "You need to think long term. Hair loss, beard growth, face wrinkles…"
         You: "All of that will make me stand out. And not in the good way."
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 8>>
             Charlotte: "Ugh... okay, yes that made me cringe a bit."
-            You: "It's the only rational way to see this. Because no one is gonna see you as a woman." (+10 XP)
+            You: "It's the only rational way to see this. Because no one is gonna see you as a woman." (+10 XP) <<addExperience(10)>>
             <<jump 3>>
         <<else>>
             Charlotte: "So what? Face wrinkles affect women too. And we can use wigs."
@@ -555,7 +555,7 @@ Charlotte: "You are beautiful! We are beautiful together."
             <<jump 3>>
         <<endif>>
 
-    -> "You don't see how my masculine features stick out so much."
+    -> "You don't see how my masculine features stick out so much." (CHA check)
         You: "My face, my Adam's apple… all of that can't be changed."
         You: "How much effort do I need to put in every time I let you out?"
         You: "It's quite clear to everyone that you, Charlotte, are not natural."
@@ -581,7 +581,7 @@ Charlotte: "You are beautiful! We are beautiful together."
     You: "It's that simple. I don't want to suffer anymore."
     You: "I was born male. I should remain male."
     You: "Forget all the woke ideology. We have to live in the real world."
-    You: "Male is male, female is female. No in betweens, no changing."
+    You: "Male is male, female is female. No in betweens, no changing." (-5% gender meter) #needsVariable
     Charlotte: "Ugh. There's no getting through to you at all." (-10% confidence) <<changeConfidence(-10)>>
     <<jump 3>>
 ===
@@ -618,7 +618,7 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
             You: "I can't go home because Mother doesn't like you. Which makes Sister lonely."
             You: "And Mother is getting old, does she really need another source of stress on her?"
             Charlotte: "Damn it, since when did you get so mushy..."
-            You: "This is what a filial son should do." (+10 XP)
+            You: "This is what a filial son should do." (+10 XP) <<addExperience(10)>>
         <<else>>
             Charlotte: "Seriously? You're gonna use that as your justification?"
             Charlotte: "Then are you gonna obey every single order they give you?"
@@ -645,8 +645,7 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
             <<jump 5>>
         
         -> "We can work out a proportion of time."
-            Charlotte: "Girl, please."
-            Charlotte: "Mother's gonna ask for zero time from me."
+            Charlotte: "Girl, please. Mother's gonna ask for zero time from me."
             Charlotte: "You know her stance on this. Think of something else!"
             <<jump 5>>
 
@@ -756,7 +755,7 @@ Charlotte: "Didn't you make a promise to Sis?"
 -> "She'll understand."
     Charlotte: "How?"
     You: "Maybe I talked to her wrongly the first time."
-    You: "I'll need to make her understand that you're important to me too."
+    You: "I'll need to make her understand that you're important to me too." (+5% gender meter) #needsVariable
     Charlotte: "That's a good start. After all, she is in our generation too."
     Charlotte: "And she has faced pressure from your parents."
     Charlotte: "If you want allies to face your family, she would be a good start."
