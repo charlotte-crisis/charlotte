@@ -2,7 +2,7 @@
 # if you've already visited then it will show the concise version.
 # Interacting with mirror
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 920,200
+__PrivCrochet_position: 920,201
 __PrivCrochet_tags: 
 title: door
 ---
@@ -24,4 +24,14 @@ Going to bed will continue to the next scene. You may still change your stats or
 
 -> Continue
     <<goto_room_boss_1()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 641,-59
+__PrivCrochet_tags: 
+title: 1
+---
+Well, that was a fun hangout.
+It served as a good enough distraction.
+But you're going home tomorrow, where you'll see your sister.
+(You can level up at your desk or change your clothes at your wardrobe.)
 ===

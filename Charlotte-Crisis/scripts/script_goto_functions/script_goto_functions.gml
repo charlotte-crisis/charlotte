@@ -120,6 +120,15 @@ function goto_room_bedroom_frombed() {
 	var back_id = layer_background_get_id(lay_id);
 	layer_background_sprite(back_id, spr_hostel_bars);
 }
+
+function goto_room_bedroom_afterHangout(){
+	room_goto(rm_bedroom_after_class1);
+	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
+
+	ChatterboxLoadFromFile("room_1_after_hangout.yarn");
+	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_hangout.yarn");
+	ChatterboxJump(chatterbox, "1");
+}
 #endregion
 
 #region CCA1

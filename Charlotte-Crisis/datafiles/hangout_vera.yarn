@@ -18,12 +18,12 @@ Vera: "So, I guess you came here with a purpose other than just coffee, right?"
 You: "Yeah, kinda. I wanted to ask you some questions."
 Vera: "Shoot."
 
-<<jump 0_options>>
+<<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1200,400
 __PrivCrochet_tags: 
-title: 0_options
+title: 1_options
 ---
 What do you want to talk about?
 
@@ -33,8 +33,9 @@ What do you want to talk about?
     <<jump 1_2>>
 -> "What do you like about Art Club?"
     <<jump 1_3>>
--> "Well, I gotta go. Thanks for today!" //<<if visited("1_1") or visited("1_2") or visited("1_3")>>
+-> "Well, I gotta go. Thanks for today!" <<if visited("1_1") or visited("1_2") or visited("1_3")>>
     Vera: "See you around, Charlotte."
+    <<goto_room_bedroom_afterHangout()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1560,-40
@@ -202,7 +203,7 @@ Vera: "We're people with hopes and dreams like yourselves."
         Vera: "But I'm re-appropriating it."
         Vera: "Trans healthcare is the same as any other form of healthcare."
 
-<<jump 0_options>>
+<<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1560,280
@@ -243,7 +244,7 @@ Vera: "Ooh, that's fun! How's that going?"
     Vera: "Queer people in gender studies class... it's our natural habitat."
     Vera: "It's literally our life."
 
-<<jump 0_options>>
+<<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1800,120
@@ -666,5 +667,5 @@ Vera: "Well, time to flip the question back to you. How have our sessions been?"
         Vera: "And besides, what is perfect? You don't need to aspire to someone else's ideal of perfection."
         Vera: "As long as you think it's good enough, that's valid enough."
 
-<<jump 0_options>>
+<<jump 1_options>>
 ===
