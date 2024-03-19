@@ -91,7 +91,7 @@
 #region Bedrooms
 
 function goto_room_bedroom(){
-	room_goto(rm_bedroom_after_class1);
+	fade_room(rm_bedroom_after_class1);
 	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
 
 	ChatterboxLoadFromFile("room_1.yarn");
@@ -127,7 +127,7 @@ function goto_room_bedroom_frombed() {
 }
 
 function goto_room_bedroom_afterHangout(){
-	room_goto(rm_bedroom_after_class1);
+	fade_room(rm_bedroom_after_class1);
 	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
 
 	ChatterboxLoadFromFile("room_1_after_hangout.yarn");
@@ -148,7 +148,7 @@ function goto_room_bedroom_afterHangout(){
 
 
 	function goto_room_cca_1_seated(){
-		room_goto(rm_cca_1_seated);
+		fade_room(rm_cca_1_seated);
 		obj_player.x = 112;
 		obj_player.y = 74;
 		obj_player.facing_direction = 1;
@@ -158,11 +158,11 @@ function goto_room_bedroom_afterHangout(){
 	}
 
 	function goto_room_cca_1_seated_18() {
-		room_goto(rm_cca_1_seated_18);
+		fade_room(rm_cca_1_seated_18);
 	}
 
 	function goto_room_cca_1_seated_11() {
-		room_goto(rm_cca_1_seated_11);
+		fade_room(rm_cca_1_seated_11);
 	}
 #endregion
 
