@@ -29,7 +29,7 @@ function draw_rectangle_center(_x, _y, _width, _height, _outline, _colour, _alph
 /// Note that dialogue box and option box are centered as well.
 /// So co-ordinates are same as draw_rectangle_center
 function draw_dialogue_box(_x, _y) {
-	draw_sprite(spr_dialogue_box, 0, _x, _y);
+	draw_sprite_ext(spr_dialogue_box, 0, _x, _y, 3.75, 3.75, 0, c_white, 1);
 }
 
 /// Skillcheck false by default
