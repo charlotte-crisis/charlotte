@@ -253,10 +253,10 @@ Vera: "What's wrong with having a preference? At least she's got something to be
         Anthony: "Keep your nose out of other people's business." (-5% confidence)
         Vera rolls her eyes.
 
--> "It's Nadia's work. Respect it as you would expect us to respect yours." #skillcheck #cha #4
+-> "It's Nadia's work. Respect it as you would expect us to respect yours." #skillcheck #cha #8
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll >= 4>>
+    <<if $diceroll >= 8>>
         <<changeRelationship("V", 5)>>
         Anthony is thrown off by the strength in your statement, and keeps quiet.
         Vera nods in approval. // (+5% Vera relationship) 
@@ -341,7 +341,7 @@ Anthony: "Don't put words into my mouth."
 -> "Isn't there something else that can symbolise inclusivity?" (INT check)
 Anthony: "Like what?"
 You think for a moment.
-<<set $diceroll = diceRoll($emp)>>
+<<set $diceroll = diceRoll($int)>>
 [You rolled a {$diceroll}.]
 <<if $diceroll < 8>>
     You: "Uh... Sorry. I'm not sure."
@@ -380,7 +380,7 @@ You think for a moment.
 <<jump 8>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1918,238
+__PrivCrochet_position: 1918,234
 __PrivCrochet_tags: 
 title: 8
 ---
@@ -564,7 +564,7 @@ Vera: "You can't possibly be serious right now."
     You realise the burden is now on you to explain.
 
     -> "Anthony, no one's forcing you to wear this." (CHA check)
-        <<set $diceroll = diceRoll($int)>>
+        <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 8>>        
             Anthony: "But it's the club shirt. You think all of our members are gonna like the gay shit too?"
@@ -589,7 +589,7 @@ Vera: "You can't possibly be serious right now."
             No one wants to hear that they need to calm down, especially when they're not calm. (-5% confidence)
         <<endif>>
     -> "Anthony, we're sorry." (EMP check)
-        <<set $diceroll = diceRoll($int)>>
+        <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 8>>
             Vera: "What!?"
