@@ -303,7 +303,7 @@
     {"name":"spr_s_portrait","order":8,"path":"sprites/spr_s_portrait/spr_s_portrait.yy",},
     {"name":"spr_si_portrait","order":9,"path":"sprites/spr_si_portrait/spr_si_portrait.yy",},
     {"name":"spr_stat_bar","order":2,"path":"sprites/spr_stat_bar/spr_stat_bar.yy",},
-    {"name":"spr_stat_box","order":4,"path":"sprites/spr_stat_box/spr_stat_box.yy",},
+    {"name":"spr_stat_menu_bg","order":4,"path":"sprites/spr_stat_menu_bg/spr_stat_menu_bg.yy",},
     {"name":"spr_stat_filled","order":1,"path":"sprites/spr_stat_filled/spr_stat_filled.yy",},
     {"name":"spr_tutorial_portrait","order":44,"path":"sprites/spr_tutorial_portrait/spr_tutorial_portrait.yy",},
     {"name":"spr_ui_cha","order":7,"path":"sprites/spr_ui_cha/spr_ui_cha.yy",},
