@@ -832,7 +832,8 @@ title: 2_3
     You: "Hi! I'm {$name}."
     Nadia: "Hi, {$name}! I'm Nadia."
     Nadia: "By the way, nice outfit!" <<if $name == "Charlotte">>
-    You: "Thanks!" + 5% confidence)
+    <<changeConfidence(5)>>
+    You: "Thanks!" (+5% confidence)
 <<endif>>
 <<jump 2_3_options>>
 ===
@@ -919,7 +920,7 @@ title: 2_3_options2
 ---
 Nadia: "I'm still in the work-in-progress stage, though, so bear with me!"
 
--> "Hmm. Why did you draw in anime style?" <<if !optionChosen()>>
+-> "Hmm. Why did you draw in anime style?"
     Nadia: "Well... I guess it's easier, right?"
     Nadia: "After all, it was designed for 2D artists."
     You: "That's fair."
