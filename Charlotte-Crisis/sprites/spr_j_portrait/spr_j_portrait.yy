@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"CJ_Portraits",
+  "%Name":"spr_j_portrait",
   "bboxMode":0,
   "bbox_bottom":31,
   "bbox_left":8,
@@ -12,28 +12,28 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"eb58f9ec-c6ed-4e28-82f3-204d3a0b1979","name":"eb58f9ec-c6ed-4e28-82f3-204d3a0b1979","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"bf7f474d-43cf-44af-bc00-fefa0b0c7973","name":"bf7f474d-43cf-44af-bc00-fefa0b0c7973","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":32,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"37d43ea5-f911-4a45-84da-65dd6c0104c5","blendMode":0,"displayName":"default","isLocked":false,"name":"37d43ea5-f911-4a45-84da-65dd6c0104c5","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"1b0029ab-b36a-485b-83c9-d446e4d26ef8","blendMode":0,"displayName":"default","isLocked":false,"name":"1b0029ab-b36a-485b-83c9-d446e4d26ef8","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"CJ_Portraits",
+  "name":"spr_j_portrait",
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Characters",
-    "path":"folders/Sprites/Characters.yy",
+    "name":"Portraits",
+    "path":"folders/Sprites/Characters/Portraits.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"CJ_Portraits",
+    "%Name":"spr_j_portrait",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"CJ_Portraits",
+    "name":"spr_j_portrait",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"eb58f9ec-c6ed-4e28-82f3-204d3a0b1979","path":"sprites/CJ_Portraits/CJ_Portraits.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3f1c4b9e-03eb-4e31-864f-b0490a688aa0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bf7f474d-43cf-44af-bc00-fefa0b0c7973","path":"sprites/spr_j_portrait/spr_j_portrait.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"97199928-1c9b-4592-9dae-17dc75922ae7","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

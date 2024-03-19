@@ -59,31 +59,31 @@ function draw_speaker_portrait(name) {
 			draw_sprite_ext(spr_tutorial_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
 			break;
 		case "ANTHONY":
-			draw_sprite_ext(A_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_a_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
 			break;
 		case "CHENJIE":
-			draw_sprite_ext(CJ_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);			
+			draw_sprite_ext(spr_cj_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);			
 			break;
 		case "ELEANOR":
-			draw_sprite_ext(E_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_e_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
 			break;
 		case "HELEN":
-			draw_sprite_ext(H_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_h_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
 			break;
 		case "JOANNE":
-			draw_sprite_ext(J_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_j_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
 			break;
 		case "PROF LIM":
-			draw_sprite_ext(L_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_l_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
 			break;
 		case "NADIA":
-			draw_sprite_ext(N_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_n_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
 			break;
 		case "SAGE":
-			draw_sprite_ext(S_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_s_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
 			break;
 		case "SISTER":
-			draw_sprite_ext(Si_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_si_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
 			break;
 		case "VERA":
 			draw_sprite_ext(V_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
