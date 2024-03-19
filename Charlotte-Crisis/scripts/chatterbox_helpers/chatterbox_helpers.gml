@@ -10,6 +10,8 @@ function wrap(_val, _min, _max) {
 	}
 }
 
+/// @description Used to draw dialogue and option boxes
+/// Unused
 function draw_rectangle_center(_x, _y, _width, _height, _outline, _colour, _alpha) {
 	var _old_colour = draw_get_colour();
 	var _old_alpha = draw_get_alpha();
@@ -22,6 +24,22 @@ function draw_rectangle_center(_x, _y, _width, _height, _outline, _colour, _alph
 	
 	draw_set_colour(_old_colour);
 	draw_set_alpha(_old_alpha);
+}
+
+/// Note that dialogue box and option box are centered as well.
+/// So co-ordinates are same as draw_rectangle_center
+function draw_dialogue_box(_x, _y) {
+	draw_sprite(spr_dialogue_box, 0, _x, _y);
+}
+
+/// Skillcheck false by default
+/// Selected 0 (frame 0) or 1 (frame 1)
+function draw_option_box(_x, _y, _selected, _skillcheck=false) {
+	if (_skillcheck) {
+		draw_sprite(spr_option_red, _selected, _x, _y);
+	} else {
+		draw_sprite(spr_option_blue, _selected, _x, _y);
+	}
 }
 
 function background_set_index(_arr) {
