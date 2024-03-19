@@ -10,12 +10,13 @@ draw_set_font(fnt_body);
 draw_set_valign(fa_top); // text aligned from top to bottom
 
 if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
+	// Draw dialogue box at the beginning
+	draw_dialogue_box(view_wport[0]/2, view_hport[0]);
+	
 	//var _yy = view_hport[0] - 48;
 	var _text_yy = view_hport[0] - (_margin_text) - 16;
 	var _xx; // to be set below.
-	var _x_middle = view_wport[0]/2;
 	
-	draw_dialogue_box(_x_middle, view_hport[0]);
 	//draw_rectangle_center(view_wport[0] / 2, _yy, view_wport[0], 192, false, c_dkgray, 1);//BG_ALPHA);
 	
 	draw_speaker_portrait(speaker);
@@ -43,7 +44,7 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 		var _height = 50;
 		draw_set_font(fnt_body_small);
 		var _row = 0;
-		
+		var _yy;
 		
 		for (var i = 0; i < ChatterboxGetOptionCount(chatterbox); i++) {
 			if (ChatterboxGetOptionConditionBool(chatterbox, i)) {
@@ -67,15 +68,8 @@ if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 				}
 				
 				// Highlight option being selected
-				if (option_index == i) {
-					if (_skillcheck) {
-						draw_rectangle_center(_xx, _yy, _width, _height, false, c_maroon, BG_ALPHA);
-					} else {
-						draw_rectangle_center(_xx, _yy, _width, _height, false, c_blue, BG_ALPHA);
-					}
-				} else {
-					draw_rectangle_center(_xx, _yy, _width, _height, false, c_black, BG_ALPHA);	
-				}
+				var _selected = (option_index == i);
+				draw_option_box(_xx, _yy, _selected, _skillcheck);
 				
 				var _option = ChatterboxGetOption(chatterbox, i);
 				_option = _prefix + _option + _suffix;	

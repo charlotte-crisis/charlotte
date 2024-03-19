@@ -11,7 +11,8 @@ function wrap(_val, _min, _max) {
 }
 
 /// @description Used to draw dialogue and option boxes
-/// Unused
+/// Draws at the center
+/// Unused now.
 function draw_rectangle_center(_x, _y, _width, _height, _outline, _colour, _alpha) {
 	var _old_colour = draw_get_colour();
 	var _old_alpha = draw_get_alpha();
@@ -36,9 +37,9 @@ function draw_dialogue_box(_x, _y) {
 /// Selected 0 (frame 0) or 1 (frame 1)
 function draw_option_box(_x, _y, _selected, _skillcheck=false) {
 	if (_skillcheck) {
-		draw_sprite(spr_option_red, _selected, _x, _y);
+		draw_sprite_ext(spr_option_red, _selected, _x, _y, 3.75, 3.75, 0, c_white, 1);
 	} else {
-		draw_sprite(spr_option_blue, _selected, _x, _y);
+		draw_sprite_ext(spr_option_blue, _selected, _x, _y, 3.75, 3.75, 0, c_white, 1);
 	}
 }
 
