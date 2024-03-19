@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 752,207
+__PrivCrochet_position: 764,238
 __PrivCrochet_tags: 
 title: Start
 ---
@@ -29,11 +29,11 @@ Charlotte: "Ashamed of me, is it?"
     Charlotte: "Am I hearing you right?"
     You: "You're in my head. You tell me."
     Charlotte sighs.
-    Charlotte: "Looks like you want it the hard way." (-5% gender meter) #needVariable
+    Charlotte: "Looks like you want it the hard way." (-5% gender meter) <<changeGenderMeter(-5)>>
     <<jump 2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1041,201
+__PrivCrochet_position: 1021,237
 __PrivCrochet_tags: 
 title: 2
 ---
@@ -43,7 +43,7 @@ Charlotte: "What happened? Not feeling the rush anymore when you see a nice outf
 -> "Have is have, but…"
     <<jump 2_1>>
 
--> "Yes, I don't feel it anymore." (-5% gender meter) #needVariable
+-> "Yes, I don't feel it anymore." (-5% gender meter) <<changeGenderMeter(-5)>>
     <<jump 2_2>>
 ===
 __PrivCrochet_colorID: 0
@@ -81,10 +81,10 @@ Charlotte: "More lies! What's gotten into you?"
 -> "You're a demon."
 <<jump 2_2_1>>
 
--> "It's time to reclaim my masculinity." (-5% gender meter) #needVariable
+-> "It's time to reclaim my masculinity." (-5% gender meter) <<changeGenderMeter(-5)>>
 <<jump 2_2_2>>
 
--> "I will never be a woman, and it's time we accepted that." (-5% gender meter) #needVariable
+-> "I will never be a woman, and it's time we accepted that." (-5% gender meter) <<changeGenderMeter(-5)>>
 <<jump 2_2_3>>
 ===
 __PrivCrochet_colorID: 0
@@ -137,7 +137,7 @@ Charlotte: "Then when is my time to shine? Do you not want me anymore?"
     -> "Yeah, I just want to relax now."
         Charlotte: "Doesn't dressing up make you happy anymore?"
         You: "Ugh, it's just so much effort!"
-        Charlotte: "We weren't always like this. I wonder what changed…" (-5% gender meter) #needVariable
+        Charlotte: "We weren't always like this. I wonder what changed…" (-5% gender meter) <<changeGenderMeter(-5)>>
         <<jump 3>>
     
     -> "This is precisely why I'm unhappy with you." (EMP check)
@@ -157,7 +157,7 @@ Charlotte: "Then when is my time to shine? Do you not want me anymore?"
             You: "If I can't present as female due to external circumstances, don't make it hurt for me."
             Charlotte: "That still doesn't solve the problem, but okay."
             Charlotte: "I'm sorry too. For the pain."
-            You: "It's okay. We're just built this way." (+5% gender meter) #needVariable
+            You: "It's okay. We're just built this way." (+5% gender meter) <<changeGenderMeter(5)>>
             <<jump 3>>
         <<else>>
             You: "Screw you."
@@ -186,14 +186,14 @@ Charlotte: "Do you, really?"
         Charlotte: "Well, okay… that sounds reasonable."
         Charlotte: "I'm glad that you don't totally want to repress me."
         You: "Yeah, after all, who else is gonna give me the sweet endorphins when I see a nice outfit?"
-        Charlotte: "So slay." (+5% gender meter) #needVariable
+        Charlotte: "So slay." (+5% gender meter) <<changeGenderMeter(5)>>
         <<jump 3>>
     <<else>>
         You: "I just wish you wouldn't make things so hard for me."
         Charlotte: "You wish you were rid of me, don't you?"
         Charlotte: "You don't know how I feel at all."
         Charlotte: "And because of that, you don't know how you feel."
-        Charlotte: "Keep up this charade and you're gonna suffer for it." (-5% gender meter) #needVariable
+        Charlotte: "Keep up this charade and you're gonna suffer for it." (-5% gender meter) <<changeGenderMeter(-5)>>
     <<endif>>
 ===
 __PrivCrochet_colorID: 0
@@ -216,12 +216,12 @@ You: "Hate to say it this way, but you're not the only source of my happiness."
     <<else>>
         Charlotte: "So you're saying that you can live life without me, is it?"
         Charlotte: "Good luck with that."
-        Charlotte: "At the end of the day, you're only hurting yourself by denying me." (-5% gender meter) #needVariable
+        Charlotte: "At the end of the day, you're only hurting yourself by denying me." (-5% gender meter) <<changeGenderMeter(-5)>>
         <<jump 3>>
     <<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1707,-12
+__PrivCrochet_position: 1706,-16
 __PrivCrochet_tags: 
 title: 2_1_4
 ---
@@ -264,7 +264,7 @@ Charlotte: "If you're not looking femme at all?"
             Charlotte: "Damn… I guess it's my turn to take over."
             Charlotte: "And who would have known you'd only think about this after being repressed…"
             You: "Repression just means hitting back twice as hard."
-            Charlotte: "You'd better be ready." (+5% gender meter) #needVariable
+            Charlotte: "You'd better be ready." (+5% gender meter) <<changeGenderMeter(5)>>
             <<jump 3>>
 
         -> "I won't need to be ready."
@@ -326,7 +326,7 @@ Charlotte: "If you're not looking femme at all?"
     <<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2040,124
+__PrivCrochet_position: 2041,122
 __PrivCrochet_tags: 
 title: 3
 ---
@@ -356,7 +356,7 @@ Charlotte: "But I want to hear from you first."
     <<jump 4>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1386,237
+__PrivCrochet_position: 1382,235
 __PrivCrochet_tags: 
 title: 2_2_1
 ---
@@ -386,7 +386,7 @@ Charlotte: "Nonsense. I don't control your life fully."
             Charlotte: "Why are you so uptight about this?"
             You: "My body, my rules. It's that simple."
             Charlotte: "It's my body too!"
-            You: "You don't own a damn thing here." (+ 10 XP) <<addExperience(10)>> (-5% gender meter) #needsVariable
+            You: "You don't own a damn thing here." (+ 10 XP) <<addExperience(10)>> (-5% gender meter) <<changeGenderMeter(-5)>>
             <<jump 3>>        
         <<else>>
             Charlotte: "Just how out of touch with your emotions are you?"
@@ -433,7 +433,7 @@ Charlotte: "Nonsense. I don't control your life fully."
                 You: "That's the cruel truth. Look how far behind I am compared to my peers."
                 Charlotte: "When did you become such a bore?"
                 You: "When I decided not to be a flighty, irresponsible little girl."
-                (-5% gender meter) #needsVariable
+                (-5% gender meter) <<changeGenderMeter(-5)>>
                 <<jump 3>>
             <<else>>
                 You: "Yeah, I guess…"
@@ -581,12 +581,12 @@ Charlotte: "You are beautiful! We are beautiful together."
     You: "It's that simple. I don't want to suffer anymore."
     You: "I was born male. I should remain male."
     You: "Forget all the woke ideology. We have to live in the real world."
-    You: "Male is male, female is female. No in betweens, no changing." (-5% gender meter) #needsVariable
+    You: "Male is male, female is female. No in betweens, no changing." (-5% gender meter) <<changeGenderMeter(-5)>>
     Charlotte: "Ugh. There's no getting through to you at all." (-10% confidence) <<changeConfidence(-10)>>
     <<jump 3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2254,115
+__PrivCrochet_position: 2261,120
 __PrivCrochet_tags: 
 title: 4
 ---
@@ -600,7 +600,7 @@ Charlotte: "Is family an important reason for your choices about me?"
 <<jump 4_3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2494,-124
+__PrivCrochet_position: 2494,-125
 __PrivCrochet_tags: 
 title: 4_1
 ---
@@ -681,7 +681,7 @@ Charlotte: "You can't deny that suppressing me makes you feel trapped."
         Charlotte: "What are you talking about?"
         Charlotte: "Crossdressing was always about being honest!"
         You: "Then be honest with yourself. You have no future in this household."
-        You: "And I don't have a future with you in this family." (-5% gender meter) #needVariable
+        You: "And I don't have a future with you in this family." (-5% gender meter) <<changeGenderMeter(-5)>>
         <<jump 5>>        
 
     -> "Okay, fine, I will be honest with Sis."
@@ -716,7 +716,7 @@ Charlotte: "Okay, that's a little harsh…"
 You: "This is my own choice."
 You: "Gender presentation is totally separate from what I think about family."
 You: "They are terrible people, but so are you."
-Charlotte: "You know what? That's not just harsh. It's just straight up hateful." (-5% gender meter) #needVariable
+Charlotte: "You know what? That's not just harsh. It's just straight up hateful." (-5% gender meter) <<changeGenderMeter(-5)>>
 Charlotte: "I guess I should have seen this coming…"
 Charlotte: "What with your whole 'don't dress femme' thing this week."
 <<jump 5>>
@@ -755,7 +755,7 @@ Charlotte: "Didn't you make a promise to Sis?"
 -> "She'll understand."
     Charlotte: "How?"
     You: "Maybe I talked to her wrongly the first time."
-    You: "I'll need to make her understand that you're important to me too." (+5% gender meter) #needsVariable
+    You: "I'll need to make her understand that you're important to me too." (+5% gender meter) <<changeGenderMeter(5)>>
     Charlotte: "That's a good start. After all, she is in our generation too."
     Charlotte: "And she has faced pressure from your parents."
     Charlotte: "If you want allies to face your family, she would be a good start."

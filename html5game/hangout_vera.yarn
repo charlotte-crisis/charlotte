@@ -6,7 +6,7 @@
 # I want to fight.
 # I want to give in.
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1080,118
+__PrivCrochet_position: 933,406
 __PrivCrochet_tags: 
 title: 0
 ---
@@ -21,7 +21,7 @@ Vera: "Shoot."
 <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1200,400
+__PrivCrochet_position: 1299,468
 __PrivCrochet_tags: 
 title: 1_options
 ---
@@ -38,216 +38,41 @@ What do you want to talk about?
     <<goto_room_bedroom_afterHangout()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1560,-40
+__PrivCrochet_position: 1249,141
 __PrivCrochet_tags: 
 title: 1_1
 ---
 Vera: "Heh. Where do I even begin?"
 Vera: "I think the most important thing is, just treat us as normal human beings."
 Vera: "We're people with hopes and dreams like yourselves."
-
--> "When did you know you were trans?"
-    Vera: "Hmm, very early on."
-    Vera: "It's a classic trans story."
-    Vera: "In elementary school, I felt... different from the boys."
-    You: "Elementary school?"
-    Vera: "I'm not from here, remember?"
-    Vera: "Wow, I can't imagine having to go through National Service."
-    Vera: "Anyway, I grew out my hair in middle school."
-    Vera: "By the time I came here, I was already presenting femme enough to pass."
-    Vera: "Thankfully my school back then allowed me to present how I wanted."
-    -> "Hmm, my story is different..."
-        Vera: "How so?"
-        You: "I never really thought about Charlotte until university."
-        You: "I didn't have that eureka moment in primary school..."
-        You: "So am I... you know, like you?"
-        Vera: "Well, everyone takes a different path through this."
-        Vera: "Your path is totally valid, Charlotte."
-    
-    -> "You're so brave."
-        Vera: "Heh, thanks."
-        Vera: "That's a cliche 'straight-to-queer' thing to say, but..."
-        Vera: "I'll accept it, because I know you mean it."
-        Vera: "And you're brave too. Aren't we all?"
-        Vera: "Just don't put me on a pedestal. I'm not a hero."
-    
-    -> "Did you ever get bullied for it?"
-        Vera: "Hmm... thankfully, not really?"
-        Vera: "When I was a kid, I already didn't like to hang out with the boys."
-        Vera: "There's just something about... aggression, masculinity, competition..."
-        Vera: "It's so off-putting, don't you think?"
-        You: "Absolutely."
-        Vera: "I mean, not to say those feelings are totally disgusting."
-        Vera: "But that life, it just wasn't for me."
-        Vera: "And when that happens, you befriend kinder people."
-        Vera: "So thankfully I already had a good grasp of myself and the people around me..."
-        Vera: "Which isn't something other folks might have."
-
--> "I heard you need to like, medicate, or something?"
-    Vera: "Sure I do."
-    Vera: "You might see me consume my estrogen medication sometimes."
-    Vera: "But that's simply healthcare."
-    Vera: "I mean, no one judges you for taking Panadol if you have a fever, right?"
-    You: "Yeah, I guess..."
-    Vera: "So it's the same. Except the medication is supposed to fix dysphoria."
-
-    -> "Isn't it painful?"
-        Vera: "Being trapped in a male body is more painful."
-        Vera: "I mean, you probably know a thing or two about that."
-        -> "Uh, not really..."
-            Vera: "Oh?"
-            You: "Yeah. I'm fine with being a guy."
-            Vera: "Hmm. Not even a bit of discomfort?"
-            You: "Not really... I've lived as a guy for 25 years."
-            You: "Why stop?"
-            Vera: "That's so egg of you."
-            Vera: "I mean, why not just start HRT if you're already dressing so femininely?"
-            -> "Uh, isn't that a little sudden..."
-                Vera: "What do you mean?"
-                Vera: "You're already quite far down the rabbit hole."
-                Vera: "You can finish this and be the girl you always wanted to be."
-                You: "I'm not sure..."
-                Vera: "You will be. Some day."
-            
-            -> "Come on, Vera. I already said I'm fine." (EMP 7 check)
-                <<set $diceroll = diceRoll($emp)>>
-                [You rolled a {$diceroll}.]
-                <<if $diceroll > 6>>
-                Vera: "But don't you want to transition?"
-                You: "Vera. Please. I'm not you."
-                You: "I appreciate your help, but... this is my fight."
-                You: "If I don't feel comfortable with hormones, please don't pressure me into them."
-                Vera: "But..."
-                You: "Vera, just stop. I'm scared of this."
-                Vera sighs.
-                Vera: "Sorry. I went a little too far there."
-                Vera: "I didn't mean to make you feel uncomfortable..."
-                Vera: "HRT seemed like such a natural option to me when I started."
-                Vera: "But I know it's not so for you... and I will remember that."
-                Vera: "Anyway, I also want you to know that you're valid and I support you."
-                Vera: "Even if you want to be called Charles."
-                You: "Thanks, Vera... you're a good friend." (+5% Vera relationship) <<changeRelationship("V", 5)>>
-                
-                <<else>>
-                Vera: "Nah, that doesn't convince me."
-                Vera: "You'd still want to transition, right?"
-                Vera: "Don't tell me you're comfortable ageing into some old uncle."
-                You're really not sure. (-5% confidence) <<changeConfidence(-5)>>
-                
-                <<endif>>
-            
-            -> "I guess..."
-                Vera: "I mean, to me, it looks like you're probably gonna funnel down into that."
-                Vera: "So why not start now?"
-                Vera: "You'd be a lot happier if you did. I know I was."
-                You: "You're just making me more confused..."
-                Vera: "Then make up your mind."
-                Vera: "Your trial version of femininity will expire soon."
-                Vera: "Why not make your subscription... permanent?"
-                Despite everything, you're not sure.
-
-
-        -> "Yes, I do."
-            Vera: "Hmm."
-            Vera: "Would you consider HRT then?"
-            You: "Maybe."
-            Vera: "Well, there are some medications that might be reversible..."
-            Vera: "I mean, what would I know, I don't want to reverse my transition."
-            Vera: "But maybe you would."
-            Vera: "Either way, don't ever try to start this on your own."
-            Vera: "Or even with me. I'm not studying for a doctorate in medicine."
-            You: "Yeah, I'll find someone qualified."
-            Vera: "Mhmm. Charlotte... really..."
-            Vera: "This is a difficult journey. From one girl to another..."
-            Vera: "I wish you the best."
-
-    -> "Isn't it expensive?"
-        Vera: "Yeah, it is..."
-        Vera: "I'm not gonna elaborate on my own ways of getting money for this."
-        Vera: "It's... stuff you'd better not know."
-        Vera: "But all the folks I know have their own means of raising funds."
-        -> "What do you do?"
-            Vera looks annoyed.
-            Vera: "I told you, I don't want to share."
-            Vera: "Just know that I get my medication, and you probably shouldn't use my way."
-            -> "But I want to know."
-                Vera looks agitated. (-5% Vera relationship) <<changeRelationship("V", -5)>>
-                Vera: "Last chance, Charlotte."
-                Vera: "I'm walking away if you keep pressing."
-                -> "What do you have to hide?" (-10% Vera relationship) <<changeRelationship("V", -10)>>
-                    Vera slams her palm on the table.
-                    Vera: "That's it."
-                    Vera: "If you can't respect my boundary on this, I'm sorry, we can't talk."
-                    Vera walks off.
-                    <<stop>>
-                
-                -> "Okay, fine..."
-                    Vera: "I'm sorry. I didn't mean to be rude."
-                    Vera: "But I am serious, if you need HRT, my way is probably not the best way."
-                
-            -> "Okay, fine..."
-                Vera: "I'm sorry. I didn't mean to be rude."
-                Vera: "But I am serious, if you need HRT, my way is probably not the best way."
-                Vera: "Any way except mine..."
-
-        -> "Like what?"
-            Vera: "Some work two jobs. Others do sex work."
-            Vera: "What, did you think I was going to say sex work was the sus thing?"
-            Vera: "It isn't. They deserve our respect."
-            Vera: "And sometimes that's all trans people can do..."
-            Vera: "That should never be the case."
-
-        Vera: "Still, please prioritise your own healthcare over money."
-        Vera: "Money can be earned... but you've only got one body."
-        Vera: "I know that's something boomers would say..."
-        Vera: "But I'm re-appropriating it."
-        Vera: "Trans healthcare is the same as any other form of healthcare."
-
-<<jump 1_options>>
+<<jump 1_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1560,280
+__PrivCrochet_position: 1568,403
 __PrivCrochet_tags: 
 title: 1_2
 ---
 Vera: "School is schooling, I guess."
 Vera: "I'm passionate about what I study, but..."
 Vera: "Sometimes my views clash with the prof's."
-Vera: "Some profs have been here long enough for you to feel their age."
-Vera: "And it's really annoying when they think they know it all, but..."
+-> "Oh, how so?"
+    Vera: "Some profs have been here long enough for you to feel their age."
+    Vera: "And it's really annoying when they think they know it all, but..."
+    Vera: "You know what, never mind. Things can get political real fast when I talk about this."
+
+-> "You're saying you're... smarter than the prof?"
+    Vera: "Hey, don't give me that look. It's not like they know everything either."
+    Vera: "Theory is a useful framework but lived experience is ultimately more important."
+    Vera: "So I defer to the prof's experience, but ultimately my opinions are my own."
+
 Vera: "Well, you play games, right? So you'll probably get this reference, even if I don't."
 Vera: "Profs are kind of like level 100 players and we're the level 1 players."
-Vera: "They're teaching us how to get to level 100, but..."
-Vera: "Who said that was the highest level possible?"
+Vera: "They're teaching us how to get to level 100, but they are still players after all, right?"
 Vera: "Anyway, that was just a sidetrack. What about you?"
-You: "Oh, I'm taking a gender studies class."
-Vera: "Ooh, that's fun! How's that going?"
--> "It's boring."
-    Vera: "Huh, I didn't expect that."
-    Vera: "I thought gender issues would be very relevant to Charlotte."
-    -> "It's kinda woke."
-        Vera: "A queer person thinks this class is woke?"
-        Vera: "I wonder what kind of crazy stuff they're teaching in there."
-        You: "Nah, i just don't understand it."'
-        Vera: "Hmm, well... all the best then!"
-        Vera: "I can try to explain concepts if you need me to."
-
-    -> "The teaching isn't great."
-        You: "The prof lectures for way too long."
-        You: "Then she throws us a question to discuss, which doesn't turn out very well a lot of times."
-        Vera: "It's that bad?"
-        You: "Sometimes my group mates go off on very long, self-absorbed tangents."
-        You: "It just makes my brain tired."
-
--> "It's fantastic!"
-    Vera: "Heh, what else would you have said, anyway?"
-    Vera: "Queer people in gender studies class... it's our natural habitat."
-    Vera: "It's literally our life."
-
-<<jump 1_options>>
+<<jump 1_2_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1800,120
+__PrivCrochet_position: 1047,1601
 __PrivCrochet_tags: 
 title: 2
 ---
@@ -279,7 +104,7 @@ title: 2
     Vera: "Sure, for us it's easy to point out the hate."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2040,120
+__PrivCrochet_position: 958,1336
 __PrivCrochet_tags: 
 title: 3
 ---
@@ -354,7 +179,7 @@ Vera: "So... what do you want to do?"
                 Vera: "Then does she deserve any respect that you give her?"
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2040,360
+__PrivCrochet_position: 809,1757
 __PrivCrochet_tags: 
 title: 3_2
 ---
@@ -482,7 +307,7 @@ title: 3_2
     Vera: "Just don't leave any bodies in your wake."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2600,120
+__PrivCrochet_position: 1369,1517
 __PrivCrochet_tags: 
 title: 4
 ---
@@ -494,7 +319,7 @@ Vera: "Please, have a little more empathy for the people around you."
 Vera: "Thanks for inviting me here. It was nice talking to you!"
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2280,120
+__PrivCrochet_position: 1170,1328
 __PrivCrochet_tags: 
 title: 3_3
 ---
@@ -543,7 +368,7 @@ title: 3_3
     Vera: "It's probably the happiest part of your life. So far."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2280,360
+__PrivCrochet_position: 1038,1814
 __PrivCrochet_tags: 
 title: 3_4
 ---
@@ -594,7 +419,7 @@ title: 3_4
     Vera: "Which ultimately comes back to money, doesn't it..."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1480,800
+__PrivCrochet_position: 1208,851
 __PrivCrochet_tags: 
 title: 1_3
 ---
@@ -621,7 +446,7 @@ Vera: "Everyone's gotta have an outlet. Mine just so happens to be estrogen and 
 <<jump 1_3_1>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1800,800
+__PrivCrochet_position: 1444,871
 __PrivCrochet_tags: 
 title: 1_3_1
 ---
@@ -668,4 +493,498 @@ Vera: "Well, time to flip the question back to you. How have our sessions been?"
         Vera: "As long as you think it's good enough, that's valid enough."
 
 <<jump 1_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 729,-101
+__PrivCrochet_tags: 
+title: 1_1_1
+---
+Vera: "Hmm, very early on."
+Vera: "It's a classic trans story."
+Vera: "In elementary school, I felt... different from the boys."
+You: "Elementary school?"
+Vera: "I'm not from here, remember?"
+Vera: "Wow, I can't imagine having to go through National Service."
+Vera: "Anyway, I grew out my hair in middle school."
+Vera: "By the time I came here, I was already presenting femme enough to pass."
+Vera: "Thankfully my school back then allowed me to present how I wanted."
+<<jump 1_1_1_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 928,142
+__PrivCrochet_tags: 
+title: 1_1_options
+---
+-> "When did you know you were trans?"
+<<jump 1_1_1>>
+
+-> "I heard you need to like, medicate, or something?"
+<<jump 1_1_2>>
+
+-> "Let's talk about something else." <<if visited("1_1_1") or visited("1_1_2")>>
+<<jump 1_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 977,-111
+__PrivCrochet_tags: 
+title: 1_1_2
+---
+Vera: "Sure I do."
+Vera: "You might see me consume my estrogen medication sometimes."
+Vera: "But that's simply healthcare."
+Vera: "I mean, no one judges you for taking Panadol if you have a fever, right?"
+You: "Yeah, I guess..."
+Vera: "So it's the same. Except the medication is supposed to fix dysphoria."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 725,-381
+__PrivCrochet_tags: 
+title: 1_1_1_options
+---
+-> "Hmm, my story is different..."
+<<jump 1_1_1_1>>
+
+-> "You're so brave."
+<<jump 1_1_1_2>>
+
+-> "Did you ever get bullied for it?"
+<<jump 1_1_1_3>>
+
+-> "Let's talk about something else."
+<<jump 1_1_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 731,-664
+__PrivCrochet_tags: 
+title: 1_1_1_1
+---
+Vera: "How so?"
+You: "I never really thought about Charlotte until university."
+You: "I didn't have that eureka moment in primary school..."
+You: "So am I... you know, like you?"
+Vera: "Well, everyone takes a different path through this."
+Vera: "Your path is totally valid, Charlotte." 
+Vera: "No one is too old to transition. The best time may have been before puberty but the second best time is now!" (+5% confidence) <<changeConfidence(5)>>
+<<jump 1_1_1_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 950,-660
+__PrivCrochet_tags: 
+title: 1_1_1_2
+---
+Vera: "Heh, thanks." (+5% Vera relationship) <<changeRelationship("V", 5)>>
+Vera: "That's a cliche 'straight-to-queer' thing to say, but..."
+Vera: "I'll accept it, because I know you mean it."
+Vera: "And you're brave too. Aren't we all?"
+Vera: "Just don't put me on a pedestal. I'm not a hero."
+<<jump 1_1_1_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 985,-438
+__PrivCrochet_tags: 
+title: 1_1_1_3
+---
+-> "Did you ever get bullied for it?"
+Vera: "Hmm... thankfully, not really?"
+Vera: "When I was a kid, I already didn't like to hang out with the boys."
+Vera: "There's just something about... aggression, masculinity, competition..."
+Vera: "It's so off-putting, don't you think?"
+    -> "Absolutely."
+        Vera: "I mean, not to say those feelings are totally disgusting. But that life, it just wasn't for me."
+        Vera: "And when you realise that, you befriend kinder people."
+        Vera: "So thankfully I already had a good grasp of myself and the people around me..."
+        Vera: "Which isn't something other folks might have."
+            
+    -> "I'm not sure..."
+        You: "Like, those values are what motivated me through my early years."
+        Vera: "Hmm. Well, everyone's story is different."
+        Vera: "I guess what matters is how you use those mindsets..."
+        Vera: "If you're not using them to dominate, to bully, that's still fine."
+        Vera: "And I guess you're not, because if you were, we wouldn't be talking like this, right?"
+
+<<jump 1_1_1_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1209,-282
+__PrivCrochet_tags: 
+title: 1_1_2_options
+---
+-> "Isn't it painful?"
+<<jump 1_1_2_1>>
+
+-> "Isn't it expensive?"
+<<jump 1_1_2_2>>
+
+-> "Let's talk about something else."
+<<jump 1_1_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1250,-564
+__PrivCrochet_tags: 
+title: 1_1_2_1
+---
+Vera: "Being trapped in a male body is more painful."
+Vera: "I mean, you probably know a thing or two about that."
+-> "Uh, not really..."
+    Vera: "Oh?"
+    You: "Yeah. I'm fine with being a guy."
+    Vera: "Hmm. Not even a bit of discomfort?"
+    You: "Not really... I've lived as a guy for 25 years. Why stop?"
+    Vera: "That's so egg of you."
+    Vera: "I mean, why not just start HRT if you're already dressing so femininely?"
+    -> "Uh, isn't that a little sudden..."
+        Vera: "What do you mean?"
+        Vera: "You're already quite far down the rabbit hole."
+        Vera: "You can finish this and be the girl you always wanted to be."
+        You: "I'm not sure..."
+        Vera: "You will be. Some day."
+            
+    -> "Come on, Vera. I already said I'm fine." (EMP 7 check)
+        <<set $diceroll = diceRoll($emp)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll > 6>>
+            Vera: "But don't you want to transition?"
+            You: "Vera. Please. I'm not you."
+            You: "I appreciate your help, but... this is my fight."
+            You: "If I don't feel comfortable with hormones, please don't pressure me into them."
+            Vera: "But..."
+            You: "Vera, just stop. I'm scared of this."
+            Vera sighs.
+            Vera: "Sorry. I went a little too far there."
+            Vera: "I didn't mean to make you feel uncomfortable..."
+            Vera: "HRT seemed like such a natural option to me when I started."
+            Vera: "But I know it's not so for you... and I will remember that."
+            Vera: "Anyway, I also want you to know that you're valid and I support you."
+            Vera: "Even if you want to be called Charles."
+            You: "Thanks, Vera... you're a good friend." (+5% Vera relationship) <<changeRelationship("V", 5)>>
+                
+        <<else>>
+            Vera: "Nah, that doesn't convince me."
+            Vera: "You'd still want to transition, right?"
+            Vera: "Don't tell me you're comfortable ageing into some old uncle."
+            You're really not sure. (-5% confidence) <<changeConfidence(-5)>>
+        <<endif>>
+            
+    -> "I guess..."
+        Vera: "I mean, to me, it looks like you're probably gonna funnel down into that."
+        Vera: "So why not start now?"
+        Vera: "You'd be a lot happier if you did. I know I was."
+        You: "You're just making me more confused..."
+        Vera: "Then make up your mind."
+        Vera: "Your trial version of femininity will expire soon."
+        Vera: "Why not make your subscription... permanent?"
+        Despite everything, you're not sure.
+
+-> "Yes, I do."
+    Vera: "Hmm."
+    Vera: "Would you consider HRT then?"
+    You: "Maybe."
+    Vera: "Well, there are some medications that might be reversible..."
+    Vera: "I mean, what would I know, I don't want to reverse my transition."
+    Vera: "But maybe you would."
+    Vera: "Either way, don't ever try to start this on your own."
+    Vera: "Or even with me. I'm not studying for a doctorate in medicine."
+    You: "Yeah, I'll find someone qualified."
+    Vera: "Mhmm. Charlotte... really..."
+    Vera: "This is a difficult journey. From one girl to another..."
+    Vera: "I wish you the best."
+<<jump 1_1_2_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1470,-433
+__PrivCrochet_tags: 
+title: 1_1_2_2
+---
+Vera: "Yeah, it is..."
+Vera: "I'm not gonna elaborate on my own ways of getting money for this."
+Vera: "It's... stuff you'd better not know."
+Vera: "But all the folks I know have their own means of raising funds."
+-> "What do you do?"
+    Vera looks annoyed.
+    Vera: "I told you, I don't want to share."
+    Vera: "Just know that I get my medication, and you probably shouldn't use my way."
+    -> "But I want to know."
+        Vera looks agitated. (-5% Vera relationship) <<changeRelationship("V", -5)>>
+        Vera: "Last chance, Charlotte."
+        Vera: "I'm walking away if you keep pressing."
+        -> "What do you have to hide?" (-10% Vera relationship) <<changeRelationship("V", -10)>>
+            Vera slams her palm on the table.
+            Vera: "That's it."
+            Vera: "If you can't respect my boundary on this, I'm sorry, we can't talk."
+            Vera walks off.
+            <<stop>>
+                
+        -> "Okay, fine..."
+            Vera: "I'm sorry. I didn't mean to be rude."
+            Vera: "But I am serious, if you need HRT, my way is probably not the best way."
+                
+    -> "Okay, fine..."
+        Vera: "I'm sorry. I didn't mean to be rude."
+        Vera: "But I am serious, if you need HRT, my way is probably not the best way."
+        Vera: "Any way except mine..."
+
+-> "Like what?"
+    Vera: "Some work two jobs. Others do sex work."
+    Vera: "What, did you think I was going to say sex work was the sus thing?"
+    Vera: "It isn't. They deserve our respect."
+    Vera: "And sometimes that's all trans people can do..."
+    Vera: "That should never be the case."
+
+Vera: "Still, please prioritise your own healthcare over money."
+Vera: "Money can be earned... but you've only got one body."
+Vera: "I know that's something boomers would say..."
+Vera: "But I'm re-appropriating it."
+Vera: "Trans healthcare is the same as any other form of healthcare."
+
+<<jump 1_1_2_options>>
+#^all choices in this section are supposed to lead here except "what do you have to hide". if that don't work, create a new node
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1517,102
+__PrivCrochet_tags: 
+title: 1_2_options
+---
+-> "Can't wait to graduate."
+    Vera: "Ah well. School isn't for everyone."
+    <<jump 1_2_1_options>>
+
+-> "Same old stuff."
+    <<jump 1_2_2>>
+
+-> "I'm taking a gender studies class."
+    Vera: "Ooh, that's fun! How's that going?"
+    <<jump 1_2_3_options>>
+
+-> "Let's talk about something else." <<if visited("1_2_1") or visited("1_2_2") or visited("1_2_3")>>
+    <<jump 1_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1784,103
+__PrivCrochet_tags: 
+title: 1_2_2
+---
+Vera: "Yes, it does get boring, right? We've been at this almost our entire lives."
+Vera: "I mean, I like what I study. Can't imagine being forced into studying something I didn't like."
+-> "You sound like you speak from experience."
+    Vera: "Heh. The experience comes from somewhere else."
+    Vera: "Being born into a body I don't like is kinda similar, wouldn't you think?"
+
+-> "Yeah, I never believed that either."
+    You: "Since junior college, all my academic decisions have been my own."
+    Vera: "Love that for you! Look at Charlotte being an academic weapon."
+    Vera: "But it's still the 'same old stuff'?"
+    You: "I guess there's only so much you can do within the confines of school."
+    Vera: "That's true. Also why I love research, you've got so much freedom to explore!"
+<<jump 1_2_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1668,-146
+__PrivCrochet_tags: 
+title: 1_2_1_options
+---
+-> "I want to get some real work experience."
+<<jump 1_2_1_1>>
+-> "School just sucks."
+<<jump 1_2_1_2>>
+-> "All things end, Vera. Even us."
+<<jump 1_2_1_3>>
+-> "Let's take a step back."
+<<jump 1_2_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1692,-396
+__PrivCrochet_tags: 
+title: 1_2_1_1
+---
+Vera: "Oh? Yeah, I guess that's important for a lot of us."
+Vera: "That's also something I've been neglecting, unfortunately..."
+Vera: "As much as I want to be an academic, I have to prepare a what-if in case that doesn't work out."
+Vera: "And so far, that's been kind of a blank..."
+-> "You'll find something, eventually."
+    Vera: "I want to believe that, too."
+    Vera: "We're both social sciences students, aren't we? Our majors aren't the most employable..."
+    You: "Guess we've gotta look beyond what we study and all that."
+    Vera: "I guess... but then, you just wonder what you even studied for, right?"
+    <<jump 1_2_1_options>>
+
+-> "Screw this whole rat race."
+    Vera: "Exactly, right? One of the reasons why I don't want to live here long term, too."
+    Vera: "Well, that and other gender related issues..."
+    Vera: "Still, it's not like moving to another country means I don't need a job."
+    <<jump 1_2_1_options>>
+
+-> "Seems like you're thinking about possibilities too."
+    Vera: "I mean, yeah, it is kind of a scary thing to do, isn't it?"
+    Vera: "Especially since you can't prepare for every possible outcome."
+    Vera: "I gotta say, aside from gender trouble, this is one of the things keeping me up at night."
+    Vera: "So let's hope that I can get a masters or PhD and all that, right?"
+    <<jump 1_2_1_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1918,-333
+__PrivCrochet_tags: 
+title: 1_2_1_2
+---
+Vera: "Well yeah, it can be bad sometimes. I personally enjoy it but it's not for everyone."
+Vera: "Did something happen, though?"
+-> "Nothing much, it's just boring."
+    Vera: "I get that. Sometimes you wonder if this is the best use of your youth, right?"
+    Vera: "The world out there is so big..."
+    You: "Can't wait to get out there and explore."
+    <<jump 1_2_1_options>>
+
+-> "Do you ever run out of steam halfway through the semester?"
+    Vera: "Sounds familiar, but tell me more."
+    You: "After midterms, my motivation and tenacity kinda just disappear."
+    You: "And I'm just waiting for the module to end."
+    Vera: "I feel that too, sometimes... I believe it's more common when the difficulty just scales up out of nowhere."
+    Vera: "Don't beat yourself up for that, sometimes it's just the prof's inability to balance the module's workload." (+5% confidence) <<changeConfidence(5)>>
+    <<jump 1_2_1_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1945,-115
+__PrivCrochet_tags: 
+title: 1_2_1_3
+---
+Vera: "A philosophical girlie? We stan."
+Vera: "Still... if you enjoy it, you enjoy it. Don't worry about the end."
+-> "That sounds like something Charlotte might worry about."
+    Vera: "Charlotte having an expiration date?"
+    You: "Yeah. At some point I've gotta stop, right?"
+    Vera: "Says who?"
+    You: "Uh... society, family, my body... sometimes it just feels like it's Charlotte against the world."
+    Vera: "All the more you should treasure the time with Charlotte while you still can."
+    Vera: "And, well, if you love being Charlotte so much... you can transition!"
+    Vera: "Do what's best for you. So even when you reach the end, there'll be no regrets."
+    <<jump 1_2_1_options>>
+    
+-> "Yeah, I guess I did enjoy school."
+    Vera: "Right? It's the little things that we will remember years after graduation."
+    Vera: "School policies? Ew. School materials? Take what's relevant, I guess."
+    Vera: "But for me it's always been the friends I made that I'll treasure the most."
+    <<jump 1_2_1_options>>
+    
+-> "How do you do that..."
+    Vera: "Do you constantly worry about the end?"
+    Vera: "I guess I did, once. Especially before transitioning."
+    Vera: "But then I figured, life is gonna end anyway, so why not live it on your own terms, right?"
+    Vera: "You can't just live your life in fear."
+    <<jump 1_2_1_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1805,362
+__PrivCrochet_tags: 
+title: 1_2_3_options
+---
+-> "It's boring."
+<<jump 1_2_3_1>>
+-> "It's fantastic!"
+<<jump 1_2_3_2>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2043,155
+__PrivCrochet_tags: 
+title: 1_2_3_1
+---
+Vera: "Huh, I didn't expect that."
+Vera: "I thought gender issues would be very relevant to Charlotte."
+-> "It's kinda difficult."
+    Vera: "Hmm, well... is there anything that you'd like to know?"
+    Vera: "Gender studies overlaps a bit with anthropology, so I can chip in."
+    Vera: "But take my knowledge with a pinch of salt. It's also my opinion, after all."
+    <<jump Vera_definitions>>
+-> "The teaching isn't great."
+    You: "The prof lectures for way too long."
+    You: "Then she throws us a question to discuss, which doesn't turn out very well a lot of times."
+    Vera: "It's that bad?"
+    You: "Sometimes my group mates go off on very long, self-absorbed tangents."
+    You: "It just makes my brain tired."
+    Vera: "Hmm, different strokes for different folks, I guess."
+    <<jump 1_2_options>>
+
+-> "It's not very relevant."
+    You: "I mean, as a communications student, I'm here to learn stuff like advertising, PR, media writing, right?"
+    You: "But here I am learning about why society is unfair."
+    Vera: "Are you concerned about employability?"
+    Vera: "I mean, that's valid, but that's also only one part of the picture."
+    Vera: "And such theoretical knowledge will develop you not just as a worker but as a person."
+    Vera: "In this era of late stage capitalism, isn't it even more important to keep your humanity?"
+    <<jump 1_2_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2050,425
+__PrivCrochet_tags: 
+title: 1_2_3_2
+---
+Vera: "Heh, what else would you have said, anyway?"
+Vera: "Queer people in gender studies class... it's our natural habitat."
+Vera: "I'm curious, though. What's it like?"
+-> "Lots of class participation."
+    Vera: "Oh, perfect. For me, at least. You know I'd be happy to share."
+    Vera: "Maybe I'd fight people, but I'd hope it doesn't come to that."
+    Vera: "Really, I'm just scared that I'd talk over other people. Especially if they want to share their own experiences."
+    <<jump 1_2_options>>
+-> "I don't understand some concepts..."
+    Vera: "Hmm, well... is there anything that you'd like to know?"
+    Vera: "Gender studies overlaps a bit with anthropology, so I can chip in."
+    Vera: "But take my knowledge with a pinch of salt. It's also my opinion, after all."
+    <<jump Vera_definitions>>
+-> "My groupmates are a mixed bag."
+    Vera: "Ooh, tell me more."
+    You quickly summarise your opinions of Sage, Chenjie and Joanne.
+    Vera: "Well, that sounds quite heated. Didn't know your major was as argumentative as mine."
+    Vera: "Still, just remember that you can always excuse yourself if arguments get heated, okay?"
+    Vera: "Your prof should understand that. And if she doesn't, report her."
+    <<jump 1_2_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2303,311
+__PrivCrochet_tags: 
+title: Vera_definitions
+---
+-> "What is feminism?"
+    <<jump Vera_feminism>>
+-> "What is beauty?"
+    <<jump Vera_beauty>>
+-> "What is a woman?"
+    <<jump Vera_woman>>
+-> "I'm good."
+    Vera: "Right. Where were we..." 
+    <<jump 1_2_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2324,-157
+__PrivCrochet_tags: 
+title: Vera_feminism
+---
+Vera: "Depends how far down the rabbit hole you wanna go."
+Vera: "On the surface it's just 'equal rights for women', right? But that may not be enough in some cases."
+Vera: "That's the reason why men sometimes think feminism is about female dominance."
+Vera: "But it was never meant to be that way: the same problems and institutions that affect women, affect men too."
+Vera: "So to me, feminism is... liberation. It's making life better for everyone by understanding women's issues."
+<<jump Vera_definitions>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2539,-66
+__PrivCrochet_tags: 
+title: Vera_beauty
+---
+Vera: "That thing in the eye of the bee holder, I guess."
+Vera: "Okay, jokes aside, it's quite subjective. You'd know that."
+Vera: "To define beauty would go beyond gender studies. Or anthro, for that matter."
+Vera: "I know this isn't a satisfying answer, but beauty is what you want for yourself."
+Vera: "Society might have a view of beauty, and your view might align with that, but views can change."
+<<jump Vera_definitions>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2542,186
+__PrivCrochet_tags: 
+title: Vera_woman
+---
+Vera: "Usually when people ask me this it's an insult."
+Vera: "And they usually accompany it with trans women who don't pass."
+Vera: "Personally that's very triggering for me, but let's answer your question first."
+Vera: "I guess I'd define it as a social construct? The criterion for 'woman' has been different in every society."
+Vera: "And despite what people might think, it isn't just people with vaginas."
+<<jump Vera_definitions>>
 ===
