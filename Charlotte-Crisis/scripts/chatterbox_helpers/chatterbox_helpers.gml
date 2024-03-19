@@ -27,22 +27,6 @@ function draw_rectangle_center(_x, _y, _width, _height, _outline, _colour, _alph
 	draw_set_alpha(_old_alpha);
 }
 
-/// Note that dialogue box and option box are centered as well.
-/// So co-ordinates are same as draw_rectangle_center
-function draw_dialogue_box(_x, _y) {
-	draw_sprite_ext(spr_dialogue_box, 0, _x, _y, 3.75, 3.75, 0, c_white, 1);
-}
-
-/// Skillcheck false by default
-/// Selected 0 (frame 0) or 1 (frame 1)
-function draw_option_box(_x, _y, _selected, _skillcheck=false) {
-	if (_skillcheck) {
-		draw_sprite_ext(spr_option_red, _selected, _x, _y, 3.75, 3.75, 0, c_white, 1);
-	} else {
-		draw_sprite_ext(spr_option_blue, _selected, _x, _y, 3.75, 3.75, 0, c_white, 1);
-	}
-}
-
 function background_set_index(_arr) {
 	var lay_id = layer_get_id("Background");
 	var back_id = layer_background_get_id(lay_id);
@@ -100,54 +84,4 @@ function format_odds_string(_stat, _threshold) {
 /// @return {String} "(%# chance success)"
 function format_skillcheck_indicator(_stat, _threshold) {
 	return string("[{0} {1}] ", string_upper(_stat), _threshold);
-}
-
-/// @function get_speaker_sprite(String name)
-/// @param name {String} Name of speaker
-/// @return {Asset.GMSprite} Sprite
-function draw_speaker_portrait(name) {
-	var sprite_x = 32;
-	var sprite_y = view_hport[0] - 128;
-	var sprite_xscale = 3;
-	var sprite_yscale = 3;
-	// Do comparisons only in uppercase.
-	name = string_upper(name);
-	if (name != "YOU") && (name != "") {
-		draw_rectangle(32, view_hport[0] - 128, 128, view_hport[0] - 33, false);
-	}
-	switch (name) {
-		case "TUTORIAL":
-			draw_sprite_ext(spr_tutorial_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
-			break;
-		case "ANTHONY":
-			draw_sprite_ext(A_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
-			break;
-		case "CHENJIE":
-			draw_sprite_ext(CJ_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);			
-			break;
-		case "ELEANOR":
-			draw_sprite_ext(E_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
-			break;
-		case "HELEN":
-			draw_sprite_ext(H_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
-			break;
-		case "JOANNE":
-			draw_sprite_ext(J_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
-			break;
-		case "PROF LIM":
-			draw_sprite_ext(L_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
-			break;
-		case "NADIA":
-			draw_sprite_ext(N_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
-			break;
-		case "SAGE":
-			draw_sprite_ext(S_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
-			break;
-		case "SISTER":
-			draw_sprite_ext(Si_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
-			break;
-		case "VERA":
-			draw_sprite_ext(V_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
-			break;
-	}
 }

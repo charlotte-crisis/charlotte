@@ -11,13 +11,11 @@ draw_set_valign(fa_top); // text aligned from top to bottom
 
 if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
 	// Draw dialogue box at the beginning
-	draw_dialogue_box(view_wport[0]/2, view_hport[0]);
+	draw_dialogue_box();
 	
 	//var _yy = view_hport[0] - 48;
 	var _text_yy = view_hport[0] - (_margin_text) - 16;
 	var _xx; // to be set below.
-	
-	//draw_rectangle_center(view_wport[0] / 2, _yy, view_wport[0], 192, false, c_dkgray, 1);//BG_ALPHA);
 	
 	draw_speaker_portrait(speaker);
 	
