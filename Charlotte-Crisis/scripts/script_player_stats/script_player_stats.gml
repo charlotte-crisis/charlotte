@@ -57,7 +57,7 @@ function get_name() {
 ///	@return {Bool}			True if succeed (>=) against 1d6
 function skill_check(_parameters) {
 	// Currently using 6-sided dice
-	var _score = _parameters[0] + irandom(6);
+	var _score = _parameters[0] + irandom(5) + 1;
 	show_debug_message(_parameters);
 	return (_score >= _parameters[1]);
 }
@@ -68,7 +68,7 @@ function skill_check(_parameters) {
 ///	@return {Real}			The outcome of diceroll against 1d6
 function dice_roll(_parameters) {
 	// Currently using 6-sided dice
-	return _parameters[0] + irandom(6);
+	return _parameters[0] + irandom(5) + 1;
 	
 }
 
