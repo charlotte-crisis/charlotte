@@ -56,6 +56,9 @@ BG_ALPHA = 0.9;
 	ChatterboxAddFunction("changeConfidence", change_confidence);
 	ChatterboxAddFunction("addExperience", add_experience);
 	
+	ChatterboxAddFunction("openStatMenu", open_stat_menu);
+	ChatterboxAddFunction("openWardrobeMenu", open_wardrobe_menu);
+	
 	/// Door Functions here
 	ChatterboxAddFunction("goto_room_class_1", goto_room_class_1);
 	ChatterboxAddFunction("goto_room_class_1_seated", goto_room_class_1_seated);

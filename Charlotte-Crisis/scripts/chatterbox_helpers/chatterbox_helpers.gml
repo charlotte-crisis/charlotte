@@ -85,3 +85,19 @@ function format_odds_string(_stat, _threshold) {
 function format_skillcheck_indicator(_stat, _threshold) {
 	return string("[{0} {1}] ", string_upper(_stat), _threshold);
 }
+
+/// @params _params [Diceroll, Stat]
+/// @return "[You rolled {roll} + {stat} = {diceroll}]"
+function format_diceroll_outcome(_params) {
+	var _roll = _params[0] - _params[1];
+	return string("[You rolled {0} + {1} = {2}]", _roll, _params[1], _params[0]);	
+}
+
+function open_stat_menu() {
+	obj_player.set_is_interacting(true);
+	instance_create_layer(x, y, "Helpers", obj_stat_menu);	
+}
+function open_wardrobe_menu() {
+	instance_create_layer(x, y, "Helpers", obj_clothing_menu);
+	obj_player.set_is_interacting(true);
+}

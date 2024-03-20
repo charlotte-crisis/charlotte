@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_wardrobe",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_wardrobe",
   "overriddenProperties":[
