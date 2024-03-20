@@ -1,5 +1,28 @@
 /// @description Scripts relating to DRAWING SPRITES on GUI
-#macro VIEWPORT_SCALE = 3.75
+#macro VIEWPORT_SCALE 3.75
+
+// Left aligned dialogue
+// includes dialogue box and speech
+function draw_dialogue(_speech) {
+	draw_dialogue_box();
+	
+	draw_set_font(fnt_body);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+	draw_set_color(c_white);
+	
+	var _padding_horizontal = view_wport[0] * 0.15;
+	var _linesep = 25;
+	
+	// width of text box. based on paddding so just change padding to change this.
+	var _width = view_wport[0] - (2 * _padding_horizontal);
+	
+	var _text_yy = view_hport[0] - (sprite_get_height(spr_dialogue_box) - 8) * VIEWPORT_SCALE; 
+	//32px from the top of box scaled
+		
+	draw_text_ext(_padding_horizontal, _text_yy, _speech, _linesep, _width);	
+}
+
 /// For very simple drawing without interaction.
 function draw_text_box(_speech){
 	draw_set_font(fnt_body);
