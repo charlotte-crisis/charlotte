@@ -10,27 +10,15 @@ draw_set_font(fnt_body);
 draw_set_valign(fa_top); // text aligned from top to bottom
 
 if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
-	// Draw dialogue box at the beginning
-	draw_dialogue_box();
+	
+	// Draw dialogue box and speech
+	draw_dialogue(speech, speaker_is_narrator());
+	draw_speaker_portrait(speaker);
 	
 	//var _yy = view_hport[0] - 48;
 	var _text_yy = view_hport[0] - (_margin_text) - 16;
-	var _xx; // to be set below.
-	
-	draw_speaker_portrait(speaker);
-	
-	_xx = view_wport[0] * 0.2
-	
-	// Draw the text.
-	// If inner monologue: Set italic and do not print speaker, only speech
-	if (speaker_is_narrator()) {
-		draw_set_font(fnt_body_italic);
-		draw_text_ext(_xx, _text_yy, speech, _linesep, view_wport[0] - 2*_xx);	
-		draw_set_font(fnt_body);
-		
-	} else {
-		draw_text_ext(_xx, _text_yy, speaker + ": " + speech, _linesep, view_wport[0] - 2*_xx);	
-	}
+	var _xx = view_wport[0] * 0.2;
+
 	
 	// If there are options
 	if (ChatterboxGetOptionCount(chatterbox)) {

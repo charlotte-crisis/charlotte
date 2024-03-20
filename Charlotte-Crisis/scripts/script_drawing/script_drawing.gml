@@ -3,24 +3,26 @@
 
 // Left aligned dialogue
 // includes dialogue box and speech
-function draw_dialogue(_speech) {
+function draw_dialogue(_speech, _is_italic) {
 	draw_dialogue_box();
 	
-	draw_set_font(fnt_body);
+	_is_italic ? draw_set_font(fnt_body_italic) : draw_set_font(fnt_body);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	draw_set_color(c_white);
 	
-	var _padding_horizontal = view_wport[0] * 0.15;
+	var _padding_horizontal = view_wport[0] * 0.1875; // very specific binary number
 	var _linesep = 25;
 	
 	// width of text box. based on paddding so just change padding to change this.
 	var _width = view_wport[0] - (2 * _padding_horizontal);
 	
-	var _text_yy = view_hport[0] - (sprite_get_height(spr_dialogue_box) - 8) * VIEWPORT_SCALE; 
+	var _text_yy = view_hport[0] - (sprite_get_height(spr_dialogue_box) - 10) * VIEWPORT_SCALE; 
 	//32px from the top of box scaled
 		
-	draw_text_ext(_padding_horizontal, _text_yy, _speech, _linesep, _width);	
+	draw_text_ext(_padding_horizontal, _text_yy, _speech, _linesep, _width);
+	
+	draw_set_font(fnt_body); // Clean up
 }
 
 /// For very simple drawing without interaction.
@@ -68,49 +70,56 @@ function draw_option_box(_x, _y, _selected, _skillcheck=false) {
 /// @param name {String} Name of speaker
 /// @return {Asset.GMSprite} Sprite
 function draw_speaker_portrait(name) {
-	var sprite_x = 32;
-	var sprite_y = view_hport[0] - 128;
-	var sprite_xscale = 3;
-	var sprite_yscale = 3;
+	var sprite_x = 8 * VIEWPORT_SCALE;
+	var sprite_y = view_hport[0] - (sprite_get_height(spr_dialogue_box) + 4) * VIEWPORT_SCALE;
 	// Do comparisons only in uppercase.
 	name = string_upper(name);
-	if (name != "YOU") && (name != "") {
-		draw_rectangle(32, view_hport[0] - 128, 128, view_hport[0] - 33, false);
+	// Do not draw if narrator
+	var _can_draw = (name != "YOU") && (name != ""); 
+	
+	if (_can_draw) {
+		draw_sprite_ext(spr_portrait_bg, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 	}
+	
 	switch (name) {
 		case "TUTORIAL":
-			draw_sprite_ext(spr_tutorial_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_tutorial_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 			break;
 		case "ANTHONY":
-			draw_sprite_ext(spr_a_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_a_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 			break;
 		case "CHENJIE":
-			draw_sprite_ext(spr_cj_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);			
+			draw_sprite_ext(spr_cj_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);			
 			break;
 		case "ELEANOR":
-			draw_sprite_ext(spr_e_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_e_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 			break;
 		case "HELEN":
-			draw_sprite_ext(spr_h_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_h_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 			break;
 		case "JOANNE":
-			draw_sprite_ext(spr_j_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_j_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 			break;
 		case "PROF LIM":
-			draw_sprite_ext(spr_l_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_l_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 			break;
 		case "NADIA":
-			draw_sprite_ext(spr_n_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_n_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 			break;
 		case "SAGE":
-			draw_sprite_ext(spr_s_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_s_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 			break;
 		case "SISTER":
-			draw_sprite_ext(spr_si_portrait, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_si_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 			break;
 		case "VERA":
-			draw_sprite_ext(V_Portraits, 0, sprite_x, sprite_y, sprite_xscale, sprite_yscale, 0, c_white, 1);
+			draw_sprite_ext(V_Portraits, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 			break;
+	}
+	
+	// Overlay
+	if (_can_draw) {
+		draw_sprite_ext(spr_portrait_bg, 1, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 	}
 }
 
