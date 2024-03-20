@@ -13,20 +13,21 @@ draw_text(_x_origin, _y_text, string("Points available: {0}", levels));
 // Put this here because somehow something is drawing over it.
 // draw description
 
+var _instruction = "\n\nUp and Down to select. Left and Right to allocate stats.";
 var _description = "";
 switch (current_option) {
 	case 0:
-		_description = "Intellect. Helps you become (or appear to be) knowledgeable and logical.";
+		_description = "Intellect [INT]: Helps you become (or appear to be) knowledgeable and logical." + _instruction;
 		break;
 	case 1:
-		_description = "Charisma. Enhances your ability to read the room and charm people accordingly.";
+		_description = "Charisma [CHA]: Enhances your ability to read the room and charm people accordingly." + _instruction;
 		break;
 	case 2:
-		_description = "Empathy. Truly understand what people feel and connect to them on a deeper level.";
+		_description = "Empathy [EMP]: Truly understand what people feel and connect to them on a deeper level." + _instruction;
 		break;
 	case 3:
 		_description = "Press Spacebar to confirm your stat allocations. Escape to cancel and discard changes.";
 		break;
 }
 
-draw_text_box(_description);
+draw_dialogue(_description);

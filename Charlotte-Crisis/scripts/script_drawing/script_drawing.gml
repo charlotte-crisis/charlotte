@@ -3,7 +3,7 @@
 
 // Left aligned dialogue
 // includes dialogue box and speech
-function draw_dialogue(_speech, _is_italic) {
+function draw_dialogue(_speech, _is_italic=false) {
 	draw_dialogue_box();
 	
 	if (_is_italic) {
