@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"UI",
-    "path":"folders/Sprites/UI.yy",
+    "name":"BUTTONS",
+    "path":"folders/Sprites/UI/BUTTONS.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

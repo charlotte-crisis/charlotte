@@ -19,6 +19,8 @@ npc_knows = {
 	"S":  false, //Sage
 }
 
+relationships_menu_open = false;
+
 #region Setters and Getters
 
 	function change_relationship(_name, _amount) {
