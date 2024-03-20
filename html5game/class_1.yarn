@@ -873,7 +873,7 @@ Choose one...
 
 -> No (Go back).
 
--> Yes
+-> Yes #continue
     You take a seat.
     <<goto_room_class_1_seated()>>
 ===
