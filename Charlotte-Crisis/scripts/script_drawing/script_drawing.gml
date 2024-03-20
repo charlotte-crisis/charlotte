@@ -6,7 +6,11 @@
 function draw_dialogue(_speech, _is_italic) {
 	draw_dialogue_box();
 	
-	_is_italic ? draw_set_font(fnt_body_italic) : draw_set_font(fnt_body);
+	if (_is_italic) {
+		draw_set_font(fnt_body_italic);
+	} else {
+		draw_set_font(fnt_body);
+	}
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	draw_set_color(c_white);
