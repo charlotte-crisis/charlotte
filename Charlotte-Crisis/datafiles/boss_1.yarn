@@ -143,7 +143,7 @@ Sister: "But ultimately we live in a society where happiness comes second."
 Sister: "Don't you know about the social contract?"
 Sister: "You must give up some freedom, for security."
 
--> [CHA 4] "Those who give up liberty for security deserve neither." #skillcheck #cha # 8
+-> "Those who give up liberty for security deserve neither." #skillcheck #cha # 8
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll >= 8>>
@@ -233,7 +233,7 @@ Sister: "You must give up some freedom, for security."
             <<changeConfidence(-10)>>
             You: "Well, that was depressing." (-10% confidence)
         <<endif>>
-    -> "You needed to rest at those points." (INT check)
+    -> "You needed to rest at those points." #skillcheck #int # 8
         You: "Your job is tough. You can't just keep chugging along without rest and relaxation."
         Sister: "But my colleagues - "
         You: "They're not you."
@@ -919,7 +919,7 @@ Sister: "I know you're my brother and all, but I need a break for a while."
 Sister: "Please don't be so toxic to Mother, okay?"
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1998,239
+__PrivCrochet_position: 2000,240
 __PrivCrochet_tags: 
 title: 7
 ---
