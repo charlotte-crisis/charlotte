@@ -6,7 +6,9 @@ if (state == 0) {
 	timer++;
 	
 	if (timer >= FADE_DURATION) {
-		room_goto(target_room);
+		if (change_room) {
+			room_goto(target_room);
+		}
 		state = 1;
 	}
 // Fade exit

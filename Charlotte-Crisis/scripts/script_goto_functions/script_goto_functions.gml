@@ -23,11 +23,13 @@
 	}
 
 	/// @function fade_room(_room)
-	/// @param _room The target room to move to
-	function fade_room(_room) {
+	/// @param _room				The target room to move to
+	/// @param {Bool} _change_room	true if there is a room to change to
+	function fade_room(_room, _change_room = true) {
 		// Create fade object at top left corner at highest depth
 		var _inst = instance_create_depth(0, 0, 0, obj_fade);
 		_inst.target_room = _room;
+		_inst.change_room = _change_room;
 }
 #endregion
 
@@ -101,7 +103,7 @@ function goto_room_bedroom(){
 	// Change background to night
 	var lay_id = layer_get_id("Background");
 	var back_id = layer_background_get_id(lay_id);
-	layer_background_sprite(back_id, 1);
+	layer_background_sprite(back_id, spr_hostelnight_bars);
 }
 
 function goto_room_bedroom_after_cca(){
@@ -114,7 +116,7 @@ function goto_room_bedroom_after_cca(){
 }
 
 function goto_room_bedroom_frombed() {
-	fade_room(room);
+	fade_room(room, false);
 	obj_player.x = 30;
 	obj_player.y = 74;
 	obj_player.facing_direction = 1;
@@ -123,7 +125,7 @@ function goto_room_bedroom_frombed() {
 	// Change background to day
 	var lay_id = layer_get_id("Background");
 	var back_id = layer_background_get_id(lay_id);
-	layer_background_sprite(back_id, 0);
+	layer_background_sprite(back_id, spr_hostel_bars);
 }
 
 function goto_room_bedroom_afterHangout(){

@@ -3,6 +3,8 @@
 
 FADE_DURATION = 10;     // 60 steps = 1 sec or so
 FADE_COLOUR = c_black;  // colour of fade
+
+change_room = true;		// set to false if there is no room change needed
 target_room = room;		// To be set by function call
 
 // variables
