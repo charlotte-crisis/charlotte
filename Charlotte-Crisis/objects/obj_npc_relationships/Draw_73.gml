@@ -6,8 +6,9 @@ var _y_origin = 32;
 var _x_row_starting = _x_origin - 72 + 12;
 var _y_row_starting = _y_origin + 11;
 
-var _x_colsize = 44;
+var _x_colsize = 42;
 var _y_rowsize = 42;
+var _emote_offset = 14;
 
 if (relationships_menu_open) {
 	// Draw background
@@ -19,7 +20,7 @@ if (relationships_menu_open) {
 			var curr_x = _x_row_starting + (col * _x_colsize);
 			var curr_y = _y_row_starting + (row * _y_rowsize);
 			draw_sprite(spr_portrait_bg, 0, curr_x, curr_y);
-			draw_sprite(spr_relationship_level, 0, curr_x, curr_y);
+			draw_sprite(spr_relationship_level, 0, curr_x + _emote_offset, curr_y + _emote_offset/2);
 		}
 	}
 }
