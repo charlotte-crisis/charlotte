@@ -57,7 +57,8 @@ function get_mc_sprite(_gender, _layer, _outfit) {
 /// Note that dialogue box and option box are centered as well.
 /// So co-ordinates are same as draw_rectangle_center
 function draw_dialogue_box() {
-	draw_sprite_ext(spr_dialogue_box, 0, view_wport[0]/2, view_hport[0], 3.75, 3.75, 0, c_white, 1);
+	draw_sprite_ext(spr_dialogue_box, 0, view_wport[0]/2, view_hport[0],
+			VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 }
 
 /// Skillcheck false by default
