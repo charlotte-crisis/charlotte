@@ -374,6 +374,7 @@
     {"id":{"name":"spr_stat_box_guide","path":"sprites/spr_stat_box_guide/spr_stat_box_guide.yy",},},
     {"id":{"name":"spr_stat_filled_end","path":"sprites/spr_stat_filled_end/spr_stat_filled_end.yy",},},
     {"id":{"name":"spr_stat_filled","path":"sprites/spr_stat_filled/spr_stat_filled.yy",},},
+    {"id":{"name":"spr_stat_icons","path":"sprites/spr_stat_icons/spr_stat_icons.yy",},},
     {"id":{"name":"spr_stat_menu_bg","path":"sprites/spr_stat_menu_bg/spr_stat_menu_bg.yy",},},
     {"id":{"name":"spr_tutorial_portrait","path":"sprites/spr_tutorial_portrait/spr_tutorial_portrait.yy",},},
     {"id":{"name":"spr_ui_cha","path":"sprites/spr_ui_cha/spr_ui_cha.yy",},},

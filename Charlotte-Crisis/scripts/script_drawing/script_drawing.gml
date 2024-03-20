@@ -92,8 +92,13 @@ function draw_speaker_portrait(name) {
 }
 
 #region Stat menu
-	// To be used in draw step
-	// Not draw_gui
+	/// @description Draw a singular stat bar
+	/// To be used in draw step, not Draw GUI
+	/// 
+	/// @param _xx
+	/// @param _yy
+	/// @param _selected		Whether this bar is currently being selected (highlighted)
+	/// @param _amount_filled	The amount of stats filled in the bar (max 9)
 	function draw_stat_bar(_xx, _yy, _selected, _amount_filled) {
 		// draw the background bar
 		draw_sprite(spr_stat_bar, _selected, _xx, _yy);
