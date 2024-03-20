@@ -1,22 +1,3 @@
-/// @description Draw Stat Menu
-var _scale = 3.75;
-var _x_middle = view_wport[0]/2;
-var _y_middle = view_hport[0]/2;
-
-// Background
-draw_sprite_ext(spr_stat_menu_bg, 0, _x_middle ,_y_middle, _scale, _scale, 0, c_white, 1);
-
-// Draw bars 3 times}
-var _x_bar = _x_middle - 32; // Magic number for now
-var _y_bar_starting = _y_middle + 32;
-var _y_bar_margin = 32;
-var _y_bar;
-
-// INT, CHA, EMP
-draw_stat_bar(0, current_option);
-draw_stat_bar(1, current_option);
-draw_stat_bar(2, current_option);
-
 /// <-- Everything below this is old -->
 //draw_set_valign(fa_middle); // Set text align middle
 //draw_set_halign(fa_center);

@@ -1,5 +1,5 @@
 /// @description Scripts relating to DRAWING SPRITES on GUI
-
+#macro VIEWPORT_SCALE = 3.75
 /// For very simple drawing without interaction.
 function draw_text_box(_speech){
 	draw_set_font(fnt_body);
@@ -91,32 +91,21 @@ function draw_speaker_portrait(name) {
 	}
 }
 
-/// @param _row 0 for int, 1 for cha, 2 for emp
-function draw_stat_bar(_row, current_option) {
-	var _scale = 3.75;
-	var _x_middle = view_wport[0]/2;
-	var _y_middle = view_hport[0]/2;
-	// Draw bars 3 times}
-	var _x_bar = _x_middle - 32; // Magic number for now
-	var _y_bar_starting = _y_middle + 32;
-	var _y_bar_margin = 32;
-	var _y_bar;
-	var _selected;
-
-	// INT, CHA, EMP
-	_y_bar = _y_bar_starting + (_y_bar_margin * _row);
-	_selected = (current_option == _row);
+#region Stat menu
+	// To be used in draw step
+	// Not draw_gui
+	function draw_stat_bar(_xx, _yy, _selected, _amount_filled) {
+		// draw the background bar
+		draw_sprite(spr_stat_bar, _selected, _xx, _yy);
 	
-	// draw the background bar
-	draw_sprite_ext(spr_stat_bar, _selected, _x_bar, _y_bar, _scale, _scale, 0, c_white, 1);
-	
-	// draw as many filled in squares as needed
-	for (var i = 0; i < stats_array[_row]; i++) {
-		var _x_bar_current = _x_bar + (15*i); // yay magic number
-		if (i == 8) { //ninth element
-			draw_sprite_ext(spr_stat_filled_end, _selected, _x_bar_current, _y_bar, _scale, _scale, 0, c_white, 1);
-		} else {
-			draw_sprite_ext(spr_stat_filled, _selected, _x_bar_current, _y_bar, _scale, _scale, 0, c_white, 1);	
+		// draw as many filled in squares as needed
+		for (var i = 0; i < _amount_filled; i++) {
+			var _xx_current = _xx + (sprite_get_width(spr_stat_filled) * i); // Increment X based on stat bar size
+			if (i == 8) { //ninth element
+				draw_sprite(spr_stat_filled_end, _selected, _xx_current, _yy);
+			} else {
+				draw_sprite(spr_stat_filled, _selected, _xx_current, _yy);
+			}
 		}
 	}
-}
+#endregion

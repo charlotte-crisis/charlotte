@@ -42,7 +42,7 @@
     ],
     "top":10,
   },
-  "origin":4,
+  "origin":1,
   "parent":{
     "name":"STATS",
     "path":"folders/Sprites/UI/STATS.yy",
@@ -95,7 +95,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":48,
-    "yorigin":48,
+    "yorigin":0,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
