@@ -9,6 +9,8 @@
 	#macro X_HOUSE_DOOR 30
 	#macro Y_HEIGHT 74
 	#macro Y_HEIGHT_NOTEXT 69 // Set this as the height if you enter a room without text.
+							  // For some reason when you enter a room without chatterbox text at
+							  // the start, you will be set about 5 pixels lower. I dont get it either
 
 	/// @function set_player_position(_x, _y, _facing, _sitting)
 	/// @description Sets player's x, y, facing direction, sitting sprite
