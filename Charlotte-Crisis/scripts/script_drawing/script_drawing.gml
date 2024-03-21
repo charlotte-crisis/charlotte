@@ -150,4 +150,5 @@ function draw_speaker_portrait(name) {
 			}
 		}
 	}
+
 #endregion

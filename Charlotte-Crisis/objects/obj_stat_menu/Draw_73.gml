@@ -37,7 +37,9 @@ for (var i = 0; i < 3; i++) {
 		
 		// Icon
 		var _y_stat_icon_current = _y_stat_icons_starting + (i * _y_bar_margin);
-		draw_sprite(spr_stat_icons, i, _x_stat_icons, _y_stat_icon_current);
+		
+		// Not drawing icons rn
+		// draw_sprite(spr_stat_icons, i, _x_stat_icons, _y_stat_icon_current);
 	}
 }
 
