@@ -9,6 +9,11 @@ characters = [
 	["A", "V", "N"]
 ];
 
+character_names = [
+	["CHENJIE", "SAGE", "JOANNE"],
+	["ANTHONY", "VERA", "NADIA"]
+];
+
 character_sprites = [
 	[spr_cj_portrait, spr_s_portrait, spr_j_portrait],
 	[spr_a_portrait, spr_v_portrait, spr_n_portrait]
