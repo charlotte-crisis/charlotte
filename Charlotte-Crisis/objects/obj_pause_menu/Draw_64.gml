@@ -1,7 +1,7 @@
 /// @description Draw menu
 // You can write your code in this editor
 var _x_origin = view_wport[0]/2;
-var _y_origin = 32;
+var _y_origin = 120; // 32 * 3.75
 
 var _x_row_starting = _x_origin - 72 + 12;
 var _y_row_starting = _y_origin + 11;
