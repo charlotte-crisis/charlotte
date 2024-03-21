@@ -45,6 +45,7 @@
     {"name":"Layer 2 - Head","order":2,"path":"folders/Sprites/Female MC/Layer 2 - Head.yy",},
     {"name":"Layer 3 - Torso","order":3,"path":"folders/Sprites/Female MC/Layer 3 - Torso.yy",},
     {"name":"Layer 4 - Legs","order":4,"path":"folders/Sprites/Female MC/Layer 4 - Legs.yy",},
+    {"name":"SPLASH","order":13,"path":"folders/Sprites/SPLASH.yy",},
     {"name":"Male MC","order":10,"path":"folders/Sprites/Male MC.yy",},
     {"name":"Layer 1 - Bottoms","order":1,"path":"folders/Sprites/Male MC/Layer 1 - Bottoms.yy",},
     {"name":"Layer 2 - Head","order":2,"path":"folders/Sprites/Male MC/Layer 2 - Head.yy",},
