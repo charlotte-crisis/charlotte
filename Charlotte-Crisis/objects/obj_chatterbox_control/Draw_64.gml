@@ -34,7 +34,7 @@ if (IsChatterbox(chatterbox) && obj_player.is_talking) {
 		
 		for (var i = 0; i < ChatterboxGetOptionCount(chatterbox); i++) {
 			if (ChatterboxGetOptionConditionBool(chatterbox, i)) {
-				_yy = (view_hport[0] / 8) * (_row + 2); 
+				_yy = (view_hport[0] / 10) * (_row + 2); 
 				// Increment row ONLY if an option was displayed
 				// Prevent gaps
 				var _metadata = ChatterboxGetOptionMetadata(chatterbox, i);
