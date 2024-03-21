@@ -26,7 +26,7 @@ Going to bed will continue to the next scene. You may still change your stats or
     <<goto_room_boss_1()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 641,-59
+__PrivCrochet_position: 640,-40
 __PrivCrochet_tags: 
 title: 1
 ---
@@ -34,4 +34,18 @@ Well, that was a fun hangout.
 It served as a good enough distraction.
 But you're going home tomorrow, where you'll see your sister.
 (You can level up at your desk or change your clothes at your wardrobe.)
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 920,-40
+__PrivCrochet_tags: 
+title: desk
+---
+<<openStatMenu()>>
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 1160,-40
+__PrivCrochet_tags: 
+title: wardrobe
+---
+<<openWardrobeMenu()>>
 ===
