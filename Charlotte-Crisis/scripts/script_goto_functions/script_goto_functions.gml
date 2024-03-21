@@ -8,6 +8,7 @@
 	#macro X_HANGOUT_DOOR 159
 	#macro X_HOUSE_DOOR 30
 	#macro Y_HEIGHT 74
+	#macro Y_HEIGHT_NOTEXT 69 // Set this as the height if you enter a room without text.
 
 	/// @function set_player_position(_x, _y, _facing, _sitting)
 	/// @description Sets player's x, y, facing direction, sitting sprite
@@ -36,7 +37,7 @@
 #region Classroom Gotos
 	function goto_room_class_1(){
 		fade_room(rm_class_1);
-	
+		
 		set_player_position(X_CLASS_DOOR, Y_HEIGHT, -1);
 	
 		// Need to load then create.
@@ -201,10 +202,10 @@ function goto_room_bedroom_afterHangout(){
 #region Boss
 	function goto_room_boss_1() {
 		fade_room(rm_house_sister);
-		set_player_position(X_HOUSE_DOOR, Y_HEIGHT, 1);
+		set_player_position(X_HOUSE_DOOR, Y_HEIGHT_NOTEXT, 1);
 		
 		ChatterboxLoadFromFile("boss_1.yarn");
 		obj_chatterbox_control.chatterbox = ChatterboxCreate("boss_1.yarn");
-		ChatterboxJump(chatterbox, "1");
+		ChatterboxJump(chatterbox, "0");
 	}
 #endregion

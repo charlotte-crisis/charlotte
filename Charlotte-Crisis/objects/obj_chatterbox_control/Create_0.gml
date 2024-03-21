@@ -22,7 +22,7 @@ previous_dialogue = "";
 	///@description Jump to a node and update.
 	///		To be used when the player is
 	///		starting a new dialogue
-	function chatterbox_set(_node_name) {
+	chatterbox_set = function(_node_name) {
 		ChatterboxJump(chatterbox, _node_name);
 		chatterbox_update();
 		obj_player.set_is_talking(true);
