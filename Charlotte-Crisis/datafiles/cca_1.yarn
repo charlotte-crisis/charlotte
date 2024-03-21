@@ -751,7 +751,7 @@ What do you say?
     -> "Did it take you long to make this?" <<if !optionChosen()>>
         Vera: "Haha, I guess not... I had the idea in mind already."
         Vera: "But it's more complex than just spreading colour over paper."
-        <<Jump back to "2_options">>
+        <<jump 2_1_options>>
     
     -> "What do the rainbows mean?" <<if !optionChosen()>> #skillcheck #int # 5
         Vera: "Take a guess."
