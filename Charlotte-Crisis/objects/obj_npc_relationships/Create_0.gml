@@ -37,6 +37,21 @@ npc_knows = {
 	function get_relationship(_name) {
 		return npc_relationships[$ _name];	
 	}
+	
+	// returns threshold
+	// 0 if bad
+	// 1 if Neutral
+	// 2 if Good
+	get_relationship_level = function(_name) {
+		var _rs = npc_relationships[$ _name];
+		if (_rs >= 70) {
+			return 2;	
+		} else if (_rs > 30) {
+			return 1;	
+		} else {
+			return 0;	
+		}
+	}
 
 	/// @description the NPC's value will be set to "true"
 	/// to indicate they know about charlotte
