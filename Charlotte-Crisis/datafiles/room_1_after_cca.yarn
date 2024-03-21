@@ -67,3 +67,17 @@ title: bed
 ---
 <<jump 0_revisit>>
 ===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1174,435
+__PrivCrochet_tags: 
+title: desk
+---
+<<openStatMenu()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1430,442
+__PrivCrochet_tags: 
+title: wardrobe
+---
+<<openWardrobeMenu()>>
+===
