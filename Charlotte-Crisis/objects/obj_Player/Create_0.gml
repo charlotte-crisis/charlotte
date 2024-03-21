@@ -16,11 +16,11 @@ is_interacting = false;
 is_sitting = false;
 
 #region Functions to alter stats and other stuff
-set_is_talking = function(_is_talk) {
+function set_is_talking(_is_talk) {
 	is_talking = _is_talk;
 }
 
-set_is_interacting = function(_is_interact) {
+function set_is_interacting(_is_interact) {
 	is_interacting = _is_interact;
 }
 

@@ -23,15 +23,17 @@ if (is_open) {
 			var curr_y = _y_row_starting + (row * _y_rowsize);
 		
 			// Person
-			draw_sprite_ext(spr_a_portrait, -1, curr_x, curr_y,
+			draw_sprite_ext(character_sprites[row][col], -1, curr_x, curr_y,
 					portrait_scale, portrait_scale, 0, c_white, 1);
 					
 			// Foreground Frame
 			draw_sprite_ext(spr_portrait_bg, 1, curr_x, curr_y,
 					portrait_scale, portrait_scale, 0, c_white, 1);
 			
+			// Get character relationship
+			var _rs = obj_npc_relationships.get_relationship(characters[row][col]);
 			// Emote
-			draw_sprite_ext(spr_relationship_level, 0, curr_x + _emote_offset, curr_y + _emote_offset,
+			draw_sprite_ext(spr_relationship_level, get_relationship_threshold(_rs), curr_x + _emote_offset, curr_y + _emote_offset,
 					portrait_scale, portrait_scale, 0, c_white, 1);		
 		}
 	}
