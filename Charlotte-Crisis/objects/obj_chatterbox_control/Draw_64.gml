@@ -3,7 +3,8 @@
 draw_set_font(fnt_body);
 draw_set_valign(fa_top); // text aligned from top to bottom
 
-if (IsChatterbox(chatterbox) && speaker_and_speech != undefined) {
+// speaker_and_speech != undefined 
+if (IsChatterbox(chatterbox) && obj_player.is_talking) {
 	var _is_narrator = speaker_is_narrator();
 	var _dialogue = "";
 	

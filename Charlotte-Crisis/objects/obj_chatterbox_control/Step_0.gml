@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (obj_player.is_talking) {
+if (obj_player.is_talking) && !obj_player.is_interacting {
 	var _count = ChatterboxGetOptionCount(chatterbox);
 
 	if (ChatterboxIsWaiting(chatterbox) && keyboard_check_pressed(vk_space)) {
