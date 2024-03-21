@@ -16,11 +16,11 @@ is_interacting = false;
 is_sitting = false;
 
 #region Functions to alter stats and other stuff
-function set_is_talking(_is_talk) {
+set_is_talking = function(_is_talk) {
 	is_talking = _is_talk;
 }
 
-function set_is_interacting(_is_interact) {
+set_is_interacting = function(_is_interact) {
 	is_interacting = _is_interact;
 }
 
@@ -28,11 +28,11 @@ set_gender = function(_gender) {
 	gender = _gender;
 }
 
-function get_player_clothes() {
+get_player_clothes = function() {
 	return current_clothes;	
 }
 
-function get_player_gender() {
+get_player_gender = function() {
 	return gender;
 }
 
