@@ -19,11 +19,6 @@ npc_knows = {
 	"S":  false, //Sage
 }
 
-// Relationships menu part
-relationships_menu_open = false;
-current_row = 0; // Max 0, 1
-current_col = 0; // Max 0, 1, 2
-
 #region Setters and Getters
 
 	function change_relationship(_name, _amount) {
