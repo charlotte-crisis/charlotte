@@ -1,7 +1,7 @@
 #__PrivCrochet_version:1
 # if you've already visited then it will show the concise version.
 # Interacting with mirror
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 2
 __PrivCrochet_position: 600,360
 __PrivCrochet_tags: 
 title: door
@@ -24,4 +24,46 @@ Do you wish to continue?
 -> Yes (Start the game!) #continue
     
     <<goto_room_class_1()>>
+===
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 600,120
+__PrivCrochet_tags: 
+title: bed
+---
+You just got out of bed, and now you're ready to take on the day.
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 840,360
+__PrivCrochet_tags: 
+title: wardrobe
+---
+You would love to look inside your wardrobe, but you've already decided what to wear for today.
+===
+__PrivCrochet_colorID: 7
+__PrivCrochet_position: 840,120
+__PrivCrochet_tags: 
+title: desk
+---
+<<if visited("desk") > 1>>
+    You stand by your desk.
+    -> Read the instructions again.
+        <<jump desk_instructions>>
+    -> Allocate stats
+        <<openStatMenu()>>
+<<else>>
+    <<jump desk_instructions>>
+<<endif>>
+===
+__PrivCrochet_colorID: 7
+__PrivCrochet_position: 1080,120
+__PrivCrochet_tags: 
+title: desk_instructions
+---
+In this game, you can allocate stats to Intelligence (INT), Charisma (CHA), and Empathy (EMP).
+Sometimes in dialogue, you will have to select options.
+Some dialogue outcomes are based on skill checks, whereby your success depends on your stats and a dice roll.
+You can allocate an additional stat each time you level up, which is each time you hit 50 Experience Points (XP).
+Use the arrow keys to navigate the stat menu.
+// Maybe have some splash art?
+<<openStatMenu()>>
 ===
