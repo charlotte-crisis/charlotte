@@ -7,6 +7,8 @@ var _y_origin = 120; // 32 * 3.75
 var _x_text_starting = _x_origin - 225; // 60 * 3.75
 var _y_text_starting = _y_origin + 45;  // 12 * 3.75
 
+var _y_gender_meter = _y_origin + 240;  // MASSIVE agaration
+
 /// Right Hand Side variables
 var _x_row_starting = _x_origin - 30; // 8px * 3.75 // Make it between 22 to 30
 var _y_row_starting = _y_origin + 110; // 32 * 3.75
@@ -16,7 +18,7 @@ var _y_rowsize = 120; // 32 * 3.75
 
 var portrait_scale = 2.25;	// Scale smaller rather than 3.75
 var _emote_offset = 27;		// 12 * 3.75
-var _text_y_offset = -25;   // Put it above
+var _text_y_offset = -25;   // This is for character portraits btw
 
 if (is_open) {
 	draw_set_font(fnt_mono);
@@ -28,11 +30,15 @@ if (is_open) {
 	draw_sprite_ext(spr_relationship_menu_bg, -1, _x_origin, _y_origin, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 	
 	///=== LEFT HAND SIDE ===///
-	var _name = obj_player.get_player_gender() ? "Charlotte" : "Charles";
-	draw_text(_x_text_starting, _y_text_starting, "NAME \n" + _name);
+	// Using the script from script_player_stats
+	draw_text(_x_text_starting, _y_text_starting, "NAME \n" + get_name());
 	
 	var _room = "Menu"
 	draw_text(_x_text_starting, _y_text_starting + 64, "STAGE \n" + _room);
+	
+	draw_text(_x_text_starting, _y_text_starting + 128, "GENDER METER \n" + string(get_gender_meter()));
+	
+	draw_sprite_ext(spr_gender_meter, 0, _x_text_starting - 6, _y_gender_meter, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 	
 	///=== RIGHT HAND SIDE ===///
 	draw_text(_x_row_starting, _y_text_starting, "RELATIONSHIPS");

@@ -396,6 +396,7 @@
     {"id":{"name":"spr_ui_left","path":"sprites/spr_ui_left/spr_ui_left.yy",},},
     {"id":{"name":"spr_ui_right","path":"sprites/spr_ui_right/spr_ui_right.yy",},},
     {"id":{"name":"spr_v_portrait","path":"sprites/spr_v_portrait/spr_v_portrait.yy",},},
+    {"id":{"name":"spr_gender_meter","path":"sprites/spr_gender_meter/spr_gender_meter.yy",},},
     {"id":{"name":"up_strip4","path":"sprites/up_strip4/up_strip4.yy",},},
     {"id":{"name":"V_idle_strip2","path":"sprites/V_idle_strip2/V_idle_strip2.yy",},},
     {"id":{"name":"V_sat_strip2","path":"sprites/V_sat_strip2/V_sat_strip2.yy",},},

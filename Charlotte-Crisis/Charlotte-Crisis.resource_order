@@ -326,6 +326,7 @@
     {"name":"spr_ui_left","order":5,"path":"sprites/spr_ui_left/spr_ui_left.yy",},
     {"name":"spr_ui_right","order":6,"path":"sprites/spr_ui_right/spr_ui_right.yy",},
     {"name":"spr_v_portrait","order":10,"path":"sprites/spr_v_portrait/spr_v_portrait.yy",},
+    {"name":"spr_gender_meter","order":21,"path":"sprites/spr_gender_meter/spr_gender_meter.yy",},
     {"name":"up_strip4","order":2,"path":"sprites/up_strip4/up_strip4.yy",},
     {"name":"V_idle_strip2","order":6,"path":"sprites/V_idle_strip2/V_idle_strip2.yy",},
     {"name":"V_sat_strip2","order":7,"path":"sprites/V_sat_strip2/V_sat_strip2.yy",},
