@@ -200,122 +200,11 @@ Anthony: "Why should I feel sorry for telling the truth?"
 <<jump 1_3_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 4084,1188
-__PrivCrochet_tags: 
-title: 2
----
--> "What do you think of Nadia?"
-    Anthony: "Just another girl lor."
-    Anthony: "Always drawing the hentai."
-
--> "What do you think of Vera?"
-    Anthony: "That crazy bitch is everything wrong with Art Club."
-    Anthony: "Always bringing the woke shit in. Not focusing on the art."
-
--> "What do you think of Eleanor?"
-    Anthony declines to comment.
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 4205,1197
-__PrivCrochet_tags: 
-title: 3
----
--> "I need your opinion on my family situation."
-    Anthony: "I don't know why you want to ask me of all people."
-    You: "My mother hates Charlotte. I think I'll have to confront her about this soon."
-    Anthony: "Very simple, right?"
-    Anthony: "Just stop."
-
-    -> "It's not that easy."
-        Anthony: "I mean, if you were normal, it would be."
-        Anthony: "Why do you purposely choose to make things difficult?"
-
-        -> "I don't know, I just can't."
-            Anthony: "Then you're just sick in the head."
-
-        -> "What if your parents forced you to do something you don't like?"
-            Anthony: "Isn't that just life?"
-            Anthony: "Then just move out and don't contact them ever again."
-            Anthony: "I would do that lah, but... no money..."
-
-    -> "You mean just give in to what she wants?"
-        Anthony: "I also don't like my parents but I won't go this extreme to rebel."
-
-        -> "Is there something wrong with your parents too?"
-            Anthony: "Well... maybe? They nag at me a lot."
-            Anthony: "They keep asking when I'm going to bring back a girlfriend..."
-            Anthony: "Or get a job..."
-            Anthony: "Basically, they want to know everything about what I'm doing."
-
-            -> "That sounds tough."
-                Anthony: "I mean, what to do?"
-                You: "I can relate to you, honestly."
-                You: "My parents are also terrible, even before I started crossdressing."
-                Anthony: "Average Singaporean parent moment."
-            
-            -> "Meh, what to do?"
-                Anthony: "Parents suck."
-        
-        -> "It's not about her, it's about me."
-            Anthony: "I mean, one of you needs to sacrifice, right?"
-            Anthony: "I just think it'd be better for all if you stopped your habit."
-
-    Anthony: "I'm honestly not sure what else I can tell you."
-
--> "I need to know how to stop crossdressing."
-    Anthony: "Isn't it very simple?"
-    Anthony: "Once you understand that the woke mob has tricked you..."
-    Anthony: "You can be a man again."
-    Anthony: "Just look in the mirror and see how weird you look."
-    Anthony: "You will never be a girl, but at least you look like a guy."
-    Anthony: "Or you can watch those kinds of high testosterone videos."
-    Anthony: "I think those go into financial stuff so you can be rich also."
-
-    -> "So has that worked out for you?"
-        Anthony: "A bit."
-        Anthony: "I go to the gym sometimes."
-        Anthony: "And I want to start trading crypto."
-        Anthony: "That's productivity, right?"
-
-        -> "Well, glad to know."
-            Anthony: "You can do it also."
-        
-        -> "But you're still unhappy."
-            Anthony: "I'm only unhappy because of woke movements."
-            Anthony: "Like, for example, feminism."
-            Anthony: "Because of feminism, I can't get girlfriend."
-            Anthony: "Girls all became bitches and sluts because of feminism."
-
-            -> "Feminism can't be that bad..."
-                Anthony: "You just don't see it."
-                Anthony: "Women are taking over our jobs and our freedom."
-                Anthony: "Why is it okay for girls to say men are trash but if you say women are trash you get cancelled?"
-                Anthony: "Why are there so many black and female characters in our films?"
-                Anthony: "It's all because of feminism."
-            
-            -> "Wait, we were talking about my crossdressing, right?"
-                Anthony: "Yes. I'm teaching you how to get rid of it."
-                Anthony: "At least, I think the best way is to just be a man again."
-                Anthony: "Like, seriously, it's better to be a man, even after all the feminism bullshit."
-                Anthony: "Why would you want to give that up?"
-                
-            -> "Sounds like your own skill issue."
-                Anthony: "Well if you're so good already, why ask me for help?"
-            
-            -> "That does sound like a problem."
-                Anthony: "We must stick together."
-                Anthony: "The world is a cruel place."
-    
-    -> "Thanks, I'll keep that in mind."
-        Anthony: "Here are more video links."
-        Anthony: "Or you can go find those Twitter accounts with the statue profile pictures."
-        Anthony: "They're from the West but they are very helpful also."
-===
-__PrivCrochet_colorID: 0
 __PrivCrochet_position: 1960,280
 __PrivCrochet_tags: 
 title: 1
 ---
+What do you say?
 -> "How's school?" <<if visited("1_1") == false>>
     <<jump 1_1>>
 
@@ -345,6 +234,7 @@ __PrivCrochet_position: 1603,-507
 __PrivCrochet_tags: 
 title: 1_1_1_options
 ---
+What do you say?
 -> "Do you like it?"
     <<jump 1_1_1_1>>
 -> "Do you like your friends there?"
@@ -457,6 +347,7 @@ __PrivCrochet_position: 1738,-20
 __PrivCrochet_tags: 
 title: 1_1_options
 ---
+What do you say?
 -> "What's it like?"
     <<jump 1_1_1>>
 -> "Was it your first choice?"
@@ -469,6 +360,7 @@ __PrivCrochet_position: 2038,-499
 __PrivCrochet_tags: 
 title: 1_1_2_options
 ---
+What do you say?
 -> "You're really limiting your choices."
     <<jump 1_1_2_1>>
 -> "There's gotta be stuff outside of work you can do, right?"
@@ -713,6 +605,7 @@ __PrivCrochet_position: 2244,-318
 __PrivCrochet_tags: 
 title: 1_2_1_options
 ---
+What do you say?
 -> "You won't succeed if you give up."
     <<jump 1_2_1_1>>
 -> "Yeah, maybe gymming isn't your thing."
@@ -727,6 +620,7 @@ __PrivCrochet_position: 2726,499
 __PrivCrochet_tags: 
 title: 1_2_3_options
 ---
+What do you say?
 -> "Wow. That was a lot of complaints."
     <<jump 1_2_3_1>>
 -> "Maybe focus on what you like about those games?"
@@ -787,6 +681,7 @@ __PrivCrochet_position: 2101,599
 __PrivCrochet_tags: 
 title: 1_3_options
 ---
+What do you say?
 -> "Like when?"
     <<jump 1_3_1>>
 -> "Your experiences being rejected must really hurt."
@@ -801,6 +696,7 @@ __PrivCrochet_position: 1586,984
 __PrivCrochet_tags: 
 title: 1_3_1_options
 ---
+What do you say?
 -> "Yeah, that does sound kinda unfair."
     <<jump 1_3_1_1>>
 -> "How does that make you feel?"
@@ -912,10 +808,11 @@ Anthony: "Girls really damn hard to talk to."
 <<jump 1_3_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1893,1206
+__PrivCrochet_position: 1892,1206
 __PrivCrochet_tags: 
 title: 1_3_2_options
 ---
+What do you say?
 -> "You know, it really isn't too late."
     <<jump 1_3_2_1>>
 -> "Maybe you could learn from other people."
