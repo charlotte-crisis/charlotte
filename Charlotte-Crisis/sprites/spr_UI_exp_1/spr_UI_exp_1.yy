@@ -24,7 +24,7 @@
   "name":"spr_ui_exp_1",
   "nineSlice":{
     "$GMNineSliceData":"",
-    "bottom":0,
+    "bottom":1,
     "enabled":true,
     "guideColour":[4294902015,4294902015,4294902015,4294902015,],
     "highlightColour":1728023040,
@@ -40,7 +40,7 @@
       0,
       0,
     ],
-    "top":0,
+    "top":1,
   },
   "origin":0,
   "parent":{

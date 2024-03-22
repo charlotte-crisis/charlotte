@@ -54,7 +54,7 @@ draw_sprite_ext(spr_ui_confidence_0, 0,
 		_x_text_margin,
 		_y_padding + _rect_offset, _barscale, _barscale, 0, c_white, 1);
 		
-var _rect_color = (confidence < 30) ? c_red : c_lime;
+var _rect_color = (is_low_confidence()) ? c_red : c_lime;
 // Draw the fill
 draw_sprite_ext(spr_ui_confidence_1, 0,
 		_x_text_margin,

@@ -50,6 +50,10 @@ gender_meter = 50;
 	
 	// Returns the value of the stat if debuffed or not
 	stat_after_debuff = function(_stat) {
+		// If zero then all stats are set to 1
+		if (confidence <= 0) {
+			return 1;	
+		}
 		return (confidence < threshold) ? _stat / 2 : _stat;	
 	}
 #endregion
