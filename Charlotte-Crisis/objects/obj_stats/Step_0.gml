@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+///// @description Debug only
 //if (keyboard_check_pressed(ord("1"))) {
 //	confidence-=5;	
 //	experience-=5;
