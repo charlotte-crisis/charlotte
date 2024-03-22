@@ -216,4 +216,13 @@ function goto_room_bedroom_afterHangout(){
 		// TODO: Animate a pan somehow... I dont know why it doesnt work
 		camera_set_view_pos(view_camera[0], 144, 0);
 	}
+	
+	function goto_room_bedroom_after_boss1(){
+	fade_room(rm_bedroom_after_cca1);
+	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
+	
+	ChatterboxLoadFromFile("room_2.yarn");
+	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_2.yarn");
+	ChatterboxJump(chatterbox, "0");
+}
 #endregion

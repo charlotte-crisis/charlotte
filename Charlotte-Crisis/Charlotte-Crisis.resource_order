@@ -207,6 +207,7 @@
     {"name":"Si_sat_strip2","order":4,"path":"sprites/Si_sat_strip2/Si_sat_strip2.yy",},
     {"name":"Si_walking_strip8","order":5,"path":"sprites/Si_walking_strip8/Si_walking_strip8.yy",},
     {"name":"speech_strip3","order":1,"path":"sprites/speech_strip3/speech_strip3.yy",},
+    {"name":"spr_black_overlay","order":14,"path":"sprites/spr_black_overlay/spr_black_overlay.yy",},
     {"name":"spr_busstop_bars","order":7,"path":"sprites/spr_busstop_bars/spr_busstop_bars.yy",},
     {"name":"spr_cafe_bars","order":8,"path":"sprites/spr_cafe_bars/spr_cafe_bars.yy",},
     {"name":"spr_cj_portrait","order":1,"path":"sprites/spr_cj_portrait/spr_cj_portrait.yy",},
