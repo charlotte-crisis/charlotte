@@ -75,11 +75,13 @@ BG_ALPHA = 0.9;
 	ChatterboxAddFunction("goto_room_bedroom_after_cca", goto_room_bedroom_after_cca);
 	ChatterboxAddFunction("goto_room_bedroom_frombed", goto_room_bedroom_frombed);
 	ChatterboxAddFunction("goto_room_bedroom_afterHangout", goto_room_bedroom_afterHangout);
+	ChatterboxAddFunction("goto_room_bedroom_after_class2", goto_room_bedroom_after_class2);
 	
 	ChatterboxAddFunction("goto_room_cca_1", goto_room_cca_1);
 	ChatterboxAddFunction("goto_room_cca_1_seated", goto_room_cca_1_seated);
 	ChatterboxAddFunction("goto_room_cca_1_seated_18", goto_room_cca_1_seated_18);
 	ChatterboxAddFunction("goto_room_cca_1_seated_11", goto_room_cca_1_seated_11);
+	ChatterboxAddFunction("goto_room_cca_2", goto_room_cca_2);
 	
 	/// Hangouts
 	ChatterboxAddFunction("goto_room_hangout_a", goto_room_hangout_a);

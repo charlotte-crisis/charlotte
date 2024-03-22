@@ -86,6 +86,7 @@
     {"$GMIncludedFile":"","%Name":"room_1_after_cca.yarn","CopyToMask":-1,"filePath":"datafiles","name":"room_1_after_cca.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"room_1_after_hangout.yarn","CopyToMask":-1,"filePath":"datafiles","name":"room_1_after_hangout.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"room_1.yarn","CopyToMask":-1,"filePath":"datafiles","name":"room_1.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"room_2_after_class2.yarn","CopyToMask":-1,"filePath":"datafiles","name":"room_2_after_class2.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"room_2.yarn","CopyToMask":-1,"filePath":"datafiles","name":"room_2.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"yarn_variables.txt","CopyToMask":-1,"filePath":"datafiles","name":"yarn_variables.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],

@@ -47,6 +47,17 @@
 		obj_chatterbox_control.chatterbox = ChatterboxCreate("class_1.yarn");
 		ChatterboxJump(chatterbox, "1");
 	}
+	
+	function goto_room_class_2(){
+		fade_room(rm_class_1);
+		
+		set_player_position(X_CLASS_DOOR, Y_HEIGHT, -1);
+	
+		// Need to load then create.
+		ChatterboxLoadFromFile("class_2.yarn");
+		obj_chatterbox_control.chatterbox = ChatterboxCreate("class_2.yarn");
+		ChatterboxJump(chatterbox, "1");
+	}
 
 	function goto_room_class_1_seated(){
 		fade_room(rm_class_1_seated);
@@ -109,6 +120,20 @@ function goto_room_bedroom(){
 	layer_background_sprite(back_id, spr_hostelnight_bars);
 }
 
+function goto_room_bedroom_after_class2(){
+	fade_room(rm_bedroom_after_class1);
+	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
+
+	ChatterboxLoadFromFile("room_2_after_class2.yarn");
+	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_2_after_class2.yarn");
+	ChatterboxJump(chatterbox, "after_class2");
+	
+	// Change background to night
+	var lay_id = layer_get_id("Background");
+	var back_id = layer_background_get_id(lay_id);
+	layer_background_sprite(back_id, spr_hostelnight_bars);
+}
+
 function goto_room_bedroom_after_cca(){
 	fade_room(rm_bedroom_after_cca1);
 	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
@@ -151,7 +176,6 @@ function goto_room_bedroom_afterHangout(){
 		ChatterboxJump(chatterbox, "1");
 	}
 
-
 	function goto_room_cca_1_seated(){
 		fade_room(rm_cca_1_seated);
 		obj_player.x = 112;
@@ -168,6 +192,15 @@ function goto_room_bedroom_afterHangout(){
 
 	function goto_room_cca_1_seated_11() {
 		fade_room(rm_cca_1_seated_11);
+	}
+	
+	function goto_room_cca_2(){
+		fade_room(rm_cca_1);
+		set_player_position(X_CCA_DOOR, Y_HEIGHT, 1)
+	
+		ChatterboxLoadFromFile("cca_2.yarn");
+		obj_chatterbox_control.chatterbox = ChatterboxCreate("cca_2.yarn");
+		ChatterboxJump(chatterbox, "1");
 	}
 #endregion
 

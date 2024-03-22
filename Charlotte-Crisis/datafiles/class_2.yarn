@@ -489,16 +489,16 @@ Who will you walk with today?
 	You don't seem comfortable enough to talk more with any of your classmates.
 	You decide to head back to the hostel by yourself.
 	Slinking away to the door, you make a quiet exit.
-    // go home
+    <<goto_room_bus()>>
 
 -> Chenjie <<if getRelationship("CJ") >= 10 >>
-<<jump 14>>
+    <<jump 14>>
 
 -> Joanne <<if getRelationship("J") >= 10 >>
-<<jump 15>>
+    <<jump 15>>
 
 -> Sage <<if getRelationship("S") >= 10 >>
-<<jump 16>>
+    <<jump 16>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1360,520
@@ -563,6 +563,8 @@ __PrivCrochet_tags:
 title: 14
 ---
 Chenjie: "Yeah, sure."
+
+<<goto_room_bus_cj()>>
 //Bus stop//
 Chenjie: "Beauty standards, huh..."
 Chenjie: "We mostly talked about beauty standards for women today, but..."
@@ -630,6 +632,8 @@ Chenjie: "And so today's lecture got me thinking about, well, if my physical app
     The bus arrives.
     Chenjie: "Bye! See you!"
     You: "See you!"
+
+<<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1600,280
@@ -637,7 +641,9 @@ __PrivCrochet_tags:
 title: 15
 ---
 Joanne: "Yup, okay. Wait while I pack up..."
-//Bus stop//
+
+<<goto_room_bus_j()>>
+
 Joanne: "My boyfriend's birthday is coming up soon."
 Joanne: "We've been together since secondary school but I still always struggle with buying him gifts..."
 You: "Coming up with a birthday gift is always tricky, isn't it?"
@@ -688,6 +694,8 @@ Joanne: "I mean, I didn't think my boyfriend would appreciate that."
     Joanne: "Oh, yes!"
     Joanne: "But thanks for your help. I know what to get for my boyfriend now."
     You: "No problem. Bye!"
+
+<<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1600,520
@@ -695,6 +703,9 @@ __PrivCrochet_tags:
 title: 16
 ---
 Sage: "Okay, let's go then."
+
+<<goto_room_bus_s()>>
+
 //Bus stop//
 You: "How has your weekend been?"
 Sage: "Fine. I was a little busy helping a friend move house."
@@ -772,6 +783,8 @@ Sage: "What about you though? How's your weekend been?"
     Sage: "Oh, that's my bus. See you next week!"
     You: "Yeah, see you!"
     // end
+
+<<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 880,760
@@ -862,4 +875,12 @@ Joanne: "And makeup is actually so bad for your skin. Just caking your face with
     Sage: "That happened to you?"
     You: "God, that sucks..."
     <<jump 10>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1600,760
+__PrivCrochet_tags: 
+title: 12_alone
+---
+You slink away, alone again.
+<<goto_room_bedroom()>>
 ===
