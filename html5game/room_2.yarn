@@ -1,0 +1,61 @@
+#__PrivCrochet_version:1
+# if you've already visited then it will show the concise version.
+# Interacting with mirror
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 920,40
+__PrivCrochet_tags: 
+title: 0
+---
+It's the start of the second week. You prepare yourself for another week of school.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1160,40
+__PrivCrochet_tags: 
+title: 1
+---
+Who are you today? (Use the Up and Down arrow keys to choose an option, and spacebar to continue.)
+
+-> Charles
+    <<set $name = "Charles">>
+    <<setGender(0)>>    
+    You put on a T-shirt and jeans.
+    
+-> Charlotte
+    <<set $name = "Charlotte">>
+    <<setGender(1)>>
+    You put on a dress. It fits you well, which has always been part of what motivated you to continue this hobby in the first place.
+
+(You can interact with the mirror again if you change your mind.)
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1400,40
+__PrivCrochet_tags: 
+title: door
+---
+Ready to head out?
+-> No (Go back)
+
+-> Go to class
+    <<goto_room_class_1()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 680,80
+__PrivCrochet_tags: 
+title: bed
+---
+Well, no use going back to bed.
+===
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 920,280
+__PrivCrochet_tags: 
+title: desk
+---
+<<openStatMenu()>>
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 1160,280
+__PrivCrochet_tags: 
+title: wardrobe
+---
+<<openWardrobeMenu()>>
+===
