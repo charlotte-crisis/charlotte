@@ -13,7 +13,7 @@ __PrivCrochet_position: 40,40
 __PrivCrochet_tags: 
 title: 2_1
 ---
-<<if visited("2_1")>>
+<<if visited("2_1") > 1>>
     Vera: Hey again, {$name}.
 <<else>>
     You: "Hi! I'm {$name}."
@@ -826,7 +826,7 @@ __PrivCrochet_position: 520,40
 __PrivCrochet_tags: 
 title: 2_3
 ---
-<<if visited("2_3")>>
+<<if visited("2_3") > 1>>
     Hi again, {$name}.
 <<else>>
     You: "Hi! I'm {$name}."

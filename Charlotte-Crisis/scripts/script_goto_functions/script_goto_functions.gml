@@ -4,6 +4,7 @@
 	#macro X_CLASS_DOOR 296
 	#macro X_BUS_DOOR 223
 	#macro X_CCA_DOOR 46
+	#macro X_CCA_SEATED 114
 	#macro X_BEDROOM_DOOR 230
 	#macro X_HANGOUT_DOOR 159
 	#macro X_HOUSE_DOOR 30
@@ -178,8 +179,8 @@ function goto_room_bedroom_afterHangout(){
 
 	function goto_room_cca_1_seated(){
 		fade_room(rm_cca_1_seated);
-		obj_player.x = 112;
-		obj_player.y = 74;
+		obj_player.x = X_CCA_SEATED;
+		obj_player.y = Y_HEIGHT;
 		obj_player.facing_direction = 1;
 		obj_player.is_sitting = true;
 	
