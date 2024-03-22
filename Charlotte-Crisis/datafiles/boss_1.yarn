@@ -5,6 +5,8 @@ __PrivCrochet_tags:
 title: 1
 ---
 Sister: "Charles."
+// Change camera here
+<<set_camera_boss1()>>
 You: "Hi, sis."
 Sister: "What... are you wearing?" <<if $name == "Charlotte">>
 Sister: "I have so many questions."

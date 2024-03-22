@@ -210,4 +210,10 @@ function goto_room_bedroom_afterHangout(){
 		obj_chatterbox_control.chatterbox = ChatterboxCreate("boss_1.yarn");
 		ChatterboxJump(chatterbox, "0");
 	}
+	
+	// More like pan the camera
+	function set_camera_boss1() {
+		// TODO: Animate a pan somehow... I dont know why it doesnt work
+		camera_set_view_pos(view_camera[0], 144, 0);
+	}
 #endregion

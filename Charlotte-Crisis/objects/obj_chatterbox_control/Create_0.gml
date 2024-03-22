@@ -86,6 +86,7 @@ BG_ALPHA = 0.9;
 	
 	// BOSS
 	ChatterboxAddFunction("goto_room_boss_1", goto_room_boss_1);
+	ChatterboxAddFunction("set_camera_boss1", set_camera_boss1);
 #endregion
 
 
