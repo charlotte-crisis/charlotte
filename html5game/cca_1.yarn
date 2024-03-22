@@ -719,7 +719,7 @@ Do you wish to sit?
 
 -> No (go back)
 
--> Yes (continue...)
+-> Yes (continue...) #continue
     <<goto_room_cca_1_seated()>>
 ===
 __PrivCrochet_colorID: 0
@@ -831,9 +831,11 @@ title: 2_3
 <<else>>
     You: "Hi! I'm {$name}."
     Nadia: "Hi, {$name}! I'm Nadia."
-    Nadia: "By the way, nice outfit!" <<if $name == "Charlotte">>
-    <<changeConfidence(5)>>
-    You: "Thanks!" (+5% confidence)
+    <<if $name == "Charlotte">>
+        Nadia: "By the way, nice outfit!" 
+        <<changeConfidence(5)>>
+        You: "Thanks!" (+5% confidence)
+    <<endif>>
 <<endif>>
 <<jump 2_3_options>>
 ===
