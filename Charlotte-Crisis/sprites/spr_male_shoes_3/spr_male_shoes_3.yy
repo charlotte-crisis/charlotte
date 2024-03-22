@@ -2,17 +2,18 @@
   "$GMSprite":"",
   "%Name":"spr_male_shoes_3",
   "bboxMode":0,
-  "bbox_bottom":60,
-  "bbox_left":7,
-  "bbox_right":25,
-  "bbox_top":57,
+  "bbox_bottom":63,
+  "bbox_left":2,
+  "bbox_right":29,
+  "bbox_top":58,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a221065a-6948-4f3a-99e7-589ed98ca3e2","name":"a221065a-6948-4f3a-99e7-589ed98ca3e2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"0bef2d70-472c-4f1f-b5f6-1b9cc3cbb316","name":"0bef2d70-472c-4f1f-b5f6-1b9cc3cbb316","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"b8edf0c4-a974-4c8e-89c9-8c6c4bdb3dbb","name":"b8edf0c4-a974-4c8e-89c9-8c6c4bdb3dbb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -49,7 +50,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":1.0,
+    "length":2.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -69,8 +70,11 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a221065a-6948-4f3a-99e7-589ed98ca3e2","path":"sprites/spr_male_shoes_3/spr_male_shoes_3.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f94d4892-d4f3-49fa-b71e-e981d9eb76f9","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0bef2d70-472c-4f1f-b5f6-1b9cc3cbb316","path":"sprites/spr_male_shoes_3/spr_male_shoes_3.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"3c13856c-179f-48ee-9fab-dbe5c7b15809","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b8edf0c4-a974-4c8e-89c9-8c6c4bdb3dbb","path":"sprites/spr_male_shoes_3/spr_male_shoes_3.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"407c9fc6-70d3-4e0f-886a-9f7e982d0c79","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

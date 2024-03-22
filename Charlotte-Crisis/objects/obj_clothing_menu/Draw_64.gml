@@ -42,8 +42,9 @@ var _sprite_scale = 4;
 
 for (var i = 0; i < array_length(current_clothes); i++) {
 	draw_sprite_ext(clothing_top[current_gender][current_clothes[0]],	  (select_row == 1), _xx, _yy, _sprite_scale, _sprite_scale, 0, c_white, 1);
-	draw_sprite_ext(clothing_bottoms[current_gender][current_clothes[1]], (select_row == 2), _xx, _yy, _sprite_scale, _sprite_scale, 0, c_white, 1);
 	draw_sprite_ext(clothing_shoes[current_gender][current_clothes[2]],   (select_row == 3), _xx, _yy, _sprite_scale, _sprite_scale, 0, c_white, 1);
+	// Draw pants over shoes too
+	draw_sprite_ext(clothing_bottoms[current_gender][current_clothes[1]], (select_row == 2), _xx, _yy, _sprite_scale, _sprite_scale, 0, c_white, 1);
 }
 //draw_text(_xx, _yy + 320, "Confirm");
 
