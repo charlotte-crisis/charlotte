@@ -831,9 +831,11 @@ title: 2_3
 <<else>>
     You: "Hi! I'm {$name}."
     Nadia: "Hi, {$name}! I'm Nadia."
-    Nadia: "By the way, nice outfit!" <<if $name == "Charlotte">>
-    <<changeConfidence(5)>>
-    You: "Thanks!" (+5% confidence)
+    <<if $name == "Charlotte">>
+        Nadia: "By the way, nice outfit!" 
+        <<changeConfidence(5)>>
+        You: "Thanks!" (+5% confidence)
+    <<endif>>
 <<endif>>
 <<jump 2_3_options>>
 ===
