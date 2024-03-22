@@ -72,353 +72,6 @@ Vera: "Anyway, that was just a sidetrack. What about you?"
 <<jump 1_2_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1047,1601
-__PrivCrochet_tags: 
-title: 2
----
--> "What do you think of Anthony?"
-    Vera: "Heh. It's like his life mission to get under my nerves."
-    Vera: "Like, honestly, I'm not sure if he's just trolling or he genuinely believes the stuff he says."
-    -> "I think he's a victim too."
-        Vera: "Hmm. Tell me more."
-            -> "Well, he definitely doesn't know how to show his emotions." (EMP >= 4)
-                Vera: "Yeah, that was kinda obvious."
-                You: "When he's cornered, he gets defensive."
-            
-            -> "The patriarchy weighs down heavily on him." (INT >= 4)
-        
-    -> "Some people just can't change."
-        
-    -> "I think he has some valid points."
-
-# Nadia
--> "What do you think of Nadia?"
-    Vera: "Such a sweet girl."
-    Vera: "I'm not much of an anime fan, but I can feel her passion for it."
-
-# Eleanor
--> "What do you think of Eleanor?"
-    Vera: "She's trying her best."
-    Vera: "Heh, sometimes I feel bad that she's in the middle of all the drama."
-    Vera: "But at the same time, I wonder if this is what leaders feel when they have to deal with discrimination."
-    Vera: "Sure, for us it's easy to point out the hate."
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 958,1336
-__PrivCrochet_tags: 
-title: 3
----
-You: "I need some advice on how to deal with my family."
-# (if Vera doesn't know about Charlotte) --> TODO: Need a check for this
-You very briefly tell Vera that you're a crossdresser.
-Vera: "Well, I guess all queer people need to cross that bridge. Tell me more."
-You: "My mother hates Charlotte. And I need options."
-Vera: "Hmm... I hate to say this, but..."
-Vera: "You do know that I'm also not on good terms with my parents, right?"
-Vera: "They're so far from here that there's nothing they can do about it."
-Vera: "Unfortunately, the threat is closer to your shores."
-Vera: "So... what do you want to do?"
-
--> "I want to heal."
-    Vera: "Huh. That's... gonna be hard."
-    Vera: "Like, what do you even mean by that?"
-    -> "I'm sorry. That just sounded like something badass to say."
-        Vera: "Heh. That's the stuff of movies."
-        Vera: "But your life isn't one."
-        Vera: "So you gotta get your head out of the clouds, girl."
-
-    -> "I don't want to hurt my mother."
-        Vera: "Uh... you do realise that's next to impossible, right?"
-        Vera: "Especially if she's a boomer."
-        Vera: "Hate to say it, but it's quite hard to change their mindset."
-        Vera: "It's either you, or her."
-
-        -> "We can compromise."
-            Vera: "On what?"
-            Vera: "Your right to exist the way you want to?"
-            Vera: "She wants Charlotte gone, doesn't she?"
-            Vera: "There's no negotiating with her."
-            
-            -> "I'm only Charlotte 10% of the time..."
-                You: "I can present as male 90% of the time."
-                You: "She doesn't need to know about the 10%."
-                Vera: "Oh, we're talking numbers now, are we?"
-                Vera: "My parents wanted me to be Vera 0% of the time."
-                Vera: "So don't be surprised if your parents want that too."
-            
-            -> "She knows I'm her retirement plan."
-                Vera: "So your relationship with her is purely monetary."
-                Vera: "And she acknowledges that she's got limited time left."
-                Vera: "So, if the both of you really think that..."
-                Vera: "Isn't Charlotte just in jail with an undetermined release date?"
-            
-            Vera: "Well, I'm not sure what you want to compromise on."
-            Vera: "But I wish you the best of luck."
-        
-        -> "I know she wants the best for me."
-            Vera: "Is a life without Charlotte really the best for you?"
-            Vera: "And besides, we came to university and lived away from our parents for a reason."
-            Vera: "To be independent of them."
-
-            -> "She's taken care of me since I was young."
-                Vera: "That was her obligation as a parent."
-                Vera: "It isn't something she can hold over your head as a threat."
-            
-            -> "I can't fight my own mother."
-                Vera: "Well, you're not killing or injuring her."
-                Vera: "But below that, I'd say anything else is fair game."
-                Vera: "You have to make yourself heard, Charlotte."
-            
-            Vera: "Even if she wants the best for you..."
-            Vera: "Isn't that something you need to achieve for yourself?"
-            
-            -> "I guess you're right..."
-                Vera: "I know you might be close to her."
-                Vera: "But if she isn't respecting who you are..."
-                Vera: "If she cannot see Charlotte as her child..."
-                Vera: "Then does she deserve any respect that you give her?"
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 809,1757
-__PrivCrochet_tags: 
-title: 3_2
----
-
--> "I want to fight."
-    Vera: "As you should!"
-    Vera: "We will not go gently into the night, et cetera."
-    Vera: "But you gotta be ready, girl. This may be the toughest fight of your life."
-    You: "What do you think she'll say?"
-    Vera: "If she's as conservative as my mum..."
-    Vera: "She may pose ultimatums."
-    Vera: "Or she may appeal to your sentimentality."
-    Vera: "Or she may threaten to reveal Charlotte to your dad..."
-    Vera: "Wait, is your dad supportive?"
-    You: "Hell no!"
-    Vera: "Heh. One more thing we have in common."
-    Vera: "So, which situation do you want to explore?"
-
-    -> "Sentimentality."
-        Vera: "She's gonna plead with you."
-        Vera: "Expect her to exclusively identify you as her son."
-        Vera: "I don't know about you, but that messed with me. A lot."
-        Vera: ""
-
-    -> "Ultimatums."
-        Vera: "She's gonna play the disown card."
-        Vera: "This is gonna be hard to defend against."
-        Vera: "Other than that, she'll ask for your promise to not transition."
-        Vera: "So the question is, which of these are you willing to accept?"
-
-        -> "None of them!"
-            Vera: "Well, we can't have a cake and eat it at the same time."
-            Vera: "At some point, we need to choose."
-
-        -> "I'd rather be disowned."
-            Vera: "Woah. That's... tough."
-            Vera: "I don't think I've ever heard anyone say that."
-            Vera: "It's different from leaving an abusive household willingly..."
-            Vera: "Even I wouldn't dare go through with it."
-        
-        -> "I'd rather promise to not transition."
-            Vera: "I mean, I guess that's fair."
-            Vera: "But consider this, is she gonna stop there?"
-            Vera: "If she already cannot accept her son turning into a woman..."
-            Vera: "Will she really accept her son just dressing like one?"
-
-    -> "The one where my dad gets involved."
-        Vera: "Heh. Well, you know how masculinity is, right?"
-        Vera: "Replace sentimentality with aggression."
-        Vera: "But just know, if things get violent, call the police, alright?"
-        Vera: "As much as I study about how it's a flawed institution..."
-        Vera: "At least they can provide some legal protection if hands start flying."
-        Vera: "Wait. I'm sorry... I didn't even consider if your dad was abusive."
-        Vera: "I'm really sorry if he isn't..."
-
-        -> "He still is."
-            Vera: "Oh my goodness. I'm so sorry to hear that..."
-            Vera: "No wonder you still stay in school."
-
-        -> "He was."
-            Vera: "Ugh... well, I guess that's common."
-            Vera: "And note, common, not normal."
-            Vera: "I know there's lots of takes on this, but a parent should never abuse their kid..."
-            Vera: "Sorry to hear about that, Charlotte."
-
-        -> "He never was."
-            Vera: "Huh. And I thought all Asian parents would take out the cane, or the slipper, at some point."
-            Vera: "Well, you're luckier than most."
-            Vera: "Sorry for assuming the worst from the get go."
-
-        <<if $cha >= 5>> #$ (if CHA >= 5)
-            You: "It's okay, Vera. No need to keep saying sorry."
-            You: "What are you, Canadian?"
-            Vera laughs. # (+5% Vera relationship)
-            Vera: "Who knows, I might move there."
-        <<endif>>
-
-        Vera: "Well, either way, it might be best to not involve your dad at all."
-        Vera: "One aggravated parent is already enough..."
-
-    -> "The one that minimises damage."
-        Vera: "What? That's not possible."
-        Vera: "I know it's not right to stereotype the older generation..."
-        Vera: "But it seems you and I both got the strictest kind of parents."
-        Vera: "Minimising damage means hiding and repressing Charlotte."
-        Vera: "Does that sound like a long-term solution to you?"
-
-        -> "Yes."
-            Vera: "No it isn't!"
-            Vera: "Even if you hide carefully and diligently, at some point..."
-            Vera: "You're gonna slip up."
-            Vera: "For me it was when my mother found my medication."
-            Vera: "And for you, it might be your mother finding your dresses."
-
-            -> "You're right."
-                You: "I should be ready for damage."
-                Vera: "Unfortunately, yes."
-                Vera: "We can only hope that the damage is worth it..."
-                Vera: "Sometimes, it isn't. But most times we can learn from it."
-                Vera: "Even if the lesson is 'don't trust the boomers'."
-            
-            -> "I will be even more conscientious."
-                Vera: "Then you're gonna repress and hide until you can't take it anymore?"
-                Vera: "That level of repression rarely ends well, Charlotte."
-                Vera: "Please, just take my word for it and face this problem head-on."
-        
-        -> "No."
-            Vera: "Exactly."
-            Vera: "I know it's gonna be tough."
-            Vera: "But this conflict is inevitable..."
-            Vera: "Hell, I'm probably not even in its most advanced stages yet."
-
-            -> "We'll get through it together."
-                You: "Even though we're on different paths..."
-                You: "I appreciate the help and support."
-                Vera: "Aww, thanks, Charlotte."
-        
-            -> "That sounds scary."
-                Vera: "It is. This journey was never meant to be easy."
-                Vera: "But for people like us, the light at the end of the tunnel is what makes it worth it."
-
-    Vera: "Well, either way, this is the biggest decision you'll make in your life."
-    Vera: "And I just wanted to say..."
-    Vera: "I am so proud of you for standing up for yourself."
-    Vera: "Just don't leave any bodies in your wake."
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1369,1517
-__PrivCrochet_tags: 
-title: 4
----
-Vera: "Well, I gotta go."
-# (if Vera relationship decreased overall) 
-Vera: "You sure did say some pretty nasty stuff back there."
-Vera: "Please, have a little more empathy for the people around you."
-# (if Vera relationship increased overall)
-Vera: "Thanks for inviting me here. It was nice talking to you!"
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1170,1328
-__PrivCrochet_tags: 
-title: 3_3
----
-
--> "I want to give in."
-    Vera: "Am I hearing you right?"
-    Vera: "You'd give up Charlotte just to appease your mother?"
-
-    -> "I'm also tired of being a woman."
-        Vera: "Is it the makeup and dresses?"
-        Vera: "I know, it's very hard to get ready every morning..."
-        Vera: "But don't you think it's worth it to see Charlotte as her best self?"
-
-        -> "It's the stress of living a double life."
-            You: "I mean, I have to present male at home."
-            You: "So why bother, right?"
-            Vera: "Heh. This is where I'd suggest you start HRT..."
-            Vera: "But maybe I shouldn't."
-            Vera: "That would be solving one problem with what could be a bigger problem."
-    
-        ->  "Maybe Charlotte was just a phase."
-            Vera: "Be very careful of where you're going with that phrase."
-            Vera: "Don't say that in front of other trans people."
-            Vera: "You wouldn't want to say that their transition is a phase..."
-            Vera: "And if you say that about me, you're done."
-            
-        -> "Nah, I'm done."
-            You: "I feel like I'm on a trial version of femininity."
-            You: "And it's expiring soon."
-            You: "I'm ready to go back to my male life now."
-            Vera: "Hmm. That's not something I thought I'd hear."
-            Vera: "I hope it's really you speaking, then."
-            Vera: "Not any external forces pressuring you to give up Charlotte..."
-            Vera: "But a decision made with Charlotte's consent too."
-
-    -> "I prioritise my mother."
-        Vera: "Heh. Well, it's your choice."
-        Vera: "I personally could never do that."
-        Vera: "To be saccharinely sweet to your mother..."
-        Vera: "To the extent where you'd give up who you are to get there..."
-        Vera: "Ugh. Not my thing."
-    
-    Vera: "Still... you had a good thing going on, Charlotte."
-    Vera: "Regardless of your reasons, I hope you don't do something you regret."
-    Vera: "And, please, remember this vibrant period of self-expression."
-    Vera: "It's probably the happiest part of your life. So far."
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1038,1814
-__PrivCrochet_tags: 
-title: 3_4
----
--> "Actually, I just want to hide."
-    Vera: "Heh. That's kind of what I'm doing, too."
-    Vera: "My parents are entire time zones away."
-    Vera: "But, yours are only MRT stations away..."
-    Vera: "And before long, you'll be staying with them again."
-    Vera: "So how do you think you can hide?"
-
-    -> "Plastic box under the bed."
-        Vera: "What?"
-        Vera: "Oh, you mean like, literally hiding everything in a box."
-        Vera: "Well, that's one way to do it, but..."
-        Vera: "Wouldn't it be hard to access your stuff?"
-        Vera: "And besides, this isn't really a long-term solution, isn't it?"
-        Vera: "You're still under your parents' control."
-        Vera: "Charlotte would still have to live with them."
-        
-    -> "Rent my own place."
-        Vera: "Oh, that'd be nice."
-        Vera: "But I hear rentals here are super high..."
-        Vera: "I mean, I'm not one to ask for budgeting advice."
-        Vera: "Still, I'm sure there are other reasons you'd want to have your own place."
-        Vera: "We're in our twenties, gonna graduate from university..."
-        Vera: "Yet we're still dependent on our parents?"
-        You: "Doesn't sit well with me, yeah."
-        
-    -> "Move overseas."
-        Vera: "Yass! Love that for you."
-        Vera: "I mean, if I could travel anywhere in the world, it would be back to California."
-        Vera: "That was really peak Vera."
-        Vera: "But, you know, I've been moving around since I was little."
-        Vera: "Countries, allegiances, all that doesn't matter to me unless citizenship gives benefits."
-        Vera: "But, as far as I know, you're not that type of person, right?"
-
-        -> "Yeah, I'll miss this place."
-            You: "It's not perfect, but I've invested too much of my life here to just up and leave."
-            Vera: "Ah. That's... a pity."
-
-        -> "Nope. Screw this place."
-            You: "So many of us are moving overseas after all."
-            You: "What's one more person?"
-            You: "Besides, I know this society will never be happy with Charlotte."
-
-    Vera: "Well, either way, it would be good to travel the world first."
-    Vera: "Get a sense of what life's like in other countries and then decide."
-    Vera: "Which ultimately comes back to money, doesn't it..."
-===
-__PrivCrochet_colorID: 0
 __PrivCrochet_position: 1208,851
 __PrivCrochet_tags: 
 title: 1_3
@@ -515,6 +168,7 @@ __PrivCrochet_position: 928,142
 __PrivCrochet_tags: 
 title: 1_1_options
 ---
+What do you say?
 -> "When did you know you were trans?"
 <<jump 1_1_1>>
 
@@ -537,10 +191,11 @@ You: "Yeah, I guess..."
 Vera: "So it's the same. Except the medication is supposed to fix dysphoria."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 725,-381
+__PrivCrochet_position: 723,-383
 __PrivCrochet_tags: 
 title: 1_1_1_options
 ---
+What do you say?
 -> "Hmm, my story is different..."
 <<jump 1_1_1_1>>
 
@@ -554,7 +209,7 @@ title: 1_1_1_options
 <<jump 1_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 731,-664
+__PrivCrochet_position: 730,-666
 __PrivCrochet_tags: 
 title: 1_1_1_1
 ---
@@ -584,7 +239,6 @@ __PrivCrochet_position: 985,-438
 __PrivCrochet_tags: 
 title: 1_1_1_3
 ---
--> "Did you ever get bullied for it?"
 Vera: "Hmm... thankfully, not really?"
 Vera: "When I was a kid, I already didn't like to hang out with the boys."
 Vera: "There's just something about... aggression, masculinity, competition..."
@@ -609,6 +263,7 @@ __PrivCrochet_position: 1209,-282
 __PrivCrochet_tags: 
 title: 1_1_2_options
 ---
+What do you say?
 -> "Isn't it painful?"
 <<jump 1_1_2_1>>
 
@@ -744,6 +399,7 @@ __PrivCrochet_position: 1517,102
 __PrivCrochet_tags: 
 title: 1_2_options
 ---
+What do you say?
 -> "Can't wait to graduate."
     Vera: "Ah well. School isn't for everyone."
     <<jump 1_2_1_options>>
@@ -782,6 +438,7 @@ __PrivCrochet_position: 1668,-146
 __PrivCrochet_tags: 
 title: 1_2_1_options
 ---
+What do you say?
 -> "I want to get some real work experience."
 <<jump 1_2_1_1>>
 -> "School just sucks."
@@ -876,6 +533,7 @@ __PrivCrochet_position: 1805,362
 __PrivCrochet_tags: 
 title: 1_2_3_options
 ---
+What do you say?
 -> "It's boring."
 <<jump 1_2_3_1>>
 -> "It's fantastic!"
@@ -912,7 +570,7 @@ Vera: "I thought gender issues would be very relevant to Charlotte."
     <<jump 1_2_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2050,425
+__PrivCrochet_position: 2042,422
 __PrivCrochet_tags: 
 title: 1_2_3_2
 ---
@@ -942,6 +600,7 @@ __PrivCrochet_position: 2303,311
 __PrivCrochet_tags: 
 title: Vera_definitions
 ---
+What will you ask?
 -> "What is feminism?"
     <<jump Vera_feminism>>
 -> "What is beauty?"
