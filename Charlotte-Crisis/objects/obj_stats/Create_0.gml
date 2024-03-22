@@ -8,6 +8,7 @@ if instance_number(object_index) > 1{
 
 // Confidence works like health
 confidence = 50;
+threshold = 30; // Below this, considered unconfident
 
 // Priamry stats
 intelligence = 2;
@@ -41,5 +42,9 @@ gender_meter = 50;
 
 	subtract_experience = function(_levels) {
 		experience -= _levels * level_up_amount;	
+	}
+	
+	is_low_confidence = function() {
+		return (confidence < threshold);	
 	}
 #endregion
