@@ -38,7 +38,6 @@ __PrivCrochet_tags:
 title: wardrobe
 ---
 You would love to look inside your wardrobe, but you've already decided what to wear for today.
-<<openWardrobeMenu()>>
 ===
 __PrivCrochet_colorID: 7
 __PrivCrochet_position: 840,120
