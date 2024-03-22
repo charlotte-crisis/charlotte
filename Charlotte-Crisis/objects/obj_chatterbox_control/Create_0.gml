@@ -68,6 +68,8 @@ BG_ALPHA = 0.9;
 	ChatterboxAddFunction("goto_room_bus_j", goto_room_bus_j);
 	ChatterboxAddFunction("goto_room_bus", goto_room_bus);
 	
+	ChatterboxAddFunction("goto_room_class_2", goto_room_class_2);
+	
 	/// Bedroom
 	ChatterboxAddFunction("goto_room_bedroom", goto_room_bedroom);
 	ChatterboxAddFunction("goto_room_bedroom_after_cca", goto_room_bedroom_after_cca);
@@ -87,6 +89,7 @@ BG_ALPHA = 0.9;
 	// BOSS
 	ChatterboxAddFunction("goto_room_boss_1", goto_room_boss_1);
 	ChatterboxAddFunction("set_camera_boss1", set_camera_boss1);
+	ChatterboxAddFunction("goto_room_bedroom_after_boss1", goto_room_bedroom_after_boss1);
 #endregion
 
 

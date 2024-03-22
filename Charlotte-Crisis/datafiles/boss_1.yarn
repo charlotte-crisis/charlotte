@@ -916,7 +916,7 @@ Sister: "Just don't do anything you'll regret."
 <<jump end>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2520,480
+__PrivCrochet_position: 2560,480
 __PrivCrochet_tags: 
 title: ending_5
 ---
@@ -972,5 +972,5 @@ __PrivCrochet_position: 2800,280
 __PrivCrochet_tags: 
 title: end
 ---
-<<goto_room_bedroom()>>
+<<goto_room_bedroom_after_boss1()>>
 ===

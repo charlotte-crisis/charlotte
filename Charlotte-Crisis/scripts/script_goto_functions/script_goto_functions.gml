@@ -217,6 +217,10 @@ function goto_room_bedroom_afterHangout(){
 		camera_set_view_pos(view_camera[0], 144, 0);
 	}
 	
+	function goto_black_room() {
+		fade_room(rm_black_screen);	
+	}
+	
 	function goto_room_bedroom_after_boss1(){
 	fade_room(rm_bedroom_after_cca1);
 	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
