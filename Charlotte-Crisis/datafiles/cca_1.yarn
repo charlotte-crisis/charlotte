@@ -719,7 +719,7 @@ Do you wish to sit?
 
 -> No (go back)
 
--> Yes (continue...)
+-> Yes (continue...) #continue
     <<goto_room_cca_1_seated()>>
 ===
 __PrivCrochet_colorID: 0
