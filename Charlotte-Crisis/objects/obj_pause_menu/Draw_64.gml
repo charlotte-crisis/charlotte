@@ -4,13 +4,13 @@ var _x_origin = view_wport[0]/2;
 var _y_origin = 120; // 32 * 3.75
 
 /// Left Hand and HEADER variables
-var _x_text_starting = _x_origin - 225; // 60 * 3.75
+var _x_text_starting = _x_origin - 250; // 60 * 3.75
 var _y_text_starting = _y_origin + 45;  // 12 * 3.75
 
 var _y_gender_meter = _y_origin + 240;  // MASSIVE agaration
 
 /// Right Hand Side variables
-var _x_row_starting = _x_origin - 30; // 8px * 3.75 // Make it between 22 to 30
+var _x_row_starting = _x_origin - 20; // 8px * 3.75 // Make it between 22 to 30
 var _y_row_starting = _y_origin + 110; // 32 * 3.75
 
 var _x_colsize = 90; // Roughly 23 * 3.75
@@ -27,7 +27,7 @@ if (is_open) {
 	draw_set_color(c_white);
 	
 	// Draw background
-	draw_sprite_ext(spr_relationship_menu_bg, -1, _x_origin, _y_origin, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+	draw_sprite_ext(spr_relationship_menu_bg, -1, _x_origin, _y_origin, VIEWPORT_SCALE + 0.5, VIEWPORT_SCALE, 0, c_white, 1);
 	
 	///=== LEFT HAND SIDE ===///
 	// Using the script from script_player_stats
@@ -36,9 +36,11 @@ if (is_open) {
 	var _room = "Menu"
 	draw_text(_x_text_starting, _y_text_starting + 64, "STAGE \n" + _room);
 	
-	draw_text(_x_text_starting, _y_text_starting + 128, "GENDER METER \n" + string(get_gender_meter()));
+	draw_text(_x_text_starting, _y_text_starting + 128, "GENDER METER \n" + string("{0}%", get_gender_meter()));
 	
-	draw_sprite_ext(spr_gender_meter, 0, _x_text_starting - 6, _y_gender_meter, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+	draw_sprite_ext(spr_UI_gendermeter, 0, _x_text_starting, _y_gender_meter, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+	var _offset = (get_gender_meter() / 100) * 50 * VIEWPORT_SCALE;
+	draw_sprite_ext(spr_UI_gendermeter_point, 0, _x_text_starting + _offset, _y_gender_meter, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 	
 	///=== RIGHT HAND SIDE ===///
 	draw_text(_x_row_starting, _y_text_starting, "RELATIONSHIPS");
