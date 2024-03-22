@@ -43,29 +43,19 @@ var _rect_offset = 24;
 draw_set_color(c_white);
 draw_text(_x_text_margin, _y_padding, string("CONFIDENCE: {0}/100", confidence));
 
+var _barscale = 3
 // Outline rectangle
-draw_rectangle(_x_text_margin,
-			   _y_padding + _rect_offset,
-			   _x_text_margin + _bar_length,
-			   _y_padding + _rect_offset + _bar_height,
-			   true) // true as white outline
-
-var _rectangle_color = c_green;
-if (confidence < 30) {
-	_rectangle_color = c_red;	
-} else if (confidence < 70) {
-	_rectangle_color = c_yellow;	
-}
-
-draw_set_color(_rectangle_color);
-
-var _fill_length = confidence/100 * _bar_length;
-// Fill rectangle
-draw_rectangle(_x_text_margin,
-			   _y_padding + _rect_offset,
-			   _x_text_margin + _fill_length, 
-			   _y_padding + _rect_offset + _bar_height,
-			   false);
+draw_sprite_ext(spr_ui_confidence_0, 0,
+		_x_text_margin,
+		_y_padding + _rect_offset, _barscale, _barscale, 0, c_white, 1);
+		
+var _rect_color = (confidence < 30) ? c_red : c_lime;
+// Draw the fill
+draw_sprite_ext(spr_ui_confidence_1, 0,
+		_x_text_margin,
+		_y_padding + _rect_offset,
+		_barscale * (confidence / 100), // X
+		_barscale, 0, _rect_color, 1);
 
 // Set it back to white just in case.
 draw_set_color(c_white);
@@ -74,28 +64,22 @@ draw_set_color(c_white);
 #region Experience Bar
 //reuse variables
 _bar_length = 180;
-_bar_height = 8;
 _rect_offset = 80;
 
-draw_set_color(c_white);
 draw_text(_x_text_margin, _y_padding + 56, string("EXPERIENCE: {0}/50", experience%50));
 
-// Outline rectangle
-draw_rectangle(_x_text_margin,
-			   _y_padding + _rect_offset,
-			   _x_text_margin + _bar_length,
-			   _y_padding + _rect_offset + _bar_height,
-			   true) // true as white outline
-
-draw_set_color(c_aqua);
-
-_fill_length = (experience%level_up_amount)/level_up_amount * _bar_length;
+// Outline
+draw_sprite_ext(spr_ui_exp_0, 0,
+		_x_text_margin,
+		_y_padding + _rect_offset,
+		_barscale, _barscale, 0, c_white, 1);
+		
+var _fill_ratio = (experience%level_up_amount)/level_up_amount;
 // Fill rectangle
-draw_rectangle(_x_text_margin,
-			   _y_padding + _rect_offset,
-			   _x_text_margin + _fill_length, 
-			   _y_padding + _rect_offset + _bar_height,
-			   false);
+draw_sprite_ext(spr_ui_exp_1, 0,
+		_x_text_margin,
+		_y_padding + _rect_offset,
+		_barscale * _fill_ratio, _barscale, 0, c_white, 1);
 
 // Set it back to white just in case.
 draw_set_color(c_white);
