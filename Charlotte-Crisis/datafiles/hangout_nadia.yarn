@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -183,-676
+__PrivCrochet_position: -200,-680
 __PrivCrochet_tags: 
 title: 1_1
 ---
@@ -10,7 +10,7 @@ Nadia: "So I'm going back quite late every night."
 <<jump 1_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -346,-130
+__PrivCrochet_position: -360,-120
 __PrivCrochet_tags: 
 title: 0
 ---
@@ -372,18 +372,19 @@ title: 1_1_options
     <<jump 1>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -282,-421
+__PrivCrochet_position: -280,-440
 __PrivCrochet_tags: 
 title: 1
 ---
+What do you say?
+
 -> "How's school?"
     <<jump 1_1>>
 
 -> "So... you really like anime, right?"
-    Nadia: "Oh yes, what about it?"
     <<jump 1_2_options>>
 
--> "Well, I gotta go. Thanks for today!" <<if visited("1_1") or visited("1_2")>>
+-> "Well, I gotta go. Thanks for today!" <<if visited("1_1") or visited("1_2_options")>>
     Nadia: "See you soon!"
     <<goto_room_bedroom_afterHangout()>>
 ===
@@ -672,10 +673,12 @@ Nadia: "Do you think being Charlotte halted your professional development?"
         <<jump 1_1_2_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 44,-411
+__PrivCrochet_position: 40,-400
 __PrivCrochet_tags: 
 title: 1_2_options
 ---
+Nadia: "Oh yes, what about it?"
+
 -> "Got any to recommend?"
     Nadia: "Hmm... depends what you're into."
     Nadia: "Perhaps give me a prompt? So I can think of what I'd like."
