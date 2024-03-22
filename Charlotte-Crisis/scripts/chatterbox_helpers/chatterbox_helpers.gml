@@ -72,6 +72,7 @@ function speaker_is_narrator() {
 /// @return {String} "(%# chance success)"
 function format_odds_string(_stat, _threshold) {
 	var _stat_amt = ChatterboxVariableGet(_stat); // e.g. get("cha") returns $cha 
+	_stat_amt = obj_stats.stat_after_debuff(_stat_amt)
 	var _percent = calculate_odds([_stat_amt, real(_threshold)]);
 	return string(" ({0}% chance success)", _percent);
 }

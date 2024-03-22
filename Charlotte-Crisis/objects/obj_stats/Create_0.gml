@@ -47,4 +47,9 @@ gender_meter = 50;
 	is_low_confidence = function() {
 		return (confidence < threshold);	
 	}
+	
+	// Returns the value of the stat if debuffed or not
+	stat_after_debuff = function(_stat) {
+		return (confidence < threshold) ? _stat / 2 : _stat;	
+	}
 #endregion
