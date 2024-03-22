@@ -19,20 +19,25 @@ var _y_text_margin = 5;
 
 #region Draw the three stats
 /// Draw the three stats
+if (is_low_confidence()) {
+	draw_set_color(c_orange);
+}
 draw_sprite(spr_ui_int, image_index, _viewport_width - _x_margin, _y_padding);
 draw_text(_viewport_width - _x_margin + _x_text_margin,
 		_y_padding + _y_text_margin, 
-		string("INT: {0}", intelligence));
+		string("INT: {0}", stat_after_debuff(intelligence)));
 		
 draw_sprite(spr_ui_cha, image_index, _viewport_width - _x_margin, _y_padding + _y_margin);
 draw_text(_viewport_width - _x_margin + _x_text_margin,
 		_y_padding + _y_margin + _y_text_margin, 
-		string("CHA: {0}", charisma));
+		string("CHA: {0}", stat_after_debuff(charisma)));
 		
 draw_sprite(spr_ui_emp, image_index, _viewport_width - _x_margin, _y_padding + _y_margin*2);
 draw_text(_viewport_width - _x_margin + _x_text_margin,
 		_y_padding + _y_margin*2 + _y_text_margin, 
-		string("EMP: {0}", empathy));
+		string("EMP: {0}", stat_after_debuff(empathy)));
+		
+draw_set_color(c_white);
 #endregion
 
 #region Confidence Bar
