@@ -48,7 +48,7 @@ Vera: "We're people with hopes and dreams like yourselves."
 <<jump 1_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1568,403
+__PrivCrochet_position: 1564,403
 __PrivCrochet_tags: 
 title: 1_2
 ---
@@ -99,7 +99,7 @@ Vera: "Everyone's gotta have an outlet. Mine just so happens to be estrogen and 
 <<jump 1_3_1>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1444,871
+__PrivCrochet_position: 1445,870
 __PrivCrochet_tags: 
 title: 1_3_1
 ---
@@ -170,13 +170,13 @@ title: 1_1_options
 ---
 What do you say?
 -> "When did you know you were trans?"
-<<jump 1_1_1>>
+    <<jump 1_1_1>>
 
 -> "I heard you need to like, medicate, or something?"
-<<jump 1_1_2>>
+    <<jump 1_1_2>>
 
 -> "Let's talk about something else." <<if visited("1_1_1") or visited("1_1_2")>>
-<<jump 1_options>>
+    <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 977,-111
@@ -197,16 +197,16 @@ title: 1_1_1_options
 ---
 What do you say?
 -> "Hmm, my story is different..."
-<<jump 1_1_1_1>>
+    <<jump 1_1_1_1>>
 
 -> "You're so brave."
-<<jump 1_1_1_2>>
+    <<jump 1_1_1_2>>
 
 -> "Did you ever get bullied for it?"
-<<jump 1_1_1_3>>
+    <<jump 1_1_1_3>>
 
 -> "Let's talk about something else."
-<<jump 1_1_options>>
+    <<jump 1_1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 730,-666
@@ -259,19 +259,19 @@ Vera: "It's so off-putting, don't you think?"
 <<jump 1_1_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1209,-282
+__PrivCrochet_position: 1207,-283
 __PrivCrochet_tags: 
 title: 1_1_2_options
 ---
 What do you say?
 -> "Isn't it painful?"
-<<jump 1_1_2_1>>
+    <<jump 1_1_2_1>>
 
 -> "Isn't it expensive?"
-<<jump 1_1_2_2>>
+    <<jump 1_1_2_2>>
 
 -> "Let's talk about something else."
-<<jump 1_1_options>>
+    <<jump 1_1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1250,-564
@@ -440,16 +440,16 @@ title: 1_2_1_options
 ---
 What do you say?
 -> "I want to get some real work experience."
-<<jump 1_2_1_1>>
+    <<jump 1_2_1_1>>
 -> "School just sucks."
-<<jump 1_2_1_2>>
+    <<jump 1_2_1_2>>
 -> "All things end, Vera. Even us."
-<<jump 1_2_1_3>>
+    <<jump 1_2_1_3>>
 -> "Let's take a step back."
-<<jump 1_2_options>>
+    <<jump 1_2_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1692,-396
+__PrivCrochet_position: 1687,-398
 __PrivCrochet_tags: 
 title: 1_2_1_1
 ---
@@ -535,12 +535,12 @@ title: 1_2_3_options
 ---
 What do you say?
 -> "It's boring."
-<<jump 1_2_3_1>>
+    <<jump 1_2_3_1>>
 -> "It's fantastic!"
-<<jump 1_2_3_2>>
+    <<jump 1_2_3_2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2043,155
+__PrivCrochet_position: 2043,151
 __PrivCrochet_tags: 
 title: 1_2_3_1
 ---
@@ -612,7 +612,7 @@ What will you ask?
     <<jump 1_2_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2324,-157
+__PrivCrochet_position: 2322,-157
 __PrivCrochet_tags: 
 title: Vera_feminism
 ---
