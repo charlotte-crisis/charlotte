@@ -1,0 +1,857 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: -557,-79
+__PrivCrochet_tags: 
+title: 1
+---
+Here you are, at an 8am Monday class, after an incredibly exhausting weekend.
+You can feel the semester piling on with work and projects and assessments. You wish recess week would arrive sooner.
+Go talk to your classmates! Maybe they've had a better weekend.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: -331,-79
+__PrivCrochet_tags: 
+title: 2
+---
+Chenjie: "Morning." 
+Chenjie: "Yikes, you look exhausted." 
+You: "That obvious?" 
+Chenjie: "Yeah, you have some serious eye bags... Did you sleep really poorly last night?" 
+You shrug. 
+Chenjie: "You stay on campus, right? You should nap after class or something." 
+Chenjie: "Recess week is coming soon! Hang in there!" (+5% confidence)
+You: "Yeah, I will. Thanks."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: -103,-78
+__PrivCrochet_tags: 
+title: 3
+---
+Sage: "Morning..."
+She isn't paying you much attention.
+She's texting someone on Telegram so it might not be best to disturb her.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 120,-77
+__PrivCrochet_tags: 
+title: 4
+---
+Joanne: "Hey, Charles! Morning!"
+You: "You're chipper today."
+Joanne: "Yeah! Our BTO application got accepted!"
+You: "Wow. That's great!"
+Joanne: "Yeah, my boyfriend and I knew we wanted a BTO since JC. So we've been waiting a long time!" 
+<<changeRelationship("J", 5)>>
+Joanne: "Gosh, I'm so excited." (+5% Joanne relationship)
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 338,-76
+__PrivCrochet_tags: 
+title: pre_5
+---
+Do you wish to sit? (will start the class)
+
+-> No (go back)
+
+-> Yes (continue...) #continue
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: -558,243
+__PrivCrochet_tags: 
+title: 5
+---
+Prof Lim: "Good morning, everyone. Some of you look a bit tired today."
+Prof Lim: "I tried to get another time slot because I knew this isn't ideal but..."
+Prof Lim: "I do appreciate you all coming to class early in the morning."
+Prof Lim: "Now, today, the topic will be on LGBTQ in the Media."
+Prof Lim: "As usual, we shall start with some discussion questions."
+Prof Lim: "How does the media represent LGBTQ people in Singapore."
+Prof Lim: "Are there queer spaces for LGBTQ people in Singapore?"
+Prof Lim: "What do you think makes LGBTQ representation in the media complex?"
+Prof Lim: "Alright, discuss these questions in your groups."
+<<goto_room_class_1_discussion()>>
+You: "Okay so... how does the media represent LGBTQ people?"
+Sage: "LGBTQ+ characters? In my Singaporean media?"
+
+-> "Yeah, there should be more LGBTQ representation in Singapore."
+    <<changeConfidence(5)>>
+    Chenjie: "You can say that again. LGBT representation in Singapore's a pitiful state." (+5% confidence)
+    <<jump 6>>
+
+-> "I think it's fine if we don't have LGBTQ media representation."
+    Joanne: "What do you mean?"
+    <<jump 7>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: -329,148
+__PrivCrochet_tags: 
+title: 6
+---
+Sage: "I don't know... Is there any representation?"
+Chenjie: "I think there are...?"
+-> "It's hard to even find any LGBTQ characters in Singapore media."
+    You: "I feel like we just sort of... ignore the existence of LGBTQ people in general, even in media."
+    Chenjie: "Yeah, that's why there are hardly any queer characters, and when they do appear, they're... perverts and stuff..." 
+    Joanne: "Yeah, representation just isn't great."
+
+-> "But what good LGBTQ representation is there in Singapore?"
+    Sage: "I really don't think there are any."
+    Joanne: "I think there are... For example, influencers."
+    Chenjie: "Yeah, I think it's definitely more lax if you are an independent creator or something."
+    Sage: "Oh, right... Like Kumar maybe?"
+    Sage: "And I know there are also quite a few influencers on TikTok and Instagram who are very openly queer."
+    You: "Well, at least there are some... But any for fictional media?"
+    Chenjie: "Not that I can think of at least..."
+
+-> "Don't we have a media policy or something?" #skillcheck #int #9
+    <<set $diceroll = diceRoll($int)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll > 8>>
+        You: "A media content policy not to portray non-heterosexual behaviour in a positive way." (+5 XP)
+        Sage: "Don't remind me of that stupid rule. If I remember correctly, the exact phrasing is 'promotion of homosexuality'."  
+        Sage: "What counts as 'promotion' anyway? Is normalising it 'promotion'? Is depicting a happy queer person?"
+        Chenjie: "Let's not forget the film ratings. Any queer depiction immediately gets the M18 rating."
+    <<else>>
+        You: "Something about the depiction of non-heterosexuality..."
+        Joanne: "You mean the film ratings?"
+        Chenjie: "Right, any queer depiction immediately gets the M18 rating."
+        You: "No... Not just that... Sorry, it slipped my mind..."
+        Sage: "It's okay. It be like that sometimes."
+        Chenjie: "Yeah, you look really exhausted today too..."
+    <<endif>>
+
+-> Keep silent
+<<jump 8>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: -333,378
+__PrivCrochet_tags: 
+title: 7
+---
+You: "I mean, honestly, I can see why the Singapore government wants to prevent promotion of LGBTQ lifestyles in the media..."
+Sage: "Why?" 
+
+-> "We have a declining birthrate."
+    You: "If you promote non-heterosexual lifestyles, our declining birthrate might get worse."
+    You: "It's for the greater good."
+    Sage: "That's ridiculous. There are so many other factors that are causing the declining birth rates, like cost of living, lack of work-life balance, and so on."
+    You: "It's still one of the factors."
+    Joanne: "Dude, what are you even saying?"
+    Chenjie: "Do you honestly think restricting LGBT representation will increase our birth rate?"
+    Joanne: "Exactly. You think gay men will marry women just because they don't see people like themselves on TV?"
+    <<changeConfidence(-5)>>
+    <<changeRelationship("S", -5)>>
+    <<changeRelationship("CJ", -5)>>
+    <<changeRelationship("J", -5)>>
+    Yikes... Not exactly the most receptive crowd.
+    Didn't know they were so passionate about LGBTQ stuff.
+    (go to 8)
+
+-> "We shouldn't expose children to such sexual content."
+    You: "It's too sensitive and adult to be shown to the vulnerable minds of children..."
+    <<changeRelationship("S", -5)>>
+    Sage: "How is it any more sexual than cishet people?" (-5% Sage relationship)
+    Sage: "Not everything they do is about sex. It's just wanting to live and be treated like a person."
+    You: "They're still ideas that are too... complex for kids. It's hard to explain to them properly."
+    <<changeRelationship("J", -5)>>
+    Joanne: "It's not. Love is love. They will just see two dudes or two girls who really love each other." (-5% Joanne relationship)
+    Joanne: "If they can understand normal relationships, then they probably can understand gay and lesbian ones."
+    <<changeRelationship("CJ", -5)>>
+    Chenjie: "Yeah, and you know, children weren't born with hate. They're taught it." (-5% Chenjie relationship) 
+    Chenjie: "If kids saw more types of people on TV, they will grow up to be more accepting and open individuals."
+    You: "I guess..."
+    <<changeConfidence(-5)>>
+    Yikes... Not exactly the most receptive crowd. (-5% confidence)  
+    Didn't know they were so passionate about LGBTQ stuff. 
+
+-> "Singaporeans will likely complain about it."
+    You: "I mean, I get that it's not great. But as a society, Singapore still holds onto its traditional values..."
+    You: "It will cause quite an uproar if people see it on the TV and it's just not great for societal stability and our general harmony..."
+    <<changeRelationship("CJ", -5)>>
+    Chenjie: "Societal stability? Dude, what?" (-5% Chenjie relationship)
+    <<changeRelationship("J", -5)>>
+    Joanne: "Are you telling me you will sacrifice progress just because some people will always make noise." (-5% Joanne relationship)
+    Joanne: "Bigots who hate gays and lesbians will continue to exist if you don't actively seek to make changes in society."
+    <<addExperience(5)>>
+    Joanne: "And normalising it and discussing it through media depictions is important!" (+5 XP)
+    Sage: "Exactly!"
+    <<changeConfidence(-5)>>
+    <<changeRelationship("S", -5)>>
+    Yikes... Not exactly the most receptive crowd. (-5% confidence) (-5% Sage relationship)  
+    Didn't know they were so passionate about LGBTQ stuff.
+<<jump 8>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: -88,226
+__PrivCrochet_tags: 
+title: 8
+---
+Chenjie: "But we also have to consider the nonfiction side of things too."
+Chenjie: "Like, the way LGBTQ people are talked about on the news?"
+Joanne: "It's hard to say..."
+[i]A phone jingles, and Sage immediately looks at her phone.[/i]
+Joanne: "You really don't see much about LGBTQ people being talked about on the news."
+Joanne: "Except maybe alternative news media, like Rice Media, that isn't related to the government."
+Sage begins typing furiously on her phone. 
+<<set $diceroll = diceRoll($emp)>>
+<<if $diceroll > 9>>
+    [i]She looks worried.[/i]
+<<endif>>
+
+-> Ask Sage if she is okay
+    You: "Sage? Is everything okay?"
+    <<changeRelationship("CJ", 5)>>
+    Chenjie: "Is there an emergency at home or something?" (+5% Chenjie relationship)
+    Sage: "Huh?"
+    Sage looks nervous as all eyes fall on her.
+    Sage: "It's nothing much. You all just continue first." 
+    Chenjie: "Okay then." 
+-> Continue group discussion
+
+Chenjie: "What about you though, {$name}? What do you think?"
+You: "Is LGBT representation good in Singapore's news? Um..."
+-> "Our news outlets just avoid talking about it."
+    You: "They still report when something comes up."
+    You: "Like ministers talking about LGBTQ issues or during the Pink Dot period."
+    You: "I think they're trying to play it safe so they don't accidentally incite the wrath of the people or the government."
+    Joanne: "I guess... Doesn't make it better though." 
+    Chenjie: "Yeah, we need to make LGBT lives more visible to the public. Maybe talk about their daily experiences." 
+    Joanne: "Like what?"
+-> "Our news outlets give balanced stories and stick to the facts."
+    You: "They report when something comes up, like ministers talking about LGBTQ issues or during the Pink Dot period."
+    You: "And they're not particularly inflammatory towards LGBTQ people either."
+    You: "It's good journalism to only publish newsworthy stories."
+    You: "So they're likely not talking about it because it just isn't relevant."
+    Chenjie: "Still... It's kind of avoiding a topic that affects many Singaporeans though..."
+-> "You only see good representation from non-mainstream news."
+    Chenjie: "You mean, like alternative news outlets?"
+    You: "Yeah, the mainstream news outlets hardly ever acknowledge the existence of LGBTQ people unless absolutely necessary."
+    You: "Why are LGBTQ people only shown on the news when it's a sensational or hot topic? Why can't we have conversations about our daily experiences?"
+    Joanne: "It's hard to make the news about daily experiences, right?"
+    <<changeRelationship("CJ", 5)>>
+    <<addExperience(5)>>
+    Chenjie: "Feature news exists for a reason. Why can't they talk about that there?" (+5 XP) (+5% Chenjie relationship)
+    Joanne: "A lack of interest maybe? I think these things don't really affect the average Singaporean." 
+    [i]Before you can interject...[/i]
+[i]Sage puts down her phone with a sigh.[/i]
+-> "All good?"
+-> "Are you rejoining us?"
+-> Are you okay?"
+[i]Sage nods.[/i]
+Sage: "What are we talking about?"
+You: "Featuring LGBTQ daily experiences on the news."
+Joanne: "I mean, I think it's difficult to do that... It's not exactly newsworthy in Singapore, right?"
+Sage: "The news is for bringing up issues the people should know about though."
+Sage: "How do we inform the people of the difficulties LGBTQ+ people face if we don't even talk about it in the news?"
+Joanne: "True... Like BTO stuff, right? Gays and lesbians can't really get a BTO until they are 35."
+Sage frowns and sighs loudly.
+Sage: "I mean..."
+Sage: "Yeah... Housing is definitely a huge issue for queer people."
+Chenjie: "I mean, it's quite in line with the second question. Are there queer spaces for LGBTQ people in Singapore?"
+
+-> "Yes, Singapore tries to give LGBTQ people the space to be themselves."
+    <<changeRelationship("S", -5)>>
+    Sage: "Do you really think so?" (-5% Sage relationship)
+    Sage: "Singapore doesn't even accept the existence of LGBTQ folk."
+    <<changeRelationship("J", 5)>>
+    Joanne: "I think we are really moving towards acceptance though. There's Pink Dot every year, and there are organisations like OogaChaga." (+5% Joanne relationship)
+    Joanne: "And then 377A was lifted, right?"
+    <<addExperience(5)>>
+    Sage: "Yeah, and then they changed the constitution so it will be harder to reach marriage equality." (+5 XP)
+    Sage: "You know, that's sooo great for queer people."
+-> "Yes, but LGBTQ people were the ones who created that space themselves."
+    <<changeRelationship("S", 5)>>
+    Sage: "Exactly. LGBTQ people have to fight tooth and nail just to be themselves." (+5% Sage relationship)
+    Joanne: "Maybe not tooth and nail, you know?"
+    Joanne: "There's Pink Dot every year, and there are organisations like OogaChaga." 
+    Joanne: "So there are queer spaces in Singapore."
+    Sage: "How do you not get it?"
+    <<addExperience(5)>>
+    Sage: "All those are things queer people had to make for themselves against public backlash." (+5 XP)
+-> "No, not really."
+    <<changeRelationship("CJ", -5)>>
+    Chenjie: "That's not true..." (-5% Chenjie relationship)
+    Joanne: "Yeah, there's Pink Dot every year." 
+    Joanne: "And there are also some organisations like OogaChaga."
+    Joanne: "So there are queer spaces in Singapore."
+    Sage: "I get what {$name} is saying though. LGBTQ+ people can't be themselves in public, only in private." 
+    Sage: "What's the use of queer spaces if most queer people don't even feel safe to be out."
+Sage: "If Singapore was that great, LGBTQ+ people wouldn't have to tiptoe around just so we aren't treated like spawns of Satan."
+<<set $diceroll = diceRoll($int)>>
+<<if $diceroll > 9>>
+    [i]She said, "WE aren't treated like spawns of Satan."[/i]
+    [i]You look at the other two, but it seems neither of them caught the slip up.[/i]
+<<endif>>
+
+Chenjie: "Um... Sage, you sound a bit... upset?"
+Chenjie: "Is everything okay?"
+Sage takes a deep breath and rubs her forehead.
+Sage: "Sorry, it's just..."
+Sage: "That was my friend just now. The person I was messaging."
+Sage: "My friend... He's going through a rough patch."
+Sage looks troubled as she fidgets with her phone, flipping it absent-mindedly in her hand.
+
+-> "Let's get back to the class topic."
+    <<changeRelationship("S", -5)>>
+    Sage: "Yeah. I'm really sorry for bringing the mood down." (-5% Sage relationship)
+    -> "Don't apologise."
+        Sage: "No, no. I'm sorry. I let my emotions get the better of me."
+        <<jump 9>>
+    -> "It's okay."
+        Sage: "No, it's not. I let my emotions get the better of me."
+        <<jump 9>>
+    -> "Yeah, you sort of did."
+        <<changeConfidence(-5)>>
+        <<changeRelationship("J", -5)>>
+        Joanne shoots you a glare. (-5% confidence) (-5% Joanne relationship)
+        Joanne: "Do you need a breather?"
+        <<jump 9>>
+-> "Do you want to talk about this?"
+    Sage hesitates, and then shrugs.
+    <<addExperience(5)>>
+    Sage: "Actually, my friend was kicked out of the house and I had to help him move to a new place." (+5 XP)
+    Joanne: "What?! Why?"
+    Sage: "His parents found out he's gay."
+    Chenjie: "Oh shit..."
+    -> "Why would his parents do that?"
+        <<changeConfidence(-5)>>
+        Sage: "They'd rather not have a son than a gay son." (-5% confidence)
+        Joanne: "Still... To just kick your own son out of the house... How can they be so heartless?" 
+        <<jump 10>>
+    
+    -> "Singapore is so homophobic..."
+        Joanne: "It really is tough being gay in Singapore, huh."
+        Chenjie: "Honestly, we were saying how Singapore is not so bad, but when you hear stories like this..."
+        <<changeConfidence(-5)>>
+        Sage: "Nowhere in the world is safe for LGBTQ+ people honestly. Much less Singapore." (-5% confidence)
+        <<jump 10>>
+    
+    -> "Is that why he texted you?"
+        Sage: "No... That happened two weeks ago."
+        Sage: "I helped him find and move to a new place already so he's okay on that front. For now..."
+        <<jump 10>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 136,143
+__PrivCrochet_tags: 
+title: 9
+---
+Sage: "Just... Never mind all that. Let's just continue with the discussion."
+Chenjie: "Oh... Okay then."
+Chenjie: "Um... So... let's move to the next question?"
+[i]Your group moves on, but Sage hardly speaks.[/i]
+[i]In fact, she occasionally lowers her head, typing away at her phone.[/i]
+Chenjie: "All this talk reminds me why I want to move overseas honestly."
+Joanne: "Why?"
+Chenjie: "I mean, isn't it just so suffocating here? There are so many close-minded people here..."
+Chenjie: "It feels like all Singapore ever wants is to keep things status quo, and I'm just not a huge fan of that."
+Joanne: "I mean, I'd stay here... I quite like the safety and convenience of Singapore."
+<<jump 11>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 141,368
+__PrivCrochet_tags: 
+title: 10
+---
+Joanne: "So where is your friend staying now?"
+Sage: "He rented a room. He had money he saved up from working part-time over the holidays."
+Sage: "But... he has to juggle work and uni now. And he's only in his first semester."
+Sage: "So he's thinking of dropping out."
+Sage: "He has a poly diploma so he could have started working already but..."
+
+-> "How did his family find out that he's gay?"
+    Sage: "His cousin told on him to his parents after seeing a TikTok of him at Pink Dot."
+    You: "Oh..."
+    [i]Doesn't that sound familiar to you?[/i] 
+    <<set $diceroll = diceRoll($int)>>
+    <<if $diceroll >= 9>>
+        [i]The irony also doesn't escape your notice.[/i]
+        <<changeConfidence(-5)>>
+        <<addExperience(5)>>
+        [i]Pink Dot was supposed to be one of the few "safe spaces" for queer people.[/i] (-5% confidence) (+5 XP)
+    <<endif>>
+    Joanne: "He really should have been more careful..."
+    -> "By hiding himself at all times?"
+        You: "How could you blame a guy for wanting to be among people like himself?" 
+        You: "He couldn't have predicted being spotted on TikTok of all places, and being told on."
+        <<changeConfidence(5)>>
+        <<addExperience(5)>>
+        Joanne: "I... I guess I didn't think of it that way." (+5% confidence) (+5 XP) 
+
+    -> "He shouldn't have gone to Pink Dot, I think."
+        <<changeRelationship("J", 5)>>
+        You: "Like, it's harsh but you have to be careful if you want to stay closeted." (+5% Joanne relationship)
+        Sage: "I guess so..."
+        <<changeRelationship("S", -5)>>
+        Sage: "God, it was his first time there too... I feel awful for suggesting to go..." (-5% Sage relationship)
+        [i]This is really weighing on Sage.[/i]
+
+    -> Say nothing
+        Sage: "God, it was his first time there too... I feel awful for suggesting to go..."
+        [i]This is really weighing on Sage.[/i]
+
+-> "How is he paying for uni?"
+    Sage: "He's on a full-ride scholarship."
+    Chenjie: "Then he doesn't have to drop out, right?"
+    Sage: "That's what I told him too..."
+    Joanne: "But studying for uni while also trying to earn enough to make a living is still incredibly difficult." 
+    Joanne: "I can see why he would rather drop out and start working."
+    Sage: "... I guess so."
+
+-> "Why did he text you just now?"
+    Sage: "He is trying to sneak home to get some of his stuff from his room."
+    Sage: "He's worried his parents might change the locks so he said he's doing it tonight."
+    [i]Just thinking about it makes you sick.[/i]
+    <<changeConfidence(-5)>>
+    [i]The finality and rejection of changing the locks to keep your own son out of the house.[/i] (-5% confidence)
+
+-> "Makes you wonder if being queer in Singapore..." #skillcheck #emp #10
+    <<set $diceroll = diceRoll($emp)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll < 10>>
+        You: "Makes you wonder if being queer in Singapore is possible at all."
+        You: "You either have to work really hard to stay hidden and closeted, or you have to risk being confronted with discrimination and hurt."
+        Chenjie: "Surely not. I mean, look at Sage and her friend!" 
+        Sage: "What do you mean?"
+        Chenjie: "Well, you're there for him, right?"
+        Sage: "I don't think I'm doing very much though. All I'm doing is sitting here texting him."
+        Chenjie: "You said you helped him move to a new place, right?"
+        Chenjie: "And don't underestimate being there for your friend."
+        Chenjie: "Knowing there is someone who you can talk to — who will worry about you — is comforting."
+        <<addExperience(5)>>
+        <<changeConfidence(5)>>
+        Chenjie: "I think it's support and care like that that makes being queer in Singapore possible." (+5% confidence) (+5 XP)
+        The frown on Sage's face softens.
+
+        -> "True, I've also received support and care for my crossdressing."
+            <<changeRelationship("CJ", 5)>>
+            You: "Over the past few weeks, things have been rough but I've had people in my corner who I can talk to." (+5% Chenjie relationship)
+            <<changeConfidence(5)>>
+            You: "It's really that support that gets me through the roughest times." (+5% confidence)
+            <<jump 14>>
+        
+        -> "Such a thing doesn't exist for me though."
+            You: "I don't have anyone who supports or cares about me." 
+            <<jump 14>>
+        
+        -> "But being LGBTQ in Singapore is still unbearable."
+            <<changeConfidence(-5)>>
+            You: "Care and support don't negate the insurmountable obstacles." (-5% confidence)
+            <<addExperience(5)>>
+            You: "How is the power of friendship going to solve the discrimination and microaggression that LGBTQ people face every day?" (+5 XP)
+            Sage: "Yeah... They're societal and structural issues. They're not that easy to deal with."
+            <<jump 12>>
+    <<else>>
+        It's like waiting for the inevitable moment you are caught red-handed for *something*.
+        You try to translate those emotions into words but nothing coherent forms.
+        <<changeConfidence(-5)>>
+        You: "Makes you wonder if being queer in Singapore is possible at all." (-5% confidence)
+        <<changeRelationship("J", -5)>>
+        Joanne: "What? Of course, gay people exist in Singapore." (-5% Joanne relationship)
+        Sage: "I think what {$name} is trying to say is that being queer in Singapore is difficult and impractical."
+        Joanne: "That's why Singaporeans have to fight for gay rights!"
+        Sage: "But for every push for equality, there's just as strong a pushback to return to the 'traditional' ways."
+        <<jump 12>>
+    <<endif>>
+
+-> "I'm sorry he's going through such a rough time."
+    Joanne: "Yeah, what he's going through is just awful."
+    Joanne: "No one should ever have to go through what he is going through."
+    Sage smiles wryly. 
+    Sage: "Yeah, but this is the reality for a lot of queer folks."
+    <<addExperience(5)>>
+    Chenjie: "That's why a lot of them move overseas, right?" (+5 XP)
+    Joanne: "But that's provided they can afford it. Moving overseas requires a lot of money."
+    Sage: "And provided that moving overseas is really better."
+    Chenjie: "What do you mean?"
+    Sage: "Singapore's standard of living is quite high. Safety is high. Migrating is lonely and you lose a lot of your friends at once."
+    Sage: "It's about weighing the pros and cons of leaving."
+    Chenjie: "So I take it you don't intend to leave?"
+    Sage shakes her head.
+    <<jump 11>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 401,236
+__PrivCrochet_tags: 
+title: 11
+---
+Chenjie: "What about you, {$name}?"
+-> "I'm leaving Singapore ASAP."
+    <<changeRelationship("CJ", 5)>>
+    You: "It's unbearable in Singapore. I hate how intolerant this society is." (+5% Chenjie relationship)
+    You: "I feel like I'd be more comfortable and accepted somewhere else."
+    Sage: "It's not that much better overseas if you ask me though... Hate crime can be more violent."
+    <<addExperience(5)>>
+    You: "But there are also stronger queer communities there too." (+5 XP)
+    Sage: "True..."
+-> "Maybe, if there is the opportunity."
+    You: "I'm not rushing to leave, but I also am not overly attached to the idea of staying in Singapore." 
+    <<changeRelationship("J", 5)>>
+    Joanne: "Yeah, me too... Maybe if there is a job opportunity or my boyfriend requires me to move, then I don't see why not." (+5% Joanne relationship)
+-> "I'll never leave Singapore."
+    You: "I'm too accustomed to Singapore's culture and way of life."
+    You: "I can't imagine ever leaving this country. It's like home to me."
+    <<changeRelationship("CJ", -5)>>
+    Chenjie: "Wow. Patriotism much, huh." (-5% Chenjie relationship)
+    You: "Do you dislike Singapore that much?" 
+    Chenjie: "I'm grateful for growing up here, I guess. But it's just..."
+    <<addExperience(5)>>
+    Chenjie: "I don't really like the way Singapore society treats other people. That's just my feeling though." (+5 XP)
+-> "I don't know at all."
+    You: "I'm just not sure about anything in the future. That worries me a bit."
+    Joanne: "You don't have to decide these things right now anyway. We are all still young." 
+    <<changeConfidence(5)>>
+    Joanne: "You can always cross the bridge when you get to it. Don't worry too much about it." (+5% confidence)
+    Sage: "Yeah, who knows what life has in store for any of us."
+<<jump 15>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 422,523
+__PrivCrochet_tags: 
+title: 12
+---
+Joanne: "I think you are being too pessimistic. There's no use in wallowing, you know."
+Joanne: "The thing is that allies should band together and fight for justice!"
+Joanne: "There are more of us than you think." 
+[i]Sage's eye twitches and she holds her breath.[/i]
+[i]Something breaks.[/i] 
+Sage: "You know, you say all that when you completely reject trans people or anyone who doesn't fit the gender binary."
+<<addExperience(5)>>
+[i]Joanne's face turns red with rage? Embarrassment?[/i] (+5 XP)
+-> "Hey, let's not fight."
+    You: "I don't think it's something we can see eye-to-eye on."
+    You: "So yelling at each other about it won't help things."
+    Chenjie: "Yeah, how about both of you take a breather? Drink some water and cool down, you know?"
+    <<changeRelationship("J", 5)>>
+    Sage huffs and leans back into her chair while Joanne purses her lips and looks away. (+5% Joanne relationship)
+    <<changeRelationship("CJ", 5)>>
+    You and Chenjie share a look. (+5% Chenjie relationship)
+    <<changeConfidence(5)>>
+    Crisis averted. (+5% confidence)
+    Chenjie: "Let's just move on to the next discussion question...?"
+    [i]Before you could, however...[/i]
+    <<jump 15>>
+-> "Sage is right."
+    Joanne: "This is all your fault!" (-5% confidence) 
+    You: "How? I'm just trying to live my own life. You're the one who constantly targets and attacks me." (+5% Sage relationship)
+    Sage: "Yeah, I've honestly had enough of your nonsense."
+    Joanne: "Nonsense?!"
+    Joanne: "Chenjie, tell me, am I saying nonsense?" 
+    Chenjie: "Um... I mean, I think you... well, trans people are people, you know?"
+    Chenjie: "They're just trying to live their lives."
+    <<jump 13>>
+-> Leave it
+    Joanne: "Look, I'm just trying to empathise."
+    Sage: "I don't need your cheap empathy."
+    Joanne: "Cheap empathy?!"
+    Sage: "Yeah, you have no empathy whenever it comes to people who are different from yourself."
+    Sage: "You don't understand a single thing and yet you keep yapping and yapping."
+    Sage: "You're a massive bigot but you pretend to be so high and mighty. It's so grating."
+    <<jump 13>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 686,340
+__PrivCrochet_tags: 
+title: 14
+---
+Chenjie: "This is a bit personal but... My mom's a single mom. My dad was completely out of the picture when I was born." 
+Chenjie: "She didn't have anyone she could rely on until she met my godmom through mutual friends."
+Chenjie: "My mom often says that without my godmom, she might not have gotten through that dark period of her life."
+Joanne: "Wow... That is so sweet..."
+Chenjie: "Yeah, my mom often says that there will always be someone who will care about you."
+<<addExperience(5)>>
+Chenjie: "Sometimes, you just have to wait for them to show up in your life." (+5 XP)
+
+-> "That's too overly optimistic."
+    Chenjie looks hurt and sympathetic. (-5% Chenjie relationship)
+    Chenjie: "If you say so then..."
+
+-> "Maybe."
+    Chenjie: "Just think about it, okay?"
+
+-> "Yeah, I'm sure she's right."
+    Chenjie: "Yeah, my mom is wise like that." (+5% confidence)
+<<jump 15>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 949,228
+__PrivCrochet_tags: 
+title: 15
+---
+Prof Lim: "Alright, class! It seems a lot of your discussions were quite fruitful."
+<<goto_room_class_1_seated()>> //is there a different one for class3?
+Prof Lim: "Let's hear from some groups..."
+After calling on some groups, she gets to yours.
+Prof Lim: "Your group seemed to have a rather passionate discussion. Anything from you?"
+[i]Most of the things you discussed were already touched upon by other groups... [/i]
+[i]The other stuff you talked about aren't exactly related to the discussion questions.[/i]
+Chenjie: "The same as the other groups actually."
+Prof Lim: "I see. Alright then, moving on..."
+The lesson continues.
+<<jump 16>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 724,585
+__PrivCrochet_tags: 
+title: 13
+---
+Joanne: "That's it. I've had enough."
+Chenjie: "Wait, Joanne, calm down." (-5% Chenjie relationship)
+Joanne: "How can I calm down when I'm being attacked on all sides?"
+Joanne: "Clearly, I'm not welcome here."
+[i]Prof Lim chooses this moment to approach.[/i] 
+Prof Lim: "Hello, is everything okay over here? Things sound a bit heated..."
+//need code to set J relationship == 0)
+Joanne: "Yeah, prof, is it possible to switch groups now?" (Goes to 0% Joanne relationship)
+Prof Lim: "Uh... May I know what has happened here?"
+[i]No one looks away, unwilling to speak. Even Joanne is too angry to speak.[/i]
+
+-> Keep quiet
+    Prof Lim: "... Okay... I'll see what I can do for you, okay?" 
+    [i]It seems this group has now been reduced to three members.[/i]
+    [i]For the rest of class, the atmosphere is thick with discomfort.[/i]
+-> Explain #skillcheck #emp #11
+    <<set $diceroll = diceRoll($emp)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll > 10>>
+        <<addExperience(5)>>
+        [i]Just as you open your mouth, everyone shoots you a glare and you get the message.[/i] (+5 XP)
+        You: "Um, nothing... Just a disagreement."
+        Prof Lim: "... Okay... I'll see what I can do for you, okay?"
+        [i]It seems this group has now been reduced to three members.[/i]
+        [i]For the rest of class, the atmosphere is thick with discomfort.[/i]
+    <<else>>
+        You explain things to the prof and she nods.
+        Prof Lim: "Okay... I see... Yes, perhaps transferring to another group may be ideal..."
+        Prof Lim: "I'll see what I can do, okay?"
+        <<changeConfidence(-5)>>
+        As she leaves, you notice that everyone is glaring at you. (-5% confidence)
+        [i]It seems this group has now been reduced to three members.[/i]
+        [i]For the rest of class, the atmosphere is thick with discomfort.[/i]
+    <<endif>>
+<<jump 16>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 979,610
+__PrivCrochet_tags: 
+title: 16
+---
+<<addExperience(30)>>
+By the time class is over, the combination of last night's poor sleep and the eventfulness of this class has sapped a lot out of you. (+30 XP)
+Time to go home.
+Who will you walk with today?
+
+-> Go back alone.
+    <<goto_room_bedroom()>>
+    You're too exhausted to walk with anyone today.
+    You pack up and leave before anyone else.
+    The soft mattress and pillows in your hostel calls to you like a siren.
+    <<stop>>
+
+-> Chenjie (Chenjie relationship > 10)
+    <<jump 17>>
+
+-> Joanne (Joanne relationship > 10 AND $name=Charles)
+    <<jump 18>>
+
+-> Sage (Sage relationship > 10)
+    <<jump 19>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1235,356
+__PrivCrochet_tags: 
+title: 17
+---
+Chenjie: "Sure. Wait a sec."
+<<goto_room_bus_cj()>>
+Chenjie: "Today's class was really quite interesting."
+Chenjie: "You really don't get to talk about this sort of stuff so openly often, right?"
+
+-> "Fun for *you*. I found it uncomfortable."
+    Chenjie: "What? Why?"
+    You: "Everything was so tense! Sage and Joanne especially..."
+    //need code for this
+    (If players went through 13; then
+    Chenjie: "I mean... Yeah, Joanne leaving was... unpleasant." )
+    Chenjie: "But the topic itself is interesting, right?"
+    You: "Hm... Maybe."
+    You: "It reminded me of how inadequate the media is in representing queer people though."
+    <<stop>>
+-> "Yeah, it was interesting."
+    You: "It reminded me of how inadequate the media is in representing queer people though."
+    You: "But also, every queer person is different so it's not like we can fully represent them."
+    Chenjie: "I wonder if there is ever a way to fully understand someone else and their experiences though."
+    You: "I don't think it's ever possible. Even if you know everything about a person, you still won't understand them fully."
+    -> "So what's the point of explaining?"
+        Chenjie: "I mean, you might not fully understand, but understanding a bit is better than no understanding at all, right?"
+        Chenjie: "Even if I never understand though, sometimes I still want people to tell me about themselves."
+        Chenjie: "I think there's something a bit lonely about giving up on explaining yourself to others." 
+        <<addExperience(5)>>
+        Chenjie: "That's just what I feel at least." (+5 XP)
+        You: "I see... That's my bus now. See you!"
+        Chenjie: "Yup! Bye!"
+        <<stop>>
+    -> "But I'll still give it a shot."
+        <<changeConfidence(5)>>
+        You: "If I never even try to explain my own feelings and experiences, how could I ever expect someone else to know?" (+5% confidence)
+        You: "Even if they don't fully understand, we can still work something out, you know?"
+        You: "That is why I have to try."
+        <<changeRelationship("CJ", 5)>>
+        Chenjie: "I feel the same way too." (+5% Chenjie relationship)
+        You: "That's my bus now. See you!"
+        Chenjie: "Yup! Bye!"
+        <<stop>>
+
+-> "Honestly, the whole LGBTQ thing doesn't make any sense to me."
+    <<changeRelationship("CJ", -5)>>
+    Chenjie: "Really? Even though you crossdress?" (-5% Chenjie relationship)
+    You: "It still doesn't make sense to me."
+    You: "Why do people make such a big deal about queer media representation anyway?"
+    Chenjie: "I'm extrapolating a bit, but after a breakup, you listen to breakup songs, right?"
+    Chenjie: "I think it's the idea of... 'Oh! I'm not alone in this feeling!' Maybe?"
+    -> "I see."
+    -> "Maybe?"
+    -> "I still don't get it."
+    Chenjie: "I mean, it clearly matters to a lot of people. That's why it's a point of discussion."
+    Chenjie: "And I think it's never a bad thing to represent more groups of people, especially if you don't understand them."
+    <<addExperience(5)>>
+    Chenjie: "So that you know that there are different people out there with experiences not like your own, and so that you broaden your horizons." (+5 XP)
+    You: "I see... That's my bus now."
+    Chenjie: "Okay, then. Bye!"
+    <<stop>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1254,632
+__PrivCrochet_tags: 
+title: 18
+---
+Joanne: "Okay. I'll wait for you then."
+<<goto_room_bus_j()>>
+Joanne: "Hey, do you get the feeling that Sage... has something against me?"
+Joanne: "I don't know if I'm imagining things but sometimes she glares at me like I did something wrong."
+Joanne: "Do you think she hates me?"
+
+-> "No idea."
+    [i]Joanne sighs.[/i]
+    Joanne: "It just worries me because we're supposed to be a group."
+    <<changeConfidence(-5)>>
+    <<changeRelationship("J", -5)>>
+    Joanne: "It won't be great if it affects our project." (-5% confidence) (-5% Joanne relationship)
+    You: "Yeah, that worries me too."
+    Joanne: "She's not those super loud types so I thought maybe she gets it too, you know?"
+    Joanne: "Anyway, my bus is here. I just hope group work is okay in the end."
+    You: "Me too. Bye!"
+    Joanne: "Bye!"
+    <<stop>>
+
+-> "No? Why would she hate you?"
+    Joanne: "I have no idea! That's why I asked you." (+5% Joanne relationship)
+    Joanne: "But maybe it has something to do with the stuff I say about like... the... you know."
+    Joanne: "Trans things."
+    
+    -> "Yeah, I think so."
+    -> "Maybe?"
+    -> "Nahhh..."
+    
+    Joanne: "You know, she does seem like the type who will make friends with all sorts."
+    Joanne: "And you saw how concerned she is for her friend so maybe..."
+    Joanne: "Is there anything wrong in saying what I think?"
+    -> Shrug
+        Joanne: "Yeah... Whatever. My bus is here."
+        Joanne: "I just hope group work is okay in the end." 
+        You: "Me too. Bye!"
+        <<stop>>
+    -> "What about what she thinks?"
+        You: "I think you could tell her you want to understand what she thinks."
+        <<changeRelationship("J", 5)>>
+        You: "She seems rather guarded so it might be best to hear what she says without trying to argue first." (+5% Joanne relationship)
+        Joanne: "Hm... Maybe. I just hope she doesn't hate me to the point of closing me off entirely."
+        <<changeConfidence(5)>>
+        Joanne: "But I'll give it a shot. Thanks, Charles." (+5% confidence)
+        Joanne: "Anyway, my bus is here. Bye!"
+        You: "Bye!"
+        <<stop>>
+
+-> "Yeah... I think she does."
+    Joanne: "Why though? What did I do wrong?" 
+    <<addExperience(5)>>
+    You: "I have a feeling it has to do with your opinions on trans people." (+5 XP)
+    Joanne: "I'm just saying things as it is though!"
+    Joanne: "She's not those super loud types so I thought maybe she gets it too, you know?"
+    You: "Yeah, but I think she's still a strong supporter for trans people even if she isn't that vocal about it."
+    Joanne: "I don't get why though."
+    -> Shrug
+        Joanne: "Yeah... Whatever. My bus is here."
+        Joanne: "I just hope group work is okay in the end."
+        You: "Me too. Bye!"
+        <<stop>>
+    
+    -> "What about what she thinks?"
+        You: "I think you could tell her you want to understand what she thinks."
+        You: "She seems rather guarded so it might be best to hear what she says without trying to argue first." (+5% Joanne relationship)
+        Joanne: "Hm... Maybe. I just hope she doesn't hate me to the point of closing me off entirely."
+        Joanne: "But I'll give it a shot. Thanks, Charles." (+5% confidence)
+        Joanne: "Anyway, my bus is here. Bye!"
+        You: "Bye!"
+        <<stop>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1174,868
+__PrivCrochet_tags: 
+title: 19
+---
+Sage: "Yeah, let's go home together."
+<<goto_room_bus_s()>>
+Sage: "Honestly, the LGBTQ topic has been quite draining for me. Emotionally-speaking."
+Sage: "I keep connecting what we're taught in theory to what I've actually witnessed myself..."
+Sage: "It doesn't feel as empowering or hopeful as I thought..."
+You: "What do you mean?"
+Sage: "I don't know... It felt so impersonal and like I have to be impartial."
+Sage: "Even when it feels impossible to be impartial about something that's actually hurting people I know."
+
+-> "What would you want then?"
+    Sage: "... I honestly don't know."
+    Sage: "Maybe what I want isn't for the class syllabus to change."
+    Sage: "It's for society itself to change and we can talk about LGBTQ+ issues normally."
+    Sage: "So it doesn't feel like every single sentence is a potential landmine I have to be careful around."
+    [i]And you get the feeling, don't you?[/i]
+    [i]The feeling of struggling to pick the next best thing to say.[/i]
+    -> "I get it."
+    -> "I don't get it."
+    <<changeConfidence(5)>>
+    Sage gives you a half-smile. (+5% confidence)
+    Sage: "That's my bus by the way. Bye."
+    You: "Yeah, bye."
+
+-> "I think I understand that."
+    <<changeRelationship("S", 5)>>
+    You: "It feels like people are making commentary and opinions out of your own lived experience." (+5% Sage relationship)
+    <<addExperience(5)>>
+    You: "I feel like a specimen to be dissected and examined." (+5 XP)
+    Sage: "Yeah... Maybe what I want isn't for the class syllabus to change."
+    Sage: "It's for society itself to change and we can talk about LGBTQ+ issues normally."
+    Sage: "So it doesn't feel like every single sentence is a potential landmine I have to be careful around."
+    [i]And you get the feeling, don't you?[/i]
+    [i]The feeling of struggling to pick the next best thing to say.[/i]
+    -> "I get it."
+    -> "I don't get it."
+    <<changeConfidence(5)>>
+    Sage gives you a half-smile. (+5% confidence)
+    Sage: "That's my bus by the way. Bye."
+    You: "Yeah, bye."
+
+-> "Don't despair!"
+    Sage: "It's hard not to though."
+    Sage: "I'm seeing my friend struggling just because he's gay."
+    Sage: "I wish I could help him more, but maybe being queer really is just something impossible in this society."
+    You: "I'm sure things will get better."
+    <<changeRelationship("S", -5)>>
+    Sage: "Oh, sweet summer child... You don't get it, do you?" (-5% Sage relationship)
+    You: "Sweet summer what...?"
+    Sage: "That's my bus..."
+    Sage is about to leave, but before she does...
+    Sage: "Look, it's nice that you are so optimistic... I just wish you all the best." 
+    <<changeConfidence(-5)>>
+    You feel an itching discomfort in your chest. (-5% confidence)
+<<stop>>
+===
