@@ -1,0 +1,354 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: -76,-76
+__PrivCrochet_tags: 
+title: 1
+---
+You: "Hey, Joanne!"
+Joanne: "Hello!"
+<<set $start_J_rs = getRelationship("J")>>
+<<if $name == "Charlotte">>
+    Joanne: "... Could you... wear something else?"
+    You: "Like what?"
+    Joanne: "Don't dress like a girl. It's very awkward for me, you know?"
+    You: "I didn't bring any spare clothes though..."
+    Joanne: "... Fine. I'll just let you do it this time. But next time, can you not dress weird?"
+    
+    -> "Okay, I won't dress like this."
+        Joanne: "Good. You need to get out of this habit, you know?"
+        Joanne: "If not, how are you going to become a respectable member of society?"
+        <<changeConfidence(-5)>>
+        You: "..." (-5% confidence)
+        <<jump 2>>
+    
+    -> "It's my choice."
+        <<changeRelationship("J", -20)>>
+        Joanne: "Fine. Then it's also my choice to leave now." (-20% Joanne relationship)
+        She walks off, but not before stopping and turning back one last time.
+        Joanne: "Don't you dare follow me. Or I'll call the police."
+        You feel sick to the stomach.
+        <<changeConfidence(-10)>>
+        You wished you had never asked her to hang out at all. (-10% confidence)
+        <<stop>>
+<<else>>
+    <<jump 2>>
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 165,-83
+__PrivCrochet_tags: 
+title: 2
+---
+Joanne: "We should get something to eat. How does western food sound?"
+You: "Sure!"
+You two get burgers at a cafe and continue to chat after finishing your meal.
+You: "How's school?"
+Joanne: "Same old, same old."
+Joanne: "Just with the added stress of needing to seriously consider what to do when I graduate."
+You: "Oh... Right..."
+Joanne: "We're the same graduating batch, right? Have you started applying for a job yet?"
+
+-> "I've applied to a few places already."
+    Joanne: "Like where?"
+    You: "Some management trainee positions. Some journalist positions."
+    You: "But most places seem to be having a hiring freeze."
+    Joanne: "Is that so?"
+    Joanne: "Honestly, I don't have much of a clue because I'm not applying for any jobs."
+    You: "When do you intend to start then?"
+    Joanne: "Ah, no. What I meant is that I don't intend to apply to any jobs at all."
+-> "Not yet. I'm planning to get my Masters."
+    Joanne: "You have to write a research paper or something, right?"
+    Joanne: "You have a topic in mind already?"
+    You: "I think I want to look into digital and citizen journalism. Not sure what about it yet though."
+    Joanne: "Digital and citizen journalism, huh."
+    Joanne: "Could be interesting... Like the dangers of it, right?"
+    Joanne: "Misinformation is spread like wildfire because almost anyone can just make the wildest claims."
+    You: "That's one of them."
+    You: "And also, people who otherwise might not be able to share their story can do so now too."
+    Joanne: "That's true."
+    You: "What about yourself?"
+-> "Not yet. I'm planning to chill for as long as I can."
+    Joanne: "I understand that."
+    Joanne: "Sometimes, I wish time would just stop so I don't have to worry so much about the future."
+    You: "I get that..."
+    You: "It's incredibly stressful trying to plan for the future when it also feels so uncertain."
+    Joanne: "Exactly."
+    Joanne: "But I can't afford to rest on my laurels if I want to accomplish my goals."
+    You: "And what is that?"
+Joanne: "I want to start my own business as a wedding planner, you see."
+Joanne: "So I'll get a wedding planning certification right after graduation!"
+You: "That's interesting! I didn't know there was a certification you can get for that!"
+Joanne: "Yeah! It's really comprehensive, which is important for wedding planners since we have to wear so many hats."
+You: "Why wedding planning?"
+Joanne: "Isn't every little girls' dream to have the perfect wedding?"
+Joanne: "But in reality, planning for the wedding is incredibly stressful. There are so many decisions they need to make."
+Joanne: "The gown, the location, table and guest arrangements, even the centrepieces!"
+Joanne: "I want to make their most blissful day come true without them having to go through a ton of undue stress."
+Joanne: "Sorry for rambling on. I know guys don't get it, but it's really important to get that day just right for us girls."
+-> "You are very passionate about weddings."
+    Joanne: "Yeah, it's a bit embarrassing."
+    Joanne: "I know it's such a girly thing, and I look the type."
+    Joanne: "But I can't help being a girls' girl, you know? I just want to help uplift other women."
+    -> "Uplifting women is really important."
+        Joanne: "Yeah. Society is still rather harsh on women... There are a lot of sexist assholes out there."
+        Joanne: "That's why it's important to learn more about the female perspective."
+        You: "I agree."
+        Joanne: "That's why you signed up for the feminism class, right?"
+        Joanne: "It's nice to see guys like you and Chenjie taking the effort to learn about the social movement."
+        <<changeConfidence(-5)>>
+        You feel a bit uncomfortable with the way she calls you a guy. (-5% confidence)
+        Joanne: "It's also hard to talk about these things outside of class though. Not without getting really heated and political."
+        You: "Yeah, everyone has such different opinions on the matter."
+        Joanne: " Yeah, if only everyone would just talk about things civilly."
+        Joanne: "Like you and me, right? It's nice that a guy like you understands."
+        She gives you a radiant grin, but it doesn't lessen the sting of the words "a guy like you".
+        -> "Could you not group me with other guys?"
+            Joanne: "Hm? Oh, of course, of course."
+            <<changeRelationship("J", 5)>>
+            Joanne: "Yeah, most men don't give these things much thought, but you're actually open-minded and willing to learn." (+5% Joanne relationship)
+            <<changeConfidence(-5)>>
+            Nope. It still doesn't feel better. (-5% confidence)
+        -> "Actually, I'm not really a guy."
+            Joanne: "Because you're a crossdresser...?"
+            You: "That's... one of the reasons. I'm still trying to figure out my own identity but..."
+            [i]Joanne bites her lip in discomfort.[/i]
+            Joanne: "I think you're just confused... I mean, I get that dresses and stuff are pretty and all, but you don't actually want to be a girl."
+            You: "I don't?"
+            Joanne: "Yeah, maybe it's some sort of jealousy?"
+            Joanne: "Or because after you've become more knowledgeable on feminist issues, you've come to hate being lumped in with other men."
+            Joanne: "I get that... For me, sometimes, I worry I'm perpetuating sexist stereotypes..."
+            Joanne: "You know, I'm not good at maths, and I like flowery and cutesy things, and I play more cosy games than fighting games..."
+            Joanne: "But you shouldn't hate your own gender."
+            -> "This is different."
+                You: "I'm fairly certain that isn't why I feel this way."
+                You: "I'm questioning my identity because..."
+                -> "I am myself when I'm Charlotte."
+                -> "I'm tired of being Charles."
+                -> "I like myself as both Charles and Charlotte."
+                Joanne: "... Look, just... Don't be so quick to jump to conclusions."
+                Joanne: "I do hope you become more accepting of yourself..."
+                [i]She doesn't get it, but at least she's not pushing you away entirely.[/i]
+            -> "Yeah, I should learn to accept myself for who I am."
+                Joanne: "I do hope you become more accepting of yourself..."
+                She flashes you a comforting smile. 
+                <<changeRelationship("J", 5)>>
+                You smile back. (+5% Joanne relationship)
+
+        -> Leave it.
+            [i]You smile back.[/i]
+            <<changeRelationship("J", 5)>>
+            You: "Thanks. It's nice to hear that I'm being a good ally to women." (+5% Joanne relationship)
+
+        -> "But what about trans women?"
+            Joanne: "Okay, to be very clear, I don't hate on trans women."
+            Joanne: "Like, there is a big difference between a trans woman and a man in a dress."
+            Joanne: "But if you go through the big surgery, then yeah, I guess you become a trans woman."
+            Joanne: "No man would ever mutilate himself like that."
+            Joanne: "Just putting on a dress, putting on a ton of makeup and changing your pronouns is just..."
+            Joanne: "Anyone can just pretend, you know?"
+            You: "But what about those who are beginning their transition or are unsure?"
+            Joanne: "Then be unsure somewhere else, not the girls' toilet, you know?"
+            -> "I guess so..."
+                Joanne: "Like, if you went into the girls' toilet, you can't blame us girls being panicked about it, right?"
+                [i]You feel singled out. Is it because of Charlotte?[/i]
+            -> "It's not just about the girls' toilet or surgery though."
+                You: "I think you're oversimplifying what trans people go through."
+                You: "A lot of trans people go through quite a lot of stress because people refuse to respect their experience."
+                You: "I get that you're worried about safety."
+                You: "It's hurtful when you simplify things to whether or not someone is using the right toilet or not."
+                Joanne: "You're concerned about these issues because you're also a man who wears a dress, right?"
+                -> "So what if I am?"
+                    You: "I still feel that we should not invalidate the experiences or identity of trans people."
+                    <<set $diceroll = diceRoll($int)>>
+                    <<if $diceroll >= 5>>
+                        You: "Even if I was just a man wearing a dress, I'm not harming anyone, am I?"
+                        <<addExperience(5)>>
+                        You: "If anything, I'm breaking gender stereotypes, and isn't that something that helps the feminist cause?" (+5 XP))
+                    <<endif>>
+                    <<set $diceroll = diceRoll($emp)>>
+                    <<if $diceroll >= 5>>
+                        You: "We should treat each other with kindness and understanding."
+                        <<addExperience(5)>>
+                        You: "We're all just humans trying to get by." (+5 XP))
+                    <<endif>>
+                    You: "People can simply be a different gender from what they're assigned at birth."
+                    Joanne: "I guess I'm just not the type to take other people's BS."
+                    Joanne: "I'll only accept someone is a transwoman if there is ample evidence that he is."
+                    Joanne: "That's just the way I am." (-5% Joanne relationship)
+                    <<set $diceroll = diceRoll($int)>>
+                    <<if $diceroll >= 5>> 
+                    She's using he/him pronouns even when talking about trans women...)
+                    It seems like she won't budge on this issue.
+                    But neither will you.
+                    <<endif>>
+                -> "I'm not just a man who wears a dress."
+                    You: "I think I'm trans, and I'm trying to figure things out myself."
+                    You: "So hearing you say these things hurts my feelings."
+                    Joanne: "Then seek mental help. Go get your surgery."
+                    <<changeRelationship("J", -5)>>
+                    Joanne: "What are you doing sitting here arguing with me?" (-5% Joanne relationship) 
+                    Joanne: "You just hate hearing someone who disagrees with you."
+                    You: "That's not true."
+                    Joanne: "Look, you obviously don't care about what real women feel." 
+                    Joanne: "So let me be clear. You can't just say you're a woman and become a woman."
+                    [i]This whole conversation is leaving a very bad taste in your mouth.[/i]
+                    <<changeConfidence(-5)>>
+                    [i]You regret bringing up the fact that you're questioning your gender. (-5% confidence)[/i]
+            -> "But not everyone can go through extensive surgery." //(Vera Relationship > 70%) we need code for this
+                You: "The procedures are long and complicated, so it requires a lot of money and time that not everyone can afford."
+                You: "And it requires the trans person to be physically fit for such procedures."
+                Joanne: "Okay. But, like, how else are we going to tell if someone is actually trans or not?"
+                Joanne: "Are we just supposed to believe any guy who says he's actually a woman?"
+                You: "I'd rather believe someone than misgender them or deny their existence."
+                She huffs loudly and rolls her eyes.
+                <<changeRelationship("J", -5)>>
+                Joanne: "Men. They never understand." (-5% Joanne relationship)
+                It seems like she won't budge on this issue.
+                <<addExperience(5)>>
+                But neither will you. (+5 XP)
+
+-> "I think that's a lot of stereotyping."
+    You: "It's not every single girls' dream to get married, and not all guys are uncaring about weddings."
+    Joanne: "Is it though?"
+    Joanne: "Maybe not all. But most girls dream of that perfect wedding day."
+    Joanne: "They just don't talk about it with guys. But amongst us girls, we do talk about these things. So I'd know."
+    Joanne: "Not to mention, it's just the reality that most grooms are uninvolved in wedding tasks."
+    Joanne: "And the responsibility and arrangement all falls into the hands of the bride."
+    -> "But it doesn't help when you make so many assumptions."
+        Joanne: "I'm not just assuming it. It's based on my own life experiences, and actual statistics."
+        Joanne: "You can look it up yourself. How many guys are actually involved in the wedding planning?"
+        -> "Maybe what some men need is a nudge in the right direction."
+            <<addExperience(5)>>
+            Joanne: "Perhaps. But it's just difficult if they're not even showing up for the appointments and such." (+5 XP)
+            You: "Are they actually completely absent?"
+            Joanne: "Some of them are. It's quite sad..."
+            Joanne: "I told my boyfriend that we will split the work evenly when we get married."
+            -> "And he agreed?"
+                [i]Joanne stiffens.[/i]
+                <<changeRelationship("J", -5)>>
+                Joanne: "Um, yeah. Of course." (-5% Joanne relationship)
+                Joanne: "I feel very strongly about this. I'm not marrying someone who's sexist. I believe in equality."
+                You: "Oh. Of course."
+            -> "That's a good boundary to set."
+                Joanne: "Yeah, it definitely is."
+                Joanne: "Especially since we plan to get married as soon as I graduate."
+                You: "Wow. Congratulations." 
+                Joanne: "Thanks! I really can't wait. It's going to be the happiest day of my life." 
+                <<changeRelationship("J", 5)>>
+                Joanne: "Look forward to my RSVP!" (+5% Joanne relationship)
+                You: "Will do."
+        -> "But bearing these assumptions will make things worse."
+            <<addExperience(5)>>
+            You: "It's a self-fulfilling prophecy where you expect the groom to be uninvolved, so you involve him less in the planning." (+5 XP)
+            Joanne: "Obviously if I see he wants to get involved, I'll let him."
+            You: "Even holding these prejudices make you act in a way that encourages the prejudices to become true."
+            Joanne: "Are you saying I'm prejudiced?"
+            
+            -> "Yes, I'm saying you're prejudiced."
+                You: "You make a lot of broad assumptions about what men and women are like."
+                You: "That's called being prejudiced."
+                Joanne: "What?"
+                You: "It's dangerous to think of gender as a strict binary, where men are one way and women are another."
+                You: "Don't you see that sexist people also use the same kind of arguments?"
+                Joanne: "But it's just the truth that men and women are different."
+                Joanne: "If not, what's the point of having genders? Or are you one of those crazy people who say gender is fake?"
+                -> "You're crazy."
+                    Joanne: "So that's what we're doing now? Name calling?"
+                    <<jump 3>>
+                
+                -> "Gender is a social construct."
+                    You: "A lot of the behaviours we associate with being a man and a woman are due to societal pressures and expectations."
+                    Joanne: "God, I never should have expected you to understand."
+                    <<jump 3>>
+            
+            -> "I'm just saying you should not assume all men do not care about wedding planning."
+                Joanne: "I'm not assuming ALL men don't care." (+5 XP)
+                Joanne: "It's just most of them don't. That's a fact."
+                Joanne: "I'll adapt my behaviour based on the groom's intentions." 
+                She looks angry enough to burst. (-5% Joanne relationship)
+                Should you keep pushing?
+                -> Push your argument
+                    You: "But how would you even know what the groom's intentions are if you're already assuming most of them are uninterested." 
+                    <<jump 3>>
+                
+                -> End the argument here
+                    You: "I guess you could."
+                    You: "Sorry if my words were too harsh."
+                    Joanne: "It's... Whatever."
+                    Joanne: "Let's talk about something else." 
+                
+            -> "Sorry, that's not what I meant."
+                You: "I'm just saying that you have to be careful that you don't discourage the groom from participating." 
+                Joanne: "You're saying it as though it's my responsibility to fix this societal problem." 
+                Joanne: "It's not my duty to educate men on these things."
+                Joanne: "Can you imagine how exhausting it would be if I had to correct every single sexist behaviour I come across?"
+                -> "Yeah, you're right."
+                    You: "I guess I won't know much about that."
+                    Joanne: "It's okay. We get overeager sometimes."
+                    Joanne: "Let's just talk about something else."
+                
+                -> "But it is your responsibility as a wedding planner."
+                    Joanne: "Is it also my responsibility that all marriages don't end in divorce then?"
+                    Joanne: "You didn't even know there were wedding planner certifications."
+                    Joanne: "What do you know about the responsibilities of a wedding planner?"
+                    She's right... You may not be the best person to speak on this.
+                
+                -> "Better than letting sexism win."
+                    Joanne: "And you'd know sooo much about that, wouldn't you, you crossdressing freak." (-5% confidence)
+                    That was a low blow.
+                    <<jump 3>>
+    -> "Yeah, the responsibility should be split evenly."
+        Joanne: "By right, that should be the case."
+        Joanne: "That's why it's so frustrating how uninvolved men are in things that matter to their wives."
+        You: "Maybe there is a way to get them more involved."
+        Joanne: "Maybe. It's difficult to change these behaviours though."
+        Joanne: "If men aren't interested in weddings, then they just aren't."
+        -> "What if the wedding planning is catered to men too."
+            You: "Maybe they will be more involved in wedding planning if it's more exciting for them."
+            <<changeRelationship("J", -5)>>
+            Joanne: "He's literally the one getting married. How can it be more 'catered to men'?" (-5% Joanne relationship)
+            You: "Uh... Honestly, I don't know..."
+            Joanne: "Hmph! Yeah, I thought so. Look. It's an old problem. You're not going to be able to solve it in a day."
+        -> "You can't force people who aren't interested to participate..."
+            Joanne: "Yeah, especially as an outsider. The only people who can talk him into helping would likely be the wife and the family."
+            Joanne: "Otherwise, you might lose a client for being too pushy, or you might sour the whole wedding party."
+            You: "That's true..."
+<<jump 4>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 384,-205
+__PrivCrochet_tags: 
+title: 3
+---
+<<changeRelationship("J", -20)>>
+Joanne: "That's it. I'm leaving." (-20% Joanne relationship)
+Joanne: "I came here to hang out, not to sit here getting mansplained by you." 
+[i]Joanne grabs her stuff and stands up huffily.[/i]
+[i]Oh no... Were you mansplaining in the end?[/i]
+<<changeConfidence(-5)>>
+[i]Maybe you were...[/i] (-5% confidence)
+<<stop>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 405,49
+__PrivCrochet_tags: 
+title: 4
+---
+You: "Oh, I should be heading back now."
+Joanne: "Ah, yeah, time passed really quickly."
+Joanne: "Let's do this again some time!"
+
+<<set $end_J_rs = getRelationship("J")>>
+<<set $delta_J_rs = $end_J_rs - $start_J_rs>>
+<<if $delta_J_rs < 0>>
+    Joanne picks up her bag and leaves.
+    <<set $diceroll = diceRoll($emp)>>
+    <<if $diceroll >= 5>>
+        She looks in a hurry to leave though...
+    <<endif>>
+<<else>>
+    Joanne gives you a genuine smile as she collects her bag and leaves.
+    Today has been a good day, you think.
+<<endif>>
+<<stop>>
+===
