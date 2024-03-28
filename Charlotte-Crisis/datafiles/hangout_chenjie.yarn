@@ -1,0 +1,432 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 380,-179
+__PrivCrochet_tags: 
+title: 1
+---
+Chenjie: "Hey, dude! Sorry I'm a bit late!"
+<<if $name == "Charlotte">> 
+    Chenjie: "Wait, uh, or do you prefer if I don't call you 'dude'?"
+    -> "Nah, it's fine."
+    -> "Maybe don't call me that."
+    Chenjie: "Okay! Noted. Anyway..."
+<<endif>>
+Chenjie: "Thanks for waiting for me."
+[i]He takes the seat opposite you and orders a drink.[/i]
+<<jump 1_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 600,-199
+__PrivCrochet_tags: 
+title: 1_options
+---
+What will you say?
+-> "How's school?" <<if !optionChosen()>>
+    <<jump 1_1>>
+-> "What have you been up to lately?" <<if !optionChosen()>>
+    <<jump 1_2>>
+-> "I'd like to ask you for some advice regarding my family situation..." <<if !optionChosen()>>
+    <<jump 1_3>>
+-> Not sure. Just go with the flow.
+    <<jump 2>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 613,-531
+__PrivCrochet_tags: 
+title: 1_1
+---
+Chenjie: "Busy, I guess."
+Chenjie: "I'll bet every single uni student would say that to be honest."
+You: "That's true. Anyone I ask this question to generally starts complaining about workload."
+Chenjie: "Yeah, but it scares me a bit to think about the working world though. I do wonder if the workload and stress will increase or decrease."
+-> "I think it will increase."
+    You: "There are tons more responsibilities as soon as you become an adult. Taxes, bills."
+    You: "Not to mention, our work affects people, and not just our grades in the future."
+-> "I think it will decrease."
+    You: "I think when you become an adult, you start to have more control of your life and what you want to do."
+    You: "And I think you'd feel less tied down and restricted. So your life will be less stressful that way."
+-> "I think it will stay the same."
+    You: "I think all stages of life are stressful and difficult in their own way. So it all balances out in the end."
+Chenjie: "Yeah, maybe you're right..."
+Chenjie: "But what about you? How is school treating you?"
+-> "It's been good."
+    You: "Classes this semester have been kind to me."
+    You: "All the profs are very knowledgeable in their field and they explain it well."
+    Chenjie: "That's good!"
+    Chenjie: "I'm also quite enjoying my classes."
+    Chenjie: "The feminism course especially has been quite interesting."
+    Chenjie: "The debates we have in class are very fulfilling and thought-provoking."
+-> "It's been awful."
+    You: "Do you think it's too late to drop out?"
+    Chenjie: "Is it that bad?"
+    Chenjie: "Hey... If you need emotional help or something... You can always talk to me..."
+    Chenjie: "Or maybe if it's really bad, you might want to consider seeing a counsellor or something."
+    Chenjie: "Our school has some pretty good counsellors. I can tell you the name of my counsellor, and you could talk to him."
+    You: "You had counselling before?"
+    Chenjie: "Yeah, had a bad breakup previously and I needed some help for that."
+    -> "Was it helpful?"
+        Chenjie: "Very! I sorted through a lot of unhelpful beliefs."
+        Chenjie: "And there's something nice about someone who has to listen to all your troubles." 
+        You: "That's good."
+        You: "Maybe I'll look into it too." 
+        <<changeRelationship("CJ", 5)>>
+        <<addExperience(5)>>
+        Chenjie: "Great!" (+5% Chenjie relationship) (+5 XP)
+    
+    -> "Unusual for a guy to go for counselling."
+        Chenjie: "I guess not. But more guys should, to be honest."
+        Chenjie: "It's concerning how many men genuinely believe they are worthless if they don't have a girl."
+        Chenjie: "They don't say it directly, but you get the feeling that they do."
+        <<addExperience(5)>>
+        Chenjie: "Society isn't very kind to single guys." (+5 XP)
+    
+    -> "I don't need that sort of thing."
+        <<changeRelationship("CJ", -5)>>   
+        You: "I'm not going to pay hundreds of dollars to sit in a shrink chair and hear them tell me I have mommy issues." (-5% Chenjie relationship)
+        Chenjie: "It could be more helpful than you expect."
+        You: "I'm not the type to open up to strangers." 
+        Chenjie: "Yeah, that could be rough. But also, it's not like these people can tattle on you to other people."
+        Chenjie: "There's no harm trying if you ever want to talk to someone."
+-> "It's tough but I'll manage."
+    Chenjie: "That's good. It's the final year. We'll get through this!"
+    Chenjie: "If things get rough, there's always the school counselling."
+    You: "You've gone?"
+    Chenjie: "Yeah, had a bad breakup and needed some help through that."
+    -> "Was it helpful?"
+        Chenjie: "Very! I sorted through a lot of unhelpful beliefs."
+        Chenjie: "And there's something nice about someone who has to listen to all your troubles." 
+        You: "That's good."
+        You: "Maybe I'll look into it too." 
+        <<changeRelationship("CJ", 5)>>
+        <<addExperience(5)>>
+        Chenjie: "Great!" (+5% Chenjie relationship) (+5 XP)
+    
+    -> "Unusual for a guy to go for counselling."
+        Chenjie: "I guess not. But more guys should, to be honest."
+        Chenjie: "It's concerning how many men genuinely believe they are worthless if they don't have a girl."
+        Chenjie: "They don't say it directly, but you get the feeling that they do."
+        <<addExperience(5)>>
+        Chenjie: "Society isn't very kind to single guys." (+5 XP)
+    
+    -> "I don't need that sort of thing."
+        <<changeRelationship("CJ", -5)>>   
+        You: "I'm not going to pay hundreds of dollars to sit in a shrink chair and hear them tell me I have mommy issues." (-5% Chenjie relationship)
+        Chenjie: "It could be more helpful than you expect."
+        You: "I'm not the type to open up to strangers." 
+        Chenjie: "Yeah, that could be rough. But also, it's not like these people can tattle on you to other people."
+        Chenjie: "There's no harm trying if you ever want to talk to someone."
+<<jump 1_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 834,-646
+__PrivCrochet_tags: 
+title: 1_2
+---
+Chenjie: "I've been learning how to cook actually."
+Chenjie: "I figured it would be important in the future for me."
+-> "Yeah, knowing how to cook is always helpful."
+    Chenjie: "Definitely!"
+-> "How so?"
+    Chenjie: "You see, I intend to go overseas in the future so..."
+-> "What have you been learning?"
+    Chenjie: "Quite a few things actually!"
+Chenjie: "I've been learning to cook local dishes like chicken rice, laksa, beef hor fun... All my favourites."
+Chenjie: "So that when I'm overseas, I'll be able to whip up something for myself if I crave Singaporean food."
+-> "Do you plan to migrate elsewhere?"
+-> "Do you have an overseas job secured?"
+-> "I would miss Singapore food if I went overseas too."
+Chenjie: "Well, you see, the thing is I'm planning to do that thing where you work online and travel at the same time."
+-> "A digital nomad!" <<if $int > 5>>
+    <<changeRelationship("CJ", 10)>>
+    Chenjie: "Exactly!" (+10% Chenjie relationship)
+    <<addExperience(5)>>
+    Chenjie: "Ever since I heard about it, I've always wanted to do something like that." (+5 XP)
+    Chenjie: "Sounds way better than sitting in a stuffy cubicle."
+-> "Sounds like an adventure!"
+    <<changeRelationship("CJ", 5)>>
+    Chenjie: "It is! It lets you see the world without having to put your entire life on hold." (+5% Chenjie relationship)
+    Chenjie: "I've always wanted to do that."
+    Chenjie: "Sounds like something right out of a novel too!"
+-> "That sounds really tiring..."
+    Chenjie: "I suppose it can be... It will take hard work to get to the point of comfortably travelling and working."
+    Chenjie: "But I think it'll work out!"
+-> "I don't think that's very practical."
+    [i]Chenjie frowns.[/i]
+    Chenjie: "People have done it before. It's not impossible." (-5% Chenjie relationship)
+    Chenjie: "I admit it will take some work to get there, but it's very possible."
+    Chenjie: "There are even some countries that give out digital nomad visas."
+Chenjie: "I've started some freelance as a graphic designer."
+Chenjie: "After graduation, I'll get a good momentum going, and the first place I want to go to is Switzerland!"
+-> "Why Switzerland first?"
+    Chenjie smiles shyly.
+    Chenjie: "Actually, it's because it's my mom's dream vacation spot. So I want to go there with her before setting off on my digital nomad journey."
+    Chenjie: "She said she watched a cartoon as a kid about the Swiss Alps so she'd always dreamed of going there."
+    You: "That's so sweet of you."
+    Chenjie: "Well, my mom is the strongest pillar in my life. I wouldn't have been able to make it without her hard work."
+    Chenjie: "It's only right to repay her for everything she's done and sacrificed for me."
+    You: "You two sound close!"
+    Chenjie: "Yeah, we are. We talk a lot and have very similar tastes in music and movies."
+    Chenjie: "So I'll bet we'll have a blast in Switzerland together."
+    It seems Chenjie has a really good relationship with his mom.
+    -> [i]Literally could not be me.[/i]
+        <<changeConfidence(-5)>>
+        <<changeRelationship("CJ", -5)>>
+        [i]You find yourself jealous of Chenjie.[/i] (-5% confidence) (-5% Chenjie relationship)
+    -> [i]Maybe things with my family will be the same if I open up?[/i]
+        <<changeConfidence(5)>>
+        [i]You have hope things will work out well.[/i] (+5% confidence)
+    -> [i]Maybe things with my family will be the same if I stop this Charlotte thing.[/i]
+        [i]Who knows?[/i]
+    -> [i]Maybe things with my family will be the same if I hide Charlotte.[/i]
+        [i]Who knows?[/i]
+-> "When do you think that would be?"
+    Chenjie: "Maybe a year or so from now?" 
+    Chenjie: "I've done a lot of part-time and freelance work before."
+    Chenjie: "So I have quite a bit saved up."
+    Chenjie: "I'm waiting till I can afford to travel about 9 months without income."
+    Chenjie: "That way I'll still have some savings if things get rough!"
+
+-> "What made you choose that kind of lifestyle?"
+    Chenjie: "I don't know, isn't there just so much in the world you want to see?"
+    Chenjie: "Singapore is so small, but the world is so big!"
+    Chenjie: "I want to be able to experience what it's like living in different parts of the world while I'm young."
+    Chenjie: "There are so many different cultures, and different people. Staying in Singapore forever is too restrictive."
+    Chenjie: "You get me?"
+    
+    -> "Now I want to do that too."
+        Chenjie: "Haha! Yeah, it's going to be so exciting."
+        Chenjie: "You'll need to do a lot of research and preparation for it."
+        <<changeRelationship("CJ", 5)>>
+        Chenjie: "But it'll be so worth it." (+5% Chenjie relationship)
+    
+    -> "Many other countries are also more accepting of people like me."
+        Chenjie: "Exactly. Staying cooped up in Singapore. It's really not the most accepting."
+        <<addExperience(5)>>
+        Chenjie: "People like you might have a better time in places like Europe, Taiwan or something." (+5 XP)
+        Chenjie: "Not sure about America though. It sounds scary over there."
+        
+        -> "Yeah, it sounds volatile."
+            Chenjie: "Right?"
+        
+        -> "It's the land of the free though."
+            You: "It's way better than what Singapore has going on."
+            Chenjie: "In some ways, that is true."
+        
+        -> "Maybe, but it's worth it."
+            You: "Where there are opportunities, there will also be risk."
+            You: "It's about whether you'll take the leap of faith."
+            Chenjie: "That makes sense."
+    
+    -> "Nah, I'm quite happy in Singapore."
+        Chenjie: "Well, to each their own, right?"
+        Chenjie: "Singapore is also like no other place."
+        Chenjie: "If you like this country, it's hard to move out of it."
+        Chenjie: "There's still nowhere else like home."
+<<jump 1_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 904,-426
+__PrivCrochet_tags: 
+title: 1_3
+---
+Chenjie: "Sure! Shoot!"
+[i]You recount everything that has happened so far to Chenjie.[/i]
+[i]About Charlotte, about how your sister reacted when she saw a post of you, about your family.[/i]
+[i]Chenjie listens intently, nodding at the appropriate times.[/i]
+Chenjie: "I see... That is a rough place to be in."
+Chenjie: "It's hard trying to juggle your family's feelings and your own. Especially with a subject as sensitive as your identity."
+<<addExperience(5)>>
+Chenjie: "My personal opinion is that you should be patient and explain what you're feeling to your family." (+5 XP)
+Chenjie: "It's important to you, and you are important to your family."
+Chenjie: "It'd be really sad if things get messy because you never explained things to them." 
+
+-> "That's what I think too."
+    Chenjie: "Yeah, just try talking to your family." (+5% Chenjie relationship)
+    Chenjie: "Family is really important. It'd be sad if you were to lose them over something as trivial as gender."
+    Chenjie: "Like, why even care so much about it anyway?"
+    Your chest throbs with hurt. 
+    As trivial as gender.
+    It's not something trivial though. 
+    How could something that you've been agonising over for so long be brushed aside as trivial?
+    Should you bring up how much it hurt you? 
+    
+    -> "Hey! What do you mean by 'something as trivial as gender'?!"
+        You: "It's not just a really small part to me though."
+        You: "It hurts to hear you trivialise it after I had to struggle with it this much."
+        Chenjie: "I mean... In the grand scheme of things..."
+        Chenjie: "Isn't gender just a really small part of what makes up a person?"
+        You: "You clearly don't understand how important this is to me."
+        Chenjie: "Hey, I'm sorry. I didn't mean it that way..."
+        Chenjie: "I don't have much experience talking to trans people and this is really difficult for me." 
+        [i]You huff, the anger not dissipating. [/i]
+        [i]It just sounds like an excuse to you, but you take a deep breath. [/i]
+        <<changeRelationship("CJ", -5)>>
+        You: "Fine. I'll give you the benefit of the doubt." (-5% Chenjie relationship)
+    
+    -> "I know you mean well but..." <<if $cha > 5>>
+        You: "The way you said that trivialises something that I spent a lot of time and effort to understand about myself." 
+        Chenjie: "I'm sorry... I just meant that your family should learn to love you. Especially when the barrier is something like changing gender."
+        You: "I see... I understand. But I think I'd appreciate it if you refrain from saying things like how gender doesn't matter."
+        You: "It's just that sometimes, when people say that, it's to dismiss my experiences with gender."
+        You: "That's why when you said it that way, it hurt me."
+        <<addExperience(15)>>
+        Chenjie: "I see... I'll be more careful next time." (+15 XP)
+    
+    -> Ignore that
+        You take a deep breath and distract yourself by taking a sip of water.
+        But he's also cisgender. He won't understand what it means to feel wrong in your own body. 
+        Or how it feels to feel ever-so-slightly out of place in the sphere of masculinity.
+        <<changeConfidence(-5)>>
+        Watching every other guy out there get it right while you fumble about, wondering what everyone else has that you don't. (-5% confidence)
+-> "I just don't think it's worth it."
+    You: "It's going to be so difficult for all of us. Why bother?"
+    You: "It'd be rocking the boat far too much."
+    Chenjie: "Isn't family worth the trouble though?"
+    Chenjie: "Won't it hurt your family more to not know such an important thing about you?"
+    Chenjie: "At least, I'd feel awful if I found out a family member felt the need to hide such a thing from me."
+    
+    -> "What they don't know won't hurt them."
+        Chenjie: "Ignorance is bliss, huh..."
+        Chenjie: "I don't agree though."
+        Chenjie: "I think it's still better for them to know. I wouldn't want to inadvertently hurt someone I love out of ignorance."
+        <<addExperience(5)>>
+        You: "That won't be an issue as long as they never find out, right?" (+5 XP)
+        Chenjie: "Can you be sure you will be able to hide it? I mean, you're in your current predicament because your sister found out, right?"
+        -> "Then, I shall stop. Entirely."
+            Chenjie: "But that's so sad! You're going to completely stop?"
+            Chenjie: "It's just awful... I don't think what you're doing is good for the long run."
+            <<changeRelationship(-5)>>
+            You: "This is my decision." (-5% Chenjie relationship)
+            Chenjie: "Okay... Sighs..."
+        
+        -> "It won't happen again."
+            Chenjie: "How can you guarantee that?"
+            You: "I'll take all the precautions." 
+            [i]Chenjie opens his mouth, pauses, and then closes it and shrugs.[/i]
+            <<changeRelationship(-5)>>
+            [i]Chenjie obviously still wants to argue, but he held himself back.[/i] (-5% Chenjie relationship)
+        
+        -> "Maybe you're right."
+            <<changeRelationship(5)>>
+            Chenjie: "Yeah, just try talking to your family." (+5% Chenjie relationship)
+            Chenjie: "Family is really important. It'd be sad if you were to lose them."
+            [i]It might end well... Who knows, right?[/i]
+    -> "Actually, I think my family would rather keep these things hidden."
+        You: "They're the type to want to sweep things under the rug."
+        Chenjie: "..."
+        Chenjie: "If you say so."
+        Chenjie: "I don't know your family so..."
+        Chenjie: "I'm sorry your family is so unaccepting... It hurts a lot when family only cares about outer appearance more than your own feelings."
+        Chenjie: "I hope things get better for you."
+    
+    
+    -> "Maybe..."
+        Chenjie: "Yeah, just try talking to your family."
+        Chenjie: "Family is really important. It'd be sad if you were to lose them."
+        [i]It might end well... Who knows, right?[/i]
+
+-> "I don't know if I will ever be accepted."
+    Chenjie: "It might feel that way, but how would you know without trying?"
+    Chenjie: "Your family loves you, right?"
+
+    -> "True, they do love me."
+        <<addExperience(5)>>
+        You: "They've always been supportive of me." (+5 XP)
+        You: "But there might still be the risk that telling them about Charlotte will cause our family to fall." 
+        You: "That's what I'm afraid of."
+        Chenjie: "Hm..."
+        Chenjie: "I guess I understand that feeling..."
+        Chenjie: "Sometimes it's harder to tell the people you love about sensitive things than it is to strangers."
+        Chenjie: "The rejection hurts so much more when it's someone you want to be accepted by."
+        You: "Yeah... It can feel like a complete betrayal sometimes."
+        Chenjie: "But have faith. Your family loves you."
+        Chenjie: "And I'm sure they would want to know about the big events in their kid's life."
+        
+        -> "You're right."
+            You: "I'll take the risk." 
+            You: "How can my family ever understand me if I never tell them anything?"
+            <<changeRelationship("CJ", 5)>>
+            Chenjie: "That's the spirit!" (+5% Chenjie relationship)
+        -> "I think I need more time..."
+            Chenjie: "But haven't you run out of time?"
+            Chenjie: "Your family definitely suspects something, don't they?"
+            You: "I could still lie and conceal as long as I need to."
+            You: "I'll only tell them on my own terms."
+            Chenjie: "Is that so?"
+            Chenjie: "Just don't wait too long then."
+        -> "I still don't want to tell them."
+            Chenjie: "Is that so?"
+            Chenjie: "Won't it hurt your family?"
+            You: "Maybe. But I still don't think it's worth telling my family."
+            <<changeRelationship("CJ", -5)>>
+            Chenjie: "Okay..." (-5% Chenjie relationship)
+    -> "They love me but not for who I am."
+        You: "I think they have this idealised version of a son that they want."
+        You: "But it's just not who I am. I'm just not as masculine as they want."
+        You: "Or perhaps I'm not even a son at all."
+        Chenjie: "That... would be a lot to take in. Yeah."
+        
+        -> "Would you be able to tell your family if you were me?"
+            Chenjie: "..."
+            Chenjie: "I... I think I'd still try to."
+            -> "Easier said than done though."
+                Chenjie: "Yeah, you're right..."
+                Chenjie: "In the end, it is your decision."
+                Chenjie: "You know your family best, and you probably have a good idea of how they will likely react." 
+            -> "Then, you have better parents than me."
+                <<changeRelationship("CJ", -10)>>
+                Chenjie: "Don't say that." (-10% Chenjie relationship)
+                Chenjie: "Who are you to make these kinds of judgements?"
+                Chenjie: "Don't assume things about other people like that."
+                Shit, he's angry. 
+                You: "Oh, um, I didn't mean to..." 
+                <<addExperience(5)>>
+                Chenjie: "Just be careful next time." (+5 XP)
+                <<if $emp > 5>>
+                    His family situation might be more complicated than I assumed.
+                <<endif>>
+            -> "Then, I'll give it a shot too."
+                [i]Chenjie smiles. [/i]
+                <<changeRelationship("CJ", 5)>>
+                Chenjie: "All the best then." (+5% Chenjie relationship)
+        -> "That's why I don't think I'll tell them about this."
+            Chenjie: "..."
+            Chenjie: "I understand."
+            Chenjie: "I'm so sorry it's like this."
+        -> "But I will still try to tell them."
+            You: "Even if I don't think they will be able to accept me."
+            <<changeRelationship("CJ", 5)>>
+            <<addExperience(5)>>
+            Chenjie: "That's incredibly brave of you..." (+5% Chenjie relationship) (+5 XP)
+            Chenjie: "Not sure how much this would mean, coming from someone you don't know that well, but..."
+            Chenjie: "I'm proud of you for being yourself and being so brave."
+            You: "Thank you."
+        -> "No, they don't love me."
+            Chenjie: "At all?"
+            <<changeRelationship("CJ", -5)>>
+            You: "Nope. They hate me." (-5% Chenjie relationship)
+            Chenjie: "I... I see..."
+            Chenjie: "I'm so sorry then..."
+            <<changeConfidence(-5)>>
+            [i]There is pity in his eyes, and you squirm under that look.[/i] (-5% confidence)
+<<jump 1_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 868,-200
+__PrivCrochet_tags: 
+title: 2
+---
+The two of you continue to chat for a bit longer.
+But soon, it is time to leave.
+Chenjie: "Hey, good talk, yeah?"
+Chenjie: "I hope what I said helps you with your family."
+Chenjie: "It is really quite sad when people are unaccepting of people who are different from them."
+Chenjie: "So I hope things go well for you in the end."
+-> "Thank you."
+-> "I hope so too."
+-> "It's going to be hard."
+[i]Chenjie gives you a reassuring pat.[/i] 
+Chenjie: "You've got this, alright, {$name}?"
+[i]On that warm note, he leaves.[/i]
+<<stop>>
+===
