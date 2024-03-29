@@ -124,8 +124,8 @@ You: "Alright, here goes..."
     -> "Yeah. Bye!" #skillcheck #cha #8
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll >= 6>>
-            [i]You expected people to take issue with that, but Eleanor laughs.[/i]
+        <<if $diceroll >= 8>>
+            You expected people to take issue with that, but Eleanor laughs.
             <<changeConfidence(5)>>
             Eleanor: "As if we're going anywhere." (+5% confidence)
             Eleanor: "I like the concept! Colouring the gradient will be hard, but we can save that for another day."
@@ -133,7 +133,7 @@ You: "Alright, here goes..."
             Anthony: "Knew it. I guess we don't believe in this organisation anymore."
             Eleanor: "That's not what it means!"
             <<changeConfidence(-5)>>
-            [i]Eleanor shoots you a quick glare.[/i] (-5% confidence)
+            Eleanor shoots you a quick glare. (-5% confidence)
         <<endif>>
         
     -> "Sunsets are nature's art." #skillcheck #int #8
