@@ -645,7 +645,7 @@ Chenjie: "Right?"
             <<changeRelationship("J", 5)>>
             You: "It's hard to support feminists if they constantly cause a huge fuss about things that don't matter in the grand scheme." (+5% Joanne relationship)
             Joanne: "Exactly."
-
+        <<endif>>
         Joanne: "Like, gays and lesbians have every right to advocate for marriage equality."
         Joanne: "But I think some people are just trying to take advantage of this historical movement."
         Chenjie: "Hm... That's quite a pessimistic way of viewing things."
