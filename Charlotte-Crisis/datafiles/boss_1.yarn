@@ -121,7 +121,7 @@ Sister: "How was it this easy?"
     <<jump 3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2275,-3
+__PrivCrochet_position: 2275,-4
 __PrivCrochet_tags: 
 title: ending_1
 ---
@@ -131,6 +131,8 @@ I know you can't make that promise.
 If you just said this so you could end this interaction faster, then you lied to her.
 If you really mean this, then you're lying to yourself.
 Either way, I'm gonna haunt you in your dreams.
+
+<<goto_room_bedroom>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 800,240
@@ -883,7 +885,7 @@ Sister: "You're not going to, you know, transition, right?"
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2277,238
+__PrivCrochet_position: 2276,236
 __PrivCrochet_tags: 
 title: ending_2
 ---
@@ -896,15 +898,23 @@ Sister: "Do you have a female name?"
 You: "Yep. You can call me..."
 You: "Charlotte."
 //sick ass title drop?//
+
+<<addExperience>>
+(+30 XP)
+<<goto_room_bedroom>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2280,480
+__PrivCrochet_position: 2280,479
 __PrivCrochet_tags: 
 title: ending_3
 ---
 Sister: "Thank you for making this easy for Mother."
 Sister: "I know it must have been a hard thing to do."
 Sister: "But trust me, we'll all be better off if you just stop."
+
+<<addExperience>>
+(+30 XP)
+<<goto_room_bedroom>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2280,720
@@ -914,6 +924,10 @@ title: ending_4
 Sister: "I'm sorry. I can't say you have my support."
 Sister: "Whatever you choose to do, know that it'll have consequences."
 Sister: "Just don't do anything you'll regret."
+
+<<addExperience>>
+(+30 XP)
+<<goto_room_bedroom>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2520,480
@@ -923,6 +937,10 @@ title: ending_5
 Sister: "Finally. It's so difficult to talk you out of these ideas."
 Sister: "I know you're my brother and all, but I need a break for a while."
 Sister: "Please don't be so toxic to Mother, okay?"
+
+<<addExperience>>
+(+30 XP)
+<<goto_room_bedroom>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1993,232
