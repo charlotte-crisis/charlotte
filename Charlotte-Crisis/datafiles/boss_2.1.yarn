@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 126,-58
+__PrivCrochet_position: 86,-59
 __PrivCrochet_tags: 
 title: 1
 ---
@@ -99,7 +99,7 @@ Helen: "And the minute you open your mouth to speak, that's it. Everyone knows."
     Helen: "They're staring at you, not me." (-10% confidence)
 <<endif>>
 
--> "I... I don't even know where to start..." #skillcheck #int #9
+-> "I... I don't even know where to start..." #skillcheck #int # 9
     Helen: "I'm just stating the facts. You don't pass right now."
     Helen: "But you can learn how to pass."
     <<changeConfidence(-5)>>
@@ -187,7 +187,7 @@ Helen: "Makes me think you want to be seen as a guy."
             Helen: "Fine. Don't take it from me. Take it from whichever actress or celebrity you're a fan of."
             Helen: "Look at their flawless skin, their beautiful faces…
             Helen: "Tell me you don't want to look like them."
-            -> "Yeah. I don't." #skillcheck #cha #9
+            -> "Yeah. I don't." #skillcheck #cha # 9
                 <<set $diceroll = diceRoll($cha)>>
                 [You rolled a {$diceroll}.]
                 <<if $diceroll < 9>>
@@ -310,7 +310,7 @@ Helen: "Makes me think you want to be seen as a guy."
                     Helen: "Don't jump to conclusions about what's stylish and what's not."
     
     -> "Sounds like a you problem."
-        <<changeRelationship("H", 5)>>
+        <<changeRelationship("H", -5)>>
         Helen: "Wow, rude." (-5% Helen relationship)
         You: "As if you're not sensitive about this stuff either..."
         Helen: "That's exactly why I'm warning you against it."
@@ -409,7 +409,7 @@ Helen: "Meanwhile a random stranger like me can see right through you."
                 Helen: "Fine… I'm sorry." (+5% Helen relationship)
                 Helen: "Sometimes it's easy to forget there's a person behind the outfit." 
     
-    -> "I mean, they are random people who I'll never meet again…" #skillcheck #cha #9
+    -> "I mean, they are random people who I'll never meet again…" #skillcheck #cha # 9
         You: "I'll probably just fade into their subconscious memory."
         Helen: "Still, the thought that you'll always be seen as different…"
         Helen: "That doesn't bother you?"
@@ -507,12 +507,12 @@ Helen: "And I'm sure not everyone in Gen Z is accepting, right?"
             You: "My existence is enough."
             You: "Bit by bit, people will realise."
             Helen: "Will it make a difference, though?"
-            -> "Doesn't matter." #skillcheck #cha #9
+            -> "Doesn't matter." #skillcheck #cha # 9
                 You: "Yes, you're right, these kinds of things take generations to change."
                 You: "But even if I only manage to convince one person that I'm valid, that's still progress, right?"
                 <<set $diceroll = diceRoll($cha)>>
                 [You rolled a {$diceroll}.]
-                <<if $diceroll >= 8>>
+                <<if $diceroll >= 9>>
                     Helen: "Very idealistic."
                     Helen: "Well, for what it's worth, it seems logical."
                     Helen: "Just be prepared for a lot of risk to get such a little reward."
@@ -800,7 +800,7 @@ Helen: "Let's get back to the real world, shall we?"
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1691,-438
+__PrivCrochet_position: 1690,-439
 __PrivCrochet_tags: 
 title: 7_1_1
 ---
@@ -833,7 +833,7 @@ Helen: "The world is yours, right?"
 <<jump 7_1>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2465,-178
+__PrivCrochet_position: 2463,-178
 __PrivCrochet_tags: 
 title: 8
 ---
@@ -862,6 +862,11 @@ Helen: "Any final thoughts?"
     Helen: "Honestly though? Crossdressers are still rare in Singapore."
     Helen: "So if you still want to chat, and if I have time, I'm okay to meet up again."
 <<endif>>
+
+That... was certainly unexpected.
+<<addExperience(30)>>
+(+30 XP)
+<<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1701,-177
@@ -876,7 +881,7 @@ Helen: "That's why it's a compromise."
 <<jump 7_2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1945,-173
+__PrivCrochet_position: 1943,-173
 __PrivCrochet_tags: 
 title: 7_2_2
 ---
@@ -901,7 +906,7 @@ Helen: "So don't expect a glorious, complete victory."
 <<jump 7_2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1714,109
+__PrivCrochet_position: 1714,136
 __PrivCrochet_tags: 
 title: 7_3_1
 ---
@@ -914,7 +919,7 @@ Helen: "Up to you."
 <<jump 7_3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1966,102
+__PrivCrochet_position: 1943,127
 __PrivCrochet_tags: 
 title: 7_3_2
 ---
@@ -924,7 +929,7 @@ Helen: "Then again, it is an added expense, one that you might not use as you ag
 <<jump 7_3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2181,107
+__PrivCrochet_position: 2168,100
 __PrivCrochet_tags: 
 title: 7_3_3
 ---
