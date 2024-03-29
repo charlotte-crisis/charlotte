@@ -287,10 +287,10 @@ Sister: "You really want to blow this up, don't you..."
 <<changeConfidence(-5)>>
 Sister: "Don't say I didn't warn you." (-5% confidence)
 
--> "But I know you will be by my side." #skillcheck #emp # 8
+-> "But I know you will be by my side." #skillcheck #emp # 7
     <<set $diceroll = diceRoll($emp)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll < 8>>
+    <<if $diceroll < 7>>
         Sister sighs.
         Sister: "Yeah, as much as I want to..."
         Sister: "It's very tough when I have to bridge the gap between you and Mother."
