@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"up_strip4",
-    "path":"sprites/up_strip4/up_strip4.yy",
+    "name":"spr_key_up_strip4",
+    "path":"sprites/spr_key_up_strip4/spr_key_up_strip4.yy",
   },
   "spriteMaskId":null,
   "visible":true,

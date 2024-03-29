@@ -430,7 +430,7 @@
     {"id":{"name":"spr_ui_left","path":"sprites/spr_ui_left/spr_ui_left.yy",},},
     {"id":{"name":"spr_ui_right","path":"sprites/spr_ui_right/spr_ui_right.yy",},},
     {"id":{"name":"spr_v_portrait","path":"sprites/spr_v_portrait/spr_v_portrait.yy",},},
-    {"id":{"name":"up_strip4","path":"sprites/up_strip4/up_strip4.yy",},},
+    {"id":{"name":"spr_key_up_strip4","path":"sprites/spr_key_up_strip4/spr_key_up_strip4.yy",},},
     {"id":{"name":"V_idle_strip2","path":"sprites/V_idle_strip2/V_idle_strip2.yy",},},
     {"id":{"name":"V_sat_strip2","path":"sprites/V_sat_strip2/V_sat_strip2.yy",},},
     {"id":{"name":"V_walking_strip8","path":"sprites/V_walking_strip8/V_walking_strip8.yy",},},
@@ -438,6 +438,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
     {"roomId":{"name":"rm_bedroom_menu","path":"rooms/rm_bedroom_menu/rm_bedroom_menu.yy",},},
     {"roomId":{"name":"rm_class_1","path":"rooms/rm_class_1/rm_class_1.yy",},},
     {"roomId":{"name":"rm_black_screen","path":"rooms/rm_black_screen/rm_black_screen.yy",},},
@@ -462,7 +463,6 @@
     {"roomId":{"name":"rm_house_sister","path":"rooms/rm_house_sister/rm_house_sister.yy",},},
     {"roomId":{"name":"rm_house_mother","path":"rooms/rm_house_mother/rm_house_mother.yy",},},
     {"roomId":{"name":"rm_bedroom_1","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},},
-    {"roomId":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
