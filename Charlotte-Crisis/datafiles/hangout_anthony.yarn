@@ -371,17 +371,17 @@ What do you say?
     <<jump 1_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1942,-808
+__PrivCrochet_position: 1941,-810
 __PrivCrochet_tags: 
 title: 1_1_2_1
 ---
 Anthony: "Okay, then what other choices do I have?"
 Anthony: "Job market so bad already, how can I survive?"
--> "Transfer out, before it's too late." (EMP check)
+-> "Transfer out, before it's too late." #skillcheck #int #7
     Anthony: "Siao ah. Like that means start from clean slate, you know?"
     <<set $diceroll = diceRoll($emp)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll > 8 >>
+    <<if $diceroll >= 7 >>
         You: "I know what that feels like... to start afresh."
         You: "And I know the example I'm using is gender, but hear me out."
         You: "I was scared to start crossdressing. I know there are many who don't approve."
@@ -389,23 +389,28 @@ Anthony: "Job market so bad already, how can I survive?"
         You: "And isn't that what life is about? Doing what you want? Living for yourself?"
         Anthony: "I don't see what gender has to do with it."
         You: "It doesn't have to be gender. That's why we're talking about our majors."
+        <<addExperience(5)>>
         You: "Life is too short to be stuck in a place you don't wanna be." (+ 5 XP)
-        Anthony ponders your words. (+5% Anthony relationship) <<changeRelationship("A", 5)>>
+        <<changeRelationship("A", 5)>>
+        Anthony ponders your words. (+5% Anthony relationship) 
     <<else>>
         You: "If that's what it takes, then why are you scared?"
         Anthony: "Heh. You're one of those types. Talk until so big but don't dare to do it."
-        Anthony: "Why don't you change your degree and come engineering?" (-5% Anthony relationship) <<changeRelationship("A", -5)>>
+        <<changeRelationship("A", -5)>>
+        Anthony: "Why don't you change your degree and come engineering?" (-5% Anthony relationship) 
     <<endif>>
+
 -> "Yeah, I guess it's too late..."
     Anthony: "Sigh. I wish I was born smarter. Or richer. Or more handsome."
     Anthony: "But no matter how much I work, I can't be better."
     You: "That's life, I guess."
--> "Just get your degree and use it to go somewhere else." (INT check)
+
+-> "Just get your degree and use it to go somewhere else." #skillcheck #int # 7
     Anthony: "Say until so easy. Then I study for what?"
     Anthony: "Spend so much money for what? Just a paper?"
     <<set $diceroll = diceRoll($int)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll > 8 >>
+    <<if $diceroll > 7 >>
         You: "It's not just the engineering stuff. I'm sure you learned other things, right?"
         You: "You exercised those parts of your brain that were precise."
         You: "Or that helped you to plan complex projects."
@@ -418,34 +423,36 @@ Anthony: "Job market so bad already, how can I survive?"
         You: "Oh right... it needs to be an investment well spent."
         Anthony: "Exactly. If not, you're just gonna be paying off debt for the rest of your life."
     <<endif>>
+
 <<jump 1_1_2_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2153,-806
+__PrivCrochet_position: 2156,-805
 __PrivCrochet_tags: 
 title: 1_1_2_2
 ---
 Anthony: "Yeah. Drawing and video games... but there's no time to do them."
--> "We will make time if we really want it." (CHA check)
+-> "We will make time if we really want it." #skillcheck #cha # 7
     Anthony: "You think got so free ah? I see all my seniors slaving away at work..."
     You: "I mean, I'm making time for crossdressing."
     Anthony: "Yeah, your little degen hobby..."
-    <<set $diceroll = diceRoll($emp)>>
+    <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll > 8 >> 
+    <<if $diceroll >= 7 >> 
         You: "If I'm a degen I wear that with pride. Charlotte isn't hurting anyone." (+10 XP) <<addExperience(10)>>
         You: "Anyway, I find chances wherever I can to bring Charlotte out."
         You: "Regardless of what you might think, I'm happy because of this hobby."
         You: "And I hope you allow yourself to draw or game or do whatever."
     <<else>>    
         You: "Why did I even talk to you about this?"
-        Anthony: "Yeah, keep it hidden in the bedroom or wherever." (-5% confidence) <<changeConfidence(-5)>>
+        <<changeConfidence(-5)>>
+        Anthony: "Yeah, keep it hidden in the bedroom or wherever." (-5% confidence) 
     <<endif>>
 -> "Welp, working ourselves to death it is."
-Anthony: "That's life." (-5% confidence) <<changeConfidence(-5)>>
+    Anthony: "That's life." (-5% confidence) <<changeConfidence(-5)>>
 -> "Then enjoy school while you still can."
-Anthony: "Ugh. How to enjoy when still got so much homework and exams?"
-Anthony: "And don't even get me started on art club. So weird in there."
+    Anthony: "Ugh. How to enjoy when still got so much homework and exams?"
+    Anthony: "And don't even get me started on art club. So weird in there."
 <<jump 1_1_2_options>>
 ===
 __PrivCrochet_colorID: 0
@@ -455,14 +462,15 @@ title: 1_1_2_3
 ---
 Anthony: "If this is some nutjob left-wing conspiracy theory, I'm not hearing it."
 Anthony: "All some people know how to do is complain. I hope you're not like that."
--> "Complaining is literally what we do as a people." (INT check)
+-> "Complaining is literally what we do as a people." #skillcheck #int # 7
     Anthony: "Yes, but about things that matter, right? Not this... culture war bullshit."
-    <<set $diceroll = diceRoll($emp)>>
+    <<set $diceroll = diceRoll($int)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll > 8 >>    
+    <<if $diceroll > 7 >>    
         You: "It's important stuff!"
         Anthony: "It won't put food on the table."
-        Anthony: "Don't be a liberal idiot. There's already enough of them in the West." (-5% Anthony relationship) <<changeRelationship("A", -5)>>
+        <<changeRelationship("A", -5)>>
+        Anthony: "Don't be a liberal idiot. There's already enough of them in the West." (-5% Anthony relationship) 
     <<else>>
         You: "Since when were we talking about culture war? We were talking about jobs."
         Anthony: "Then you should be talking about how to get jobs, not trying to overthrow the system."
@@ -474,13 +482,15 @@ Anthony: "All some people know how to do is complain. I hope you're not like tha
     <<endif>>
 -> "Yeah, I guess this is what my degree teaches me..."
     Anthony: "So useless. No wonder arts kids earn so little."
-    Anthony: "Maybe if you learned something practical, you could earn a little more." (-5% Anthony relationship) <<changeRelationship("A", -5)>>
+    <<changeRelationship("A", -5)>>
+    Anthony: "Maybe if you learned something practical, you could earn a little more." (-5% Anthony relationship) 
 -> "Okay, fine, we don't complain. But we still try."
     You: "You and I both lived in this country for so long already."
     You: "We know that rules are there but humans don't follow rules all the time."
     You: "Sure, 1 + 1 = 2, but man + woman doesn't necessarily equal marriage and child and all that."
     Anthony: "What are you saying?"
-    You: "That the system we're in is rigid, but we are flexible. Go and explore." (+10 XP) <<addExperience(10)>>
+    <<addExperience(10)>>
+    You: "That the system we're in is rigid, but we are flexible. Go and explore." (+10 XP) 
 <<jump 1_1_2_options>>
 ===
 __PrivCrochet_colorID: 0
@@ -518,7 +528,7 @@ Anthony: "So easy for you to say."
 <<jump 1_2_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2608,-305
+__PrivCrochet_position: 2607,-304
 __PrivCrochet_tags: 
 title: 1_2_1_2
 ---
@@ -527,13 +537,13 @@ Anthony: "I knew it. I'm just weak." (-5% Anthony relationship)
 -> "I mean, why does it need to be?"
     Anthony: "Because that's how you get girls."
     Anthony: "Not like you'd know that..."
-    -> "Why judge yourself by something you're outclassed in?" (INT check)
+    -> "Why judge yourself by something you're outclassed in?" #skillcheck #int # 7
         You: "Why put yourself up against someone else's standards?"
         Anthony: "It's what I need in the sexual marketplace."
         You: "And why do you see it as a marketplace?"
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll > 8>>
+        <<if $diceroll > 7>>
             You: "Doesn't really seem right to buy and sell people, does it?"
             Anthony: "I didn't set the rules - "
             You: "So you shouldn't follow them. Or, at the very least, you should have your own version."
@@ -548,12 +558,12 @@ Anthony: "I knew it. I'm just weak." (-5% Anthony relationship)
         Anthony: "But the influencers always say going to the gym brings you happiness and success."
         You: "What works for them may not work for you."
         You: "But that doesn't make you any less of a person."
-    -> "Girls aren't only attracted to beefcakes, you know." (EMP check)
+    -> "Girls aren't only attracted to beefcakes, you know." #skillcheck #emp # 7
         You: "How many times have you heard that guys are unreasonable about the girls they want to date?"
         You: "The inverse is true also. Your partner loves you for you, not who you could be."
         <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll > 8>>
+        <<if $diceroll > 7>>
             Anthony: "Then what am I supposed to do?"
             You: "You gotta be patient. There is no other way."
             Anthony: "Then I'll just die single and alone - "
@@ -692,7 +702,7 @@ What do you say?
     <<jump 1>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1586,984
+__PrivCrochet_position: 1584,982
 __PrivCrochet_tags: 
 title: 1_3_1_options
 ---
@@ -716,7 +726,7 @@ Anthony: "How am I supposed to get a girlfriend if all of them just keep rejecti
 <<jump 1_3_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1409,1252
+__PrivCrochet_position: 1410,1251
 __PrivCrochet_tags: 
 title: 1_3_1_2
 ---
