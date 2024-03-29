@@ -67,7 +67,7 @@ title: 6
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1240,360
+__PrivCrochet_position: 1247,355
 __PrivCrochet_tags: 
 title: 7
 ---
@@ -515,7 +515,7 @@ Anthony: "So you're actually a guy."
 <<jump 16>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1872,300
+__PrivCrochet_position: 1884,355
 __PrivCrochet_tags: 
 title: 16
 ---
@@ -731,7 +731,8 @@ __PrivCrochet_position: 2218,325
 __PrivCrochet_tags: 
 title: end
 ---
-You head back to your room.
+<<addExperience(30)>>
+You head back to your room. (+30 XP)
 
 <<goto_room_bedroom_after_cca()>>
 ===
