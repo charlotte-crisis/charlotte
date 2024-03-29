@@ -579,7 +579,7 @@ Helen: "How are you going to deal with those who won't hold back?"
     -> "If I decided to just give up crossdressing after this, would you feel bad about it?" #skillcheck #emp #9
         <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll >= 8>>       
+        <<if $diceroll >= 9>>       
             Helen falls silent.
             Helen: "Fine. I'm sorry."
             Helen: "I didn't know you were so affected by what I said."
@@ -592,7 +592,7 @@ Helen: "How are you going to deal with those who won't hold back?"
         Helen: "I've heard worse from people on the street."
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll >= 8>>
+        <<if $diceroll >= 9>>
             You: "No. I meant, from someone within the community."
             You: "Someone who you wanted to trust."
             Helen falls silent.
