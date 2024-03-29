@@ -83,7 +83,7 @@ Sage: "LGBTQ+ characters? In my Singaporean media?"
     <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -329,148
+__PrivCrochet_position: -330,147
 __PrivCrochet_tags: 
 title: 6
 ---
@@ -103,10 +103,10 @@ Chenjie: "I think there are...?"
     You: "Well, at least there are some... But any for fictional media?"
     Chenjie: "Not that I can think of at least..."
 
--> "Don't we have a media policy or something?" #skillcheck #int #9
+-> "Don't we have a media policy or something?" #skillcheck #int # 10
     <<set $diceroll = diceRoll($int)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll > 8>>
+    <<if $diceroll > 10>>
         You: "A media content policy not to portray non-heterosexual behaviour in a positive way." (+5 XP)
         Sage: "Don't remind me of that stupid rule. If I remember correctly, the exact phrasing is 'promotion of homosexuality'."  
         Sage: "What counts as 'promotion' anyway? Is normalising it 'promotion'? Is depicting a happy queer person?"
@@ -189,12 +189,12 @@ title: 8
 Chenjie: "But we also have to consider the nonfiction side of things too."
 Chenjie: "Like, the way LGBTQ people are talked about on the news?"
 Joanne: "It's hard to say..."
-[i]A phone jingles, and Sage immediately looks at her phone.[/i]
+A phone jingles, and Sage immediately looks at her phone.
 Joanne: "You really don't see much about LGBTQ people being talked about on the news."
 Joanne: "Except maybe alternative news media, like Rice Media, that isn't related to the government."
 Sage begins typing furiously on her phone. 
 <<set $diceroll = diceRoll($emp)>>
-<<if $diceroll > 9>>
+<<if $diceroll >= 10>>
     [i]She looks worried.[/i]
 <<endif>>
 
@@ -232,12 +232,12 @@ You: "Is LGBT representation good in Singapore's news? Um..."
     <<addExperience(5)>>
     Chenjie: "Feature news exists for a reason. Why can't they talk about that there?" (+5 XP) (+5% Chenjie relationship)
     Joanne: "A lack of interest maybe? I think these things don't really affect the average Singaporean." 
-    [i]Before you can interject...[/i]
-[i]Sage puts down her phone with a sigh.[/i]
+    Before you can interject...
+Sage puts down her phone with a sigh.
 -> "All good?"
 -> "Are you rejoining us?"
 -> Are you okay?"
-[i]Sage nods.[/i]
+Sage nods.
 Sage: "What are we talking about?"
 You: "Featuring LGBTQ daily experiences on the news."
 Joanne: "I mean, I think it's difficult to do that... It's not exactly newsworthy in Singapore, right?"
@@ -278,9 +278,9 @@ Chenjie: "I mean, it's quite in line with the second question. Are there queer s
     Sage: "What's the use of queer spaces if most queer people don't even feel safe to be out."
 Sage: "If Singapore was that great, LGBTQ+ people wouldn't have to tiptoe around just so we aren't treated like spawns of Satan."
 <<set $diceroll = diceRoll($int)>>
-<<if $diceroll > 9>>
-    [i]She said, "WE aren't treated like spawns of Satan."[/i]
-    [i]You look at the other two, but it seems neither of them caught the slip up.[/i]
+<<if $diceroll > 10>>
+    She said, "WE aren't treated like spawns of Satan."
+    You look at the other two, but it seems neither of them caught the slip up.
 <<endif>>
 
 Chenjie: "Um... Sage, you sound a bit... upset?"
@@ -364,7 +364,7 @@ Sage: "He has a poly diploma so he could have started working already but..."
     You: "Oh..."
     [i]Doesn't that sound familiar to you?[/i] 
     <<set $diceroll = diceRoll($int)>>
-    <<if $diceroll >= 9>>
+    <<if $diceroll >= 10>>
         [i]The irony also doesn't escape your notice.[/i]
         <<changeConfidence(-5)>>
         <<addExperience(5)>>
@@ -405,7 +405,7 @@ Sage: "He has a poly diploma so he could have started working already but..."
     <<changeConfidence(-5)>>
     [i]The finality and rejection of changing the locks to keep your own son out of the house.[/i] (-5% confidence)
 
--> "Makes you wonder if being queer in Singapore..." #skillcheck #emp #10
+-> "Makes you wonder if being queer in Singapore..." #skillcheck #emp # 10
     <<set $diceroll = diceRoll($emp)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll < 10>>
@@ -596,38 +596,39 @@ __PrivCrochet_tags:
 title: 13
 ---
 Joanne: "That's it. I've had enough."
+<<changeRelationship("CJ", -5)>>
 Chenjie: "Wait, Joanne, calm down." (-5% Chenjie relationship)
 Joanne: "How can I calm down when I'm being attacked on all sides?"
 Joanne: "Clearly, I'm not welcome here."
-[i]Prof Lim chooses this moment to approach.[/i] 
+Prof Lim chooses this moment to approach.
 Prof Lim: "Hello, is everything okay over here? Things sound a bit heated..."
 //need code to set J relationship == 0)
 Joanne: "Yeah, prof, is it possible to switch groups now?" (Goes to 0% Joanne relationship)
 Prof Lim: "Uh... May I know what has happened here?"
-[i]No one looks away, unwilling to speak. Even Joanne is too angry to speak.[/i]
+No one looks away, unwilling to speak. Even Joanne is too angry to speak.
 
 -> Keep quiet
     Prof Lim: "... Okay... I'll see what I can do for you, okay?" 
-    [i]It seems this group has now been reduced to three members.[/i]
-    [i]For the rest of class, the atmosphere is thick with discomfort.[/i]
--> Explain #skillcheck #emp #11
+    It seems this group has now been reduced to three members.
+    For the rest of class, the atmosphere is thick with discomfort.
+-> Explain #skillcheck #emp # 10
     <<set $diceroll = diceRoll($emp)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll > 10>>
+    <<if $diceroll >= 10>>
         <<addExperience(5)>>
-        [i]Just as you open your mouth, everyone shoots you a glare and you get the message.[/i] (+5 XP)
+        Just as you open your mouth, everyone shoots you a glare and you get the message. (+5 XP)
         You: "Um, nothing... Just a disagreement."
         Prof Lim: "... Okay... I'll see what I can do for you, okay?"
-        [i]It seems this group has now been reduced to three members.[/i]
-        [i]For the rest of class, the atmosphere is thick with discomfort.[/i]
+        It seems this group has now been reduced to three members.
+        For the rest of class, the atmosphere is thick with discomfort.
     <<else>>
         You explain things to the prof and she nods.
         Prof Lim: "Okay... I see... Yes, perhaps transferring to another group may be ideal..."
         Prof Lim: "I'll see what I can do, okay?"
         <<changeConfidence(-5)>>
         As she leaves, you notice that everyone is glaring at you. (-5% confidence)
-        [i]It seems this group has now been reduced to three members.[/i]
-        [i]For the rest of class, the atmosphere is thick with discomfort.[/i]
+        It seems this group has now been reduced to three members.
+        For the rest of class, the atmosphere is thick with discomfort.
     <<endif>>
 <<jump 16>>
 ===
@@ -658,7 +659,7 @@ Who will you walk with today?
     <<jump 19>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1235,356
+__PrivCrochet_position: 1232,356
 __PrivCrochet_tags: 
 title: 17
 ---
@@ -670,13 +671,13 @@ Chenjie: "You really don't get to talk about this sort of stuff so openly often,
 -> "Fun for *you*. I found it uncomfortable."
     Chenjie: "What? Why?"
     You: "Everything was so tense! Sage and Joanne especially..."
-    //need code for this
-    (If players went through 13; then
-    Chenjie: "I mean... Yeah, Joanne leaving was... unpleasant." )
+    <<if visited "13">>
+        Chenjie: "I mean... Yeah, Joanne leaving was... unpleasant."
+    <<endif>>
     Chenjie: "But the topic itself is interesting, right?"
     You: "Hm... Maybe."
     You: "It reminded me of how inadequate the media is in representing queer people though."
-    <<stop>>
+
 -> "Yeah, it was interesting."
     You: "It reminded me of how inadequate the media is in representing queer people though."
     You: "But also, every queer person is different so it's not like we can fully represent them."
@@ -690,7 +691,7 @@ Chenjie: "You really don't get to talk about this sort of stuff so openly often,
         Chenjie: "That's just what I feel at least." (+5 XP)
         You: "I see... That's my bus now. See you!"
         Chenjie: "Yup! Bye!"
-        <<stop>>
+
     -> "But I'll still give it a shot."
         <<changeConfidence(5)>>
         You: "If I never even try to explain my own feelings and experiences, how could I ever expect someone else to know?" (+5% confidence)
@@ -700,7 +701,6 @@ Chenjie: "You really don't get to talk about this sort of stuff so openly often,
         Chenjie: "I feel the same way too." (+5% Chenjie relationship)
         You: "That's my bus now. See you!"
         Chenjie: "Yup! Bye!"
-        <<stop>>
 
 -> "Honestly, the whole LGBTQ thing doesn't make any sense to me."
     <<changeRelationship("CJ", -5)>>
@@ -718,7 +718,6 @@ Chenjie: "You really don't get to talk about this sort of stuff so openly often,
     Chenjie: "So that you know that there are different people out there with experiences not like your own, and so that you broaden your horizons." (+5 XP)
     You: "I see... That's my bus now."
     Chenjie: "Okay, then. Bye!"
-    <<stop>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1254,632
@@ -732,7 +731,7 @@ Joanne: "I don't know if I'm imagining things but sometimes she glares at me lik
 Joanne: "Do you think she hates me?"
 
 -> "No idea."
-    [i]Joanne sighs.[/i]
+    Joanne sighs.
     Joanne: "It just worries me because we're supposed to be a group."
     <<changeConfidence(-5)>>
     <<changeRelationship("J", -5)>>
@@ -742,7 +741,6 @@ Joanne: "Do you think she hates me?"
     Joanne: "Anyway, my bus is here. I just hope group work is okay in the end."
     You: "Me too. Bye!"
     Joanne: "Bye!"
-    <<stop>>
 
 -> "No? Why would she hate you?"
     Joanne: "I have no idea! That's why I asked you." (+5% Joanne relationship)
@@ -760,7 +758,7 @@ Joanne: "Do you think she hates me?"
         Joanne: "Yeah... Whatever. My bus is here."
         Joanne: "I just hope group work is okay in the end." 
         You: "Me too. Bye!"
-        <<stop>>
+
     -> "What about what she thinks?"
         You: "I think you could tell her you want to understand what she thinks."
         <<changeRelationship("J", 5)>>
@@ -770,7 +768,6 @@ Joanne: "Do you think she hates me?"
         Joanne: "But I'll give it a shot. Thanks, Charles." (+5% confidence)
         Joanne: "Anyway, my bus is here. Bye!"
         You: "Bye!"
-        <<stop>>
 
 -> "Yeah... I think she does."
     Joanne: "Why though? What did I do wrong?" 
@@ -784,7 +781,6 @@ Joanne: "Do you think she hates me?"
         Joanne: "Yeah... Whatever. My bus is here."
         Joanne: "I just hope group work is okay in the end."
         You: "Me too. Bye!"
-        <<stop>>
     
     -> "What about what she thinks?"
         You: "I think you could tell her you want to understand what she thinks."
@@ -793,7 +789,6 @@ Joanne: "Do you think she hates me?"
         Joanne: "But I'll give it a shot. Thanks, Charles." (+5% confidence)
         Joanne: "Anyway, my bus is here. Bye!"
         You: "Bye!"
-        <<stop>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1174,868
@@ -814,8 +809,8 @@ Sage: "Even when it feels impossible to be impartial about something that's actu
     Sage: "Maybe what I want isn't for the class syllabus to change."
     Sage: "It's for society itself to change and we can talk about LGBTQ+ issues normally."
     Sage: "So it doesn't feel like every single sentence is a potential landmine I have to be careful around."
-    [i]And you get the feeling, don't you?[/i]
-    [i]The feeling of struggling to pick the next best thing to say.[/i]
+    And you get the feeling, don't you?
+    The feeling of struggling to pick the next best thing to say.
     -> "I get it."
     -> "I don't get it."
     <<changeConfidence(5)>>
@@ -831,8 +826,8 @@ Sage: "Even when it feels impossible to be impartial about something that's actu
     Sage: "Yeah... Maybe what I want isn't for the class syllabus to change."
     Sage: "It's for society itself to change and we can talk about LGBTQ+ issues normally."
     Sage: "So it doesn't feel like every single sentence is a potential landmine I have to be careful around."
-    [i]And you get the feeling, don't you?[/i]
-    [i]The feeling of struggling to pick the next best thing to say.[/i]
+    And you get the feeling, don't you?
+    The feeling of struggling to pick the next best thing to say.
     -> "I get it."
     -> "I don't get it."
     <<changeConfidence(5)>>
