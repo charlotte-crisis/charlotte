@@ -88,6 +88,7 @@
     {"name":"rm_bedroom_after_cca1","order":4,"path":"rooms/rm_bedroom_after_cca1/rm_bedroom_after_cca1.yy",},
     {"name":"rm_bedroom_after_class1","order":3,"path":"rooms/rm_bedroom_after_class1/rm_bedroom_after_class1.yy",},
     {"name":"rm_bedroom_menu","order":2,"path":"rooms/rm_bedroom_menu/rm_bedroom_menu.yy",},
+    {"name":"rm_main_menu","order":7,"path":"rooms/rm_main_menu/rm_main_menu.yy",},
     {"name":"rm_bedroom_parent","order":1,"path":"rooms/rm_bedroom_parent/rm_bedroom_parent.yy",},
     {"name":"rm_black_screen","order":1,"path":"rooms/rm_black_screen/rm_black_screen.yy",},
     {"name":"rm_bus_cj","order":1,"path":"rooms/rm_bus_cj/rm_bus_cj.yy",},

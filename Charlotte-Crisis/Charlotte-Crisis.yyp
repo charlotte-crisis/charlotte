@@ -140,6 +140,7 @@
     {"id":{"name":"rm_bedroom_after_cca1","path":"rooms/rm_bedroom_after_cca1/rm_bedroom_after_cca1.yy",},},
     {"id":{"name":"rm_bedroom_after_class1","path":"rooms/rm_bedroom_after_class1/rm_bedroom_after_class1.yy",},},
     {"id":{"name":"rm_bedroom_menu","path":"rooms/rm_bedroom_menu/rm_bedroom_menu.yy",},},
+    {"id":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
     {"id":{"name":"rm_bedroom_parent","path":"rooms/rm_bedroom_parent/rm_bedroom_parent.yy",},},
     {"id":{"name":"rm_black_screen","path":"rooms/rm_black_screen/rm_black_screen.yy",},},
     {"id":{"name":"rm_bus_cj","path":"rooms/rm_bus_cj/rm_bus_cj.yy",},},
@@ -461,6 +462,7 @@
     {"roomId":{"name":"rm_house_sister","path":"rooms/rm_house_sister/rm_house_sister.yy",},},
     {"roomId":{"name":"rm_house_mother","path":"rooms/rm_house_mother/rm_house_mother.yy",},},
     {"roomId":{"name":"rm_bedroom_1","path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},},
+    {"roomId":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
