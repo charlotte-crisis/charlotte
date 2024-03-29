@@ -217,6 +217,8 @@ What do you say?
 -> "Alright, I gotta go." <<if visited("1_1") or visited("1_2") or visited("1_3")>>
     You: "Do you wanna do this again some time?"
     Anthony: "Maybe."
+    <<addExperience(30)>>
+    (+30 XP)
     <<goto_room_bedroom_afterHangout()>>
 ===
 __PrivCrochet_colorID: 0
