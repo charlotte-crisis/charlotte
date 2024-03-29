@@ -5,6 +5,8 @@ __PrivCrochet_tags:
 title: 1
 ---
 Sister: "Charles."
+<<set $start_gender_meter = getGenderMeter()>>
+<<set $start_sis_rs = getRelationship("Si")>>
 You: "Hi, sis."
 Sister: "What... are you wearing?" <<if $name == "Charlotte">>
 Sister: "I have so many questions."
@@ -949,15 +951,28 @@ title: 7
 ---
 // make checks here
 Sister: "Well, we've certainly spent a lot of time talking."
+Sister: "So, at the end of it all..."
+<<set $end_gender_meter = getGenderMeter()>>
+<<set $end_sis_rs = getRelationship("Si")>>
+<<set $delta_gender_meter = $end_gender_meter - $start_gender_meter>>
+<<set $delta_sis_rs = $end_sis_rs - $start_sis_rs>>
 // gender meter overall increase 
-    // sis relationship low
-    <<jump ending_4>>
-    // sis relationship high
-    <<jump ending_2>>
-
-// gender meter overall decrease
-    // sis relationship low
-    <<jump ending_5>>
-    // sis relationship high
-    <<jump ending_3>>
+<<if $delta_gender_meter > 0>>
+    <<if $delta_sis_rs > 0>>
+        // sis relationship high
+        <<jump ending_2>>
+    <<else>>
+        // sis relationship low
+        <<jump ending_4>>
+    <<endif>>
+<<else>>
+// gender meter overall decrease or no change
+    <<if $delta_sis_rs > 0>>
+        // sis relationship high
+        <<jump ending_3>>
+    <<else>>
+        // sis relationship low
+        <<jump ending_5>>
+    <<endif>>
+<<endif>>
 ===
