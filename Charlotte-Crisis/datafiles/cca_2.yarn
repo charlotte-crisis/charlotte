@@ -1,14 +1,14 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 240,240
+__PrivCrochet_position: 240,239
 __PrivCrochet_tags: 
 title: 1
 ---
-You're a little early to the session today, and so are Anthony and Vera.
-They are sitting on opposite sides of the room. Seems like last session wasn't enough to bring them together.
-Behind his laptop, Anthony buries his head in whatever he's drawing, occasionally looking up at his screen.
-Vera is scrolling through her phone casually.
-Who will you sit beside?
+[i]You're a little early to the session today, and so are Anthony and Vera.[/i]
+[i]They are sitting on opposite sides of the room. Seems like last session wasn't enough to bring them together.[/i]
+[i]Behind his laptop, Anthony buries his head in whatever he's drawing, occasionally looking up at his screen.[/i]
+[i]Vera is scrolling through her phone casually.[/i]
+[i]Who will you sit beside?[/i]
 
 <<declare $satWithAnthony = false>>
 -> Anthony <<if getRelationship("A") > 30>>
@@ -25,11 +25,11 @@ Who will you sit beside?
     Vera: "Hey, {$name}."
     You: "Hey, Vera! What's up?"
     Vera: "Same stuff. Just scrolling through Pinterest. And Instagram. And TikTok."
-    -> You: "For art ideas?"
+    -> "For art ideas?"
         Vera: "Haha, I'd be a much better student if I was that dedicated, right?"
         Vera: "Only about 1% of what I'm seeing is vibes. The rest of it is fashion and trans politics."
     
-    -> You: "Wow, that's a lot of social media."
+    -> "Wow, that's a lot of social media."
         Vera: "Haha, I'd be a much better student if I could get rid of a few of those, right?"
         Vera: "I think it still helps me, though."
         You: "How so?"
@@ -42,7 +42,7 @@ __PrivCrochet_position: 480,240
 __PrivCrochet_tags: 
 title: 2
 ---
-Nadia and Eleanor enter the room together.
+[i]Nadia and Eleanor enter the room together.[/i]
 Eleanor: "Oh, you guys are here already!"
 Nadia: "Guess we didn't need to rush."
 Eleanor: "Alright! But... this is all we have?"
@@ -75,7 +75,7 @@ __PrivCrochet_tags:
 title: 3
 ---
 Eleanor: "Alright then, let's design for about 30 minutes and we can share."
-You scour the Internet for ideas, eventually settling between three choices:
+[i]You scour the Internet for ideas, eventually settling between three choices.[/i]
 
 -> A paint blob with "Art Club" in the middle.
     <<set $logo = "blob">>
@@ -96,12 +96,12 @@ You scour the Internet for ideas, eventually settling between three choices:
 <<jump 4>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 960,240
+__PrivCrochet_position: 959,237
 __PrivCrochet_tags: 
 title: 4
 ---
 Eleanor: "Alright, are we ready to share?"
-Everyone in the room looks up.
+[i]Everyone in the room looks up.[/i]
 Eleanor: "Okay, let's get started! {$name}, would you like to show us what you've drawn?"
 You: "Alright, here goes..."
 
@@ -121,20 +121,42 @@ You: "Alright, here goes..."
     Nadia: "What do you mean?"
     Vera: "You'll see."
     Anthony: "How is a sunset related to art club? Are you saying we're going under?"
-    -> "Yeah. Bye!" #skillcheck #cha #7
+    -> "Yeah. Bye!" #skillcheck #cha #8
         <<set $diceroll = diceRoll($cha)>>
-        You expected people to take issue with that, but Eleanor laughs.
-        Eleanor: "As if we're going anywhere." (+5% confidence)
-        Eleanor: "I like the concept! Colouring the gradient will be hard, but we can save that for another day."
+        [You rolled a {$diceroll}.]
+        <<if $diceroll >= 6>>
+            [i]You expected people to take issue with that, but Eleanor laughs.[/i]
+            <<changeConfidence(5)>>
+            Eleanor: "As if we're going anywhere." (+5% confidence)
+            Eleanor: "I like the concept! Colouring the gradient will be hard, but we can save that for another day."
+        <<else>>
+            Anthony: "Knew it. I guess we don't believe in this organisation anymore."
+            Eleanor: "That's not what it means!"
+            <<changeConfidence(-5)>>
+            [i]Eleanor shoots you a quick glare.[/i] (-5% confidence)
+        <<endif>>
         
-    -> "Sunsets are nature's art." #skillcheck #int
-        You: "And when do we see the sunset? After a long day, we truly appreciate its natural beauty." (+10 XP)
-        Nadia: "Wow, that's deep!" 
-        Anthony: "Fair point."
-        Vera: "Hmm, do rainbows and sunsets come together?"
-        Eleanor: "I guess we can search for that later. Moving on..."
-    
+    -> "Sunsets are nature's art." #skillcheck #int #8
+        <<set $diceroll = diceRoll($int)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll >= 8>>
+            <<addExperience(10)>>
+            You: "And when do we see the sunset? After a long day, we truly appreciate its natural beauty." (+10 XP)
+            Nadia: "Wow, that's deep!" 
+            Anthony: "Fair point."
+            Vera: "Hmm, do rainbows and sunsets come together?"
+            Eleanor: "I guess we can search for that later. Moving on..."
+        <<else>>    
+            Anthony: "Don't just say that to sound pretentious."
+            You: "Uh... I'm not sure. Sunsets look pretty."
+            <<changeConfidence(-5)>>
+            Anthony: "Many other things look pretty. Yours isn't that special." (-5% confidence)
+            Vera: "Hate to say it, but yeah, I agree."
+            Eleanor: "Then let's see what other pretty things you've drawn!"
+        <<endif>>
+
     -> "Uh... I'm not sure. Sunsets look pretty."
+        <<changeConfidence(-5)>>
         Anthony: "Many other things look pretty. Yours isn't that special." (-5% confidence)
         Vera: "Hate to say it, but yeah, I agree."
         Eleanor: "Then let's see what other pretty things you've drawn!"
@@ -142,7 +164,7 @@ You: "Alright, here goes..."
 <<jump 5>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1200,240
+__PrivCrochet_position: 1198,238
 __PrivCrochet_tags: 
 title: 5
 ---
@@ -161,14 +183,15 @@ Anthony: "What? Normal what. Now everyone is using ChatGPT for their assignments
 Nadia: "Touché. {$name}, what do you think?"
 // Try touché without accent if cannot
 -> "I think it's cheating."
-Anthony: "Wow. Way to go, so direct." (-5% Anthony relationship)
-Nadia: "Now that you mention it, I've seen so many anime fan artists get their work copied by AI."
-Vera: "I just gave it a shot and damn, these logos are so generic and corporate."
-Anthony: "Well, I guess that's what it was meant for, right?"
-Vera: "Then why did you use it in a club that's anything but that?"
-Eleanor: "Vera, please. I think there are some aspects we can keep. Moving on..."
+    <<changeRelationship("A", -5)>>
+    Anthony: "Wow. Way to go, so direct." (-5% Anthony relationship)
+    Nadia: "Now that you mention it, I've seen so many anime fan artists get their work copied by AI."
+    Vera: "I just gave it a shot and damn, these logos are so generic and corporate."
+    Anthony: "Well, I guess that's what it was meant for, right?"
+    Vera: "Then why did you use it in a club that's anything but that?"
+    Eleanor: "Vera, please. I think there are some aspects we can keep. Moving on..."
 
--> "I think it's justified."
+-> "I think it's justifiable."
     Vera: "Seriously?"
     Anthony: "Told you so. Lots of companies are doing it nowadays."
 
@@ -178,11 +201,19 @@ Eleanor: "Vera, please. I think there are some aspects we can keep. Moving on...
         Eleanor: "But the important part is that we edit it and make it our own work."
     
     -> "I also use it to edit my crossdressing photos."
-        (if $Anthony_out = "false") Anthony: "What?" (-5% Anthony relationship)
-        (if $Anthony_out = "true") Anthony: "Oh my god, not this gay shit again." (-5% confidence)
+        <<if getNPCKnows("A")>> 
+            <<changeConfidence(-5)>>
+            Anthony: "Oh my god, not this gay shit again." (-5% confidence)
+        <<else>>
+            <<changeRelationship("A", -5)>>
+            Anthony: "What?" (-5% Anthony relationship)
+        <<endif>>
         You: "Yeah, if I don't have time for makeup before going out, I use FaceApp to edit my face."
-        (if Vera doesn't know) Vera: "Love that for you."
-        (if Vera knows) Vera: "I prefer the real Charlotte!"
+        <<if getNPCKnows("V")>>
+            Vera: "I prefer the real Charlotte!"
+        <<else>>    
+            Vera: "Love that for you."
+        <<endif>>
         Nadia: "Yeah, I've heard of my friends jokingly doing that, but regularly? Wow."
     
     -> "If it makes life easier, then why not use it?"
@@ -194,12 +225,12 @@ Eleanor: "Vera, please. I think there are some aspects we can keep. Moving on...
 <<jump 6>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1440,240
+__PrivCrochet_position: 1436,237
 __PrivCrochet_tags: 
 title: 6
 ---
 Nadia: "Okay, my turn!"
-She shows a design of two students drawing each other while smiling.
+[i]She shows a design of two students drawing each other while smiling.[/i]
 Eleanor: "Wah, this one is good. Even if it's just a sketch for now."
 Vera: "Yeah, you can always add the details later."
 Anthony: "Anime again."
@@ -209,7 +240,7 @@ Vera: "What's wrong with having a preference? At least she's got something to be
 
 -> "Nadia, you need to move on from anime. Get better material."
     <<changeRelationship("N", -5)>>
-    Nadia: "And who made you the authority on good art?" // (-5% Nadia relationship)
+    Nadia: "And who made you the authority on good art?" (-5% Nadia relationship)
     Anthony: "No, I agree. What happened to trying different forms?"
     Nadia: "I'll try different forms when Eleanor wants us to! I know there's, like, typography, pottery, drip paint and all that - "
     Anthony: "And then you go back to anime. I'm sick of it."
@@ -219,9 +250,9 @@ Vera: "What's wrong with having a preference? At least she's got something to be
     Vera: "That was very cruel."
     Eleanor: "{$name}! Don't be rude."
     <<changeRelationship("A", 5)>>
-    Anthony: "Wow, you dared to say what we all don't dare to." // (+5% Anthony relationship)
+    Anthony: "Wow, you dared to say what we all don't dare to." (+5% Anthony relationship)
     <<changeRelationship("V", -5)>>
-    Vera: "Speak for yourselves. I'm not an anime fan but I'd wear this to support my friend." // (-5% Vera relationship)
+    Vera: "Speak for yourselves. I'm not an anime fan but I'd wear this to support my friend." (-5% Vera relationship)
 
 -> "What's wrong with anime?"
     Anthony: "Don't you think it's very cringey?"
@@ -235,31 +266,31 @@ Vera: "What's wrong with having a preference? At least she's got something to be
     Eleanor: "Enough, all of you. Let's move on."
 
 -> "Weren't you drawing anime waifus before our session started?" <<if $satWithAnthony>>
-    Anthony looks away worriedly.
+    [i]Anthony looks away worriedly.[/i]
     Anthony: "It's... not the same!"
     Anthony: "And you shouldn't be looking at other people's drawings anyway!"
 
-    -> You: "You literally acknowledged it to me."
+    -> "You literally acknowledged it to me."
         <<changeRelationship("A", -5)>>
-        Anthony doesn't have anything to say. // (-5% Anthony relationship)
+        Anthony doesn't have anything to say. (-5% Anthony relationship)
         <<changeRelationship("N", 5)>>
-        You: "Sounds like you're just insecure in your preferences. But can you not give Nadia shit over hers?" //(+5% Nadia relationship)
+        You: "Sounds like you're just insecure in your preferences. But can you not give Nadia shit over hers?" (+5% Nadia relationship)
         Nadia: "Anthony, I didn't know you liked anime too."
         Vera: "There's nothing wrong with that, Anthony. Not everything is cringe." (+ 10 XP)
         Anthony: "Let's... just move on."
     
-    -> You: "Okay, sorry..."
+    -> "Okay, sorry..."
         <<changeConfidence(-5)>>
         Anthony: "Keep your nose out of other people's business." (-5% confidence)
-        Vera rolls her eyes.
+        [i]Vera rolls her eyes.[/i]
 
 -> "It's Nadia's work. Respect it as you would expect us to respect yours." #skillcheck #cha #8
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll >= 8>>
         <<changeRelationship("V", 5)>>
-        Anthony is thrown off by the strength in your statement, and keeps quiet.
-        Vera nods in approval. // (+5% Vera relationship) 
+        [i]Anthony is thrown off by the strength in your statement, and keeps quiet.[/i]
+        [i]Vera nods in approval.[/i] (+5% Vera relationship) 
         <<addExperience(10)>>
         Vera: "Yeah, think about that. We've given you space to show your work. Is that too much to ask for from you?" (+ 10 XP)
         Eleanor: "Okay, okay, moving on... Vera, your turn."
@@ -277,18 +308,18 @@ __PrivCrochet_position: 1680,240
 __PrivCrochet_tags: 
 title: 7
 ---
-Vera turns her paper around.
-It's a butterfly with rainbow coloured wings.
+[i]Vera turns her paper around. It's a butterfly with rainbow coloured wings.[/i]
 Nadia: "Rainbows again? That's becoming your trademark already!"
 Vera: "Yep. Rainbows are colourful! They can mean many things, like diversity, creativity, acceptance..."
-Anthony gives an exasperated sigh.
+[i]Anthony gives an exasperated sigh.[/i]
 Eleanor: "What's wrong, Anthony?"
 Anthony: "Nothing. Just... I can't imagine anyone would want to wear this shirt."
 Vera: "Why?"
 Anthony: "Don't you think it's just a little loud? And there's no indication that we're the Art Club at all."
 Nadia: "I guess so. I mean, maybe people will think we're some butterfly club."
+
 -> "Yeah, what's with that butterfly, anyway?"
-    Vera blushes a bit.
+    [i]Vera blushes a bit.[/i]
     Vera: "I think it represents transformation. You know, from caterpillar to butterfly."
     Vera: "I've always been intrigued by that possibility."
     Anthony: "Oh my god, not this gender nonsense again."
@@ -297,14 +328,14 @@ Nadia: "I guess so. I mean, maybe people will think we're some butterfly club."
         Vera: "It was never supposed to be only about gender. But I guess we see what we want to see, right?" (-5% confidence)
         Anthony: "I see a bad design." 
         Vera: "I'd pray for you if I still believed. Hope you can find yourself or whatever they say."
-    -> "It's not about gender." (INT check)
+    -> "It's not about gender." #skillcheck #int #8
         Anthony: "Oh yeah? What's it about then?"
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll < 8>>
             You: "It's for everybody."
             Anthony: "Sounds like some woke nonsense to me. Stuff that shouldn't be on a logo."
-            There's no convincing him, it seems.
+            [i]There's no convincing him, it seems.[/i]
         <<else>>
             You: "It can be for anyone. I'm sure you've felt the same."
             You: "Haven't you felt out of place? Or wanted a place where you could be yourself?"
@@ -315,51 +346,54 @@ Nadia: "I guess so. I mean, maybe people will think we're some butterfly club."
             Anthony: "Fine, whatever..."
         <<endif>>
     -> (let's just move on...)
-    You don't really feel like escalating this.
--> "I'm not a fan of the logo, but I appreciate Vera's efforts." (EMP check)
-It's Vera's turn to sigh.
-<<changeRelationship("V", 5)>>
-Vera: "Thanks, {$name}."
-Anthony: "Then she should be okay with us not accepting it."
-Vera: "Well, yeah, it was just a suggestion."
-Vera: "Still, I feel like there's some... other reason you don't like my logo, right, Anthony?"
-Anthony: "Don't put words into my mouth."
-<<set $diceroll = diceRoll($emp)>>
-[You rolled a {$diceroll}.]
-<<if $diceroll < 8>>
-    You're taken aback, and so is Vera.
-    Vera: "I never did that - "
-    Eleanor: "Please, guys, let's move on."
-<<else>>
-    You: "Anthony, if you've got something to say, at least be honest about it."
-    Anthony: "I... uh..."
-    You: "Vera will be okay if her design isn't accepted, but it seems you're still aggravated at something?"
-    Anthony: "You know what, fine, I don't care."
+        [i]You don't really feel like escalating this.[/i]
+
+-> "I'm not a fan of the logo, but I appreciate Vera's efforts." #skillcheck #emp #8
+    [i]It's Vera's turn to sigh.[/i]
     <<changeRelationship("V", 5)>>
-    Vera: "Thanks, that was better than a fight." (+5% Vera relationship)
-<<endif>>
--> "Isn't there something else that can symbolise inclusivity?" (INT check)
-Anthony: "Like what?"
-You think for a moment.
-<<set $diceroll = diceRoll($int)>>
-[You rolled a {$diceroll}.]
-<<if $diceroll < 8>>
-    You: "Uh... Sorry. I'm not sure."
-    Anthony: "Then we shouldn't make that the focus of the logo."
-<<else>>
-    You: "An umbrella."
-    Anthony: "What?"
-    Vera: "Why?"
-    You: "You know... an umbrella can bring everyone together under it!"
-    You: "And if you colour the umbrella rainbow, it'll be less obvious than an outright rainbow."
-    <<addExperience(10)>>
-    You: "Win-win?" (+ 10 XP)
-    Eleanor: "Hmm... we'd have to explain why our logo is an umbrella, though."
-    Eleanor: "But it could just be one part of the design. Thanks, {$name}!"
+    Vera: "Thanks, {$name}."
+    Anthony: "Then she should be okay with us not accepting it."
+    Vera: "Well, yeah, it was just a suggestion."
+    Vera: "Still, I feel like there's some... other reason you don't like my logo, right, Anthony?"
+    Anthony: "Don't put words into my mouth."
+    <<set $diceroll = diceRoll($emp)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll < 8>>
+        [i]You're taken aback, and so is Vera.[/i]
+        Vera: "I never did that - "
+        Eleanor: "Please, guys, let's move on."
+    <<else>>
+        You: "Anthony, if you've got something to say, at least be honest about it."
+        Anthony: "I... uh..."
+        You: "Vera will be okay if her design isn't accepted, but it seems you're still aggravated at something?"
+        Anthony: "You know what, fine, I don't care."
+        <<changeRelationship("V", 5)>>
+        Vera: "Thanks, that was better than a fight." (+5% Vera relationship)
+    <<endif>>
+
+-> "Isn't there something else that can symbolise inclusivity?" #skillcheck #int #8
+    Anthony: "Like what?"
+    [i]You think for a moment.[/i]
+    <<set $diceroll = diceRoll($int)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll < 8>>
+        You: "Uh... Sorry. I'm not sure."
+        Anthony: "Then we shouldn't make that the focus of the logo."
+    <<else>>
+        You: "An umbrella."
+        Anthony: "What?"
+        Vera: "Why?"
+        You: "You know... an umbrella can bring everyone together under it!"
+        You: "And if you colour the umbrella rainbow, it'll be less obvious than an outright rainbow."
+        <<addExperience(10)>>
+        You: "Win-win?" (+ 10 XP)
+        Eleanor: "Hmm... we'd have to explain why our logo is an umbrella, though."
+        Eleanor: "But it could just be one part of the design. Thanks, {$name}!"
+
 -> "I think her logo is good. Yours could never compare."
     Anthony: "Then, as a guy, tell me, are you willing to wear this shirt?"
     -> "Yes, I'd be proud to wear it."
-        Anthony directs his glare away from you.
+        [i]Anthony directs his glare away from you.[/i]
         Anthony: "Siao lang. Of course you would wear a rainbow."
         <<changeConfidence(5)>>
         You: "Sounds like someone just can't appreciate art." (+5% confidence)
@@ -368,10 +402,11 @@ You think for a moment.
         You: "Then you shouldn't have brought being a guy up, right?"
         <<addExperience(10)>>
         You: "If it was as bad as you say, no one would want to wear this design. But clearly you've got something else on your mind." (+10 XP)
-        Anthony folds his arms and looks away.
+        [i]Anthony folds his arms and looks away.[/i]
     -> "No..."
         Anthony: "Told you. No normal guy would wear this."
         Anthony: "But you? You might as well stop pretending and just wear it."
+
 -> "Yeah, the logo is inappropriate."
     Anthony: "Exactly, our other members don't like it."
     Vera: "Speak for yourself. I like it."
@@ -380,7 +415,7 @@ You think for a moment.
 <<jump 8>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1918,234
+__PrivCrochet_position: 1917,233
 __PrivCrochet_tags: 
 title: 8
 ---
@@ -396,7 +431,7 @@ Vera: "You can't possibly be serious right now."
 -> "Rainbows don't just mean LGBTQ+. Didn't you listen to what she said?"
     Vera: "Thanks, {$name}. At least you get it."
     Anthony: "I still can't shake the association. I don't think our future members will either."
-    -> "You know what else is rainbow coloured? Gaming PCs." (INT check)
+    -> "You know what else is rainbow coloured? Gaming PCs." #skillcheck #int #8
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 8>>
@@ -412,7 +447,7 @@ Vera: "You can't possibly be serious right now."
         <<else>>
             Anthony: "That doesn't matter. Rainbows are political now."
             Anthony: "Name me one rainbow product that doesn't remind people of LGBT nonsense."
-            You don't know how to respond to that.
+            [i]You don't know how to respond to that.[/i]
         <<endif>>
     -> "I guess we'll have to agree to disagree."
         Anthony: "Then I guess I won't ever wear the shirt in public. Which defeats the purpose of making one."
@@ -433,22 +468,23 @@ Vera: "You can't possibly be serious right now."
     Vera: "Is your masculinity so fragile that a rainbow will shatter it to pieces?"
     -> "Good one, Vera."
         Anthony: "Ugh. This club isn't the right place for me."
-        Vera: "Honestly? You've been rude and judgemental to multiple members of the club. It's classic douchebag alpha male behaviour, and I'm not surprised you'd be so opposed to the rainbow." 
+        Vera: "Honestly? You've been rude and judgemental to multiple members of the club." 
+        Vera: "It's classic douchebag alpha male behaviour, and I'm not surprised you'd be so opposed to the rainbow." 
         Anthony: "I'm just saying my opinion. If you can't handle it, that says more about you than about me."
         Vera: "I'm surprised Eleanor isn't doing anything about you."
         Nadia: "Guys, please chill..."
         Vera: "Nadia, didn't you feel insulted when he mocked your drawing style?"
-        Nadia falls silent.
-        Anthony: "Fine. If I'm not wanted, you won't see me here next week. Simple as that."
+        [i]Nadia falls silent.[/i]
+        Anthony: "Fine. I know where I'm not wanted."
 
         -> "She didn't mean that, Anthony."
             Anthony: "Oh, of course. You praise her and then turn around to say she didn't mean that."
             Eleanor: "We don't want to see a club member go. Especially so early in the term - "
             Anthony: "So this is just about filling seats?"
-            -> "Fine. Anthony. We're sorry." (EMP check)
+            -> "Fine. Anthony. We're sorry." #skillcheck #emp #8
                 <<set $diceroll = diceRoll($emp)>>
                 [You rolled a {$diceroll}.]
-                <<if $diceroll >= 8>>
+                <<if $diceroll < 8>>
                     Vera: "Sorry for what? For allowing bigotry to run free here?"
                     Eleanor: "That's not what we meant, both of you!"
                     Nadia: "Guys, please... you're fighting for no reason..."
@@ -464,26 +500,27 @@ Vera: "You can't possibly be serious right now."
                     You: "I never said you were. In fact, I want to ask, have you ever met a gay person before?"
                     Anthony: "I've seen them on Youtube - "
                     You: "No count. I meant, real life."
-                    Anthony shakes his head.
+                    [i]Anthony shakes his head.[/i]
                     You: "Then I know it's difficult to understand at first. And your first time getting to know a queer person, you got scolded."
                     You: "That must feel bad. So on behalf of Vera, I'd say sorry."
                     Vera: "I don't need you to apologise for me."
-                    -> "Of course. I want you to apologise to him." 
+                    -> "Of course. I want you to apologise to him." #skillcheck #int #8
                         <<set $diceroll = diceRoll($int)>>
                         [You rolled a {$diceroll}.]
                         <<if $diceroll >= 8>>
                             Vera: "You've made my jaw drop twice in one minute."
                             You: "Go ahead, pick it up. You've got something to say."
                             Vera: "Fine. Anthony, I am sorry I got mad. Can we be more polite to each other now?"
-                            Anthony looks at the rest of the club, their eyes squarely on him.
+                            [i]Anthony looks at the rest of the club, their eyes squarely on him.[/i]
                             <<addExperience(10)>>
                             Anthony: "Fine... Sorry also lor." (+ 10 XP)
                         <<else>>
-                            You're caught off guard by Vera's statement. The silence is deafening.
+                            Vera: "For what? He's the one causing all this trouble. What did [i]I[/i] do?"
+                            [i]You're caught off guard by Vera's statement. The silence is deafening.[/i]
                         <<endif>>
-                    -> Say nothing.
-                        You're caught off guard by Vera's statement. The silence is deafening.
-            -> Say nothing.
+                    -> (say nothing)
+                        [i]You're caught off guard by Vera's statement. The silence is deafening.[/i]
+            -> (say nothing)
                 Eleanor: "You know that's not what we meant, Anthony."
                 <<changeRelationship("A", -5)>>
                 Anthony: "I know that I'm not welcome here, and you weren't a strong enough leader to keep Vera in check." (-5% Anthony relationship)
@@ -494,7 +531,7 @@ Vera: "You can't possibly be serious right now."
             He looks right at you.
             <<changeRelationship("A", -10)>>
             Anthony: "Good riddance." (-10% Anthony relationship)
-    -> "Uh, Vera, that was kind of rude..." (EMP check)
+    -> "Uh, Vera, that was kind of rude..." #skillcheck #emp #8
         You: "I know you're pissed off at Anthony. But we have to be the bigger person here."
         <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
@@ -514,11 +551,16 @@ Vera: "You can't possibly be serious right now."
             <<changeRelationship("V",-5)>>
             Vera: "You're telling me you want to tolerate that behaviour here just to be polite?" (-5% Vera relationship)
         <<endif>>
+
+    -> (say nothing)
+        [i]Vera, you never fail to impress.[/i] 
+        [i]But maybe we shouldn't poke the anthill any more today?[/i]
+
 -> "That was a valid question, Vera."
-    Vera sighs in exasperation.
+    [i]Vera sighs in exasperation.[/i]
     Vera: "Fine. Since you guys don't seem to get it, the rainbow is meant to represent our straight allies too."
     Vera: "So it's not like pride flags exclude straight people."
-    Vera: "But why is it that you want to intrude in our spaces?"
+    Vera: "But why is it that you want to intrude in our spaces, at our expense?"
     -> "No, it's why you want to keep pushing your agenda onto us."
         <<changeRelationship("A", 5)>>
         Anthony: "Exactly! Finally, someone gets it." (+5% Anthony relationship)
@@ -535,12 +577,12 @@ Vera: "You can't possibly be serious right now."
     
     -> "We're not trying to do that."
         Vera: "Then what do you want? Cishet people are so complex sometimes."
-        You: "I mean... weren't you ever confused about who you were?"
+        You: "I mean... weren't you ever confused about who [i]you[/i] were?"
         Vera: "Of course."
         Nadia: "Then you should know that others are confused too. We don't mean harm. Straight people aren't the enemy."
         <<addExperience(10)>>
         You: "Yeah, I think we all need a bit more empathy towards one another instead of just fighting..." (+10 XP)
-        Vera smirks.
+        [i]Vera smirks.[/i]
         Vera: "That's such a straight person answer. But fine. Whatever. As long as you accept me."
         Anthony: "No one was rejecting you. You just gaslit yourself into thinking that."
         Vera: "That in itself is gaslighting, but I'm not feeding the trolls."
@@ -561,9 +603,9 @@ Vera: "You can't possibly be serious right now."
     
 -> "Vera, hold it together..."
     Vera: "Sorry. It's just... so hard to explain this sometimes, you know?"
-    You realise the burden is now on you to explain.
+    [i]You realise the burden is now on you to explain.[/i]
 
-    -> "Anthony, no one's forcing you to wear this." (CHA check)
+    -> "Anthony, no one's forcing you to wear this." #skillcheck #cha #8
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 8>>        
@@ -586,9 +628,9 @@ Vera: "You can't possibly be serious right now."
             Anthony: "Look at the SJW flipping out about the stupidest shit."
             Eleanor: "Guys, stop!"
             <<changeConfidence(-5)>>
-            No one wants to hear that they need to calm down, especially when they're not calm. (-5% confidence)
+            [i]No one wants to hear that they need to calm down, especially when they're not calm.[/i] (-5% confidence)
         <<endif>>
-    -> "Anthony, we're sorry." (EMP check)
+    -> "Anthony, we're sorry." #skillcheck #emp #8
         <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 8>>
@@ -607,6 +649,7 @@ Vera: "You can't possibly be serious right now."
             You: "Don't you think you should return the favour?"
             Anthony: "Fine. Sorry, Vera."
             Vera: "Sorry, Anthony."
+            <<addExperience(10)>>
             Eleanor: "That's a start." (+ 10 XP)
         <<else>>
             You: "Just calm down..."
@@ -614,7 +657,7 @@ Vera: "You can't possibly be serious right now."
             Anthony: "Look at the SJW flipping out about the stupidest shit."
             Eleanor: "Guys, stop!"
             <<changeConfidence(-5)>>
-            No one wants to hear that they need to calm down, especially when they're not calm. (-5% confidence)
+            [i]No one wants to hear that they need to calm down, especially when they're not calm.[/i] (-5% confidence)
         <<endif>>
     -> "Actually, I think Anthony has some valid points."
         <<jump 8_why>>
@@ -623,7 +666,7 @@ Vera: "You can't possibly be serious right now."
         Anthony: "Look at the SJW flipping out about the stupidest shit."
         Eleanor: "Guys, stop!"
         <<changeConfidence(-5)>>
-        No one wants to hear that they need to calm down, especially when they're not calm. (-5% confidence)
+        [i]No one wants to hear that they need to calm down, especially when they're not calm.[/i] (-5% confidence)
 <<jump 9>>
 ===
 __PrivCrochet_colorID: 0
@@ -631,14 +674,14 @@ __PrivCrochet_position: 1920,480
 __PrivCrochet_tags: 
 title: 8_why
 ---
-Vera folds her arms.
+[i]Vera folds her arms.[/i]
 Vera: "Why?"
 -> "It's like those companies that only change their logo to rainbow in June and then change it back in July."
     Vera: "Yeah, but for us, it's our permanent logo design."
     You: "So it's political all months of the year. Which is worse. LGBTQ+ was never our identity."
     Vera: "I never wanted it to be. This isn't Gay Arts Club, though that would certainly be interesting."
--> "Kinda seems like this is a design for you, not the club."
-    Vera is too flustered to answer.
+-> "Kinda seems like this is a design for [i]you[/i], not the club."
+    [i]Vera is too flustered to answer.[/i]
     Anthony: "Heh."
     You: "Like, we get it, you're gay, but can you stop pushing it so openly?"
     <<changeRelationship("A", 5)>>
@@ -656,7 +699,7 @@ Vera: "That's just your personal biases getting in the way."
 <<jump 9>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2160,240
+__PrivCrochet_position: 2160,239
 __PrivCrochet_tags: 
 title: 9
 ---
@@ -678,16 +721,16 @@ Vera: "What do you think we should do about him?"
     -> "Why?"
         Vera: "As much as I hate to say it, I can understand where she's coming from."
         Vera: "If she kicks people out, our club becomes smaller. And our reputation might tank."
-        Vera: "And, if you've ever tried to do that before, it's not as easy as it looks." #end10
+        Vera: "And, if you've ever tried to do that before, it's not as easy as it looks."
 
     -> "We have to go beyond Eleanor for this."
         You: "What will you do?"
         Vera: "I mean, I'm not so hateful that I would actively ask him to get lost."
-        Vera: "But there are other ways to achieve that goal. We'll see what we can do." #end10
+        Vera: "But there are other ways to achieve that goal. We'll see what we can do."
 
 -> "Vera. You have to let this go."
-Vera: "Oh sure, let me just forget about the guy who's been making life so tough for us here. So simple!"
-    -> "Have you ever wanted to throw a hot coal at someone before?" (EMP check)
+    Vera: "Oh sure, let me just forget about the guy who's been making life so tough for us here. So simple!"
+    -> "Have you ever wanted to throw a hot coal at someone before?" #skillcheck #emp #8
         Vera: "That's oddly specific."
         You: "Well I haven't either. But the fact that you're holding it, means you're the one getting burned."
         Vera: "Then I'd just throw it already."
@@ -698,33 +741,35 @@ Vera: "Oh sure, let me just forget about the guy who's been making life so tough
         Vera stays silent for a moment.
         <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll >= 9>>
+        <<if $diceroll >= 8>>
             Vera: "Fine. I'll give that a shot."
             Vera: "Surely that can't apply to all things, though."
-            You: "I don't think it does. But in this case, I think you can afford to let the coal down." (+ 10 XP) #end10
+            You: "I don't think it does. But in this case, I think you can afford to let the coal down." (+ 10 XP)
         <<else>>
             Vera: "Nope. You still don't understand what I'm going through."
-            Vera: "But you're not the target of my anger. Let's just leave." #end10
+            Vera: "But you're not the target of my anger. Let's just leave."
         <<endif>>
     -> "I'm sorry."
-    Vera: "These things aren't as easy to let go if you're caught in the middle of them."
-    Vera: "If he'd insulted me for being trans, I'd have left instead."
-    You: "Was he going to do that?"
-    Vera: "He was already picking up on my height and voice. I don't need more dysphoria."
-    You: "Yeah, I guess it's best to keep our distance." #end10
+        Vera: "These things aren't as easy to let go if you're caught in the middle of them."
+        Vera: "If he'd insulted me for being trans, I'd have left instead."
+        You: "Was he going to do that?"
+        Vera: "He was already picking up on my height and voice. I don't need more dysphoria."
+        You: "Yeah, I guess it's best to keep our distance."
 
 -> "We have no place for bigotry here."
     Vera: "I wish this wasn't so hard."
     Vera: "I always thought uni was a safe space, but people like him still crawl out from under a rock to spew their poison."
     -> "Don't lose hope. The world is becoming more accepting."
         Vera: "It's so hard to tell who's accepting and who's not."
-        Vera: "I mean, you probably face a lot of shit for being Charlotte too."
-        You: "Yeah. I'll have to make a decision on her soon."
-        Vera: "Good luck with that." #end10
+        <<if getNPCKnows("V")>>
+            Vera: "I mean, you probably face a lot of shit for being Charlotte too."
+            You: "Yeah. I'll have to make a decision on her soon."
+            Vera: "Good luck with that."
+        <<endif>>
     -> "Don't trust people like him from now on."
         Vera: "It's easy to say men are trash. Unfortunately, we must continue to interact with them."
         Vera: "But you know, if this whole school, this whole country, is gonna be so hostile..."
-        Vera: "Maybe it's not worth staying here long-term." #end10
+        Vera: "Maybe it's not worth staying here long-term."
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2399,479
@@ -751,9 +796,9 @@ Nadia: "We nearly lost a club member there!"
             Nadia: "Thanks... let's hope any future members we get aren't as toxic as he is."
         
         -> "Told you so."
-            Nadia sighs and leaves.
+            [i]Nadia sighs and turns away.[/i]
 
--> "I think it's a damn shame he left."
+-> "I think it's a damn shame if he leaves."
     Nadia: "I wouldn't call it that, but..."
     You: "Vera is to blame. Look at how she was aggravating him."
     Nadia: "I'm not sure about that either, didn't he start it?"
@@ -785,27 +830,27 @@ Anthony: "Haven't you seen? She is actually he. How can a woman be taller than m
         You: "If she doesn't want to bring attention to it, that is her right."
         Anthony: "So he's ashamed of what he does."
         You: "You know what? You're impossible to deal with. I'm done here."
-    -> "Why don't you bring that up to her face, huh? See how she reacts." (CHA check)
+    -> "Why don't you bring that up to her face, huh? See how she reacts." #skillcheck #cha #8
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 8>>
-            Anthony stays silent.
+            [i]Anthony stays silent.[/i]
             You: "You don't dare to."
             Anthony: "It's not worth my time. Maybe he will start crying."
             You: "You're just making excuses. All you dare to do is talk shit behind her back."
             <<changeRelationship("A", -5)>>
-            Anthony walks off. (-5% Anthony relationship)
+            [i]Anthony walks off.[/i] (-5% Anthony relationship)
             <<changeConfidence(5)>>
-            Well done. You've exposed him for the coward he is. (+5% confidence)
+            [i]Well done. You've exposed him for the coward he is.[/i] (+5% confidence)
         <<else>>
             Anthony: "Maybe I will, huh? He would look so pathetic, crying on the floor."
-            What did you just hear...
+            [i]What did you just hear...[/i]
         <<endif>>
 -> "It's just not right!"
     Anthony: "If that's the only thing you can say, you don't have an argument."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2626,546
+__PrivCrochet_position: 2655,529
 __PrivCrochet_tags: 
 title: 11_knowHow
 ---
@@ -820,4 +865,14 @@ Nadia: "I guess so... let's hope that T-shirt design works."
     Nadia smiles a bit.
     <<changeRelationship("N", 5)>>
     Nadia: "Thanks, {$name}. Glad to see you really appreciate my art style." (+5% Nadia relationship)
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2883,393
+__PrivCrochet_tags: 
+title: exit
+---
+Well, that was certainly a furious argument. 
+<<addExperience(30)>>
+You feel... different, having gone through it all. (+30 XP)
+<<goto_room_bedroom()>>
 ===
