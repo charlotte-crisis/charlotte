@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -200,-680
+__PrivCrochet_position: -183,-676
 __PrivCrochet_tags: 
 title: 1_1
 ---
@@ -10,7 +10,7 @@ Nadia: "So I'm going back quite late every night."
 <<jump 1_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -360,-120
+__PrivCrochet_position: -346,-130
 __PrivCrochet_tags: 
 title: 0
 ---
@@ -103,21 +103,23 @@ Nadia: "Still, at least I'm not in the more cutthroat courses."
     -> "But hey, you snooze, you lose, right?"
         Nadia: "You know that's a lot easier said than done, right?"
         Nadia: "Ugh, that sounds exactly like what some people in my course would say..."
-        Nadia: "Please don't turn this into another work session." (-5% Nadia relationship) <<changeConfidence(-5)>>
-    -> "That sounds incredibly stressful." (EMP check)
+        <<changeRelationship("N", -5)>>
+        Nadia: "Please don't turn this into another work session." (-5% Nadia relationship) 
+    -> "That sounds incredibly stressful." #skillcheck #emp # 7
         You: "Please take care of yourself, yeah?"
         You: "My sister is an accountant and she isn't doing too good."
         You: "I've seen her during crunch time and no one deserves to be like that."
         <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll > 6 >>    
+        <<if $diceroll < 7 >>    
             Nadia: "Wah, got so jialat ah?"
             Nadia: "Oh no... maybe this is the wrong major..."
             You: "Oh no. Did I just make you feel worse..." (-5% confidence) <<changeConfidence(-5)>>
         <<else>>
             Nadia: "Thanks for your concern... I will try." (+5% Nadia relationship) <<changeRelationship("N", 5)>>
         <<endif>>
-        -> (nod and move on.)
+
+-> (nod and move on.)
 
 Nadia: "What about your major?"
 
@@ -372,20 +374,21 @@ title: 1_1_options
     <<jump 1>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -280,-440
+__PrivCrochet_position: -282,-421
 __PrivCrochet_tags: 
 title: 1
 ---
-What do you say?
-
 -> "How's school?"
     <<jump 1_1>>
 
 -> "So... you really like anime, right?"
+    Nadia: "Oh yes, what about it?"
     <<jump 1_2_options>>
 
--> "Well, I gotta go. Thanks for today!" <<if visited("1_1") or visited("1_2_options")>>
+-> "Well, I gotta go. Thanks for today!" <<if visited("1_1") or visited("1_2")>>
     Nadia: "See you soon!"
+    <<addExperience(30)>>
+    (+30 XP)
     <<goto_room_bedroom_afterHangout()>>
 ===
 __PrivCrochet_colorID: 0
@@ -532,12 +535,12 @@ title: 1_1_2_3
 ---
 Nadia: "I'm always super intrigued by exchangers and their perspectives."
 Nadia: "Who knows? It could help me with my own exchange in future."
--> "Sure you're not just there to find some hot exchanger guy?" (CHA check)
+-> "Sure you're not just there to find some hot exchanger guy?" #skillcheck #cha # 7
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll > 8>>
-        Nadia: "Hey... I'm not that desperate..." (-5% Nadia relationship) 
+    <<if $diceroll > 7>>
         <<changeRelationship("N", -5)>>
+        Nadia: "Hey... I'm not that desperate..." (-5% Nadia relationship) 
         You: "Uh... okay... sorry..."
     <<else>>
         Nadia: "Hahaha! I must be really desperate to need that."
@@ -673,12 +676,10 @@ Nadia: "Do you think being Charlotte halted your professional development?"
         <<jump 1_1_2_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 40,-400
+__PrivCrochet_position: 44,-411
 __PrivCrochet_tags: 
 title: 1_2_options
 ---
-Nadia: "Oh yes, what about it?"
-
 -> "Got any to recommend?"
     Nadia: "Hmm... depends what you're into."
     Nadia: "Perhaps give me a prompt? So I can think of what I'd like."
