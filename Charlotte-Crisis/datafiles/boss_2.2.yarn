@@ -4,6 +4,7 @@ __PrivCrochet_position: 764,238
 __PrivCrochet_tags: 
 title: Start
 ---
+<<set $startCharlotte = getGenderMeter()>>
 Charlotte: "It's been a while."
 You: "Wait, who are you?"
 Charlotte: "I'm you, dumbass."
@@ -47,7 +48,7 @@ Charlotte: "What happened? Not feeling the rush anymore when you see a nice outf
     <<jump 2_2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1269,-1
+__PrivCrochet_position: 1268,-4
 __PrivCrochet_tags: 
 title: 2_1
 ---
@@ -58,10 +59,10 @@ Charlotte: "But still, doesn't it ache inside, not being able to dress how you w
 -> "I'm a task focused person."
     <<jump 2_1_1>>
 
--> "I know that feeling." (EMP check)
+-> "I know that feeling." #skillcheck #emp # 9
     <<jump 2_1_2>>
     
--> "I distract myself with other things!" (CHA check)
+-> "I distract myself with other things!" #skillcheck #cha # 9
     <<jump 2_1_3>>
 
 -> "I can be Charlotte without dressing up, you know?"
@@ -79,13 +80,13 @@ Charlotte: "I don't think I like what I'm hearing."
 You: "I don't want to be a woman."
 Charlotte: "More lies! What's gotten into you?"
 -> "You're a demon."
-<<jump 2_2_1>>
+    <<jump 2_2_1>>
 
 -> "It's time to reclaim my masculinity." (-5% gender meter) <<changeGenderMeter(-5)>>
-<<jump 2_2_2>>
+    <<jump 2_2_2>>
 
 -> "I will never be a woman, and it's time we accepted that." (-5% gender meter) <<changeGenderMeter(-5)>>
-<<jump 2_2_3>>
+    <<jump 2_2_3>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1485,-246
@@ -95,10 +96,10 @@ title: 2_1_1
 You: "I dress for the occasion, and unfortunately this week didn't have any occasions for you."
 Charlotte: "Then when is my time to shine? Do you not want me anymore?"
 
--> "If it happens, it happens." (CHA check)
+-> "If it happens, it happens." #skillcheck #cha # 9
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll >= 8>>
+    <<if $diceroll >= 9>>
         Charlotte: "I'd be satisfied with that if I wasn't already in your head."
         Charlotte: "I know what you're trying to do here."
         Charlotte: "You're trying to be stoic and rational, assessing the pros and cons of letting me out…"
@@ -115,10 +116,10 @@ Charlotte: "Then when is my time to shine? Do you not want me anymore?"
 
 -> "It's tough to let you out, honestly."
     Charlotte: "So you're being lazy."
-    -> "What I just described isn't being lazy." (INT check)
+    -> "What I just described isn't being lazy." #skillcheck #int # 9
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll >= 8>>
+        <<if $diceroll >= 9>>
             You: "Do you know how much effort it takes?"
             You: "Every 30 minute dress up session to get you out there…"
             You: "Every stare from some random person…"
@@ -137,16 +138,17 @@ Charlotte: "Then when is my time to shine? Do you not want me anymore?"
     -> "Yeah, I just want to relax now."
         Charlotte: "Doesn't dressing up make you happy anymore?"
         You: "Ugh, it's just so much effort!"
-        Charlotte: "We weren't always like this. I wonder what changed…" (-5% gender meter) <<changeGenderMeter(-5)>>
+        <<changeGenderMeter(-5)>>
+        Charlotte: "We weren't always like this. I wonder what changed…" (-5% gender meter) 
         <<jump 3>>
     
-    -> "This is precisely why I'm unhappy with you." (EMP check)
+    -> "This is precisely why I'm unhappy with you." #skillcheck #emp # 9
         You: "You're so demanding. Even one week of not letting you out causes me trouble."
         Charlotte: "So you hate me? Fine!"
         Charlotte: "Try living without me. See what happens!"
         <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll >= 8>>
+        <<if $diceroll >= 9>>
             You: "Okay, I'm sorry, I'll take that back."
             You: "But, this doesn't mean I'm giving in totally."
             You: "I know you want to be let out, and I appreciate the fun times we've had together."
@@ -157,7 +159,8 @@ Charlotte: "Then when is my time to shine? Do you not want me anymore?"
             You: "If I can't present as female due to external circumstances, don't make it hurt for me."
             Charlotte: "That still doesn't solve the problem, but okay."
             Charlotte: "I'm sorry too. For the pain."
-            You: "It's okay. We're just built this way." (+5% gender meter) <<changeGenderMeter(5)>>
+            <<changeGenderMeter(5)>>
+            You: "It's okay. We're just built this way." (+5% gender meter) 
             <<jump 3>>
         <<else>>
             You: "Screw you."
@@ -172,32 +175,35 @@ Charlotte: "Then when is my time to shine? Do you not want me anymore?"
     <<jump 3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1707,-246
+__PrivCrochet_position: 1722,-276
 __PrivCrochet_tags: 
 title: 2_1_2
 ---
 Charlotte: "Do you, really?"
-    <<set $diceroll = diceRoll($cha)>>
-    [You rolled a {$diceroll}.]
-    <<if $diceroll >= 8>>
-        You: "You'll always be a part of me, and I feel no shame about that."
-        You: "And I hope you understand that I can't bring you out all the time either."
-        You: "We gotta care for each other this way, okay?"
-        Charlotte: "Well, okay… that sounds reasonable."
-        Charlotte: "I'm glad that you don't totally want to repress me."
-        You: "Yeah, after all, who else is gonna give me the sweet endorphins when I see a nice outfit?"
-        Charlotte: "So slay." (+5% gender meter) <<changeGenderMeter(5)>>
-        <<jump 3>>
-    <<else>>
-        You: "I just wish you wouldn't make things so hard for me."
-        Charlotte: "You wish you were rid of me, don't you?"
-        Charlotte: "You don't know how I feel at all."
-        Charlotte: "And because of that, you don't know how you feel."
-        Charlotte: "Keep up this charade and you're gonna suffer for it." (-5% gender meter) <<changeGenderMeter(-5)>>
-    <<endif>>
+<<set $diceroll = diceRoll($cha)>>
+[You rolled a {$diceroll}.]
+<<if $diceroll >= 9>>
+    You: "You'll always be a part of me, and I feel no shame about that."
+    You: "And I hope you understand that I can't bring you out all the time either."
+    You: "We gotta care for each other this way, okay?"
+    Charlotte: "Well, okay… that sounds reasonable."
+    Charlotte: "I'm glad that you don't totally want to repress me."
+    You: "Yeah, after all, who else is gonna give me the sweet endorphins when I see a nice outfit?"
+    <<changeGenderMeter(5)>>
+    Charlotte: "So slay." (+5% gender meter) 
+<<else>>
+    You: "I just wish you wouldn't make things so hard for me."
+    Charlotte: "You wish you were rid of me, don't you?"
+    Charlotte: "You don't know how I feel at all."
+    Charlotte: "And because of that, you don't know how you feel."
+    <<changeGenderMeter(-5)>>
+    Charlotte: "Keep up this charade and you're gonna suffer for it." (-5% gender meter) 
+<<endif>>
+
+<<jump 3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1487,-7
+__PrivCrochet_position: 1486,-9
 __PrivCrochet_tags: 
 title: 2_1_3
 ---
@@ -206,32 +212,34 @@ You: "There's also the relationships we have with our friends!"
 You: "Or, like, fun times for both you and me."
 You: "Hate to say it this way, but you're not the only source of my happiness."
 <<set $diceroll = diceRoll($cha)>>
-    [You rolled a {$diceroll}.]
-    <<if $diceroll >= 8>>
-        Charlotte: "Well, as long as you're happy."
-        Charlotte: "I should be glad, I guess…"
-        Charlotte: "You're not so reliant on me that you can't function."
-        You: "And even if it reaches that stage, there's still hope." (+ 10 XP) <<addExperience(10)>>
-        <<jump 3>>
-    <<else>>
-        Charlotte: "So you're saying that you can live life without me, is it?"
-        Charlotte: "Good luck with that."
-        Charlotte: "At the end of the day, you're only hurting yourself by denying me." (-5% gender meter) <<changeGenderMeter(-5)>>
-        <<jump 3>>
-    <<endif>>
+[You rolled a {$diceroll}.]
+<<if $diceroll >= 9>>
+    Charlotte: "Well, as long as you're happy."
+    Charlotte: "I should be glad, I guess…"
+    Charlotte: "You're not so reliant on me that you can't function."
+    <<addExperience(10)>>
+    You: "And even if it reaches that stage, there's still hope." (+ 10 XP) 
+    <<jump 3>>
+<<else>>
+    Charlotte: "So you're saying that you can live life without me, is it?"
+    Charlotte: "Good luck with that."
+    <<changeGenderMeter(-5)>>
+    Charlotte: "At the end of the day, you're only hurting yourself by denying me." (-5% gender meter) 
+    <<jump 3>>
+<<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1706,-16
+__PrivCrochet_position: 1704,-17
 __PrivCrochet_tags: 
 title: 2_1_4
 ---
 Charlotte: "What does that even mean?"
 Charlotte: "How are you going to convince the rest of the world that I'm here…"
 Charlotte: "If you're not looking femme at all?"
--> "It's not rocket science." (INT check)
+-> "It's not rocket science." #skillcheck #int # 9
     <<set $diceroll = diceRoll($int)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll >= 8>>
+    <<if $diceroll >= 9>>
         You: "Sure, there are parts of my body that look masculine…"
         You: "But it's also acceptable for women to have them, right?"
         You: "Short hair, broad shoulders, all that."
@@ -264,7 +272,8 @@ Charlotte: "If you're not looking femme at all?"
             Charlotte: "Damn… I guess it's my turn to take over."
             Charlotte: "And who would have known you'd only think about this after being repressed…"
             You: "Repression just means hitting back twice as hard."
-            Charlotte: "You'd better be ready." (+5% gender meter) <<changeGenderMeter(5)>>
+            <<changeGenderMeter(5)>>
+            Charlotte: "You'd better be ready." (+5% gender meter) 
             <<jump 3>>
 
         -> "I won't need to be ready."
@@ -282,11 +291,11 @@ Charlotte: "If you're not looking femme at all?"
     -> "That's pretty harsh…"
         Charlotte: "That's what people see if you don't do your makeup properly."
         Charlotte: "They see a man in a dress."
-        -> "So what?" (CHA check)
+        -> "So what?" #skillcheck #cha # 9
             Charlotte: "What do you mean, so what? Do you want to be laughed at?"
             <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
-            <<if $diceroll >= 8>>
+            <<if $diceroll >= 9>>
                 You: "Let them laugh."
                 You: "At the end of the day, I still looked exactly how I felt."
                 You: "And there's no reason why I should feel shame from that." (+ 10 XP)
@@ -296,7 +305,8 @@ Charlotte: "If you're not looking femme at all?"
             <<else>>
                 You: "I guess not…"
                 Charlotte: "There we go."
-                Charlotte: "Passing is everything. You really want to get laughed at any more than you do now?" (-10% confidence) <<changeConfidence(-10)>>
+                <<changeConfidence(-10)>>
+                Charlotte: "Passing is everything. You really want to get laughed at any more than you do now?" (-10% confidence) 
                 <<jump 3>>
             <<endif>>
 
@@ -306,18 +316,18 @@ Charlotte: "If you're not looking femme at all?"
         You: "If the criticism is already so harsh from within…"
         You: "How are we supposed to tahan it from outside?"
         You: "You gotta love yourself. And me."
-        Charlotte: "I guess you're right…" (+ 10 XP) <<addExperience(10)>>
+        <<addExperience(10)>>
+        Charlotte: "I guess you're right…" (+ 10 XP) 
         <<jump 3>>
 
--> "My inner world - this realm we are speaking in now - is no one else's." (CHA check)
+-> "My inner world - this realm we are speaking in now - is no one else's." #skillcheck #cha # 9
     You: "If I feel like being Charlotte, that is entirely my business."
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll >= 8>>
+    <<if $diceroll >= 9>>
         Charlotte: "Well, it seems like you're very confident about that…"
         Charlotte: "Then I guess we'll meet here more often."
         Charlotte: "I'm glad that you're not totally forgetting about me, I guess." (+ 10 XP) <<addExperience(10)>>
-
         <<jump 3>>
     <<else>>
         Charlotte: "No one's gonna buy it. Not for one second." 
@@ -375,24 +385,27 @@ Charlotte: "Nonsense. I don't control your life fully."
         You: "I can and I will. Just watch."
         <<jump 3>>
 
-    -> "I go out of my way for you and you still cause me problems." (INT check)
+    -> "I go out of my way for you and you still cause me problems." #skillcheck #int # 9
         You: "Do you know how much effort it takes to dress up?"
         You: "And all just for weird stares from other people."
         You: "The risk clearly isn't worth the reward yet I'm still doing this."
         You: "So the only explanation is that you're harming me."
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll >= 8>>
+        <<if $diceroll >= 9>>
             Charlotte: "Why are you so uptight about this?"
             You: "My body, my rules. It's that simple."
             Charlotte: "It's my body too!"
-            You: "You don't own a damn thing here." (+ 10 XP) <<addExperience(10)>> (-5% gender meter) <<changeGenderMeter(-5)>>
+            <<addExperience(10)>> 
+            <<changeGenderMeter(-5)>>
+            You: "You don't own a damn thing here." (+ 10 XP) (-5% gender meter) 
             <<jump 3>>        
         <<else>>
             Charlotte: "Just how out of touch with your emotions are you?"
             Charlotte: "Don't you remember how fun it was?"
             Charlotte: "Don't you remember the support our friends have given?"
-            Charlotte: "And you would sacrifice all of that just to be normal?" (-10% confidence) <<changeConfidence(-10)>>
+            <<changeConfidence(-10)>>
+            Charlotte: "And you would sacrifice all of that just to be normal?" (-10% confidence) 
             <<jump 3>>
         <<endif>>
 
@@ -403,12 +416,12 @@ Charlotte: "Nonsense. I don't control your life fully."
     -> "I'm harming Future me."
         You: "I would have had a good future if I was normal."
         Charlotte: "You mean fulfilling the 5 C's? How am I stopping you from getting there?"
-        -> "Tell me which woman wants a man who likes dresses." (INT check)
+        -> "Tell me which woman wants a man who likes dresses." #skillcheck #int # 9
             Charlotte: "There are lots of women out there."
             Charlotte: "I'm pretty sure there'll be someone out there for us."
             <<set $diceroll = diceRoll($int)>>
             [You rolled a {$diceroll}.]
-            <<if $diceroll >= 8>>
+            <<if $diceroll >= 9>>
                 You: "Then who wants me? Your claim has no evidence."
                 Charlotte: "I guess I can't name any…"
                 You: "There we go. You need to stop affecting my life." (-5% gender meter) <<changeConfidence(-5)>>
@@ -418,22 +431,23 @@ Charlotte: "Nonsense. I don't control your life fully."
                 Charlotte: "This generation is getting more progressive."
                 Charlotte: "And, I'm willing to retreat if it affects your progress on that front."
                 Charlotte: "Why are you so obsessed with this anyway?"
-                Charlotte: "Admit it. You just want a girlfriend because you're jealous of your friends who are attached." (-10% confidence) <<changeConfidence(-10)>>
+                <<changeConfidence(-10)>>
+                Charlotte: "Admit it. You just want a girlfriend because you're jealous of your friends who are attached." (-10% confidence) 
                 <<jump 3>>
             <<endif>>
 
-        -> "Every minute I spent on you was time wasted." (CHA check)
+        -> "Every minute I spent on you was time wasted." #skillcheck #cha # 9
             You: "While I was exploring this useless hobby…"
             You: "My friends were doing projects, internships, and just succeeding in life."
             Charlotte: "Everyone is different. I'm sure you had fun too."
             <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
-            <<if $diceroll >= 8>>        
+            <<if $diceroll >= 9>>        
                 You: "It's not about having fun. It's about succeeding in this rat race."
                 You: "That's the cruel truth. Look how far behind I am compared to my peers."
                 Charlotte: "When did you become such a bore?"
-                You: "When I decided not to be a flighty, irresponsible little girl."
-                (-5% gender meter) <<changeGenderMeter(-5)>>
+                <<changeGenderMeter(-5)>>
+                You: "When I decided not to be a flighty, irresponsible little girl." (-5% gender meter) 
                 <<jump 3>>
             <<else>>
                 You: "Yeah, I guess…"
@@ -447,12 +461,12 @@ Charlotte: "Nonsense. I don't control your life fully."
             Charlotte: "Okay, since when were you such a prude?"
             Charlotte: "And even if I disappear, you're still gonna be attracted to girls."
             Charlotte: "I'm just making it more fun for you."
-            -> "Normal guys don't do this." (INT check)
+            -> "Normal guys don't do this." #skillcheck #int # 9
                 You: "Why can't I just be normal?"
                 Charlotte: "This is our normal. There's no need to feel ashamed."
                 <<set $diceroll = diceRoll($int)>>
                 [You rolled a {$diceroll}.]
-                <<if $diceroll >= 8>>                  
+                <<if $diceroll >= 9>>                  
                     You: "Yeah, why don't you tell that to the rest of the world."
                     You: "How kindly will they take to a man in a dress?"
                     You: "You think you can change the whole world?"
@@ -463,7 +477,8 @@ Charlotte: "Nonsense. I don't control your life fully."
                     You: "Yes, there is! This world is judging us and it's all your fault."
                     You: "You know why? Because this isn't right. Men should be men, women should be women." 
                     Charlotte: "You're going back to that nonsense after discovering me?" 
-                    Charlotte: "You truly didn't learn a damn thing." (-10% confidence) <<changeConfidence(-10)>>
+                    <<changeConfidence(-10)>>
+                    Charlotte: "You truly didn't learn a damn thing." (-10% confidence) 
                     <<jump 3>>
                 <<endif>>  
     
@@ -476,7 +491,7 @@ Charlotte: "Nonsense. I don't control your life fully."
                 <<jump 3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1634,234
+__PrivCrochet_position: 1657,286
 __PrivCrochet_tags: 
 title: 2_2_2
 ---
@@ -526,9 +541,10 @@ Charlotte: "And are you saying women are not resilient?"
         Charlotte: "Well why don't I say it's gross to be a man?"
         Charlotte: "Or that it's pretty to be a woman, or that it's empowering to be all over the place?"
         Charlotte: "Get better material!" (-10% confidence) <<changeConfidence(-10)>>
+<<jump 3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1686,488
+__PrivCrochet_position: 1685,483
 __PrivCrochet_tags: 
 title: 2_2_3
 ---
@@ -539,29 +555,31 @@ Charlotte: "You are beautiful! We are beautiful together."
 -> "Not with my body."
     Charlotte: "We never cared about that."
     You: "Well it's time to start!"
-    -> "You think we can be pretty forever?" (INT check)
+    -> "You think we can be pretty forever?" #skillcheck #int # 9
         You: "You need to think long term. Hair loss, beard growth, face wrinkles…"
         You: "All of that will make me stand out. And not in the good way."
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll >= 8>>
+        <<if $diceroll >= 9>>
             Charlotte: "Ugh... okay, yes that made me cringe a bit."
-            You: "It's the only rational way to see this. Because no one is gonna see you as a woman." (+10 XP) <<addExperience(10)>>
+            <<addExperience(10)>>
+            You: "It's the only rational way to see this. Because no one is gonna see you as a woman." (+10 XP) 
             <<jump 3>>
         <<else>>
             Charlotte: "So what? Face wrinkles affect women too. And we can use wigs."
             Charlotte: "And isn't what you said a reason for us to enjoy life in the present?"
-            Charlotte: "Again, why do you only insist on looking on the negative side of things?" (-10% confidence) <<changeConfidence(-10)>>
+            <<changeConfidence(-10)>>
+            Charlotte: "Again, why do you only insist on looking on the negative side of things?" (-10% confidence) 
             <<jump 3>>
         <<endif>>
 
-    -> "You don't see how my masculine features stick out so much." (CHA check)
+    -> "You don't see how my masculine features stick out so much." #skillcheck #cha # 9
         You: "My face, my Adam's apple… all of that can't be changed."
         You: "How much effort do I need to put in every time I let you out?"
         You: "It's quite clear to everyone that you, Charlotte, are not natural."
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll >= 8>>
+        <<if $diceroll < 9>>
             Charlotte: "There you go, being negative again."
             Charlotte: "Have you forgotten how fun it is to look at your face transform in the mirror?"
             Charlotte: "What about wearing all the pretty outfits that we've bought, are you gonna throw them all away?"
@@ -581,9 +599,12 @@ Charlotte: "You are beautiful! We are beautiful together."
     You: "It's that simple. I don't want to suffer anymore."
     You: "I was born male. I should remain male."
     You: "Forget all the woke ideology. We have to live in the real world."
-    You: "Male is male, female is female. No in betweens, no changing." (-5% gender meter) <<changeGenderMeter(-5)>>
-    Charlotte: "Ugh. There's no getting through to you at all." (-10% confidence) <<changeConfidence(-10)>>
-    <<jump 3>>
+    <<changeGenderMeter(-5)>>
+    You: "Male is male, female is female. No in betweens, no changing." (-5% gender meter) 
+    <<changeConfidence(-10)>>
+    Charlotte: "Ugh. There's no getting through to you at all." (-10% confidence) 
+
+<<jump 3>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2261,120
@@ -593,11 +614,11 @@ title: 4
 Charlotte: "In fact, we can summarise this into a very simple question."
 Charlotte: "Is family an important reason for your choices about me?"
 -> "I will do as the family wants."
-<<jump 4_1>>
+    <<jump 4_1>>
 -> "I don't need Mother's prodding to want you out of my life."
-<<jump 4_2>>
+    <<jump 4_2>>
 -> "Actually, I changed my mind."
-<<jump 4_3>>
+    <<jump 4_3>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2494,-125
@@ -610,10 +631,10 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
     Charlotte: "Even after all the Asian helicopter tiger parenting…"
     Charlotte: "Even after asking you to get rid of me…"
     Charlotte: "Is this some high level Stockholm Syndrome?"
-    -> "Blood is thicker than water." (EMP check)
+    -> "Blood is thicker than water." #skillcheck #emp # 9
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll >= 8>>
+        <<if $diceroll >= 9>>
             You: "Don't you think everyone at home is suffering enough because of me?"
             You: "I can't go home because Mother doesn't like you. Which makes Sister lonely."
             You: "And Mother is getting old, does she really need another source of stress on her?"
@@ -622,7 +643,8 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
         <<else>>
             Charlotte: "Seriously? You're gonna use that as your justification?"
             Charlotte: "Then are you gonna obey every single order they give you?"
-            Charlotte: "What kind of life is that, suppressing who you truly are to be who they want you to be?" (-10% confidence) <<changeConfidence(-10)>>
+            <<changeConfidence(-10)>>
+            Charlotte: "What kind of life is that, suppressing who you truly are to be who they want you to be?" (-10% confidence) 
         <<endif>>
 
 
@@ -671,8 +693,8 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
         <<jump 5>>
 
 -> "I made a promise to Sis. I don't break promises."
-Charlotte: "Look at you, being honest. How about you be honest with yourself first?"
-Charlotte: "You can't deny that suppressing me makes you feel trapped."
+    Charlotte: "Look at you, being honest. How about you be honest with yourself first?"
+    Charlotte: "You can't deny that suppressing me makes you feel trapped."
     -> "Still, I can't return home dressed as you."
         Charlotte: "I didn't ask you to - "
         You: "And what am I supposed to do, huh?"
@@ -681,7 +703,8 @@ Charlotte: "You can't deny that suppressing me makes you feel trapped."
         Charlotte: "What are you talking about?"
         Charlotte: "Crossdressing was always about being honest!"
         You: "Then be honest with yourself. You have no future in this household."
-        You: "And I don't have a future with you in this family." (-5% gender meter) <<changeGenderMeter(-5)>>
+        <<changeGenderMeter(-5)>>
+        You: "And I don't have a future with you in this family." (-5% gender meter) 
         <<jump 5>>        
 
     -> "Okay, fine, I will be honest with Sis."
@@ -704,7 +727,8 @@ Charlotte: "You can't deny that suppressing me makes you feel trapped."
         You: "Housing is expensive. Even with a salary, house ownership remains a distant dream."
         Charlotte: "And you're just gonna accept the status quo, 'their house, their rules'?"
         Charlotte: "That's kinda disappointing. 25 years of growth and experiences, of finding yourself…"
-        Charlotte: "And you're still back in the same mould that your parents expect of you." (-10% confidence) <<changeConfidence(-10)>>
+        <<changeConfidence(-10)>>
+        Charlotte: "And you're still back in the same mould that your parents expect of you." (-10% confidence) 
         <<jump 5>>
 ===
 __PrivCrochet_colorID: 0
@@ -716,7 +740,8 @@ Charlotte: "Okay, that's a little harsh…"
 You: "This is my own choice."
 You: "Gender presentation is totally separate from what I think about family."
 You: "They are terrible people, but so are you."
-Charlotte: "You know what? That's not just harsh. It's just straight up hateful." (-5% gender meter) <<changeGenderMeter(-5)>>
+<<changeGenderMeter(-5)>>
+Charlotte: "You know what? That's not just harsh. It's just straight up hateful." (-5% gender meter) 
 Charlotte: "I guess I should have seen this coming…"
 Charlotte: "What with your whole 'don't dress femme' thing this week."
 <<jump 5>>
@@ -755,12 +780,14 @@ Charlotte: "Didn't you make a promise to Sis?"
 -> "She'll understand."
     Charlotte: "How?"
     You: "Maybe I talked to her wrongly the first time."
-    You: "I'll need to make her understand that you're important to me too." (+5% gender meter) <<changeGenderMeter(5)>>
+    <<changeGenderMeter(5)>>
+    You: "I'll need to make her understand that you're important to me too." (+5% gender meter) 
     Charlotte: "That's a good start. After all, she is in our generation too."
     Charlotte: "And she has faced pressure from your parents."
     Charlotte: "If you want allies to face your family, she would be a good start."
     Charlotte: "But, you'll have to tell her you are breaking the promise you made."
-    You: "One thing at a time." (+5% confidence) <<changeConfidence(5)>>
+    <<changeConfidence(5)>>
+    You: "One thing at a time." (+5% confidence) 
     <<jump 5>>
 ===
 __PrivCrochet_colorID: 0
@@ -770,19 +797,25 @@ title: 5
 ---
 Charlotte: "Well, whatever you choose, this isn't going to be easy."
 Charlotte: "So, in conclusion..."
+<<set $endCharlotte = getGenderMeter()>>
+<<set $deltaCharlotte = $endCharlotte - $startCharlotte>>
 
-(If gender meter decreased overall:) 
-Charlotte: "I staged this intervention to get you back on the right track."
-Charlotte: "One where we could co-exist, not one where we live in fear."
-Charlotte: "And yet… maybe this was the wrong choice."
-Charlotte: "Somehow you've distanced yourself from me even more."
-Charlotte: "And for what, really? Are you so afraid of me, or Mother, or what?"
-Charlotte: "It's either a path of fear or of ignorance. Maybe both." 
-Charlotte: "Either way, you're gonna suffer for it."
+<<if $deltaCharlotte < 0 >>
+    Charlotte: "I staged this intervention to get you back on the right track."
+    Charlotte: "One where we could co-exist, not one where we live in fear."
+    Charlotte: "And yet… maybe this was the wrong choice."
+    Charlotte: "Somehow you've distanced yourself from me even more."
+    Charlotte: "And for what, really? Are you so afraid of me, or Mother, or what?"
+    Charlotte: "It's either a path of fear or of ignorance. Maybe both." 
+    Charlotte: "Either way, you're gonna suffer for it."
+<<else>>
+    Charlotte: "Well, this went well, I guess."
+    Charlotte: "Your connection to me is stronger than it was before. At least it didn't degrade."
+    Charlotte: "Still, there's a lot of work to be done. And more challenges to overcome."
+    Charlotte: "We'll get through this together, yeah?"
+<<endif>>
 
-(If gender meter increased overall or no change:)
-Charlotte: "Well, this went well, I guess."
-Charlotte: "Your connection to me is stronger than it was before. At least it didn't degrade."
-Charlotte: "Still, there's a lot of work to be done. And more challenges to overcome."
-Charlotte: "We'll get through this together, yeah?"
+<<addExperience(30)>>
+(+30 XP)
+<<stop>>
 ===
