@@ -5,7 +5,7 @@ __PrivCrochet_tags:
 title: 1
 ---
 Charlotte: "We should not be here, but here we are nonetheless."
-
+//get confidence at start here
 //(if you were previously in BOSS 3.1)
 Charlotte: "Why didn't you pursue the talk with Mother?"
 -> "I'm sorry. I couldn't do it."
@@ -41,8 +41,8 @@ Charlotte: "What are you going to do with me?"
     Charlotte: "Everything we've worked towards... Was it all for nothing?"
     <<jump 4>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 376,-336
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 393,-339
 __PrivCrochet_tags: 
 title: 3
 ---
@@ -58,7 +58,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
         You: "Imagine the amount of suffering that would cause."
         You: "Rebuilding my whole life from scratch... I can't allow that."
         Charlotte: "I never said I wanted that."
-        -> "Then you're a liar." #skillcheck #int #11
+        -> "Then you're a liar." #skillcheck #int # 11
             You: "We both know, if I let you stay, you'll eventually want to transform my body."
             You: "You're ogling girls, but not to dominate their body. No, it's because you want it."
             You: "And why would I take that risk when I'm old and decrepit and can no longer look pretty?"
@@ -73,7 +73,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
                 <<changeConfidence(-10)>>
                 Charlotte: "Doesn't feel nice to hear that, does it? How do you think I feel?" (-10% confidence)
             <<endif>>
-        -> "Then you don't need to be here." #skillcheck #cha #11
+        -> "Then you don't need to be here." #skillcheck #cha # 11
             You: "If you're a ghost, go haunt someone else."
             Charlotte: "How many times do I need to repeat this? I AM you!"
             <<set $diceroll = diceRoll($cha)>>
@@ -95,7 +95,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
         Charlotte: "It'll be pain that is worth it, I promise."
         Charlotte: "And if it's not worth it, we won't do it, okay?"
         Charlotte: "I know we must think carefully, so I'm not asking for anything right now."
-        -> "The very thought sickens me." #skillcheck #emp #11
+        -> "The very thought sickens me." #skillcheck #emp # 11
             You: "Hormones, surgery... this is not an easy process."
             You: "And I'm not going to bend to your will to subject my body to that."
             Charlotte: "Okay, fine, so you don't want it now. But you might want it in the future."
@@ -109,7 +109,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
                 <<changeConfidence(-5)>>
                 Charlotte: "Then all you're doing is lying to yourself." (-5% confidence)
             <<endif>>
-        -> "But if I get rid of you..." #skillcheck #int #11
+        -> "But if I get rid of you..." #skillcheck #int # 11
             You: "I don't need to feel the pain. Life goes on."
             You: "You're the problem here, why can't you see that?"
             Charlotte: "Trust me, it's gonna be more painful if you get rid of me."
@@ -128,7 +128,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
                 <<changeConfidence(-10)>>
                 Charlotte: "You can't do it." (-10% confidence)
             <<endif>>
-        -> "The pain isn't just physical." #skillcheck #cha #11
+        -> "The pain isn't just physical." #skillcheck #cha # 11
             You: "Every time I have to introduce you to someone, or hide you from others..."
             You: "Why do I have to keep taking care of you like this?"
             You: "Like you're some dependent child who can't take care of herself."
@@ -157,7 +157,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
             <<changeConfidence(-10)>>
             Charlotte: "And in the end, what have you got to show for it? A wasted life." (-10% confidence)
         
-        -> "I will seek help from other people." #skillcheck #int #11
+        -> "I will seek help from other people." #skillcheck #int # 11
             Charlotte: "Heh. Like who?"
             <<set $diceroll = diceRoll($int)>>
             [You rolled a {$diceroll}.]
@@ -178,7 +178,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
     -> "You're just disgusting."
         You: "I shouldn't be bending to your dreams."
         Charlotte: "Well that's not what you thought a few weeks ago."
-        -> "I have seen the truth." #skillcheck #int #11
+        -> "I have seen the truth." #skillcheck #int # 11
             Charlotte: "Oh yeah? Why don't you tell me what truths you've learned?"
             <<set $diceroll = diceRoll($int)>>
             [You rolled a {$diceroll}.]
@@ -193,12 +193,13 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
                 <<changeConfidence(-10)>>
                 Charlotte: "Call us fake all you want, you know we're as real as it gets." (-10% confidence)
             <<endif>>
-        -> "I don't want to be a woman with a penis." #skillcheck #cha #11
+        -> "I don't want to be a woman with a penis." #skillcheck #cha # 11
             <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
             <<if $diceroll >= 11>>
             Charlotte: "Then remove it. That can be a long term goal."
             You: "That's not what I meant!"
+            <<changeConfidence(-5)>>
             Charlotte: "Oh, I'm getting under your skin, aren't I." (-5% confidence)
             (CHA > 10)
             Charlotte: "I never asked for - "
@@ -218,7 +219,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
             You: "She doesn't care for me. She's using me as a platform for her views."
             Charlotte: "That is totally not who she is..."
         
-        -> "She was too political." #skillcheck #int #11
+        -> "She was too political." #skillcheck #int # 11
             Charlotte: "That's no surprise, people want to take away her rights."
             Charlotte: "My existence is political too. So pick a side."
             <<set $diceroll = diceRoll($cha)>>
@@ -233,7 +234,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
                 <<changeConfidence(-10)>>
                 Charlotte: "Face it, you need to side with me on this." (-10% confidence)
             <<endif>>
-        -> "You think a rich foreigner like her can relate to us?" #skillcheck #cha #11
+        -> "You think a rich foreigner like her can relate to us?" #skillcheck #cha # 11
             Charlotte: "She represents opportunity. She represents freedom. She represents a better life!"
             <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
@@ -251,7 +252,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
     -> "She's a loser."
         Charlotte: "What the hell are you saying? She cared for us!"
         You: "No, she only cared about you."
-        -> "She exploited me to advance her trans agenda." #skillcheck #int #11
+        -> "She exploited me to advance her trans agenda." #skillcheck #int # 11
             Charlotte: "Okay, since you're so sure she had an agenda, what is it?"
             <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
@@ -271,7 +272,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
             Charlotte: "Fine. Go ahead. Say that to her and see what happens. She'll knock your block off."
             You: "As only a [i]man[/i] would."
         
-        -> "How do you think she'd respond if I were to present as male permanently?" #skillcheck #cha #11
+        -> "How do you think she'd respond if I were to present as male permanently?" #skillcheck #cha # 11
             Charlotte: "Don't make her the villain. She would still accept you."
             <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
@@ -311,7 +312,7 @@ Charlotte: "Why can't you just accept me?"
         You: "If you were a real woman, what I'm doing would be simping."
         Charlotte: "I have all those too! You think I would still be here if I didn't?"
         Charlotte: "And since when were those traits exclusive to men anyway?"
-        -> "They're my values, not yours." #skillcheck #int #11
+        -> "They're my values, not yours." #skillcheck #int # 11
             You: "You didn't go through boys' school and NS, I did."
             You: "You don't suffer the consequences when things go wrong. I do."
             <<set $diceroll = diceRoll($int)>>
@@ -327,7 +328,7 @@ Charlotte: "Why can't you just accept me?"
                 <<changeConfidence(-10)>>
                 Charlotte: "And that's not just rude. It's pathetic of you, too." (-10% confidence)
             <<endif>>
-        -> "You can't even be a proper female." #skillcheck #cha #11
+        -> "You can't even be a proper female." #skillcheck #cha # 11
             Charlotte: "I'm ready for the most brain-dead, regressive, misogynistic take to ever grace the spirit of public discourse."
             You: "Do you really think you can look in the mirror and think you're a woman?"
             You: "That nagging feeling will always tell you that you are a man."
@@ -342,6 +343,7 @@ Charlotte: "Why can't you just accept me?"
                 Charlotte: "Okay, fine. Extreme measures, let's go."
                 Charlotte: "Estrogen, surgeries, how far down this rabbit hole do you wanna go?"
                 Charlotte: "Remember, [i]I[/i] didn't ask for this. All I wanted was to look pretty."
+                <<changeConfidence(-10)>>
                 Charlotte: "[i]You'[/i]re the one who wanted to femalemaxx." (-10% confidence)
             <<endif>>
     
@@ -351,7 +353,7 @@ Charlotte: "Why can't you just accept me?"
         You: "And what have you ever given me in return?"
         You: "Just a bunch of photos I'd be ashamed to show anyone else."
         Charlotte: "You really are that far gone, huh..."
-        -> "I don't want pretty pictures. I want my life back." #skillcheck #int #11
+        -> "I don't want pretty pictures. I want my life back." #skillcheck #int # 11
             Charlotte: "I never stopped you from living your life."
             Charlotte: "But you know you need me too. I'm your self-expression."
             <<set $diceroll = diceRoll($cha)>>
@@ -378,7 +380,7 @@ Charlotte: "Why can't you just accept me?"
         You: "Until you crash-landed on me one day and turned my life upside down."
         You: "Can you blame me for feeling like this is just so messed up?"
         Charlotte: "That's not what you thought when you dressed up."
-        -> "I can feel how tiring this is." #skillcheck #int #11
+        -> "I can feel how tiring this is." #skillcheck #int # 11
             You: "Every dab of makeup, every lip line I try and FAIL to draw..."
             You: "All that is wasted time. Normal girls don't need half an hour to get ready."
             Charlotte: "That's bullshit and you know it."
@@ -397,7 +399,7 @@ Charlotte: "Why can't you just accept me?"
                 <<changeConfidence(-10)>>
                 Charlotte: "And, you know, stop you from being such a slob as a man." (-10% confidence)
             <<endif>>
-        -> "This is the end of a bad dream." #skillcheck #cha #11
+        -> "This is the end of a bad dream." #skillcheck #cha # 11
             You: "Once upon a time, I dreamed I was a girl, playing around with all these frivolous cosmetics..."
             You: "But I woke up. I realised that I will always be a man."
             <<set $diceroll = diceRoll($cha)>>
@@ -415,7 +417,7 @@ Charlotte: "Why can't you just accept me?"
     Charlotte: "Stop being such a paranoid little bitch."
     You: "Coming from a petulant little bitch."
     You: "You wanna know how you've ruined my life?"
-    -> "I can't even talk to people normally now. Everything is about you." #skillcheck #cha #11
+    -> "I can't even talk to people normally now. Everything is about you." #skillcheck #cha # 11
         Charlotte: "Bullshit. I don't do that."
         You: "You, with your victim mentality, place yourself first in every conversation."
         You: "I can't even talk about masculine things anymore."
@@ -435,7 +437,7 @@ Charlotte: "Why can't you just accept me?"
         You: "And I'm not even doing it to get pleasure like a normal man."
         You: "I'm doing that for your perverse interests."
         Charlotte: "Okay, that's false and terrible."
-        -> "It's true and terrible." #skillcheck #emp #11
+        -> "It's true and terrible." #skillcheck #emp # 11
             Charlotte: "Why is it even terrible?"
             Charlotte: "Don't tell me you're doing this to 'protect the sanctity of women' or whatever."
             <<set $diceroll = diceRoll($emp)>>
@@ -452,7 +454,7 @@ Charlotte: "Why can't you just accept me?"
                 <<changeConfidence(-10)>>
                 Charlotte: "And you know what that makes you? A hypocrite. The lowest of the low." (-10% confidence)
             <<endif>>
-        -> "Do you really want to be caught for voyeurism?" #skillcheck #int #11
+        -> "Do you really want to be caught for voyeurism?" #skillcheck #int # 11
             You: "Imagine this. You see this nice bra hanging off the balcony."
             You: "You really want it, so you steal it. But she finds out and reports you to Campus Security."
             You: "What the hell do you think will happen then?"
@@ -474,7 +476,7 @@ Charlotte: "Why can't you just accept me?"
         Charlotte: "Oh please. I thought you were over that already."
         Charlotte: "Besides, you love the attention too."
         You: "I don't love the attention, you do."
-        -> "You do not fear danger?" #skillcheck #int #11
+        -> "You do not fear danger?" #skillcheck #int # 11
             Charlotte: "Why don't you tell me exactly what I should be afraid of?"
             <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
@@ -489,7 +491,7 @@ Charlotte: "Why can't you just accept me?"
                 You: "I guess not..."
                 <<changeConfidence(-10)>>
                 Charlotte: "Then stop being such a paranoid little baby." (-10% confidence)
-        -> "You feel no shame?" #skillcheck #cha #11
+        -> "You feel no shame?" #skillcheck #cha # 11
             Charlotte: "My existence is literally capital-P Pride. What's wrong with that?"
             <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
@@ -534,7 +536,7 @@ Charlotte: "Why can't you just accept me?"
     
     -> "Career."
         Charlotte: "It's not that tough. There are tolerant employers."
-        -> "Tolerant enough for me to bring you into the office?" #skillcheck #int #11
+        -> "Tolerant enough for me to bring you into the office?" #skillcheck #int # 11
             Charlotte: "If they don't accept who you are, they aren't the right employer for you."
             You: "Easy for you to say. You're not the one on the frontline."
             Charlotte: "Well why don't you bring me out and we can give that a go?"
@@ -554,7 +556,7 @@ Charlotte: "Why can't you just accept me?"
                 Charlotte: "It's so damn hard to talk to you sometimes." (-10% confidence)
             <<endif>>
         
-        -> "I'm still wasting time on you." #skillcheck #cha #11
+        -> "I'm still wasting time on you." #skillcheck #cha # 11
             Charlotte: "Oh yeah? How so?"
             You: "You think I'll have time to even bring you out when work gets busy?"
             You: "This isn't school. Soon, I won't have control over my time."
@@ -592,7 +594,7 @@ Charlotte: "Why can't you just accept me?"
             Charlotte: "Jokes on you, we've started already."
             You: "Then I'll burn everything you've built to the ground. It's all me from here on out."
         
-        -> "I can live without you." #skillcheck #cha #11
+        -> "I can live without you." #skillcheck #cha # 11
             <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
             <<if $diceroll >= 11>>
@@ -607,8 +609,8 @@ Charlotte: "Why can't you just accept me?"
 You: "Well, we've talked enough. It's time to make the decision."
 <<jump 5>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 384,-95
+__PrivCrochet_colorID: 3
+__PrivCrochet_position: 390,-112
 __PrivCrochet_tags: 
 title: 4
 ---
@@ -624,7 +626,7 @@ Charlotte: "Why are we suddenly forced back into the closet again?"
             You: "Doesn't change the fact that they're still in the minority."
             <<changeConfidence(-10)>>
             Charlotte: "So friendship is just a numbers game to you? Didn't know you were that shallow." (-10% confidence)
-        -> "They will not come to our aid if we really need them." #skillcheck #emp #11
+        -> "They will not come to our aid if we really need them." #skillcheck #emp # 11
             Charlotte: "That's just your paranoia at work."
             Charlotte: "I'm sure they will help us where they can."
             <<set $diceroll = diceRoll($emp)>>
@@ -691,7 +693,7 @@ Charlotte: "Why are we suddenly forced back into the closet again?"
             Charlotte: "How small is small?"
             Charlotte: "Don't tell me by the time we make any progress we'll be dead."
             You: "No, but..."
-    -> "The ending of the story is where you choose it to be." #skillcheck #int #11
+    -> "The ending of the story is where you choose it to be." #skillcheck #int # 11
         Charlotte: "What do you mean?"
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
@@ -801,7 +803,7 @@ Charlotte: "How are you sure the next time won't be the same?"
             Charlotte: "The people who raised you, and who will kill me."
             Charlotte: "It's not much of a question, is it?"
             Charlotte: "Why would I stick my head in the lion's mouth?
-    -> "Rental is expensive." #skillcheck #cha #11
+    -> "Rental is expensive." #skillcheck #cha # 11
         Charlotte: "I know. We aren't even earning any money, let alone enough money, yet."
         Charlotte: "But what's the game plan here?"
         <<set $diceroll = diceRoll($cha)>>
@@ -829,7 +831,7 @@ Charlotte: "How are you sure the next time won't be the same?"
             Charlotte: "Victories have never been associated with long delays."
             Charlotte: "Are you just telling me to wait until you forget about me?"
             Charlotte: "Set a goal for yourself. Then at least you'll have something to work towards."
-        -> "Talking to other people is different." #skillcheck #int #11
+        -> "Talking to other people is different." #skillcheck #int # 11
             Charlotte: "How so? Some of them were even worse."
             <<set $diceroll = diceRoll($int)>>
             [You rolled a {$diceroll}.]
@@ -845,7 +847,7 @@ Charlotte: "How are you sure the next time won't be the same?"
 -> "I'll improve my knowledge." 
     Charlotte: "We're already in gender studies class. We already know trans people."
     Charlotte: "What more can we do?"
-    -> "We must know Mother's opinions too." #skillcheck #int #11
+    -> "We must know Mother's opinions too." #skillcheck #int # 11
         Charlotte: "She's a boomer, she hates me, what else is relevant to this?"
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
@@ -983,19 +985,18 @@ Charlotte: "How are you sure the next time won't be the same?"
         Charlotte: "Not much room for ambiguity and freedom there, don't you think?"
 <<jump 6>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 644,-337
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 634,-333
 __PrivCrochet_tags: 
 title: 5
 ---
-(if confidence neutral)
+//(if confidence neutral)
 Charlotte: "Take your best shot." 
-(if confidence loss)
-Charlotte: "As if you could ever get rid of me." (threshold increased by 1 every 5% confidence loss)
+//(if confidence loss)
+Charlotte: "As if you could ever get rid of me." //(threshold increased by 1 every 5% confidence loss)
 You: "Begone, Charlotte. I am only Charles."
-
-(take sum of INT and CHA rolls)
-(INT + CHA > 20)
+//(take sum of INT and CHA rolls)
+//(INT + CHA > 20)
 Charlotte: "Ugh!"
 You: "That's what it feels like, doesn't it?"
 You: "The feeling of being right. The feeling of conquering my own personal demon."
@@ -1003,7 +1004,7 @@ You: "I had to suffer you all the way to get here. And now I'm finally free."
 Charlotte: "I... will... never... die..."
 You: "Well, that settles that. Don't ever appear in my thoughts again."
 
-(INT + CHA < 20)
+//(INT + CHA < 20)
 Charlotte: "Well, I'm still here. Guess that didn't work out too well, huh?"
 Charlotte: "Smother me all you want, hide me away in the darkest recesses of your mind..."
 Charlotte: "I will be there. I will be waiting."
@@ -1011,8 +1012,8 @@ Charlotte: "And you know what's the worst part? You're gonna need forgiveness."
 Charlotte: "From everyone you've offended along this journey, yes, but most importantly...
 Charlotte: "From ME."
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 652,-92
+__PrivCrochet_colorID: 3
+__PrivCrochet_position: 644,-118
 __PrivCrochet_tags: 
 title: 6
 ---

@@ -47,8 +47,10 @@ Chenjie: "Yeah, but it scares me a bit to think about the working world though. 
     You: "And I think you'd feel less tied down and restricted. So your life will be less stressful that way."
 -> "I think it will stay the same."
     You: "I think all stages of life are stressful and difficult in their own way. So it all balances out in the end."
+
 Chenjie: "Yeah, maybe you're right..."
 Chenjie: "But what about you? How is school treating you?"
+
 -> "It's been good."
     You: "Classes this semester have been kind to me."
     You: "All the profs are very knowledgeable in their field and they explain it well."
@@ -115,6 +117,7 @@ Chenjie: "But what about you? How is school treating you?"
         You: "I'm not the type to open up to strangers." 
         Chenjie: "Yeah, that could be rough. But also, it's not like these people can tattle on you to other people."
         Chenjie: "There's no harm trying if you ever want to talk to someone."
+
 <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
@@ -428,5 +431,7 @@ Chenjie: "So I hope things go well for you in the end."
 [i]Chenjie gives you a reassuring pat.[/i] 
 Chenjie: "You've got this, alright, {$name}?"
 [i]On that warm note, he leaves.[/i]
-<<stop>>
+<<addExperience(30)>>
+(+30 XP)
+<<goto_room_bedroom_afterHangout()>>
 ===

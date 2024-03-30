@@ -23,7 +23,7 @@ Nadia: "Let's just maintain for today, alright?"
     Nadia: "Yeah..."
     Nadia doesn't seem as bubbly as usual. Perhaps something is affecting her?
     <<set $diceroll = diceRoll($emp)>>
-    <<if $diceroll >= 9>>
+    <<if $diceroll >= 10>>
         You: "Uh, is everything okay?"
         Nadia sighs.
         Nadia: "Let's just get on with the art, okay? Relieve stress, put feelings to paper and all."
@@ -541,10 +541,10 @@ title: 5_1
         Nadia: "That must have been a super big decision for you."
         <<jump 5_options>>
 
-    -> "Damn, your GPA must be crying." (CHA check)
+    -> "Damn, your GPA must be crying." #skillcheck #cha # 10
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll >= 9>>
+        <<if $diceroll >= 10>>
             Nadia laughs nervously.
             Nadia: "Here for a good time, not a long time, right?"
             Nadia: "Cs get degrees and all that."
@@ -780,7 +780,7 @@ title: 4_1_1
 -> "Still, a quote from a villain?"
     <<jump 4_1_1_1>>
 
--> "Why don't you think about how many bad days you've given to others?" <<if !optionChosen()>>
+-> "Why don't you think about how many bad days you've given to others?" <<if !optionChosen()>> #skillcheck #emp # 10
     <<jump 4_1_1_2>>
 
 -> "So you're... justifying being an asshole?"
@@ -807,14 +807,14 @@ Anthony: "She doesn't see the true oppressed one is me."
 <<jump 4_1_1>>
 ===
 __PrivCrochet_colorID: 2
-__PrivCrochet_position: 1744,152
+__PrivCrochet_position: 1746,146
 __PrivCrochet_tags: 
 title: 4_1_1_2
 ---
 You: "Instead of just thinking about the ones you've had."
 <<set $diceroll = diceRoll($emp)>>
 [You rolled a {$diceroll}.]
-<<if $diceroll > 9>>
+<<if $diceroll > 10>>
     Anthony: "Again, everyone gets bad days."
     You: "So it's okay for you to take it out on other people when you have a bad day?"
     Anthony: "Tell me when that ever happened."
@@ -917,12 +917,12 @@ title: 4_1_3
 
 -> "I think both are lame."
 Anthony: "Well thanks, if you don't like my art, why did you even come to me?"
-    -> "You're one to talk." (INT check)
+    -> "You're one to talk." #skillcheck #int # 10
         You: "Look at what you've said to Vera and Nadia."
         Anthony: "They shoved it in everyone's face. I'm just drawing on my own."
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll < 9>>
+        <<if $diceroll < 10>>
             You: "I guess you're right..."
             Anthony: "Whatever. I'm just gonna continue." (END)
         <<else>>
@@ -932,11 +932,11 @@ Anthony: "Well thanks, if you don't like my art, why did you even come to me?"
             You: "But at the end of the day, who's really happy to be here? You? Or them?" (+10 XP)
         <<endif>>
         <<jump anthony_options>>
-    -> "It's not your art that I'm critiquing." (EMP check)
+    -> "It's not your art that I'm critiquing." #skillcheck #emp # 10
         Anthony: "Then?"
         <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll < 9>>
+        <<if $diceroll < 10>>
             Anthony: "Well great, you're just criticising me." 
             <<changeRelationship("A", -5)>>
             Anthony: "Can't I get any peace of mind in this club? Especially after last week." (-5% Anthony relationship) 
@@ -951,13 +951,13 @@ Anthony: "Well thanks, if you don't like my art, why did you even come to me?"
         You: "You're trying too hard to be cool and it loops back around."
         You: "Why not express who you truly are? Instead of trying to be someone you aren't."
         Anthony: "But I don't like who I am now. I want to either give up or get better."
-        -> "Tough luck, then." (CHA check)
+        -> "Tough luck, then." #skillcheck #cha # 10
             You: "Before you get there, you gotta love yourself, right?"
             You: "I mean, that's why I started crossdressing."
             Anthony: "Yeah, unlike you, I don't need a fetish. I'm normal."
-            <<set $diceroll = diceRoll($int)>>
+            <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
-            <<if $diceroll < 9>>
+            <<if $diceroll < 10>>
                 <<changeConfidence(-5)>>
                 <<changeRelationship("A", -5)>>
                 Anthony: "Honestly, you've been more annoying than helpful. Not to mention weird." (-5% confidence) (-5% Anthony relationship)
@@ -982,12 +982,12 @@ Anthony: "That's just how the world is. A world of shit."
         Anthony: "Do I have a choice? At least I'm not in my own la la land."
         Anthony: "Unlike some other people here..."
         <<jump anthony_options>>
-    -> "The world's brighter than you think it is." (EMP check)
+    -> "The world's brighter than you think it is." #skillcheck #int # 10
         Anthony: "Oh, not this again. 'Just cheer up', 'everything will be okay'..."
         Anthony: "I'm sick of hearing all this bullshit. Can't people see that the world is messed up?"
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll < 9>>
+        <<if $diceroll < 10>>
             You: "Well, suit yourself. I'm not the art police."
             You: "If that's how you see the world then so be it. I'm way past caring." 
             <<changeRelationship("A", -5)>>

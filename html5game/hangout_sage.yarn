@@ -23,7 +23,7 @@ Sage: "What about you though? How has life been treating you?"
 You: "Well, to be honest..."
 You: "I've been thinking a lot lately about my gender, or my crossdressing hobby."
 You: "Recently, Charlotte has been made known to some of my family and that has been stressful..."
-[i]Sage frowns.[/i]
+Sage frowns.
 Sage: "Is that so? It must be tough to be unexpectedly outed to family..."
 You: "Yeah, it has been rather rough. And it sucks when you feel like they'd never understand."
 You: "I was wondering if you might have any advice on how to deal with all that perhaps."
@@ -31,24 +31,27 @@ Sage: "What's the situation exactly?"
 You explain all that has happened so far, and she sits there, nodding thoughtfully.
 You: "And now I'm trying to get advice from people on what to do."
 A long pause.
-[i]Sage fiddles with the spoon in her hand nervously.[/i]
+Sage fiddles with the spoon in her hand nervously.
 Sage: "Actually..."
-[i]She takes a deep breath.[/i]
+She takes a deep breath.
 Sage: "Firstly, I just want to say that... I think it's really brave that you are facing both your identities as Charles and Charlotte head-on."
 Sage: "It's... not easy to be so open about the ways in which you're different from others."
 
 -> (confused) "Where is this going...?"
+
 -> "Thanks."
+
 -> (narrow your eyes) "What are you even trying to say?"
     Sage: "No! I don't mean anything bad by that. I was just..."
     Sage: "I'm sorry if I offended you."
     <<changeRelationship("S", -5)>>
     Sage: "Gosh, I'm not very good at expressing what I mean. I don't really know how to say this but..." (-5% Sage relationship)
     <<set $diceroll = diceRoll($emp)>>
-    <<if $diceroll > 6>>
+    <<if $diceroll > 7>>
         Sage looks like she regrets trying to open up to you.
-        But she pushes through and straightens her back.)
+        But she pushes through and straightens her back.
     <<endif>>
+
 <<jump 3>>
 ===
 __PrivCrochet_colorID: 0
@@ -150,7 +153,7 @@ You: "You knew you were nonbinary when you were that young?"
 Sage: "No, I didn't know it then... But I hated my deadname so I thought having a Christian name would mean that everyone would call me that instead."
 Sage: "The self-discovery part came later."
 You: "I see..."
-[i]But there's more that Sage is trying to say. You can tell by the fidgeting.[/i]
+But there's more that Sage is trying to say. You can tell by the fidgeting.
 <<jump 4_options>>
 ===
 __PrivCrochet_colorID: 0
@@ -173,7 +176,7 @@ Sage: "See it as protecting yourself, or waiting for a better time and place to 
     Sage: "That's not what this is though."
     <<addExperience(5)>>
     Sage: "Living closeted and surviving as a queer person... Isn't that also a form of rebellion against a society that wants to get rid of us all?" (+5 XP)
-    [i]Sage smiles at the table. But the smile is tight with hurt.[/i]
+    Sage smiles at the table. But the smile is tight with hurt.
     Sage: "That's what I've always thought, at least."
     -> "It makes sense."
         You: "It's better if we conserve our energy for a better time and place, right?"
@@ -181,8 +184,8 @@ Sage: "See it as protecting yourself, or waiting for a better time and place to 
         Sage: "Yeah. I do wonder if that better time and place will ever arrive though."
         That... That was unexpected.
         <<if $cha > 5>>
-            [i]You wouldn't expect something that sounded so defeatist and cynical coming from Sage.[/i] 
-            [i]Especially after everything they said about taking care of yourself.[/i]
+            You wouldn't expect something that sounded so defeatist and cynical coming from Sage. 
+            Especially after everything they said about taking care of yourself.
         <<endif>>
         Sage: "Don't mind what I just said, haha! I'm just thinking aloud."
     -> "I think it's more rebellious to live openly queer."
@@ -204,8 +207,8 @@ Sage: "See it as protecting yourself, or waiting for a better time and place to 
         Sage: "But... Honestly, now I do wonder if that better time and place even exists."
         That... That was unexpected.
         <<if $cha > 5>>
-            [i]You wouldn't expect something that sounded so defeatist and cynical coming from Sage.[/i] 
-            [i]Especially after everything they said about taking care of yourself.[/i]
+            You wouldn't expect something that sounded so defeatist and cynical coming from Sage.
+            Especially after everything they said about taking care of yourself.
         <<endif>>
         Sage: "Don't mind what I just said, haha! I'm just thinking aloud."
     -> "I feel safe and ready."
@@ -245,13 +248,13 @@ Sage: "See it as protecting yourself, or waiting for a better time and place to 
         Sage: "But think of it as waiting for a better time when you can safely and freely be yourself."
     -> "No, I will not shy away from Charlotte."
         Sage: "I see. If bottling it up in any way will hurt you, then I won't stop you from coming out." 
-        [i]Sage laughs to themself.[/i]
+        Sage laughs to themself.
         <<changeRelationship("S", 5)>>
         <<addExperience(5)>>
         Sage: "Not that I can stop you anyway. You're like a hurricane." (+5% Sage relationship) (+5 XP)
         Sage: "All the best. I really do admire people who wear their hearts on their sleeves and live openly queer."
     -> "I'll... consider it."
-        [i]Sage looks at you sympathetically.[/i]
+        Sage looks at you sympathetically.
         Sage: "I know it's going to be tough having to compartmentalise so much, and essentially juggling a double life."
         Sage: "But think of it as waiting for a better time when you can safely and freely be yourself."
         Sage: "Really, if it hurts too much to bottle everything up, then go ahead and live life exactly as you've always wanted." 
@@ -307,7 +310,7 @@ __PrivCrochet_tags:
 title: 4_2
 ---
 Sage: "What's it like?"
-[i]Sage cocks their head and hums.[/i]
+Sage cocks their head and hums.
 Sage: "I don't have many people I talk about this with... So I'm not entirely sure how to explain it but..."
 Sage: "It is freeing."
 You: "Freeing?"
@@ -323,17 +326,18 @@ Sage: "It feels more like doing what I — as my own person — want to do."
     You look down at your hands.
     Are you doing what you — as your own person — want to do?
     <<addExperience(5)>>
-    In the first place, will you ever know what it is you want to do? (+5 XP))
+    In the first place, will you ever know what it is you want to do? (+5 XP)
 <<endif>>
 <<if $cha > 5>>
     Sage smiles empathetically. 
     <<addExperience(5)>>
     Sage: "That's just me though. Every nonbinary person experiences it differently." (+5 XP))
 <<endif>>
+
 <<jump 4_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1249,-390
+__PrivCrochet_position: 1247,-391
 __PrivCrochet_tags: 
 title: 4_3
 ---
@@ -346,7 +350,7 @@ Sage: "Yeah, I've only come out to people whom I think I can tell."
 Sage: "Mostly people who also are gender-non-conforming or trans in some way."
 Sage: "Singapore is so... conservative. Coming out feels like a death sentence."
 -> "It kind of is a death sentence."
-    [i]Pain flashes across Sage's face, like a bad memory had struck them.[/i]
+    Pain flashes across Sage's face, like a bad memory had struck them.
     Sage: "It really is... We have to be careful about who we tell these things to."
     Sage: "The world isn't kind to queer folks, and we need to take care of ourselves." 
 
@@ -362,7 +366,7 @@ Sage: "Singapore is so... conservative. Coming out feels like a death sentence."
     Sage: "But all it takes sometimes is one bad egg to out you to all the people you don't want to be outed to."
     Sage: "And that's a huge risk to your safety, isn't it?"
 
-[i]The tremble in their voice tells you that they are speaking from experience.[/i]
+The tremble in their voice tells you that they are speaking from experience.
 <<if $int > 5>>
     <<changeRelationship("S", 5)>>
     Could it have happened to someone in their life? (+5% Sage relationship))
@@ -383,7 +387,7 @@ Sage: "This is by no means advice I'm saying that you have to take. It's just an
 Sage: "Something that you might want to consider? Given your circumstances?"
 You: "Yes...?"
 <<if $cha < 5>>
-    [i]Sage senses your irritation and clears her throat nervously.[/i]
+    Sage senses your irritation and clears her throat nervously.
 <<endif>>
 Sage: "The thing is... you don't have to come out."
 You: "You mean... You're telling me to lie to my family?"
@@ -450,36 +454,36 @@ Sage: "I'm not exactly the most optimistic about how things will turn out for qu
     <<addExperience(5)>>
     Sage: "Just like Sisyphus, huh." (+5 XP)
 
-[i]Sage straightens up and shakes their head.[/i]
+Sage straightens up and shakes their head.
 Sage: "By the way, I've been wondering. What are you planning to write for your essay?"
-[i]The conversation shifts to the topic of the assignment, with Sage enthusiastically explaining their idea to write about gender and dating shows.[/i]
-[i]Time passes quickly, and before you know it, it is time to leave.[/i]
-[i]Sage takes their leave and thanks you for the fun day, and you wave them goodbye.[/i]
+The conversation shifts to the topic of the assignment, with Sage enthusiastically explaining their idea to write about gender and dating shows.
+Time passes quickly, and before you know it, it is time to leave.
+Sage takes their leave and thanks you for the fun day, and you wave them goodbye.
 //scene change or remove Sage from scene
-[i]Who knew there was another person so similar to you just nearby.[/i]
-[i]Being closeted like that...[/i]
+Who knew there was another person so similar to you just nearby.
+Being closeted like that...
 -> It's cowardly.
-    [i]How could you hide such an important part of yourself like that?[/i]
+    How could you hide such an important part of yourself like that?
     <<changeRelationship("S", -5)>>
-    [i]It's denying the truth of who you are, and trying to trick everyone around you.[/i] (-5% Sage relationship)
-    [i]You could never live that way.[/i]
-    [i]Your future, the honest and truthful life, is on the other side of your greatest fears.[/i]
-    [i]That is why you must always face your fears and speak your truth, no matter how badly things will turn out.[/i]
+    It's denying the truth of who you are, and trying to trick everyone around you. (-5% Sage relationship)
+    You could never live that way.
+    Your future, the honest and truthful life, is on the other side of your greatest fears.
+    That is why you must always face your fears and speak your truth, no matter how badly things will turn out.
 -> I can somewhat understand that.
-    [i]Some people just don't have a safe environment to come out in, and many people are rightfully afraid of repercussions in society.[/i]
-    [i]But you are going to face the truth head-on and make it known to people.[/i]
-    [i]Isn't being honest about yourself the only way forward, no matter how hard it may be?[/i]
-    [i]Your hands are cold with fear just from the thought of talking about Charlotte with your family. But it is something you must do.[/i]
+    Some people just don't have a safe environment to come out in, and many people are rightfully afraid of repercussions in society.
+    But you are going to face the truth head-on and make it known to people.
+    Isn't being honest about yourself the only way forward, no matter how hard it may be?
+    Your hands are cold with fear just from the thought of talking about Charlotte with your family. But it is something you must do.
     <<addExperience(5)>>
-    [i]You steel yourself for the coming days.[/i] (+5 XP)
+    You steel yourself for the coming days.(+5 XP)
 -> It might be very common.
-    [i]Sage is right... Singapore is not the safest place to be queer in, and there are many things that could happen to you.[/i]
-    [i]There might be more people just like Sage, who are also closeted in Singapore and will not come out.[/i]
-    [i]But what does that mean for you?[/i]
-    [i]Maybe, coming out right now isn't the best for you either.[/i] 
-    [i]Just the thought of your mother, much less your father, finding out about Charlotte makes your hands grow cold with fear.[/i]
-    [i]Once the truth is known, it cannot be unknown.[/i]
+    Sage is right... Singapore is not the safest place to be queer in, and there are many things that could happen to you.
+    There might be more people just like Sage, who are also closeted in Singapore and will not come out.
+    But what does that mean for you?
+    Maybe, coming out right now isn't the best for you either.
+    Just the thought of your mother, much less your father, finding out about Charlotte makes your hands grow cold with fear.
+    Once the truth is known, it cannot be unknown.
     <<addExperience(5)>>
-    [i]You might want to be careful.[/i] (+5 XP)
+    You might want to be careful.(+5 XP)
 <<stop>>
 ===

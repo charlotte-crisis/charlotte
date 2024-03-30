@@ -10,7 +10,7 @@ You arrived at the classroom with time to spare.
 It seems all your group mates are already settled down.
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 400,40
+__PrivCrochet_position: 399,40
 __PrivCrochet_tags: 
 title: 2
 ---
@@ -18,7 +18,6 @@ You: "Morning!"
 Sage: "Good morning."
 <<if $name == "Charlotte">>
     Sage: "That's a cute blouse."
-
     <<changeConfidence(5)>>
     You: "Thanks!" (+5% confidence)
 <<endif>>
@@ -49,7 +48,7 @@ You: "Morning!"
     <<if visited("4") <= 1>> // only do it once
         <<changeRelationship("J", 5)>>
     <<endif>>
-    Joanne: "Morning!" // (+5% Joanne relationship)
+    Joanne: "Morning!" (+5% Joanne relationship)
     You: "How was your weekend?"
     Joanne: "Good! Just watched a movie with my boyfriend."
 
@@ -93,7 +92,7 @@ Prof Lim: "Next, who determines what beauty is?"
 Prof Lim: "How does the concept of beauty affect people's lives?"
 Prof Lim: "Gather in your groups and discuss this."
 
-// Discussion arrangement
+<<goto_room_class_1_discussion()>>
 Chenjie: "Okay, so... what do you think about the women after plastic surgeries, right?"
 Chenjie: "If they became prettier."
 There is a slightly uncomfortable silence, like no one wants to be the first to answer.
@@ -101,7 +100,7 @@ There is a slightly uncomfortable silence, like no one wants to be the first to 
 -> "Um, they indeed became prettier."
     You: "We don't like hearing it but... plastic surgeries do in fact make people more beautiful."
     <<changeRelationship("J", 5)>>
-    Joanne: "Yeah... I mean, they did the surgery in the first place, right?" // (+5% Joanne relationship)
+    Joanne: "Yeah... I mean, they did the surgery in the first place, right?" (+5% Joanne relationship)
     Joanne: "The transformations were all quite drastic. They didn't even look like the same person anymore."
     Chenjie: "I think they were also pretty in their own way before and after."
     Sage: "Yeah, but you usually only say 'in their own way' when one of them is a clear winner."
@@ -114,14 +113,14 @@ There is a slightly uncomfortable silence, like no one wants to be the first to 
 
 -> "They were beautiful both before and after."
     <<changeRelationship("CJ", 5)>>
-    Chenjie: "Yeah, I agree." // (+5% Chenjie relationship)
+    Chenjie: "Yeah, I agree." (+5% Chenjie relationship)
     Chenjie: "I think they are both beautiful in their own ways."
     <<jump 6>>
 
 -> "I think natural beauty is the best, no plastic surgeries."
     You: "The world would be a lot better if there were no plastic surgeries."
     <<changeRelationship("CJ", -5)>>
-    Chenjie: "Maybe not though... What about people who need the surgery? Medically speaking." // (-5% Chenjie relationship)
+    Chenjie: "Maybe not though... What about people who need the surgery? Medically speaking." (-5% Chenjie relationship)
     Chenjie: "Personally, the women before and after are both beautiful in their own ways."
     Joanne: "Do you really think so?"
     Joanne: "No need to give the politically correct answer, you know?"
@@ -144,18 +143,18 @@ Joanne: "Yeah. Another one is having healthy-looking hair."
 
 -> "Having fair and smooth skin."
     <<changeRelationship("CJ", 5)>>
-    Chenjie: "Ugh... Yeah, I looked quite ugly in secondary school because of all my acne." // (+5% Chenjie relationship)
+    Chenjie: "Ugh... Yeah, I looked quite ugly in secondary school because of all my acne." (+5% Chenjie relationship)
     Joanne: "Skincare is a huge market for a reason."
 
 -> "Being thin."
     <<changeRelationship("S", 5)>>
-    Sage: "Yeah. The increase in eating disorders and slimming ads recently really hammers in those societal expectations." // (+5% Sage relationship)
+    Sage: "Yeah. The increase in eating disorders and slimming ads recently really hammers in those societal expectations." (+5% Sage relationship)
     Chenjie: "It's honestly sad that it affects even kids and their self-perception... It's evil."
 
 -> "Good fashion sense."
     Sage: "To an extent, I guess? But it's not that important, is it?"
-    Joanne: "It is important actually. You can completely change your image just by dressing differently." // (+5% Joanne relationship)
     <<changeRelationship("J", 5)>>
+    Joanne: "It is important actually. You can completely change your image just by dressing differently." (+5% Joanne relationship)
     <<addExperience(5)>>
     Just like you, huh? (+5 XP)
 
@@ -204,64 +203,10 @@ title: 8
 Joanne: "They do say that there are biological and survival reasons for some of them. But they're mostly just theories, right?"
 You: "I guess so..."
 Chenjie: "Moving to the next question then... Who determines what beauty is?"
-
--> "Society."
-    Sage nods sagely. 
-    Sage: "We live in a society."
-    Joanne: "That's basically a non-answer. Obviously it's society, but what part of it?"
-
--> [INT 7] "Misogyny. Specifically..." ({calculateOdds($int, 7)}% success) #skillcheck #int
-    <<set $diceroll = diceRoll($int)>>
-    [You rolled a {$diceroll}.]
-    <<if $diceroll >= 7>>
-        You: "The patriarchy."
-        You: "Because patriarchy is the social system where men and masculinity have more power, right?"
-        <<changeRelationship("S", 5)>>
-        Sage: "Hm... Yeah..." // (+5% Sage relationship)
-        <<addExperience(5)>>
-        Sage: "Our readings do point out the concept of power obtained and maintained by policing the behaviours and bodies of the people." (+5 XP)
-        Chenjie: "Wait, could you explain?"
-        Sage: "Basically, you maintain a male-dominated society by making sure people don't break the rules of that society."
-        You: "Yeah, so women have to look pretty for the male gaze in order to stay in line."
-        You: "And men have to look strong and manly to stay worthy of being a man."
-        <<changeConfidnce(5)>>
-        Chenjie: "Yeah, I guess that makes sense." (+5% confidence)
-    <<else>>
-        You: "Men."
-        Joanne: "I guess so?"
-        Joanne: "But I don't think it's just men."
-        Joanne: "I mean, don't women have a huge role to play in the beauty standards of men?"
-        Chenjie: "True..."
-        Chenjie: "I think you were right about it being misogyny though, {$name}."
-        Chenjie: "I think it's the people who want to make sure men and women have their respective roles to play in society."
-        Chenjie: "So that includes how men and women should look as well."
-    <<endif>>
-    <<if $name == "Charlotte">>
-        <<jump 9>>
-    <<else>>
-        <<jump 17>>
-    <<endif>>
-
--> "History and culture"
-    Sage: "Yup! History and culture for sure."
-    Sage: "Like the way fair skin historically is associated with wealth because you're not tanned from working in the sun."
-    Chenjie: "It's interesting how the standards of beauty change too."
-    Chenjie: "Being fat used to be a sign of health and beauty."
-    You: "And pink used to be the colour for boys. But now, pink is a colour for girls."
-    <<changeRelationship("CJ", 5)>>
-    Chenjie: "Wait, for real?" // (+5% Chenjie relationship)
-    You: "Yeah! You can look it up!"
-    You: "It's because they thought red is a man's colour, so the lighter version is for the boys."
-    Chenjie: "But now if a guy wears pink, people start questioning his sexuality."
-    Chenjie: "There aren't a lot of things that are acceptable for men to wear."
-    <<if $name == "Charlotte">>
-        <<jump 9>>
-    <<else>>
-        <<jump 17>>
-    <<endif>>
+<<jump 8_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1120,520
+__PrivCrochet_position: 1116,519
 __PrivCrochet_tags: 
 title: 9
 ---
@@ -281,12 +226,13 @@ Joanne: "And you get to just dress up and pretend to be a girl for fun?"
         Chenjie: "Yeah, I don't think it's been easy for Charlotte either..."
         Chenjie: "In a way, maybe she experienced some of the stuff you did too. Especially as a more masculine-looking person."
         Chenjie: "No offence."
+        <<changeRelationship("CJ", 5)>>
         You know he means well. (+5% Chenjie relationship)
         Joanne: "It's not the same. He can just stop being female whenever it's convenient?"
         Joanne: "Why does he get to just take off all his makeup and go back to being a dude whenever he wants?"
         Chenjie: "Well... uh..."
         Chenjie tries to think of a refutation, but in the end, all he could come up with is...
-        Chenjie: "I don't think it's that simple though...")
+        Chenjie: "I don't think it's that simple though..."
     <<else>>
         Sage: "Yeah, and I'm sure she has also faced a similar kind of scrutiny while she was presenting as Charlotte."
         Sage: "In a sense, she's the same as us."
@@ -302,7 +248,7 @@ Joanne: "And you get to just dress up and pretend to be a girl for fun?"
     You: "It's just that dressing like this feels natural and comfortable for me."
     Joanne: "And what exactly is so natural and comfortable about it?"
     Joanne: "You literally have no idea how much women like Sage and I had to suffer just by being women."
-    <<if ($emp >= 4) or (getRelationship("S" >= 30)>>
+    <<if ($emp >= 5) or (getRelationship("S" >= 30)>>
         Sage squirms in uneasiness.
     <<endif>>
     Joanne: "I was always made fun of in school because I was boyish. And I had to deal with periods, and makeup, and clothes."
@@ -312,12 +258,12 @@ Joanne: "And you get to just dress up and pretend to be a girl for fun?"
     Joanne: "Okay, so a man's comfort should be prioritised over the very real problems women face." 
     <<changeConfidence(-5)>>
     <<changeRelationship("J", -5)>>
-    Joanne: "Amazing." (-5% confidence) // (-5% Joanne relationship)
+    Joanne: "Amazing." (-5% confidence) (-5% Joanne relationship)
 
--> [EMP 8] "We are fighting the same fight." ({calculateOdds($emp, 8)}% success) #skillcheck #emp
+-> "We are fighting the same fight." #skillcheck #emp # 8
     <<set $diceroll = diceRoll($emp)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll >= 7>>
+    <<if $diceroll >= 8>>
         You can almost see it.
         The image of a younger Joanne — struggling in her femininity, criticised for the way she looked and dressed, trying to find her place.
         She is a lot like you in some ways. 
@@ -328,7 +274,7 @@ Joanne: "And you get to just dress up and pretend to be a girl for fun?"
         You: "I'm sorry you had to deal with so much criticism and hardships growing up as a girl." 
         You: "It's awful that girls and women are constantly pressured to reach an impossible standard."
         <<changeRelationship("J", 5)>>
-        Joanne: "Yeah, we shouldn't be expected to all look like supermodels or like we've done plastic surgery." // (+5% Joanne relationship)
+        Joanne: "Yeah, we shouldn't be expected to all look like supermodels or like we've done plastic surgery." (+5% Joanne relationship)
         Joanne: "My family also frequently criticises me for not wearing any makeup, and say that I'm not putting any effort into myself."
         You: "There are endless ways to be feminine, and all of them are valid." 
         You: "Why can't we be accepted for the way we look, whether it's by our own choice or because we were born that way?"
@@ -377,7 +323,7 @@ Joanne: "And you get to just dress up and pretend to be a girl for fun?"
                 <<changeConfidence(-5)>>
                 Joanne: "I don't care if your gender is attack helicopter or whatever. People like you should be locked up in IMH." (-5% confidence)
                 <<changeRelationship("S", -5)>>
-                Sage stands up abruptly. // (-5% Sage relationship)
+                Sage stands up abruptly. (-5% Sage relationship)
                 Sage: "I need to use the toilet."
                 // ((Maybe have an animation of Sage leaving the room with no dialogue.))
                 Joanne: "Was what I was saying so wrong?"
@@ -401,7 +347,7 @@ Joanne: "And you get to just dress up and pretend to be a girl for fun?"
         
         -> Stay silent
             <<changeRelationship("S", 5)>>
-            Sage: "I don't think she is." // (+5% Sage relationship)
+            Sage: "I don't think she is." (+5% Sage relationship)
             Sage: "I think people like Charlotte deserve a safe space as much as cis women do."
             Sage: "If anything, they face a lot of discrimination and they have to work hard to pass as women so they don't get targeted by bigots."
             Chenjie: "Yeah, let's treat each other with kindness and respect."
@@ -421,7 +367,7 @@ Joanne: "And you get to just dress up and pretend to be a girl for fun?"
     <<changeConfidence(-5)>>
     But it doesn't work that well. (-5% confidence)
     <<changeRelationship("CJ", 5)>>
-    Chenjie: "Hey, I don't think it's been easy for Charlotte either..." //(+5% Chenjie relationship)
+    Chenjie: "Hey, I don't think it's been easy for Charlotte either..." (+5% Chenjie relationship)
     Joanne: "He can just stop being a 'girl' whenever he wants. How is it not easy for him?"
     Sage: "Stopping is not as straightforward as you think."
     <<addExperience(5)>>
@@ -440,7 +386,7 @@ __PrivCrochet_tags:
 title: 10
 ---
 The rest of the discussion proceeds with no other major hiccups, but the atmosphere is greatly soured.
-//Lecture arrangement//
+<<goto_room_class_1_seated>>
 Prof Lim: "Alright, class! Let's hear what everyone has to say?"
 Prof Lim: "What about that group over there?"
 She's talking about your group.
@@ -464,7 +410,7 @@ You: "We talked about..."
     The class is stunned into silence by the venom with which you said that.
     Prof Lim: "Oh, well, it seems your group must have sidetracked a little?"
     <<changeRelationship("CJ", -5)>>
-    Chenjie: "But we also talked about the beauty standard stuff!" // (-5% Chenjie relationship)
+    Chenjie: "But we also talked about the beauty standard stuff!" (-5% Chenjie relationship)
     Chenjie goes into some of the talking points brought up during the discussion.
     Prof Lim: "I see. Those are all very good points."
     Prof Lim: "Class, we should remember to respect each other's opinions and identities."
@@ -476,7 +422,7 @@ You: "We talked about..."
 <<jump 13>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1360,40
+__PrivCrochet_position: 1358,37
 __PrivCrochet_tags: 
 title: 13
 ---
@@ -501,11 +447,11 @@ Who will you walk with today?
     <<jump 16>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1360,520
+__PrivCrochet_position: 1357,517
 __PrivCrochet_tags: 
 title: 11
 ---
-//Lecture arrangement//
+<<goto_room_class_1_seated>>
 However, Sage does not return even after the discussion.
 Prof Lim approaches your table.
 Prof Lim: "Sage has been gone for quite a while..."
@@ -515,7 +461,7 @@ Prof Lim: "Perhaps, someone should check on her."
 -> Volunteer to go
     You: "I'll go."
     <<changeRelationship("J", -5)>>
-    Joanne: "Don't be ridiculous. I'm a girl. I'll go." // (-5% Joanne relationship)
+    Joanne: "Don't be ridiculous. I'm a girl. I'll go." (-5% Joanne relationship)
 
 -> Stay silent
     Joanne: "I'll go check on her."
@@ -576,7 +522,7 @@ Chenjie: "I wonder though... The standard for dudes."
 
 -> "It's honestly not much better."
     <<changeRelationship("CJ", 5)>>
-    Chenjie: "Yeah, we have different kinds of standards we are expected to meet." // (+5% Chenjie relationship)
+    Chenjie: "Yeah, we have different kinds of standards we are expected to meet." (+5% Chenjie relationship)
 
 -> "Honestly, guys have it worse."
     You: "Ugly guys don't even get the time of day sometimes."
@@ -601,9 +547,9 @@ Chenjie: "And so today's lecture got me thinking about, well, if my physical app
         He mustn't like talking about his love life. (+5 XP)
     <<endif>>
 
--> [CHA 6] Try to offer advice ({calculateOdds($cha, 6)}% success) #skillcheck #cha
+-> Try to offer advice #skillcheck #cha # 8
     <<set $diceroll = diceRoll($cha)>>
-    <<if $diceroll >= 6>>
+    <<if $diceroll >= 8>>
         You: "I think you should build up your self-confidence. Don't beat yourself up for something like this."
         You: "You are a cool and kind guy so it's a shame that you don't see how amazing you are."
         You: "Besides, people are naturally drawn to those who carry themselves with confidence."
@@ -617,7 +563,7 @@ Chenjie: "And so today's lecture got me thinking about, well, if my physical app
     <<else>>
         You: "Maybe you could get buff. Go to the gym."
         <<changeRelationship("CJ", -5)>>
-        Chenjie: "You sound like one of my aunties or something. I literally go to the gym every other day already." // (-5% Chenjie relationship)
+        Chenjie: "You sound like one of my aunties or something. I literally go to the gym every other day already." (-5% Chenjie relationship)
         You: "Oh... Maybe train different parts?"
         Chenjie: "I've tried, okay?"
         Chenjie: "It's not as easy as you think to build muscles in the right places."  
@@ -633,6 +579,8 @@ Chenjie: "And so today's lecture got me thinking about, well, if my physical app
     Chenjie: "Bye! See you!"
     You: "See you!"
 
+<<addExperience(30)>>
+(+30 XP)
 <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
@@ -665,7 +613,7 @@ Joanne: "I mean, I didn't think my boyfriend would appreciate that."
     Joanne: "True..."
     You: "Have faith in yourself and your judgement." 
     <<changeRelationship("J", 5)>>
-    Joanne: "Hm, you're right. I do know him best. He liked all my gifts in the past too." // (+5% Joanne relationship)
+    Joanne: "Hm, you're right. I do know him best. He liked all my gifts in the past too." (+5% Joanne relationship)
     Joanne: "Oh, the bus is here."
     <<changeConfidence(5)>>
     Joanne: "Thanks for the advice. Bye!" (+5% confidence)
@@ -695,10 +643,12 @@ Joanne: "I mean, I didn't think my boyfriend would appreciate that."
     Joanne: "But thanks for your help. I know what to get for my boyfriend now."
     You: "No problem. Bye!"
 
+<<addExperience(30)>>
+(+30 XP)
 <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1600,520
+__PrivCrochet_position: 1599,521
 __PrivCrochet_tags: 
 title: 16
 ---
@@ -743,6 +693,7 @@ Sage: "What about you though? How's your weekend been?"
     You: "It went well. We had a good talk about my hobby and what it means to me."
     Sage: "So she was accepting?"
     You: "Yeah!"
+    <<changeRelationship("S", 5)>>
     Sage: "That's a relief. I'm glad you have such a supportive sister." (+5% Sage relationship)
     You: "I still have my mum to convince..."
     Sage: "Yeah, it can be harder with parents..."
@@ -760,8 +711,6 @@ Sage: "What about you though? How's your weekend been?"
     You: "Thanks..."
     Sage: "That's my bus. All the best, okay? Take care." 
     You: "Bye."
-    // end
-
 
 -> "It was okay. I didn't do much."
     You: "I did some work, I guess."
@@ -769,7 +718,6 @@ Sage: "What about you though? How's your weekend been?"
     Sage: "Oh, that's my bus."
     Sage: "Good talk, okay? Uhm, see you next week!"
     You: "Bye."
-    // ((END))
 
 -> "I started reading this non-fiction book."
     You: "It's called 'The Body Keeps the Score.'"
@@ -782,12 +730,13 @@ Sage: "What about you though? How's your weekend been?"
     You: "Yeah, I get that sentiment." (+5% Sage relationship)
     Sage: "Oh, that's my bus. See you next week!"
     You: "Yeah, see you!"
-    // end
 
+<<addExperience(30)>>
+(+30 XP)
 <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 880,760
+__PrivCrochet_position: 1133,769
 __PrivCrochet_tags: 
 title: 17
 ---
@@ -815,7 +764,7 @@ Joanne: "And makeup is actually so bad for your skin. Just caking your face with
     You: "Makeup helped me find myself... And I find it quite fun to apply makeup. Especially the colourful ones."
     Joanne: "You're still wearing makeup these days...?"
 
-    -> "No. Back when I still dressed as Charlotte, but not anymore."
+    -> "No. Back when I still dressed as Charlotte, but not anymore." <<if $name == "Charles">>
         Sage: "You're not dressing as Charlotte anymore?"
         Chenjie: "Why?"
         You: "Yeah... I decided to stop. Enough is enough."
@@ -882,5 +831,75 @@ __PrivCrochet_tags:
 title: 12_alone
 ---
 You slink away, alone again.
+<<addExperience(30)>>
+(+30 XP)
 <<goto_room_bedroom()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 891,757
+__PrivCrochet_tags: 
+title: 8_options
+---
+-> "Society." <<if !optionChosen()>>
+    <<jump 8_1>>
+
+-> "Misogyny. Specifically..." #skillcheck #int # 8
+    <<set $diceroll = diceRoll($int)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll >= 8>>
+        You: "The patriarchy."
+        You: "Because patriarchy is the social system where men and masculinity have more power, right?"
+        <<changeRelationship("S", 5)>>
+        Sage: "Hm... Yeah..." (+5% Sage relationship)
+        <<addExperience(5)>>
+        Sage: "Our readings do point out the concept of power obtained and maintained by policing the behaviours and bodies of the people." (+5 XP)
+        Chenjie: "Wait, could you explain?"
+        Sage: "Basically, you maintain a male-dominated society by making sure people don't break the rules of that society."
+        You: "Yeah, so women have to look pretty for the male gaze in order to stay in line."
+        You: "And men have to look strong and manly to stay worthy of being a man."
+        <<changeConfidnce(5)>>
+        Chenjie: "Yeah, I guess that makes sense." (+5% confidence)
+    <<else>>
+        You: "Men."
+        Joanne: "I guess so?"
+        Joanne: "But I don't think it's just men."
+        Joanne: "I mean, don't women have a huge role to play in the beauty standards of men?"
+        Chenjie: "True..."
+        Chenjie: "I think you were right about it being misogyny though, {$name}."
+        Chenjie: "I think it's the people who want to make sure men and women have their respective roles to play in society."
+        Chenjie: "So that includes how men and women should look as well."
+    <<endif>>
+    <<if $name == "Charlotte">>
+        <<jump 9>>
+    <<else>>
+        <<jump 17>>
+    <<endif>>
+
+-> "History and culture."
+    Sage: "Yup! History and culture for sure."
+    Sage: "Like the way fair skin historically is associated with wealth because you're not tanned from working in the sun."
+    Chenjie: "It's interesting how the standards of beauty change too."
+    Chenjie: "Being fat used to be a sign of health and beauty."
+    You: "And pink used to be the colour for boys. But now, pink is a colour for girls."
+    <<changeRelationship("CJ", 5)>>
+    Chenjie: "Wait, for real?" (+5% Chenjie relationship)
+    You: "Yeah! You can look it up!"
+    You: "It's because they thought red is a man's colour, so the lighter version is for the boys."
+    Chenjie: "But now if a guy wears pink, people start questioning his sexuality."
+    Chenjie: "There aren't a lot of things that are acceptable for men to wear."
+    <<if $name == "Charlotte">>
+        <<jump 9>>
+    <<else>>
+        <<jump 17>>
+    <<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 896,1003
+__PrivCrochet_tags: 
+title: 8_1
+---
+Sage nods sagely. 
+Sage: "We live in a society."
+Joanne: "That's basically a non-answer. Obviously it's society, but what part of it?"
+<<jump 8_options>>
 ===

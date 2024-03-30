@@ -6,11 +6,11 @@
 # I want to fight.
 # I want to give in.
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 933,406
+__PrivCrochet_position: 932,405
 __PrivCrochet_tags: 
 title: 0
 ---
-Vera: "Hey Charlotte."
+Vera: "Hey Charlotte." 
 You: "Hi Vera. How's it going?"
 Vera: "It's going."
 Vera: "Heh. Really though, it's nice to sit down and talk like this."
@@ -21,13 +21,13 @@ Vera: "Shoot."
 <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1299,468
+__PrivCrochet_position: 1299,464
 __PrivCrochet_tags: 
 title: 1_options
 ---
 What do you want to talk about?
 
--> "So... what's it like being trans?"
+-> "So... what's it like being queer?"
     <<jump 1_1>>
 -> "How's school?"
     <<jump 1_2>>
@@ -35,10 +35,12 @@ What do you want to talk about?
     <<jump 1_3>>
 -> "Well, I gotta go. Thanks for today!" <<if visited("1_1") or visited("1_2") or visited("1_3")>>
     Vera: "See you around, Charlotte."
+    <<addExperience(30)>>
+    (+30 XP)
     <<goto_room_bedroom_afterHangout()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1249,141
+__PrivCrochet_position: 1251,140
 __PrivCrochet_tags: 
 title: 1_1
 ---
@@ -169,7 +171,7 @@ __PrivCrochet_tags:
 title: 1_1_options
 ---
 What do you say?
--> "When did you know you were trans?"
+-> "When did you know you were queer?"
     <<jump 1_1_1>>
 
 -> "I heard you need to like, medicate, or something?"
@@ -274,7 +276,7 @@ What do you say?
     <<jump 1_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1250,-564
+__PrivCrochet_position: 1249,-565
 __PrivCrochet_tags: 
 title: 1_1_2_1
 ---
@@ -294,10 +296,10 @@ Vera: "I mean, you probably know a thing or two about that."
         You: "I'm not sure..."
         Vera: "You will be. Some day."
             
-    -> "Come on, Vera. I already said I'm fine." (EMP 7 check)
+    -> "Come on, Vera. I already said I'm fine." #skillcheck #emp # 7
         <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll > 6>>
+        <<if $diceroll >= 7>>
             Vera: "But don't you want to transition?"
             You: "Vera. Please. I'm not you."
             You: "I appreciate your help, but... this is my fight."
@@ -311,13 +313,15 @@ Vera: "I mean, you probably know a thing or two about that."
             Vera: "But I know it's not so for you... and I will remember that."
             Vera: "Anyway, I also want you to know that you're valid and I support you."
             Vera: "Even if you want to be called Charles."
-            You: "Thanks, Vera... you're a good friend." (+5% Vera relationship) <<changeRelationship("V", 5)>>
+            <<changeRelationship("V", 5)>>
+            You: "Thanks, Vera... you're a good friend." (+5% Vera relationship) 
                 
         <<else>>
             Vera: "Nah, that doesn't convince me."
             Vera: "You'd still want to transition, right?"
             Vera: "Don't tell me you're comfortable ageing into some old uncle."
-            You're really not sure. (-5% confidence) <<changeConfidence(-5)>>
+            <<changeConfidence(-5)>>
+            You're really not sure. (-5% confidence) 
         <<endif>>
             
     -> "I guess..."
@@ -612,7 +616,7 @@ What will you ask?
     <<jump 1_2_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2322,-157
+__PrivCrochet_position: 2324,25
 __PrivCrochet_tags: 
 title: Vera_feminism
 ---
@@ -624,7 +628,7 @@ Vera: "So to me, feminism is... liberation. It's making life better for everyone
 <<jump Vera_definitions>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2539,-66
+__PrivCrochet_position: 2552,-48
 __PrivCrochet_tags: 
 title: Vera_beauty
 ---
@@ -636,7 +640,7 @@ Vera: "Society might have a view of beauty, and your view might align with that,
 <<jump Vera_definitions>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2542,186
+__PrivCrochet_position: 2576,185
 __PrivCrochet_tags: 
 title: Vera_woman
 ---

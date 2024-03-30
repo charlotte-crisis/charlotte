@@ -35,7 +35,7 @@ Joanne: "Hello!"
 <<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 165,-83
+__PrivCrochet_position: 162,-85
 __PrivCrochet_tags: 
 title: 2
 ---
@@ -160,13 +160,13 @@ Joanne: "Sorry for rambling on. I know guys don't get it, but it's really import
                 -> "So what if I am?"
                     You: "I still feel that we should not invalidate the experiences or identity of trans people."
                     <<set $diceroll = diceRoll($int)>>
-                    <<if $diceroll >= 5>>
+                    <<if $diceroll >= 7>>
                         You: "Even if I was just a man wearing a dress, I'm not harming anyone, am I?"
                         <<addExperience(5)>>
                         You: "If anything, I'm breaking gender stereotypes, and isn't that something that helps the feminist cause?" (+5 XP))
                     <<endif>>
                     <<set $diceroll = diceRoll($emp)>>
-                    <<if $diceroll >= 5>>
+                    <<if $diceroll >= 7>>
                         You: "We should treat each other with kindness and understanding."
                         <<addExperience(5)>>
                         You: "We're all just humans trying to get by." (+5 XP))
@@ -176,7 +176,7 @@ Joanne: "Sorry for rambling on. I know guys don't get it, but it's really import
                     Joanne: "I'll only accept someone is a transwoman if there is ample evidence that he is."
                     Joanne: "That's just the way I am." (-5% Joanne relationship)
                     <<set $diceroll = diceRoll($int)>>
-                    <<if $diceroll >= 5>> 
+                    <<if $diceroll >= 7>> 
                     She's using he/him pronouns even when talking about trans women...)
                     It seems like she won't budge on this issue.
                     But neither will you.
@@ -343,12 +343,14 @@ Joanne: "Let's do this again some time!"
 <<if $delta_J_rs < 0>>
     Joanne picks up her bag and leaves.
     <<set $diceroll = diceRoll($emp)>>
-    <<if $diceroll >= 5>>
+    <<if $diceroll >= 7>>
         She looks in a hurry to leave though...
     <<endif>>
 <<else>>
     Joanne gives you a genuine smile as she collects her bag and leaves.
     Today has been a good day, you think.
 <<endif>>
-<<stop>>
+<<addExperience(30)>>
+(+30 XP)
+<<goto_room_bedroom_afterHangout()>>
 ===
