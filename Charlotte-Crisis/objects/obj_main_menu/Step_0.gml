@@ -3,8 +3,9 @@
 
 // Select
 if (keyboard_check_pressed(vk_space)) {
+	// Reset animation
 	_pressed_spacebar = 0;
-	timer=0;
+	_timer_spacebar = 0;
 	
 	if (select_row == 0) {
 		fade_room(rm_bedroom_menu);	
@@ -24,13 +25,37 @@ if (keyboard_check_pressed(vk_space)) {
 		showing_credits = true;	
 	}
 }
+var _up = keyboard_check_pressed(vk_up);
+var _down = keyboard_check_pressed(vk_down);
 
-var _up_down_key = keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
+// Iterate menu
+var _up_down_key = _down - _up;
 if !(showing_help || showing_credits) {
 	select_row = wrap(select_row + _up_down_key, 0, MAX_ROW - 1);
 }
 
+if (_up) {
+	_pressed_up = 0;
+	_timer_up = 0;
+}
+
+if (_down) {
+	_pressed_down = 0;
+	_timer_down = 0;
+}
+
+#region timers
 if (_pressed_spacebar < 3) {
-	timer++;
-	_pressed_spacebar += timer/10;
+	_timer_spacebar++;
+	_pressed_spacebar += _timer_spacebar/10;
+}
+
+if (_pressed_up < 3) {
+	_timer_up++;
+	_pressed_up += _timer_up/10;
+}
+
+if (_pressed_down < 3) {
+	_timer_down++;
+	_pressed_down += _timer_down/10;
 }

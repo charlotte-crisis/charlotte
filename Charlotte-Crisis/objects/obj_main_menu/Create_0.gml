@@ -16,4 +16,10 @@ showing_help = false;
 showing_credits = false;
 
 _pressed_spacebar = 3;
-timer = 0;
+_timer_spacebar = 0;
+
+_pressed_up = 3;
+_timer_up = 0;
+
+_pressed_down = 3;
+_timer_down = 0;
