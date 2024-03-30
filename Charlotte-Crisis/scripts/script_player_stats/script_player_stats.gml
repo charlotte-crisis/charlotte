@@ -9,43 +9,44 @@ function set_chatterbox_stats() {
 	ChatterboxVariableSet("cha",obj_stats.charisma);
 	ChatterboxVariableSet("emp",obj_stats.empathy);
 }
-#region stats,confidence, and experience
-// TODO: Separate obj_player functions and obj_stats functions
-function add_empathy() {
-	obj_stats.empathy += 1;
-	return;
-}
 
-function add_charisma() {
-	obj_stats.charisma += 1;
-	return;
-}
+#region stats and experience
+	// TODO: Separate obj_player functions and obj_stats functions
+	function add_empathy() {
+		obj_stats.empathy += 1;
+		return;
+	}
 
-function add_intelligence() {
-	obj_stats.intelligence += 1;
-	return;
-}
+	function add_charisma() {
+		obj_stats.charisma += 1;
+		return;
+	}
 
-function add_experience(_amount) {
-	obj_stats.experience += _amount[0];
-	return;	
-}
+	function add_intelligence() {
+		obj_stats.intelligence += 1;
+		return;
+	}
 
-function get_intelligence() {
-	return obj_stats.intelligence;	
-}
+	function add_experience(_amount) {
+		obj_stats.experience += _amount[0];
+		return;	
+	}
 
-function get_charisma() {
-	return obj_stats.charisma;	
-}
+	function get_intelligence() {
+		return obj_stats.intelligence;	
+	}
 
-function get_empathy() {
-	return obj_stats.empathy;	
-}
+	function get_charisma() {
+		return obj_stats.charisma;	
+	}
 
-function get_name() {
-	return obj_player.get_player_gender() ? "Charlotte":"Charles";	
-}
+	function get_empathy() {
+		return obj_stats.empathy;	
+	}
+
+	function get_name() {
+		return obj_player.get_player_gender() ? "Charlotte":"Charles";	
+	}
 #endregion
 
 #region Skill checks, Diceroll for use in chatterbox
@@ -100,40 +101,46 @@ function calculate_odds(_parameters) {
 #endregion
 
 #region Confidence
-/// @function				change_confidence(_amount);
-/// @description			Adds amount of relationship. Limit at 0 or 100.
-/// @param {Array}			_parameters [amount]
-/// @return {Real}
-function change_confidence(_parameters) {
-	var _total = obj_stats.confidence + real(_parameters[0]);
+	/// @function				change_confidence(_amount);
+	/// @description			Adds amount of relationship. Limit at 0 or 100.
+	/// @param {Array}			_parameters [amount]
+	/// @return {Real}
+	function change_confidence(_parameters) {
+		var _total = obj_stats.confidence + real(_parameters[0]);
 	
-	// Ensure doesn't go past 0 or 100.
-	if (_total > 100) {
-		_total = 100;	
-	} else if (_total < 0) {
-		_total = 0;	
+		// Ensure doesn't go past 0 or 100.
+		if (_total > 100) {
+			_total = 100;	
+		} else if (_total < 0) {
+			_total = 0;	
+		}
+		obj_stats.confidence = _total;	
+		return _total;
 	}
-	obj_stats.confidence = _total;	
-	return _total;
-}
-
-/// @description Changes the gender meter of the player.
-/// Accepts negative values. Will limit at 0 or 100.
-function change_gender_meter(_parameters) {
-	var _total = obj_stats.gender_meter + real(_parameters[0]);
 	
-	// Ensure doesn't go past 0 or 100.
-	if (_total > 100) {
-		_total = 100;
-	} else if (_total < 0) {
-		_total = 0;	
+	function get_confidence() {
+		return obj_stats.confidence;	
 	}
-	obj_stats.gender_meter = _total;	
-	return _total;
-}
+#endregion
 
-/// @return {Real} The gender [0, 100] int
-function get_gender_meter() {
-	return obj_stats.gender_meter;
-}
+#region Gender meter
+	/// @description Changes the gender meter of the player.
+	/// Accepts negative values. Will limit at 0 or 100.
+	function change_gender_meter(_parameters) {
+		var _total = obj_stats.gender_meter + real(_parameters[0]);
+	
+		// Ensure doesn't go past 0 or 100.
+		if (_total > 100) {
+			_total = 100;
+		} else if (_total < 0) {
+			_total = 0;	
+		}
+		obj_stats.gender_meter = _total;	
+		return _total;
+	}
+
+	/// @return {Real} The gender [0, 100] int
+	function get_gender_meter() {
+		return obj_stats.gender_meter;
+	}
 #endregion

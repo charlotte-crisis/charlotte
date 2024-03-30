@@ -54,6 +54,7 @@ BG_ALPHA = 0.9;
 	ChatterboxAddFunction("getNPCKnows", get_npc_knows);
 	
 	ChatterboxAddFunction("changeConfidence", change_confidence);
+	ChatterboxAddFunction("getConfidence", get_confidence);
 	ChatterboxAddFunction("addExperience", add_experience);
 	
 	ChatterboxAddFunction("openStatMenu", open_stat_menu);
