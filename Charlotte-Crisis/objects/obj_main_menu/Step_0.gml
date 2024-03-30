@@ -2,14 +2,20 @@
 // You can write your code in this editor
 
 // Select
-if (keyboard_check_pressed(vk_space)) {
+
+var _space = keyboard_check_pressed(vk_space);
+var _esc = keyboard_check_pressed(vk_escape);
+
+if (_space) {
 	// Reset animation
 	_pressed_spacebar = 0;
 	_timer_spacebar = 0;
 	
-	if (select_row == 0) {
+	
+	if (select_row == 0) { // New game
 		fade_room(rm_bedroom_menu);	
 	}
+	
 	
 	// Open/Close help
 	if (showing_help) {
@@ -25,6 +31,19 @@ if (keyboard_check_pressed(vk_space)) {
 		showing_credits = true;	
 	}
 }
+
+if (_esc) { // Allow esc to exit these 2 menus too
+	// Open/Close help
+	if (showing_help) {
+		showing_help = false;	
+	}
+	
+	// Open/Close credits 
+	if (showing_credits) {
+		showing_credits = false;	
+	}
+}
+
 var _up = keyboard_check_pressed(vk_up);
 var _down = keyboard_check_pressed(vk_down);
 

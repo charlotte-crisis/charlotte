@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 var _x = view_wport[0]/2;		// Middle
-var _y_start = view_hport[0]/2 + 32; // Middle
+var _y_start = view_hport[0]/2 - 32; // Middle
 var _y_margin = view_hport[0]/16;
 
 var _y;
