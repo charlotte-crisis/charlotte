@@ -1515,44 +1515,51 @@ You: "I think we've spoken enough."
 <<set $endMother = getRelationship("M")>>
 <<set $deltaMother = $endMother - $startMother>>
 
-//(high confidence, low Mother RS%)
-You: "There's no convincing you. But I can convince the rest of the world."
-Mother: "Tell you how many times, they will laugh at you!"
-You: "Maybe."
-You: "But with every person who laughs at me..."
-You: "There will be people who laugh with me."
-You: "There will be people celebrating my freedom."
-You: "There will be people guiding me through darkness."
-You: "And there will be people who love me."
-You: "And you know what's the worst part, Mom?"
-You: "You were supposed to be that person."
-You: "And I'm sorry to say this, but you failed."
-You: "So go ahead. Tell Dad about Charlotte all you want."
-You: "I'm done with you."
-So this is how it ends, huh? At least you stood up for yourself.
-Still, burning bridges with Mother... is that the best we can do?
+<<set $endConfidence = getConfidence()>>
 
-//(low confidence)
-You: "You win. I'll stop."
-Mother: "Ugh, finally."
-Mother: "For real ah? I don't want to see a single dress or lipstick or panties in your room."
-You: "Yes, I promise."
-Mother: "Good boy. We can finally be normal in this house."
-Mother: "Next thing is to get a girlfriend and settle down."
-Mother: "Your sister already don't want kids, you better step up."
-Mother: "And one more thing, you better don't do this again."
-Mother: "If not, I'm telling your father."
-Well, can't say we didn't try. She really is a tough nut to crack.
-I'd say don't lose hope, you can try again and all that but...
-Not now. Now, you need to rest.
-
-//(high confidence, high Mother RS%)
-Mother: "Okay... fine... I don't understand, but I just want what's best for you."
-You: "That's okay, Mom."
-You: "And from the bottom of my heart... thank you."
-You: "Knowing you're in my corner, that means a lot to me."
-You: "Oh, and one more thing..."
-You: "When I'm dressed as a girl, you can call me Charlotte."
-Boom, baby! 
-Okay, sorry, I was just excited. I never thought this day would come.
+<<if $endConfidence < 30>>
+    // Low change in confidence (Regardless of mother relationship)
+    You: "You win. I'll stop."
+    Mother: "Ugh, finally."
+    Mother: "For real ah? I don't want to see a single dress or lipstick or panties in your room."
+    You: "Yes, I promise."
+    Mother: "Good boy. We can finally be normal in this house."
+    Mother: "Next thing is to get a girlfriend and settle down."
+    Mother: "Your sister already don't want kids, you better step up."
+    Mother: "And one more thing, you better don't do this again."
+    Mother: "If not, I'm telling your father."
+    Well, can't say we didn't try. She really is a tough nut to crack.
+    I'd say don't lose hope, you can try again and all that but...
+    Not now. Now, you need to rest.
+<<else>>
+    <<if $deltaMother <= 0>>
+         //(high confidence, low Mother RS%)
+        // Reduction in mother relationship or no change
+        You: "There's no convincing you. But I can convince the rest of the world."
+        Mother: "Tell you how many times, they will laugh at you!"
+        You: "Maybe."
+        You: "But with every person who laughs at me..."
+        You: "There will be people who laugh with me."
+        You: "There will be people celebrating my freedom."
+        You: "There will be people guiding me through darkness."
+        You: "And there will be people who love me."
+        You: "And you know what's the worst part, Mom?"
+        You: "You were supposed to be that person."
+        You: "And I'm sorry to say this, but you failed."
+        You: "So go ahead. Tell Dad about Charlotte all you want."
+        You: "I'm done with you."
+        So this is how it ends, huh? At least you stood up for yourself.
+        Still, burning bridges with Mother... is that the best we can do?
+    <<else>>
+        //(high confidence, high Mother RS%)
+        Mother: "Okay... fine... I don't understand, but I just want what's best for you."
+        You: "That's okay, Mom."
+        You: "And from the bottom of my heart... thank you."
+        You: "Knowing you're in my corner, that means a lot to me."
+        You: "Oh, and one more thing..."
+        You: "When I'm dressed as a girl, you can call me Charlotte."
+        Boom, baby! 
+        Okay, sorry, I was just excited. I never thought this day would come.
+    <<endif>>
+<<endif>>
 ===
