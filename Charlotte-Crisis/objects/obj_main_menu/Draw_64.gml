@@ -58,7 +58,7 @@ if !(showing_help || showing_credits) {
 	_instructions_x -= 160;
 	draw_sprite_ext(spr_key_up_strip4, 0,
 			_instructions_x, _instructions_y - 26, 2, 2, 0, c_white, 1);
-	draw_sprite_ext(spr_key_up_strip4, 0,
+	draw_sprite_ext(spr_key_down_strip4, 0,
 			_instructions_x, _instructions_y, 2, 2, 0, c_white, 1);
 	draw_text(_instructions_x + 32 - 5, _instructions_y - 32, "SELECT");
 }

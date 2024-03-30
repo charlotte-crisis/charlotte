@@ -199,3 +199,28 @@ function draw_help_menu(_x, _y) {
 	draw_text_ext(_x_topleft, _y_bottom, "Skill Checks:", _sep, _width);
 	draw_set_color(c_white);
 }
+
+/// All relative to x and y, which are top centre of the menu
+function draw_credits(_x, _y) {
+	var _pad = 70;
+	var _bg_width = 615; // 164 * 3.75
+	// Draw BG
+	draw_sprite_ext(spr_relationship_menu_bg, -1, _x, _y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+	
+	var _credits = "The Charlotte Crisis is a game done for a Communications and New Media practice-based honours thesis.\n";
+	_credits += "\n";
+	_credits += "Writer, Designer, Producer: Jiayu\n";
+	_credits += "Artist, Writer: Nicole\n";
+	_credits += "Designer, Programmer: Zhan Hong\n";
+	_credits += "Supervisor: Tan Kai En\n";
+	
+	
+	var _yy = _y + _pad;
+	var _sep = 25;
+	var _width = _bg_width - (_pad * 2);
+	
+	draw_set_halign(fa_middle);
+	draw_set_valign(fa_top);
+	draw_set_color(c_white);
+	draw_text_ext(_x, _y + _pad, _credits, _sep, _width);	
+}
