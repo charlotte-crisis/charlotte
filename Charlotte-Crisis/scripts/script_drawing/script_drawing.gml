@@ -152,3 +152,14 @@ function draw_speaker_portrait(name) {
 	}
 
 #endregion
+
+/// All relative to x and y, which are top centre of the menu
+function draw_help_menu(_x, _y) {
+	draw_sprite_ext(spr_relationship_menu_bg, 0, _x, _y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);	
+	var _inst_controls = "Controls:\n Arrow keys to move/select\n Up to interact\n Space to advance dialogue";
+	var _inst_relation = "Relationships\n Choose wisely when you talk to NPCs. You can have a Good, Neutral, or Bad relationship with them.";
+	var _inst_skills   = "Skill Checks\n Some dialogue (in red) are skill checks. The stat needed and threshold to beat are prefixed, for e.g., [CHA 8]\n";
+	_inst_skills += "You will roll a 6-sided die and its result will be added to your CHA stat. The sum, if equal or greater than 8, will result in a success."
+	
+	
+}

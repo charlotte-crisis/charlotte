@@ -2,8 +2,8 @@
 // You can write your code in this editor
 
 var _x = view_wport[0]/2;		// Middle
-var _y_start = view_hport[0]/2; // Middle
-var _y_margin = view_hport[0]/10;
+var _y_start = view_hport[0]/2 + 32; // Middle
+var _y_margin = view_hport[0]/16;
 
 var _y;
 
@@ -12,11 +12,19 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
 for (var i = 0; i < MAX_ROW; i++) {
-	var _spr = (i == 0) ? spr_option_red : spr_option_blue;
-	_y = _y_start + (_y_margin * i);
-	draw_sprite_ext(_spr, (select_row == i),
-			_x, _y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+	if (select_row == i) {
+		draw_set_color(c_white);	
+	} else {
+		draw_set_color(c_gray);	
+	}
+	
+	_y = _y_start + (i * _y_margin);
+	var _width_of_text = string_width(BUTTON_LABELS[i]);
 	draw_text(_x, _y, BUTTON_LABELS[i]);
+	if (select_row == i) {
+		draw_sprite_ext(spr_ui_right, 0, _x - _width_of_text/2 - 25, _y - 15, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+	}
+	draw_set_color(c_white);
 }
 
 /// Bottom Right graphics as Instructions
