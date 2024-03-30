@@ -27,7 +27,7 @@ if (is_open) {
 	draw_set_color(c_white);
 	
 	// Draw background
-	draw_sprite_ext(spr_relationship_menu_bg, -1, _x_origin, _y_origin, VIEWPORT_SCALE + 0.5, VIEWPORT_SCALE, 0, c_white, 1);
+	draw_sprite_ext(spr_relationship_menu_bg, -1, _x_origin, _y_origin, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 	
 	///=== LEFT HAND SIDE ===///
 	// Using the script from script_player_stats

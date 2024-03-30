@@ -74,7 +74,7 @@
     {"name":"obj_indicator","order":1,"path":"objects/obj_indicator/obj_indicator.yy",},
     {"name":"obj_interactable","order":4,"path":"objects/obj_interactable/obj_interactable.yy",},
     {"name":"obj_joanne","order":4,"path":"objects/obj_joanne/obj_joanne.yy",},
-    {"name":"obj_menu","order":4,"path":"objects/obj_menu/obj_menu.yy",},
+    {"name":"obj_main_menu","order":4,"path":"objects/obj_main_menu/obj_main_menu.yy",},
     {"name":"obj_mirror","order":1,"path":"objects/obj_mirror/obj_mirror.yy",},
     {"name":"obj_nadia","order":6,"path":"objects/obj_nadia/obj_nadia.yy",},
     {"name":"obj_npc_relationships","order":3,"path":"objects/obj_npc_relationships/obj_npc_relationships.yy",},

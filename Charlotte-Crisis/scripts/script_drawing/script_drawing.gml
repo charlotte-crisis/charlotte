@@ -155,11 +155,47 @@ function draw_speaker_portrait(name) {
 
 /// All relative to x and y, which are top centre of the menu
 function draw_help_menu(_x, _y) {
-	draw_sprite_ext(spr_relationship_menu_bg, 0, _x, _y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);	
-	var _inst_controls = "Controls:\n Arrow keys to move/select\n Up to interact\n Space to advance dialogue";
-	var _inst_relation = "Relationships\n Choose wisely when you talk to NPCs. You can have a Good, Neutral, or Bad relationship with them.";
-	var _inst_skills   = "Skill Checks\n Some dialogue (in red) are skill checks. The stat needed and threshold to beat are prefixed, for e.g., [CHA 8]\n";
-	_inst_skills += "You will roll a 6-sided die and its result will be added to your CHA stat. The sum, if equal or greater than 8, will result in a success."
+	var _pad = 45;
+	var _bg_width = 615; // 164 * 3.75
+	// Draw BG
+	draw_sprite_ext(spr_relationship_menu_bg, -1, _x, _y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 	
+	var _inst_controls = "Controls:\n Arrow keys to move/select\n Up to interact\n Space to advance dialogue\n Esc to pause";
+	var _inst_relation = "Relationships:\n Choose wisely when you talk to NPCs. You may have a Good, Neutral, or Bad relationship.";
+	var _inst_skills   = "Skill Checks:\n Some dialogue (in red) are skill checks. The stat needed and threshold to beat are prefixed, for e.g., [CHA 8]\n";
+	_inst_skills += "You will roll a 6-sided die and its result will be added to your CHA stat. The sum, if equal or greater than 8, will succeed."
 	
+	draw_set_font(fnt_body);
+	draw_set_valign(fa_top);
+	draw_set_halign(fa_left);
+	
+	var _yy = _y + _pad;
+	var _sep = 25;
+	var _width = _bg_width/2 - _pad;
+	
+	var _x_topleft = _x - _bg_width/2 + _pad;
+	
+	// Draw top left corner
+	draw_text_ext(_x_topleft, _yy, _inst_controls, _sep, _width);
+	
+	draw_set_color(c_yellow);
+	draw_text_ext(_x_topleft, _yy, "Controls:", _sep, _width);
+	draw_set_color(c_white);
+	
+	var _x_topright = _x;
+	// Draw top right corner
+	draw_text_ext(_x_topright, _yy, _inst_relation, _sep, _width);
+	
+	draw_set_color(c_yellow);
+	draw_text_ext(_x_topright, _yy, "Relationships:", _sep, _width);
+	draw_set_color(c_white);
+	
+	// Draw bottom
+	_width = _bg_width - (2*_pad);
+	var _y_bottom = _yy + _pad/2 + string_height(_inst_controls);
+	draw_text_ext(_x_topleft, _y_bottom, _inst_skills, _sep, _width);
+	
+	draw_set_color(c_yellow);
+	draw_text_ext(_x_topleft, _y_bottom, "Skill Checks:", _sep, _width);
+	draw_set_color(c_white);
 }

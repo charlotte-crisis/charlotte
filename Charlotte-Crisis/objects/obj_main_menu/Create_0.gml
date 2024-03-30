@@ -12,4 +12,8 @@ MAX_ROW = 4;
 
 BUTTON_LABELS = ["NEW GAME", "CONTINUE", "INSTRUCTIONS", "CREDITS"];
 
-instructions = "ARROW KEYS TO SELECT. SPACE TO CONFIRM.";
+showing_help = false;
+showing_credits = false;
+
+_pressed_spacebar = 3;
+timer = 0;

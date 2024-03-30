@@ -123,7 +123,7 @@
     {"id":{"name":"obj_indicator","path":"objects/obj_indicator/obj_indicator.yy",},},
     {"id":{"name":"obj_interactable","path":"objects/obj_interactable/obj_interactable.yy",},},
     {"id":{"name":"obj_joanne","path":"objects/obj_joanne/obj_joanne.yy",},},
-    {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
+    {"id":{"name":"obj_main_menu","path":"objects/obj_main_menu/obj_main_menu.yy",},},
     {"id":{"name":"obj_mirror","path":"objects/obj_mirror/obj_mirror.yy",},},
     {"id":{"name":"obj_nadia","path":"objects/obj_nadia/obj_nadia.yy",},},
     {"id":{"name":"obj_npc_relationships","path":"objects/obj_npc_relationships/obj_npc_relationships.yy",},},
