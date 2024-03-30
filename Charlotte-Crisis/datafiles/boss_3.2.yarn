@@ -990,27 +990,43 @@ __PrivCrochet_position: 634,-333
 __PrivCrochet_tags: 
 title: 5
 ---
-//(if confidence neutral)
-Charlotte: "Take your best shot." 
-//(if confidence loss)
-Charlotte: "As if you could ever get rid of me." //(threshold increased by 1 every 5% confidence loss)
-You: "Begone, Charlotte. I am only Charles."
-//(take sum of INT and CHA rolls)
-//(INT + CHA > 20)
-Charlotte: "Ugh!"
-You: "That's what it feels like, doesn't it?"
-You: "The feeling of being right. The feeling of conquering my own personal demon."
-You: "I had to suffer you all the way to get here. And now I'm finally free."
-Charlotte: "I... will... never... die..."
-You: "Well, that settles that. Don't ever appear in my thoughts again."
+<<set $endConfidence = getConfidence()>>
 
-//(INT + CHA < 20)
-Charlotte: "Well, I'm still here. Guess that didn't work out too well, huh?"
-Charlotte: "Smother me all you want, hide me away in the darkest recesses of your mind..."
-Charlotte: "I will be there. I will be waiting."
-Charlotte: "And you know what's the worst part? You're gonna need forgiveness."
-Charlotte: "From everyone you've offended along this journey, yes, but most importantly...
-Charlotte: "From ME."
+// -1 for each 5% away from 25%. e.g. 20% -> 1; 15% -> 2; 10% -> 3, etc...
+// Base is 25. So, ends up as 25 + 0, 25 + 1, 25 + 2, and so on... (Max is 25 + 5 = 30)
+<<if $endConfidence < 30>>
+    //(if confidence loss)
+    Charlotte: "As if you could ever get rid of me."     
+    You: "Begone, Charlotte. I am only Charles."
+    <<set $difficulty = 25 + (25 - $endConfidence)/5>>
+<<else>>
+    //(if confidence neutral) - No change or increase
+    Charlotte: "Take your best shot." 
+    <<set $difficulty = 25>>
+<<endif>>
+
+Well, this is it. // In case, to ensure the option shows up. It may not be needed.
+
+-> [INT + CHA + EMP 25] Fight it. ({calculateOdds($int + $cha + $emp, $difficulty)} chance success). # continue 
+    //It's not actually continue but I want to colour it red LOL
+    //Do not use #skillcheck because I want to customise the formatting
+    
+    <<set $diceroll = diceRoll($int + $cha + $emp)>>
+    <<if $diceroll >= $difficulty>>
+        Charlotte: "Ugh!"
+        You: "That's what it feels like, doesn't it?"
+        You: "The feeling of being right. The feeling of conquering my own personal demon."
+        You: "I had to suffer you all the way to get here. And now I'm finally free."
+        Charlotte: "I... will... never... die..."
+        You: "Well, that settles that. Don't ever appear in my thoughts again."
+    <<else>>
+        Charlotte: "Well, I'm still here. Guess that didn't work out too well, huh?"
+        Charlotte: "Smother me all you want, hide me away in the darkest recesses of your mind..."
+        Charlotte: "I will be there. I will be waiting."
+        Charlotte: "And you know what's the worst part? You're gonna need forgiveness."
+        Charlotte: "From everyone you've offended along this journey, yes, but most importantly...
+        Charlotte: "From ME."
+    <<endif>>
 ===
 __PrivCrochet_colorID: 3
 __PrivCrochet_position: 644,-118
