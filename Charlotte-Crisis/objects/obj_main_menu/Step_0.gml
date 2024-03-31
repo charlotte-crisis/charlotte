@@ -16,6 +16,10 @@ if (_space) {
 		fade_room(rm_bedroom_menu);	
 	}
 	
+	if (select_row == 1) { // Load
+		load_game();
+	}
+	
 	
 	// Open/Close help
 	if (showing_help) {
