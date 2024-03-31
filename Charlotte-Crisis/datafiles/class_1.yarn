@@ -182,12 +182,12 @@ You feel pressured to quickly secure a group.
 You: "Oh, I guess, I don't mind joining your group."
 Chenjie: "Nice! I'll email the prof about our group after class."
 Prof Lim: "Okay, everyone. Now that we've all gotten to know each other. I'd like to begin the first class activity."
-// <<goto_room_class_1_seated()>>
+<<goto_room_class_1_seated()>>
 Prof Lim: "I'm sure you all have done the readings on what feminist studies is."
 Prof Lim casts a knowing look over everyone and some quiet nervous laughter bubbles up.
 Prof Lim: "So, right now, I want you to take ten minutes to discuss with your group mates what feminism is in your own words. What is feminism to you and how is it related to you?"
 Chairs shuffle again and the class goes back to talking with their group mates.
-// <<goto_room_class_1_discussion()>>
+<<goto_room_class_1_discussion()>>
 Chenjie: "Did you guys do the readings?"
 Joanne: "I only read the one about research methodology. Seriously, why do profs expect their students to be doing so much reading in Week 0?"
 Sage: "I skimmed through them. But there's really so much to read..."
@@ -778,6 +778,7 @@ Choose one...
 -> Yes #continue
     You take a seat.
     <<goto_room_class_1_seated()>>
+    <<jump 5>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1080,-243

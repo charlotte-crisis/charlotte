@@ -68,7 +68,7 @@
 		obj_player.facing_direction = 1;
 		obj_player.is_sitting = true;
 	
-		ChatterboxJump(chatterbox, "5");
+		// ChatterboxJump(chatterbox, "5");
 	}
 
 	function goto_room_class_1_discussion() {
