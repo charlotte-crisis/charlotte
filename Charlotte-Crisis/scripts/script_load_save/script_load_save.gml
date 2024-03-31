@@ -34,11 +34,18 @@ function save_game(){
 		// TODO
 	}
 	
+	// Camera
+	ini_write_real("camera", "x", view_get_xport(0));
+	ini_write_real("camera", "y", view_get_yport(0));
+	
 	/// Level
 	ini_write_string("level", "room", room_get_name(room)); // room name as string
 	ini_write_string("level", "chatterbox_source", ChatterboxGetCurrentSource(obj_chatterbox_control.chatterbox));
+	
 	if (obj_player.is_talking) {
 		ini_write_string("level", "chatterbox_node", ChatterboxGetCurrent(obj_chatterbox_control.chatterbox));	
+	} else { // Overwrite
+		ini_write_string("level", "chatterbox_node", "");	
 	}
 	
 	// Close at the end of it
@@ -61,7 +68,7 @@ function load_game() {
 		ChatterboxLoadFromFile(_source);
 		chatterbox = ChatterboxCreate(_source);
 		if (_node != "") {
-			chatterbox_set(_node);	
+			chatterbox_set(_node);
 		}
 	}
 	
@@ -84,6 +91,12 @@ function load_game() {
 		is_interacting = ini_read_real("player", "is_interacting", is_interacting);
 		is_sitting = ini_read_real("player", "is_sitting", is_sitting);
 	}
+	
+	// Camera ================================================================
+	camera_set_view_pos(view_camera[0],
+			ini_read_real("camera", "x", 0),
+			ini_read_real("camera", "y", 0)
+		);
 	
 	/// Stats ================================================================
 	instance_destroy(obj_stats);
