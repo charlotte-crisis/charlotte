@@ -239,6 +239,7 @@
     {"id":{"name":"script_drawing","path":"scripts/script_drawing/script_drawing.yy",},},
     {"id":{"name":"script_getters","path":"scripts/script_getters/script_getters.yy",},},
     {"id":{"name":"script_goto_functions","path":"scripts/script_goto_functions/script_goto_functions.yy",},},
+    {"id":{"name":"script_load_save","path":"scripts/script_load_save/script_load_save.yy",},},
     {"id":{"name":"script_npc_relationships","path":"scripts/script_npc_relationships/script_npc_relationships.yy",},},
     {"id":{"name":"script_player_stats","path":"scripts/script_player_stats/script_player_stats.yy",},},
     {"id":{"name":"script_sprite_getters","path":"scripts/script_sprite_getters/script_sprite_getters.yy",},},
