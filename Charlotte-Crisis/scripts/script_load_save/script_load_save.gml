@@ -64,6 +64,9 @@ function save_game(){
 		ini_write_string("level", "chatterbox_node", "");	
 	}
 	
+	// Export chatterbox variables
+	ini_write_string("chatterbox", "variables", ChatterboxVariablesExport());
+	
 	// Close at the end of it
 	ini_close();
 }
@@ -87,6 +90,10 @@ function load_game() {
 			chatterbox_set(_node);
 		}
 	}
+	
+	// Import variables
+	var _var_json = ini_read_string("chatterbox", "variables", "");
+	ChatterboxVariablesImport(_var_json);
 	
 	/// Player ==============================================================
 	/// Destroy existing player object to create a new one
