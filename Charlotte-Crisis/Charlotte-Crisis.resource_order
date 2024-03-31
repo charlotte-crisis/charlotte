@@ -84,6 +84,7 @@
     {"name":"obj_stat_menu","order":1,"path":"objects/obj_stat_menu/obj_stat_menu.yy",},
     {"name":"obj_stats","order":1,"path":"objects/obj_stats/obj_stats.yy",},
     {"name":"obj_wall","order":4,"path":"objects/obj_wall/obj_wall.yy",},
+    {"name":"obj_load_save","order":6,"path":"objects/obj_load_save/obj_load_save.yy",},
     {"name":"rm_bedroom_1","order":5,"path":"rooms/rm_bedroom_1/rm_bedroom_1.yy",},
     {"name":"rm_bedroom_after_cca1","order":4,"path":"rooms/rm_bedroom_after_cca1/rm_bedroom_after_cca1.yy",},
     {"name":"rm_bedroom_after_class1","order":3,"path":"rooms/rm_bedroom_after_class1/rm_bedroom_after_class1.yy",},

@@ -29,6 +29,11 @@ function save_game(){
 		ini_write_real("player", "is_sitting", is_sitting);
 	}
 	
+	/// NPC Relationships
+	with (obj_npc_relationships) {
+		// TODO
+	}
+	
 	/// Level
 	ini_write_string("level", "room", room_get_name(room)); // room name as string
 	ini_write_string("level", "chatterbox_source", ChatterboxGetCurrentSource(obj_chatterbox_control.chatterbox));
@@ -41,9 +46,18 @@ function save_game(){
 function load_game() {
 	ini_open(SAVE_FILE);
 	
+	/// Room and Chatterbox =================================================
 	/// Go to room. Defaults to first level
 	var _rm_name = ini_read_string("level", "room", "rm_bedroom_menu"); 
 	fade_room(asset_get_index(_rm_name));
+	
+	instance_destroy(obj_chatterbox_control);
+	var _chatterbox_control = instance_create_layer(0, 0, "Helpers", obj_chatterbox_control);
+	with (_chatterbox_control) {
+		var _source = ini_read_string("level", "chatterbox_source", "menu.yarn");
+		var _node = ini_read_string("level", "chatterbox_node", "");
+		ChatterboxLoadFromFile(_source);
+	}
 	
 	/// Player ==============================================================
 	/// Destroy existing player object to create a new one
@@ -76,9 +90,10 @@ function load_game() {
 		charisma = ini_read_real("stats", "cha", charisma);
 		empathy = ini_read_real("stats", "emp", empathy);
 	}
-	/// Chatterbox ===========================================================
 	
 	/// Create other objects =================================================
+	instance_create_layer(0, 0, "Helpers", obj_npc_relationships); // TODO
+	instance_create_layer(0, 0, "Helpers", obj_pause_menu);
 	
 	ini_close();
 	
