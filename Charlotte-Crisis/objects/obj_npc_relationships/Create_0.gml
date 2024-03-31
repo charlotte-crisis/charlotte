@@ -1,5 +1,9 @@
 /// @description Track NPC relationships
 //  as NPC objects are not persistent
+if instance_number(object_index) > 1 {
+    instance_destroy();
+    exit;
+}
 
 npc_relationships = {
 	"A":  50, // Anthony
