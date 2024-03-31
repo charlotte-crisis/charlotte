@@ -31,7 +31,23 @@ function save_game(){
 	
 	/// NPC Relationships
 	with (obj_npc_relationships) {
-		// TODO
+		var keys = variable_struct_get_names(npc_relationships);
+		for (var i = array_length(keys)-1; i >= 0; --i) {
+		    var k = keys[i];
+		    var v = npc_relationships[$ k];
+		    /* Use k and v here */
+			// write key (name) = value (relationship)
+			ini_write_real("npc_relationships", k, v);
+		}
+		
+		keys = variable_struct_get_names(npc_knows);
+		for (var i = array_length(keys)-1; i >= 0; --i) {
+		    var k = keys[i];
+		    var v = (npc_knows[$ k]) ? 1 : 0; //map true/false to 1/0
+		    /* Use k and v here */
+			// write key (name) = value (relationship)
+			ini_write_real("npc_knows", k, v);
+		}
 	}
 	
 	// Camera
@@ -111,7 +127,24 @@ function load_game() {
 	}
 	
 	/// Create other objects =================================================
-	instance_create_layer(0, 0, "Helpers", obj_npc_relationships); // TODO
+	instance_destroy(obj_npc_relationships);
+	var _npc_relationships = instance_create_layer(0, 0, "Helpers", obj_npc_relationships);
+	with (_npc_relationships) {
+		var keys = variable_struct_get_names(npc_relationships);
+		for (var i = array_length(keys)-1; i >= 0; --i) {
+		    var k = keys[i];
+			var v = ini_read_real("npc_relationships", k, 50);
+		    npc_relationships[$ k] = v;
+		}
+		
+		keys = variable_struct_get_names(npc_knows);
+		for (var i = array_length(keys)-1; i >= 0; --i) {
+		    var k = keys[i];
+			var v = (ini_read_real("npc_knows", k, 0)) ? true : false; // map 1/0 to true/false
+		    npc_knows[$ k] = v;
+		}
+	}
+	
 	instance_create_layer(0, 0, "Helpers", obj_pause_menu);
 	
 	ini_close();
