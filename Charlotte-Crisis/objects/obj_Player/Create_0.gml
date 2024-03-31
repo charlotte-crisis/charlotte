@@ -1,5 +1,9 @@
 /// @description Initialise variables
 // You can write your code in this editor
+if instance_number(object_index) > 1 {
+    instance_destroy();
+    exit;
+}
 
 horizontal_speed = 0;
 vertical_speed = 0;

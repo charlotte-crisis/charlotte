@@ -37,7 +37,9 @@ function save_game(){
 	/// Level
 	ini_write_string("level", "room", room_get_name(room)); // room name as string
 	ini_write_string("level", "chatterbox_source", ChatterboxGetCurrentSource(obj_chatterbox_control.chatterbox));
-	ini_write_string("level", "chatterbox_node", ChatterboxGetCurrent(obj_chatterbox_control.chatterbox));
+	if (obj_player.is_talking) {
+		ini_write_string("level", "chatterbox_node", ChatterboxGetCurrent(obj_chatterbox_control.chatterbox));	
+	}
 	
 	// Close at the end of it
 	ini_close();
@@ -49,7 +51,7 @@ function load_game() {
 	/// Room and Chatterbox =================================================
 	/// Go to room. Defaults to first level
 	var _rm_name = ini_read_string("level", "room", "rm_bedroom_menu"); 
-	fade_room(asset_get_index(_rm_name));
+	room_goto(asset_get_index(_rm_name)); // Do not use fade_room
 	
 	instance_destroy(obj_chatterbox_control);
 	var _chatterbox_control = instance_create_layer(0, 0, "Helpers", obj_chatterbox_control);
@@ -57,6 +59,10 @@ function load_game() {
 		var _source = ini_read_string("level", "chatterbox_source", "menu.yarn");
 		var _node = ini_read_string("level", "chatterbox_node", "");
 		ChatterboxLoadFromFile(_source);
+		chatterbox = ChatterboxCreate(_source);
+		if (_node != "") {
+			chatterbox_set(_node);	
+		}
 	}
 	
 	/// Player ==============================================================
