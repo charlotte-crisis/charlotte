@@ -7,11 +7,19 @@ We also host the game on HTML5 on our github page: https://charlotte-crisis.gith
 
 Gamemaker project is under the file `Charlotte-Crisis`
 
+# Controls
 Arrow keys left and right to move.
-Space to advance dialogue or interact with NPCs when not talking.
-Space to interact with interactables such as furniture.
+Space to advance dialogue
+Up Arrow to interact with NPCs or Interactables.
+Esc to pause the game.
 
-Press arrow up when standing by a door to travel.
+In menus: Arrow keys to select, Space to confirm
 
-For testing: Press enter to skip through dialogue
+## Debug Controls:
+Press enter to skip through dialogue
 Stops at the next option.
+
+S to Save
+L to Load
+
+P to skip to the end of a node.
