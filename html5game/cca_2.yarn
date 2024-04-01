@@ -876,3 +876,11 @@ Well, that was certainly a furious argument.
 You feel... different, having gone through it all. (+30 XP)
 <<goto_room_bedroom()>>
 ===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 3160,360
+__PrivCrochet_tags: 
+title: debug_end
+---
+Skipped to the end.
+<<jump exit>>
+===

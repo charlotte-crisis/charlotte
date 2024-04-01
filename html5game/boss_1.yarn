@@ -4,9 +4,9 @@ __PrivCrochet_position: 39,236
 __PrivCrochet_tags: 
 title: 1
 ---
-Sister: "Charles."
 <<set $start_gender_meter = getGenderMeter()>>
 <<set $start_sis_rs = getRelationship("Si")>>
+Sister: "Charles."
 You: "Hi, sis."
 Sister: "What... are you wearing?" <<if $name == "Charlotte">>
 Sister: "I have so many questions."
@@ -975,4 +975,12 @@ Sister: "So, at the end of it all..."
         <<jump ending_5>>
     <<endif>>
 <<endif>>
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 2000,720
+__PrivCrochet_tags: 
+title: debug_end
+---
+Skipped to the end.
+<<jump 7>>
 ===

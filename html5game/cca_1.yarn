@@ -953,3 +953,11 @@ Nadia: "I'm still in the work-in-progress stage, though, so bear with me!"
         Nadia: "Please... don't intrude on my work. I'll show it when I'm ready."
     <<endif>>
 ===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2680,240
+__PrivCrochet_tags: 
+title: debug_end
+---
+Skipped to the end.
+<<jump end>>
+===

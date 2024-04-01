@@ -1266,3 +1266,11 @@ Well, you've chosen your slogan.
 May it bring you peace, confidence, good vibes, whatever feelings you want.
 If you're ready, you can leave the room, or you can hang around to talk.
 ===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 40,880
+__PrivCrochet_tags: 
+title: debug_end
+---
+Skipped to the end.
+<<jump 6_Exit>>
+===

@@ -903,3 +903,11 @@ Sage: "We live in a society."
 Joanne: "That's basically a non-answer. Obviously it's society, but what part of it?"
 <<jump 8_options>>
 ===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1360,-240
+__PrivCrochet_tags: 
+title: debug_end
+---
+Skipped to the end.
+<<jump 13>>
+===

@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -93,-202
+__PrivCrochet_position: -80,-200
 __PrivCrochet_tags: 
 title: 1
 ---
@@ -1029,7 +1029,7 @@ Well, this is it. // In case, to ensure the option shows up. It may not be neede
     <<endif>>
 ===
 __PrivCrochet_colorID: 3
-__PrivCrochet_position: 644,-118
+__PrivCrochet_position: 640,-120
 __PrivCrochet_tags: 
 title: 6
 ---
@@ -1063,4 +1063,12 @@ Charlotte: "And I need your courage, your buy-in, before we can proceed."
     Charlotte: "And when you inevitably dredge me up again, with all the shame and hatred that follows..."
     Charlotte: "Just know that this could have been a LOT easier."
 <<stop>>
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: -80,40
+__PrivCrochet_tags: 
+title: debug_end
+---
+Uhhh I dont know which one's the end so I'm going to put you back at the start
+<<jump 1>>
 ===
