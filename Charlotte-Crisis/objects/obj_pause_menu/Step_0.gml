@@ -21,6 +21,15 @@ if (is_open) {
 		if (select_row == 0) {
 			obj_player.set_is_interacting(false);
 			is_open = false;	
+		} else if (select_row == 2) {
+			save_game();
+			is_open = false;
+			// get rid of EVERYTHING
+			instance_destroy(obj_chatterbox_control);
+			obj_player.visible = false;
+			instance_destroy(obj_stats);
+			instance_destroy(); // self
+			fade_room(rm_main_menu);
 		}
 	}
 }

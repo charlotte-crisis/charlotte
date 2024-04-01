@@ -103,6 +103,7 @@ function load_game() {
 	var _player = instance_create_layer(0, 0, "Player", obj_player, {
 		x: ini_read_real("player", "x", 74),
 		y: ini_read_real("player", "y", 74),
+		visible: true,
 	});
 	with (_player) {
 		gender = ini_read_real("player", "gender", 1);
