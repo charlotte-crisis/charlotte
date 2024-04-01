@@ -25,7 +25,7 @@ function save_game(){
 		ini_write_real("player", "current_clothes_1", current_clothes[1]);
 		ini_write_real("player", "current_clothes_2", current_clothes[2]);
 		ini_write_real("player", "is_talking", is_talking);
-		ini_write_real("player", "is_interacting", is_interacting);
+		// ini_write_real("player", "is_interacting", is_interacting);
 		ini_write_real("player", "is_sitting", is_sitting);
 	}
 	
@@ -111,7 +111,7 @@ function load_game() {
 		current_clothes[1] = ini_read_real("player", "current_clothes_1", current_clothes[1]);
 		current_clothes[2] = ini_read_real("player", "current_clothes_2", current_clothes[2]);
 		is_talking = ini_read_real("player", "is_talking", is_talking);
-		is_interacting = ini_read_real("player", "is_interacting", is_interacting);
+		// is_interacting = ini_read_real("player", "is_interacting", is_interacting);
 		is_sitting = ini_read_real("player", "is_sitting", is_sitting);
 	}
 	
