@@ -819,3 +819,11 @@ Charlotte: "So, in conclusion..."
 (+30 XP)
 <<stop>>
 ===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 3000,400
+__PrivCrochet_tags: 
+title: debug_end
+---
+Skipped to the end.
+<<jump 5>>
+===

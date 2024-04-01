@@ -850,3 +850,11 @@ Sage: "Even when it feels impossible to be impartial about something that's actu
     You feel an itching discomfort in your chest. (-5% confidence)
 <<stop>>
 ===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1360,0
+__PrivCrochet_tags: 
+title: debug_end
+---
+Skipped to the end.
+<<jump 16>>
+===

@@ -960,3 +960,11 @@ Joanne: "Yeah."
 Sage looks like she wants to continue arguing, but she nods anyway.
 <<jump 12>>
 ===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 3360,1200
+__PrivCrochet_tags: 
+title: debug_end
+---
+DEBUG: Skipped to the end.
+<<jump 12>>
+===

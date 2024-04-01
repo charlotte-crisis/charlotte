@@ -856,7 +856,7 @@ Helen: "Any final thoughts?"
     Helen: "For the thousandth time, I'm doing this for your own good."
 
 <<set $end_helen_rs = getRelationship("H")>>
-<<if $end_helen_rs < 31>>
+<<if $end_helen_rs <= 30>>
     Helen: "Guess that's it. See ya."
 <<else>>
     Helen: "Honestly though? Crossdressers are still rare in Singapore."
@@ -936,4 +936,12 @@ title: 7_3_3
 Helen: "Depends on when you want to solve the problem with your mother."
 Helen: "You could mix and match. Hide for now, prepare for compromise, and if all else fails, move out."
 <<jump 7_3>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2640,160
+__PrivCrochet_tags: 
+title: debug_end
+---
+Skipped to the end.
+<<jump 8>>
 ===
