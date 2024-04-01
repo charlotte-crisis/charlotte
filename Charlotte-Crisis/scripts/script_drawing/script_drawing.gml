@@ -87,6 +87,8 @@ function draw_speaker_portrait(name) {
 	}
 	
 	switch (name) {
+		case "DEBUG":
+		case "TIP":
 		case "TUTORIAL":
 			draw_sprite_ext(spr_tutorial_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 			break;
