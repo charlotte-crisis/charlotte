@@ -44,6 +44,16 @@
 	function goto_splash_1() {
 		fade_room(rm_splash_1);	
 	}
+	
+	function goto_splash_boss1(_num) {
+		if (_num == 1) {
+			fade_room(rm_splash_boss1_1);	
+		} else if (_num == 2) {
+			fade_room(rm_splash_boss1_2);	
+		} else {
+			fade_room(rm_splash_boss1_3);	
+		}
+	}
 
 
 #region Classroom Gotos

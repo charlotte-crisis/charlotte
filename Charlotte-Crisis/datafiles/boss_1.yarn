@@ -131,6 +131,7 @@ __PrivCrochet_tags:
 title: ending_1
 ---
 You spend the remaining time with Sister making small talk about life.
+<<goto_black_room()>>
 Actually, you know what? Why am I, Charlotte, tolerating this?
 I know you can't make that promise.
 If you just said this so you could end this interaction faster, then you lied to her.
@@ -890,17 +891,21 @@ Sister: "You're not going to, you know, transition, right?"
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2276,236
+__PrivCrochet_position: 2280,240
 __PrivCrochet_tags: 
 title: ending_2
 ---
+<<goto_splash_boss1(3)>>
 Sister: "You have my support."
+<<goto_splash_boss1(2)>>
 Sister: "But there are things that I cannot help you with, okay?"
 Sister: "Please. Go find people like you."
 Sister: "Ask them for their stories. For proof that there's a path out for you too."
 Sister: "Oh, one last thing..."
+<<goto_splash_boss1(3)>>
 Sister: "Do you have a female name?"
 You: "Yep. You can call me..."
+<<goto_black_room()>>
 You: "Charlotte."
 //sick ass title drop?//
 
@@ -909,12 +914,14 @@ You: "Charlotte."
 <<goto_room_bedroom>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2280,479
+__PrivCrochet_position: 2280,480
 __PrivCrochet_tags: 
 title: ending_3
 ---
+<<goto_splash_boss1(3)>>
 Sister: "Thank you for making this easy for Mother."
 Sister: "I know it must have been a hard thing to do."
+<<goto_black_room()>>
 Sister: "But trust me, we'll all be better off if you just stop."
 
 <<addExperience>>
@@ -926,8 +933,10 @@ __PrivCrochet_position: 2280,720
 __PrivCrochet_tags: 
 title: ending_4
 ---
+<<goto_splash_boss1(1)>>
 Sister: "I'm sorry. I can't say you have my support."
 Sister: "Whatever you choose to do, know that it'll have consequences."
+<<goto_black_room()>>
 Sister: "Just don't do anything you'll regret."
 
 <<addExperience>>
@@ -939,8 +948,10 @@ __PrivCrochet_position: 2520,480
 __PrivCrochet_tags: 
 title: ending_5
 ---
+<<goto_splash_boss1(2)>>
 Sister: "Finally. It's so difficult to talk you out of these ideas."
 Sister: "I know you're my brother and all, but I need a break for a while."
+<<goto_black_room()>>
 Sister: "Please don't be so toxic to Mother, okay?"
 
 <<addExperience>>
