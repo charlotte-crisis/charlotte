@@ -9,7 +9,9 @@ title: 1
 Sister: "Charles."
 You: "Hi, sis."
 <<set_camera_boss1()>>
-Sister: "What... are you wearing?" <<if $name == "Charlotte">>
+<<if $name == "Charlotte">>
+    Sister: "What... are you wearing?" 
+<<endif>>
 Sister: "I have so many questions."
 
 -> "I will try my best to answer."
