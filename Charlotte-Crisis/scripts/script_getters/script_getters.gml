@@ -27,6 +27,7 @@ function get_room_name(_stage) {
 	switch(room) {
 		case rm_class_1:
 		case rm_class_1_discussion:
+		case rm_class_1_discussion_nosage:
 		case rm_class_1_seated:	
 			return string("Week {0} - Class", _week);
 		case rm_cca_1:

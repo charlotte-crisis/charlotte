@@ -79,7 +79,8 @@
 		obj_chatterbox_control.chatterbox = ChatterboxCreate("class_2.yarn");
 		ChatterboxJump(chatterbox, "1");
 	}
-
+	
+	// Auxillary functions. Can be reused
 	function goto_room_class_1_seated(){
 		fade_room(rm_class_1_seated);
 	
@@ -97,6 +98,23 @@
 		obj_player.y = 75;
 		obj_player.facing_direction = -1;
 		obj_player.is_sitting = true;
+	}
+	
+	function goto_room_class_1_discussion_sageleft() {
+		fade_room(rm_class_1_discussion_sageleft);
+		//obj_player.x = 203;
+		//obj_player.y = 75;
+		//obj_player.facing_direction = -1;
+		//obj_player.is_sitting = true;
+	}
+
+	
+	function goto_room_class_1_discussion_nosage() {
+		fade_room(rm_class_1_discussion_nosage);
+		//obj_player.x = 203;
+		//obj_player.y = 75;
+		//obj_player.facing_direction = -1;
+		//obj_player.is_sitting = true;
 	}
 
 #endregion

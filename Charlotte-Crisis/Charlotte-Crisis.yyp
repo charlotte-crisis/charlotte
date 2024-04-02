@@ -153,7 +153,9 @@
     {"id":{"name":"rm_cca_1_seated_18","path":"rooms/rm_cca_1_seated_18/rm_cca_1_seated_18.yy",},},
     {"id":{"name":"rm_cca_1_seated","path":"rooms/rm_cca_1_seated/rm_cca_1_seated.yy",},},
     {"id":{"name":"rm_cca_1","path":"rooms/rm_cca_1/rm_cca_1.yy",},},
+    {"id":{"name":"rm_class_1_discussion_nosage","path":"rooms/rm_class_1_discussion_nosage/rm_class_1_discussion_nosage.yy",},},
     {"id":{"name":"rm_class_1_discussion","path":"rooms/rm_class_1_discussion/rm_class_1_discussion.yy",},},
+    {"id":{"name":"rm_class_1_discussion_sageleft","path":"rooms/rm_class_1_discussion_sageleft/rm_class_1_discussion_sageleft.yy",},},
     {"id":{"name":"rm_class_1_seated","path":"rooms/rm_class_1_seated/rm_class_1_seated.yy",},},
     {"id":{"name":"rm_class_1","path":"rooms/rm_class_1/rm_class_1.yy",},},
     {"id":{"name":"rm_hangout_a","path":"rooms/rm_hangout_a/rm_hangout_a.yy",},},
@@ -480,6 +482,8 @@
     {"roomId":{"name":"rm_splash_boss1_1","path":"rooms/rm_splash_boss1_1/rm_splash_boss1_1.yy",},},
     {"roomId":{"name":"rm_splash_boss1_2","path":"rooms/rm_splash_boss1_2/rm_splash_boss1_2.yy",},},
     {"roomId":{"name":"rm_splash_boss1_3","path":"rooms/rm_splash_boss1_3/rm_splash_boss1_3.yy",},},
+    {"roomId":{"name":"rm_class_1_discussion_nosage","path":"rooms/rm_class_1_discussion_nosage/rm_class_1_discussion_nosage.yy",},},
+    {"roomId":{"name":"rm_class_1_discussion_sageleft","path":"rooms/rm_class_1_discussion_sageleft/rm_class_1_discussion_sageleft.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

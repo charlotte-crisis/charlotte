@@ -47,8 +47,10 @@ You: "Morning!"
 <<else>>
     <<if visited("4") <= 1>> // only do it once
         <<changeRelationship("J", 5)>>
+        Joanne: "Morning!" (+5% Joanne relationship)
+    <<else>>
+        Joanne: "Morning!"
     <<endif>>
-    Joanne: "Morning!" (+5% Joanne relationship)
     You: "How was your weekend?"
     Joanne: "Good! Just watched a movie with my boyfriend."
 
@@ -69,7 +71,7 @@ Do you want to sit down?
 
 -> No (go back)
 
--> Yes (continue scene)
+-> Yes (continue) #continue
     <<jump 5>>
 ===
 __PrivCrochet_colorID: 0
@@ -77,6 +79,7 @@ __PrivCrochet_position: 640,280
 __PrivCrochet_tags: 
 title: 5
 ---
+<<goto_room_class_1_seated()>>
 Prof Lim: "Settle down, everyone!"
 Prof Lim: "Okay, today, the topic will be on Gender in Beauty."
 Prof Lim: "First, we shall start with a short video."
@@ -175,7 +178,7 @@ Joanne: "It's not like it invented the beauty standards by itself. There's a rea
     Sage: "I agree, it makes you feel quite awful making these judgements about others' appearances." 
     Chenjie: "Yeah... Like, who are we to say if someone is beautiful or not?"
     <<changeRelationship("J", 5)>>
-    Joanne: "It's just the harsh truth. We just have to live with the body we have." // (+5% Joanne relationship)
+    Joanne: "It's just the harsh truth. We just have to live with the body we have." (+5% Joanne relationship)
     <<addExperience(5)>>
     Joanne: "It's all just the luck of the draw." (+5 XP)
     <<changeConfidence(-5)>>
@@ -183,11 +186,11 @@ Joanne: "It's not like it invented the beauty standards by itself. There's a rea
 
 -> "No, they are definitely beautiful both before and after."
     <<changeRelationship("J", -5)>>
-    Joanne: "There's really no need to pretend here. It's just reality." // (-5% Joanne relationship)
+    Joanne: "There's really no need to pretend here. It's just reality." (-5% Joanne relationship)
     Joanne: "We are here to discuss the issue, right?"
     You: "Nope, not pretending."
     <<changeRelationship("S", -5)>>
-    Sage: "Okay then..." // (-5% Sage relationship)
+    Sage: "Okay then..." (-5% Sage relationship)
 
 -> Keep silent
     Chenjie: "Yeah... It's just such an awful thing to say though."
@@ -206,7 +209,7 @@ Chenjie: "Moving to the next question then... Who determines what beauty is?"
 <<jump 8_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1116,519
+__PrivCrochet_position: 1120,520
 __PrivCrochet_tags: 
 title: 9
 ---
@@ -322,10 +325,14 @@ Joanne: "And you get to just dress up and pretend to be a girl for fun?"
                 Joanne: "So what?  You're still speaking over real women."
                 <<changeConfidence(-5)>>
                 Joanne: "I don't care if your gender is attack helicopter or whatever. People like you should be locked up in IMH." (-5% confidence)
+
+                <<goto_black_room()>>
                 <<changeRelationship("S", -5)>>
                 Sage stands up abruptly. (-5% Sage relationship)
                 Sage: "I need to use the toilet."
                 // ((Maybe have an animation of Sage leaving the room with no dialogue.))
+
+                <<goto_room_class_1_discussion_sageleft()>>
                 Joanne: "Was what I was saying so wrong?"
                 Chenjie: "Let's... uh... just continue without her first...?"
                 <<jump 11>>
@@ -386,7 +393,7 @@ __PrivCrochet_tags:
 title: 10
 ---
 The rest of the discussion proceeds with no other major hiccups, but the atmosphere is greatly soured.
-<<goto_room_class_1_seated>>
+<<goto_room_class_1_seated()>>
 Prof Lim: "Alright, class! Let's hear what everyone has to say?"
 Prof Lim: "What about that group over there?"
 She's talking about your group.
@@ -426,6 +433,7 @@ __PrivCrochet_position: 1358,37
 __PrivCrochet_tags: 
 title: 13
 ---
+<<addExperience(5)>>
 Lecture proceeds uneventfully after that. (+ 5 XP)
 Prof Lim: "And that's it for class! Thank you, everyone."
 That's it for class today. 
@@ -437,21 +445,23 @@ Who will you walk with today?
 	Slinking away to the door, you make a quiet exit.
     <<goto_room_bus()>>
 
--> Chenjie <<if getRelationship("CJ") >= 10 >>
+// TODO: are these the correct thresholds?
+
+-> Chenjie <<if getRelationship("CJ") >= 10>>
     <<jump 14>>
 
--> Joanne <<if getRelationship("J") >= 10 >>
+-> Joanne <<if getRelationship("J") >= 10>>
     <<jump 15>>
 
--> Sage <<if getRelationship("S") >= 10 >>
+-> Sage <<if getRelationship("S") >= 10>>
     <<jump 16>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1357,517
+__PrivCrochet_position: 1360,520
 __PrivCrochet_tags: 
 title: 11
 ---
-<<goto_room_class_1_seated>>
+<<goto_room_class_1_discussion()>>
 However, Sage does not return even after the discussion.
 Prof Lim approaches your table.
 Prof Lim: "Sage has been gone for quite a while..."
@@ -474,15 +484,18 @@ __PrivCrochet_tags:
 title: 12
 ---
 //black screen//
+<<goto_black_room()>>
 Joanne leaves to find Sage.
 Sage might not want to see Joanne... It looked like she left because of what Joanne said.
 Sure enough, a minute later, Joanne comes back alone.
-//classroom screen//
+// classroom without sage//
+<<goto_room_class_1_discussion_nosage()>>
 Joanne: "She said she'll be back in a while."
 Chenjie: "How is she?"
 Joanne: "... She sounded quite upset... I don't know..."
 When Sage returns to the class, Prof Lim is explaining lookism in South Korea.
 She looks a bit exhausted.
+<<goto_room_class_1_discussion()>>
 
 -> "Are you okay?"
     <<if getRelationship("S") >= 40>>
@@ -490,13 +503,13 @@ She looks a bit exhausted.
         Sage: "I'm better though. Thanks for worrying."
         You: "Okay... If there's anything you need me to do for you, let me know?"
         <<changeRelationship("S", 5)>>
-        Sage nods. // (+5% Sage relationship)
+        Sage nods. (+5% Sage relationship)
     <<else>>
         Sage: "Yeah. Just a stomachache."
         Sage: "Must have eaten something bad this morning."
         You: "Get well soon."
         <<changeRelationship("S", 5)>>
-        Sage: "Thanks." // (+5% Sage relationship)
+        Sage: "Thanks." (+5% Sage relationship)
     <<endif>>
 
 -> Leave her alone
@@ -808,7 +821,7 @@ Joanne: "And makeup is actually so bad for your skin. Just caking your face with
         You: "Wearing makeup helps send a signal of femininity. And contouring my face helps."
         Chenjie: "I mean, it makes sense that wearing makeup is a confidence booster."
         <<changeRelationship("S", 5)>>
-        Sage: "It kind of sucks that you have to put on makeup to even have your femininity acknowledged." // (+5% Sage relationship)
+        Sage: "It kind of sucks that you have to put on makeup to even have your femininity acknowledged." (+5% Sage relationship)
         You: "I feel a huge pressure to apply makeup perfectly too."
         You: "Because if I don't I'm not doing femininity well enough to qualify."
         <<addExperience(5)>>
