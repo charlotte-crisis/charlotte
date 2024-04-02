@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 13,-63
+__PrivCrochet_position: 0,-40
 __PrivCrochet_tags: 
 title: 1
 ---
@@ -675,7 +675,7 @@ Vera: "That's just your personal biases getting in the way."
 <<jump 9>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2160,239
+__PrivCrochet_position: 2160,240
 __PrivCrochet_tags: 
 title: 9
 ---
@@ -683,6 +683,7 @@ Eleanor: "Well... thanks for the discussions, everyone."
 Eleanor: "I know we've all been through a lot today, so please go home and don't think too much about it, okay?"
 Eleanor: "You can always text me if you want to talk about anything."
 // (from here, the NPCs can still be talked to, only if you have a Neutral/Good relationship with them)
+<<goto_room_cca_2_end()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2400,240
@@ -853,7 +854,7 @@ You feel... different, having gone through it all. (+30 XP)
 <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 229,-59
+__PrivCrochet_position: 240,-40
 __PrivCrochet_tags: 
 title: anthony_pre
 ---
@@ -866,7 +867,7 @@ title: anthony_pre
     Anthony: "If I'm bitchless in real life, who can judge me for wanting a waifu? 2D over 3D any day."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 446,-56
+__PrivCrochet_position: 480,-40
 __PrivCrochet_tags: 
 title: vera_pre
 ---
@@ -883,14 +884,15 @@ Vera: "Same stuff. Just scrolling through Pinterest. And Instagram. And TikTok."
     Vera: "I learn from trans content, at least."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 260,234
+__PrivCrochet_position: 240,240
 __PrivCrochet_tags: 
-title: Node
+title: chair
 ---
 Do you wish to sit? (Will start the session)
 
 -> No (go back)
 
--> Yes (continue...) #continue
+-> Yes (continue...) #continue 
+    <<goto_room_cca_2_seated()>>
 //spawn in Nadia and Eleanor
 ===

@@ -235,12 +235,30 @@ function goto_room_bedroom_afterHangout(){
 	}
 	
 	function goto_room_cca_2(){
-		fade_room(rm_cca_1);
+		fade_room(rm_cca_2);
 		set_player_position(X_CCA_DOOR, Y_HEIGHT, 1)
 	
 		ChatterboxLoadFromFile("cca_2.yarn");
 		obj_chatterbox_control.chatterbox = ChatterboxCreate("cca_2.yarn");
 		ChatterboxJump(chatterbox, "1");
+	}
+	
+	function goto_room_cca_2_seated(){
+		fade_room(rm_cca_2_seated);
+		obj_player.x = X_CCA_SEATED;
+		obj_player.y = Y_HEIGHT;
+		obj_player.facing_direction = 1;
+		obj_player.is_sitting = true;
+	
+		ChatterboxJump(chatterbox, "2");
+	}
+	
+	function goto_room_cca_2_end(){
+		fade_room(rm_cca_2_end);
+		obj_player.x = X_CCA_SEATED;
+		obj_player.y = Y_HEIGHT;
+		obj_player.facing_direction = 1;
+		obj_player.is_sitting = false;
 	}
 #endregion
 
