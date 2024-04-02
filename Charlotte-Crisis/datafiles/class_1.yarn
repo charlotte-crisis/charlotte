@@ -297,7 +297,7 @@ You: "Yeah, so feminism to me is..."
 <<jump 19>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2717,357
+__PrivCrochet_position: 2717,358
 __PrivCrochet_tags: 
 title: 12
 ---
@@ -313,6 +313,8 @@ Finally, the end of class. This class had been strangely draining.
 
 TIP: If your relationship with someone in class is good enough, you can choose to walk to the bus stop with them.
 Who will you walk with today?
+
+<<incrementStage()>>
 
 -> Go back alone.
     You don't seem comfortable enough to talk more with any of your classmates.
