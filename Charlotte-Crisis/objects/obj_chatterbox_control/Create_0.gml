@@ -67,6 +67,7 @@ BG_ALPHA = 0.9;
 	
 	/// Door Functions here
 	ChatterboxAddFunction("goto_black_room", goto_black_room);
+	ChatterboxAddFunction("goto_splash_1", goto_splash_1);
 	ChatterboxAddFunction("goto_room_bedroom_day", goto_room_bedroom_day);
 	
 	ChatterboxAddFunction("goto_room_class_1", goto_room_class_1);

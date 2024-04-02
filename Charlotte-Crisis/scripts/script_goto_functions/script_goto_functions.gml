@@ -35,10 +35,15 @@
 }
 #endregion
 
-// To be used as long as you want to transition to a black room
-function goto_black_room() {
-	fade_room(rm_black_screen);	
-}
+#region Splash Rooms
+	// To be used as long as you want to transition to a black room
+	function goto_black_room() {
+		fade_room(rm_black_screen);	
+	}
+	
+	function goto_splash_1() {
+		fade_room(rm_splash_1);	
+	}
 
 
 #region Classroom Gotos
