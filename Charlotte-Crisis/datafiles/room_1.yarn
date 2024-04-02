@@ -114,7 +114,7 @@ TUTORIAL: Repeat this tutorial?
 -> Yes
     <<jump tut_wardrobe>>
 
--> No (Continue)
+-> No (Continue) #continue
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1120,320

@@ -29,9 +29,10 @@
 	/// @function fade_room(_room)
 	/// @param _room				The target room to move to
 	/// @param {Bool} _change_room	true if there is a room to change to
-	function fade_room(_room, _change_room = true) {
+	function fade_room(_room, _change_room = true, _colour = c_black) {
 		// Create fade object at top left corner at highest depth
 		var _inst = instance_create_depth(0, 0, 0, obj_fade);
+		_inst.FADE_COLOUR = _colour;
 		_inst.target_room = _room;
 		_inst.change_room = _change_room;
 }
@@ -122,6 +123,14 @@ function goto_room_bedroom(){
 	ChatterboxJump(chatterbox, "after");
 }
 
+function goto_room_bedroom_frombed() {
+	fade_room(rm_bedroom_day, ,c_white);
+	obj_player.x = 30;
+	obj_player.y = 74;
+	obj_player.facing_direction = 1;
+	ChatterboxJump(chatterbox, "0");
+}
+
 function goto_room_bedroom_after_class2(){
 	fade_room(rm_bedroom_after_class1);
 	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
@@ -143,19 +152,6 @@ function goto_room_bedroom_after_cca(){
 	ChatterboxLoadFromFile("room_1_after_cca.yarn");
 	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_cca.yarn");
 	ChatterboxJump(chatterbox, "0");
-}
-
-function goto_room_bedroom_frombed() {
-	fade_room(room, false);
-	obj_player.x = 30;
-	obj_player.y = 74;
-	obj_player.facing_direction = 1;
-	ChatterboxJump(chatterbox, "0");
-	
-	// Change background to day
-	var lay_id = layer_get_id("Background");
-	var back_id = layer_background_get_id(lay_id);
-	layer_background_sprite(back_id, spr_hostel_bars);
 }
 
 function goto_room_bedroom_afterHangout(){
