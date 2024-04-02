@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 39,236
+__PrivCrochet_position: 40,240
 __PrivCrochet_tags: 
 title: 1
 ---
@@ -8,6 +8,7 @@ title: 1
 <<set $start_sis_rs = getRelationship("Si")>>
 Sister: "Charles."
 You: "Hi, sis."
+<<set_camera_boss1()>>
 Sister: "What... are you wearing?" <<if $name == "Charlotte">>
 Sister: "I have so many questions."
 

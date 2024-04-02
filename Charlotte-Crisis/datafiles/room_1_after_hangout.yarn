@@ -13,23 +13,13 @@ __PrivCrochet_position: 680,200
 __PrivCrochet_tags: 
 title: bed
 ---
+Tomorrow, you will be having a talk with your sister.
 Going to bed will continue to the next scene. You may still change your stats or clothes. Do you wish to continue?
 
 -> Go back
     
 -> Yes (continue) #continue
     <<goto_room_boss_1()>>
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 680,-40
-__PrivCrochet_tags: 
-title: 1
----
-It's the end of a long week.
-But you're going home tomorrow, where you'll see your sister.
-(You can level up at your desk or change your clothes at your wardrobe.)
-
-// you shouldnt be able to see this in game
 ===
 __PrivCrochet_colorID: 8
 __PrivCrochet_position: 920,-40
