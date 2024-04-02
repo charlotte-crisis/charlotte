@@ -2,50 +2,32 @@
 # if you've already visited then it will show the concise version.
 # Interacting with mirror
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 903,124
+__PrivCrochet_position: 640,160
 __PrivCrochet_tags: 
 title: 0
 ---
-After a short nap, you hop out of bed.
 <<set $canGoToBed = false>>
 
+It's finally a Friday.
 You kind of feel like going out.
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1159,202
-__PrivCrochet_tags: 
-title: 1
----
-Who are you today? (Use the Up and Down arrow keys to choose an option, and spacebar to continue.)
-
--> Charles
-    <<set $name = "Charles">>
-    <<setGender(0)>>    
-    You put on a T-shirt and jeans.
-    
--> Charlotte
-    <<set $name = "Charlotte">>
-    <<setGender(1)>>
-    You put on a dress. It fits you well, which has always been part of what motivated you to continue this hobby in the first place.
-
-(You can interact with the mirror again if you change your mind.)
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1400,200
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 1160,200
 __PrivCrochet_tags: 
 title: door
 ---
 You feel like hanging out with a friend this week, for a quick meal.
-Who will you ask out? #temporarily dont put relationship (normally has to be above 30)
--> Anthony
+Who will you ask out? 
+// TODO, add hangout menu. At least then we dont have to copy paste this again and again
+-> Anthony <<if getRelationship("A") >= 30>>
     You call Anthony up for a hangout.
     <<goto_room_hangout_a()>>
 
--> Nadia
+-> Nadia <<if getRelationship("N") >= 30>>
     You call Nadia up for a hangout.
     <<goto_room_hangout_n()>>
 
--> Vera 
+-> Vera <<if getRelationship("V") >= 30>>
     You call Vera up for a hangout.
     <<goto_room_hangout_v()>>
 
@@ -54,31 +36,51 @@ Who will you ask out? #temporarily dont put relationship (normally has to be abo
     You can stay in today, but please try to understand and befriend people around you...
     <<goto_room_bedroom_afterHangout()>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 920,440
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 880,440
 __PrivCrochet_tags: 
 title: 0_revisit
 ---
 Well, no use going back to bed.
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 646,190
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 640,440
 __PrivCrochet_tags: 
 title: bed
 ---
-<<jump 0_revisit>>
+<<if $canGoToBed == true>>
+    // start the next scene
+    <<goto_black_room()>>
+    Using your phone again in bed, you see another status update from Sister.
+    SISTER: "Why can't people just be normal?"
+    This worries you, of course. There are so many ways to interpret that.
+    You can feel her annoyance, her frustration, even through a simple line of text.
+    It's a wonder your bedsheets haven't been pulled off, what with all this tossing and turning.
+    <<goto_room_bedroom_day()>>
+    <<jump 0>>
+<<else>>
+    <<jump 0_revisit>>
+<<endif>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1174,435
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 1160,440
 __PrivCrochet_tags: 
 title: desk
 ---
 <<openStatMenu()>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1430,442
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 1400,440
 __PrivCrochet_tags: 
 title: wardrobe
 ---
 <<openWardrobeMenu()>>
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 640,-160
+__PrivCrochet_tags: 
+title: after
+---
+Welcome back! Remember to interact with your BED, CLOSET and DESK.
+<<set $canGoToBed = true>>
 ===

@@ -111,19 +111,21 @@ function goto_black_room() {
 
 #region Bedrooms
 
-function goto_room_bedroom(){
-	fade_room(rm_bedroom_night);
-	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
-
-	ChatterboxLoadFromFile("room_1.yarn");
-	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1.yarn");
-	ChatterboxJump(chatterbox, "after");
-}
-
+/// @description Usable at any time to transition to day.
 function goto_room_bedroom_day() {
 	fade_room(rm_bedroom_day, ,c_white);
 	set_player_position(X_HOUSE_DOOR, Y_HEIGHT, 1)
 }
+
+function goto_room_bedroom(){
+	fade_room(rm_bedroom_night);
+	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
+
+	ChatterboxLoadFromFile("room_1_after_class.yarn");
+	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_class.yarn");
+	ChatterboxJump(chatterbox, "after");
+}
+
 
 function goto_room_bedroom_frombed() {
 	fade_room(rm_bedroom_day, ,c_white);
@@ -148,12 +150,12 @@ function goto_room_bedroom_after_class2(){
 }
 
 function goto_room_bedroom_after_cca(){
-	fade_room(rm_bedroom_after_cca1);
+	fade_room(rm_bedroom_night);
 	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
 	
 	ChatterboxLoadFromFile("room_1_after_cca.yarn");
 	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_cca.yarn");
-	ChatterboxJump(chatterbox, "0");
+	ChatterboxJump(chatterbox, "after");
 }
 
 function goto_room_bedroom_afterHangout(){
