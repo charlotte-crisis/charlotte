@@ -37,6 +37,12 @@
 }
 #endregion
 
+	// To be used as long as you want to transition to a black room
+	function goto_black_room() {
+		fade_room(rm_black_screen);	
+	}
+
+
 #region Classroom Gotos
 	function goto_room_class_1(){
 		fade_room(rm_class_1);
@@ -244,10 +250,6 @@ function goto_room_bedroom_afterHangout(){
 	function set_camera_boss1() {
 		// TODO: Animate a pan somehow... I dont know why it doesnt work
 		camera_set_view_pos(view_camera[0], 144, 0);
-	}
-	
-	function goto_black_room() {
-		fade_room(rm_black_screen);	
 	}
 	
 	function goto_room_bedroom_after_boss1(){

@@ -66,6 +66,8 @@ BG_ALPHA = 0.9;
 	ChatterboxAddFunction("openWardrobeMenu", open_wardrobe_menu);
 	
 	/// Door Functions here
+	ChatterboxAddFunction("goto_black_room", goto_black_room);
+	
 	ChatterboxAddFunction("goto_room_class_1", goto_room_class_1);
 	ChatterboxAddFunction("goto_room_class_1_seated", goto_room_class_1_seated);
 	ChatterboxAddFunction("goto_room_class_1_discussion", goto_room_class_1_discussion);
