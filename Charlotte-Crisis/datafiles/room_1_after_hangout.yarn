@@ -40,6 +40,8 @@ __PrivCrochet_position: 1160,200
 __PrivCrochet_tags: 
 title: after
 ---
+<<incrementStage()>>
+
 It's the end of the school week, and you usually head home for the weekend.
 But this time, your sister is waiting for you. When you step out of this room tomorrow, you will face her.
 Have you learned enough from the previous days? We shall see.

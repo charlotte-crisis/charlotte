@@ -2,11 +2,11 @@
 # if you've already visited then it will show the concise version.
 # Interacting with mirror
 __PrivCrochet_colorID: 8
-__PrivCrochet_position: 920,40
+__PrivCrochet_position: 921,40
 __PrivCrochet_tags: 
-title: 0
+title: after
 ---
-It's the start of the second week. You prepare yourself for another week of school.
+Good morning, {$name}. Prepare your look in the CLOSET, check your Stats at the DESK, and off you go!
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1160,40

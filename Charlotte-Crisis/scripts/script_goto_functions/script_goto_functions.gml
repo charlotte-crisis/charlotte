@@ -8,6 +8,7 @@
 	#macro X_BEDROOM_DOOR 230
 	#macro X_HANGOUT_DOOR 159
 	#macro X_HOUSE_DOOR 30 // This is also the location of the bed
+	#macro X_BEDROOM_BED 30 // This is also the location of the bed
  	#macro Y_HEIGHT 74
 
 	/// @function set_player_position(_x, _y, _facing, _sitting)
@@ -268,11 +269,11 @@ function goto_room_bedroom_afterHangout(){
 	}
 	
 	function goto_room_bedroom_after_boss1(){
-	fade_room(rm_bedroom_after_cca1);
-	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
+	fade_room(rm_bedroom_day);
+	set_player_position(X_BEDROOM_BED, Y_HEIGHT, -1);
 	
 	ChatterboxLoadFromFile("room_2.yarn");
 	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_2.yarn");
-	ChatterboxJump(chatterbox, "0");
+	ChatterboxJump(chatterbox, "after");
 }
 #endregion
