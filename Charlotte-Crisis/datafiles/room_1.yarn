@@ -72,7 +72,8 @@ title: bed
     You wonder if it's just her usual complaining, or if it's to do with you.
     You toss and turn a bit before going to sleep.
 
-    <<goto_room_bedroom_frombed()>>
+    <<goto_room_bedroom_day()>>
+    <<jump 0>>
 <<else>>
     <<jump 0_revisit>>
 <<endif>>
