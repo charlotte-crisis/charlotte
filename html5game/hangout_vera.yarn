@@ -181,7 +181,7 @@ What do you say?
     <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 977,-111
+__PrivCrochet_position: 957,-123
 __PrivCrochet_tags: 
 title: 1_1_2
 ---
@@ -191,6 +191,7 @@ Vera: "But that's simply healthcare."
 Vera: "I mean, no one judges you for taking Panadol if you have a fever, right?"
 You: "Yeah, I guess..."
 Vera: "So it's the same. Except the medication is supposed to fix dysphoria."
+<<jump 1_1_2_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 723,-383
@@ -261,7 +262,7 @@ Vera: "It's so off-putting, don't you think?"
 <<jump 1_1_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1207,-283
+__PrivCrochet_position: 1203,-309
 __PrivCrochet_tags: 
 title: 1_1_2_options
 ---
