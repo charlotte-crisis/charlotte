@@ -54,7 +54,7 @@ if (is_open) {
 		// Using the script from script_player_stats
 		draw_text(_x_text_starting, _y_text_starting, "NAME \n" + get_name());
 	
-		var _room = get_room_name();
+		var _room = get_room_name(get_stage());
 		draw_text(_x_text_starting, _y_text_starting + 64, "STAGE \n" + _room);
 	
 		draw_text(_x_text_starting, _y_text_starting + 128, "GENDER METER \n" + string("{0}%", get_gender_meter()));

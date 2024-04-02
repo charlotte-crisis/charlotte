@@ -24,6 +24,10 @@ level_up_amount = 50;
 // lets say its a scale from 0 to 100.
 gender_meter = 50;
 
+//					  Week 1   Week 2   Week 3
+// The current stage (0 1 2 3, 4 5 6 7, 8 9 10 11)
+stage = 0;
+
 #region SETTERS AND GETTERS
 	/// @return ARRAY
 	get_stats = function() {
@@ -55,5 +59,9 @@ gender_meter = 50;
 			return 1;	
 		}
 		return (confidence < threshold) ? _stat / 2 : _stat;	
+	}
+	
+	get_stage = function() {
+		return stage;	
 	}
 #endregion

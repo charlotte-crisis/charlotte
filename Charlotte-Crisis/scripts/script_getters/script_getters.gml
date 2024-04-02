@@ -20,33 +20,39 @@ function get_npc(_name) {
 		}
 }
 
-function get_room_name() {
+/// @param
+function get_room_name(_stage) {
+	var _week = (_stage div 4) + 1; // Gives integer quotient
+	
 	switch(room) {
-		case rm_bedroom_menu:
-			return "Bedroom (Menu)";
 		case rm_class_1:
 		case rm_class_1_discussion:
 		case rm_class_1_seated:	
-			return "Week 1 - Class";
+			return string("Week {0} - Class", _week);
 		case rm_cca_1:
 		case rm_cca_1_seated:
 		case rm_cca_1_seated_11:
 		case rm_cca_1_seated_18:
-			return "Week 1 - Art Club";
+			return string("Week {0} - Art Club", _week);
+		case rm_bedroom_menu:
 		case rm_bedroom_1:
 		case rm_bedroom_after_cca1:
 		case rm_bedroom_after_class1:
-			return "Week 1 - Bedroom";
+			return string("Week {0} - Bedroom", _week);
 		case rm_bus:
 		case rm_bus_cj:
 		case rm_bus_j:
 		case rm_bus_s:
-			return "Week 1 - Bus Stop";
+			return string("Week {0} - Bus Stop", _week);
 		case rm_house_sister:
-			return "Week 1 - Confrontation";
+			return string("Week {0} - Home", _week);
 		case rm_hangout_a:
 		case rm_hangout_n:
 		case rm_hangout_v:
-			return "Hangout";
+			return string("Week {0} - Hangout", _week);
 	}
+}
+
+function get_stage() {
+	return obj_stats.get_stage();
 }
