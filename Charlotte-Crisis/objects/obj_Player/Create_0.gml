@@ -7,7 +7,7 @@ if instance_number(object_index) > 1 {
 
 horizontal_speed = 0;
 vertical_speed = 0;
-grav = 0.1; //Using grv instead of built-in gravity variable
+grav = 0; //Using grv instead of built-in gravity variable
 walk_speed = 2;
 jump_speed = 2;
 
