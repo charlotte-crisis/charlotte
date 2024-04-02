@@ -9,9 +9,6 @@
 	#macro X_HANGOUT_DOOR 159
 	#macro X_HOUSE_DOOR 30 // This is also the location of the bed
  	#macro Y_HEIGHT 74
-	#macro Y_HEIGHT_NOTEXT 69 // Set this as the height if you enter a room without text.
-							  // For some reason when you enter a room without chatterbox text at
-							  // the start, you will be set about 5 pixels lower. I dont get it either
 
 	/// @function set_player_position(_x, _y, _facing, _sitting)
 	/// @description Sets player's x, y, facing direction, sitting sprite
@@ -240,7 +237,7 @@ function goto_room_bedroom_afterHangout(){
 #region Boss
 	function goto_room_boss_1() {
 		fade_room(rm_house_sister);
-		set_player_position(X_HOUSE_DOOR, Y_HEIGHT_NOTEXT, 1);
+		set_player_position(X_HOUSE_DOOR, Y_HEIGHT, 1);
 		
 		ChatterboxLoadFromFile("boss_1.yarn");
 		obj_chatterbox_control.chatterbox = ChatterboxCreate("boss_1.yarn");
