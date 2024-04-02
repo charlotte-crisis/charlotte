@@ -37,10 +37,10 @@
 }
 #endregion
 
-	// To be used as long as you want to transition to a black room
-	function goto_black_room() {
-		fade_room(rm_black_screen);	
-	}
+// To be used as long as you want to transition to a black room
+function goto_black_room() {
+	fade_room(rm_black_screen);	
+}
 
 
 #region Classroom Gotos

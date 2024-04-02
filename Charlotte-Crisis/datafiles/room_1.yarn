@@ -45,7 +45,7 @@ title: 0_revisit
 Well, no use going back to bed.
 ===
 __PrivCrochet_colorID: 2
-__PrivCrochet_position: 880,-200
+__PrivCrochet_position: 880,-160
 __PrivCrochet_tags: 
 title: after
 ---
@@ -64,7 +64,14 @@ __PrivCrochet_tags:
 title: bed
 ---
 <<if $canGoToBed == true>>
-    # start the next scene
+    // start the next scene
+    <<goto_black_room()>>
+    Like all people your age, you check your phone in bed.
+    Sister just updated her status...
+    SISTER: "Ugh. Why can't Mother give me a break."
+    You wonder if it's just her usual complaining, or if it's to do with you.
+    You toss and turn a bit before going to sleep.
+
     <<goto_room_bedroom_frombed()>>
 <<else>>
     <<jump 0_revisit>>
