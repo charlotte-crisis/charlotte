@@ -1,6 +1,7 @@
 /// @description Movement and Gravity
 // You can write your code in this editor
-
+key_left = 0;
+key_right = 0;
 
 // move if not talking
 if (can_move()) {
