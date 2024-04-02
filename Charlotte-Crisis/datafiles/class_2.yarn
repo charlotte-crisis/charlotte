@@ -594,7 +594,7 @@ Chenjie: "And so today's lecture got me thinking about, well, if my physical app
 
 <<addExperience(30)>>
 (+30 XP)
-<<goto_room_bedroom()>>
+<<goto_room_bedroom_after_class2()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1600,280
@@ -658,10 +658,10 @@ Joanne: "I mean, I didn't think my boyfriend would appreciate that."
 
 <<addExperience(30)>>
 (+30 XP)
-<<goto_room_bedroom()>>
+<<goto_room_bedroom_after_class2()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1599,521
+__PrivCrochet_position: 1600,520
 __PrivCrochet_tags: 
 title: 16
 ---
@@ -746,7 +746,7 @@ Sage: "What about you though? How's your weekend been?"
 
 <<addExperience(30)>>
 (+30 XP)
-<<goto_room_bedroom()>>
+<<goto_room_bedroom_after_class2()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1133,769
@@ -846,7 +846,7 @@ title: 12_alone
 You slink away, alone again.
 <<addExperience(30)>>
 (+30 XP)
-<<goto_room_bedroom()>>
+<<goto_room_bedroom_after_class2()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 891,757
