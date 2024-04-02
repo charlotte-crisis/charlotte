@@ -9,30 +9,27 @@ title: door
 You don't need to go out right now.
 ===
 __PrivCrochet_colorID: 1
-__PrivCrochet_position: 640,200
+__PrivCrochet_position: 680,200
 __PrivCrochet_tags: 
 title: bed
 ---
-It's the end of the school week, and you usually head home for the weekend.
-This time, you know your sister's waiting for you.
-Dread it or run from it, the talk is going to happen.
-When you step out of this room tomorrow, you will face her.
-Have you learned enough from the previous days? We shall see.
 Going to bed will continue to the next scene. You may still change your stats or clothes. Do you wish to continue?
 
 -> Go back
-
--> Continue
+    
+-> Yes (continue) #continue
     <<goto_room_boss_1()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 640,-40
+__PrivCrochet_position: 680,-40
 __PrivCrochet_tags: 
 title: 1
 ---
 It's the end of a long week.
 But you're going home tomorrow, where you'll see your sister.
 (You can level up at your desk or change your clothes at your wardrobe.)
+
+// you shouldnt be able to see this in game
 ===
 __PrivCrochet_colorID: 8
 __PrivCrochet_position: 920,-40
@@ -47,4 +44,15 @@ __PrivCrochet_tags:
 title: wardrobe
 ---
 <<openWardrobeMenu()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1160,200
+__PrivCrochet_tags: 
+title: after
+---
+It's the end of the school week, and you usually head home for the weekend.
+But this time, your sister is waiting for you. When you step out of this room tomorrow, you will face her.
+Have you learned enough from the previous days? We shall see.
+
+<<set $canGoToBed = true>>
 ===

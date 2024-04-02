@@ -31,10 +31,12 @@ Who will you ask out?
     You call Vera up for a hangout.
     <<goto_room_hangout_v()>>
 
--> On second thought, nevermind.
+-> Stay in today. #continue
     Hmm... you don't seem to be friendly enough with anyone.
     You can stay in today, but please try to understand and befriend people around you...
     <<goto_room_bedroom_afterHangout()>>
+
+-> On second thought, nevermind.
 ===
 __PrivCrochet_colorID: 8
 __PrivCrochet_position: 880,440

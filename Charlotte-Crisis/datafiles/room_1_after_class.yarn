@@ -6,16 +6,11 @@ __PrivCrochet_position: 1120,-160
 __PrivCrochet_tags: 
 title: 0
 ---
-You hop out of bed.
 <<set $canGoToBed = false>>
 
-You got as much sleep as you could manage. You stare at the bed.
-It draws you back in, but you withstand its pull.
-Well, no use idling around.
-You have to get dressed and go back to school.
-You signed up for art club. Wouldn't want to miss the first day.
-
-<<jump tut_wardrobe>>
+You got as much sleep as you could manage. Your bed draws you back in, but you withstand its pull.
+You remember that you signed up for the school's Art Club sessions.
+Prepare your look in the CLOSET, check your Stats at the DESK, and off you go!
 ===
 __PrivCrochet_colorID: 1
 __PrivCrochet_position: 1600,80
@@ -31,9 +26,8 @@ title: door
     Are you ready to head out?
 
     -> No (Go back)
-        ## exit.
 
-    -> Yes (Go to school)
+    -> Yes (Go to school) #continue
         <<goto_room_cca_1()>>        
 <<endif>>
 ===
@@ -102,7 +96,7 @@ Who will you ask out?
     You can stay in today, but please try to understand and befriend people around you…
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1120,-400
+__PrivCrochet_position: 1600,-400
 __PrivCrochet_tags: 
 title: tut_wardrobe
 ---
@@ -136,5 +130,13 @@ __PrivCrochet_position: 1600,-160
 __PrivCrochet_tags: 
 title: wardrobe
 ---
-<<openWardrobeMenu()>>
+<<if visited("wardrobe") > 1>>
+    You look at your wardrobe.
+    -> Read the instructions again.
+        <<jump tut_wardrobe>>
+    -> Change your look
+        <<openWardrobeMenu()>>
+<<else>>
+    <<jump tut_wardrobe>>
+<<endif>>
 ===
