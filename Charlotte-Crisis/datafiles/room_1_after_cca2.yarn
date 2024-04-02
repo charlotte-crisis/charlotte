@@ -1,0 +1,94 @@
+#__PrivCrochet_version:1
+# if you've already visited then it will show the concise version.
+# Interacting with mirror
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 640,160
+__PrivCrochet_tags: 
+title: 0
+---
+<<set $canGoToBed = false>>
+
+It's finally a Friday.
+You kind of feel like going out.
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 1160,200
+__PrivCrochet_tags: 
+title: door
+---
+You feel like hanging out with a friend this week, for a quick meal.
+Who will you ask out? 
+// TODO, add hangout menu. At least then we dont have to copy paste this again and again
+-> Anthony <<if getRelationship("A") >= 30>>
+    You call Anthony up for a hangout.
+    <<goto_room_hangout_a()>>
+
+-> Nadia <<if getRelationship("N") >= 30>>
+    You call Nadia up for a hangout.
+    <<goto_room_hangout_n()>>
+
+-> Vera <<if getRelationship("V") >= 30>>
+    You call Vera up for a hangout.
+    <<goto_room_hangout_v()>>
+
+-> Stay in today. #continue
+    Hmm... you don't seem to be friendly enough with anyone.
+    You can stay in today, but please try to understand and befriend people around you...
+    <<goto_room_bedroom_afterHangout()>>
+
+-> On second thought, nevermind.
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 880,440
+__PrivCrochet_tags: 
+title: 0_revisit
+---
+Well, no use going back to bed.
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 640,440
+__PrivCrochet_tags: 
+title: bed
+---
+<<if $canGoToBed == true>>
+    // start the next scene
+    <<goto_black_room()>>
+    Do you want to use your phone in bed?
+    -> Yes
+        <<addExperience(10)>>
+        Alright, a few minutes won't hurt.
+        The algorithms feed you videos, memes, and other content till your eyes hurt.
+        Let's hope you retained even a bit of that... (+ 10 XP)
+    -> No
+        <<changeConfidence(5)>>
+        Yeah, don't you know using your phone too much is bad for you?
+        Get some more sleep! Sleep fixes everything. (+5% confidence)
+
+    <<goto_room_bedroom_day()>>
+    <<jump 0>>
+<<else>>
+    <<jump 0_revisit>>
+<<endif>>
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 1160,440
+__PrivCrochet_tags: 
+title: desk
+---
+<<openStatMenu()>>
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 1400,440
+__PrivCrochet_tags: 
+title: wardrobe
+---
+<<openWardrobeMenu()>>
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 640,-160
+__PrivCrochet_tags: 
+title: after
+---
+Welcome back! Remember to interact with your BED, CLOSET and DESK.
+<<set $canGoToBed = true>>
+===
