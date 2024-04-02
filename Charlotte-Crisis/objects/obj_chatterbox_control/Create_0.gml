@@ -48,6 +48,7 @@ BG_ALPHA = 0.9;
 	ChatterboxAddFunction("getEmpathy", get_empathy);
 	ChatterboxAddFunction("getName", get_name);
 	ChatterboxAddFunction("incrementStage", increment_stage);
+	ChatterboxAddFunction("getStage", get_stage);
 	
 	ChatterboxAddFunction("changeGenderMeter", change_gender_meter);
 	ChatterboxAddFunction("getGenderMeter", get_gender_meter);
