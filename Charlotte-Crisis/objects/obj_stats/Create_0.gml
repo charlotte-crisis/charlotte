@@ -64,4 +64,8 @@ stage = 0;
 	get_stage = function() {
 		return stage;	
 	}
+	
+	increment_stage = function() {
+		return ++stage;	
+	}
 #endregion

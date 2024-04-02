@@ -144,3 +144,7 @@ function calculate_odds(_parameters) {
 		return obj_stats.gender_meter;
 	}
 #endregion
+
+function increment_stage() {
+	return obj_stats.increment_stage();	
+}
