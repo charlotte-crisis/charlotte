@@ -1,5 +1,6 @@
 ///@description Load and Save functions
 #macro SAVE_FILE "TheCharlotteCrisis_SaveFile.ini"
+#macro FILE_CHATTERBOX_VARIABLES "TheCharlotteCrisis_ChatterboxVariables.txt"
 
 /// @description Saves the game into an ini file.	
 function save_game(){
@@ -13,6 +14,7 @@ function save_game(){
 		ini_write_real("stats", "int", intelligence);
 		ini_write_real("stats", "cha", charisma);
 		ini_write_real("stats", "emp", empathy);
+		ini_write_real("stats", "stage", stage);
 	}
 	
 	/// obj_player's variables
@@ -64,11 +66,15 @@ function save_game(){
 		ini_write_string("level", "chatterbox_node", "");	
 	}
 	
-	// Export chatterbox variables
-	ini_write_string("chatterbox", "variables", ChatterboxVariablesExport());
-	
-	// Close at the end of it
 	ini_close();
+	
+	// Export chatterbox variables
+	// store in a separate txt file as it does not interact well with ini
+	var _file = file_text_open_write(FILE_CHATTERBOX_VARIABLES);
+	var _var_string = ChatterboxVariablesExport();
+	show_debug_message(_var_string);
+	file_text_write_string(_file, _var_string);
+	file_text_close(_file);
 }
 
 function load_game() {
@@ -78,6 +84,17 @@ function load_game() {
 	/// Go to room. Defaults to first level
 	var _rm_name = ini_read_string("level", "room", "rm_bedroom_menu"); 
 	room_goto(asset_get_index(_rm_name)); // Do not use fade_room
+	
+	/// Player ==============================================================
+	/// Destroy existing player object to create a new one
+	instance_destroy(obj_player);
+	// create obj_player and set variables. Defaults are following rm_bedroom_menu
+	// These variables are set before its Create event runs
+	var _player = instance_create_layer(0, 0, "Player", obj_player, {
+		x: ini_read_real("player", "x", 74),
+		y: ini_read_real("player", "y", 74),
+		visible: true,
+	});
 	
 	instance_destroy(obj_chatterbox_control);
 	var _chatterbox_control = instance_create_layer(0, 0, "Helpers", obj_chatterbox_control);
@@ -91,20 +108,7 @@ function load_game() {
 		}
 	}
 	
-	// Import variables
-	var _var_json = ini_read_string("chatterbox", "variables", "");
-	ChatterboxVariablesImport(_var_json);
 	
-	/// Player ==============================================================
-	/// Destroy existing player object to create a new one
-	instance_destroy(obj_player);
-	// create obj_player and set variables. Defaults are following rm_bedroom_menu
-	// These variables are set before its Create event runs
-	var _player = instance_create_layer(0, 0, "Player", obj_player, {
-		x: ini_read_real("player", "x", 74),
-		y: ini_read_real("player", "y", 74),
-		visible: true,
-	});
 	with (_player) {
 		gender = ini_read_real("player", "gender", 1);
 		facing_direction = ini_read_real("player", "facing_direction", facing_direction);
@@ -132,6 +136,7 @@ function load_game() {
 		intelligence = ini_read_real("stats", "int", intelligence);
 		charisma = ini_read_real("stats", "cha", charisma);
 		empathy = ini_read_real("stats", "emp", empathy);
+		stage = ini_read_real("stats", "stage", stage);
 	}
 	
 	/// Create other objects =================================================
@@ -156,5 +161,11 @@ function load_game() {
 	instance_create_layer(0, 0, "Helpers", obj_pause_menu);
 	
 	ini_close();
+	
+	// Read chatterbox variables
+	var _file = file_text_open_read(FILE_CHATTERBOX_VARIABLES);
+	var _var_json = file_text_readln(_file);
+	show_debug_message(_var_json);
+	ChatterboxVariablesImport(_var_json);
 	
 }

@@ -28,11 +28,14 @@ previous_dialogue = "";
 		obj_player.set_is_talking(true);
 	}
 #endregion
+// Go to node zero
+chatterbox_set("0");
 
 #region constants
 // Draw step
 BG_ALPHA = 0.9;
 #endregion
+
 
 #region ChatterboxAddFunction defined here
 	ChatterboxAddFunction("skillCheck", skill_check);
