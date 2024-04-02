@@ -2,7 +2,7 @@
 # if you've already visited then it will show the concise version.
 # Interacting with mirror
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 880,120
+__PrivCrochet_position: 1120,-160
 __PrivCrochet_tags: 
 title: 0
 ---
@@ -17,8 +17,8 @@ You signed up for art club. Wouldn't want to miss the first day.
 
 <<jump tut_wardrobe>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1440,120
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 1600,80
 __PrivCrochet_tags: 
 title: door
 ---
@@ -38,16 +38,16 @@ title: door
 <<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 920,440
+__PrivCrochet_position: 1120,80
 __PrivCrochet_tags: 
 title: 0_revisit
 ---
 Well, no use going back to bed.
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 704,-147
+__PrivCrochet_colorID: 2
+__PrivCrochet_position: 880,-200
 __PrivCrochet_tags: 
-title: after_class1
+title: after
 ---
 Try as you might, you cannot forget what Sister sent.
 You knew this conflict was gonna come at some point, but not this soon...
@@ -58,8 +58,8 @@ And when you wake up, you'll prepare your look in the CLOSET.
 This is what you do every day, but with Sister's text today, you feel like everything is about to change...
 <<set $canGoToBed = true>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 647,194
+__PrivCrochet_colorID: 2
+__PrivCrochet_position: 1360,80
 __PrivCrochet_tags: 
 title: bed
 ---
@@ -94,7 +94,7 @@ Who will you ask out?
     You can stay in today, but please try to understand and befriend people around you…
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1080,-160
+__PrivCrochet_position: 1120,-400
 __PrivCrochet_tags: 
 title: tut_wardrobe
 ---
@@ -110,7 +110,7 @@ TUTORIAL: Repeat this tutorial?
 -> No (Continue)
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1200,120
+__PrivCrochet_position: 1120,320
 __PrivCrochet_tags: 
 title: 1
 ---

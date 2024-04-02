@@ -108,17 +108,12 @@
 #region Bedrooms
 
 function goto_room_bedroom(){
-	fade_room(rm_bedroom_after_class1);
+	fade_room(rm_bedroom_night);
 	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
 
 	ChatterboxLoadFromFile("room_1.yarn");
 	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1.yarn");
-	ChatterboxJump(chatterbox, "after_class1");
-	
-	// Change background to night
-	var lay_id = layer_get_id("Background");
-	var back_id = layer_background_get_id(lay_id);
-	layer_background_sprite(back_id, spr_hostelnight_bars);
+	ChatterboxJump(chatterbox, "after");
 }
 
 function goto_room_bedroom_after_class2(){
