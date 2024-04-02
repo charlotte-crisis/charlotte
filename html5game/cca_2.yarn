@@ -1,41 +1,17 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 240,240
+__PrivCrochet_position: 0,-40
 __PrivCrochet_tags: 
 title: 1
 ---
-[i]You're a little early to the session today, and so are Anthony and Vera.[/i]
-[i]They are sitting on opposite sides of the room. Seems like last session wasn't enough to bring them together.[/i]
-[i]Behind his laptop, Anthony buries his head in whatever he's drawing, occasionally looking up at his screen.[/i]
-[i]Vera is scrolling through her phone casually.[/i]
-[i]Who will you sit beside?[/i]
+You're a little early to the session today, and so are Anthony and Vera.
+They are sitting on opposite sides of the room. Seems like last session wasn't enough to bring them together.
+Behind his laptop, Anthony buries his head in whatever he's drawing, occasionally looking up at his screen.
+Vera is scrolling through her phone casually.
+Go talk to them before the session starts!
 
 <<declare $satWithAnthony = false>>
--> Anthony <<if getRelationship("A") > 30>>
-    <<set $satWithAnthony = true>>
-    // Sit next to Anthony
-    Anthony: "Hi."
-    You: "Hey Anthony. Drawing already?"
-    Anthony: "Might as well, right?"
-    You: "Well you're a dedicated one."
-    Anthony: "If I'm bitchless in real life, who can judge me for wanting a waifu? 2D over 3D any day."
-
--> Vera <<if getRelationship("V") > 30>>
-    // sit next to vera
-    Vera: "Hey, {$name}."
-    You: "Hey, Vera! What's up?"
-    Vera: "Same stuff. Just scrolling through Pinterest. And Instagram. And TikTok."
-    -> "For art ideas?"
-        Vera: "Haha, I'd be a much better student if I was that dedicated, right?"
-        Vera: "Only about 1% of what I'm seeing is vibes. The rest of it is fashion and trans politics."
-    
-    -> "Wow, that's a lot of social media."
-        Vera: "Haha, I'd be a much better student if I could get rid of a few of those, right?"
-        Vera: "I think it still helps me, though."
-        You: "How so?"
-        Vera: "I learn from trans content, at least."
-
-<<jump 2>>
+//this scene should only have MC, Vera and Anthony
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 480,240
@@ -124,8 +100,8 @@ You: "Alright, here goes..."
     -> "Yeah. Bye!" #skillcheck #cha #8
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll >= 8>>
-            You expected people to take issue with that, but Eleanor laughs.
+        <<if $diceroll >= 6>>
+            [i]You expected people to take issue with that, but Eleanor laughs.[/i]
             <<changeConfidence(5)>>
             Eleanor: "As if we're going anywhere." (+5% confidence)
             Eleanor: "I like the concept! Colouring the gradient will be hard, but we can save that for another day."
@@ -133,7 +109,7 @@ You: "Alright, here goes..."
             Anthony: "Knew it. I guess we don't believe in this organisation anymore."
             Eleanor: "That's not what it means!"
             <<changeConfidence(-5)>>
-            Eleanor shoots you a quick glare. (-5% confidence)
+            [i]Eleanor shoots you a quick glare.[/i] (-5% confidence)
         <<endif>>
         
     -> "Sunsets are nature's art." #skillcheck #int #8
@@ -699,7 +675,7 @@ Vera: "That's just your personal biases getting in the way."
 <<jump 9>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2160,239
+__PrivCrochet_position: 2160,240
 __PrivCrochet_tags: 
 title: 9
 ---
@@ -707,6 +683,7 @@ Eleanor: "Well... thanks for the discussions, everyone."
 Eleanor: "I know we've all been through a lot today, so please go home and don't think too much about it, okay?"
 Eleanor: "You can always text me if you want to talk about anything."
 // (from here, the NPCs can still be talked to, only if you have a Neutral/Good relationship with them)
+<<goto_room_cca_2_end()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2400,240
@@ -867,20 +844,55 @@ Nadia: "I guess so... let's hope that T-shirt design works."
     Nadia: "Thanks, {$name}. Glad to see you really appreciate my art style." (+5% Nadia relationship)
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2880,400
+__PrivCrochet_position: 2883,393
 __PrivCrochet_tags: 
 title: exit
 ---
 Well, that was certainly a furious argument. 
 <<addExperience(30)>>
 You feel... different, having gone through it all. (+30 XP)
-<<goto_room_bedroom_after_cca2()>>
+<<goto_room_bedroom()>>
 ===
-__PrivCrochet_colorID: 8
-__PrivCrochet_position: 3160,360
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 240,-40
 __PrivCrochet_tags: 
-title: debug_end
+title: anthony_pre
 ---
-Skipped to the end.
-<<jump exit>>
+<<set $satWithAnthony = true>>
+    // Sit next to Anthony
+    Anthony: "Hi."
+    You: "Hey Anthony. Drawing already?"
+    Anthony: "Might as well, right?"
+    You: "Well you're a dedicated one."
+    Anthony: "If I'm bitchless in real life, who can judge me for wanting a waifu? 2D over 3D any day."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 480,-40
+__PrivCrochet_tags: 
+title: vera_pre
+---
+Vera: "Hey, {$name}."
+You: "Hey, Vera! What's up?"
+Vera: "Same stuff. Just scrolling through Pinterest. And Instagram. And TikTok."
+-> "For art ideas?"
+    Vera: "Haha, I'd be a much better student if I was that dedicated, right?"
+    Vera: "Only about 1% of what I'm seeing is vibes. The rest of it is fashion and trans politics."
+-> "Wow, that's a lot of social media."
+    Vera: "Haha, I'd be a much better student if I could get rid of a few of those, right?"
+    Vera: "I think it still helps me, though."
+    You: "How so?"
+    Vera: "I learn from trans content, at least."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 240,240
+__PrivCrochet_tags: 
+title: chair
+---
+Do you wish to sit? (Will start the session)
+
+-> No (go back)
+
+-> Yes (continue...) #continue 
+    <<goto_room_cca_2_seated()>>
+//spawn in Nadia and Eleanor
 ===
