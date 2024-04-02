@@ -36,6 +36,9 @@ function get_room_name(_stage) {
 			return string("Week {0} - Art Club", _week);
 		case rm_bedroom_menu:
 		case rm_bedroom_1:
+		case rm_bedroom_day:
+		case rm_bedroom_night:
+		case rm_bedroom_parent:
 		case rm_bedroom_after_cca1:
 		case rm_bedroom_after_class1:
 			return string("Week {0} - Bedroom", _week);
