@@ -53,11 +53,17 @@ title: bed
 <<if $canGoToBed == true>>
     // start the next scene
     <<goto_black_room()>>
-    Using your phone again in bed, you see another status update from Sister.
-    SISTER: "Why can't people just be normal?"
-    This worries you, of course. There are so many ways to interpret that.
-    You can feel her annoyance, her frustration, even through a simple line of text.
-    It's a wonder your bedsheets haven't been pulled off, what with all this tossing and turning.
+    Do you want to use your phone in bed?
+    -> Yes
+        <<addExperience(10)>>
+        Alright, a few minutes won't hurt.
+        The algorithms feed you videos, memes, and other content till your eyes hurt.
+        Let's hope you retained even a bit of that... (+ 10 XP)
+    -> No
+        <<changeConfidence(5)>>
+        Yeah, don't you know using your phone too much is bad for you?
+        Get some more sleep! Sleep fixes everything. (+5% confidence)
+
     <<goto_room_bedroom_day()>>
     <<jump 0>>
 <<else>>

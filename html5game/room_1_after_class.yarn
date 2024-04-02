@@ -2,49 +2,46 @@
 # if you've already visited then it will show the concise version.
 # Interacting with mirror
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 880,120
+__PrivCrochet_position: 1120,-160
 __PrivCrochet_tags: 
 title: 0
 ---
-You hop out of bed.
 <<set $canGoToBed = false>>
 
-You got as much sleep as you could manage. You stare at the bed.
-It draws you back in, but you withstand its pull.
-Well, no use idling around.
-You have to get dressed and go back to school.
-You signed up for art club. Wouldn't want to miss the first day.
-
-<<jump tut_wardrobe>>
+You got as much sleep as you could manage. Your bed draws you back in, but you withstand its pull.
+You remember that you signed up for the school's Art Club sessions.
+Prepare your look in the CLOSET, check your Stats at the DESK, and off you go!
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1403,200
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 1600,80
 __PrivCrochet_tags: 
 title: door
 ---
 <<if $canGoToBed == true>>
     You just got back!
 <<else>>
-        Are you ready to head out?
+    You're headed out to art club.
+    Your sister's words weight heavily on you.
+    You don't know if you should go out as Charlotte or Charles now.
+    Are you ready to head out?
 
-        -> No (Go back)
-            ## exit.
+    -> No (Go back)
 
-        -> Yes (Go to school)
-            <<goto_room_cca_1()>>        
+    -> Yes (Go to school) #continue
+        <<goto_room_cca_1()>>        
 <<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 920,440
+__PrivCrochet_position: 1120,80
 __PrivCrochet_tags: 
 title: 0_revisit
 ---
 Well, no use going back to bed.
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 704,-147
+__PrivCrochet_colorID: 2
+__PrivCrochet_position: 880,-160
 __PrivCrochet_tags: 
-title: after_class1
+title: after
 ---
 Try as you might, you cannot forget what Sister sent.
 You knew this conflict was gonna come at some point, but not this soon...
@@ -55,14 +52,22 @@ And when you wake up, you'll prepare your look in the CLOSET.
 This is what you do every day, but with Sister's text today, you feel like everything is about to change...
 <<set $canGoToBed = true>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 647,194
+__PrivCrochet_colorID: 2
+__PrivCrochet_position: 1360,80
 __PrivCrochet_tags: 
 title: bed
 ---
 <<if $canGoToBed == true>>
-    # start the next scene
-    <<goto_room_bedroom_frombed()>>
+    // start the next scene
+    <<goto_black_room()>>
+    Like all people your age, you check your phone in bed.
+    Sister just updated her status...
+    SISTER: "Ugh. Why can't Mother give me a break."
+    You wonder if it's just her usual complaining, or if it's to do with you.
+    You toss and turn a bit before going to sleep.
+
+    <<goto_room_bedroom_day()>>
+    <<jump 0>>
 <<else>>
     <<jump 0_revisit>>
 <<endif>>
@@ -91,7 +96,7 @@ Who will you ask out?
     You can stay in today, but please try to understand and befriend people around you…
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1080,-160
+__PrivCrochet_position: 1600,-400
 __PrivCrochet_tags: 
 title: tut_wardrobe
 ---
@@ -104,13 +109,34 @@ TUTORIAL: Repeat this tutorial?
 -> Yes
     <<jump tut_wardrobe>>
 
--> No (Continue)
-    
+-> No (Continue) #continue
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1200,120
+__PrivCrochet_position: 1120,320
 __PrivCrochet_tags: 
 title: 1
 ---
 you shouldnt be seeing this
+===
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 1360,-160
+__PrivCrochet_tags: 
+title: desk
+---
+<<openStatMenu()>>
+===
+__PrivCrochet_colorID: 7
+__PrivCrochet_position: 1600,-160
+__PrivCrochet_tags: 
+title: wardrobe
+---
+<<if visited("wardrobe") > 1>>
+    You look at your wardrobe.
+    -> Read the instructions again.
+        <<jump tut_wardrobe>>
+    -> Change your look
+        <<openWardrobeMenu()>>
+<<else>>
+    <<jump tut_wardrobe>>
+<<endif>>
 ===
