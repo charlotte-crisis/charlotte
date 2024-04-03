@@ -10,7 +10,7 @@ Nadia: "So I'm going back quite late every night."
 <<jump 1_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -346,-130
+__PrivCrochet_position: -348,-131
 __PrivCrochet_tags: 
 title: 0
 ---
@@ -360,10 +360,11 @@ title: 3
         Nadia: "Just let Charlotte be her own woman, I guess."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -165,-934
+__PrivCrochet_position: -165,-937
 __PrivCrochet_tags: 
 title: 1_1_options
 ---
+What will you say?
 -> "Tell me about your major."
     <<jump 1_1_1>>
 -> "What other CCAs are you involved in?"
@@ -374,10 +375,11 @@ title: 1_1_options
     <<jump 1>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -282,-421
+__PrivCrochet_position: -285,-421
 __PrivCrochet_tags: 
 title: 1
 ---
+What will you say?
 -> "How's school?"
     <<jump 1_1>>
 
@@ -396,6 +398,7 @@ __PrivCrochet_position: -193,-1398
 __PrivCrochet_tags: 
 title: 1_1_2_options
 ---
+What will you say?
 -> "Hope you don't forget about us."
     <<jump 1_1_2_1>>
 -> "Why fintech?"
@@ -408,7 +411,7 @@ title: 1_1_2_options
     <<jump 1_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -46,-1619
+__PrivCrochet_position: -45,-1646
 __PrivCrochet_tags: 
 title: 1_1_2_1
 ---
@@ -591,7 +594,7 @@ Nadia: "Who knows? It could help me with my own exchange in future."
     <<jump 1_1_2_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 60,-1019
+__PrivCrochet_position: 60,-1015
 __PrivCrochet_tags: 
 title: 1_1_2_4
 ---
@@ -676,10 +679,11 @@ Nadia: "Do you think being Charlotte halted your professional development?"
         <<jump 1_1_2_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 44,-411
+__PrivCrochet_position: 42,-414
 __PrivCrochet_tags: 
 title: 1_2_options
 ---
+What will you say?
 -> "Got any to recommend?"
     Nadia: "Hmm... depends what you're into."
     Nadia: "Perhaps give me a prompt? So I can think of what I'd like."
@@ -723,6 +727,7 @@ __PrivCrochet_position: 294,-458
 __PrivCrochet_tags: 
 title: 1_2_1
 ---
+What will you say?
 -> "Genderswap is a thing in anime, right?"
     <<jump 1_2_1_1>>
 -> "Action."
