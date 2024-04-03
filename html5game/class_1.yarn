@@ -783,6 +783,7 @@ Choose one...
 -> Yes #continue
     You take a seat.
     <<goto_room_class_1_seated()>>
+    <<jump 5>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1080,-243
