@@ -9,6 +9,7 @@ if (state == 0) {
 		if (change_room) {
 			room_goto(target_room);
 		}
+		callback();
 		state = 1;
 	}
 // Fade exit

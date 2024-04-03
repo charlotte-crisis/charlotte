@@ -27,12 +27,22 @@
 	/// @function fade_room(_room)
 	/// @param _room				The target room to move to
 	/// @param {Bool} _change_room	true if there is a room to change to
-	function fade_room(_room, _change_room = true, _colour = c_black) {
+	function fade_room(_room, _change_room = true, _colour = c_black, _callback) {
 		// Create fade object at top left corner at highest depth
 		var _inst = instance_create_depth(0, 0, 0, obj_fade);
 		_inst.FADE_COLOUR = _colour;
 		_inst.target_room = _room;
 		_inst.change_room = _change_room;
+		if !(is_undefined(_callback)) {
+			_inst.callback = _callback;
+		}
+	
+	/// @description Change yarn file, start a new node.
+	function change_node(_sourcefile, _node) {
+		ChatterboxLoadFromFile(_sourcefile);
+		obj_chatterbox_control.chatterbox = ChatterboxCreate(_sourcefile);
+		obj_chatterbox_control.chatterbox_set(_node);
+	}
 }
 #endregion
 
@@ -59,14 +69,13 @@
 
 #region Classroom Gotos
 	function goto_room_class_1(){
-		fade_room(rm_class_1);
-		
-		set_player_position(X_CLASS_DOOR, Y_HEIGHT, -1);
-	
-		// Need to load then create.
-		ChatterboxLoadFromFile("class_1.yarn");
-		obj_chatterbox_control.chatterbox = ChatterboxCreate("class_1.yarn");
-		ChatterboxJump(chatterbox, "1");
+		fade_room(rm_class_1,,,function(){
+			set_player_position(X_CLASS_DOOR, Y_HEIGHT, -1);
+			// Need to load then create.
+			ChatterboxLoadFromFile("class_1.yarn");
+			obj_chatterbox_control.chatterbox = ChatterboxCreate("class_1.yarn");
+			obj_chatterbox_control.chatterbox_set("1");
+		});
 	}
 	
 	function goto_room_class_2(){
