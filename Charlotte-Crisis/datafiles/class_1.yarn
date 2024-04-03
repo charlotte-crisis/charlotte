@@ -320,6 +320,7 @@ Who will you walk with today?
     You don't seem comfortable enough to talk more with any of your classmates.
     You decide to head back to your room by yourself.
     Slinking away to the door, you make a quiet exit.
+    <<jump 12_alone>>
     <<goto_room_bus()>>
 
 -> Chenjie <<if getRelationship("CJ") >= 55>>
@@ -769,7 +770,7 @@ Sage: "I don't know. Maybe some of them still take some time to figure out thoug
 <<jump 12>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 520,837
+__PrivCrochet_position: 520,840
 __PrivCrochet_tags: 
 title: pre-5
 ---
@@ -782,7 +783,6 @@ Choose one...
 -> Yes #continue
     You take a seat.
     <<goto_room_class_1_seated()>>
-    <<jump 5>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1080,-243
@@ -830,7 +830,7 @@ Let's try the Skill Check here, while Prof is still rambling.
 <<jump 20>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 3040,840
+__PrivCrochet_position: 2960,880
 __PrivCrochet_tags: 
 title: 12_alone
 ---

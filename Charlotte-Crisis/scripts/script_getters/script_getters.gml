@@ -21,8 +21,7 @@ function get_npc(_name) {
 }
 
 /// @param
-function get_room_name(_stage) {
-	var _week = (_stage div 4) + 1; // Gives integer quotient
+function get_room_name(_week) {
 	
 	switch(room) {
 		case rm_class_1:
@@ -59,4 +58,8 @@ function get_room_name(_stage) {
 
 function get_stage() {
 	return obj_stats.get_stage();
+}
+
+function get_week() {
+	return obj_stats.get_week();	
 }

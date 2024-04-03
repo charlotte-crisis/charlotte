@@ -39,9 +39,14 @@
 	
 	/// @description Change yarn file, start a new node.
 	function change_node(_sourcefile, _node) {
-		ChatterboxLoadFromFile(_sourcefile);
-		obj_chatterbox_control.chatterbox = ChatterboxCreate(_sourcefile);
-		obj_chatterbox_control.chatterbox_set(_node);
+		if !(is_undefined(_sourcefile)) {
+			ChatterboxLoadFromFile(_sourcefile);
+			obj_chatterbox_control.chatterbox = ChatterboxCreate(_sourcefile);	
+			obj_chatterbox_control.chatterbox_set(_node);
+		} else {
+			ChatterboxJump(chatterbox, _node)	
+		}
+		
 	}
 }
 #endregion
@@ -71,42 +76,46 @@
 	function goto_room_class_1(){
 		fade_room(rm_class_1,,,function(){
 			set_player_position(X_CLASS_DOOR, Y_HEIGHT, -1);
-			// Need to load then create.
-			ChatterboxLoadFromFile("class_1.yarn");
-			obj_chatterbox_control.chatterbox = ChatterboxCreate("class_1.yarn");
-			obj_chatterbox_control.chatterbox_set("1");
+			change_node("class_1.yarn", "1");
+			//// Need to load then create.
+			//ChatterboxLoadFromFile("class_1.yarn");
+			//obj_chatterbox_control.chatterbox = ChatterboxCreate("class_1.yarn");
+			//obj_chatterbox_control.chatterbox_set("1");
 		});
 	}
 	
 	function goto_room_class_2(){
-		fade_room(rm_class_1);
-		
-		set_player_position(X_CLASS_DOOR, Y_HEIGHT, -1);
-	
-		// Need to load then create.
-		ChatterboxLoadFromFile("class_2.yarn");
-		obj_chatterbox_control.chatterbox = ChatterboxCreate("class_2.yarn");
-		ChatterboxJump(chatterbox, "1");
+		fade_room(rm_class_1,,,function() {
+			set_player_position(X_CLASS_DOOR, Y_HEIGHT, -1);
+			change_node("class_2.yarn", "1");
+		});
+		//// Need to load then create.
+		//ChatterboxLoadFromFile("class_2.yarn");
+		//obj_chatterbox_control.chatterbox = ChatterboxCreate("class_2.yarn");
+		//ChatterboxJump(chatterbox, "1");
 	}
 	
 	// Auxillary functions. Can be reused
 	function goto_room_class_1_seated(){
-		fade_room(rm_class_1_seated);
+		fade_room(rm_class_1_seated,,, function(){
+			set_player_position(223, Y_HEIGHT, 1, true);
+			//obj_player.x = 223;
+			//obj_player.y = 74;
+			//obj_player.facing_direction = 1;
+			//obj_player.is_sitting = true;
 	
-		obj_player.x = 223;
-		obj_player.y = 74;
-		obj_player.facing_direction = 1;
-		obj_player.is_sitting = true;
-	
-		// ChatterboxJump(chatterbox, "5");
+			ChatterboxJump(chatterbox, "5");
+		});
 	}
 
 	function goto_room_class_1_discussion() {
-		fade_room(rm_class_1_discussion);
-		obj_player.x = 203;
-		obj_player.y = 75;
-		obj_player.facing_direction = -1;
-		obj_player.is_sitting = true;
+		fade_room(rm_class_1_discussion,,, function() {
+			set_player_position(203, 75, -1, true);
+		});
+		//obj_player.x = 203;
+		//obj_player.y = 75;
+		//obj_player.facing_direction = -1;
+		//obj_player.is_sitting = true;
 	}
 	
 	function goto_room_class_1_discussion_sageleft() {
@@ -130,25 +139,30 @@
 
 #region Bus Stop
 	function goto_room_bus(){
-		fade_room(rm_bus);
-		set_player_position(X_BUS_DOOR, Y_HEIGHT, -1);
-	
-		ChatterboxJump(chatterbox, "12_alone");
+		fade_room(rm_bus,,, function() {
+			set_player_position(X_BUS_DOOR, Y_HEIGHT, -1);
+			// change_node(chatterbox, "12_alone");	
+		});
 	}
 
 	function goto_room_bus_cj(){
-		fade_room(rm_bus_cj);
-		set_player_position(X_BUS_DOOR, Y_HEIGHT, -1);
+		fade_room(rm_bus_cj,,,function() {
+			set_player_position(X_BUS_DOOR, Y_HEIGHT, -1);
+		});		
 	}
 
 	function goto_room_bus_j(){
-		fade_room(rm_bus_j);
-		set_player_position(X_BUS_DOOR, Y_HEIGHT, -1);
+		fade_room(rm_bus_j,,,function(){
+			set_player_position(X_BUS_DOOR, Y_HEIGHT, -1);
+		});
+		
 	}
 
 	function goto_room_bus_s(){
-		fade_room(rm_bus_s);
-		set_player_position(X_BUS_DOOR, Y_HEIGHT, -1);
+		fade_room(rm_bus_s,,,function() {
+			set_player_position(X_BUS_DOOR, Y_HEIGHT, -1);
+		});
+		
 	}
 #endregion
 
@@ -156,20 +170,22 @@
 
 /// @description Usable at any time to transition to day.
 function goto_room_bedroom_day() {
-	fade_room(rm_bedroom_day, ,c_white);
-	set_player_position(X_HOUSE_DOOR, Y_HEIGHT, 1)
+	fade_room(rm_bedroom_day, ,c_white, function() {
+		set_player_position(X_HOUSE_DOOR, Y_HEIGHT, 1)	
+	});
 }
 
 function goto_room_bedroom(){
-	fade_room(rm_bedroom_night);
-	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
+	fade_room(rm_bedroom_night,,, function() {
+		set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
 
-	ChatterboxLoadFromFile("room_1_after_class.yarn");
-	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_class.yarn");
-	ChatterboxJump(chatterbox, "after");
+		ChatterboxLoadFromFile("room_1_after_class.yarn");
+		obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_class.yarn");
+		ChatterboxJump(chatterbox, "after");	
+	});
 }
 
-
+// THIS FUNCTION SHOULD BE DEPRECATED.
 function goto_room_bedroom_frombed() {
 	fade_room(rm_bedroom_day, ,c_white);
 	obj_player.x = 30;
@@ -179,61 +195,77 @@ function goto_room_bedroom_frombed() {
 }
 
 function goto_room_bedroom_after_class2(){
-	fade_room(rm_bedroom_night);
-	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
+	fade_room(rm_bedroom_night,,,function() {
+		set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
 
-	ChatterboxLoadFromFile("room_2_after_class2.yarn");
-	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_2_after_class2.yarn");
-	ChatterboxJump(chatterbox, "after");
+		ChatterboxLoadFromFile("room_2_after_class2.yarn");
+		obj_chatterbox_control.chatterbox = ChatterboxCreate("room_2_after_class2.yarn");
+		ChatterboxJump(chatterbox, "after");	
+	});
 }
 
 function goto_room_bedroom_after_cca(){
-	fade_room(rm_bedroom_night);
-	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
+	fade_room(rm_bedroom_night,,, function() {
+		set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
 	
-	ChatterboxLoadFromFile("room_1_after_cca.yarn");
-	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_cca.yarn");
-	ChatterboxJump(chatterbox, "after");
+		ChatterboxLoadFromFile("room_1_after_cca.yarn");
+		obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_cca.yarn");
+		ChatterboxJump(chatterbox, "after");	
+	});
 }
 
 function goto_room_bedroom_after_cca2(){
-	fade_room(rm_bedroom_night);
-	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
+	fade_room(rm_bedroom_night, function() {
+		set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
 	
-	ChatterboxLoadFromFile("room_1_after_cca2.yarn");
-	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_cca2.yarn");
-	ChatterboxJump(chatterbox, "after");
+		ChatterboxLoadFromFile("room_1_after_cca2.yarn");
+		obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_cca2.yarn");
+		ChatterboxJump(chatterbox, "after");	
+	});
 }
 
 function goto_room_bedroom_afterHangout(){
 	// TODO: Find a way to automate going to the correct yarn file which leads to the correct boss fight
-	fade_room(rm_bedroom_night);
-	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
-
-	ChatterboxLoadFromFile("room_1_after_hangout.yarn");
-	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_hangout.yarn");
-	ChatterboxJump(chatterbox, "after");
+	var _source = "room_1_after_hangout.yarn";
+	var _node = "after";
+	if (obj_stats.get_week() == 2) {
+		_source = "room_2_after_hangout.yarn";
+	} else if (obj_stats.get_week() == 3) {
+		_source = "room_3_after_hangout.yarn";
+	}
+	
+	fade_room(rm_bedroom_night,,,function() {
+		set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
+		change_node(_source, _node);
+		//ChatterboxLoadFromFile("room_1_after_hangout.yarn");
+		//obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_hangout.yarn");
+		//ChatterboxJump(chatterbox, "after");	
+	});
 }
 #endregion
 
 #region CCA1
 	function goto_room_cca_1(){
-		fade_room(rm_cca_1);
-		set_player_position(X_CCA_DOOR, Y_HEIGHT, 1)
-	
-		ChatterboxLoadFromFile("cca_1.yarn");
-		obj_chatterbox_control.chatterbox = ChatterboxCreate("cca_1.yarn");
-		ChatterboxJump(chatterbox, "1");
+		fade_room(rm_cca_1,,, function() {
+			set_player_position(X_CCA_DOOR, Y_HEIGHT, 1)
+			change_node("cca_1.yarn", "1");
+			//ChatterboxLoadFromFile("cca_1.yarn");
+			//obj_chatterbox_control.chatterbox = ChatterboxCreate("cca_1.yarn");
+			//ChatterboxJump(chatterbox, "1");	
+		});
+		
 	}
 
 	function goto_room_cca_1_seated(){
-		fade_room(rm_cca_1_seated);
-		obj_player.x = X_CCA_SEATED;
-		obj_player.y = Y_HEIGHT;
-		obj_player.facing_direction = 1;
-		obj_player.is_sitting = true;
+		fade_room(rm_cca_1_seated,,, function() {
+			set_player_position(X_CCA_SEATED, Y_HEIGHT, 1, true);
+			//obj_player.x = X_CCA_SEATED;
+			//obj_player.y = Y_HEIGHT;
+			//obj_player.facing_direction = 1;
+			//obj_player.is_sitting = true;
 	
-		ChatterboxJump(chatterbox, "5");
+			ChatterboxJump(chatterbox, "5");
+		});
 	}
 
 	function goto_room_cca_1_seated_18() {
@@ -245,59 +277,66 @@ function goto_room_bedroom_afterHangout(){
 	}
 	
 	function goto_room_cca_2(){
-		fade_room(rm_cca_2);
-		set_player_position(X_CCA_DOOR, Y_HEIGHT, 1)
-	
-		ChatterboxLoadFromFile("cca_2.yarn");
-		obj_chatterbox_control.chatterbox = ChatterboxCreate("cca_2.yarn");
-		ChatterboxJump(chatterbox, "1");
+		fade_room(rm_cca_2,,, function() {
+			set_player_position(X_CCA_DOOR, Y_HEIGHT, 1);
+			change_node("cca_2.yarn", "1");
+			//ChatterboxLoadFromFile("cca_2.yarn");
+			//obj_chatterbox_control.chatterbox = ChatterboxCreate("cca_2.yarn");
+			//ChatterboxJump(chatterbox, "1");
+		});
 	}
 	
 	function goto_room_cca_2_seated(){
-		fade_room(rm_cca_2_seated);
-		obj_player.x = X_CCA_SEATED;
-		obj_player.y = Y_HEIGHT;
-		obj_player.facing_direction = 1;
-		obj_player.is_sitting = true;
+		fade_room(rm_cca_2_seated,,,function() {
+			set_player_position(X_CCA_SEATED, Y_HEIGHT, 1, true);
+			//obj_player.x = X_CCA_SEATED;
+			//obj_player.y = Y_HEIGHT;
+			//obj_player.facing_direction = 1;
+			//obj_player.is_sitting = true;
 	
-		ChatterboxJump(chatterbox, "2");
+			ChatterboxJump(chatterbox, "2");	
+		});
 	}
 	
 	function goto_room_cca_2_end(){
-		fade_room(rm_cca_2_end);
-		obj_player.x = X_CCA_SEATED;
-		obj_player.y = Y_HEIGHT;
-		obj_player.facing_direction = 1;
-		obj_player.is_sitting = false;
+		fade_room(rm_cca_2_end,,, function() {
+			set_player_position(X_CCA_SEATED, Y_HEIGHT, 1, false);
+		});
 	}
 #endregion
 
 #region Hangouts
 	function goto_room_hangout_a() {
-		fade_room(rm_hangout_a);
-		set_player_position(X_HANGOUT_DOOR, Y_HEIGHT, 1);
+		fade_room(rm_hangout_a,,, function() {
+			set_player_position(X_HANGOUT_DOOR, Y_HEIGHT, 1);
+			change_node("hangout_anthony.yarn", "0");
 	
-		ChatterboxLoadFromFile("hangout_anthony.yarn");
-		obj_chatterbox_control.chatterbox = ChatterboxCreate("hangout_anthony.yarn");
-		ChatterboxJump(chatterbox, "0");
+			//ChatterboxLoadFromFile("hangout_anthony.yarn");
+			//obj_chatterbox_control.chatterbox = ChatterboxCreate("hangout_anthony.yarn");
+			//ChatterboxJump(chatterbox, "0");	
+		});
 	}
 	
 	function goto_room_hangout_n() {
-		fade_room(rm_hangout_n);
-		set_player_position(X_HANGOUT_DOOR, Y_HEIGHT, 1);
-	
-		ChatterboxLoadFromFile("hangout_nadia.yarn");
-		obj_chatterbox_control.chatterbox = ChatterboxCreate("hangout_nadia.yarn");
-		ChatterboxJump(chatterbox, "0");
+		fade_room(rm_hangout_n,,, function() {
+			set_player_position(X_HANGOUT_DOOR, Y_HEIGHT, 1);
+			change_node("hangout_nadia.yarn", "0");	
+		});
+		
+		//ChatterboxLoadFromFile("hangout_nadia.yarn");
+		//obj_chatterbox_control.chatterbox = ChatterboxCreate("hangout_nadia.yarn");
+		//ChatterboxJump(chatterbox, "0");
 	}
 	
 	function goto_room_hangout_v() {
-		fade_room(rm_hangout_v);
-		set_player_position(X_HANGOUT_DOOR, Y_HEIGHT, 1);
+		fade_room(rm_hangout_v,,, function() {
+			set_player_position(X_HANGOUT_DOOR, Y_HEIGHT, 1);
+			change_node("hangout_vera.yarn", "0");	
+		});
 	
-		ChatterboxLoadFromFile("hangout_vera.yarn");
-		obj_chatterbox_control.chatterbox = ChatterboxCreate("hangout_vera.yarn");
-		ChatterboxJump(chatterbox, "0");
+		//ChatterboxLoadFromFile("hangout_vera.yarn");
+		//obj_chatterbox_control.chatterbox = ChatterboxCreate("hangout_vera.yarn");
+		//ChatterboxJump(chatterbox, "0");
 	}
 
 #endregion
@@ -319,11 +358,12 @@ function goto_room_bedroom_afterHangout(){
 	}
 	
 	function goto_room_bedroom_after_boss1(){
-		fade_room(rm_bedroom_day);
-		set_player_position(X_BEDROOM_BED, Y_HEIGHT, 1);
-	
-		ChatterboxLoadFromFile("room_2.yarn");
-		obj_chatterbox_control.chatterbox = ChatterboxCreate("room_2.yarn");
-		ChatterboxJump(chatterbox, "after");
+		fade_room(rm_bedroom_day,,, function() {
+			set_player_position(X_BEDROOM_BED, Y_HEIGHT, 1);
+			change_node("room_2.yarn", "after");
+			//ChatterboxLoadFromFile("room_2.yarn");
+			//obj_chatterbox_control.chatterbox = ChatterboxCreate("room_2.yarn");
+			//ChatterboxJump(chatterbox, "after");	
+		});
 }
 #endregion

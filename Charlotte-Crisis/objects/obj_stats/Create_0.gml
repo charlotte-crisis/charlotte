@@ -65,6 +65,11 @@ stage = 0;
 		return stage;	
 	}
 	
+	/// @return {Real} the week number, either 1/2 or 3
+	get_week = function() {
+		return (stage div 4) + 1;
+	}
+	
 	increment_stage = function() {
 		return ++stage;	
 	}
