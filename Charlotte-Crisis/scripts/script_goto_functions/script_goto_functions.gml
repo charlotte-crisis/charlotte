@@ -368,7 +368,10 @@ function goto_room_bedroom_afterHangout(){
 	}
 	
 	function goto_room_boss_2_1() {
-			
+		fade_room(rm_boss_2_1,,, function() {
+			set_player_position(X_HANGOUT_DOOR, Y_HEIGHT, 1);
+			change_node("boss_2_1.yarn", "0");
+		});
 	}
 	
 	function goto_room_boss_2_2() {
