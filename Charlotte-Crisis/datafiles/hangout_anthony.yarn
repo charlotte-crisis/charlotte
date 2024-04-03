@@ -202,12 +202,12 @@ Anthony: "Why should I feel sorry for telling the truth?"
 <<jump 1_3_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1964,280
+__PrivCrochet_position: 1964,278
 __PrivCrochet_tags: 
 title: 1
 ---
 What do you say?
--> "How's school?" <<if visited("1_1") == false>>
+-> "How's school?"
     <<jump 1_1>>
 
 -> "Tell me about what you like to do."
