@@ -77,8 +77,12 @@
 		if (_num == 1) {
 			fade_room(rm_splash_boss2_1_1);	
 		} else {
-			fade_room(rm_splash_boss2_1_2);	
+			room_goto(rm_splash_boss2_1_2);	 // Instant
 		}
+	}
+	
+	function goto_splash_boss2_2() {
+		room_goto(rm_splash_boss2_2_cutscene); // Instant
 	}
 #endregion
 
@@ -399,8 +403,8 @@ function goto_room_bedroom_afterHangout(){
 	}
 	
 	function goto_room_boss_2_2() {
-		fade_room(rm_splash_boss2_1_2,,, function() {
+		fade_room(rm_boss_2_2,,, function() {
 			change_node("boss_2_2.yarn", "start");
-		}
+		});
 	}
 #endregion

@@ -1,0 +1,1573 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: -72,-72
+__PrivCrochet_tags: 
+title: 1
+---
+<<set $startMother = getRelationship("M")>>
+
+You: "Hi, mum."
+Mother: "Look who finally decided to come home."
+Mother: "You think this place hotel ah?"
+-> "Maybe it is!"
+    Mother: "Siao ah. We raise you so long you still say things like this?"
+    Mother: "No manners."
+
+-> "I told you I'm busy."
+    Mother: "Busy until cannot come home?"
+    Mother: "Aiya, how many things you doing in school?"
+    -> "You don't need to know."
+        You: "You probably don't understand anyway."
+        Mother: "I know I never go uni, but I can try to understand, what."
+        <<changeRelationship("M", -5)>>
+        Mother: "Why you so rude?" (-5% Mother relationship)
+    
+    -> "Too many things."
+        Mother: "Aiyo, must take care of yourself ah."
+        Mother: "Got drink water? Eat fruit?"
+        You: "Yes mum, I'm doing all that."
+    
+    -> "All you need to know is I'm happy."
+        Mother: "Okay, happy is good."
+        Mother: "Don't be like your sister, so stress."
+        Mother: "Got more than enough time to work in future."
+
+-> "I'm sorry."
+    Mother: "Aiya, is okay."
+    Mother: "I know you're busy in school."
+    Mother: "But can you please come back home a bit more often?"
+
+Mother: "Here, got some fruit on the table for you."
+Mother: "I also cooked spaghetti. You still like, right?"
+You sit at the dining table with Mother.
+<<jump 2>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 166,-73
+__PrivCrochet_tags: 
+title: 2
+---
+Mother: "So why you come back today?"
+-> "No reason. Just to visit."
+    Wait. What? You're skipping out on this? I thought you were ready!
+    Mother: "Har?"
+    You: "Ya. Maybe I take some things from my room then go back already."
+    Mother: "Orh... come back soon, okay?"
+    You: "Okay, I will."
+    We need to talk.
+    Leave the house, go back to your room and we'll settle this. 
+    //(Go to the door, cut to black. Load in hostel room and start BOSS 3.2)
+
+-> "Actually, got something important I want to tell you…"
+    Mother: "What happen?"
+    Before you rip the bandaid off...
+    -> "It's going to be a hard truth."#skillcheck #emp # 11
+        <<set $diceroll = diceRoll($int)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll >= 11>>
+            You: "What I'm about to tell you, is based on experience."
+            You: "My story, and the stories of others. And we are all still here."
+            Mother: "What are you saying?"
+            You: "I'm going to tell you the truth about me."
+            Mother: "Uh... okay, if you're being honest..." 
+            <<changeConfidence(5)>>
+            At least you know what you're talking about, right? (+5% confidence)
+        <<else>>
+            Mother: "What are you saying?"
+            Mother: "I don't know how worried I should be..."
+            <<changeConfidence(-5)>>
+            Maybe bashing your way through with Facts and Logic ain't gonna work. (-5% confidence)
+        <<endif>>
+    -> "Mom, I just want you to know that I've always loved you." #skillcheck #emp # 11
+        <<set $diceroll = diceRoll($emp)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll >= 11>>
+            Mother: "Uh... okay?"
+            You: "I truly mean it, Mom."
+            You: "What I'm about to say may be distressing, but I don't mean to hurt you."
+            Mother: "Okay... you're my son, no matter what."
+            <<changeConfidence(5)>>
+            That was genuinely nice to hear. (+5% confidence)
+        <<else>>    
+            Mother: "What do you really want?"
+            Mother: "Oh my god, is it money..." 
+            <<changeConfidence(-5)>>
+            You pandered too hard... (-5% confidence)
+        <<endif>>
+    -> "Mom, I know this is going to be hard, but please, hear me out." #skillcheck #cha # 11
+        <<set $diceroll = diceRoll($cha)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll >= 11>>        
+            Mother: "Why you so serious?"
+            You: "Maybe you're not gonna like it."
+            Mother: "Never mind la, just say it."
+            <<changeConfidence(5)>>
+            You feel the slightest tinge of optimism. (+5% confidence)
+        <<else>>
+            Mother: "Why hard? What did you do wrong now?"
+            <<changeConfidence(-5)>>
+            Hmm... that's not a good start. (-5% confidence)
+        <<endif>>
+    -> Just do it.
+<<jump 3>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 399,-72
+__PrivCrochet_tags: 
+title: 3
+---
+Mother: "So, what do you want to tell me?"
+-> "Did you see the photo from Sister?"
+    <<jump 3_1>>
+-> "I got a girl pregnant!"
+    Mother: "WHAT?"
+    You: "Uh…"
+    Mother: "Why you do that??"
+    Mother: "Who is the girl?"
+    Mother: "Oh my god…"
+    -> "That's right. I'll get her an abortion."
+        Mother: "Okay… you cannot play around with girls like this in future hor."
+        Mother: "I know you need to do… things… but don't be so careless, can?"
+        Mother: "Later you kena AIDS or what… like the gays…"
+        She keeps lecturing you about safe sex. There is no chance to tell the truth.
+        But this isn't over. Charlotte still needs closure.
+        Leave the house, go back to your room and we'll settle this. 
+        //(Go to the door, cut to black. Load in hostel room and start BOSS 3.2)
+        <<stop>>
+    
+    -> "Okay, relax, it's something else."
+        Mother: "Har?"
+        You: "Yes, no one is pregnant. I didn't have sex with anyone."
+        Mother: "Why you lie to me?"
+        Mother: "Don't scare me like this leh…"
+        You: "I'm sorry... but I promise, the news is not that bad."
+        Mother: "I don't appreciate this."
+        <<changeConfidence(-5)>>
+        It seems you've diminished Mother's trust in you... there's only one way forth now. (-5% confidence)
+        You: "Did you see the photo from Sister?"
+        <<jump 3_1>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 541,-314
+__PrivCrochet_tags: 
+title: 3_1
+---
+Mother: "What photo?"
+You: "You know. The one where I wear dress and makeup."
+Mother is struggling to keep her feelings in.
+You: "So I just wanted to tell you, I am a crossdresser."
+Mother: "Why are you like this?"
+-> "I don't know…"
+    Mother: "Don't know, don't know, everything also don't know..."
+    Mother: "Just know how to disappoint me only."
+-> "I am who I am."
+    You: "Why, don't like ah?"
+    Mother: "Of course not la!"
+    Mother: "You look until like ah gua like that, don't feel embarrassed meh?"
+-> "Are you… okay?"
+    Mother: "I didn't raise you like this."
+    Mother: "Why are you doing this to me?"
+-> "There's no need for you to feel sad."
+    Mother: "You don't tell me how to feel!"
+    Mother: "I want my son back. My son don't look like this one."
+And away we go.
+<<jump 4>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 635,-71
+__PrivCrochet_tags: 
+title: 4
+---
+Mother is on the verge of... tears? Anger? Shock? You can't tell.
+-> "There's nothing to worry about."
+    Mother: "Where got?"
+    Mother: "I cannot see my son do this to himself."
+    -> "Oh come on, stop with this 'son' nonsense."
+        Mother: "What nonsense? Your NRIC still say male. You still got this body."
+        Mother: "Why you trying to deny the truth?"
+        -> "The truth isn't that simple."
+            Mother: "What do you mean?"
+            You: "I mean, you shouldn't jump to conclusions about who I am."
+            Mother: "But I birthed you! I raised you!"
+            Mother: "If I don't know everything about you, who would know?"
+            You: "Me."
+            You: "So please. Just listen to me."
+    
+        -> "Even though I'm still your son, I can't be under your control forever."
+            You: "I have to make my own choices. Isn't that just growing up?"
+            You: "The tighter you try to hold me, the more you lose control."
+            You: "If I was 40 years old and still listening to everything you said..."
+            You: "Isn't it a little weird?"
+            Mother: "Yes, but..."
+            Mother: "This kind of basic thing like what is a woman and what is a man..."
+            Mother: "You should already know what!"
+        
+        -> "Now you just sound annoying and pathetic."
+            You: "Stop trying to get my sympathy."
+            You: "You're only making me more frustrated."
+            Mother: "I am trying to show concern and care for you."
+            Mother: "Can you show a little more respect? You're being very rude."
+    
+    -> "This is me being honest with you, Mom."
+        Mother: "You lied to me about this for so long."
+        Mother: "How do I know you're not lying about more things also?"
+        -> "Don't call me a liar."
+            Mother: "That is what you are."
+            Mother: "You lie to your mother, and you lie to yourself. For what?"
+            You: "I never lied to myself, and I'm tired of lying to you."
+            You: "I know you hate my female self, so why would I tell you about her?"
+        
+        -> "I only lied to protect myself."
+            Mother: "Protect yourself from what?"
+            Mother: "We also never throw you out of the house what."
+            Mother: "I just want you to stop."
+            You: "This is painful enough already."
+            You: "You think I ever felt safe around you?"
+            You: "What a joke. You and Dad argue so damn much, how could I ever feel safe around you?"
+            Mother: "I knew it. We argued so much..."
+            Mother: "That must be why our kids turn out weird..."
+            -> "Yes, it is."
+                Mother: "Then... I am truly sorry."
+                Mother: "I didn't know it would turn out like this..."
+                Mother: "But, I need you to stop. Like this... it's just not natural."
+                Mother: "We can still be a happy family."
+            
+            -> "It isn't, but you and Dad argue way too much."
+                Mother: "How many times do I need to say this?"
+                Mother: "It's just the way we talk."
+                Mother: "At the end of the day, we all go back to normal."
+                Mother: "We never divorce, never fight."
+            
+            -> "None of this is your fault, Mom."
+                Mother: "Then why are you like this?"
+                Mother: "I don't understand..."
+                You: "It is my own choice."
+                You: "There's no need for you to feel guilty about this."
+            
+            -> "Don't call me weird!"
+                Mother: "Don't yell at me!"
+                Mother: "I try to apologise and understand and you still yell at me."
+                Mother: "What an ungrateful child..."
+            
+        -> "I promise, no more lies from now on."
+            You: "If I wanted to lie, I wouldn't even tell you about this, right?"
+            You: "This is my attempt to come clean."
+            Mother: "Okay, so no more dresses and no more makeup."
+            You: "That wasn't part of the deal..."
+    
+    -> "Things aren't going to change."
+        You: "It's not like I'm asking you for money to buy drugs, right?"
+        You: "I still intend to live life as normal."
+        Mother: "Normal means pants, not dress. Normal means no makeup."
+        -> "Hey, I'm still doing fine in school."
+            You: "I still have friends, good grades, and I'm enjoying myself."
+            Mother: "But... but... why can't you just..."
+            You: "Just what?"
+            Mother: "You would be the perfect son if you didn't do this!"
+        
+        -> "I'm not harming anyone."
+            You: "Can't you let me have just this one hobby?"
+            Mother: "You're harming me!"
+            Mother: "You really want to see your mother cry about this?"
+        
+        -> "Yeah, that's not something I'm willing to do."
+            You: "Why should I be normal?"
+            You: "No one asked me before deciding what was normal."
+            Mother: "Siao ah? Say until so big, later go outside confirm kena whack."
+            Mother: "Haiya. Why you previously normal then go uni become so weird?"
+    
+    -> "Relax, it's just a hobby."
+        You: "I can still lead a normal life. I'm only female 20% of the time."
+        Mother: "Why can't it be 0?"
+        Mother: "I still don't understand why you can't be normal."
+        You: "Think of it just like cosplay. Or acting."
+        Mother: "Then why can't you act as a male character?"
+        Mother: "You should do what you're good at."
+        Mother: "Do what your body already is, why do you want to be someone else?"
+        -> "Are you saying my makeup isn't good?"
+            Mother: "I will always see a man even if you try to be a woman."
+            Mother: "And if your mother can see it, so can the rest of the world."
+            You: "You know, maybe if you taught me how, instead of just criticising me..."
+            You: "I could actually be better at this."
+            Mother: "That's like putting lipstick on a pig."
+            <<set $diceroll = diceRoll($cha)>>
+            <<if $diceroll < 11>>
+                <<changeConfidence(-5)>>
+                Damn. That hurt. (-5% confidence)
+            <<else>>
+                You: "Oh, so you're calling me a pig now?"
+                You: "I thought you actually cared for me as your son."
+                Mother realises the mistake in what she just said.
+                You: "If I'm just a pig to you, who cares what I look like?"
+                Mother: "That's not what I meant..."
+            <<endif>>
+        -> "Because it makes me feel free."
+            You: "When I'm male, I can't feel like a pretty princess, but in this form, I can."
+            You: "Don't tell me you don't want this freedom also."
+            Mother: "Freedom doesn't put food on the table or a shelter above your head."
+            Mother: "If you just followed the rules, life would be easier."
+        
+        -> "Clearly you're just jealous." #skillcheck #cha # 11
+            Mother: "Har??"
+            You: "I mean what I said. I'm young, you're old."
+            You: "When you look at my photos, you see someone hotter, someone prettier..."
+            You: "It almost reminds me of Snow White. And you're the evil queen."
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>            
+                Mother: "You stop this nonsense right now!"
+                Mother: "How can I be jealous of a boy who can't even apply makeup properly?"
+                Mother: "Your body so big, your voice so low, still want to be woman. Haiya."
+                <<changeConfidence(-5)>>
+                Well that kinda backfired... (-5% confidence)
+            <<else>>
+                Mother: "I can't..."
+                You: "You know it's true."
+                Mother: "Fine. You want to be so confident about it, how can I stop you?"
+                That wasn't a complete win, but you'll take what you can get.
+            <<endif>>
+-> "How are you feeling?"
+    Mother: "Don't talk like that. You know how I feel."
+    Mother: "I don't want to see you do this anymore."
+    -> "This is painful for me too, Mom."
+        Mother: "Then stop la!"
+        Mother: "We were all happy. Before you did this."
+        -> "Are you kidding me right now?"
+            You: "We are the most dysfunctional family I've ever seen."
+            Mother: "Nonsense. We never throw you out. Never starve you."
+            You: "There are other ways that we were unhappy..."
+            -> "But this isn't the time to talk about them now."
+                Mother: "Yes. We should focus on making you stop wearing dresses."
+            
+            -> "Aren't you unhappy with what Dad did to us too?"
+                You: "How many times has he scolded you for spending money?"
+                You: "Then, remember that time when he scolded Sister for her A level results?"
+                You: "And I remember that time I was hiding under the bed crying because of him."
+                Mother is on the verge of tears.
+                You: "This family has always had bigger problems than me, Mom."
+                You: "Please. Don't create more for us."
+                You: "Accept me for who I am, and we can stay united against Dad."
+                Mother: "Where got so easy..."
+            
+            -> "You're literally the definition of a helicopter parent."
+                You: "I feel suffocated when I'm around you."
+                You: "And, by the way, that's before I started crossdressing."
+                Mother: "Am I really so bad..."
+                Mother: "Or are you just an ungrateful child..."
+        
+        -> "But I won't be happy if you stop me."
+            You: "Please. This is taking away a huge part of my identity."
+            You: "I stay up at night thinking about how nice I'd look in a dress."
+            You: "And when I get the chance to do it, it's like a nice drink of water in the hot desert."
+            Mother: "Since when you become so crazy one?"
+            Mother: "I don't want to see my son become gay..."
+        
+        -> "Are you more angry, or sad right now?" #skillcheck #emp # 11
+            Mother: "Both."
+            Mother: "I just cannot accept this."
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>> 
+                You: "Please, can you just put those feelings aside..."
+                You: "I cannot talk to you properly if you don't calm down."
+                Mother: "I am calm!"
+                Mother: "It's you who cannot accept what I want to say."
+            <<else>>
+                You: "I understand. Really, I do. You have every right to feel this way."
+                You: "This must be a very big shock to you."
+                Mother: "Then can you just stop?"
+                You: "That wouldn't be fair to me, right? We need to understand [i]each other[/i]."
+                You: "Cannot just be me listening to you. We're both adults here."
+            <<endif>>
+    -> "Please try to understand, I need to do this."
+        Mother: "You don't. You're not crazy. You have a bright future."
+        Mother: "This isn't who you are."
+        Mother: "We just want you to be happy, to be normal..."
+        -> "You need to consider my emotions too."
+            You: "I [i]love[/i] this, Mom."
+            You: "I feel complete when I dress up."
+            You: "Yes, I am still Charles, but you need to let me be Charlotte too."
+            You: "It makes me feel happy..."
+            You: "Isn't that what you want for me? To be happy?"
+            Mother: "But you're making [i]me[/i] unhappy..."
+        
+        -> "What about what [i]I[/i] want, huh?"
+            You: "You've ignored that for so long."
+            Mother: "You ungrateful child!"
+            Mother: "I raised you from birth. I know better than anyone what you want."
+            Mother: "I know better than anyone who you are."
+        
+        -> "I can have a bright future if you let me be who I am."
+            You: "Think about it, if I'm not happy, how can it be a 'good future'?"
+            You: "I need to satisfy my female side to be happy."
+            You: "Everything else can stay the same."
+            Mother: "This is still something I cannot accept..."
+            Mother: "You were never this weird."
+    
+    -> "I know you need time..."
+        Mother: "No amount of time will make me understand."
+        Mother: "I have seen you for 24 years as a man, as my son..."
+        Mother: "And now you just want to ke belakang to become a woman?"
+        -> "Yes. Got a problem with that?"
+            You: "Being a man was fun but I want something more."
+            You: "And I'm not stopping for anyone. Not even you."
+            Mother: "Siao ah! You don't even know how to take care of yourself."
+            Mother: "You think life is going to be easier for you if you are an ah gua?"
+        
+        -> "Okay, fine, I know this is hard for you."
+            You: "I'm not asking you to immediately accept me."
+            You: "Take as much time as you need."
+            You: "Someday, you'll come around."
+            Mother: "Someday, you will stop. And it better be soon."
+            You: "Well, I guess this is where we start from, huh..."
+        
+        -> "I'm not fully becoming a woman..."
+            You: "I'm still sure I want to remain male."
+            You: "You don't need to worry about having a daughter..."
+            You: "But you do need to give your son the chance to do what he wants."
+            Mother: "So if my son wants to murder people I should let him?"
+            You: "That's not the same and you know it."
+    
+    -> "Don't you want me to be happy, Mom?"
+        Mother: "How can you be happy like this?"
+        Mother: "You like, half man half woman like that..."
+        Mother: "Can't you just be happy being a full man?"
+        -> "Or I could be happy being a full woman."
+            Mother: "What?"
+            You: "Be careful what you wish for, Mom."
+            You: "If I'm happier being a woman, that's what I'll be."
+        
+        -> "Believe it or not, I'm happy like this."
+            You: "Do you know what this is for me? It's freedom."
+            Mother: "Why is freedom so important to you..."
+        
+        -> "The reason why I'm not happy is because of people like you." #skillcheck #emp # 11
+            [i]Mother flinches back.[/i]
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>> 
+                You: "You know it's true."
+                You: "Society is made of people like you, who hate people like me."
+                Mother: "Then you will be torn apart outside."
+                Mother: "Can't you see that I'm trying to help you?"
+                <<changeConfidence(-5)>>
+                Mother: "And I never said I hated you..." (-5% confidence)
+            <<else>>
+                You: "Okay, I'm sorry, that may have been harsh."
+                You: "But I still need you to acknowledge that your attitudes are hurting me."
+                You: "Even if you didn't want it to be this way."
+                Mother: "I do, but it is for a good reason!"
+                You: "Hmm. Let's hear it."
+            <<endif>>
+-> "I know what's best for myself."
+    Mother: "You don't."
+    Mother: "You should know that this isn't natural."
+    Mother: "And you should know that you will never be a woman."
+    -> "You're disrespecting who I am."
+        Mother: "You are not a woman."
+        Mother: "You are disrespecting the body that we gave you."
+        Mother: "I want one daughter and one son. Not two daughters."
+        Mother: "Not one fake and one real daughter."
+        -> "You call me fake!?"
+        Mother: "What else is there to call you?"
+        Mother: "I cannot keep calling you ah gua, right?"
+        Mother: "Only those gay freaks on TV are ah gua. Not my son."
+        
+        -> "What you want shouldn't be part of my life."
+        You: "My body, my rules."
+        Mother: "I raised you for 24 years and this is what I get?"
+        Mother: "I expected better of you. You're ruining everything."
+        
+        -> "I'm still your son."
+        You: "Just a little different, that's all."
+        Mother: "My son would not wear dresses and makeup."
+        Mother: "He would understand his place as a man."
+        You: "And yet, I don't want to change my gender marker."
+        You: "I'm still okay with all the masculine stuff."
+        Mother: "Then why do you want to do the female stuff too?"
+        Mother: "I just don't understand..."
+    
+    -> "I'm an adult already."
+        You: "I've been through school, NS, uni... you saying I'm not smart enough to make my own choices?"
+        Mother: "You throw ALL of that away just to be an ah gua!"
+        Mother: "How is that being smart?"
+        -> "Because I finally found out what I want."
+            You: "I want freedom."
+            You: "I want the choice of what to wear and I don't want to fear it."
+            Mother: "This society wasn't built on freedom."
+            Mother: "It's built on rules, and following the rules will give you rewards."
+            Mother: "It is very simple but you're trying to make it difficult for yourself!"
+            Mother: "I really can't understand why."
+        
+        -> "Because I finally discovered that gender is a social construct." #skillcheck #int # 11
+            Mother: "Har?"
+            Mother: "You don't use so chim words can?"
+            Mother: "Can explain in Chinese or not?"
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>> 
+                You: "Well, if gender is constructed by other people, it can change, right?"
+                You: "It's not like men absolutely cannot wear skirts."
+                You: "Are you gonna tell a Scottish man that he cannot wear a kilt?"
+                Mother: "You're not from Scotland."
+                You: "It's the same concept."
+                Mother: "Can you please be realistic?"
+                Mother: "There are rules you have to follow as a man."
+                [i]You detect that Mother isn't following.[/i]
+            <<else>>
+                You: "Look at the guys who we consider attractive now."
+                You: "All the K-pop stars and the fictional guys that Sister likes."
+                You: "They would have been called effeminate by your generation's standards..."
+                You: "But they are still men, right?"
+                Mother: "I guess you're right..."
+                Mother: "But you're still trying to dress as a woman."
+                Mother: "If you wanted to dress up like a K-pop star, that would be more acceptable."
+                <<changeConfidence(5)>>
+                Is this the beginning of a compromise? (+5% confidence)
+            <<endif>>
+        -> "Well, I'm still here, right?"
+            You: "Then I must be doing something right."
+            You: "I've found my people. People who will accept me for who I am."
+            You: "Didn't you always tell me that my friend network is the most important thing I can have?"
+            Mother: "Yes, but..."
+    -> "Then why don't you tell me why it's wrong?"
+        You: "And, you're not allowed to use the word 'natural'."
+        Mother: "You were born a boy. There is no need for you to become a girl."
+        -> "What is wrong with me 'becoming a girl'?"
+            Mother: "That's just not who you are!"
+            Mother: "You think makeup and dress makes you a girl?"
+            Mother: "Look at yourself. You're tall, your voice is deep, you talk loudly..."
+            Mother: "How to be a girl like that?"
+        
+        -> "I'm not becoming a girl."
+            Mother: "Then you're a very stupid boy."
+            Mother: "Boys don't wear makeup and dresses. You look very disgusting!"
+            You: "So if I were to improve my makeup it would be acceptable."
+            Mother: "No, you're going to look like a freak still."
+            You: "Then there's no way to convince you."
+        
+        -> "So who sets the rules on what is a boy and what is a girl?"
+            Mother: "It's what is between your legs!"
+            Mother: "What kind of stupid question is this?"
+            You: "And just because I have male genitals, means I cannot wear a skirt?"
+            You: "Will a skirt instantly fall apart the moment I put it on?"
+            You: "Or will I die the moment I wear a dress?"
+            You: "Because neither of those have happened. I'm still here."
+            Mother: "You don't understand!"
+            You: "No, it is you who do not understand."
+<<jump 5>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 865,-71
+__PrivCrochet_tags: 
+title: 5
+---
+Mother: "Do you know how confusing this is for everyone? Not just me."
+Mother: "What will your aunts and uncles think?"
+Mother: "Why have you suddenly become this person we don't know?"
+You: "Why do you care about what the family thinks?"
+Mother: "Easy for you to say."
+Mother: "I know you muted the family WhatsApp chat right?"
+-> "Uh... yes..."
+    Mother: "I understand there's a lot of messages on the chat."
+    Mother: "But can you at least show face a bit?"
+    Mother: "You can at least wish people happy birthday."
+    -> "Okay, fine, I can do at least that."
+        Mother: "Good. Then you can go for more family events also."
+        Mother rattles off a list of people whose birthdays are coming up.
+        <<changeConfidence(5)>>
+        You consider the faint possibility that some of them may not be as opposed to Charlotte. (+5% confidence)
+    
+    -> "I don't even know these people."
+        Mother: "That is very rude. Don't you remember the times we went out with them?"
+        Mother rattles off a list of the times your aunts and uncles brought you out as a kid.
+        <<changeRelationship("M", -5)>>
+        Her point is, you're an ungrateful child. (-5% Mother relationship)
+-> "No, I didn't!"
+    Mother: "Really ah? Okay. What is your cousin's baby's name?"
+    You: "Uh..."
+    <<changeConfidence(-5)>>
+    Wait, they really had a baby? (-5% confidence)
+    Mother: "I knew it. You never check."
+    <<changeRelationship("M", -5)>>
+    Mother: "You better stop lying to me." (-5% Mother relationship)
+-> "Yes and I don't regret it."
+    Mother: "No wonder you never see the important things."
+    Mother: "Your cousin's baby, your grandma's illness..."
+    Mother: "You saying you don't care about all this?"
+    -> "I cannot care for a family that doesn't care for me."
+        Mother: "We care. Why can't you see that?"
+        Mother: "If we didn't care, would we still give you red packets during Chinese New Year?"
+        -> "That's just a formality."
+            Mother: "Okay lor, next year we don't give."
+            <<changeRelationship("M", -5)>>
+            [i]Is she being serious?[/i] (-5% Mother relationship)
+        
+        -> "You need to care for me as a whole."
+            You: "Like it or not, I'm your child."
+            You: "I didn't ask to be born this way, and I didn't get to choose my parents."
+            Mother: "I know... we love you as our child."
+            Mother: "That's why we want to help you get rid of your habit."
+            You: "Can't you just accept that I want to be both male and female?"
+            Mother: "No!"
+            [i]Well, you tried.[/i]
+        
+        -> "Okay, fine..."
+            Mother: "I told you."
+            <<changeConfidence(-5)>>
+            [i]Wow, red packets were enough to sway you, huh?[/i] (-5% confidence)
+        
+        -> "Okay, fine, I should be aware of this stuff."
+            Mother: "Yes, you should."
+            Mother: "You need to look out for family so that family will look out for you."
+            [i]Mother goes into a short segue about this, and it leaves you wondering...[/i]
+            <<changeConfidence(-5)>>
+            [i]What kind of family would stomp out the parts of you that made you special?[/i] (-5% confidence)
+        
+        -> "There's still a lot of spam."
+        Mother: "No one's asking you to read everything."
+        Mother: "But at least show a bit of respect to family, can?"
+        Mother: "Some of them very long never see you already."
+            -> "Nah, I don't care."
+                Mother: "How can you say that?"
+                You: "They're cringe. I'm embarrassed to associate with them."
+                Mother: "Ungrateful."
+                Mother: "Why don't you see how far in life you can get without family."
+            
+            -> "Fine, I'll be there for the big events." #skillcheck #cha # 11
+                You: "As long as there's food, I'll be there."
+                <<set $diceroll = diceRoll($cha)>>
+                [You rolled a {$diceroll}.]
+                <<if $diceroll < 11>>
+                    Mother: "Hmph. So you just come for food."
+                    Mother: "Can you please just try to connect back with us?"
+                    Mother: "It's for your own good."
+                <<else>>
+                    Mother: "Haha. Yes sure, we'll feed you well."
+                    Mother: "That's what family is about, isn't it?"
+                    No, family is about so much more. 
+                    <<changeConfidence(5)>>
+                    But this small joke has eased the tension a little. (+5% confidence)
+                    Mother: "But then hor..."
+
+Mother: "You're not the one facing these people."
+Mother: "You know your aunt, my sister, is already so particular."
+Mother: "Ever since you were a boy, she always compare her kids to you."
+Mother: "You really want to give them another reason to laugh at us?"
+-> "Let them laugh."
+    You: "Am I really scared of what the boomers think?"
+    Mother: "If you heard what my sister asked me, you would care."
+    -> "Fine, then I won't associate with that aunt."
+        You: "If she's so toxic, she's not worth it."
+        Mother: "You're asking me to leave my sister alone?"
+        Mother: "I can't do that. You shouldn't also."
+        You: "Maybe you can't. But I can."
+        Mother: "You don't know what you're talking about..."
+    
+    -> "Then it's time for me to leave this family behind."
+        Mother: "You say that, but can you actually do it?"
+        Mother: "Imagine you need money in the future... your friends will not give you one."
+        Mother: "Please, don't destroy your family relationship just because we fight a bit..."
+        -> "Hey. This isn't just 'fighting a bit'."
+            You: "Don't you understand how important crossdressing is for me?"
+            Mother: "You cannot live without it?"
+            You: "I cannot live with people who cannot accept it."
+            You: "And I'm willing to break with anyone who opposes it."
+            <<changeRelationship("M", -5)>>
+            Mother: "Why are you like this..." (-5% Mother relationship)
+        
+        -> "You need to stop seeing family as just objects."
+            You: "Family members aren't just my personal piggy bank."
+            You: "Our value is in how much we love each other as a family."
+            You: "And, honestly, I'm not seeing a lot of that right now."
+
+-> "Then you should ask your sister to stop being like that."
+    You: "Asking her to change her ways also gives you peace of mind, right?"
+    You: "Then you don't need to worry about what to say every time the family meets."
+    Mother: "You think got so easy ah?"
+    Mother: "She's always like that one."
+    -> "If she has the right to be unchangeable, so do I."
+        Mother: "Don't insult your aunt."
+        Mother: "She's not unchangeable, she's just stubborn."
+        -> "Okay, I also can be stubborn."
+            Mother: "Haiya. Why are the two of you making things difficult for me..."
+            You: "Trust me, it's not intentional."
+            You: "But if you pick a side, things will be easier."
+    
+        -> "Why are you viewing this as a negative thing?"
+            You: "Everyone deserves to be special."
+            You: "And loving your family means you accept us, regardless of who we may be."
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                Mother: "But you don't love us."
+                Mother: "I can feel it in your voice..."
+                <<changeConfidence(-5)>>
+                Ugh, this is going nowhere. (-5% confidence)
+            <<else>>
+                Mother: "I guess you're right..."
+                Mother: "It's just that your habit is very hard for me to accept."
+            <<endif>>
+        -> "Are you afraid of her?"
+            Mother: "Why would I be afraid of my own sister?"
+            You: "You fear her judgement."
+            You: "I know she's richer than we are, but we shouldn't live in her shadow."
+            Mother: "It's not about that..."
+            But you can tell from her hesitance that it is probably, somewhat, about that.
+    
+    -> "So are you going to side with your sister or your child?"
+        Mother: "Don't make this difficult... all we want is the best for you."
+        -> "You're the one who doesn't dare to answer this question."
+            Mother: "You think this is easy?"
+            Mother: "Imagine you and your Sister disagree about me or your father..."
+            Mother: "Like that how to decide?"
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                You: "I don't know, I'd just go with what I want."
+                You: "Actually have an opinion instead of just caving to what others want all the time."
+                Mother: "So you don't care lah."
+                You: "I don't mean that..."
+                [i]Well, that wasn't very convincing.[/i]
+            <<else>>
+                You: "Yes, I know it's hard."
+                You: "But at the end of the day, I know you will choose what is truly important."
+                You: "And whose happiness is more important, your sister's, or your child's?"
+                You: "Or your own?"
+                [i]Mother is thinking hard. That's a start.[/i] (+5% confidence)
+            <<endif>>
+        -> "You're the one making this difficult."
+            Mother: "If only you would stop..."
+            Mother: "You are the reason we are fighting in the first place."
+        
+        -> "That's why we've got to stick together."
+            You: "Who cares what auntie thinks? She isn't part of [i]this[/i] family."
+            Mother: "But..."
+            Mother: "Ugh. Fine. You have a point."
+            Mother: "But I still oppose your dresses and makeup habit."
+            Mother: "Even without her."
+    
+    -> "Then I will talk to her myself."
+        You: "After I make you understand, I will make her understand."
+        Mother: "Hmph. Good luck with that."
+        Mother: "You thought I am rigid? Look at her."
+        Mother: "I can't even get her to stop comparing you and your cousin."
+        Mother: "Trust me, I've tried all my life already."
+        Mother: "And you think [i]you[/i] can get through to her?"
+
+-> "Do they really hate me?"
+    Mother: "They don't say it, but they will think it's weird."
+    Mother: "You really want to hear it from them?"
+    -> "Yeah, I guess I don't want to be ostracised..."
+        Mother: "Huh, what is that?"
+        Mother: "But yes. You should stop."
+        Mother: "Don't want to kena from your aunts and uncles anymore."
+        Mother: "It's very embarrassing to have this kind of thing in the family, you know?"
+        
+    -> "I couldn't care less."
+        You: "Why should I be affected by what they say?"
+        Mother: "Who else will you rely on?"
+        -> "I will rely on my friends."
+        Mother: "But at the end of the day who is giving you money and shelter?"
+        Mother: "I know it is nice to have friends but you can only really rely on family."
+        Mother: "Family won't sell you out."
+        
+        -> "I will rely on myself."
+        You: "Why do I need someone else's validation?"
+        <<changeRelationship("M", -5)>>
+        Mother: "Okay lor, don't care. You see how far you can go." (-5% Mother relationship)
+    
+    -> "What if some of them are accepting too?"
+        Mother: "What do you mean?"
+        You: "Look, my cousins are around my age too, right?"
+        Mother: "Yes, but they are married and settled down already."
+        Mother: "They are normal. Not like you."
+        -> "Okay, you really have to stop with this 'normal' label." #skillcheck #int # 11
+            Mother: "What's wrong with it?"
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                [i]You go off on a rant about how heterosexism and prejudice are harmful and straight people are really the problem.[/i]
+                [i]Mother doesn't get it.[/i]
+            <<else>>
+                You: "Imagine if the majority of people were homosexual."
+                You: "Then they just kept saying you, as a straight woman with children, are not normal."
+                You: "How would you feel?"
+                Mother: "Very weirded out. Homosexuals are not natural."
+                You: "Well, I also feel weirded out and stressed that you keep calling me not natural, not normal..."
+                You: "Don't you think that's the wrong way to support your child?"
+                [i]Mother ponders your words carefully.[/i]
+            <<endif>>
+        -> "That wouldn't stop them from supporting me." #skillcheck #emp # 11
+            You: "My crossdressing doesn't affect them."
+            You: "Look at Sister. She's definitely more open minded than you."
+            <<set $diceroll = diceRoll($emp)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                You: "For some reason, the only person affected is you. So [i]you're[/i] the problem, right?"
+                Mother: "You dare call me the problem? I raised you."
+                <<changeRelationship("M", -5)>>
+                Mother: "Without me, you wouldn't even exist." (-5% Mother relationship)
+            <<else>>
+                You: "I know this generation is more accepting than before."
+                You: "I'm not asking you to be like them, though that would be nice."
+                You: "I'm just telling you that, if your reason for opposing me is family..."
+                You: "Not everyone is so judgmental. You don't need to be so worried."
+                Mother is pondering your words carefully.
+            <<endif>>
+        -> "Heh. Guess it's just my destiny to not be normal."
+            Mother: "It doesn't need to be this way."
+            Mother: "You can settle down and have a good life too..."
+            Mother: "But you just don't want to. Just... why?"
+<<jump 6>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1102,-73
+__PrivCrochet_tags: 
+title: 6
+---
+Mother: "Then what about your future?"
+Mother: "You go to boys' school, NS… you were already trained to be a man."
+Mother: "But like this... how will you find a job? A girlfriend?"
+Mother: "Please. Don't throw away your future just to do this stupid thing."
+
+-> "My past isn't going to stop me from being who I want to be."
+    You: "Just because I've been through 'male stuff' doesn't mean I need to do it forever."
+    Mother: "But you learned how to be a man from those times..."
+    Mother: "You're rough and strong, not like a woman."
+    -> "They taught me life skills beyond being a man."
+        You: "Determination, resilience, adaptability... I use them when I'm presenting as female too."
+        You: "If not, would I even be here fighting for my rights?"
+        Mother: "Why can't you use those skills for something useful?"
+        Mother: "Finding a job, settling down..."
+        Mother: "Why do you want to waste your life like this?"
+        -> "It's not a waste of life!"
+        You: "How dare you say that."
+        You: "Don't you know how important this is for me?"
+        Mother: "It shouldn't be this way..."
+        You: "It has to be. I'm not going back on this."
+        
+        -> "I can do both at the same time." #skillcheck #cha # 11
+            You: "I'm not just gonna throw away my professional life for my personal life."
+            You: "I know I can't earn money out of crossdressing."
+            You: "But can you please let me have this one hobby for myself?"
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                Mother: "As long as you're in my house, this is not allowed."
+                Mother: "If I find any female products in your room, they're either going to your sister or I will throw them away."
+            <<else>>
+                Mother: "I just don't want to see it."
+                You: "Heh. You won't."
+                <<changeConfidence(5)>>
+                You seem to unwittingly have reached an unspoken compromise. (+5% confidence)
+            <<endif>>
+        -> "Tell me how it's a waste of my life." #skillcheck #int # 11
+            Mother: "You could have further cultivated male traits."
+            Mother: "But you wasted time playing around as a woman."
+            Mother: "Please, just take the right path in life and stop making your mother worried."
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                You: "Okay, fine, I didn't maximise my time."
+                Mother: "Good boy."
+                Mother: "You just need to study hard, work hard, follow the rules and everything will be okay."
+                <<changeConfidence(-5)>>
+                Ugh. What are you, a kid? (-5% confidence)
+            <<else>>
+                You: "With what I've learned from crossdressing, I'll be a better man."
+                You: "You have to know multiple points of view in life, right? And that includes gender."
+                You: "Else I'll just be like Dad. Rigid, stuck in his ways."
+                Mother: "Uh... okay. I'm not sure how, but just be better than us, okay?"
+        
+    -> "Then I reject those experiences."
+        You: "Please never mention them in front of me again."
+        Mother: "But they are part of who you are..."
+        You: "Not anymore. It was all a waste of time."
+        <<changeRelationship("M", -5)>>
+        Mother: "Stupid ah. It's the dressing up that's a waste of time." (-5% Mother relationship)
+
+    -> "Perhaps I can learn to be a woman too."
+        You: "And, wait, I know you're gonna say I'm not a real woman or whatever, but listen."
+        You: "Even if I identify as male, don't you think it's important to know more?"
+        You: "If not, wouldn't I just end up like Dad?"
+        Mother: "Okay, but you can know more about women without being one."
+        -> "It's just less effective." #skillcheck #int # 11
+            You: "Being a woman firsthand taught me a lot."
+            You: "I've learned how hard it is to do makeup and coordinate outfits."
+            You: "I've been called out by other women about my outfit and appearance."
+            You: "Things your average cis male doesn't know, right?"
+            Mother: "Okay, you learned about women. But it's time to return to being a man."
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                You: "Why?"
+                Mother: "This isn't something you can do long term."
+                Mother: "It's like your exchange programme. You go overseas but you're not staying there forever."
+                Mother: "Time to get back to the real world." (-5% confidence)
+            <<else>>
+                You: "I will combine my experiences as a woman to be a better man."
+                You: "How many times has Dad misunderstood you? I won't make such mistakes."
+                Mother: "I guess you've got a point..."
+            <<endif>>
+        
+        -> "Then how would you recommend I learn about this?"
+            Mother: "Go get a girlfriend!"
+            Mother: "Or read about other people's experiences."
+            You: "That's just... not as fun, don't you think?"
+            Mother: "Learning about this isn't supposed to be fun. You have to take it seriously."
+            <<changeRelationship("M", -5)>>
+            Ugh. There's no getting through to her. (-5% Mother relationship)
+
+-> "Who says women can't be rough and strong too?"
+    You: "Not all of them have to be dainty and cute and feminine."
+    Mother: "But those are real women. If you try to be like that, you just look... ugly."
+    -> "Last warning. Stop saying 'real women'."
+        You: "You're being very disrespectful to me."
+        Mother: "It's the truth. How many times do I need to say this?"
+        Mother: "A man is a man, a woman is a woman."
+    
+    -> "I guess you're right..."
+        Mother: "All the men who try to be women all fail."
+        Mother: "Just stay as your correct gender and life will be easy."
+    
+    -> "Wouldn't life be easier if we could just be whatever we wanted?" #skillcheck #int # 11
+        You: "Women can be strong, men can be vulnerable."
+        Mother: "We live in a society with rules. People will judge you."
+        You: "If we were stuck in these roles all the time, then we wouldn't be happy, right?"
+        Mother: "If you follow the rules of society, you will be happy."
+        <<set $diceroll = diceRoll($int)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll < 11>>
+            You: "But I refuse."
+            Mother: "Fine. Do what you want and get judged outside."
+            Mother: "When you come back to us, you will know."
+        <<else>>
+            You: "If everyone did that, no one would be happy."
+            You: "There are so many rules that following all of them would be impossible."
+            <<addExperience(5)>>
+            You: "So why judge me so hard? I'm still your child." (+5 XP)
+            <<changeRelationship("M", 5)>>
+            Your words seem to have resonated with Mother. (+5% Mother relationship)
+        <<endif>>
+-> "Society is not so cruel."
+    You: "I'll still be able to find a job."
+    You: "With more and more people coming out, it will be normal for me to go to work in a dress."
+    Mother: "Siao ah! You think people really will accept this meh?"
+    -> "Queer people have been around forever."
+        You: "If we couldn't make a living, then we would all be dead by now, right?"
+        Mother: "You need to behave properly in your future job..."
+        Mother: "If not you will get fired, then what are you gonna do?"
+        Mother: "I don't want to see you do sex work..."
+        -> "If the company doesn't accept me for who I am, they're not for me." #skillcheck #int # 11
+            Mother: "Where got so easy one?"
+            Mother: "You look at the economy now. You are lucky to even have a job."
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                You: "Uh... I guess you're right..."
+                Mother: "You don't even have a job offer yet."
+                Mother: "Don't say things so fast. Listen to those who have been through it already."
+            <<else>>
+                You: "I don't think this is the only factor here."
+                You: "If they cannot accept LGBTQ+ employees, there are probably more issues with their culture and HR."
+                You: "And if they're not going to accept everyone, would I feel safe working there?"
+            <<endif>>
+        -> "What's wrong with sex work?" #skillcheck #int # 11
+            Mother: "It's so unsafe and terrible!"
+            Mother: "Like those in Thailand... what are they called..."
+            Mother describes Thai trans women with a word that you don't want to hear.
+            Mother: "You really want to end up like them?"
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                You: "Uh... I guess not..."
+                Mother: "Exactly. You need to stop pretending to be something you're not."
+                Mother: "Why do you want to be like them, anyway?"
+            <<else>>
+                You: "It's unfair that you just think they are sex workers."
+                You: "And when you make assumptions like this, we're trapped in this stereotype."
+                You: "Besides, there are successful trans people out there."
+                You: "So please. Don't worry. We're gonna make it."
+            <<endif>>
+        -> "I can strike a balance." #skillcheck #cha # 11
+            You: "Just watch, I'll hide so well that no one will know."
+            You: "But for that to happen, I need a place to stay first."
+            You: "I'm asking for your help here. Just one simple thing."
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                Mother: "Why do you want to make things difficult... just stop doing it."
+                [i]Well, that didn't work.[/i]
+            <<else>>
+                Mother: "Fine, I guess I can help you that way..."
+                Mother: "But I still can't let go of this idea."
+                Mother: "And good luck dealing with your father. He's definitely going to hate this."
+            <<endif>>
+    -> "If I don't start, no one will."
+        Mother: "Why do you have to be the one to start..."
+        Mother: "Your life could be simple but you just don't want."
+        -> "It's important to me."
+            You: "Life was never meant to be simple anyway."
+            You: "Even if I went for the 'normal' path, what part of applying for a BTO, doing taxes, is simple?"
+            You: "So I might as well enjoy myself while doing all that too."
+            Mother: "Okay, fine..."
+        -> "It's important to the community."
+            You: "There are lots of lost souls out there, hidden, with parents far worse than you."
+            You: "If I'm out and about, that'll inspire them to save themselves too."
+            You: "And it starts here, with me convincing you to accept my female side."
+            Mother: "As if you can be their Mother Teresa."
+            You: "What's wrong with that? Didn't you always tell me to do some good in this world?"
+            Mother: "Not like this..."
+            You: "Then I don't know what you mean by that."
+        -> "Okay, you kinda have a point there..."
+            Mother: "Told you. Just follow the rules and everything will be simple."
+            <<changeConfidence(-5)>>
+            [i]Is it really though...[/i] (-5% confidence)
+    -> "It's a big world out there."
+        You: "Why should I restrict myself? I will travel the world and find my people."
+        Mother: "I never stopped you from doing that... but will you return?"
+        -> "Don't worry, I will."
+            Mother: "We will miss you..."
+            Mother: "If you do go overseas, please don't be influenced too much by other countries."
+            Mother: "Living here, we have our own rules."
+            Mother: "Remember, [i]your people[/i] are here."
+        
+        -> "If I find my people, I'm staying with them."
+            Mother: "Your people are here. Why can't you see that?"
+            You: "Okay, so you'll be accepting of my crossdressing, right?"
+            You: "Can you truly be my people if you can't accept me?"
+            Mother doesn't know how to respond to that.
+            <<changeConfidence(5)>>
+            But she is thinking, which is a good sign. (+5% confidence)
+        
+        -> "Why should I return to a place that doesn't accept me?" #skillcheck #int # 11
+            Mother: "You have people who accept you here..."
+            Mother: "Why can't you understand that? We only want what's best for you."
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                You: "You don't. You just want me to play by your rules."
+                You: "You never accept me for who I am."
+                Mother: "Tell you how many times already, we want to help you..."
+            <<else>>
+                You: "There are a few things that need to change if I continue staying here."
+                You: "But to put it simply, I don't want to be afraid of you anymore."
+                You: "If I wear a dress I want to do it with pride, not shame."
+                Mother: "It's really going to take a while."
+                <<changeConfidence(5)>>
+                That was different from her "absolutely not" stance a few minutes ago. (+5% confidence)
+            <<endif>>
+
+-> "Of all things, why are you worried about my relationship status?"
+    Mother: "Don't you want to have kids and carry on the family name?"
+    Mother: "Haiyo, don't be like your sister, can?"
+    Mother: "She don't want to have kids, is okay. But you need to."
+    Mother: "Wait... don't tell me... you're gay!?"
+    -> "Kids are expensive."
+        Mother: "Fine. But at least settle down with someone."
+        Mother: "So you're not lonely when you grow old..."
+        Mother: "You don't want to be like your grand-aunt, living alone without kids to take care of her."
+        -> "You know, abusing your kids will make you lonely when you age."
+            You: "Imagine if I just packed all my stuff and moved out of this place."
+            You: "Even if I sent you money to keep you alive..."
+            You: "Is it really living well if Sister and I don't visit you?"
+            You: "You really wanna be cooped up in here with Dad for the rest of your days?"
+        
+        -> "Fine. I'll find a girlfriend."
+            Mother: "Exactly. This is the best solution."
+            Mother: "And you must behave in front of her." 
+            Mother: "She will run away if she sees you in a dress."
+            [i]Cringe.[/i] (-5% confidence)
+        
+        -> "I've got, like, 50 years before I reach her age." #skillcheck #cha # 11
+            You: "Why don't you just let me live my life how I want to?"
+            You: "I'll worry about the future later."
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                Mother: "You not worried about this ah?"
+                You: "I know that as long as I have a plan, I don't need to worry so much."
+                You: "After all, isn't that what you did before having children?"
+                You: "You had fun with Dad on your honeymoon."
+                You: "You know... before he became... like this."
+                Mother: "I guess you're right..."
+                Mother: "You and your sister never really had fun."
+            <<else>>
+                Mother: "Haiya. So irresponsible."
+                Mother: "You will regret this when you got no money and your body not healthy anymore."
+                Mother: "By that time, I will be dead."
+                <<changeConfidence(-5)>>
+                Wow, that was chilling... (-5% confidence)
+            <<endif>>
+    -> "Is it wrong to be gay?"
+        Mother: "Yes."
+        You: "That's very homophobic."
+        Mother: "Sorry but that's just the truth."
+        Mother: "All you young folk with your new ideas... it's hard for your parents to keep up."
+        -> "That's not an excuse. Kindness is universal."
+            You: "Even if you don't understand it, you can show compassion."
+            Mother: "I am showing compassion, what. I care for you, I want you to stop."
+            You: "Can you really love me if you don't like what I am?"
+        
+        -> "I understand, these are confusing times..." #skillcheck #emp # 11
+            You: "But just know that I'm not hurting myself."
+            You: "If anything, this is me finding myself. Isn't that a good thing?"
+            Mother: "I'm still concerned for you..."
+            <<set $diceroll = diceRoll($emp)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                You: "Don't need la. Just let me be."
+                Mother: "Okay lor..."
+            <<else>>                
+                You: "I appreciate that, really."
+                You: "And with your support, I can get through this."
+            <<endif>>
+        -> "Then leave it to this generation to decide how we want to live." #skillcheck #int # 11
+            You: "It's no longer illegal to be gay, after all."
+            You: "And soon, my generation will be the one deciding"
+            Mother: "So I'm too old for this, is it?"
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                You: "Yeah, kind of."
+                Mother: "Fine. Make all the mistakes you want."
+                Mother: "Just don't say I didn't warn you."
+            <<else>>
+                You: "Why would you be?"
+                You: "If you were too old for this, then we wouldn't expect you to learn the Internet and all the tech stuff."
+                You: "If you can accept that everything in the world can be seen from your phone..."
+                You: "Then is it that much of a stretch that a man wants to dress as a woman?"
+                <<changeRelationship("M", 5)>>
+                Mother is considering your words carefully. (+5% Mother relationship)
+            <<endif>>
+        -> "Then it's not gay if I'm a woman who likes men."
+            Mother: "Huh??"
+            You: "Yes, that's straight, isn't it?"
+            Mother: "But you are not a woman!"
+            Mother: "Why don't you understand this very simple fact?"
+            You: "Not a woman? You mean... not yet."
+    
+    -> "I'm still attracted to women."
+        Mother: "Then jialat lor! You still want get girlfriend?"
+        Mother: "Girls don't like this kind of sissy guys one!"
+        Mother: "They want a big strong man to take care of them."
+        -> "Do they, really?" #skillcheck #int # 11
+            Mother: "Why not? Don't tell me this world become so weird already."
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                Mother: "At the end of the day, men must be men, women must be women."
+                Mother: "There's no point in fighting against what you are meant to be."
+                <<changeConfidence(-5)>>
+                Ugh, it's so frustrating but you can't think of a good counter argument. (-5% confidence)
+            <<else>>
+                You: "The world didn't get weird. It just changed."
+                You: "If you look at the K-pop stars today, how many of them are called feminine by your generation?"
+                You: "Yet my generation loves them. It's a softer type of male."
+                You: "So don't worry about it, I'm actually riding the wave here."
+                Mother: "Hmm... okay..."
+                [i]Mother seems like she's heard this before.[/i]
+            <<endif>>
+        -> "Then I will find a girlfriend who accepts me for who I am."
+        Mother: "As if got such girl out there."
+        Mother: "Listen to me. I'm a woman, I know better than you about this."
+        Mother: "If not, why you don't have girlfriend yet?"
+    
+    -> "I'm not seeing anyone now."
+        Mother: "Must be because you do this."
+        Mother: "You know, my colleague's daughter is single... do you want to know her?"
+        -> "Sure, I guess."
+        As Mother goes off about this new girl, you wonder why she wants to do this.
+        <<set $diceroll = diceRoll($cha)>>
+        <<if $diceroll < 11>>
+            Is this some kind of weird arranged marriage?
+            You didn't know the ancient ways still had so much power.
+        <<else>>
+            But hey, getting to know a new friend never hurts.
+            Let's see if she accepts Charlotte.
+        <<endif>>
+        Mother: "And that is why you must stop dressing female."
+        Mother: "Because there is only one woman in this relationship."
+        
+        -> "No."
+            Mother: "Why not?"
+            You: "What the hell do you think this is, some ancient arranged marriage?"
+            You: "I stay single because I want to."
+            <<changeRelationship("M", -5)>>
+            Mother looks a little crestfallen. (-5% Mother relationship)
+        
+        -> "Whatever happens, happens." #skillcheck #cha # 11
+            Mother: "You can't just laze around like that..."
+            You: "Why not?"
+            Mother: "Wouldn't you be happier with a girlfriend?"
+            Mother: "When all your friends are already attached, and you're alone, don't you feel bad?"
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                You: "I guess you're right..."
+                Mother: "Exactly. So stop dressing up and start being a real man."
+                Mother: "Get a real woman and you'll be happy."
+                <<changeRelationship("M", -5)>>
+                Ugh, so boxed in. (-5% Mother relationship)
+            <<else>>    
+                You: "I'm not that desperate."
+                You: "I've seen what being attached is like, it's not for me. Not yet."
+                You: "Let me enjoy my freedom just a little more."
+                Mother: "Freedom... you're young. But when you hit your 30s you will start to worry."
+                You: "Then that's a problem for future me."
+            <<endif>>
+<<jump 7>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1342,-71
+__PrivCrochet_tags: 
+title: 7
+---
+Mother: "Okay, there's one important thing I need to know..."
+Mother: "You're not going to go for the transgender surgery, right?"
+Mother: "Please tell me you're not..."
+
+-> "Oh, I'm going for it!"
+    You: "I don't feel good as a man anymore. It's time for a change."
+    Mother's face turns pale.
+    Mother: "You can't be serious..."
+    You: "I am. And you'd better listen."
+    You: "I am reading about transitioning. I have trans friends who can take me through the process."
+    You: "And even though I'm not 100% sure of it now, I have felt what it is like to be a woman."
+    You: "It's exciting."
+
+-> "I don't want to rule it out."
+    Mother: "Huh??? What do you mean?"
+    You: "Life is long. What if I want it in the future?"
+    Mother: "Why would you want it in the future?"
+    -> "This is just the beginning of my journey."
+        You: "Who knows, maybe when I'm 40 I'll want to start."
+        You: "These realisations never come when you expect them."
+        Mother: "But you should already be stable by a certain age, right?"
+        -> "And what age would that be?"
+            Mother: "Uh..."
+            You: "Look, we live in a very fast world." 
+            You: "Even now you're discovering new things about yourself."
+            You: "So is it too much to consider that maybe I will transition in future?"
+        
+        -> "It's never too late to start." #skillcheck #cha # 11
+            You: "I've read that some people will only start in their adulthood."
+            You: "Maybe even some as senior citizens."
+            You: "That gives me a lot of time, doesn't it?"
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                You: "After all, you and Dad will be dead by that time."
+                Mother looks aghast. (-5% Mother relationship)
+                Mother: "So you're just waiting for us to die..." 
+                [i]You realise you've become the bad guy in this scenario.[/i] (-5% confidence)
+            <<else>>
+                You: "Lots of time for many adventures and a lot of fun."
+                You: "And most importantly I'll be making a very informed decision."
+                Mother: "I guess, if that works for you..."
+            <<endif>>
+        -> "That stability will allow me to make better decisions." #skillcheck #int # 11
+            Mother: "What do you mean?"
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                You: "I don't know... I guess I'd be more mature."
+                Mother: "Correct, you're not mature now."
+                Mother: "You must be guided to the correct decision. To stop doing this."
+                <<changeRelationship("M", -5)>>
+                So condescending. (-5% Mother relationship)
+            <<else>>
+                You: "I know that a lot of trans people cannot do it because they don't have money."
+                You: "Or they're scared of the medical stuff."
+                You: "Truth be told, that's me, so I'm willing to wait and give it time before I decide."
+                You: "But what's important is that I need the chance to make this choice."
+                You: "Isn't that what being an adult is all about?"
+                <<changeConfidence(5)>>
+                Mother can't find flaws with that, even if she wants to. (+5% confidence)
+            <<endif>>
+    -> "Who knows. I might find it fun."
+        Mother: "This kind of thing isn't fun!"
+        Mother: "Don't you know it's very serious? It can go very wrong."
+        -> "I can take all the precautions and still find it fun."
+            You: "I know it's a serious matter, but why would I do this if it weren't good for me?"
+            You: "Trust me, Mom, I'm already 25 years old."
+            Mother: "You're [i]only[/i] 25 years old..."
+            You: "I've got the advice of so many other trans people to look to."
+        
+        -> "Don't worry, I'll do it legitimately if I want to."
+            You: "The hospitals are well-equipped for trans people."
+            You: "It's not like I'm going to shoot up the hormones as if they were heroin."
+        
+        -> "And how would you know what it's like?"
+            Mother: "Back when I in air force, got one woman become man."
+            Mother: "We kept calling her Vanessa... then suddenly need to call her William."
+            Mother: "She grow moustache, grow beard... her voice grow deeper some more..."
+            Mother: "But she still wear the female uniform. It's very... uncomfortable to see her like this, you know?"
+            Mother: "I don't want this to happen to you."
+            She probably isn't willing to hear about how things have changed since her time...
+            Never mind then, one step at a time.
+            You feel a sense of deep pity for William, wherever he is now.
+        
+    -> "I don't want to wait until the only other option is death."
+        You: "Can you imagine what that feels like?"
+        You: "To feel like you're dying every day because you're in the wrong body."
+        You: "This is basically medicine for trans women. If they don't take it, they die."
+        Mother: "Oh, I hope you never reach that stage."
+        -> "There's no hoping. I'm just born this way."
+            You: "And I'm not sure whether I want to do it yet..."
+            You: "But I know I'm just different from other guys. So I'm keeping the option open."
+        
+        -> "I hope so too."
+            Mother: "You need to fill your time with more meaningful activities."
+            Mother: "That's how you can train yourself to stop thinking about this."
+            <<changeRelationship("M", -5)>>
+            Ugh. Back to square one. (-5% Mother relationship)
+        
+        -> "If I do, I'll be sure to be around people who can help."
+            You: "You're the one who told me to expand my network. So I did."
+            You: "I've talked to people who are doing it. The Internet also tells me a lot."
+            You: "I promise, if I do it, I will make sure I don't regret it."
+            Mother: "I just hope you're right, for your sake..."
+        
+    -> "If you suppress my desire, it will strike back 10 times harder." //(only if Helen was your second boss fight)
+        You: "I've seen what this is like for other crossdressers."
+        You: "They're 10 years older than me and they cannot stop."
+        Mother: "So sad... they got my pity, lah."
+        Mother: "But I cannot let you go down this path."
+        -> "That ship already sailed, Mom."
+            You: "You've got to let me live my own life."
+            You: "And I don't want that to be a life of fear and suffering."
+        
+        -> "Would you rather I do this where you can see it, or not?"
+            You: "I know my body and my preferences best."
+            You: "And I know I can't stop. So let me propose two scenarios."
+            You: "One, you allow me to crossdress. You see me do my makeup, you know where I'm going."
+            You: "You know that I'll be home with the last train and won't get into trouble."
+            You: "Or, two, you continue to stop me, and none of what I said above applies."
+            You: "You never know when I'll be coming back, and with what diseases."
+            You: "Tell me, which option seems better to you?"
+
+-> "Relax, I'll never do it."
+    You: "Crossdressing is just a hobby. I will remain male. That is my promise to you."
+    You: "Can't you just let me be female, just a bit of the time?"
+    Mother: "I just don't understand why..."
+    Mother: "Why can't you be a man 100% of the time? Like your peers."
+    -> "Hey. I'm making a compromise here."
+        You: "I'm setting aside something that could be life saving for me."
+        You: "Can you please also compromise and allow me to live how I want?"
+        Mother: "What compromise? You think you can bargain like market ah?" 
+        Mother: "I raised you for 24 years and this is how you repay me?"
+        
+        -> "Why should I?"
+            Mother: "Don't you understand? You look ugly when you put on a dress."
+            Mother: "You will never have a female body."
+            Mother: "Even with makeup people will still see a male face."
+            Mother: "If you can't do it well, why do it?"
+            -> "Okay, since I can't earn a million dollars, I'll just give up finding a job."
+                Mother: "What are you even saying?"
+                You: "If I can't do it well, why do it?"
+                Mother: "That's not what I meant..."
+                You: "Then I'm sure you don't mean that I shouldn't try dressing up either."
+                Mother looks frustrated, but you know you're right. (-5% Mother relationship, +5% confidence, +5 XP)
+            
+            -> "Then I should transition to get a nice body, right?"
+                Mother: "No! Your body is already nice as it is."
+                Mother: "We gave you this body, why don't you accept it?"
+                That was pretty horrible, but at least you caught her off guard. Heh.
+            
+            -> "I think that's kinda hurtful to hear from you." #skillcheck #emp # 11
+                Mother: "Why leh?"
+                <<set $diceroll = diceRoll($emp)>>
+                [You rolled a {$diceroll}.]
+                <<if $diceroll < 11>>
+                    You: "You're just not respecting me as a person."
+                    Mother: "Well you're not respecting the body you were given."
+                    You: "I didn't ask for this body!"
+                    Woah woah. Pump the brakes. A shouting match won't go anywhere.
+                    Mother's already about to lose it too. (-5% Mother relationship)
+                <<else>>
+                    You: "Put aside all your personal opinions. Let's talk as mother and child."
+                    You: "For 25 years I've enjoyed your love and care."
+                    You: "Things were rough sometimes, but never this rough."
+                    You: "And if we are to split over just this issue... it'd be really a shame, wouldn't it?"
+                    You: "I don't want to lose you, but I don't want to lose a part of me either."
+                    You: "The choice is yours."
+                    Mother: "Hmph. That's a nice speech."
+                    <<changeRelationship("M", 5)>>
+                    Mother looks away from you. She probably can't say what she wants to say. (+5% Mother relationship)
+                <<endif>>
+    -> "That's boring."
+        You: "We all need something in our life to keep us going."
+        You: "Sister draws and plays guitar. You do middle aged woman stuff."
+        You: "Why can't I have my own hobby?"
+        Mother: "Why can't you do something more socially acceptable?"
+        -> "Because it's just what I want to do."
+            You: "Come on Mom, this can't be worse than other hobbies."
+            You: "Can't you just let me live how I want to?"
+            Mother: "I don't think I'll ever be able to accept it."
+            [i]Well, you tried.[/i]
+        
+        -> "Crossdressing [i]is[/i] socially acceptable." #skillcheck #int # 11
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                You: "If society thinks it is okay to dress up, then it's okay."
+                You: "And society is always changing, right? Like, gender norms have changed."
+                Mother: "I lost you."
+                <<changeConfidence("M", -5)>>
+                [i]Hmm... maybe we shouldn't bring out the big theories with Mom.[/i] (-5% confidence)
+            <<else>>
+                You: "There are others like me out there."
+                You: "I've spoken to them, they're very supportive."
+                You: "Your so-called normal people are also supportive. Society isn't as scary as we think it is."
+                You: "So please. It's kinda weird if everyone else in the world is supporting me except my mom, right?"
+                Mother: "I hope you're right..."
+                You: "I've been out in the world enough to know that I am, Mom."
+                You: "Don't worry for me."
+                <<changeConfidence(5)>>
+                This could be the start of a consensus. Well done. (+5% confidence)
+            <<endif>>
+-> "Is there anything wrong with me becoming a woman?"
+    Mother: "You're not even a real woman."
+    Mother: "And why would you want to be one? Life is so tough for us."
+    Mother: "We have periods, pregnancy, kena bullied by men..."
+    Mother: "And beauty is really difficult when everyone is judging you."
+    Mother: "Just be a man and enjoy your life!"
+    -> "Then you might as well ask Sister to transition."
+        Mother: "What!?"
+        You: "Yeah what, the logic makes sense."
+        You: "If you want your kids to have a better life..."
+        You: "And being a man is automatically better than being a woman..."
+        You: "Why not have two sons?"
+        Mother: "No... that's not how it works..."
+        <<addExperience(10)>>
+        Heh. Good one. (+10 XP)
+    
+    -> "Sounds like that's a problem we need to solve from the top." #skillcheck #int # 11
+        Mother: "What you saying?"
+        You: "If women have problems, we shouldn't be avoiding them."
+        You: "We need to do what we can to stop these problems."
+        You: "Think about it. If we never changed anything from your childhood till now..."
+        You: "Would Sister be able to find a job? Would she be happy?"
+        You: "Would you be happy, as a woman?"
+        Mother: "But you are not a woman. Why do you care about our problems?"
+        <<set $diceroll = diceRoll($int)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll < 11>>
+            You: "Uh... because it's the right thing to do?"
+            Mother: "Can you please don't think until so deep?"
+            Mother: "You must take care of yourself first."
+            Mother: "I know this world is unfair, so I just want to save you from it."
+        <<else>>
+            You: "Because these standards affect me as a man too."
+            You: "I'm only allowed to have certain characteristics. Emotionless, rational, strong..."
+            You: "That's not healthy. And it's not fair. And I wouldn't be happy this way."
+            You: "If we can change this for women, men benefit too."
+            Mother: "Hmm... yes, I see where you're coming from."
+            You: "Really?"
+            Mother: "Maybe your father is so unreasonable because he doesn't have any feminine spirit."
+            <<changeConfidence(5)>>
+            You: "Uh... I guess, yeah!" (+5% confidence)
+        <<endif>>
+    -> "There's support for me if I want to take this path." 
+        Mother: "What support?"
+        You: "There are trans people and NGOs who can give advice."
+        You: "I'm not the first one."
+        Mother: "No... I still cannot allow this."
+        -> "How would you know?"
+            Mother: "Back when I in air force, got one woman become man."
+            Mother: "We kept calling her Vanessa... then suddenly need to call her William."
+            Mother: "It's so weird! She looked good as a woman then suddenly become man?"
+            Mother: "I cannot let that happen to MY son!"
+            Mother looks disgusted at the very thought. 
+            Perhaps now is not the time to talk about this.
+    
+        -> "My body, my rules."
+            You: "I'm 25. That's way past the age where you have control over me."
+            Mother: "Fine. Pay for your own medicine. Get your own insurance."
+            Mother: "Just don't come begging for money from me."
+            
+        -> "I will be in good hands, Mom."
+            You: "I know you're very worried, but I'm an adult now."
+            You: "And now is the time for you to let go."
+            You: "Can you trust me on this?"
+            Mother is silent for a moment.
+            Mother: "It's difficult..."
+            <<changeConfidence(5)>>
+            Though you're still unsure on transitioning now, you feel a slight sense of relief. (+5% confidence)
+    
+    -> "I guess you kind of have a point..."
+        Mother: "Ya lor. You cannot understand what it is like to be a woman."
+        Mother: "I gave birth to you. You cannot give birth to children."
+        Mother: "Don't try to steal a woman's role from her."
+        <<changeConfidence(-5)>>
+        You weren't trying to steal anything... (-5% confidence)
+
+<<jump 8>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1580,-61
+__PrivCrochet_tags: 
+title: 8
+---
+You: "I think we've spoken enough."
+<<set $endMother = getRelationship("M")>>
+<<set $deltaMother = $endMother - $startMother>>
+
+<<set $endConfidence = getConfidence()>>
+
+<<if $endConfidence < 30>>
+    // Low change in confidence (Regardless of mother relationship)
+    You: "You win. I'll stop."
+    Mother: "Ugh, finally."
+    Mother: "For real ah? I don't want to see a single dress or lipstick or panties in your room."
+    You: "Yes, I promise."
+    Mother: "Good boy. We can finally be normal in this house."
+    Mother: "Next thing is to get a girlfriend and settle down."
+    Mother: "Your sister already don't want kids, you better step up."
+    Mother: "And one more thing, you better don't do this again."
+    Mother: "If not, I'm telling your father."
+    Well, can't say we didn't try. She really is a tough nut to crack.
+    I'd say don't lose hope, you can try again and all that but...
+    Not now. Now, you need to rest.
+<<else>>
+    <<if $deltaMother <= 0>>
+         //(high confidence, low Mother RS%)
+        // Reduction in mother relationship or no change
+        You: "There's no convincing you. But I can convince the rest of the world."
+        Mother: "Tell you how many times, they will laugh at you!"
+        You: "Maybe."
+        You: "But with every person who laughs at me..."
+        You: "There will be people who laugh with me."
+        You: "There will be people celebrating my freedom."
+        You: "There will be people guiding me through darkness."
+        You: "And there will be people who love me."
+        You: "And you know what's the worst part, Mom?"
+        You: "You were supposed to be that person."
+        You: "And I'm sorry to say this, but you failed."
+        You: "So go ahead. Tell Dad about Charlotte all you want."
+        You: "I'm done with you."
+        So this is how it ends, huh? At least you stood up for yourself.
+        Still, burning bridges with Mother... is that the best we can do?
+    <<else>>
+        //(high confidence, high Mother RS%)
+        Mother: "Okay... fine... I don't understand, but I just want what's best for you."
+        You: "That's okay, Mom."
+        You: "And from the bottom of my heart... thank you."
+        You: "Knowing you're in my corner, that means a lot to me."
+        You: "Oh, and one more thing..."
+        You: "When I'm dressed as a girl, you can call me Charlotte."
+        Boom, baby! 
+        Okay, sorry, I was just excited. I never thought this day would come.
+    <<endif>>
+<<endif>>
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 1600,-320
+__PrivCrochet_tags: 
+title: debug_end
+---
+Skipped to the end.
+<<jump 8>>
+===

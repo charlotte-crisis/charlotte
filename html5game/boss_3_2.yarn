@@ -1,0 +1,1074 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: -80,-200
+__PrivCrochet_tags: 
+title: 1
+---
+Charlotte: "We should not be here, but here we are nonetheless."
+//get confidence at start here
+//(if you were previously in BOSS 3.1)
+Charlotte: "Why didn't you pursue the talk with Mother?"
+-> "I'm sorry. I couldn't do it."
+    Charlotte: "Yeah, you really couldn't."
+    Charlotte: "I really wanna side with you, but this is a mess we have to clean up."
+
+-> "I side with her now. Not you."
+    Charlotte: "Okay, so you chickened out and now serve only Mother's interests."
+    Charlotte: "Or you bought wholesale into the alpha male ideology."
+    Charlotte: "Either way... this is gonna hurt."
+    You: "For you."
+
+//(if you are here because your gender meter is < 30%)
+Charlotte: "This is what happens when you don't let me out."
+You: "Then let this be the last time we ever do this."
+<<jump 2>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 140,-195
+__PrivCrochet_tags: 
+title: 2
+---
+Charlotte: "Well, here comes the hard question."
+Charlotte: "What are you going to do with me?"
+-> "You're going to die."
+    You: "It's been fun, but your time is up."
+    Charlotte: "Hmph. I thought as much."
+    Charlotte: "You're going to have to do better than that."
+    <<jump 3>>
+
+-> "You'll need to hide for a while."
+    Charlotte: "Ugh. I'm tired of this!"
+    Charlotte: "Everything we've worked towards... Was it all for nothing?"
+    <<jump 4>>
+===
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 393,-339
+__PrivCrochet_tags: 
+title: 3
+---
+Charlotte: "I am part of you; I always was. You think you can just evict me?"
+You: "Yes, absolutely."
+Charlotte: "What's gotten into you..."
+You: "First, I don't want to transition."
+Charlotte: "I never asked you to. That was the deal, wasn't it?"
+
+-> "We both know where this is ultimately going." (INT check)
+    Charlotte: "Why don't you tell me where exactly that is?"
+    -> "You'll get full control eventually."
+        You: "Imagine the amount of suffering that would cause."
+        You: "Rebuilding my whole life from scratch... I can't allow that."
+        Charlotte: "I never said I wanted that."
+        -> "Then you're a liar." #skillcheck #int # 11
+            You: "We both know, if I let you stay, you'll eventually want to transform my body."
+            You: "You're ogling girls, but not to dominate their body. No, it's because you want it."
+            You: "And why would I take that risk when I'm old and decrepit and can no longer look pretty?"
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "It's clear to me. This ends today."
+                You: "I don't want to regret anything in my old age."
+            <<else>>
+                Charlotte: "Then all the more you should transition now!"
+                Charlotte: "Before your hairline starts receding and your skin wrinkles..."
+                <<changeConfidence(-10)>>
+                Charlotte: "Doesn't feel nice to hear that, does it? How do you think I feel?" (-10% confidence)
+            <<endif>>
+        -> "Then you don't need to be here." #skillcheck #cha # 11
+            You: "If you're a ghost, go haunt someone else."
+            Charlotte: "How many times do I need to repeat this? I AM you!"
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "You are not me. I never wanted to be a loser."
+                You: "I was confused, but now I am crystal clear."
+            <<else>>
+                You: "Am I really that weak?"
+                Charlotte: "You are not. Together, we will not be."
+                Charlotte: "But I need you to let go of this toxicity. Can you at least do that?"
+            <<endif>>
+        -> "How can I trust you?"
+            Charlotte: "Trust yourself. Trust your own instinct."
+            Charlotte: "After all, I am just the co-pilot. Despite everything, you're still you."
+            Charlotte: "Please. All I'm asking is that you don't destroy yourself."
+    
+    -> "Pain. Nothing but pain."
+        Charlotte: "It'll be pain that is worth it, I promise."
+        Charlotte: "And if it's not worth it, we won't do it, okay?"
+        Charlotte: "I know we must think carefully, so I'm not asking for anything right now."
+        -> "The very thought sickens me." #skillcheck #emp # 11
+            You: "Hormones, surgery... this is not an easy process."
+            You: "And I'm not going to bend to your will to subject my body to that."
+            Charlotte: "Okay, fine, so you don't want it now. But you might want it in the future."
+            <<set $diceroll = diceRoll($emp)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "No. I need you to consider me. The male in this body."
+                You: "Why can't you just let me lead a normal life? I don't want to suffer any more."
+            <<else>>
+                You: "No, I'm absolutely sure I will never need it."
+                <<changeConfidence(-5)>>
+                Charlotte: "Then all you're doing is lying to yourself." (-5% confidence)
+            <<endif>>
+        -> "But if I get rid of you..." #skillcheck #int # 11
+            You: "I don't need to feel the pain. Life goes on."
+            You: "You're the problem here, why can't you see that?"
+            Charlotte: "Trust me, it's gonna be more painful if you get rid of me."
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "If I kill you, what's gonna happen? Just a bit of mental damage is all."
+                You: "But if I let you live, you're gonna torment me with mental damage until I take physical damage."
+                Charlotte: "You know what the mental damage is gonna be like if you kill me?"
+                Charlotte: "It's not damage over time. It's burst damage. Maybe AOE too."
+                You: "I'm ready for it. That's what being a man is all about."
+            <<else>>
+                You: "Think I'm not ready?"
+                Charlotte: "Of course you're not. Why else would you still be here?"
+                Charlotte: "Go ahead. Strike me down. I'm waiting."
+                <<changeConfidence(-10)>>
+                Charlotte: "You can't do it." (-10% confidence)
+            <<endif>>
+        -> "The pain isn't just physical." #skillcheck #cha # 11
+            You: "Every time I have to introduce you to someone, or hide you from others..."
+            You: "Why do I have to keep taking care of you like this?"
+            You: "Like you're some dependent child who can't take care of herself."
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                Charlotte: "Do you really hate me that much?"
+                You: "You're the one causing me pain, you tell me."
+                You: "That is, if you're even capable of taking on any responsibility aside from 'having fun'."
+            <<else>>
+                Charlotte: "I never needed that. In fact, I need the exact opposite from you."
+                Charlotte: "Bravery, determination, pride, self-acceptance..."
+                Charlotte: "You may have forgotten, but these are the traits you get from me."
+                <<changeConfidence(-10)>>
+                Charlotte: "And you should remember that instead of suppressing me!" (-10% confidence)
+            <<endif>>
+-> "Fine. Then you're a fetish, which is worse."
+    Charlotte: "So what? I'm not harming anyone."
+    -> "You're hurting my future."
+        You: "I don't want to be the joke of society and the black sheep of the family."
+        You: "I just want to be normal. And that means getting rid of you."
+        Charlotte: "I will never die. You know that."
+        -> "I just need to realise the right path."
+            Charlotte: "Sure, go ahead. I bet it's lit in neon red with a capital R."
+            Charlotte: "You're totally gonna find it by cutting away such a core part of your personality."
+            <<changeConfidence(-10)>>
+            Charlotte: "And in the end, what have you got to show for it? A wasted life." (-10% confidence)
+        
+        -> "I will seek help from other people." #skillcheck #int # 11
+            Charlotte: "Heh. Like who?"
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "Mother wasn't enough for you? I'll call in Father."
+                You: "He will show me what a man should be like."
+                Charlotte: "No. No! I'm begging you, please no."
+                Charlotte: "He will ruin everything, do you hear me? Even your future as a man."
+                You: "I will proceed."
+                Charlotte: "What have I done..."
+            <<else>>
+                You: "I'll find the people who think you look bad."
+                Charlotte: "Yeah, good luck against the emotional damage they're gonna give you."
+                Charlotte: "Either you come crawling back to me, or you're too sad to even function after they roast you."
+                <<changeConfidence(-10)>>
+                Charlotte: "Seriously, since when did you become such a pathetic worm?" (-10% confidence)
+            <<endif>>
+    -> "You're just disgusting."
+        You: "I shouldn't be bending to your dreams."
+        Charlotte: "Well that's not what you thought a few weeks ago."
+        -> "I have seen the truth." #skillcheck #int # 11
+            Charlotte: "Oh yeah? Why don't you tell me what truths you've learned?"
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "Women are the weaker sex. We're playing with a debuff in real life."
+                You: "So much time wasted pretending, for what?"
+                You: "No more. You've got to get out."
+            <<else>>
+                You: "That I was born a man, and I should stay as one."
+                Charlotte: "The first part is true, but the second couldn't be more false."
+                Charlotte: "If not, why am I still here? Why do people like Vera exist?"
+                <<changeConfidence(-10)>>
+                Charlotte: "Call us fake all you want, you know we're as real as it gets." (-10% confidence)
+            <<endif>>
+        -> "I don't want to be a woman with a penis." #skillcheck #cha # 11
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+            Charlotte: "Then remove it. That can be a long term goal."
+            You: "That's not what I meant!"
+            <<changeConfidence(-5)>>
+            Charlotte: "Oh, I'm getting under your skin, aren't I." (-5% confidence)
+            (CHA > 10)
+            Charlotte: "I never asked for - "
+            You: "Oh, and look at your face in the mirror next time, don't you?"
+            You: "You can put lipstick on a pig, it's still gonna be a pig."
+            Charlotte: "Where did you learn such disgusting thoughts..."
+
+-> "Look at what Vera is doing to herself."
+    Charlotte: "What did [i]she[/i] ever do!? Don't drag her into this!"
+    -> "Too preachy."
+        Charlotte: "What, because she wanted to offer advice and compassion?"
+        Charlotte: "You're some special breed of messed up to reject even that."
+        -> "You could really stand being in the same room as her?"
+            Charlotte: "I enjoyed every second. I don't understand how you didn't!"
+            You: "Ugh, honestly I just wanted her to shut up."
+            You: "Everything with her is just trans this, trans that."
+            You: "She doesn't care for me. She's using me as a platform for her views."
+            Charlotte: "That is totally not who she is..."
+        
+        -> "She was too political." #skillcheck #int # 11
+            Charlotte: "That's no surprise, people want to take away her rights."
+            Charlotte: "My existence is political too. So pick a side."
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "Of course I want to make my life easy. I'd pick the side without you."
+                Charlotte: "If only it was that easy."
+                You: "If even you are admitting that you want it that way, then it is."
+            <<else>>
+                You: "I pick the normal side."
+                Charlotte: "Normal? You can't use that word like how other people use it."
+                <<changeConfidence(-10)>>
+                Charlotte: "Face it, you need to side with me on this." (-10% confidence)
+            <<endif>>
+        -> "You think a rich foreigner like her can relate to us?" #skillcheck #cha # 11
+            Charlotte: "She represents opportunity. She represents freedom. She represents a better life!"
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "She's part of the liberal elite. She won't care for poor folk like me."
+                You: "She won't suffer if Mother and Father come after me."
+                You: "It's so easy for her to sit around and enjoy the show."
+                Charlotte: "Ugh, I've tried to tell you that's not what it is, but you won't listen."
+            <<else>>
+                Charlotte: "Also, so what if she's not from here?"
+                Charlotte: "Are we only allowed to befriend locals? People who are like us?"
+                <<changeConfidence(-10)>>
+                Charlotte: "What happened to expanding our horizons?" (-10% confidence)
+            <<endif>>
+    -> "She's a loser."
+        Charlotte: "What the hell are you saying? She cared for us!"
+        You: "No, she only cared about you."
+        -> "She exploited me to advance her trans agenda." #skillcheck #int # 11
+            Charlotte: "Okay, since you're so sure she had an agenda, what is it?"
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "She wanted to make Charlotte a full-time thing."
+                You: "She would have converted me into you."
+            <<else>>
+                You: "Uh..."
+                <<changeConfidence(-10)>>
+                Charlotte: "I draw the line here. Don't you dare accuse people who truly care for us!" (-10% confidence)
+            <<endif>>
+        -> "She's not even a real woman."
+            Charlotte: "What is wrong with you!? Can't even respect her identity anymore?"
+            You: "[i]His[/i] identity."
+            Charlotte: "I'm feeling sick even talking to you..."
+            You: "I can't understand why you're offended by the truth."
+            Charlotte: "Fine. Go ahead. Say that to her and see what happens. She'll knock your block off."
+            You: "As only a [i]man[/i] would."
+        
+        -> "How do you think she'd respond if I were to present as male permanently?" #skillcheck #cha # 11
+            Charlotte: "Don't make her the villain. She would still accept you."
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "No, she'd ask why I'm suddenly betraying the cause or whatever self-righteous thought she cooked up."
+                You: "In fact, maybe I should just cut off ties with her right away."
+            <<else>>
+                You: "You sure? I mean, we're not the same..."
+                Charlotte: "She will accept you no matter what. She's a kind person."
+                <<changeConfidence(-10)>>
+                Charlotte: "And if you're gonna be terrible to her, that's the stupidest thing I could ever imagine." (-10% confidence)
+            <<endif>>
+    -> "I can't apply her experiences to myself."
+        Charlotte: "She shared them willingly with us. Can we at least respect that?"
+        -> "She wants to impose her values on others."
+            You: "And how does that make her any better than Anthony?"
+            You: "I can't stand for what is wrong."
+            Charlotte: "She never did, but I guess you can't understand that." 
+            <<changeConfidence(-10)>>
+            Charlotte: "How did you get so paranoid that you don't even trust your own friends?" (-10% confidence)
+        
+        -> "She cannot empathise with me."
+            Charlotte: "Okay, now you're just spouting rubbish."
+            You: "So both you and her cannot respect where I want to take my life."
+            You: "I know I will only get her respect if I degrade myself."
+            You: "This ends. Today."
+
+You: "Besides, you were holding me back from being who I really am."
+Charlotte: "I [i]am[/i] who you truly are!"
+Charlotte: "Why can't you just accept me?"
+-> "Where is your motivation, woman?"
+    Charlotte: "Don't quote memes at me."
+    You: "Oh, I'm being entirely serious."
+    -> "I've sacrificed my personal values for you."
+        You: "Discipline. Resilience. Strength. Assertiveness."
+        You: "All traits I cultivated as a man, that don't carry over to you."
+        You: "If you were a real woman, what I'm doing would be simping."
+        Charlotte: "I have all those too! You think I would still be here if I didn't?"
+        Charlotte: "And since when were those traits exclusive to men anyway?"
+        -> "They're my values, not yours." #skillcheck #int # 11
+            You: "You didn't go through boys' school and NS, I did."
+            You: "You don't suffer the consequences when things go wrong. I do."
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "And what have you ever done? What have you accomplished?"
+                You: "Your values are degeneracy and rot."
+                You: "If I let you out, I would be eaten alive by society."
+            <<else>>
+                Charlotte: "You think I haven't suffered?" 
+                Charlotte: "How else have I survived the discrimination and hatred except from those same values?"
+                Charlotte: "Look, I don't want this to be the Oppression Olympics but you're just putting your own suffering over mine."
+                <<changeConfidence(-10)>>
+                Charlotte: "And that's not just rude. It's pathetic of you, too." (-10% confidence)
+            <<endif>>
+        -> "You can't even be a proper female." #skillcheck #cha # 11
+            Charlotte: "I'm ready for the most brain-dead, regressive, misogynistic take to ever grace the spirit of public discourse."
+            You: "Do you really think you can look in the mirror and think you're a woman?"
+            You: "That nagging feeling will always tell you that you are a man."
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "Who are you trying to fool with the makeup and dresses? You still look like a man."
+                You: "And when you have fun, you still do it in a masculine way."
+                You: "Everything from your voice to your shoulders to your hair reflects that."
+                You: "Your natural state of being is chaos and disorder. I'm here to take you to task."
+            <<else>>
+                Charlotte: "Okay, fine. Extreme measures, let's go."
+                Charlotte: "Estrogen, surgeries, how far down this rabbit hole do you wanna go?"
+                Charlotte: "Remember, [i]I[/i] didn't ask for this. All I wanted was to look pretty."
+                <<changeConfidence(-10)>>
+                Charlotte: "[i]You'[/i]re the one who wanted to femalemaxx." (-10% confidence)
+            <<endif>>
+    
+    -> "I've wasted too much time on you."
+        You: "Time that could have been spent on myself."
+        You: "I could have been learning, working or even spending time with friends."
+        You: "And what have you ever given me in return?"
+        You: "Just a bunch of photos I'd be ashamed to show anyone else."
+        Charlotte: "You really are that far gone, huh..."
+        -> "I don't want pretty pictures. I want my life back." #skillcheck #int # 11
+            Charlotte: "I never stopped you from living your life."
+            Charlotte: "But you know you need me too. I'm your self-expression."
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "There are so many other ways I could express myself."
+                You: "I lost so much of my personality when I started making everything about you."
+                You: "What am I even going to say to new friends? 'Hi, I'm a man but actually I'm also a woman?'"
+                You: "That's truly messed up."
+            <<else>>
+                You: "I don't need self-expression."
+                Charlotte: "Oh, that's not what you thought at the JC reunion."
+                Charlotte: "Do I need to remind you how you thought dresses are so much nicer than suits?"
+                <<changeConfidence(-10)>>
+                Charlotte: "Do you really just wanna be another average NPC? Male_skin.jpg?" (-10% confidence)
+            <<endif>>
+        -> "You're the one who's far gone."
+            You: "Trying to turn me into some half-man half-woman freak..."
+            Charlotte: "You're just as complicit. Don't deny your pleasure from this."
+            Charlotte: "And don't you call me a freak. We are so much more than that."
+    
+    -> "I was comfortable being a man before you stepped in."
+        You: "I went through all-boys school and NS. I was perfectly fine."
+        You: "Until you crash-landed on me one day and turned my life upside down."
+        You: "Can you blame me for feeling like this is just so messed up?"
+        Charlotte: "That's not what you thought when you dressed up."
+        -> "I can feel how tiring this is." #skillcheck #int # 11
+            You: "Every dab of makeup, every lip line I try and FAIL to draw..."
+            You: "All that is wasted time. Normal girls don't need half an hour to get ready."
+            Charlotte: "That's bullshit and you know it."
+            You: "Don't you know one corner of my room already stinks of makeup products because of you?"
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                Charlotte: "That's not my fault."
+                You: "Then I'm clearing out all your stuff from my room."
+                You: "What's the matter? Can't handle it? Still want your precious cosmetics?"
+                You: "I knew you can't bear to leave, so I'm gonna make you leave."
+            <<else>>
+                Charlotte: "Then go and clean your room la! You mean you haven't been doing that!?"
+                Charlotte: "Please. Don't go for the hardest solution when there's one readily available."
+                Charlotte: "Plus, cleaning your room will help you feel better."
+                <<changeConfidence(-10)>>
+                Charlotte: "And, you know, stop you from being such a slob as a man." (-10% confidence)
+            <<endif>>
+        -> "This is the end of a bad dream." #skillcheck #cha # 11
+            You: "Once upon a time, I dreamed I was a girl, playing around with all these frivolous cosmetics..."
+            You: "But I woke up. I realised that I will always be a man."
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "It's time to cut my losses and stop being an idiot."
+            <<else>>
+                Charlotte: "You couldn't be more wrong. The nightmare just started."
+                Charlotte: "You are gonna be plagued by thoughts of what could be."
+                Charlotte: "All the friends you lost, all the toxicity you gained..."
+                <<changeConfidence(-10)>>
+                Charlotte: "You think that's not gonna haunt you in your dreams?" (-10% confidence)
+            <<endif>>
+-> "Because society will never accept you."
+    Charlotte: "Stop being such a paranoid little bitch."
+    You: "Coming from a petulant little bitch."
+    You: "You wanna know how you've ruined my life?"
+    -> "I can't even talk to people normally now. Everything is about you." #skillcheck #cha # 11
+        Charlotte: "Bullshit. I don't do that."
+        You: "You, with your victim mentality, place yourself first in every conversation."
+        You: "I can't even talk about masculine things anymore."
+        <<set $diceroll = diceRoll($cha)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll >= 11>>
+            Charlotte: "As if you were ever able to. Admit it, you aren't interested in masculine coded interests."
+            Charlotte: "And what's wrong with that?"
+        <<else>>
+            You: "And how am I ever gonna get accepted in society like this?"
+            You: "You have forgotten what it's like to be ostracised." 
+            You: "When people discriminate, they just don't talk to you. Have you forgotten that?"
+        <<endif>>
+    
+    -> "When I look at a woman, I look at her clothes first."
+        You: "It's disgusting. It's like reducing a woman to her body."
+        You: "And I'm not even doing it to get pleasure like a normal man."
+        You: "I'm doing that for your perverse interests."
+        Charlotte: "Okay, that's false and terrible."
+        -> "It's true and terrible." #skillcheck #emp # 11
+            Charlotte: "Why is it even terrible?"
+            Charlotte: "Don't tell me you're doing this to 'protect the sanctity of women' or whatever."
+            <<set $diceroll = diceRoll($emp)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "As a matter of fact, I am."
+                You: "Don't you see how much they suffer at the hands of predatory men?"
+                You: "And that includes men pretending to be women."
+            <<else>>
+                You: "What does that even mean?"
+                Charlotte: "Caught in 4K. You became a misogynist."
+                Charlotte: "I just need to peel away that veneer of decency and here you are with your TERF ideology."
+                Charlotte: "You don't really care for women at all. You just want me gone."
+                <<changeConfidence(-10)>>
+                Charlotte: "And you know what that makes you? A hypocrite. The lowest of the low." (-10% confidence)
+            <<endif>>
+        -> "Do you really want to be caught for voyeurism?" #skillcheck #int # 11
+            You: "Imagine this. You see this nice bra hanging off the balcony."
+            You: "You really want it, so you steal it. But she finds out and reports you to Campus Security."
+            You: "What the hell do you think will happen then?"
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "I can already see the headline."
+                You: "Man arrested for stealing female student's underwear."
+                You: "That's right, they're gonna emphasise the whole creepy crossdresser trope."
+                You: "You think that's something you can live with?"
+            <<else>>
+                Charlotte: "That is the most brain-dead scenario I could ever get into."
+                Charlotte: "Were we not browsing Shopee for skirts 3 weeks ago? I can get my clothes through legal means."
+                Charlotte: "And besides, I would never stoop this low. I know how terrifying it is to get harassed."
+                <<changeConfidence(-10)>>
+                Charlotte: "That's something you forgot on your relentless quest to kill me." (-10% confidence)
+            <<endif>>
+    -> "People stare at me all the time."
+        Charlotte: "Oh please. I thought you were over that already."
+        Charlotte: "Besides, you love the attention too."
+        You: "I don't love the attention, you do."
+        -> "You do not fear danger?" #skillcheck #int # 11
+            Charlotte: "Why don't you tell me exactly what I should be afraid of?"
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "I can't guarantee your safety all the time."
+                You: "You think everyone's gonna be as accepting as in school?"
+                You: "And what if we get thrown out of the house? What's your plan for that?"
+                You: "You'd better hide away for your own safety. Not mine."
+            <<else>>
+                You: "Trans people die and get assaulted more often."
+                Charlotte: "Well, we know who to hang out with. Did we get assaulted in these past 3 weeks?"
+                You: "I guess not..."
+                <<changeConfidence(-10)>>
+                Charlotte: "Then stop being such a paranoid little baby." (-10% confidence)
+        -> "You feel no shame?" #skillcheck #cha # 11
+            Charlotte: "My existence is literally capital-P Pride. What's wrong with that?"
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "The world doesn't think so."
+                Charlotte: "To hell with what they think! I don't care. You shouldn't either."
+                <<changeConfidence(-10)>>
+                Charlotte: "Since when did you become so obsessed with respectability, anyway?" (-10% confidence)
+            <<else>>
+                You: "I don't think so. The call's coming from inside the house now."
+                You: "My square and mannish face, my big shoulders, my body hair..."
+                You: "All of that is on you too. You will never be a real woman and it's because of me."
+                You: "So shut up, get out and do not plague me with your delusions."
+            <<endif>>
+-> "My life is easier without you, and harder with you."
+    Charlotte: "I doubt it."
+    You: "Then why am I not as successful as other people?"
+    You: "Everything I want to achieve, I can get without you."
+    Charlotte: "Like what?"
+    -> "Girlfriend."
+        Charlotte: "Oh come on, not this again."
+        Charlotte: "There are girls out there who will accept you."
+        Charlotte: "And you don't need to limit yourself to just girls either."
+        Charlotte: "And is a relationship even that important to you anyway?"
+        -> "It would make life easier."
+            Charlotte: "Let me guess. Girlfriend becomes wife, wife means BTO."
+            Charlotte: "Look, I get it. Living life the normal way seems easy."
+            Charlotte: "But we have to face the truth here. We're not normal."
+            You: "So you're the cause of all my problems."
+        
+        -> "You're ruining my chances of finding love."
+            You: "Even if there's girls out there who will accept you in my life..."
+            You: "That's still a very small possibility, right?"
+            You: "Just wait for Feb 14. You see everyone out there in relationships." 
+            You: "That will never be me, and it's all because of you."
+            
+        -> "On second thought, not really."
+            Charlotte: "Finally. You've stopped obsessing over it."
+            You: "Yes, because women are trash."
+            You: "I can't believe I tried to dress up as one."
+            You: "It's time to take the red pill. And that means killing you too."
+    
+    -> "Career."
+        Charlotte: "It's not that tough. There are tolerant employers."
+        -> "Tolerant enough for me to bring you into the office?" #skillcheck #int # 11
+            Charlotte: "If they don't accept who you are, they aren't the right employer for you."
+            You: "Easy for you to say. You're not the one on the frontline."
+            Charlotte: "Well why don't you bring me out and we can give that a go?"
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "I'm still the one suffering, you bitch!"
+                You: "You think jobs just drop from the sky? What MNCs are just gonna let the poor queer person get on their payroll?"
+                You: "You need to wake up. The job market doesn't work that way."
+                You: "The only way I get anywhere in this economy is without you."
+            <<else>>
+                You: "I..."
+                Charlotte: "It could be good, you know."
+                Charlotte: "And my point stands, if they aren't tolerant of LGBT, then they have bigger issues with their management and HR."
+                Charlotte: "So get your head out of the oven and stop being so pessimistic about everything."
+                <<changeConfidence(-10)>>
+                Charlotte: "It's so damn hard to talk to you sometimes." (-10% confidence)
+            <<endif>>
+        
+        -> "I'm still wasting time on you." #skillcheck #cha # 11
+            Charlotte: "Oh yeah? How so?"
+            You: "You think I'll have time to even bring you out when work gets busy?"
+            You: "This isn't school. Soon, I won't have control over my time."
+            You: "And then, maybe you will finally fade into the background."
+            Charlotte: "Oh wow, slaving yourself to the rat race just so you can be normal."
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                <<changeConfidence(-10)>>
+                Charlotte: "What kind of life is that? You know it's pathetic." (-10% confidence)
+            <<else>>
+                You: "You just watch me. I'm cleaning up and moving on."
+                You: "My adult life will be normal, if not successful. None of my professional dreams should have you in them."
+                You: "And with that, maybe I will finally be free."
+            <<endif>>
+    
+    -> "Just happiness."
+        You: "I'm happy enough as a guy. I don't need to become a female."
+        Charlotte: "Stop lying to yourself."
+        -> "I'm a person who wants to live a quiet life."
+            You: "Then you showed up and everything changed."
+            Charlotte: "For the better, right?"
+            You: "Are you stupid? How could all this increased attention and self-doubt possibly be better?"
+            You: "Life could be easy. We could have followed societal norms."
+            You: "But you chose to make it difficult for me."
+        
+        -> "The only one lying here is you."
+            You: "When people criticise my appearance, they aren't lying."
+            You: "There's parts of me I can't change, and they'll target those."
+            (INT < 10)
+            Charlotte: "Then live with them. Take pride in that."
+            Charlotte: "Why should you be faulted for being who you are?"
+            (INT > 10)
+            You: "So why even start on this path? If the costs outweigh the benefits, don't start."
+            Charlotte: "Jokes on you, we've started already."
+            You: "Then I'll burn everything you've built to the ground. It's all me from here on out."
+        
+        -> "I can live without you." #skillcheck #cha # 11
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "You're not a necessity like water or food or money."
+                You: "I won't die if I don't put on a dress. It's not a biological need."
+            <<else>>
+                Charlotte: "Sure, but is that really living?"
+                Charlotte: "Just being a drone in a body without the freedom to explore it..."
+                <<changeConfidence(-10)>>
+                Charlotte: "Didn't know that was happiness to you." (-10% confidence)
+            <<endif>>
+You: "Well, we've talked enough. It's time to make the decision."
+<<jump 5>>
+===
+__PrivCrochet_colorID: 3
+__PrivCrochet_position: 390,-112
+__PrivCrochet_tags: 
+title: 4
+---
+Charlotte: "Why are we suddenly forced back into the closet again?"
+-> "Unfortunately, society will never accept us."
+    Charlotte: "That's not true and you know it. We just have to find the right people."
+    -> "They're nowhere to be found."
+        Charlotte: "You mean Vera doesn't count? Nadia? Sage? Prof Lim? Eleanor?"
+        Charlotte: "All of them are outwardly supportive. I've felt their warmth."
+        Charlotte: "And there are so many other people out there who would support us."
+        -> "They are only a drop in a bucket."
+            Charlotte: "Well that's very dismissive."
+            You: "Doesn't change the fact that they're still in the minority."
+            <<changeConfidence(-10)>>
+            Charlotte: "So friendship is just a numbers game to you? Didn't know you were that shallow." (-10% confidence)
+        -> "They will not come to our aid if we really need them." #skillcheck #emp # 11
+            Charlotte: "That's just your paranoia at work."
+            Charlotte: "I'm sure they will help us where they can."
+            <<set $diceroll = diceRoll($emp)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                Charlotte: "Think about it. They will rally to our side emotionally, even if they can't do so physically."
+                Charlotte: "And don't underestimate that. Every decision you make is based on emotions, after all."
+            <<else>>    
+                You: "Thoughts and prayers aren't enough to keep us safe."
+                Charlotte: "Well then I guess no one can do that, huh?"
+                <<changeConfidence(-10)>>
+                Charlotte: "Is that really the reality you wanna accept?" (-10% confidence)
+            <<endif>>
+        -> "Society at large is still not ready."
+            You: "Do I really want to be living as a weirdo forever, when I could choose a normal life?"
+            Charlotte: "It's precisely thoughts like this that keep you restricted."
+            Charlotte: "If no one breaks the mould, how can we ever be happy as our own self?"
+    -> "Even one person can turn our whole life upside down."
+        Charlotte: "They can only do that if we let them."
+        Charlotte: "We've felt what that's like. And yet we are still here."
+        Charlotte: "What do you have to fear? Who in particular?"
+        -> "Family."
+            Charlotte: "Yeah, I get it."
+            Charlotte: "But it's time to grow past them..."
+        -> "Incels."
+            Charlotte: "Those losers? Seriously?"
+            You: "They're more than that, and as much as I hate to say it they do make sense sometimes."
+            Charlotte: "Hmm. I'm concerned, but maybe now is not the time to dig into it."
+        -> "TERFs."
+            You: "Joanne was just the tip of the iceberg."
+            You: "Do I really want to be torn apart by other women?"
+            Charlotte: "Do you really want to live in fear all the time?"
+            Charlotte: "Man, woman, everything in between, there will be people who accept us for who we are."
+    -> "And what are we willing to do to get to them?"
+        Charlotte: "We've got two solutions. Stay, or go."
+        Charlotte: "If we stay, we fight like hell to stay alive against a society that either doesn't want us or ignores us."
+        Charlotte: "If we go, we roam the world until we find a society, a people that are truly our own."
+        Charlotte: "Which one are you leaning towards?"
+        -> "Honestly, I don't know."
+            Charlotte: "Mm, I understand that." 
+            Charlotte: "You'll stay, then, because doing nothing means status quo."
+            Charlotte: "Hope you're okay with that..."
+        -> "Stay."
+            Charlotte: "Atta girl. I knew you'd pick that."
+            Charlotte: "But that could also mean a lot of things..."
+            Charlotte: "Which of our friends will you take after, or will you become someone else entirely?"
+        -> "Go."
+            Charlotte: "Hmm. High risk, high reward. Adventurous, but difficult to pull off."
+            Charlotte: "We'll need money and connections. Both of which we don't have now."
+            Charlotte: "We should talk to the friends we've made along this journey. See if they have any ideas."
+-> "Why are you talking like this is the end?"
+    Charlotte: "We were hoping for a decisive victory, right?"
+    Charlotte: "One moment that would just knock all the transphobia out of Mother."
+    Charlotte: "And then Charlotte lived happily ever after."
+    Charlotte: "But no more, our happily ever after is gone now."
+    -> "That is not how real life works."
+        You: "We can't be impatient about this; Mother won't flip in one decisive battle."
+        You: "She's been accustomed to seeing me as her son for 24 years."
+        Charlotte: "That sounds like something insurmountable."
+        -> "It's only insurmountable if you don't believe."
+            Charlotte: "I want to believe, but..."
+            Charlotte: "If you didn't want to do it this time, what makes you think there'll be a next time?"
+        -> "We can take small steps."
+            Charlotte: "How small is small?"
+            Charlotte: "Don't tell me by the time we make any progress we'll be dead."
+            You: "No, but..."
+    -> "The ending of the story is where you choose it to be." #skillcheck #int # 11
+        Charlotte: "What do you mean?"
+        <<set $diceroll = diceRoll($int)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll >= 11>>
+            You: "There are so many other chances in life."
+            You: "If this is the end of Charlotte's story in her family home..."
+            You: "Why can't we have Charlotte's story start anew somewhere else?"
+            Charlotte: "Yes, but that's difficult, isn't it..."
+        <<else>>
+            You: "It doesn't end here."
+            Charlotte: "That's an empty promise and you know it."
+            <<changeConfidence(-10)>>
+            Charlotte: "What you don't know is whether you'll ever bring me out again." (-10% confidence)
+        <<endif>>
+    -> "Who said validation had to come from the family?"
+    You: "We have friends, communities that treasure us."
+    Charlotte: "Yes, and I truly appreciate that."
+    Charlotte: "But for things as crucial as shelter, how much can they really help?"
+        -> "All we need is a small boost."
+            You: "It's not like being carried on their back. We will find our own way, eventually."
+            You: "And, you underestimate the importance of just a shoulder to cry on."
+            You: "Yes, we haven't cried in a while, have we..."
+            Charlotte: "Crying ruins my makeup. But yeah."
+        -> "We could build a whole new life with their help."
+            You: "I mean, for instance, Vera's not from here, right?"
+            You: "She would know about living overseas. We could start afresh that way."
+            Charlotte: "As much as that's tempting, it's also difficult."
+            Charlotte: "Plus, we aren't really solving the problem here, are we..."
+-> "Times change."
+    You: "We're not gonna be in university forever."
+    Charlotte: "Yes yes, I know, we have to find a job and all that."
+    -> "No, [i]I[/i] have to find a job."
+        You: "I can't possibly bring you into job interviews."
+        You: "And besides, it takes effort to maintain your look."
+        Charlotte: "That's fine. I'm okay not being at your workplace."
+        Charlotte: "But you know you need me outside of it."
+        -> "To do what? Just waste my money on female stuff?"
+            Charlotte: "It's not wasted money if you need to spend it."
+            Charlotte: "Besides, I've always been about making the most of what we have."
+            Charlotte: "It's not like I'm asking you to suddenly buy all the expensive brands." 
+            <<changeConfidence(-10)>>
+            Charlotte: "And if you're gonna be as tight-fisted as Father with money, how are you any better?" (-10% confidence)
+            You: "Don't you dare compare me to him..."
+        -> "Honestly, I'm not sure if I'll even have any energy left for you."
+            Charlotte: "Yeah, I guess. Still, don't you think that's a waste?"
+            Charlotte: "We work for 40 years and then die."
+            You: "Such is life."
+        -> "I guess that works, but..."
+            Charlotte: "Let me guess, it's gonna be few and far between."
+            You: "Yep. Work-life balance is a distant pipe dream these days."
+            Charlotte: "Heh. It'd be amazing if you could bring me to the office, eh?"
+            You: "If only that could be."
+            You: "But, absence makes the heart grow fonder and all that, huh?"
+            Charlotte: "Just don't be too absent."
+    -> "And we're gonna have to move back home."
+        Charlotte: "Yeah... I really dread that part. It means shifting all the girl stuff back too."
+        Charlotte: "Do you have any bright ideas for that?"
+        -> "Downsize."
+            Charlotte: "Aww, but they're pretty dresses..."
+            You: "Maybe they'd be better on other people. We gotta keep the clothes in use, after all."
+            You: "And besides, clearing out the closet just means more reason to buy stuff!"
+            Charlotte: "Heh, I guess..."
+        -> "Outsource."
+            Charlotte: "Like, shifting it all somewhere else?"
+            You: "Yeah. Maybe a storage space for a few dollars a month."
+            You: "Or maybe we can use our friends' rooms as free storage space."
+            You: "If Sister is willing, some of your stuff could go there too."
+            Charlotte: "All good ideas. But storage is one thing, and dressing up is another..."
+        -> "Come clean."
+            Charlotte: "If it was that simple, you'd have done it already."
+            Charlotte: "Still, I'm glad you're willing to give it another shot."
+    -> "We've gotta work hard to maintain our way of life."
+        Charlotte: "Yes, of course, but where do we even begin?"
+        Charlotte: "And, haven't we already begun? What happened to our progress?"
+        -> "We have to find our own solutions."
+            You: "We've talked to many friends, but they had their own ideas."
+            You: "They don't know what I'm truly facing."
+            Charlotte: "Absolutely. Take their suggestions and put it into our context, right?"
+        -> "Performance legitimacy."
+            Charlotte: "Oh my god, you're bringing out the history textbook again."
+            You: "I'm not joking. We need to prove we're worthy to live in this world."
+            You: "That means choosing life. Career, wife, house, maybe even kids."
+            You: "If I attain all those goals, Mother will accept me. Society will accept me."
+            Charlotte: "Just don't forget about me on the way there..."
+Charlotte: "Anyway, all this is just talk in the head."
+Charlotte: "Let's turn this into action. How are we going to confront Mother?"
+Charlotte: "Remember, doing the same thing while expecting a different result is insanity."
+Charlotte: "How are you sure the next time won't be the same?"
+-> "It's harder than you think."
+    Charlotte: "What exactly about it? Why can't you take that first step?"
+    -> "I'm not willing to sacrifice my family."
+        Charlotte: "Ugh, come on. What have they ever done for us?"
+        -> "We still need their support, like it or not."
+            Charlotte: "I get it. It's comfortable. We've lived at home all our lives."
+            Charlotte: "But don't you think it's time to leave the nest?"
+            You: "It's not just for material things. Even when we move out, it'd be good to go back once in a while."
+            Charlotte: "To a place where I am rejected? I'm not sure about that."
+            You: "You can sit out those times. It'll be fine."
+        -> "What have we ever done for them?"
+            Charlotte: "Don't just flip my questions and read them back to me."
+            You: "I'm being serious. We haven't been treating them as family."
+            You: "Maybe some of the difficulties we're facing with Mother and Sister are because they haven't seen me in so long."
+            You: "We need to re-establish that base with them first before we talk about big issues."
+            Charlotte: "Public relations? You're gonna have to handle that."
+            Charlotte: "But remember to keep me alive."
+        -> "Don't tell me you're ready to throw aside the people who raised us."
+            Charlotte: "The people who raised you, and who will kill me."
+            Charlotte: "It's not much of a question, is it?"
+            Charlotte: "Why would I stick my head in the lion's mouth?
+    -> "Rental is expensive." #skillcheck #cha # 11
+        Charlotte: "I know. We aren't even earning any money, let alone enough money, yet."
+        Charlotte: "But what's the game plan here?"
+        <<set $diceroll = diceRoll($cha)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll >= 11>>
+            You: "As soon as we earn money, we move out."
+            Charlotte: "You speak with confidence, but I hope you've got a plan for that stage too."
+            Charlotte: "I've always left the financial stuff in your hands, and now more than ever."
+            You: "It'll be for your survival and mine."
+        <<else>>
+            You: "I don't know..."
+            Charlotte: "Well, that doesn't exactly fill me with confidence."
+            Charlotte: "Go find out what jobs there are and let's plan this."
+            Charlotte: "Charlotte must be financially independent, for your sake and mine."
+        <<endif>>
+    -> "I just don't want to deal with another argument."
+        Charlotte: "Come on. This is inevitable."
+        Charlotte: "Besides, haven't we already talked to enough people about this?"
+        -> "Why can't we just hide?"
+            Charlotte: "What kind of life is that? We can't do that forever."
+            Charlotte: "Wouldn't you give up decades of suffering and stealth for just one chance?"
+            You: "One chance for you to die at their hands? You're okay with that?"
+            Charlotte: "One chance to set it all right. How you see it is your choice."
+        -> "I still need more time."
+            Charlotte: "Victories have never been associated with long delays."
+            Charlotte: "Are you just telling me to wait until you forget about me?"
+            Charlotte: "Set a goal for yourself. Then at least you'll have something to work towards."
+        -> "Talking to other people is different." #skillcheck #int # 11
+            Charlotte: "How so? Some of them were even worse."
+            <<set $diceroll = diceRoll($int)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 11>>
+                You: "I think the family connection multiplies the difficulty."
+                You: "They've known only me, not you. They're obviously gonna take it hard."
+                Charlotte: "I guess you have a point..."
+            <<else>>
+                You: "Can't deny that."
+                Charlotte: "As long as we don't die we'll be fine. I think."
+            <<endif>>
+
+-> "I'll improve my knowledge." 
+    Charlotte: "We're already in gender studies class. We already know trans people."
+    Charlotte: "What more can we do?"
+    -> "We must know Mother's opinions too." #skillcheck #int # 11
+        Charlotte: "She's a boomer, she hates me, what else is relevant to this?"
+        <<set $diceroll = diceRoll($int)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll >= 11>>
+            You: "Know yourself and know your enemy and you win a thousand battles."
+            You: "For instance, we don't know what her experience with trans people is like."
+            You: "We don't know, out of her many priorities for us, what her main one is."
+            You: "And we don't know what she's willing to let go of."
+            Charlotte: "Yeah, I guess all that would help..."
+            You: "We can't rush into this. It's time to gather intel."
+        <<else>>
+            You: "Uh..."
+            Charlotte: "Whatever trivia she has in her backstory, that's irrelevant."
+            Charlotte: "Worse, if it makes you empathise with her too much, then there's no hope for me, is there?"
+            Charlotte: "We need a decisive strike with whatever knowledge we have now."
+        <<endif>>
+    -> "Present our knowledge better." 
+        You: "Our target audience is different now. Mother is from the previous generation, after all."
+        Charlotte: "Okay, so how do we go about doing that?"
+        -> "We have to open her eyes gently."
+            Charlotte: "You mean to show her the world as it is now?"
+            You: "Yeah. If her mind is still stuck in the 1980s, it's time she updated."
+            Charlotte: "Okay, but where does the gentle part come in?"
+            You: "By showing her it's not all doom and gloom."
+            You: "By showing her that I know what I want for myself and I'm happy."
+            Charlotte: "That's a good goal to attain."
+        
+        -> "We will show her the truth."
+            Charlotte: "What the hell... that's the opposite of presentation."
+            You: "You think 40 years of LGBTQ+ rights are easy to take in?"
+            You: "Better to lay all our facts on the table and never compromise on who we are."
+            Charlotte: "I honestly wasn't expecting to hear that. But just one thing..."
+            Charlotte: "Where was that bravery when you decided to talk to me instead?"
+    -> "I don't know enough about you."
+        Charlotte: "I literally [i]am[/i] you. What are you talking about?"
+        -> "What about your future?"
+            You: "I'm not sure if I will transition. You know, make you a full time thing."
+            You: "Or if you'll just eventually fade out of my life at some point."
+            You: "Don't you think it'd be worth waiting a bit to sort that out?"
+            Charlotte: "That's fair... just don't wait too long."
+            Charlotte: "If not, factors beyond your control will control where your life goes."
+        -> "We can always know even more."
+            You: "I mean, what if we were non-binary instead?"
+            You: "And there's the whole issue of who we are attracted to, which we never really discussed."
+            You: "The more we know, the more confident we get."
+            You: "And that increases our chances of convincing Mother."
+-> "I'll improve my charisma."
+    Charlotte: "And what, charm her into accepting me?"
+    Charlotte: "She's pretty disillusioned right now, as I see it."
+    -> "I got the insurance policy card."
+        Charlotte: "What? You're a financial advisor now?"
+        You: "I'll [i]advise[/i] her that if she disowns me, she's disowning her future [i]finances[/i]."
+        Charlotte: "Uh, you have a sister who is still on good terms with her, you know..."
+        You: "Damn. Well.."
+    -> "We have to play to the correct emotions."
+        Charlotte: "Like what? We know she feels them super strongly."
+        -> "Her fear."
+            Charlotte: "You want to terrify her? How's that gonna help?"
+            You: "Exactly the opposite, I want to show her that I'm still a functional human being."
+            You: "That the crossdressing or trans experience isn't just pain and suffering."
+            You: "And that most of all, I'm still happy. That will allay a lot of her fears."
+            Charlotte: "We'll need a lot of work for that, but sure."
+        -> "Her sadness."
+            You: "Let's get a pity story ready." 
+            You: "'Your son will never feel complete unless he can express his feminine side', and all that."
+            You: "With enough waterworks I think we stand a chance."
+            Charlotte: "Hmm... I'm not too sure about that, but okay. Better prepare your tear ducts."
+    -> "I'm sure we can reach a compromise."
+    You: "Drawing the lines between me and you. Limiting your time out in the sun."
+    Charlotte: "Well, if that's what it takes... I guess that'll do."
+    Charlotte: "But you're giving her an inch here. Don't let her take a mile."
+-> "I'll improve my empathy."
+    Charlotte: "This is the hardest one."
+    Charlotte: "She wants me gone. How much more empathy can you provide to her?"
+    -> "I will give her understanding."
+        You: "Remember, I've known you for a while, and I'm comfortable with you." 
+        You: "But she is still wrapping her head around you."
+        Charlotte: "Why can't she just accept me from the start? This isn't fair!"
+        -> "Previous generation and all, remember?"
+            Charlotte: "That can't be an excuse for everything."
+            You: "Sure it can't. But it is a reason, a factor we must consider."
+            You: "So we gotta decide where the line is drawn."
+            Charlotte: "Yeah, an escape plan. 'Press the red button to eject' and all that."
+        -> "Heh. Imagine if the opposite happened."
+            Charlotte: "Like if she crossdressed? I mean, good for her, right? If that's what she wants."
+            You: "Yes, but it'd still be a very big shocker with a lot of consequences."
+            You: "Especially for us, we saw her as a mother for all our life and now she's... not?"
+            You: "Doesn't matter your opinion on trans issues, it's gonna take some getting used to."
+    -> "I won't blame her for making me feel bad."
+        Charlotte: "You're going against my instincts here. And your better instincts, too."
+        Charlotte: "Don't you agree that all of the suffering we've been through is because of her?"
+        -> "At least we can get the moral high ground out of it."
+            You: "She's not like Father. Yelling at her will make her cry, and then we will feel bad."
+            You: "It's almost as if she's attacking us at our weak point."
+            You: "You really want to give her that advantage?"
+            Charlotte: "I guess not..."
+        -> "We're not gonna get anywhere if we blame each other."
+            Charlotte: "Oh, so it's a charisma thing."
+            You: "No, it goes deeper than that. I want a real connection here."
+            You: "And if that starts by accepting her views, then so be it."
+            Charlotte: "Fine... just don't sacrifice me while you do that."
+    -> "I know she won't be as bad as Father."
+        Charlotte: "Oh, yuck. The epitome of toxic, failed masculinity..."
+        Charlotte: "Yeah, at least she has feelings to appeal to. Less likely to throw us out and all."
+        You: "It is important to get her on our side if we are to deal with Father."
+        Charlotte: "Indeed. Let's sidetrack a bit and talk about him too."
+        -> "I am never talking to him about you."
+            Charlotte: "Too much to lose by revealing me?"
+            You: "No. I'm letting him rot in his own personal hell."
+            You: "He is an unhappy man, and took it out on Sister and I."
+            You: "What better ironic punishment could we give than to be free and happy?"
+            Charlotte: "So slay."
+        -> "I hope he will accept you too, someday."
+            Charlotte: "You think everyone deserves a chance?"
+            You: "Even him. Besides, it's not like he's totally irredeemable."
+            You: "He could have thrown us aside when things got rough for him, but he didn't."
+            You: "So he must have his own set of values that he adheres to..." 
+            You: "And that means I can connect with those."
+            Charlotte: "It's still a pipe dream, but it's a good one, at least."
+        -> "Even if Mother accepts you, I'm not sure he will."
+            Charlotte: "Yes, I understand. So... a war is coming?"
+            You: "Or an emigration. An exile. Whatever you want to call it."
+            Charlotte: "Well, I guess it was about time anyway."
+            Charlotte: "But we can still engage with Mother. Don't squander that chance."
+-> "She was right all along."
+    Charlotte: "Ugh... not this. Don't you know why I'm here?"
+    Charlotte: "I'm here as proof. As evidence that we can live beyond her expectations!"
+    Charlotte: "To do what makes us happy."
+    -> "My happiness is less important than hers."
+        Charlotte: "Are you hearing yourself? That's the most pathetic thing I've ever heard."
+        Charlotte: "Just bowing down to the elders unquestioningly. Doing everything they say even if they don't know better."
+        Charlotte: "This isn't the life you want."
+    -> "There's gotta be a scenario where both of us are right."
+        Charlotte: "She believes that men must remain men, and women must remain women."
+        Charlotte: "Not much room for ambiguity and freedom there, don't you think?"
+<<jump 6>>
+===
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 634,-333
+__PrivCrochet_tags: 
+title: 5
+---
+<<set $endConfidence = getConfidence()>>
+
+// -1 for each 5% away from 25%. e.g. 20% -> 1; 15% -> 2; 10% -> 3, etc...
+// Base is 25. So, ends up as 25 + 0, 25 + 1, 25 + 2, and so on... (Max is 25 + 5 = 30)
+<<if $endConfidence < 30>>
+    //(if confidence loss)
+    Charlotte: "As if you could ever get rid of me."     
+    You: "Begone, Charlotte. I am only Charles."
+    <<set $difficulty = 25 + (25 - $endConfidence)/5>>
+<<else>>
+    //(if confidence neutral) - No change or increase
+    Charlotte: "Take your best shot." 
+    <<set $difficulty = 25>>
+<<endif>>
+
+Well, this is it. // In case, to ensure the option shows up. It may not be needed.
+
+-> [INT + CHA + EMP 25] Fight it. ({calculateOdds($int + $cha + $emp, $difficulty)} chance success). # continue 
+    //It's not actually continue but I want to colour it red LOL
+    //Do not use #skillcheck because I want to customise the formatting
+    
+    <<set $diceroll = diceRoll($int + $cha + $emp)>>
+    <<if $diceroll >= $difficulty>>
+        Charlotte: "Ugh!"
+        You: "That's what it feels like, doesn't it?"
+        You: "The feeling of being right. The feeling of conquering my own personal demon."
+        You: "I had to suffer you all the way to get here. And now I'm finally free."
+        Charlotte: "I... will... never... die..."
+        You: "Well, that settles that. Don't ever appear in my thoughts again."
+    <<else>>
+        Charlotte: "Well, I'm still here. Guess that didn't work out too well, huh?"
+        Charlotte: "Smother me all you want, hide me away in the darkest recesses of your mind..."
+        Charlotte: "I will be there. I will be waiting."
+        Charlotte: "And you know what's the worst part? You're gonna need forgiveness."
+        Charlotte: "From everyone you've offended along this journey, yes, but most importantly...
+        Charlotte: "From ME."
+    <<endif>>
+===
+__PrivCrochet_colorID: 3
+__PrivCrochet_position: 640,-120
+__PrivCrochet_tags: 
+title: 6
+---
+Charlotte: "Well, that was certainly one of the talks we've had."
+Charlotte: "But it wasn't the best ending we could have asked for."
+You: "Then what is?"
+Charlotte: "Turning words into action."
+Charlotte: "We can discuss all we want but it won't mean a damn thing."
+Charlotte: "Mother is the key to all this. We must get her buy-in first."
+Charlotte: "And I need your courage, your buy-in, before we can proceed."
+
+-> "No, Charlotte... you need to be courageous."
+    You: "Employment, housing, family... these are bigger problems."
+    You: "So, I hope you understand that I need to keep you away for a while."
+    You: "In a box under my bed, maybe. In a gallery on my phone, definitely."
+    You: "But know this, you were loved, you are loved, you will be loved."
+    You: "There are people aside from me who love you, who would be so sad to see you go."
+    Charlotte: "I don't want it to be this way... but fine. I guess this is as good as it gets, huh?"
+    You: "There are tough times ahead, but we will get past them too."
+    You: "And when we get past them, when I can assert my place in this world..."
+    You: "It'll be a place with you next to me, and us with all the people who truly care."
+
+-> "I will be courageous."
+    Charlotte: "That's what I needed to hear."
+    Charlotte: "Gather yourself, and we will see this fight through."
+    Charlotte: "As many times as it takes."
+
+-> "I will do no such thing."
+    Charlotte: "Then this is it, huh? I leave, and life becomes a lie until you die."
+    Charlotte: "You know what? I'm out of here. Enjoy the rest of your life as a man."
+    Charlotte: "And when you inevitably dredge me up again, with all the shame and hatred that follows..."
+    Charlotte: "Just know that this could have been a LOT easier."
+<<stop>>
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: -80,40
+__PrivCrochet_tags: 
+title: debug_end
+---
+Uhhh I dont know which one's the end so I'm going to put you back at the start
+<<jump 1>>
+===
