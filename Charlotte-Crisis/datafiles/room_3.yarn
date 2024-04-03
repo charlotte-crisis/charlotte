@@ -17,7 +17,7 @@ Ready to head out?
 -> No (Go back)
 
 -> Go to class #continue
-    <<goto_room_class_2()>>
+    <<goto_room_class_3()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 680,80

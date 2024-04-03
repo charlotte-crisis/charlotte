@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -557,-79
+__PrivCrochet_position: -560,-80
 __PrivCrochet_tags: 
 title: 1
 ---
@@ -9,9 +9,9 @@ You can feel the semester piling on with work and projects and assessments. You 
 Go talk to your classmates! Maybe they've had a better weekend.
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -331,-79
+__PrivCrochet_position: -320,-80
 __PrivCrochet_tags: 
-title: 2
+title: 3
 ---
 Chenjie: "Morning." 
 Chenjie: "Yikes, you look exhausted." 
@@ -23,16 +23,16 @@ Chenjie: "Recess week is coming soon! Hang in there!" (+5% confidence)
 You: "Yeah, I will. Thanks."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -103,-78
+__PrivCrochet_position: -80,-80
 __PrivCrochet_tags: 
-title: 3
+title: 2
 ---
 Sage: "Morning..."
 She isn't paying you much attention.
 She's texting someone on Telegram so it might not be best to disturb her.
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 120,-77
+__PrivCrochet_position: 120,-80
 __PrivCrochet_tags: 
 title: 4
 ---
@@ -45,7 +45,7 @@ Joanne: "Yeah, my boyfriend and I knew we wanted a BTO since JC. So we've been w
 Joanne: "Gosh, I'm so excited." (+5% Joanne relationship)
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 338,-76
+__PrivCrochet_position: 360,-80
 __PrivCrochet_tags: 
 title: pre_5
 ---
@@ -54,9 +54,11 @@ Do you wish to sit? (will start the class)
 -> No (go back)
 
 -> Yes (continue...) #continue
+    <<goto_room_class_1_seated()>>
+    // <<jump 5>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -558,243
+__PrivCrochet_position: -560,240
 __PrivCrochet_tags: 
 title: 5
 ---
@@ -633,7 +635,7 @@ No one looks away, unwilling to speak. Even Joanne is too angry to speak.
 <<jump 16>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 979,610
+__PrivCrochet_position: 960,600
 __PrivCrochet_tags: 
 title: 16
 ---
@@ -643,19 +645,19 @@ Time to go home.
 Who will you walk with today?
 
 -> Go back alone.
-    <<goto_room_bedroom()>>
+    <<goto_room_bedroom_after_class3()>>
     You're too exhausted to walk with anyone today.
     You pack up and leave before anyone else.
     The soft mattress and pillows in your hostel calls to you like a siren.
-    <<stop>>
+    
 
--> Chenjie (Chenjie relationship > 10)
+-> Chenjie <<if getRelationship("CJ") > 10>> 
     <<jump 17>>
 
--> Joanne (Joanne relationship > 10 AND $name=Charles)
+-> Joanne <<if (getRelationship("CJ") > 10) and ($name == "Charles")>>
     <<jump 18>>
 
--> Sage (Sage relationship > 10)
+-> Sage <<if getRelationship("CJ") > 10>> 
     <<jump 19>>
 ===
 __PrivCrochet_colorID: 0
@@ -718,9 +720,11 @@ Chenjie: "You really don't get to talk about this sort of stuff so openly often,
     Chenjie: "So that you know that there are different people out there with experiences not like your own, and so that you broaden your horizons." (+5 XP)
     You: "I see... That's my bus now."
     Chenjie: "Okay, then. Bye!"
+
+<<goto_room_bedroom_after_class3()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1254,632
+__PrivCrochet_position: 1240,640
 __PrivCrochet_tags: 
 title: 18
 ---
@@ -789,6 +793,8 @@ Joanne: "Do you think she hates me?"
         Joanne: "But I'll give it a shot. Thanks, Charles." (+5% confidence)
         Joanne: "Anyway, my bus is here. Bye!"
         You: "Bye!"
+
+<<goto_room_bedroom_after_class3()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1174,868
@@ -848,7 +854,9 @@ Sage: "Even when it feels impossible to be impartial about something that's actu
     Sage: "Look, it's nice that you are so optimistic... I just wish you all the best." 
     <<changeConfidence(-5)>>
     You feel an itching discomfort in your chest. (-5% confidence)
-<<stop>>
+
+
+<<goto_room_bedroom_after_class3()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1360,0
