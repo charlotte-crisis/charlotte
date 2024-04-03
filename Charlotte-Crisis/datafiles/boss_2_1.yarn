@@ -8,7 +8,9 @@ title: 1
 // You walk into the cafe. Looking around for Helen...
 Helen: "Hi, are you Charlotte?"
 You: "Yep."
-// Helen: "Ah, okay. I'm Helen. Let's get food first?"
+Helen: "Ah, okay. I'm Helen. Nice to meet you."
+<<goto_room_boss_2_1_seated()>>
+// Helen "Ah, okay. I'm Helen. Let's get food first?"
 // The two of you get your food and return to the table.
 Helen: "Why did you reach out to me, anyway?"
 You: "You're a crossdresser too. I need advice on some things."

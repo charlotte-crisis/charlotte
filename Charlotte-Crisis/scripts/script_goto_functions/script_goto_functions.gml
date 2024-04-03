@@ -10,6 +10,8 @@
 	#macro X_HOUSE_DOOR 30 // This is also the location of the bed
 	#macro X_BEDROOM_BED 30 // This is also the location of the bed
  	#macro Y_HEIGHT 74
+	#macro X_CAFE_SEATED 292
+	#macro Y_CAFE_SEATED 73
 
 	/// @function set_player_position(_x, _y, _facing, _sitting)
 	/// @description Sets player's x, y, facing direction, sitting sprite
@@ -70,7 +72,7 @@
 			fade_room(rm_splash_boss1_3);	
 		}
 	}
-
+#endregion
 
 #region Classroom Gotos
 	function goto_room_class_1(){
@@ -371,6 +373,13 @@ function goto_room_bedroom_afterHangout(){
 		fade_room(rm_boss_2_1,,, function() {
 			set_player_position(X_HANGOUT_DOOR, Y_HEIGHT, 1);
 			change_node("boss_2_1.yarn", "0");
+		});
+	}
+	
+	function goto_room_boss_2_1_seated() {
+		fade_room(rm_boss_2_1, false,, function() {
+			set_player_position(X_CAFE_SEATED, Y_CAFE_SEATED, 1);
+			camera_set_view_pos(view_camera[0], 124, 0);
 		});
 	}
 	
