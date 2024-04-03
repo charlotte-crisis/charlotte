@@ -202,7 +202,7 @@ function goto_room_bedroom_afterHangout(){
 
 	ChatterboxLoadFromFile("room_1_after_hangout.yarn");
 	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_hangout.yarn");
-	ChatterboxJump(chatterbox, "1");
+	ChatterboxJump(chatterbox, "after");
 }
 #endregion
 
