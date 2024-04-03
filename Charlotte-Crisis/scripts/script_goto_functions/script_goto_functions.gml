@@ -365,5 +365,13 @@ function goto_room_bedroom_afterHangout(){
 			//obj_chatterbox_control.chatterbox = ChatterboxCreate("room_2.yarn");
 			//ChatterboxJump(chatterbox, "after");	
 		});
-}
+	}
+	
+	function goto_room_boss_2_1() {
+			
+	}
+	
+	function goto_room_boss_2_2() {
+			
+	}
 #endregion

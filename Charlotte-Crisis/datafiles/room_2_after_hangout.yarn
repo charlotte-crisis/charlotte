@@ -1,0 +1,67 @@
+#__PrivCrochet_version:1
+# if you've already visited then it will show the concise version.
+# Interacting with mirror
+__PrivCrochet_colorID: 2
+__PrivCrochet_position: 920,201
+__PrivCrochet_tags: 
+title: door
+---
+You don't need to go out right now.
+===
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 680,200
+__PrivCrochet_tags: 
+title: bed
+---
+<<if getGenderMeter() < 30>>
+    This entire week, don't you feel like there's been something missing? Or rather, someone?
+    We need to talk. Prepare yourself.
+    Going to bed will continue to the next scene. You may still change your stats or clothes. Do you wish to continue?
+
+    -> Go back
+
+    -> Yes (continue) #continue
+        <<goto_room_boss_2_2()>>
+<<else>>
+    Do you remember what you're doing this weekend?
+    You: "Hi, are you Helen? I'm Charlotte, another crossdresser who found your blog."
+    You: "I need your advice on some crossdressing issues. Can we meet irl?"
+    Helen: "Hi. Sure... let's meet on Saturday?"
+    You: "Okay, thank you!"
+    That happened 3 days ago. And it's gonna be Saturday soon. Are you ready?
+    Going to bed will continue to the next scene. You may still change your stats or clothes. Do you wish to continue?
+
+    -> Go back
+
+    -> Yes (continue) #continue
+        <<goto_room_boss_2_1()>>
+<<endif>>
+
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 920,-40
+__PrivCrochet_tags: 
+title: desk
+---
+<<openStatMenu()>>
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 1160,-40
+__PrivCrochet_tags: 
+title: wardrobe
+---
+<<openWardrobeMenu()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1160,200
+__PrivCrochet_tags: 
+title: after
+---
+<<incrementStage()>>
+
+It's the end of the school week, and you usually head home for the weekend.
+But this time, your sister is waiting for you. When you step out of this room tomorrow, you will face her.
+Have you learned enough from the previous days? We shall see.
+
+<<set $canGoToBed = true>>
+===

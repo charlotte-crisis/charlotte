@@ -1,10 +1,10 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 86,-59
+__PrivCrochet_position: 80,-40
 __PrivCrochet_tags: 
 title: 1
 ---
-You walk into the cafe. Looking around for Helen…
+You walk into the cafe. Looking around for Helen...
 Helen: "Hi, are you Charlotte?"
 You: "Yep."
 Helen: "Ah, okay. I'm Helen. Let's get food first?"
@@ -42,7 +42,7 @@ Helen: "I'm not sure if that's bravery or recklessness."
 <<jump 2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 335,-58
+__PrivCrochet_position: 320,-40
 __PrivCrochet_tags: 
 title: 2
 ---
@@ -71,7 +71,7 @@ Helen: "So I guess your friends are all accepting?"
 <<jump 3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 575,-64
+__PrivCrochet_position: 560,-40
 __PrivCrochet_tags: 
 title: 3
 ---
