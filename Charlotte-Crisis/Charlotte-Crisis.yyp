@@ -180,6 +180,7 @@
     {"id":{"name":"rm_splash_boss1_3","path":"rooms/rm_splash_boss1_3/rm_splash_boss1_3.yy",},},
     {"id":{"name":"rm_splash_boss2_1_1","path":"rooms/rm_splash_boss2_1_1/rm_splash_boss2_1_1.yy",},},
     {"id":{"name":"rm_splash_boss2_1_2","path":"rooms/rm_splash_boss2_1_2/rm_splash_boss2_1_2.yy",},},
+    {"id":{"name":"rm_splash_boss2_2","path":"rooms/rm_splash_boss2_2/rm_splash_boss2_2.yy",},},
     {"id":{"name":"__ChatterboxBufferBatch","path":"scripts/__ChatterboxBufferBatch/__ChatterboxBufferBatch.yy",},},
     {"id":{"name":"__ChatterboxClassBodySubstring","path":"scripts/__ChatterboxClassBodySubstring/__ChatterboxClassBodySubstring.yy",},},
     {"id":{"name":"__ChatterboxClassInstruction","path":"scripts/__ChatterboxClassInstruction/__ChatterboxClassInstruction.yy",},},
@@ -432,6 +433,7 @@
     {"id":{"name":"spr_splash_6_animated_strip8","path":"sprites/spr_splash_6_animated_strip8/spr_splash_6_animated_strip8.yy",},},
     {"id":{"name":"spr_splash_6_still_1","path":"sprites/spr_splash_6_still_1/spr_splash_6_still_1.yy",},},
     {"id":{"name":"spr_splash_6_still_2","path":"sprites/spr_splash_6_still_2/spr_splash_6_still_2.yy",},},
+    {"id":{"name":"spr_splash_7_still","path":"sprites/spr_splash_7_still/spr_splash_7_still.yy",},},
     {"id":{"name":"spr_stat_bar","path":"sprites/spr_stat_bar/spr_stat_bar.yy",},},
     {"id":{"name":"spr_stat_box_guide","path":"sprites/spr_stat_box_guide/spr_stat_box_guide.yy",},},
     {"id":{"name":"spr_stat_filled_end","path":"sprites/spr_stat_filled_end/spr_stat_filled_end.yy",},},
@@ -501,6 +503,7 @@
     {"roomId":{"name":"rm_boss_2_1","path":"rooms/rm_boss_2_1/rm_boss_2_1.yy",},},
     {"roomId":{"name":"rm_splash_boss2_1_1","path":"rooms/rm_splash_boss2_1_1/rm_splash_boss2_1_1.yy",},},
     {"roomId":{"name":"rm_splash_boss2_1_2","path":"rooms/rm_splash_boss2_1_2/rm_splash_boss2_1_2.yy",},},
+    {"roomId":{"name":"rm_splash_boss2_2","path":"rooms/rm_splash_boss2_2/rm_splash_boss2_2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

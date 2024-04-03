@@ -399,6 +399,8 @@ function goto_room_bedroom_afterHangout(){
 	}
 	
 	function goto_room_boss_2_2() {
-			
+		fade_room(rm_splash_boss2_1_2,,, function() {
+			change_node("boss_2_2.yarn", "start");
+		}
 	}
 #endregion
