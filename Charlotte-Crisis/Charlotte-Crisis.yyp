@@ -436,6 +436,7 @@
     {"id":{"name":"spr_tutorial_portrait","path":"sprites/spr_tutorial_portrait/spr_tutorial_portrait.yy",},},
     {"id":{"name":"spr_ui_cha","path":"sprites/spr_ui_cha/spr_ui_cha.yy",},},
     {"id":{"name":"spr_ui_clothes_bg","path":"sprites/spr_ui_clothes_bg/spr_ui_clothes_bg.yy",},},
+    {"id":{"name":"spr_ui_pause_bg","path":"sprites/spr_ui_pause_bg/spr_ui_pause_bg.yy",},},
     {"id":{"name":"spr_ui_confidence_0","path":"sprites/spr_ui_confidence_0/spr_ui_confidence_0.yy",},},
     {"id":{"name":"spr_ui_confidence_1","path":"sprites/spr_ui_confidence_1/spr_ui_confidence_1.yy",},},
     {"id":{"name":"spr_ui_confidence","path":"sprites/spr_ui_confidence/spr_ui_confidence.yy",},},

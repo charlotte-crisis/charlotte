@@ -20,33 +20,35 @@ var portrait_scale = 2.25;	// Scale smaller rather than 3.75
 var _emote_offset = 27;		// 12 * 3.75
 var _text_y_offset = -25;   // This is for character portraits btw
 
-var _left_menu_x = _x_text_starting - 125;
+var _left_menu_x = _x_text_starting - 100;
 var _left_menu_y = _y_text_starting;
-var _left_menu_margin = 25;
-var selected = [c_gray, c_white];
+var _left_menu_margin = 40;
+var selected = [c_dkgray, c_yellow];
 
 if (is_open) {
+	draw_set_font(fnt_mono);
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_top);
 	
 	/// Draw the left menu
+	draw_sprite_ext(spr_ui_pause_bg, 0, _left_menu_x, _left_menu_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+	draw_text(_left_menu_x, _left_menu_y, "PAUSED");
 	draw_set_color(selected[select_row == 0]);
-	draw_text(_left_menu_x, _left_menu_y, "CONTINUE");
+	draw_text(_left_menu_x, _left_menu_y + _left_menu_margin, "CONTINUE");
 	draw_set_color(selected[select_row == 1]);
-	draw_text(_left_menu_x, _left_menu_y + _left_menu_margin, "HELP");
+	draw_text(_left_menu_x, _left_menu_y + _left_menu_margin * 2, "HELP");
 	draw_set_color(selected[select_row == 2]);
-	draw_text(_left_menu_x, _left_menu_y + _left_menu_margin * 2, "EXIT");
-	draw_set_color(c_white);
+	draw_text(_left_menu_x, _left_menu_y + _left_menu_margin * 3, "EXIT");
 	
+	draw_set_color(c_white);
+	draw_set_halign(fa_left);
 	if (select_row == 1) { // Help
 		draw_help_menu(_x_origin, _y_origin);
 	} else if (select_row == 2) { // Exit
 		draw_sprite_ext(spr_relationship_menu_bg, -1, _x_origin, _y_origin, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+		draw_set_font(fnt_body);
 		draw_text(_x_text_starting, _y_text_starting, "Press SPACE to save and quit to menu.");
 	} else {
-		draw_set_font(fnt_mono);
-		draw_set_halign(fa_left);
-		draw_set_valign(fa_top);
-		draw_set_color(c_white);
-	
 		// Draw background
 		draw_sprite_ext(spr_relationship_menu_bg, -1, _x_origin, _y_origin, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 	

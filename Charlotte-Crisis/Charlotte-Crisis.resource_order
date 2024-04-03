@@ -354,6 +354,7 @@
     {"name":"spr_tutorial_portrait","order":30,"path":"sprites/spr_tutorial_portrait/spr_tutorial_portrait.yy",},
     {"name":"spr_ui_cha","order":7,"path":"sprites/spr_ui_cha/spr_ui_cha.yy",},
     {"name":"spr_ui_clothes_bg","order":14,"path":"sprites/spr_ui_clothes_bg/spr_ui_clothes_bg.yy",},
+    {"name":"spr_ui_pause_bg","order":15,"path":"sprites/spr_ui_pause_bg/spr_ui_pause_bg.yy",},
     {"name":"spr_ui_confidence_0","order":8,"path":"sprites/spr_ui_confidence_0/spr_ui_confidence_0.yy",},
     {"name":"spr_ui_confidence_1","order":9,"path":"sprites/spr_ui_confidence_1/spr_ui_confidence_1.yy",},
     {"name":"spr_ui_confidence","order":8,"path":"sprites/spr_ui_confidence/spr_ui_confidence.yy",},

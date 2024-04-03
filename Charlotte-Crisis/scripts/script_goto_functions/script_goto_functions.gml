@@ -197,6 +197,7 @@ function goto_room_bedroom_after_cca2(){
 }
 
 function goto_room_bedroom_afterHangout(){
+	// TODO: Find a way to automate going to the correct yarn file which leads to the correct boss fight
 	fade_room(rm_bedroom_night);
 	set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
 
@@ -309,11 +310,11 @@ function goto_room_bedroom_afterHangout(){
 	}
 	
 	function goto_room_bedroom_after_boss1(){
-	fade_room(rm_bedroom_day);
-	set_player_position(X_BEDROOM_BED, Y_HEIGHT, 1);
+		fade_room(rm_bedroom_day);
+		set_player_position(X_BEDROOM_BED, Y_HEIGHT, 1);
 	
-	ChatterboxLoadFromFile("room_2.yarn");
-	obj_chatterbox_control.chatterbox = ChatterboxCreate("room_2.yarn");
-	ChatterboxJump(chatterbox, "after");
+		ChatterboxLoadFromFile("room_2.yarn");
+		obj_chatterbox_control.chatterbox = ChatterboxCreate("room_2.yarn");
+		ChatterboxJump(chatterbox, "after");
 }
 #endregion
