@@ -1,0 +1,81 @@
+#__PrivCrochet_version:1
+# if you've already visited then it will show the concise version.
+# Interacting with mirror
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1397,282
+__PrivCrochet_tags: 
+title: door
+---
+<<if $canGoToBed == true>>
+    You just got back!
+<<else>>
+    Are you ready to head out to art club?
+
+    -> No (Go back)
+
+    -> Yes (Go to school) #continue
+        <<goto_room_cca_3()>>        
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 680,280
+__PrivCrochet_tags: 
+title: bed
+---
+<<if $canGoToBed == true>>
+    // start the next scene
+    <<goto_black_room()>>
+    Do you want to use your phone in bed?
+    -> Yes
+        <<addExperience(10)>>
+        Alright, a few minutes won't hurt.
+        The algorithms feed you videos, memes, and other content till your eyes hurt.
+        Let's hope you retained even a bit of that... (+ 10 XP)
+    -> No
+        <<changeConfidence(5)>>
+        Yeah, don't you know using your phone too much is bad for you?
+        Get some more sleep! Sleep fixes everything. (+5% confidence)
+
+    <<goto_room_bedroom_day()>>
+    <<jump 0>>
+<<else>>
+    <<jump 0_revisit>>
+<<endif>>
+===
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 920,280
+__PrivCrochet_tags: 
+title: desk
+---
+<<openStatMenu()>>
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 1160,280
+__PrivCrochet_tags: 
+title: wardrobe
+---
+<<openWardrobeMenu()>>
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 681,-161
+__PrivCrochet_tags: 
+title: after
+---
+// Welcome back! Remember to interact with your BED, CLOSET and DESK.
+<<set $canGoToBed == true>>
+// Commented out for now.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 424,278
+__PrivCrochet_tags: 
+title: 0_revisit
+---
+Well, no use going back to bed.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 680,80
+__PrivCrochet_tags: 
+title: 0
+---
+Good morning, {$name}. Prepare your look in the CLOSET, check your Stats at the DESK, and off you go!
+===
