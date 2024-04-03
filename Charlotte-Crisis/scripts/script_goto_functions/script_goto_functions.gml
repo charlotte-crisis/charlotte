@@ -124,8 +124,9 @@
 			//obj_player.y = 74;
 			//obj_player.facing_direction = 1;
 			//obj_player.is_sitting = true;
-	
-			ChatterboxJump(chatterbox, "5");
+			
+			// TAKE OUT THE JUMP!
+			// ChatterboxJump(chatterbox, "5");
 		});
 	}
 
@@ -293,7 +294,7 @@ function goto_room_bedroom_afterHangout(){
 			//obj_player.facing_direction = 1;
 			//obj_player.is_sitting = true;
 	
-			ChatterboxJump(chatterbox, "5");
+			// ChatterboxJump(chatterbox, "5");
 		});
 	}
 

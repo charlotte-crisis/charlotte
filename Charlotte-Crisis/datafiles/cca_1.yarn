@@ -725,6 +725,7 @@ Do you wish to sit?
 
 -> Yes (continue...) #continue
     <<goto_room_cca_1_seated()>>
+    <<jump 5>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2218,325
