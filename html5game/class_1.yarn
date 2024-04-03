@@ -543,7 +543,7 @@ Sage: "I feel I have a personal stake in this conversation, so I thought I shoul
 <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 760,757
+__PrivCrochet_position: 760,760
 __PrivCrochet_tags: 
 title: 20
 ---
@@ -552,7 +552,7 @@ A message from your sister. You open it.
 Sister: "Charles"
 Sister: "Is that actually you in that photo?"
 Sister: "What are you doing?"
-<<goto_splash_1>>
+<<goto_splash_1()>>
 Below is a post about your JC class reunion. More specifically, a photo of you.
 Wearing a dress and a full face of makeup.
 You had wanted to make your debut as Charlotte, your "girl mode".
