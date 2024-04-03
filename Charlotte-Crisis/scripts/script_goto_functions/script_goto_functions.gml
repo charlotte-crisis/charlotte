@@ -72,6 +72,14 @@
 			fade_room(rm_splash_boss1_3);	
 		}
 	}
+	
+	function goto_splash_boss2(_num) {
+		if (_num == 1) {
+			fade_room(rm_splash_boss2_1_1);	
+		} else {
+			fade_room(rm_splash_boss2_1_2);	
+		}
+	}
 #endregion
 
 #region Classroom Gotos
@@ -367,6 +375,13 @@ function goto_room_bedroom_afterHangout(){
 			//obj_chatterbox_control.chatterbox = ChatterboxCreate("room_2.yarn");
 			//ChatterboxJump(chatterbox, "after");	
 		});
+	}
+	
+	function goto_room_bedroom_after_boss2() {
+		fade_room(rm_bedroom_day,,, function() {
+			set_player_position(X_BEDROOM_BED, Y_HEIGHT, 1);
+			change_node("room_3.yarn", "after");
+		});	
 	}
 	
 	function goto_room_boss_2_1() {

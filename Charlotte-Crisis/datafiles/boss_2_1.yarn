@@ -97,9 +97,12 @@ Helen: "Like, come on, you think you can really hide those man shoulders in that
 <<changeConfidence(-10)>>
 Helen: "And the minute you open your mouth to speak, that's it. Everyone knows." (-10% confidence)
 <<if $name == "Charlotte">>
+    <<goto_splash_boss2(1)>>
     Helen: "You see all these people in the cafe?"
+    <<goto_splash_boss2(2)>>
     Helen: "From the other customers, to the cashier…"
     Helen: "They're staring at you, not me." (-10% confidence)
+    <<goto_room_boss_2_1_seated()>> // back to sitting
 <<endif>>
 
 -> "I... I don't even know where to start..." #skillcheck #int # 9
@@ -836,7 +839,7 @@ Helen: "The world is yours, right?"
 <<jump 7_1>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2463,-178
+__PrivCrochet_position: 2480,-160
 __PrivCrochet_tags: 
 title: 8
 ---
@@ -866,10 +869,15 @@ Helen: "Any final thoughts?"
     Helen: "So if you still want to chat, and if I have time, I'm okay to meet up again."
 <<endif>>
 
+<<goto_black_room()>>
 That... was certainly unexpected.
 <<addExperience(30)>>
 (+30 XP)
-<<goto_room_bedroom()>>
+That was truly a difficult conversation.
+Still, a new week approaches...
+
+<<incrementStage()>>
+<<goto_room_bedroom_after_boss2()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1701,-177

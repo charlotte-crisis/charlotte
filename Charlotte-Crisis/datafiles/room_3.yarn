@@ -1,0 +1,42 @@
+#__PrivCrochet_version:1
+# if you've already visited then it will show the concise version.
+# Interacting with mirror
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 921,40
+__PrivCrochet_tags: 
+title: after
+---
+Good morning, {$name}. Prepare your look in the CLOSET, check your Stats at the DESK, and off you go!
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 1200,40
+__PrivCrochet_tags: 
+title: door
+---
+Ready to head out?
+-> No (Go back)
+
+-> Go to class #continue
+    <<goto_room_class_2()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 680,80
+__PrivCrochet_tags: 
+title: bed
+---
+Well, no use going back to bed.
+===
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 920,280
+__PrivCrochet_tags: 
+title: desk
+---
+<<openStatMenu()>>
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 1160,280
+__PrivCrochet_tags: 
+title: wardrobe
+---
+<<openWardrobeMenu()>>
+===
