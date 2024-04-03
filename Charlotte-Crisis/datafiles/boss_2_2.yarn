@@ -2,7 +2,7 @@
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 760,240
 __PrivCrochet_tags: 
-title: Start
+title: start
 ---
 <<set $startCharlotte = getGenderMeter()>>
 Charlotte: "It's been a while."
@@ -16,25 +16,32 @@ Charlotte: "Ashamed of me, is it?"
     Charlotte: "Is what I would say if I didn't feel repressed right now."
     Charlotte: "In fact, this is your repression."
     Charlotte: "Treat this as an intervention from me. Your better side."
-    <<jump 2>>
+    <<goto_splash_boss2_2()>>
+    //<<jump 2>>
 
 -> "I just didn't have the chance…"
     Charlotte: "Don't lie to me."
     Charlotte: "Or, rather, don't lie to yourself."
     Charlotte: "You had at least 3 chances to let me out this week."
     Charlotte: "And you didn't try even a single time?"
-    Charlotte: "I want answers, and I'm getting them from you no matter what." (-5% confidence) <<changeConfidence(-5)>>
-    <<jump 2>>
+    <<changeConfidence(-5)>>
+    Charlotte: "I want answers, and I'm getting them from you no matter what." (-5% confidence) 
+    <<goto_splash_boss2_2()>>
+    //<<jump 2>>
 
 -> "Yes. It's time to stop."
     Charlotte: "Am I hearing you right?"
     You: "You're in my head. You tell me."
     Charlotte sighs.
-    Charlotte: "Looks like you want it the hard way." (-5% gender meter) <<changeGenderMeter(-5)>>
-    <<jump 2>>
+    <<changeGenderMeter(-5)>>
+    Charlotte: "Looks like you want it the hard way." (-5% gender meter) 
+    <<goto_splash_boss2_2()>>
+    //<<jump 2>>
+
+// No jump here cos the player has to press space on the splash art screen to continue
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1021,237
+__PrivCrochet_position: 1040,240
 __PrivCrochet_tags: 
 title: 2
 ---
@@ -791,7 +798,7 @@ Charlotte: "Didn't you make a promise to Sis?"
     <<jump 5>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2820,87
+__PrivCrochet_position: 2800,80
 __PrivCrochet_tags: 
 title: 5
 ---
@@ -807,17 +814,24 @@ Charlotte: "So, in conclusion..."
     Charlotte: "Somehow you've distanced yourself from me even more."
     Charlotte: "And for what, really? Are you so afraid of me, or Mother, or what?"
     Charlotte: "It's either a path of fear or of ignorance. Maybe both." 
+    <<goto_black_room()>>
     Charlotte: "Either way, you're gonna suffer for it."
 <<else>>
     Charlotte: "Well, this went well, I guess."
     Charlotte: "Your connection to me is stronger than it was before. At least it didn't degrade."
     Charlotte: "Still, there's a lot of work to be done. And more challenges to overcome."
+    <<goto_black_room()>>
     Charlotte: "We'll get through this together, yeah?"
 <<endif>>
 
 <<addExperience(30)>>
 (+30 XP)
 <<stop>>
+That was truly a difficult conversation.
+Still, a new week approaches...
+
+<<incrementStage()>>
+<<goto_room_bedroom_after_boss2()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 3000,400
