@@ -844,14 +844,14 @@ Nadia: "I guess so... let's hope that T-shirt design works."
     Nadia: "Thanks, {$name}. Glad to see you really appreciate my art style." (+5% Nadia relationship)
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2883,393
+__PrivCrochet_position: 2880,400
 __PrivCrochet_tags: 
 title: exit
 ---
 Well, that was certainly a furious argument. 
 <<addExperience(30)>>
 You feel... different, having gone through it all. (+30 XP)
-<<goto_room_bedroom()>>
+<<goto_room_bedroom_after_cca2()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 240,-40
