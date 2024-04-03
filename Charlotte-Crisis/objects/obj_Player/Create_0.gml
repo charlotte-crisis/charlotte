@@ -42,7 +42,7 @@ get_player_gender = function() {
 
 // Return true only if not talking and not interacting.
 can_move = function() {
-	return !(is_talking || is_interacting);	
+	return !(is_talking || is_interacting || instance_exists(obj_fade));	
 }
 
 #endregion
