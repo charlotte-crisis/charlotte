@@ -332,6 +332,17 @@ function goto_room_bedroom_afterHangout(){
 			set_player_position(X_CCA_SEATED, Y_HEIGHT, 1, false);
 		});
 	}
+	
+	function goto_room_cca_3(){
+		fade_room(rm_cca_1,,, function() {
+			set_player_position(X_CCA_DOOR, Y_HEIGHT, 1)
+			change_node("cca_3.yarn", "1");
+			//ChatterboxLoadFromFile("cca_1.yarn");
+			//obj_chatterbox_control.chatterbox = ChatterboxCreate("cca_1.yarn");
+			//ChatterboxJump(chatterbox, "1");	
+		});
+		
+	}
 #endregion
 
 #region Hangouts

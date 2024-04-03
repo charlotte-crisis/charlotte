@@ -101,6 +101,7 @@ BG_ALPHA = 0.9;
 	ChatterboxAddFunction("goto_room_cca_2", goto_room_cca_2);
 	ChatterboxAddFunction("goto_room_cca_2_end", goto_room_cca_2_end);
 	ChatterboxAddFunction("goto_room_cca_2_seated", goto_room_cca_2_seated);
+	ChatterboxAddFunction("goto_room_cca_3", goto_room_cca_3);
 	
 	/// Hangouts
 	ChatterboxAddFunction("goto_room_hangout_a", goto_room_hangout_a);

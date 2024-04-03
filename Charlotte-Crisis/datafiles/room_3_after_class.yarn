@@ -14,7 +14,7 @@ title: door
     -> No (Go back)
 
     -> Yes (Go to school) #continue
-        <<goto_room_cca_2()>>        
+        <<goto_room_cca_3()>>        
 <<endif>>
 ===
 __PrivCrochet_colorID: 0
@@ -66,7 +66,7 @@ title: after
 // Commented out for now.
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 480,280
+__PrivCrochet_position: 424,278
 __PrivCrochet_tags: 
 title: 0_revisit
 ---
