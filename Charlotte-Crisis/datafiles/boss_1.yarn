@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 40,240
+__PrivCrochet_position: 39,240
 __PrivCrochet_tags: 
 title: 1
 ---
@@ -511,7 +511,7 @@ Sister: "Can you really look good in clothes not designed for you?"
     -> "What would a 50-year-old woman know about our generation's fashion?" #skillcheck #cha # 7
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll >= 7>>
+        <<if $diceroll < 7>>
             Sister: "True, but just don't say that to her face."
             Sister: "She'll clamp down on you even harder if you do."
         <<else>>
@@ -972,8 +972,8 @@ Sister: "So, at the end of it all..."
 <<set $delta_gender_meter = $end_gender_meter - $start_gender_meter>>
 <<set $delta_sis_rs = $end_sis_rs - $start_sis_rs>>
 // gender meter overall increase 
-<<if $delta_gender_meter > 0>>
-    <<if $delta_sis_rs > 0>>
+<<if $delta_gender_meter >= 0>>
+    <<if $delta_sis_rs >= 0>>
         // sis relationship high
         <<jump ending_2>>
     <<else>>
@@ -982,7 +982,7 @@ Sister: "So, at the end of it all..."
     <<endif>>
 <<else>>
 // gender meter overall decrease or no change
-    <<if $delta_sis_rs > 0>>
+    <<if $delta_sis_rs >= 0>>
         // sis relationship high
         <<jump ending_3>>
     <<else>>
