@@ -6,7 +6,9 @@ title: 0
 ---
 Anthony: "Hi."
 You: "Hey Anthony."
-#variable for gender?
+<<if $name == "Charlotte">>
+    Anthony: "What... are you wearing?"
+<<endif>>
 Anthony: "I don't know why you asked me here but... whatever."
 <<jump 1>>
 ===
@@ -200,7 +202,7 @@ Anthony: "Why should I feel sorry for telling the truth?"
 <<jump 1_3_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1960,280
+__PrivCrochet_position: 1964,280
 __PrivCrochet_tags: 
 title: 1
 ---
