@@ -248,7 +248,17 @@ function goto_room_bedroom_after_cca(){
 function goto_room_bedroom_after_cca2(){
 	fade_room(rm_bedroom_night, function() {
 		set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
-		change_node("room_1_after_cca2.yarn", "after");
+		change_node("room_2_after_cca.yarn", "after");
+		//ChatterboxLoadFromFile("room_1_after_cca2.yarn");
+		//obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_cca2.yarn");
+		//ChatterboxJump(chatterbox, "after");	
+	});
+}
+
+function goto_room_bedroom_after_cca3(){
+	fade_room(rm_bedroom_night, function() {
+		set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
+		change_node("room_3_after_cca.yarn", "after");
 		//ChatterboxLoadFromFile("room_1_after_cca2.yarn");
 		//obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_cca2.yarn");
 		//ChatterboxJump(chatterbox, "after");	
