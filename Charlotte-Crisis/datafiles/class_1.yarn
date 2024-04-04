@@ -878,6 +878,7 @@ __PrivCrochet_position: 1933,623
 __PrivCrochet_tags: 
 title: 10_options
 ---
+What will you say?
 -> "Which readings?" <<if !optionChosen()>>
     <<jump 10_readings>>
 
@@ -890,7 +891,7 @@ title: 10_options
 -> (joking) "That's it. I'm quitting to flip burgers for the rest of my life." #skillcheck #cha # 6
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll > 5>>
+    <<if $diceroll < 6>>
     Sage: "Come on. The readings aren't *that* bad."
     Chenjie: "We just have to suck it up."
     <<else>>
