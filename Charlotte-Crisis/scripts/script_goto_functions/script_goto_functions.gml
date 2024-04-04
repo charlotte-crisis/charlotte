@@ -428,4 +428,16 @@ function goto_room_bedroom_afterHangout(){
 			change_node("boss_2_2.yarn", "start");
 		});
 	}
+	
+	function goto_room_boss_3_1() {
+		fade_room(rm_boss_3_1,,, function() {
+			change_node("boss_3_1.yarn", "start");
+		});
+	}
+	
+	function goto_room_boss_3_2() {
+		fade_room(rm_boss_3_2,,, function() {
+			change_node("boss_3_2.yarn", "start");
+		});
+	}
 #endregion
