@@ -297,7 +297,7 @@ You: "Yeah, so feminism to me is..."
 <<jump 19>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2717,358
+__PrivCrochet_position: 2720,360
 __PrivCrochet_tags: 
 title: 12
 ---
@@ -320,8 +320,9 @@ Who will you walk with today?
     You don't seem comfortable enough to talk more with any of your classmates.
     You decide to head back to your room by yourself.
     Slinking away to the door, you make a quiet exit.
-    <<jump 12_alone>>
     <<goto_room_bus()>>
+    <<jump 12_alone>>
+    
 
 -> Chenjie <<if getRelationship("CJ") >= 55>>
     <<jump 13>>
@@ -873,10 +874,11 @@ You feel exhausted even from the sound of that.
 <<jump 10_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1933,623
+__PrivCrochet_position: 1933,624
 __PrivCrochet_tags: 
 title: 10_options
 ---
+What will you say?
 -> "Which readings?" <<if !optionChosen()>>
     <<jump 10_readings>>
 
@@ -889,9 +891,9 @@ title: 10_options
 -> (joking) "That's it. I'm quitting to flip burgers for the rest of my life." #skillcheck #cha # 6
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll > 5>>
-    Sage: "Come on. The readings aren't *that* bad."
-    Chenjie: "We just have to suck it up."
+    <<if $diceroll < 6>>
+        Sage: "Come on. The readings aren't *that* bad."
+        Chenjie: "We just have to suck it up."
     <<else>>
         Chenjie: "Hey, recommend me to your branch manager. I also need that job."
         Joanne: "And me!"
