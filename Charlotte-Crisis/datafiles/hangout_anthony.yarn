@@ -10,6 +10,7 @@ You: "Hey Anthony."
     Anthony: "What... are you wearing?"
 <<endif>>
 Anthony: "I don't know why you asked me here but... whatever."
+
 <<jump 1>>
 ===
 __PrivCrochet_colorID: 0
@@ -207,6 +208,7 @@ __PrivCrochet_tags:
 title: 1
 ---
 What do you say?
+
 -> "How's school?"
     <<jump 1_1>>
 
