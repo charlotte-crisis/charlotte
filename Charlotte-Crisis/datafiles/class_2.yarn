@@ -251,7 +251,7 @@ Joanne: "And you get to just dress up and pretend to be a girl for fun?"
     You: "It's just that dressing like this feels natural and comfortable for me."
     Joanne: "And what exactly is so natural and comfortable about it?"
     Joanne: "You literally have no idea how much women like Sage and I had to suffer just by being women."
-    <<if ($emp >= 5) or (getRelationship("S" >= 30)>>
+    <<if ($emp >= 5) or (getRelationship("S") >= 30>>
         Sage squirms in uneasiness.
     <<endif>>
     Joanne: "I was always made fun of in school because I was boyish. And I had to deal with periods, and makeup, and clothes."
