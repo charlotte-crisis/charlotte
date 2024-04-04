@@ -256,18 +256,19 @@ function goto_room_bedroom_after_cca2(){
 }
 
 function goto_room_bedroom_afterHangout(){
-	// TODO: Find a way to automate going to the correct yarn file which leads to the correct boss fight
-	var _source = "room_1_after_hangout.yarn";
-	var _node = "after";
-	if (obj_stats.get_week() == 2) {
-		_source = "room_2_after_hangout.yarn";
-	} else if (obj_stats.get_week() == 3) {
-		_source = "room_3_after_hangout.yarn";
-	}
-	
 	fade_room(rm_bedroom_night,,,function() {
 		set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
-		change_node(_source, _node);
+
+		// TODO: Find a way to automate going to the correct yarn file which leads to the correct boss fight
+		var _source_togo = "room_1_after_hangout.yarn";
+		var _node_togo = "after";
+		if (obj_stats.get_week() == 2) {
+			_source_togo = "room_2_after_hangout.yarn";
+		} else if (obj_stats.get_week() == 3) {
+			_source_togo = "room_3_after_hangout.yarn";
+		}
+	
+		change_node(_source_togo, _node_togo);
 		//ChatterboxLoadFromFile("room_1_after_hangout.yarn");
 		//obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_hangout.yarn");
 		//ChatterboxJump(chatterbox, "after");	
