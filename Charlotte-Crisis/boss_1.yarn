@@ -1,0 +1,1020 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 39,240
+__PrivCrochet_tags: 
+title: 1
+---
+<<set $start_gender_meter = getGenderMeter()>>
+<<set $start_sis_rs = getRelationship("Si")>>
+Sister: "Charles."
+You: "Hi, sis."
+<<set_camera_boss1()>>
+<<if $name == "Charlotte">>
+    Sister: "What... are you wearing?" 
+<<endif>>
+Sister: "I have so many questions."
+
+-> "I will try my best to answer."
+    Sister: "Thanks. It's been a while since we met like this."
+
+-> "You'd better watch what you ask."
+    <<changeRelationship("Si", -5)>>
+    Sister: "Woah, why so defensive?" // (-5% Sister relationship)
+
+Sister: "You're lucky our parents are out this weekend."
+Sister: "If not, there's no way we could meet like this, without their intervention."
+
+-> "Wait, what are we doing here again?"
+    Sister rolls her eyes.
+    Sister: "Don't be sarcastic with me."
+    Sister: "Ever since you started dressing in girl clothes, Mother has been worried."
+    Sister: "And I wanna warn you about what she wants before things get really messy at home."
+    Sister: "Can you at least appreciate my efforts to do that?"
+    You: "Okay, sure."
+
+-> "Yeah."
+    Sister: "So let's get to it."
+
+<<jump 2>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 281,234
+__PrivCrochet_tags: 
+title: 2
+---
+Sister: "Mother has only one request for you."
+Sister: "She wants you to stop dressing as a girl."
+Sister: "I tried telling her that you're not doing it every day..."
+Sister: "...which is true, right?"
+
+-> "Yeah, it is."
+    Sister: "Okay, good, at least you're more normal."
+
+-> "Oh, no, I'm doing this every day!"
+    Sister: "I..."
+    Sister: "I don't know if you're just messing with me."
+    Sister: "You'd have to be better at makeup than I am, if you do this every day..."
+    <<changeConfidence(-5)>>
+    Sister: "And judging by what I'm seeing now, I don't think that's the case." (-5% confidence)
+
+<<jump 3>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 518,238
+__PrivCrochet_tags: 
+title: 3
+---
+Sister: "Anyway! Yes, she wants you to stop."
+Sister: "So the easiest thing to do would be to follow her instructions."
+Sister: "You wouldn't want things to blow up at home, would you?"
+
+-> "Okay, fine, I'll stop."
+    <<jump 3_1>>
+
+-> "I'm sorry, but my happiness comes first."
+    <<jump 3_2>>
+
+-> "Our family situation is already bad enough. What's one more problem?"
+    <<jump 3_3>>
+
+-> "Screw her and screw you."
+    Sister: "You weren't always like this. What happened?"
+    <<changeRelationship("Si", -5)>>
+    Sister: "It's like I don't even have a brother anymore." // (-5% Sister relationship)
+    Sister takes a while to compose herself, before asking the next question.
+    <<jump 4>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 800,0
+__PrivCrochet_tags: 
+title: 3_1
+---
+Sister: "Good."
+Sister: "Wait, really?"
+Sister: "How was it this easy?"
+
+-> "I will be a good son."
+    You: "I guess family is more important than what I want."
+    Sister: "That's good."
+    Sister: "Should have thought of that before you put on that dress."
+    <<jump ending_1>> 
+    
+-> "It's not that simple."
+    You: "I've got more conditions that I want to discuss before fully agreeing."
+    Sister: "Well, I guess you've got every right to that..."
+    Sister: "Just try not to make things difficult."
+    <<jump 4>>
+
+-> "I regret my time pretending to be a woman."
+    You: "I'm ready to be a man now." <<changeGenderMeter(-5)>>
+    Sister: "If you say so."
+    Sister: "I hope you're not just lying to me..."
+    Sister: "Or worse, yourself..."
+    You: "I would never do that."
+    <<jump ending_1>>
+
+-> "Actually, no. I was joking with you."
+    <<if visited("3_1")>>
+        // only do it once.
+        <<changeRelationship("Si", -5)>>
+        (-5% Sister relationship)
+    <<endif>>
+    Sister: "Oi! Can you take this seriously or not?" 
+    Sister: "This is the only thing Mother can think about now."
+    Sister: "And it's a big decision."
+    Sister: "Haiya... I guess we're back to square one, then."
+    <<jump 3>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2280,0
+__PrivCrochet_tags: 
+title: ending_1
+---
+You spend the remaining time with Sister making small talk about life.
+<<goto_black_room()>>
+Actually, you know what? Why am I, Charlotte, tolerating this?
+I know you can't make that promise.
+If you just said this so you could end this interaction faster, then you lied to her.
+If you really mean this, then you're lying to yourself.
+Either way, I'm gonna haunt you in your dreams.
+
+// No xp for this route
+<<jump end>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 798,238
+__PrivCrochet_tags: 
+title: 3_2
+---
+<<changeGenderMeter(5)>>
+Sister: "Yeah... I can empathise."
+Sister: "But ultimately we live in a society where happiness comes second."
+Sister: "Don't you know about the social contract?"
+Sister: "You must give up some freedom, for security."
+
+-> "Those who give up liberty for security deserve neither." #skillcheck #cha # 7
+    <<set $diceroll = diceRoll($cha)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll >= 7>>
+        Sister: "Yeah... I guess you're right."
+        Sister: "It's hard to see it now, but I can empathise with that statement."
+        You: "Don't you deserve happiness too?"
+        Sister: "That would require me to..."
+        Sister: "Wait. Why am I talking about me? We should be talking about you."
+        Sister: "Let's get back on track."
+    <<else>>
+        Sister: "That is very idealistic."
+        Sister: "You're just a uni student, you're not financially independent yet."
+        <<changeConfidence(-10)>>
+        Sister: "You really think you can just distance yourself from family like this?"
+    <<endif>>
+
+-> "Alright, fine. I choose security." (-5% gender meter)
+    <<changeGenderMeter(-5)>>
+    Sister: "Finally. You're starting to listen."
+    Sister: "I know our family isn't perfect, but we can find happiness together, right?"
+    Sister: "We shouldn't fight each other over small things like this."
+    -> "But who's starting this fight?" #skillcheck #int # 7
+        <<set $diceroll = diceRoll($int)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll >= 7>>
+            You: "I am just presenting as I want to." <<changeGenderMeter(5)>>
+            You: "I didn't shove it in Mother's face. She found out on her own."
+            You: "And I'm not doing anything to aggravate her."
+            You: "So much of her suffering is self-inflicted."
+            Sister: "If you put it that way, I guess..."
+            You: "I don't want to tear apart the family."
+            You: "But I don't want to be torn apart by it, either."
+        <<else>>    
+            Sister: "Seems to me like you are, honestly."
+            Sister: "Out of nowhere you dress as a girl, then Mother gets worried?"
+            <<changeConfidence(-10)>>
+            Sister: "You started this." (-10% confidence) 
+        <<endif>>
+    -> "How do I repair things with Mother?"
+        Sister: "Just follow what she says."
+        Sister: "Mother knows best, right?"
+        Sister: "I'll try my best to help, but ultimately it's up to you."
+
+-> "We find happiness where we can."
+    You: "Haven't we given up enough happiness for security?"
+    You: "I mean, you're working hard to be financially secure..."
+    You: "But you haven't been very happy, right?" 
+    Sister: "How did you know?"
+    You: "I see your messages on the family WhatsApp chat about how stressed you are at work."
+    <<set $diceroll = diceRoll($cha)>>
+    <<if $diceroll >= 7>>
+        You: "They're the only messages I can read without straining my eyes and brain..."
+        You: "After all, they aren't marked as "forwarded many times", right?"
+        <<changeRelationship("Si", 5)>>
+        Sister chuckles. Your attempt at a joke has succeeded. (+5% Sister relationship) 
+    <<endif>>
+    You: "Anyway. Don't you have hobbies?"
+    Sister: "Hobbies? What are those?"
+    Sister: "You uni kids are too free already. Gonna get crushed by the working world."
+    You: "So you just spend all day slaving away at your job?"
+    You: "Come on. You gotta have something in your life that's not your spreadsheets."
+    Sister: "Well, there's this anime that I've gotten into."
+    You: "There we go."
+    Sister: "I've spent... a bit too much time on it."
+    Sister: "Time that could have been better spent working, right?"
+    -> "If you enjoyed that time, it's not wasted." #skillcheck #emp # 7
+        Sister: "Still, I missed out on time spent studying or doing a side hustle or - "
+        <<set $diceroll = diceRoll($emp)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll >= 7>>
+            You: "No. Stop."
+            You: "None of that is as important as what you want."
+            You: "Even if you made a lot of money, what's the point if you're not around to use it?"
+            Sister: "Wait, why are we discussing this?"
+            You: "Because none of the things that Mother wants, is as important as what I want for my life."
+            <<changeGenderMeter(5)>>
+            You: "And if I enjoyed my time dressing female, it's not wasted, is it?" (+5% gender meter)
+            You: "We find happiness where we can."
+            Sister: "I guess so..."
+            Sister: "If I've got my hobbies, and if it's fair for me to enjoy them..."
+            <<addExperience(10)>>
+            Sister: "It's only fair that you can, too." (+10 XP)
+            Sister: "Still, I don't think Mother will see it that way."
+            <<changeRelationship("Si", 5)>>
+            Sister: "Regardless... thanks for making me feel better about my hobbies." (+5% Sister relationship)
+        <<else>>
+            Sister: "Sigh. Talk about missed opportunities, right?"
+            Sister: "Everyone's happy in their career and look at where I am now."
+            Sister: "We just work 40 years and then die."
+            <<changeConfidence(-10)>>
+            You: "Well, that was depressing." (-10% confidence)
+        <<endif>>
+    -> "You needed to rest at those points." #skillcheck #int # 7
+        You: "Your job is tough. You can't just keep chugging along without rest and relaxation."
+        Sister: "But my colleagues - "
+        You: "They're not you."
+        <<set $diceroll = diceRoll($int)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll >= 7>>        
+            You: "We all have our own capacities, and our own needs."
+            Sister: "I wish I had their resilience."
+            You: "And what are you willing to sacrifice to get that?"
+            You: "Wouldn't you feel more comfortable being yourself?"
+            Sister is silent.
+            You: "And if you were to bring that concept back to me..."
+            You: "Wouldn't I be happier in whatever form I'd like to take?"
+            <<addExperience(10)>>
+            Sister: "I guess so. But still..." (+10 XP) 
+            Sister: "I don't think Mother will see it that way."
+            <<changeRelationship("Si", 5)>>
+            Sister: "Regardless... thanks for making me feel better about my hobbies." (+5% Sister relationship)
+        <<else>>
+            Sister: "They can do so much more. Why can't I be like them?"
+            <<changeConfidence(-10)>>
+            Sister: "Guess I'm just fated to be a useless underperforming piece of shit." (-10% confidence)
+        <<endif>>
+        
+    -> "Since when did you become a slave?"
+        You: "Stop saying you need to keep working."
+        Sister: "You don't understand!"
+        Sister: "You will when you enter the workforce."
+        <<changeConfidence(-5)>>
+        Sister: "Maybe you won't even have time to crossdress anymore." (-5% confidence)
+        
+    -> "I mean... it's not wrong to enjoy anime."
+        Sister: "Yeah, but I needed the time to work..."
+        Sister: "Anyway, where were we going with this?"
+
+<<jump 4>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 801,479
+__PrivCrochet_tags: 
+title: 3_3
+---
+Sister: "You really want to blow this up, don't you..."
+<<changeConfidence(-5)>>
+Sister: "Don't say I didn't warn you." (-5% confidence)
+
+-> "But I know you will be by my side." #skillcheck #emp # 7
+    <<set $diceroll = diceRoll($emp)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll < 7>>
+        Sister sighs.
+        Sister: "Yeah, as much as I want to..."
+        Sister: "It's very tough when I have to bridge the gap between you and Mother."
+        You: "I will try my best, too."
+    <<else>>
+        You: "We've been helping each other since we were kids. Now is no different."
+        You: "Come on, if you really want the family to stay together, shouldn't the conversation be two way?"
+        Sister: "I guess so..."
+        <<addExperience(10)>>
+        You: "You're able to relate to me the best. Better than our parents. You're my only hope." (+10 XP)
+        <<changeRelationship("Si", 5)>>
+        Sister: "Alright. We'll try it together." (+5% Sister relationship)
+    <<endif>>
+
+-> "Don't you think we should face our problems head-on?"
+    You: "And I don't mean the arguments that our parents always get into."
+    You: "It's time this house had a rational discussion about how we talk with each other."
+    Sister: "You know that's impossible. They're both too stubborn to see the other's perspective."
+    You: "I know. They've tried for nearly 30 years."
+    You: "But, you never know. Maybe this could be what they need."
+    Sister: "What do you mean?"
+
+    -> "Something they agree on; that I should stop crossdressing."
+        Sister laughs bitterly.
+        Sister: "You'd really sacrifice your own well-being to bring them together?"
+        Sister: "And that is an agreement built on hating you."
+        Sister: "Once you're out of the equation, they'll keep on hating each other."
+        You: "True... it's not a long-term solution."
+        
+    -> "The motivation to actually seek therapy."
+        Sister: "But isn't it, like, really expensive?"
+        You: "They're retired. They can't carry their savings into the grave, can they?"
+        Sister: "I guess so... I hope they'll be open to it, though."
+        You: "Only time can tell."
+        <<set $diceroll = diceRoll($cha)>>
+        <<if $diceroll > 7>>
+            You: "Hey, don't you think it'd be the funniest thing if they went, though?"
+            You: "Then father would be, like, lecturing the therapist for 2 hours."
+            You: "You know, like he does to us."
+            <<changeRelationship("Si", 5)>>
+            Sister: "Haha, that therapist definitely deserves a raise." (+5% Sister relationship)
+        <<endif>>
+-> "You know it's true."
+    Sister: "You know, I'm actually trying to solve the problem here."
+    Sister: "So can you just cooperate for once?"
+
+<<jump 4>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1034,239
+__PrivCrochet_tags: 
+title: 4
+---
+Sister: "I think we need to go back to the root cause of this issue."
+Sister: "Why do you want to dress as a girl, anyway?"
+
+-> "I feel pretty in female clothing."
+    <<jump 4_1>>
+
+-> "I don't know."
+    Sister: "Well you gotta have some reason!"
+    Sister: "What, you're telling me that you just woke up one day..."
+    Sister: "And thought to yourself, I want to wear dresses now?"
+    <<jump 4_2>>
+
+-> "Why cannot?"
+    Sister: "Ugh. Don't you know that doesn't help me at all?"
+    <<changeRelationship("Si", -5)>>
+    Sister: "I can't help you if you're being so confrontational." (-5% Sister relationship)
+    <<jump 5>>
+
+-> "Once upon a time..."
+    Sister: "How far back?"
+    You: "When I was 9, I think."
+    You: "I put on Mother's clothes, and she yelled at me."
+    You: "Then I didn't do it again until last year."
+    You: "I watched this video from a trans YouTuber who used her gender identity to explain philosophy."
+    You: "Then, I decided to try crossdressing for a formal school event, and here we are."
+    Sister: "Wow. That's... quite sudden."
+    Sister: "So... a YouTube video converted you to trans?"
+    -> "I guess you could say that..." (-5% gender meter)
+        <<changeGenderMeter(-5)>>
+        Sister: "Damn. That's some pretty messed up brainwashing right there."
+        <<changeConfidence(-10)>>
+        Sister: "You'd better get some help to break free of it." (-10% confidence)
+    -> "People don't just get converted to become LGBT." #skillcheck #int # 7
+        Sister: "Really?"
+        <<set $diceroll = diceRoll($int)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll >= 7>>
+            You: "I mean, wouldn't it be easier the other way if it was?"
+            You: "You could just show me all the straight romance movies out there and then I'd be normal again."
+            <<addExperience(10)>>
+            You: "But obviously that doesn't work." (+10 XP)
+            Sister: "Okay, sure..."
+        <<else>>
+            You: "I can't explain it. I just want to do it."
+            Sister: "I'm not convinced. None of us are LGBT in the family. Why, all of a sudden, you?"
+            <<changeConfidence(-10)>>
+            Sister: "You better not be doing this just to spite us."
+            (-10% confidence)
+        <<endif>>
+    -> "Didn't you hear the 'since 9 years old' part?" #skillcheck #emp # 7
+        Sister: "Okay, fine..."
+        Sister: "But that means you suppressed it for, like, a decade?"
+        You: "Yes."
+        Sister: "Oh..."
+        <<set $diceroll = diceRoll($emp)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll >= 7>>
+            Sister: "Damn, that must really suck."
+            <<changeRelationship("Si", 5)>>
+            Sister: "Especially with how controlling our parents are..." (+5% Sister relationship)
+            You: "Yeah, we both know how that feels."
+        <<else>>
+            Sister: "I don't know how to feel about this..."
+            Sister: "Like, you hid this from us for so long?"
+            -> "Well, I did forget about it for a while also."
+                Sister: "That's fair."
+                Sister: "Boys' school and army probably shoved it to the back of your head."
+            -> "As if I'd tell the family about it."
+                Sister: "Uh... kinda makes me wonder." 
+                Sister: "What else are you hiding?" (-5% Sister relationship)
+        <<endif>>
+Sister: "Anyway..."
+<<jump 5>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1278,240
+__PrivCrochet_tags: 
+title: 4_1
+---
+<<changeGenderMeter(5)>>
+(+5% gender meter)
+Sister: "Yeah, I get it. I know male fashion is restrictive." 
+Sister: "My boyfriend doesn't even dress himself properly."
+Sister: "But don't you feel that you... how do I put this nicely?"
+Sister: "You won't fit into female clothes."
+Sister: "It's already tough enough for real women to look pretty..."
+Sister: "Can you really look good in clothes not designed for you?"
+
+-> "Excuse me, real women?"
+    <<jump 4_1_1>>
+
+-> "I'm not the first one to try."
+    Sister: "Oh really? You and who else?"
+    -> "Look on Youtube and Douyin." #skillcheck #int # 7
+        Sister: "Name me one creator who does this."
+        <<set $diceroll = diceRoll($int)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll >= 7>>
+            You: "There's this guy who does Minecraft videos, called Finn."
+            You: "He dresses as a girl to do his livestreams and he's very successful."
+            Sister: "He?"
+            You: "Yep. It's possible to dress as a girl and still identify as male."
+            Sister: "Uh, okay..."
+            Sister quickly Google searches the personality you just described.
+            Sister: "Oh my. He looks kinda hot."
+            <<changeConfidence(5)>>
+            <<changeGenderMeter(5)>>
+            Sister: "Who knows? Someday you might reach his level too." (+5% confidence) (+5% gender meter)
+        <<else>>
+            You: "Uh..."
+            Sister: "Yeah, you can't name anyone. Don't you understand this is weird?"
+            Sister: "The only celebrities in Singapore who do that are, like, Kumar and Liang Po Po."
+            Sister: "You really want to be... like them?"
+        <<endif>>
+    -> "Uh..." 
+        <<changeGenderMeter(-5)>>
+        Sister: "Yeah, you can't name anyone. Don't you understand this is weird?"
+        Sister: "The only celebrities in Singapore who do that are, like, Kumar and Liang Po Po."
+        Sister: "You really want to be... like them?"
+    -> "Drag queens."
+        Sister: "Aren't they very loud and flamboyant?"
+        Sister: "Are you sure that's what you want to be like?"
+        -> "Sure, why not?"
+            Sister: "Uh... I guess you do you, right?"
+            Sister: "Still a little loud for my taste, though."
+        
+        -> "I'm going for something more low-key."
+            Sister: "You know what would be more low-key?"
+            Sister: "Dressing as a guy. Just like the other guys."
+        
+    -> "I mean, let's talk about K-pop idols, right?"
+        Sister: "You can very clearly see they're male, though."
+        You: "Yes. But don't they use makeup and cosmetics too?"
+        You: "To the extent that Western guys call them out for being girly."
+        Sister: "I guess you're right..."
+        You: "And girls find that attractive, right?"
+        Sister: "Oh, absolutely. Not me, but I know lots of girls who will."
+        Sister: "So is that what you're aiming for?"
+        -> "No. I still want to look female."
+            Sister: "Then what did you just tell me all of that for?"
+            <<changeRelationship("Si", -5)>>
+            Sister: "And I was gonna say that the K-pop look would be a compromise..." (-5% Sister relationship)
+        -> "I guess we could start from there."
+            Sister: "Yeah, that sounds good."
+            Sister: "We have to find a middle ground with Mother."
+    <<jump 5>>
+
+
+-> "Yeah, I guess it's not gonna work..." (-5% gender meter)
+    <<changeGenderMeter(-5)>>
+    Sister: "Don't worry about it, like I said, it's hard for women too."
+    Sister: "Mother always keeps talking about buying clothes for us, right?"
+    Sister: "Why not just ask her to buy you some good male clothes?"
+    Sister: "Then you can look good also."
+
+    -> "Fine. I'll do that."
+        Sister: "She'll definitely be happier that way."
+        Sister: "She gets to dote on you in the way she wants."
+    
+    -> "What would a 50-year-old woman know about our generation's fashion?" #skillcheck #cha # 7
+        <<set $diceroll = diceRoll($cha)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll < 7>>
+            Sister: "True, but just don't say that to her face."
+            Sister: "She'll clamp down on you even harder if you do."
+        <<else>>
+            Sister: "Haha, that's true." (+5% Sister relationship)
+            <<changeRelationship("Si", 5)>>
+            Sister: "Yeah, we have the Internet, don't we?"
+            Sister: "Maybe you'd be better off asking her for money, and searching for your own clothes."
+            Sister: "And of course, it's a good way to be independent of her too."
+        <<endif>>
+    <<jump 5>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1373,-12
+__PrivCrochet_tags: 
+title: 4_1_1
+---
+Sister: "What? Did I say something wrong?"
+You: "Do you not see me as a woman?"
+<<if $name == "Charlotte">>
+    Sister: "You think just putting on a dress and makeup makes you a woman?"
+<<else>>
+    Sister: "Well, you're certainly not dressed as one..."
+<<endif>>
+-> "That's transphobic."
+    Sister: "Uh... okay. Sorry. Trans women do exist."
+    -> "I'm sorry, but I had to point it out."
+        Sister: "Yeah, I'm glad you called me out for it before I accidentally offended one of them."
+        Sister: "I guess I need an explanation..."
+        You: "I can give that another time. When I'm ready."
+    -> "Better watch your mouth."
+        Sister: "Fine, sorry..."
+        <<changeRelationship("Si", -5)>>
+        Sister: "Since when did you become such a prick?" (-5% Sister relationship)
+
+-> "I mean, what is a woman?" #skillcheck #int #7
+    Sister: "A woman... has a vagina."
+    Sister: "Isn't it just basic biology?"
+    <<set $diceroll = diceRoll($int)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceRoll < 7>>
+        You: "I guess so..."
+        Sister: "I mean, come on. I've known you as a guy for more than 20 years."
+        Sister: "How could you suddenly change into a girl now?"
+        <<changeConfidence(-10)>>
+        Sister: "That's like... fictional. And it's exactly why Mother's upset." (-10% confidence)
+    <<else>>    
+        You: "It's more than that."
+        You: "I mean, do you go around checking for vaginas when someone tells you they're a woman?"
+        Sister: "No, I don't. That's intrusive!"
+        You: "Exactly. So how do you tell they're a woman?"
+        Sister: "Well, uh... It's the looks, like... uh... their face?"
+        You: "That can be manipulated with makeup. You should know that."
+        Sister: "I guess so... and the voice..."
+        You: "There's voice training for that. Or falsetto voices, but those aren't sustainable."
+        Sister: "And the clothes..."
+        You: "Which I can wear too, even though you see me as male."
+        Sister: "Argh! Why is this such a hard question to answer?"
+        You: "Don't worry, it is meant to be."
+        Sister: "I feel like we're going into some very deep stuff here."
+        You: "I'm not gonna pretend to know everything, but can we just agree that..."
+        -> "... 'woman' is just a word with meanings that can change?"
+            <<changeGenderMeter(5)>>
+            Sister: "Hmm... well, it's gonna take me some time to understand." (+5% gender meter)
+            <<changeRelationship("Si", 5)>>
+            Sister: "But I will try. For your sake." (+5% Sister relationship)
+            You: "Thank you... that really means a lot to me."
+            Sister: "Is this what you're learning in school?"
+            Sister: "Almost makes me wish I studied your major."
+            You: "There's lots of YouTube videos on this. I can recommend a few."
+        -> "... gender doesn't make sense?"
+            <<changeGenderMeter(5)>>
+            Sister: "Well, we can't totally live without it..."
+            Sister: "But it certainly does make things difficult."
+            Sister: "Like, I guess seeing you wear makeup and dresses..."
+            <<changeConfidence(10)>>
+            Sister: "It's a reminder that everyone can do it." (+10% confidence)
+            Sister: "Is this what you're learning in school?"
+            Sister: "Almost makes me wish I studied your major."
+            You: "There's lots of YouTube videos on this. I can recommend a few."
+        -> "You're being very transphobic."
+            Sister: "Where got?"
+            Sister: "I never said trans people deserve to die."
+            Sister: "I'm just saying, being a woman is more than just fashion."
+            -> "Okay, fine, sorry."
+                Sister: "Believe me, I came here with positive intentions. I want to learn."
+                Sister: "But if you're already starting from a hostile place..." 
+                Sister: "How am I supposed to understand you better?"
+            -> "That is already unacceptable."
+                Sister: "Seriously?" 
+                <<changeRelationship("Si", -5)>>
+                Sister: "Sigh... I guess talking to you is gonna be hard." (-5% Sister relationship)
+
+-> "Alright, let's compromise. I'm not a woman, but..."
+    You: "I should have the freedom to dress in their clothes."
+    Sister: "Well, no one's stopping you... The problem is what happens after that."
+    Sister: "There's the stuff with Mother, but..."
+    Sister: "What happens if people laugh at you? Or worse, harass you?"
+    -> "Let them laugh."
+        Sister: "You say that now, but..."
+        Sister: "What happens if you go viral on the Internet?"
+        Sister: "You'll be a laughingstock."
+        Sister: "And you'll bring shame to our family."
+        Sister: "You think Mother's going to forgive you for that?"
+        -> "I don't care."
+            Sister: "Not again..."
+            Sister: "You've got to care. She's our mother. You think she can handle this stress?"
+            <<changeRelationship("Si", -5)>>
+            Sister: "Ugh, whatever, if I have to be the responsible sibling, so be it." (-5% Sister relationship)
+        -> "Don't you think that's rather unlikely?" #skillcheck #emp # 7
+            You: "You know me. I'm careful in public, too."
+            You: "Those online people definitely have more fun things to take videos of."
+            Sister: "But... what if..."
+            <<set $diceroll = diceRoll($emp)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceRoll < 7>>
+                You: "Calm down, you're being paranoid again."
+                Sister: "You're telling me to calm down? You're the one who should be worried!"
+                <<changeConfidence(-10)>>
+                Sister: "This is a risk you cannot afford. Even a 1% chance is still a chance!" (-10% confidence)
+                You: "Ugh, fine..."
+            <<else>>
+                You: "Please, just trust me on this. I can take care of myself."
+                Sister: "Alright, fine..."
+                Sister: "Sorry for being so uptight about this."
+                Sister: "It's just... I don't want you to get cyberbullied, you know?"
+                <<changeRelationship("Si", 5)>>
+                You: "I appreciate the thought. Thank you for looking out for me." (+5% Sister relationship)
+            <<endif>>
+    -> "I know to stay away from suspicious places and people."
+        Sister: "Okay, good."
+        Sister: "Don't go to clubs alone, if you're crossdressed."
+        Sister: "But what about on the street?"
+        -> "I will be careful..." #skillcheck #emp # 7
+            Sister: "You never know what could happen."
+            Sister: "Maybe it'd be easier if you just... stopped..."
+            <<set $diceroll = diceRoll($emp)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceRoll < 7>>
+                You: "Damn, can you just get off my back for once? Let me live!"
+                <<changeRelationship("Si", -5)>>
+                Sister: "Fine, if you don't want my help, you should have just said so from the start!" (-5% Sister relationship)
+            <<else>>
+                You: "Thanks for your patience and concern, but I can take it from here."
+                You: "Please, just trust in my ability to take care of myself as an adult."
+                Sister: "I suppose I should... I'm being like Mother now, aren't I?"
+                <<changeRelationship("Si", 5)>>
+                You: "Yeah, but you're willing to see that I'm an adult. She isn't. And I thank you for that." (+5% Sister relationship)
+            <<endif>>
+        -> "You can't just live your entire life in fear." 
+            <<changeGenderMeter(5)>>
+            You: "That goes to Mother too." (+5% gender meter)
+            You: "Sure, there's a 1% chance I'll get harassed but what about the 99% of other times when I won't?"
+            You: "You'd get me to give up all that happiness just for an unlikely event?"
+            Sister: "Alright... Fine. Just be careful."
+<<jump 5>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1280,480
+__PrivCrochet_tags: 
+title: 4_2
+---
+Sister: "Well you gotta have some reason!"
+Sister: "What, you're telling me that you just woke up one day..."
+Sister: "And thought to yourself, I want to wear dresses now?"
+
+-> "It just... feels right." (+5% gender meter)
+    <<changeGenderMeter(5)>>
+    Sister: "Ugh. So this is a 'you say, she say' kind of thing."
+    Sister: "You know what's the worst part?"
+    Sister: "I asked Mother why she saw this as a problem. And she said that it hurts her."
+    Sister: "So how am I supposed to bridge this gap?"
+    -> "We just have to agree to disagree."
+        Sister: "That's not solving the problem."
+        Sister: "As long as you're living in our house, as long as you want to consider her your mother..."
+        Sister: "You need to follow her rules."
+        Sister: "Didn't father beat that concept into you when you were young?"
+        Sister: "Into both of us?"
+        -> "Yeah, I guess their word is law." (-5% gender meter)
+            <<changeGenderMeter(-5)>>
+            Sister: "I mean, not really..."
+            Sister: "But there are some basic standards we need to follow."
+            Sister: "It's for the good of the family."
+        -> "Come on... we're adults already." #skillcheck #cha # 7
+            Sister: "Well, we're there in age, but what about maturity?"
+            Sister: "I guess parents will always see their offspring as kids."
+            Sister: "And there's no changing that."
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 7>>
+                You: "I guess..."
+                <<changeConfidence(-5)>>
+                Sister: "What to do, right?" (-5% confidence)
+            <<else>>
+                You: "You really think we should continue to be helicopter-parented?"
+                You: "We need to be making our own decisions. You've made many such choices yourself."
+                Sister: "And so have you, I guess..."
+                You: "Exactly. So blindly following whatever Mother says shouldn't be a reason for me to stop being myself."
+                You: "You're brave. I can be brave too."
+                <<changeRelationship("Si", 5)>>
+                Sister: "Thanks... no one's ever called me brave before." (+5% Sister relationship)
+            <<endif>>
+        
+    -> "Could she make an exception?"
+        You: "Like, if I followed absolutely everything she said, but still kept my crossdressing habits."
+        Sister: "Uh... I really don't know."
+        Sister: "Like, you haven't been home much, especially after you started crossdressing."
+        Sister: "So your relationship with Mother is shaky at best."
+        Sister: "And besides, you know how intense she can get when she wants us to do stuff..."
+        Sister: "Would you really be able to follow absolutely everything?"
+        You: "I guess it'd be extremely difficult."
+
+-> "I guess not..." (-5% gender meter)
+    <<changeGenderMeter(-5)>>    
+    Sister sighs.
+    Sister: "Well, if you're so unsure, that makes my job easier."
+    Sister: "Mother probably won't be so angry when she meets you."
+    Sister: "Hopefully your discussion with her will be fast."
+<<jump 5>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1515,239
+__PrivCrochet_tags: 
+title: 5
+---
+Sister: "Let's think about the future."
+You: "What about it?"
+Sister: "Everything about it. What job are you gonna get? How are you gonna find a partner?"
+Sister: "Call me old-fashioned, but you need to think of all this stuff, too."
+
+-> "It's all about finding the right people." (+5% gender meter)
+    <<changeGenderMeter(5)>>
+    Sister: "That's not going to be easy, you know."
+    Sister: "I mean, most girls want a real man, right?"
+    Sister: "And that could extend to companies as well. They want good workers."
+    -> "So what is a real man?"
+        Sister: "Uh... tall! Strong! Assertive! Responsible and reliable!"
+        You: "You mean women can't be all of those things?"
+        Sister: "Uh..."
+        You: "And men that aren't tall aren't men?"
+        Sister: "No no no... that's not what I meant..."
+        -> "Then what about the traditional stuff?"
+            You: "Like, men being the breadwinner, men needing to protect women..."
+            Sister: "Yeah, those deserve to go."
+            You: "Really? That's what people have thought to be masculine for a really long time."
+            Sister: "Yeah, but those things change, don't they?"
+            <<addExperience(10)>>
+            You: "Mhmm. So, don't you think masculinity can also change towards dresses and makeup?" (+10 XP)
+            Sister: "Well, if you put it that way, sure..." 
+        -> "So by that definition, your boyfriend isn't super masculine either."
+            Sister: "How so?"
+            You: "You like how he will listen to you talk instead of talking over you."
+            You: "That isn't very assertive, isn't it?"
+            You: "And the fact that he listens! And is emotionally available for you!"
+            You: "Aren't those more feminine-coded traits?"
+            Sister: "Well they're great for everyone to have! Regardless of man or woman."
+            You: "Or anyone in between. Anyway..."
+            You: "They were more feminine-coded traits. You don't see our father exhibiting them."
+            Sister: "Yeah, we've both seen what toxic masculinity is like."
+            Sister: "I wouldn't date anyone who isn't emotionally available."
+            <<addExperience(10)>>
+            You: "Great! So, I can also pick and choose what parts of femininity suit me, right?" (+10 XP)
+            Sister: "I guess so..."
+        Sister: "Still, I'm not sure who out there would date you."
+        You take a deep breath.
+        You: "One problem at a time."
+    -> "Why do you want me to find a partner?"
+        Sister: "I never forced you to do anything."
+        Sister: "And, honestly, neither should Mother."
+        Sister: "I still remember how she would nag at me so much when I was still single."
+        Sister: "But let's be real here, if you can't get a partner, your housing options are limited."
+        -> "I could rent."
+            Sister: "It's gonna be expensive..."
+            Sister: "I mean, if I get my own place, I could let you stay there for a while..."
+            Sister: "But not forever. You need to be independent."
+        -> "I'll just live with our parents."
+            Sister: "Yeah, sure, the very same people who don't like your crossdressing."
+            Sister: "Anyway, don't you think you should be independent at this age already?"
+            <<changeConfidence(-10)>>
+            Sister: "Why else would you go to uni?" (-10% confidence)
+        -> "Better to be free by myself..." #skillcheck #emp # 7
+            You: "... than to be stuck with the wrong person."
+            <<set $diceroll = diceRoll($emp)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 7>>
+                You: "At the end of the day, isn't it about being happy with someone you love?"
+                <<addExperience(10)>>
+                You: "If you don't have that, what's the point of living in the same house?" (+10 XP)
+                Sister: "I guess you're right..."
+            <<else>>
+                You: "After all, you nearly went down that path, didn't you? With that one dude - "
+                <<changeRelationship("Si", -5)>>
+                Sister: "No! Do NOT mention him ever again. You should know better." (-5% Sister relationship)
+                You: "Fine, sorry..."
+            <<endif>>
+    -> "Don't you think being able to express myself would make me a good worker?" (+5% gender meter)
+        <<changeGenderMeter(5)>>
+        You: "Like, if I was constantly stressed to maintain appearances..."
+        You: "I wouldn't have enough brain power left for work, would I?"
+        Sister: "You haven't met the HR people at my company."
+        Sister: "They judge everybody. They used to judge me for being single!"
+        Sister: "And my colleagues are worse. You haven't heard them gossip about literally anything and everything."
+        -> "I wouldn't work at a company like that, then."
+            You: "Seems like your industry needs to get with the times."
+            You: "LGBT people are here to stay."
+            Sister: "You don't even know where you're gonna work after graduation!"
+            Sister: "Well... wherever it is..."
+            Sister: "I hope you'll be happy there."
+        -> "Oh... didn't know it was that bad out there..." (-5% gender meter)
+            <<changeGenderMeter(-5)>>
+            Sister: "Yes, so the best move is just to hide who you are."
+            Sister: "Get with the program, and you'll benefit from it."
+-> "I'll just have to hide who I want to be."
+    Sister: "That's for the best."
+    -> "Don't you think it's a shame, though?"
+        Sister: "There's lots of things in life that would be a shame."
+        Sister: "Like my previous career aspirations..."
+        Sister: "But we have to let them go. So that we can build a better world for ourselves."
+    -> "But it would be extremely frustrating."
+        Sister: "That is the price you have to pay. We all make sacrifices for the life we want."
+        Sister: "You know me, I'm all about stability." 
+        Sister: "And if that means sacrificing some happiness, then that's just life, isn't it?"
+        <<changeConfidence(-10)>>
+        You: "I guess it has to be this way..." (-10% confidence)
+    -> "I'm gonna hide so well that no one will know."
+        Sister: "Well, Mother already knows, so that's shot."
+        Sister: "And besides, if Mother already has such a big reaction to your crossdressing..." 
+        Sister: "What about your partner or employer?"
+        Sister: "It's gonna be tough."
+-> "I didn't think about it this way..." (-5% gender meter)
+    <<changeGenderMeter(-5)>>
+    Sister: "You'll start thinking about a lot of things pragmatically once you enter the workforce."
+    Sister: "You're lucky you're the younger child."
+    Sister: "Do you know how many things I had to go through before you did?"
+    Sister: "I guess uni really just doesn't prepare you for this stuff."
+<<jump 6>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1759,235
+__PrivCrochet_tags: 
+title: 6
+---
+Sister: "And, one more thing..." 
+Sister: "You're not going to, you know, transition, right?"
+-> "I will not."
+    Sister: "Okay, good. That's one more thing that will assure Mother."
+    Sister: "Though that battle is far from over. It hasn't even begun."
+-> "I can't promise that."
+    Sister sighs.
+    Sister: "As much as I want to support you..."
+    Sister: "This is going to make things really difficult for Mother."
+    -> "I'm just keeping the possibility open."
+        Sister: "I know, but..."
+        -> "I know you'll support me no matter what." #skillcheck #emp # 7
+            <<set $diceroll = diceRoll($emp)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll >= 7>>
+                <<changeRelationship("Si", 5)>>
+                You: "If it happens, I will let you know first." (+5% Sister relationship)
+                Sister: "That's nice. Thank you."
+                Sister: "I guess... you're ultimately not doing anything illegal or harmful."
+                Sister: "It'll be hard for me to get used to it, but I will try."            
+            <<else>>            
+                Sister: "Uh..."
+                Sister: "Why does it sound like you're making me an accomplice to a crime..."
+                Sister: "Never mind. I shouldn't be thinking that."
+            <<endif>>
+        -> "Okay, fine. Let's not think about it."
+            Sister: "Thank you."
+            Sister: "I can probably forget it, but..."
+            Sister: "You know, Mother isn't as busy as I am."
+            Sister: "She might just... jolt up in the middle of the night..."
+            Sister: "Awakened from a nightmare that now she has two daughters..."
+            You: "Well, nothing you can do about that."
+    -> "Who cares what she thinks?"
+        <<changeRelationship("Si", -5)>>
+        Sister: "You know how difficult you're being with me?" (-5% Sister relationship)
+        Sister: "Keep that up and you'll never come to a consensus with her."
+<<jump 7>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2280,240
+__PrivCrochet_tags: 
+title: ending_2
+---
+<<goto_splash_boss1(3)>>
+Sister: "You have my support."
+<<goto_splash_boss1(2)>>
+Sister: "But there are things that I cannot help you with, okay?"
+Sister: "Please. Go find people like you."
+Sister: "Ask them for their stories. For proof that there's a path out for you too."
+Sister: "Oh, one last thing..."
+<<goto_splash_boss1(3)>>
+Sister: "Do you have a female name?"
+You: "Yep. You can call me..."
+<<goto_black_room()>>
+You: "Charlotte."
+//sick ass title drop?//
+
+<<addExperience(30)>>
+(+30 XP)
+<<jump end>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2280,480
+__PrivCrochet_tags: 
+title: ending_3
+---
+<<goto_splash_boss1(3)>>
+Sister: "Thank you for making this easy for Mother."
+Sister: "I know it must have been a hard thing to do."
+<<goto_black_room()>>
+Sister: "But trust me, we'll all be better off if you just stop."
+
+<<addExperience(30)>>
+(+30 XP)
+<<jump end>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2280,720
+__PrivCrochet_tags: 
+title: ending_4
+---
+<<goto_splash_boss1(1)>>
+Sister: "I'm sorry. I can't say you have my support."
+Sister: "Whatever you choose to do, know that it'll have consequences."
+<<goto_black_room()>>
+Sister: "Just don't do anything you'll regret."
+
+<<addExperience(30)>>
+(+30 XP)
+<<jump end>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2280,960
+__PrivCrochet_tags: 
+title: ending_5
+---
+<<goto_splash_boss1(2)>>
+Sister: "Finally. It's so difficult to talk you out of these ideas."
+Sister: "I know you're my brother and all, but I need a break for a while."
+<<goto_black_room()>>
+Sister: "Please don't be so toxic to Mother, okay?"
+
+<<addExperience(30)>>
+(+30 XP)
+<<jump end>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2000,240
+__PrivCrochet_tags: 
+title: 7
+---
+// make checks here
+Sister: "Well, we've certainly spent a lot of time talking."
+Sister: "So, at the end of it all..."
+<<set $end_gender_meter = getGenderMeter()>>
+<<set $end_sis_rs = getRelationship("Si")>>
+<<set $delta_gender_meter = $end_gender_meter - $start_gender_meter>>
+<<set $delta_sis_rs = $end_sis_rs - $start_sis_rs>>
+// gender meter overall increase 
+<<if $delta_gender_meter >= 0>>
+    <<if $delta_sis_rs >= 0>>
+        // sis relationship high
+        <<jump ending_2>>
+    <<else>>
+        // sis relationship low
+        <<jump ending_4>>
+    <<endif>>
+<<else>>
+// gender meter overall decrease or no change
+    <<if $delta_sis_rs >= 0>>
+        // sis relationship high
+        <<jump ending_3>>
+    <<else>>
+        // sis relationship low
+        <<jump ending_5>>
+    <<endif>>
+<<endif>>
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 2000,720
+__PrivCrochet_tags: 
+title: debug_end
+---
+Skipped to the end.
+<<jump 7>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: -236,253
+__PrivCrochet_tags: 
+title: 0
+---
+// empty text
+// DO NOT REMOVE
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2599,160
+__PrivCrochet_tags: 
+title: end
+---
+// by now, the screen should be black
+You collapse into bed after returning to your hostel.
+Who knew seeing your sister after so long could be so intense...
+<<incrementStage()>>
+<<goto_room_bedroom_after_boss1()>>
+===
