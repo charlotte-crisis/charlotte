@@ -197,13 +197,14 @@ function goto_room_bedroom_day() {
 	});
 }
 
+// THIS IS SPECIFICALLY AFTER CLASSS 1
 function goto_room_bedroom(){
 	fade_room(rm_bedroom_night,,, function() {
 		set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
-
-		ChatterboxLoadFromFile("room_1_after_class.yarn");
-		obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_class.yarn");
-		ChatterboxJump(chatterbox, "after");	
+		change_node("room_1_after_class.yarn", "after");
+		//ChatterboxLoadFromFile("room_1_after_class.yarn");
+		//obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_class.yarn");
+		//ChatterboxJump(chatterbox, "after");
 	});
 }
 
