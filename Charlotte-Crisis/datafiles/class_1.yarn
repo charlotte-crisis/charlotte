@@ -874,7 +874,7 @@ You feel exhausted even from the sound of that.
 <<jump 10_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1933,623
+__PrivCrochet_position: 1933,624
 __PrivCrochet_tags: 
 title: 10_options
 ---
@@ -892,8 +892,8 @@ What will you say?
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll < 6>>
-    Sage: "Come on. The readings aren't *that* bad."
-    Chenjie: "We just have to suck it up."
+        Sage: "Come on. The readings aren't *that* bad."
+        Chenjie: "We just have to suck it up."
     <<else>>
         Chenjie: "Hey, recommend me to your branch manager. I also need that job."
         Joanne: "And me!"
