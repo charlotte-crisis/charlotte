@@ -11,7 +11,7 @@ You: "Hey Anthony."
 <<endif>>
 Anthony: "I don't know why you asked me here but... whatever."
 
-<<jump 1>>
+<<jump "1">>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1479,29
@@ -203,12 +203,11 @@ Anthony: "Why should I feel sorry for telling the truth?"
 <<jump 1_3_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1964,278
+__PrivCrochet_position: 1960,280
 __PrivCrochet_tags: 
 title: 1
 ---
 What do you say?
-
 -> "How's school?"
     <<jump 1_1>>
 
