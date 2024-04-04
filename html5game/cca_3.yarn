@@ -1258,7 +1258,7 @@ Nadia: "You know how this school is. There's a thousand and one programmes to at
 <<jump 5_2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 291,893
+__PrivCrochet_position: 280,880
 __PrivCrochet_tags: 
 title: 6_Exit
 ---
@@ -1273,4 +1273,16 @@ title: debug_end
 ---
 Skipped to the end.
 <<jump 6_Exit>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1680,1200
+__PrivCrochet_tags: 
+title: exit
+---
+Go back to your room?
+
+-> No (stay here)
+
+-> Yes (continue)
+    <<goto_room_bedroom_after_cca3()>>
 ===
