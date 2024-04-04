@@ -47,7 +47,7 @@ function get_room_name(_week) {
 		case rm_bus_j:
 		case rm_bus_s:
 			return string("Week {0} - Bus Stop", _week);
-		case rm_house_sister:
+		case rm_boss_1:
 			return string("Week {0} - Home", _week);
 		case rm_hangout_a:
 		case rm_hangout_n:

@@ -117,6 +117,10 @@ BG_ALPHA = 0.9;
 	ChatterboxAddFunction("goto_room_boss_2_1_seated", goto_room_boss_2_1_seated);
 	ChatterboxAddFunction("goto_room_boss_2_2", goto_room_boss_2_2);
 	ChatterboxAddFunction("goto_splash_boss2_2", goto_splash_boss2_2);
+	
+	ChatterboxAddFunction("goto_room_boss_3_1", goto_room_boss_3_1);
+	ChatterboxAddFunction("goto_room_boss_3_2", goto_room_boss_3_2);
+	ChatterboxAddFunction("set_camera_boss3_1", set_camera_boss3_1);
 #endregion
 
 

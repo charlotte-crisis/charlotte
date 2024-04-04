@@ -378,7 +378,7 @@ function goto_room_bedroom_afterHangout(){
 
 #region Boss
 	function goto_room_boss_1() {
-		fade_room(rm_house_sister);
+		fade_room(rm_boss_1);
 		set_player_position(X_HOUSE_DOOR, Y_HEIGHT, 1);
 		change_node("boss_1.yarn", "0");
 		//ChatterboxLoadFromFile("boss_1.yarn");
@@ -435,9 +435,15 @@ function goto_room_bedroom_afterHangout(){
 		});
 	}
 	
+	// More like pan the camera
+	function set_camera_boss3_1() {
+		// TODO: Animate a pan somehow... I dont know why it doesnt work
+		camera_set_view_pos(view_camera[0], 144, 0);
+	}
+	
 	function goto_room_boss_3_2() {
 		fade_room(rm_boss_3_2,,, function() {
-			change_node("boss_3_2.yarn", "start");
+			change_node("boss_3_2.yarn", "1");
 		});
 	}
 #endregion

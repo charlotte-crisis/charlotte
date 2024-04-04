@@ -1,15 +1,15 @@
 {
   "$GMRoom":"",
-  "%Name":"rm_house_sister",
+  "%Name":"rm_boss_1",
   "creationCodeFile":"rooms/rm_house/RoomCreationCode.gml",
   "inheritCode":true,
   "inheritCreationOrder":true,
   "inheritLayers":true,
   "instanceCreationOrder":[
-    {"name":"inst_5DDBE41A_1_1_2_2","path":"rooms/rm_house_sister/rm_house_sister.yy",},
-    {"name":"inst_416B103F_1_1_2_2","path":"rooms/rm_house_sister/rm_house_sister.yy",},
-    {"name":"inst_741BB5E2_1_1_2_2","path":"rooms/rm_house_sister/rm_house_sister.yy",},
-    {"name":"inst_3831EA4D","path":"rooms/rm_house_sister/rm_house_sister.yy",},
+    {"name":"inst_5DDBE41A_1_1_2_2","path":"rooms/rm_boss_1/rm_boss_1.yy",},
+    {"name":"inst_416B103F_1_1_2_2","path":"rooms/rm_boss_1/rm_boss_1.yy",},
+    {"name":"inst_741BB5E2_1_1_2_2","path":"rooms/rm_boss_1/rm_boss_1.yy",},
+    {"name":"inst_3831EA4D","path":"rooms/rm_boss_1/rm_boss_1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -30,7 +30,7 @@
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[],"depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Assets_1","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"spr_livingroom_bars","path":"sprites/spr_livingroom_bars/spr_livingroom_bars.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
-  "name":"rm_house_sister",
+  "name":"rm_boss_1",
   "parent":{
     "name":"House",
     "path":"folders/Rooms/House.yy",
