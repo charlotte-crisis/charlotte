@@ -99,7 +99,7 @@ function load_game() {
 	instance_destroy(obj_chatterbox_control);
 	var _chatterbox_control = instance_create_layer(0, 0, "Helpers", obj_chatterbox_control);
 	with (_chatterbox_control) {
-		var _source = ini_read_string("level", "chatterbox_source", "menu.yarn");
+		var _source = ini_read_string("level", "chatterbox_source", "room_1.yarn");
 		var _node = ini_read_string("level", "chatterbox_node", "");
 		ChatterboxLoadFromFile(_source);
 		chatterbox = ChatterboxCreate(_source);

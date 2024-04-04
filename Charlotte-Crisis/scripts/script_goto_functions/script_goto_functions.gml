@@ -220,10 +220,7 @@ function goto_room_bedroom_frombed() {
 function goto_room_bedroom_after_class2(){
 	fade_room(rm_bedroom_night,,,function() {
 		set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
-		change_node("room_2_after_class2.yarn", "after");
-		//ChatterboxLoadFromFile("room_2_after_class2.yarn");
-		//obj_chatterbox_control.chatterbox = ChatterboxCreate("room_2_after_class2.yarn");
-		//ChatterboxJump(chatterbox, "after");	
+		change_node("room_2_after_class.yarn", "after");
 	});
 }
 
@@ -239,9 +236,6 @@ function goto_room_bedroom_after_cca(){
 	fade_room(rm_bedroom_night,,, function() {
 		set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
 		change_node("room_1_after_cca.yarn", "after");
-		//ChatterboxLoadFromFile("room_1_after_cca.yarn");
-		//obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_cca.yarn");
-		//ChatterboxJump(chatterbox, "after");	
 	});
 }
 

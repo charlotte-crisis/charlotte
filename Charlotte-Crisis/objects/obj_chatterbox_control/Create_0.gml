@@ -5,7 +5,7 @@ if instance_number(object_index) > 1 {
     exit;
 }
 
-ChatterboxLoadFromFile("menu.yarn");
+ChatterboxLoadFromFile("room_1.yarn");
 chatterbox = ChatterboxCreate();
 
 option_index = 0;
