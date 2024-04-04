@@ -220,10 +220,10 @@ function goto_room_bedroom_frombed() {
 function goto_room_bedroom_after_class2(){
 	fade_room(rm_bedroom_night,,,function() {
 		set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
-
-		ChatterboxLoadFromFile("room_2_after_class2.yarn");
-		obj_chatterbox_control.chatterbox = ChatterboxCreate("room_2_after_class2.yarn");
-		ChatterboxJump(chatterbox, "after");	
+		change_node("room_2_after_class2.yarn", "after");
+		//ChatterboxLoadFromFile("room_2_after_class2.yarn");
+		//obj_chatterbox_control.chatterbox = ChatterboxCreate("room_2_after_class2.yarn");
+		//ChatterboxJump(chatterbox, "after");	
 	});
 }
 
@@ -238,20 +238,20 @@ function goto_room_bedroom_after_class3(){
 function goto_room_bedroom_after_cca(){
 	fade_room(rm_bedroom_night,,, function() {
 		set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
-	
-		ChatterboxLoadFromFile("room_1_after_cca.yarn");
-		obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_cca.yarn");
-		ChatterboxJump(chatterbox, "after");	
+		change_node("room_1_after_cca.yarn", "after");
+		//ChatterboxLoadFromFile("room_1_after_cca.yarn");
+		//obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_cca.yarn");
+		//ChatterboxJump(chatterbox, "after");	
 	});
 }
 
 function goto_room_bedroom_after_cca2(){
 	fade_room(rm_bedroom_night, function() {
 		set_player_position(X_BEDROOM_DOOR, Y_HEIGHT, -1);
-	
-		ChatterboxLoadFromFile("room_1_after_cca2.yarn");
-		obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_cca2.yarn");
-		ChatterboxJump(chatterbox, "after");	
+		change_node("room_1_after_cca2.yarn", "after");
+		//ChatterboxLoadFromFile("room_1_after_cca2.yarn");
+		//obj_chatterbox_control.chatterbox = ChatterboxCreate("room_1_after_cca2.yarn");
+		//ChatterboxJump(chatterbox, "after");	
 	});
 }
 
@@ -325,7 +325,7 @@ function goto_room_bedroom_afterHangout(){
 			//obj_player.facing_direction = 1;
 			//obj_player.is_sitting = true;
 	
-			ChatterboxJump(chatterbox, "2");	
+			change_node(,"2");	
 		});
 	}
 	
@@ -375,10 +375,10 @@ function goto_room_bedroom_afterHangout(){
 	function goto_room_boss_1() {
 		fade_room(rm_house_sister);
 		set_player_position(X_HOUSE_DOOR, Y_HEIGHT, 1);
-		
-		ChatterboxLoadFromFile("boss_1.yarn");
-		obj_chatterbox_control.chatterbox = ChatterboxCreate("boss_1.yarn");
-		ChatterboxJump(chatterbox, "0");
+		change_node("boss_1.yarn", "0");
+		//ChatterboxLoadFromFile("boss_1.yarn");
+		//obj_chatterbox_control.chatterbox = ChatterboxCreate("boss_1.yarn");
+		//ChatterboxJump(chatterbox, "0");
 	}
 	
 	// More like pan the camera
