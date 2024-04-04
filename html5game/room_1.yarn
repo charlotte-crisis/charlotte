@@ -1,116 +1,80 @@
 #__PrivCrochet_version:1
 # if you've already visited then it will show the concise version.
 # Interacting with mirror
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 880,120
-__PrivCrochet_tags: 
-title: 0
----
-You hop out of bed.
-<<set $canGoToBed = false>>
-
-You got as much sleep as you could manage. You stare at the bed.
-It draws you back in, but you withstand its pull.
-Well, no use idling around.
-You have to get dressed and go back to school.
-You signed up for art club. Wouldn't want to miss the first day.
-
-<<jump tut_wardrobe>>
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1403,200
+__PrivCrochet_colorID: 2
+__PrivCrochet_position: 600,360
 __PrivCrochet_tags: 
 title: door
 ---
-<<if $canGoToBed == true>>
-    You just got back!
-<<else>>
-        Are you ready to head out?
+You stand at the door. (Press space to continue)
+Before you leave, you make sure you have allocated your stats at your desk.
+Stats will be used for skill checks in the game.
 
-        -> No (Go back)
-            ## exit.
+<<set $cha = getCharisma()>>
+<<set $int = getIntelligence()>>
+<<set $emp = getEmpathy()>>
+<<set $name = getName()>>
 
-        -> Yes (Go to school)
-            <<goto_room_cca_1()>>        
-<<endif>>
+You have {$int} Intelligence (INT), {$cha} Charisma (CHA), and {$emp} Empathy (EMP).
+
+Do you wish to continue?
+
+-> No (Close this dialogue)
+
+-> Yes (Start the game!) #continue
+    
+    <<goto_room_class_1()>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 920,440
-__PrivCrochet_tags: 
-title: 0_revisit
----
-Well, no use going back to bed.
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 704,-147
-__PrivCrochet_tags: 
-title: after_class1
----
-Try as you might, you cannot forget what Sister sent.
-You knew this conflict was gonna come at some point, but not this soon...
-Regardless, you're back in your room, protected from everything outside. For now.
-In it, there are two most familiar things; your CLOSET and your BED.
-You should probably go to BED first.
-And when you wake up, you'll prepare your look in the CLOSET.
-This is what you do every day, but with Sister's text today, you feel like everything is about to change...
-<<set $canGoToBed = true>>
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 647,194
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 600,120
 __PrivCrochet_tags: 
 title: bed
 ---
-<<if $canGoToBed == true>>
-    # start the next scene
-    <<goto_room_bedroom_frombed()>>
+You just got out of bed, and now you're ready to take on the day.
+===
+__PrivCrochet_colorID: 8
+__PrivCrochet_position: 840,360
+__PrivCrochet_tags: 
+title: wardrobe
+---
+<<set $name = getName()>>
+You would love to look inside your wardrobe, but you've already decided what to wear for today.
+===
+__PrivCrochet_colorID: 7
+__PrivCrochet_position: 840,120
+__PrivCrochet_tags: 
+title: desk
+---
+<<if visited("desk") > 1>>
+    You stand by your desk.
+    -> Read the instructions again.
+        <<jump desk_instructions>>
+    -> Allocate stats
+        <<openStatMenu()>>
 <<else>>
-    <<jump 0_revisit>>
+    <<jump desk_instructions>>
 <<endif>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 640,720
+__PrivCrochet_colorID: 7
+__PrivCrochet_position: 1080,120
 __PrivCrochet_tags: 
-title: hangout
+title: desk_instructions
 ---
-You feel like hanging out with a friend this week, for a quick meal.
-Who will you ask out?
--> Anthony <<if getRelationship("A") >= 30>>
-    You call Anthony up for a hangout.
-    <<goto_room_hangout_a()>>
-
--> Nadia <<if getRelationship("N") >= 30>>
-    You call Nadia up for a hangout.
-    <<goto_room_hangout_n()>>
-
--> Vera <<if getRelationship("V") >= 30>>
-    You call Vera up for a hangout.
-    <<goto_room_hangout_v()>>
-
--> On second thought, nevermind.
-    Hmm… you don't seem to be friendly enough with anyone.
-    You can stay in today, but please try to understand and befriend people around you…
+In this game, you can allocate stats to Intelligence (INT), Charisma (CHA), and Empathy (EMP).
+Sometimes in dialogue, you will have to select options.
+Some dialogue outcomes are based on skill checks, whereby your success depends on your stats and a dice roll.
+You can allocate an additional stat each time you level up, which is each time you hit 50 Experience Points (XP).
+Use the arrow keys to navigate the stat menu.
+// Maybe have some splash art?
+<<openStatMenu()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1080,-160
+__PrivCrochet_position: 360,120
 __PrivCrochet_tags: 
-title: tut_wardrobe
+title: 0
 ---
-TUTORIAL: You can interact with the wardrobe to change your gender presentation and clothes.
-TUTORIAL: Depending on what you wear and present as, others might treat you differently.
-TUTORIAL: Go ahead and press "Up" near the wardrobe to try it out!
-
-TUTORIAL: Repeat this tutorial?
-
--> Yes
-    <<jump tut_wardrobe>>
-
--> No (Continue)
-    
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1200,120
-__PrivCrochet_tags: 
-title: 1
----
-you shouldnt be seeing this
+It's the first day of the semester. You'd just moved into your school's hostel yesterday. (Spacebar to continue)
+It was a lot of stuff to move from home, but you're glad your belongings are safe here with you.
+And with that, your first class is today. You didn't waste much time (of which you had precious little to begin with) unpacking last night.
+TUTORIAL: Left and Right arrow keys to move. Press the up arrow near an object or person to interact.
 ===

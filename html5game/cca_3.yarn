@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 238,398
+__PrivCrochet_position: 238,395
 __PrivCrochet_tags: 
 title: 1
 ---
@@ -32,7 +32,8 @@ Nadia: "Let's just maintain for today, alright?"
     <<else>>
         Eh, what to do.
     <<endif>>
-    
+
+<<goto_room_cca_3_end()>>
 <<jump 2>>
 ===
 __PrivCrochet_colorID: 0
@@ -44,18 +45,18 @@ The room has always been quiet at this stage. Before the discussions began.
 But without Eleanor to start the ball rolling, you get the feeling this silence will persist.
 Nadia has put on Spotify's top 50, but it does little to assuage this feeling.
 
-Who do you want to talk to first?
--> Vera
-    <<jump 3>>
--> Anthony
-    <<jump 4>>
--> Nadia
-    <<jump 5>>
--> Do your own thing
-    <<jump 6>>
+//Who do you want to talk to first?
+//-> Vera
+//    <<jump 3>>
+//-> Anthony
+//    <<jump 4>>
+//-> Nadia
+//    <<jump 5>>
+//-> Do your own thing
+//    <<jump 6>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 475,641
+__PrivCrochet_position: 475,637
 __PrivCrochet_tags: 
 title: 6
 ---
@@ -108,17 +109,17 @@ Try talking to them to figure out how they feel.
         <<jump 6_Exit>>
 
 -> None.
-You sure? Nothing?
+    You sure? Nothing?
     -> Yeah, not really feeling it today.
         Nothing comes to your mind. You leave the clubroom with a blank sheet of paper.
         Don't worry, we can come up with something afterwards. Away from everyone.
         Go to the door to leave the club room.
     
     -> Hmm, maybe I'll get some inspiration...
-    Off you go.
+        Off you go.
 
 -> Let's talk to them...
-Off you go.
+    Off you go.
 ===
 __PrivCrochet_colorID: 3
 __PrivCrochet_position: 764,170
@@ -128,8 +129,8 @@ title: 3
 // Might use a different way to check veraKnows, like npcKnows("V") since
 // The same check is done with the other characters
 
-Vera: "Hey, Charlotte." <<if $veraKnows>>
-Vera: "Hey, Charles." <<if $veraKnows or getRelationship("V") <= 30>>
+Vera: "Hey, Charlotte." <<if $npcKnows("V")>>
+Vera: "Hey, Charles." <<if !$npcKnows("V") or getRelationship("V") <= 30>>
 
 -> "You're always gonna call me Charlotte, huh?"
     Vera: "I see the woman within."
@@ -1258,7 +1259,7 @@ Nadia: "You know how this school is. There's a thousand and one programmes to at
 <<jump 5_2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 280,880
+__PrivCrochet_position: 282,878
 __PrivCrochet_tags: 
 title: 6_Exit
 ---
@@ -1284,5 +1285,7 @@ Go back to your room?
 -> No (stay here)
 
 -> Yes (continue)
+    <<addExperience(30)>>
+    (+30 XP)
     <<goto_room_bedroom_after_cca3()>>
 ===

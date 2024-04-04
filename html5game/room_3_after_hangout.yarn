@@ -14,27 +14,23 @@ __PrivCrochet_tags:
 title: bed
 ---
 <<if getGenderMeter() < 30>>
-    This entire week, don't you feel like there's been something missing? Or rather, someone?
-    We need to talk. Prepare yourself.
+    You've pushed me to the brink. Is there even space for Charlotte in your life anymore?
+    I hope I'm mistaken, but I won't expect much.
     Going to bed will continue to the next scene. You may still change your stats or clothes. Do you wish to continue?
 
-    -> Go back
-
+    -> No (go back)
     -> Yes (continue) #continue
-        <<goto_room_boss_2_2()>>
+        <<goto_room_boss_3_2()>>
+
 <<else>>
-    Do you remember what you're doing this weekend?
-    You: "Hi, are you Helen? I'm Charlotte, another crossdresser who found your blog."
-    You: "I need your advice on some crossdressing issues. Can we meet irl?"
-    Helen: "Hi. Sure... let's meet on Saturday?"
-    You: "Okay, thank you!"
-    That happened 3 days ago. And it's gonna be Saturday soon. Are you ready?
+    Tomorrow it's the big day. You're returning home, but Mother is waiting for you now.
+    I hope you're prepared...
     Going to bed will continue to the next scene. You may still change your stats or clothes. Do you wish to continue?
 
-    -> Go back
-
+    -> No (go back)
     -> Yes (continue) #continue
-        <<goto_room_boss_2_1()>>
+        <<goto_room_boss_3_1()>>
+
 <<endif>>
 
 ===
