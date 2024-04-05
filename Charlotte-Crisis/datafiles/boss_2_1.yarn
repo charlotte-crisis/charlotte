@@ -14,7 +14,7 @@ Helen: "Ah, okay. I'm Helen. Nice to meet you."
 // The two of you get your food and return to the table.
 Helen: "Why did you reach out to me, anyway?"
 You: "You're a crossdresser too. I need advice on some things."
-Helen: "Yeah, you told me that over text. I'm just surprised that you would be so… open."
+Helen: "Yeah, you told me that over text. I'm just surprised that you would be so... open."
 Helen: "You literally Googled 'crossdresser Singapore', saw me in the results, and reached out?"
 Helen: "I'm not sure if that's bravery or recklessness."
 -> "Times have changed."
@@ -36,8 +36,8 @@ Helen: "I'm not sure if that's bravery or recklessness."
 -> "I want to believe people are accepting."
     Helen: "Girl, please."
     You: "What's wrong with that?"
-    Helen: "Nothing. I'm just surprised at how idealistic you are…"
--> "You're right… maybe this was a bad idea."
+    Helen: "Nothing. I'm just surprised at how idealistic you are..."
+-> "You're right... maybe this was a bad idea."
     <<changeConfidence(-5)>>
     Helen rolls her eyes. (-5% confidence)
     Helen: "Well, we're here already. Might as well make the best of our time."
@@ -74,7 +74,7 @@ Helen: "So I guess your friends are all accepting?"
 <<jump 3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 560,-40
+__PrivCrochet_position: 560,-44
 __PrivCrochet_tags: 
 title: 3
 ---
@@ -100,7 +100,7 @@ Helen: "And the minute you open your mouth to speak, that's it. Everyone knows."
     <<goto_splash_boss2(1)>>
     Helen: "You see all these people in the cafe?"
     <<goto_splash_boss2(2)>>
-    Helen: "From the other customers, to the cashier…"
+    Helen: "From the other customers, to the cashier..."
     Helen: "They're staring at you, not me." (-10% confidence)
     <<goto_room_boss_2_1_seated()>> // back to sitting
 <<endif>>
@@ -163,7 +163,7 @@ Helen: "Which would you like to hear?"
 
 -> "Move out."
     Helen: "Do you have somewhere to go that's not home or school?"
-    You: "Uh… haven't thought about that…"
+    You: "Uh... haven't thought about that..."
     Helen: "Damn, I guess uni really doesn't prepare you for this, huh?"
     Helen: "Well think about it. You could rent or buy resale, but that costs money, and takes time."
     Helen: "Even I had to wait a few years before getting my flat with my wife."
@@ -181,7 +181,7 @@ Helen: "Yes, but there's way too many things that you could change."
 Helen: "Makes me think you want to be seen as a guy."
 
 -> "What's wrong with that?"
-    Helen: "You're gonna get outed. Called names, harassed…"
+    Helen: "You're gonna get outed. Called names, harassed..."
     Helen: "Don't tell me you haven't experienced all that before?"
     Helen: "Or at least heard of it."
     Helen: "Society sucks, and we have to adapt to it."
@@ -191,7 +191,7 @@ Helen: "Makes me think you want to be seen as a guy."
             Helen: "Well, you're not."
             You: "Says who?"
             Helen: "Fine. Don't take it from me. Take it from whichever actress or celebrity you're a fan of."
-            Helen: "Look at their flawless skin, their beautiful faces…
+            Helen: "Look at their flawless skin, their beautiful faces..."
             Helen: "Tell me you don't want to look like them."
             -> "Yeah. I don't." #skillcheck #cha # 9
                 <<set $diceroll = diceRoll($cha)>>
@@ -212,8 +212,8 @@ Helen: "Makes me think you want to be seen as a guy."
                     You: "Then why look to the media when we can look at each other?"
                     You: "We aren't perfect. But that's the most perfect of all."
                     Helen: "Is this some philosophy thing?"
-                    You: "Maybe. I just like to think that I'm the most perfect Charlotte out there…"
-                    You: "And you're the most perfect Helen…"
+                    You: "Maybe. I just like to think that I'm the most perfect Charlotte out there..."
+                    You: "And you're the most perfect Helen..."
                     You: "And we shouldn't have to suffer based on our looks."
                     <<changeRelationship("H", 5)>>
                     Helen: "You know what, that's actually kinda inspiring." (+5% Helen relationship)
@@ -221,7 +221,7 @@ Helen: "Makes me think you want to be seen as a guy."
                 -> "I like them for other reasons than their looks."
                     Helen: "Then choose the ones you like purely for looks!"
                     You: "That's not how it works."
-                    You: "These stars… They aren't just pretty faces, or nice bodies."
+                    You: "These stars... They aren't just pretty faces, or nice bodies."
                     You: "It's also how they act. Their talent. Their confidence."
                     You: "There's a lot that goes into beauty, not just how aligned your nose is or how much powder there is on your face."
                     You: "And that's what I want to align Charlotte to."
@@ -240,7 +240,7 @@ Helen: "Makes me think you want to be seen as a guy."
                     Helen: "I actually do believe in that."
                     Helen: "But remember, it's contextual. If you don't fit into the context, you'll always stand apart from them."
                     You: "Then I make my own context."
-                    Helen: "Well… good luck to you, I guess. Form your own brand, be brave."
+                    Helen: "Well... good luck to you, I guess. Form your own brand, be brave."
                 -> "If everyone thought like you did, we wouldn't have fashion."
                     You: "Aren't fashion trends made by breaking the mould?"
                     You: "Where's the creativity, the self-expression in that?"
@@ -250,7 +250,7 @@ Helen: "Makes me think you want to be seen as a guy."
         -> "Fine, maybe it's not cruel. But it definitely is restrictive."
             Helen: "Yeah, but it's all worth it when you look in the mirror and see a perfect female face staring back."
             Helen: "So the question is, what are you going to do about it?"
-            You: "I don't know… I guess I'll just follow what you say." 
+            You: "I don't know... I guess I'll just follow what you say." 
             <<changeConfidence(-10)>>
             Helen: "Yes, please just clean up your look and stop giving me second hand dysphoria." (-10% confidence)
     -> "Fashion isn't inherently male or female."
@@ -264,8 +264,8 @@ Helen: "Makes me think you want to be seen as a guy."
 
 -> "About my body parts, women aren't all dainty and small."
     Helen: "Sure. But do you really want to stand out from other women?"
-    Helen: "It's really quite obvious when you're towering over them in heels…"
-    Helen: "Or if you go shopping but nothing is in your size…"
+    Helen: "It's really quite obvious when you're towering over them in heels..."
+    Helen: "Or if you go shopping but nothing is in your size..."
     Helen: "Or when your hands are so much larger and mannish than theirs."
     Helen: "Doesn't that make you feel like you're out of place?"
         -> "Tall women! We stan!"
@@ -281,17 +281,17 @@ Helen: "Makes me think you want to be seen as a guy."
         -> "It's about owning your imperfections."
             Helen: "Easier said than done."
             Helen: "Especially when the whole world has you under a microscope."
-            Helen: "We already stand out enough in public…"
+            Helen: "We already stand out enough in public..."
             Helen: "You really want to be clocked for wearing something unconventional?"
             
-            -> "I mean… aren't you putting me under a microscope right now, too?"
+            -> "I mean... aren't you putting me under a microscope right now, too?"
                 You: "And what am I supposed to do about that, other than exist?"
                 Helen: "Take my feedback and change. Isn't that how we learn?"
                 <<changeConfidence(-10)>>
                 Helen: "Or would you rather learn the hard way when people laugh at you?" (-10% confidence)
             
             -> "Crossdressing itself is unconventional."
-                You: "Like, if we're already wearing clothes of the other gender…"
+                You: "Like, if we're already wearing clothes of the other gender..."
                 You: "People are gonna look at us anyway."
                 You: "So why not own it?"
                 Helen: "Well, if that's how you see it, so be it."
@@ -333,10 +333,10 @@ Helen: "They're your friends! You think they'd say bad things about you?"
 Helen: "Meanwhile a random stranger like me can see right through you."
 -> "The world isn't as cruel as we think it is."
     You: "Not everyone is out to clock us with every step we take."
-    You: "If not… wouldn't we have been thrown out of this establishment?"
+    You: "If not... wouldn't we have been thrown out of this establishment?"
     Helen: "Being discriminated against is more subtle than that."
     Helen: "It's not violence, because that would make society have pity for us."
-    Helen: "It's just… disgust. And you can feel it."
+    Helen: "It's just... disgust. And you can feel it."
     -> "I can handle that."
         Helen: "You say that now. When it actually happens to you, you'll feel it."
         Helen: "Their stare will burn right through you."
@@ -346,13 +346,13 @@ Helen: "Meanwhile a random stranger like me can see right through you."
             <<changeRelationship("H", -5)>>
             Helen: "Can you please try to understand that?" (-5% Helen relationship)
             Helen: "And stop seeing my words as absolutes."
-        -> "That is a horrible feeling…"
+        -> "That is a horrible feeling..."
             Helen: "Indeed. So why would you want to purposely seek it out?"
-            Helen: "Still think you can handle it when you haven't felt it before…"
+            Helen: "Still think you can handle it when you haven't felt it before..."
         -> "I know I'll have the validation of my friends and other kind people."
             Helen: "Yes, that's always good."
             Helen: "Let's hope it's good enough for particularly nasty encounters."
-            Helen: "I'll tell you more… maybe some time in the future."
+            Helen: "I'll tell you more... maybe some time in the future."
     
     -> "I think my generation has gone past disgust."
         You: "Our values have shifted. We accept queer people more than ever before."
@@ -364,10 +364,10 @@ Helen: "Meanwhile a random stranger like me can see right through you."
             Helen: "I never heard that growing up. Your generation really is something else, isn't it?"
             You: "Not too late for you to hear it."
         
-        -> "Even if you are…"
+        -> "Even if you are..."
             You: "If we manage to improve life for everyone, that includes you, too."
             You: "Wouldn't you wish to present as Helen more often?"
-            Helen: "I suppose so…"
+            Helen: "I suppose so..."
             Helen: "But by the time your generation makes things better, I'll already be too old for that."
         
         -> "Yeah, kinda."
@@ -398,33 +398,33 @@ Helen: "Meanwhile a random stranger like me can see right through you."
                 You: "You started it." (-5% Helen relationship)
                 Helen: "Can you lower down your volume? The customers are looking at us!"
             
-            -> "I don't mean that…"
+            -> "I don't mean that..."
                 Helen: "Then you know I'm right."
                 Helen: "And if you have any sense in your head you'll listen to my advice."
                 <<changeConfidence(-10)>>
-                You: "Fine, okay…" (-10% confidence)
+                You: "Fine, okay..." (-10% confidence)
 
             -> "It is welcome, just that it's not encouraging."
                 Helen: "Then what do you expect me to do?"
-                You: "You know I'm new to this…"
+                You: "You know I'm new to this..."
                 You: "You can't expect me to be the perfect woman right off the bat."
-                You: "And if you criticise other beginners as harshly as just now…"
+                You: "And if you criticise other beginners as harshly as just now..."
                 You: "There aren't going to be many of us who continue."
                 Helen is silent.
                 <<changeRelationship("H", 5)>>
-                Helen: "Fine… I'm sorry." (+5% Helen relationship)
+                Helen: "Fine... I'm sorry." (+5% Helen relationship)
                 Helen: "Sometimes it's easy to forget there's a person behind the outfit." 
     
-    -> "I mean, they are random people who I'll never meet again…" #skillcheck #cha # 9
+    -> "I mean, they are random people who I'll never meet again..." #skillcheck #cha # 9
         You: "I'll probably just fade into their subconscious memory."
-        Helen: "Still, the thought that you'll always be seen as different…"
+        Helen: "Still, the thought that you'll always be seen as different..."
         Helen: "That doesn't bother you?"
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 9>>
             You: "Nope. Different doesn't always mean bad."
             You: "I'm gonna be Charlotte regardless of what other people tell me."
-            Helen: "Well… good luck with that."
+            Helen: "Well... good luck with that."
         <<else>>
             You: "I guess it does..."
             Helen: "Exactly. Just keep your head down and do your makeup properly."
@@ -432,7 +432,7 @@ Helen: "Meanwhile a random stranger like me can see right through you."
     -> "People mind their own business."
         You: "I mean, we ordered food just now, right?"
         <<if $name == "Charlotte">>
-            You: "With our deep voices and my supposedly unkempt wig…" 
+            You: "With our deep voices and my supposedly unkempt wig..." 
         <<endif>>
         You: "If this world was as unforgiving as you say, they'd definitely have done something, right?"
         Helen: "We're their customers. Of course they wouldn't talk shit to our face."
@@ -442,7 +442,7 @@ Helen: "Meanwhile a random stranger like me can see right through you."
             Helen: "You're inviting trouble."
             You: "No, I'm proving that trouble doesn't even dare knock the door."
             You: "The fact that they keep quiet in front of us means they know their view isn't accepted."
-            Helen: "I guess that makes sense…"
+            Helen: "I guess that makes sense..."
         
         -> "That is pretty discouraging."
             Helen: "Yeah. That's why we have to keep a low profile."
@@ -452,7 +452,7 @@ Helen: "Meanwhile a random stranger like me can see right through you."
     Helen: "As someone who's approaching uncle age, yes, I wish I could be your age."
     Helen: "But I'd do everything differently."
     You: "That's because you're Helen. But I'm Charlotte."
-    Helen: "Fine, whatever…"
+    Helen: "Fine, whatever..."
     Helen: "Just don't say I didn't warn you when people clock you."
 
 -> "Are you saying my friends are dishonest?"
@@ -476,7 +476,7 @@ Helen: "And I'm sure not everyone in Gen Z is accepting, right?"
             Helen: "Imagine letting go of a large salary just so you can dress up once in a while."
             Helen: "Or worse, cutting ties with your family."
             Helen: "Well, you still have a couple years to think about that, right?"
-            You: "About that…"
+            You: "About that..."
         
         -> "Not everyone is accepting, but I thought a fellow crossdresser would be."
             Helen: "Told you already what. I want to see you improve."
@@ -484,7 +484,7 @@ Helen: "And I'm sure not everyone in Gen Z is accepting, right?"
             Helen: "Is it really an insult if I'm telling you exactly how you don't pass?"
             You: "It's in the way you say it."
         
-            -> "Honestly I don't mind taking your suggestions, but…"
+            -> "Honestly I don't mind taking your suggestions, but..."
                 You: "Why did you have to make me feel so bad about it?"
                 Helen: "It's for your own good, how many times must I tell you this?"
                 You: "There are better ways to put it across. Like, not all at once?"
@@ -506,7 +506,7 @@ Helen: "And I'm sure not everyone in Gen Z is accepting, right?"
         Helen: "I know where this is going."
         Helen: "You want to position yourself as some crusader for LGBTQ+ rights."
         Helen: "Let me burst your bubble here. It's going to be really, really tough."
-        Helen: "All these decisions on where we can do, how we can exist…"
+        Helen: "All these decisions on where we can do, how we can exist..."
         Helen: "They're made top-down."
         Helen: "And even from the bottom-up, people still stare at us weirdly. You think they're gonna listen to you?"
         -> "They don't need to listen, they just need to see."
@@ -529,16 +529,16 @@ Helen: "And I'm sure not everyone in Gen Z is accepting, right?"
                     Helen: "There's nothing to be gained from being the sacrifice."
                     Helen: "You know how I have survived?"
                     Helen: "I don't misbehave. I follow the rules, be it from the state, economy or society."
-                    Helen: "The tallest flowers are the ones that get cut, and for your own safety…"
+                    Helen: "The tallest flowers are the ones that get cut, and for your own safety..."
                     Helen: "Just stay low, alright?"
                 <<endif>>
                 
-            -> "I guess not…"
+            -> "I guess not..."
                 Helen: "Why put yourself on the firing line like that?"
                 Helen: "There's nothing to be gained from being the sacrifice."
                 Helen: "You know how I have survived?"
                 Helen: "I don't misbehave. I follow the rules, be it from the state, economy or society."
-                Helen: "The tallest flowers are the ones that get cut, and for your own safety…"
+                Helen: "The tallest flowers are the ones that get cut, and for your own safety..."
                 Helen: "Just stay low, alright?"
         
         -> "It's because so many of us think like you that we don't see any progress."
@@ -546,7 +546,7 @@ Helen: "And I'm sure not everyone in Gen Z is accepting, right?"
             Helen: "Well, thank you for calling me out on my inaction!" (-5% Helen relationship)
             Helen: "You think it's so easy?"
             Helen: "You know what I have to lose if I'm outed? Everything."
-            Helen: "And if you continue down this path… soon you'll realise you've got a whole lot to lose too."
+            Helen: "And if you continue down this path... soon you'll realise you've got a whole lot to lose too."
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
@@ -555,14 +555,14 @@ __PrivCrochet_tags:
 title: 6
 ---
 Helen: "I'm just stating the facts, Charlotte."
-Helen: "And if you can't even take it from a fellow crossdresser…"
+Helen: "And if you can't even take it from a fellow crossdresser..."
 Helen: "How are you going to deal with those who won't hold back?"
 -> "Fine, I'll take it as constructive criticism."
     Helen: "Oh, you shouldn't just do that."
     Helen: "You need to toughen yourself up to withstand criticism."
     Helen: "Being a woman itself is already tough enough."
     Helen: "Don't you see how women put each other down?"
-    Helen: "Then talk about crossdressers, trans women… look at how many problems we have to face."
+    Helen: "Then talk about crossdressers, trans women... look at how many problems we have to face."
     -> "Don't you think there's better ways we can communicate?"
         Helen: "What do you mean?"
         You: "Like, aren't we basically combining male bluntness with female beauty standards?"
@@ -571,7 +571,7 @@ Helen: "How are you going to deal with those who won't hold back?"
         Helen: "We either be brutally honest, or throw shade at each other."
     
     -> "All the more we should band together."
-        Helen: "Yes, I understand…"
+        Helen: "Yes, I understand..."
         Helen: "But even within these movements, people tear each other apart all the same."
         Helen: "I'm not gonna be the first, or last, person to comment on your appearance."
         Helen: "So why not train for that now?"
@@ -621,11 +621,11 @@ Helen: "How are you going to deal with those who won't hold back?"
         You: "Yeah, then can you please show some solidarity to a fellow crossdresser?"
         You: "You might be the one criticised or outed tomorrow. Who knows."
         Helen is silent.
-        Helen: "Yeah, fine… it wasn't easy when I started either."
+        Helen: "Yeah, fine... it wasn't easy when I started either."
     
     -> "Yes, and I don't need your feedback on it."
         <<changeRelationship("H", -5)>>
-        Helen: "Okay, fine… so angry for what…" (-5% Helen relationship)
+        Helen: "Okay, fine... so angry for what..." (-5% Helen relationship)
         Helen: "Just telling you the truth only."
     
 -> "Why are you playing so strictly to the rules, anyway?"
@@ -643,8 +643,8 @@ Helen: "How are you going to deal with those who won't hold back?"
             -> "Maybe that's why you're so harsh on me."
                 You: "You're reminded of yourself."
                 Helen: "I appreciate the psychoanalysis, but it wasn't necessary."
-                Helen: "Still… there's a bit of truth to that, maybe."
-            -> "I wonder if I look like that…"
+                Helen: "Still... there's a bit of truth to that, maybe."
+            -> "I wonder if I look like that..."
                 Helen: "Girl, you're there now."
                 Helen: "I don't wanna call you a pig, but there's still a lot to improve on."
                 You: "Ugh. You might as well just have called me one."
@@ -652,22 +652,22 @@ Helen: "How are you going to deal with those who won't hold back?"
                 Helen: "Truth hurts, doesn't it?" (-5% Helen relationship)
     
     -> "You don't need to feel ashamed of your early pics."
-        Helen: "Yeah, I know, they're part of my journey and all that but…"
+        Helen: "Yeah, I know, they're part of my journey and all that but..."
         Helen: "If I was content with how I looked then, I wouldn't be the woman you see now."
         Helen: "With enough time you'll reach there too."
         Helen: "Able to see the difference between your earlier pics and your current ones."
         -> "You were beautiful then and you were beautiful now."
             Helen: "Thank you, but we know that's not true - "
             You: "I'm not joking, Helen."
-            You: "As long as you felt like Helen even in your mismatched dresses and makeup or whatever…"
+            You: "As long as you felt like Helen even in your mismatched dresses and makeup or whatever..."
             You: "That's valid."
             You: "One girl felt happy and free, and that's worth celebrating."
-            Helen: "Well… I appreciate the effort."
+            Helen: "Well... I appreciate the effort."
             <<changeRelationship("H", 5)>>
-            Helen: "Of all the compliments I've heard from other crossdressers… what you just said stands out." (+5% Helen relationship)
+            Helen: "Of all the compliments I've heard from other crossdressers... what you just said stands out." (+5% Helen relationship)
         
         -> "Yeah, maybe can do before-and-after."
-            Helen: "Nah… why would I expose my very amateurish past?"
+            Helen: "Nah... why would I expose my very amateurish past?"
             Helen: "No one would want to see them."
     
     -> "I am not you."
@@ -682,13 +682,13 @@ Helen: "How are you going to deal with those who won't hold back?"
             You: "And from there, I form who I want Charlotte to be."
             You: "I'm not saying your experiences aren't valid."
             You: "I just don't want to be trapped by them."
-            Helen: "Okay, fair…"
+            Helen: "Okay, fair..."
             Helen: "Then I hope this isn't just a huge waste of time."
     
     -> "I want to look like Charlotte."
         Helen: "As of now, Charlotte still looks like a man in a dress."
         You: "I'm okay with that."
-        Helen: "What… how… Fine. Whatever."
+        Helen: "What... how... Fine. Whatever."
         Helen: "Just don't say I didn't warn you."
         Helen: "You know what they're gonna say?"
         Helen: "'You have the right to dress how you please, and I have the right to laugh at you.'"
@@ -701,7 +701,7 @@ Helen: "How are you going to deal with those who won't hold back?"
             You: "After all, if you're affected by them, they win, right?"
             Helen: "Or they just keep laughing."
             Helen: "But okay, good to know you're not easily affected by this."
-            Helen: "Though I'm wondering why you're affected by my comments, then…"
+            Helen: "Though I'm wondering why you're affected by my comments, then..."
         
         -> "People aren't really that terrible, are they?"
             Helen: "You never know. So why take a chance?"
@@ -726,7 +726,7 @@ Helen: "How are you going to deal with those who won't hold back?"
                 Helen: "At least I can control what goes up on it."
                 Helen: "I don't have any photos of my male self, for example."
                 You: "Still, it's an online presence. And it's helped me. I hope."
-                Helen: "Okay, sure… still, a blog is very different from your face all over the tabloids."
+                Helen: "Okay, sure... still, a blog is very different from your face all over the tabloids."
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
@@ -767,7 +767,7 @@ What will you say?
 -> "This sounds good."
     Helen: "On paper it sounds like it has the most benefits."
     Helen: "But I don't know your mother, and I'm only going off what other people have experienced."
-    Helen: "So… good luck."
+    Helen: "So... good luck."
     <<jump 8>>
 ===
 __PrivCrochet_colorID: 0
@@ -778,7 +778,7 @@ title: 7_3
 What will you say?
 -> "Ever considered going overseas?"
     <<jump 7_3_1>>
--> "What if I didn't move myself out… but I moved Charlotte out?"
+-> "What if I didn't move myself out... but I moved Charlotte out?"
     <<jump 7_3_2>>
 -> "This solution might be too long term."
     <<jump 7_3_3>>
@@ -788,7 +788,7 @@ What will you say?
 -> "This sounds good."
     Helen: "On paper it sounds like it has the most benefits."
     Helen: "But I don't know your mother, and I'm only going off what other people have experienced."
-    Helen: "So… good luck."
+    Helen: "So... good luck."
     <<jump 8>>
 ===
 __PrivCrochet_colorID: 0
@@ -812,7 +812,7 @@ title: 7_1_1
 ---
 Helen: "I was in uni, remember? I had my own closet in my dorm."
 Helen: "But I've heard other sisters store everything in one big plastic box, and shove it under their bed."
-Helen: "You could try that… unless your parents are the intrusive type."
+Helen: "You could try that... unless your parents are the intrusive type."
 <<jump 7_1>>
 ===
 __PrivCrochet_colorID: 0
@@ -822,9 +822,9 @@ title: 7_1_2
 ---
 Helen: "That's life."
 Helen: "We live in a society that doesn't accept us."
-Helen: "It's bad enough when random people on the street call us out…"
+Helen: "It's bad enough when random people on the street call us out..."
 Helen: "When it's family, the effects are far worse."
-Helen: "So… sometimes the winning move is to not play at all."
+Helen: "So... sometimes the winning move is to not play at all."
 <<jump 7_1>>
 ===
 __PrivCrochet_colorID: 0
@@ -900,7 +900,7 @@ Helen: "Is your mother religious?"
 You: "Not that I know of. She's just conservative."
 Helen: "Well, that's a relief. Usually the super religious parents are flat out unwilling to accept you."
 Helen: "So there's got to be something she can agree with you on."
-Helen: "If not… just pull the old 'retirement plan' card."
+Helen: "If not... just pull the old 'retirement plan' card."
 Helen: "This is gonna sound super rebellious but, some sisters have cut off contact with their family after being outed."
 <<jump 7_2>>
 ===
@@ -910,7 +910,7 @@ __PrivCrochet_tags:
 title: 7_2_3
 ---
 Helen: "That's part of the challenge."
-Helen: "Honestly, I've never seen anyone pull this off before…"
+Helen: "Honestly, I've never seen anyone pull this off before..."
 Helen: "They usually rely on an external factor."
 Helen: "Like, the expectation that kids take care of their parents when they're old."
 Helen: "So don't expect a glorious, complete victory."
