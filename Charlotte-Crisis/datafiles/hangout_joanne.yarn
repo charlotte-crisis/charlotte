@@ -111,7 +111,7 @@ Joanne: "Sorry for rambling on. I know guys don't get it, but it's really import
         -> "Actually, I'm not really a guy."
             Joanne: "Because you're a crossdresser...?"
             You: "That's... one of the reasons. I'm still trying to figure out my own identity but..."
-            [i]Joanne bites her lip in discomfort.[/i]
+            Joanne bites her lip in discomfort.
             Joanne: "I think you're just confused... I mean, I get that dresses and stuff are pretty and all, but you don't actually want to be a girl."
             You: "I don't?"
             Joanne: "Yeah, maybe it's some sort of jealousy?"
@@ -127,7 +127,7 @@ Joanne: "Sorry for rambling on. I know guys don't get it, but it's really import
                 -> "I like myself as both Charles and Charlotte."
                 Joanne: "... Look, just... Don't be so quick to jump to conclusions."
                 Joanne: "I do hope you become more accepting of yourself..."
-                [i]She doesn't get it, but at least she's not pushing you away entirely.[/i]
+                She doesn't get it, but at least she's not pushing you away entirely.
             -> "Yeah, I should learn to accept myself for who I am."
                 Joanne: "I do hope you become more accepting of yourself..."
                 She flashes you a comforting smile. 
@@ -135,7 +135,7 @@ Joanne: "Sorry for rambling on. I know guys don't get it, but it's really import
                 You smile back. (+5% Joanne relationship)
 
         -> Leave it.
-            [i]You smile back.[/i]
+            You smile back.
             <<changeRelationship("J", 5)>>
             You: "Thanks. It's nice to hear that I'm being a good ally to women." (+5% Joanne relationship)
 
@@ -150,7 +150,7 @@ Joanne: "Sorry for rambling on. I know guys don't get it, but it's really import
             Joanne: "Then be unsure somewhere else, not the girls' toilet, you know?"
             -> "I guess so..."
                 Joanne: "Like, if you went into the girls' toilet, you can't blame us girls being panicked about it, right?"
-                [i]You feel singled out. Is it because of Charlotte?[/i]
+                You feel singled out. Is it because of Charlotte?
             -> "It's not just about the girls' toilet or surgery though."
                 You: "I think you're oversimplifying what trans people go through."
                 You: "A lot of trans people go through quite a lot of stress because people refuse to respect their experience."
@@ -191,9 +191,9 @@ Joanne: "Sorry for rambling on. I know guys don't get it, but it's really import
                     You: "That's not true."
                     Joanne: "Look, you obviously don't care about what real women feel." 
                     Joanne: "So let me be clear. You can't just say you're a woman and become a woman."
-                    [i]This whole conversation is leaving a very bad taste in your mouth.[/i]
+                    This whole conversation is leaving a very bad taste in your mouth.
                     <<changeConfidence(-5)>>
-                    [i]You regret bringing up the fact that you're questioning your gender. (-5% confidence)[/i]
+                    You regret bringing up the fact that you're questioning your gender. (-5% confidence)
             -> "But not everyone can go through extensive surgery." //(Vera Relationship > 70%) we need code for this
                 You: "The procedures are long and complicated, so it requires a lot of money and time that not everyone can afford."
                 You: "And it requires the trans person to be physically fit for such procedures."
@@ -224,7 +224,7 @@ Joanne: "Sorry for rambling on. I know guys don't get it, but it's really import
             Joanne: "Some of them are. It's quite sad..."
             Joanne: "I told my boyfriend that we will split the work evenly when we get married."
             -> "And he agreed?"
-                [i]Joanne stiffens.[/i]
+                Joanne stiffens.
                 <<changeRelationship("J", -5)>>
                 Joanne: "Um, yeah. Of course." (-5% Joanne relationship)
                 Joanne: "I feel very strongly about this. I'm not marrying someone who's sexist. I believe in equality."
@@ -323,10 +323,10 @@ title: 3
 <<changeRelationship("J", -20)>>
 Joanne: "That's it. I'm leaving." (-20% Joanne relationship)
 Joanne: "I came here to hang out, not to sit here getting mansplained by you." 
-[i]Joanne grabs her stuff and stands up huffily.[/i]
-[i]Oh no... Were you mansplaining in the end?[/i]
+Joanne grabs her stuff and stands up huffily.
+Oh no... Were you mansplaining in the end?
 <<changeConfidence(-5)>>
-[i]Maybe you were...[/i] (-5% confidence)
+Maybe you were... (-5% confidence)
 <<stop>>
 ===
 __PrivCrochet_colorID: 0

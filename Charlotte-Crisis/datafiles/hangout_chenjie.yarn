@@ -12,7 +12,7 @@ Chenjie: "Hey, dude! Sorry I'm a bit late!"
     Chenjie: "Okay! Noted. Anyway..."
 <<endif>>
 Chenjie: "Thanks for waiting for me."
-[i]He takes the seat opposite you and orders a drink.[/i]
+He takes the seat opposite you and orders a drink.
 <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
@@ -154,7 +154,7 @@ Chenjie: "Well, you see, the thing is I'm planning to do that thing where you wo
     Chenjie: "I suppose it can be... It will take hard work to get to the point of comfortably travelling and working."
     Chenjie: "But I think it'll work out!"
 -> "I don't think that's very practical."
-    [i]Chenjie frowns.[/i]
+    Chenjie frowns.
     Chenjie: "People have done it before. It's not impossible." (-5% Chenjie relationship)
     Chenjie: "I admit it will take some work to get there, but it's very possible."
     Chenjie: "There are even some countries that give out digital nomad visas."
@@ -171,17 +171,17 @@ Chenjie: "After graduation, I'll get a good momentum going, and the first place 
     Chenjie: "Yeah, we are. We talk a lot and have very similar tastes in music and movies."
     Chenjie: "So I'll bet we'll have a blast in Switzerland together."
     It seems Chenjie has a really good relationship with his mom.
-    -> [i]Literally could not be me.[/i]
+    -> Literally could not be me.
         <<changeConfidence(-5)>>
         <<changeRelationship("CJ", -5)>>
-        [i]You find yourself jealous of Chenjie.[/i] (-5% confidence) (-5% Chenjie relationship)
-    -> [i]Maybe things with my family will be the same if I open up?[/i]
+        You find yourself jealous of Chenjie. (-5% confidence) (-5% Chenjie relationship)
+    -> Maybe things with my family will be the same if I open up?
         <<changeConfidence(5)>>
-        [i]You have hope things will work out well.[/i] (+5% confidence)
-    -> [i]Maybe things with my family will be the same if I stop this Charlotte thing.[/i]
-        [i]Who knows?[/i]
-    -> [i]Maybe things with my family will be the same if I hide Charlotte.[/i]
-        [i]Who knows?[/i]
+        You have hope things will work out well. (+5% confidence)
+    -> Maybe things with my family will be the same if I stop this Charlotte thing.
+        Who knows?
+    -> Maybe things with my family will be the same if I hide Charlotte.
+        Who knows?
 -> "When do you think that would be?"
     Chenjie: "Maybe a year or so from now?" 
     Chenjie: "I've done a lot of part-time and freelance work before."
@@ -233,9 +233,9 @@ __PrivCrochet_tags:
 title: 1_3
 ---
 Chenjie: "Sure! Shoot!"
-[i]You recount everything that has happened so far to Chenjie.[/i]
-[i]About Charlotte, about how your sister reacted when she saw a post of you, about your family.[/i]
-[i]Chenjie listens intently, nodding at the appropriate times.[/i]
+You recount everything that has happened so far to Chenjie.
+About Charlotte, about how your sister reacted when she saw a post of you, about your family.
+Chenjie listens intently, nodding at the appropriate times.
 Chenjie: "I see... That is a rough place to be in."
 Chenjie: "It's hard trying to juggle your family's feelings and your own. Especially with a subject as sensitive as your identity."
 <<addExperience(5)>>
@@ -261,8 +261,8 @@ Chenjie: "It'd be really sad if things get messy because you never explained thi
         You: "You clearly don't understand how important this is to me."
         Chenjie: "Hey, I'm sorry. I didn't mean it that way..."
         Chenjie: "I don't have much experience talking to trans people and this is really difficult for me." 
-        [i]You huff, the anger not dissipating. [/i]
-        [i]It just sounds like an excuse to you, but you take a deep breath. [/i]
+        You huff, the anger not dissipating. 
+        It just sounds like an excuse to you, but you take a deep breath. 
         <<changeRelationship("CJ", -5)>>
         You: "Fine. I'll give you the benefit of the doubt." (-5% Chenjie relationship)
     
@@ -305,15 +305,15 @@ Chenjie: "It'd be really sad if things get messy because you never explained thi
         -> "It won't happen again."
             Chenjie: "How can you guarantee that?"
             You: "I'll take all the precautions." 
-            [i]Chenjie opens his mouth, pauses, and then closes it and shrugs.[/i]
+            Chenjie opens his mouth, pauses, and then closes it and shrugs.
             <<changeRelationship(-5)>>
-            [i]Chenjie obviously still wants to argue, but he held himself back.[/i] (-5% Chenjie relationship)
+            Chenjie obviously still wants to argue, but he held himself back. (-5% Chenjie relationship)
         
         -> "Maybe you're right."
             <<changeRelationship(5)>>
             Chenjie: "Yeah, just try talking to your family." (+5% Chenjie relationship)
             Chenjie: "Family is really important. It'd be sad if you were to lose them."
-            [i]It might end well... Who knows, right?[/i]
+            It might end well... Who knows, right?
     -> "Actually, I think my family would rather keep these things hidden."
         You: "They're the type to want to sweep things under the rug."
         Chenjie: "..."
@@ -326,7 +326,7 @@ Chenjie: "It'd be really sad if things get messy because you never explained thi
     -> "Maybe..."
         Chenjie: "Yeah, just try talking to your family."
         Chenjie: "Family is really important. It'd be sad if you were to lose them."
-        [i]It might end well... Who knows, right?[/i]
+        It might end well... Who knows, right?
 
 -> "I don't know if I will ever be accepted."
     Chenjie: "It might feel that way, but how would you know without trying?"
@@ -389,7 +389,7 @@ Chenjie: "It'd be really sad if things get messy because you never explained thi
                     His family situation might be more complicated than I assumed.
                 <<endif>>
             -> "Then, I'll give it a shot too."
-                [i]Chenjie smiles. [/i]
+                Chenjie smiles. 
                 <<changeRelationship("CJ", 5)>>
                 Chenjie: "All the best then." (+5% Chenjie relationship)
         -> "That's why I don't think I'll tell them about this."
@@ -411,7 +411,7 @@ Chenjie: "It'd be really sad if things get messy because you never explained thi
             Chenjie: "I... I see..."
             Chenjie: "I'm so sorry then..."
             <<changeConfidence(-5)>>
-            [i]There is pity in his eyes, and you squirm under that look.[/i] (-5% confidence)
+            There is pity in his eyes, and you squirm under that look. (-5% confidence)
 <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
@@ -428,9 +428,9 @@ Chenjie: "So I hope things go well for you in the end."
 -> "Thank you."
 -> "I hope so too."
 -> "It's going to be hard."
-[i]Chenjie gives you a reassuring pat.[/i] 
+Chenjie gives you a reassuring pat. 
 Chenjie: "You've got this, alright, {$name}?"
-[i]On that warm note, he leaves.[/i]
+On that warm note, he leaves.
 <<addExperience(30)>>
 (+30 XP)
 <<goto_room_bedroom_afterHangout()>>
