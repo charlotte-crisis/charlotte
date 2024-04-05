@@ -25,14 +25,34 @@ title: door
     -> On second thought, nevermind. (Go back)
 
     -> Anthony <<if getRelationship("A") >= 30>>
+        
+        // GenderMeter Check
+        <<if $name == "Charlotte">>
+            <<changeGenderMeter(10)>>
+        <<else>>
+            <<changeGenderMeter(-10)>>
+        <<endif>>
         You call Anthony up for a hangout.
         <<goto_room_hangout_a()>>
     
     -> Nadia <<if getRelationship("N") >= 30>>
+
+        // GenderMeter Check
+        <<if $name == "Charlotte">>
+            <<changeGenderMeter(10)>>
+        <<else>>
+            <<changeGenderMeter(-10)>>
+        <<endif>>
         You call Nadia up for a hangout.
         <<goto_room_hangout_n()>>
     
     -> Vera <<if getRelationship("V") >= 30>>
+        // GenderMeter Check
+        <<if $name == "Charlotte">>
+            <<changeGenderMeter(10)>>
+        <<else>>
+            <<changeGenderMeter(-10)>>
+        <<endif>>
         You call Vera up for a hangout.
         <<goto_room_hangout_v()>>
     
