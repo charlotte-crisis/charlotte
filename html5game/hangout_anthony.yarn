@@ -13,7 +13,7 @@ Anthony: "I don't know why you asked me here but... whatever."
 
 <<jump 1_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 1
 __PrivCrochet_position: 1479,29
 __PrivCrochet_tags: 
 title: 1_1
@@ -23,7 +23,7 @@ You: "What are you studying, again?"
 Anthony: "Engineering."
 <<jump 1_1_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 2
 __PrivCrochet_position: 2085,5
 __PrivCrochet_tags: 
 title: 1_2
@@ -43,7 +43,7 @@ Anthony: "Just draw, play video games, maybe go gym once in a while."
 -> "Let's talk about something else."
     <<jump 1_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 3
 __PrivCrochet_position: 1857,597
 __PrivCrochet_tags: 
 title: 1_3
@@ -52,7 +52,7 @@ Anthony: "No one wants to hear what I have to say what."
 Anthony: "Every time I say something people want to say I'm an incel, weird or whatever..."
 <<jump 1_3_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 2
 __PrivCrochet_position: 2408,-21
 __PrivCrochet_tags: 
 title: 1_2_1
@@ -63,7 +63,7 @@ Anthony: "Then I cannot even lift the medium sized ones."
 Anthony: "Like that how to continue???"
 <<jump 1_2_1_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 2
 __PrivCrochet_position: 2537,213
 __PrivCrochet_tags: 
 title: 1_2_2
@@ -108,7 +108,7 @@ Anthony: "But I also don't like that the club is so woke."
             Anthony: "Fine. Too much trouble."
 <<jump 1_2>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 2
 __PrivCrochet_position: 2283,383
 __PrivCrochet_tags: 
 title: 1_2_3
@@ -120,7 +120,7 @@ Anthony: "Some games really insist on gender stuff so much that they become tras
 Anthony: "Then those games which are actually good get called racist just because don't have black people."
 <<jump 1_2_3_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 3
 __PrivCrochet_position: 1837,947
 __PrivCrochet_tags: 
 title: 1_3_1
@@ -130,7 +130,7 @@ Anthony: "They also call me creepy."
 Anthony: "Seriously? All I ever did was say hi and ask if they are interested."
 <<jump 1_3_1_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 3
 __PrivCrochet_position: 2079,948
 __PrivCrochet_tags: 
 title: 1_3_2
@@ -139,7 +139,7 @@ Anthony: "It's who I am already. Too late to change."
 Anthony: "I just don't shove my lifestyle in other people's faces."
 <<jump 1_3_2_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 3
 __PrivCrochet_position: 2317,865
 __PrivCrochet_tags: 
 title: 1_3_3
@@ -224,7 +224,7 @@ What do you say?
     (+30 XP)
     <<goto_room_bedroom_afterHangout()>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 1
 __PrivCrochet_position: 1585,-267
 __PrivCrochet_tags: 
 title: 1_1_1
@@ -234,8 +234,8 @@ Anthony: "Some mods got project."
 Anthony: "It's boring but what to do?"
 <<jump 1_1_1_options>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1603,-507
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 1597,-520
 __PrivCrochet_tags: 
 title: 1_1_1_options
 ---
@@ -249,8 +249,8 @@ What do you say?
 -> "Let's talk about something else."
     <<jump 1_1_options>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1360,-572
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 1311,-575
 __PrivCrochet_tags: 
 title: 1_1_1_1
 ---
@@ -265,7 +265,7 @@ Anthony: "School is a waste of time."
     Anthony: "Just lan lan suck thumb until grad."
 <<jump 1_1_1_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 1
 __PrivCrochet_position: 1566,-786
 __PrivCrochet_tags: 
 title: 1_1_1_2
@@ -302,8 +302,8 @@ Anthony: "Now you understand why I want to be alone."
 Anthony: "Maybe I just went to the wrong school. Or maybe I shouldn't have gone uni at all..."
 <<jump 1_1_1_options>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1818,-594
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 1847,-593
 __PrivCrochet_tags: 
 title: 1_1_1_3
 ---
@@ -337,8 +337,8 @@ Anthony: "Every day write essay still cannot get job after grad."
         You: "You know, instead of punching down." (+10 XP) <<addExperience(10)>>
 <<jump 1_1_1_options>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1940,-248
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 1966,-256
 __PrivCrochet_tags: 
 title: 1_1_2
 ---
@@ -347,7 +347,7 @@ Anthony: "It's just the standard route."
 Anthony: "Get a degree, get a job, work for 40 years and die."
 <<jump 1_1_2_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 1
 __PrivCrochet_position: 1738,-20
 __PrivCrochet_tags: 
 title: 1_1_options
@@ -360,7 +360,7 @@ What do you say?
 -> "Let's talk about something else."
     <<jump 1_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 1
 __PrivCrochet_position: 2038,-499
 __PrivCrochet_tags: 
 title: 1_1_2_options
@@ -375,7 +375,7 @@ What do you say?
 -> "Let's talk about something else."
     <<jump 1_1_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 1
 __PrivCrochet_position: 1941,-810
 __PrivCrochet_tags: 
 title: 1_1_2_1
@@ -431,7 +431,7 @@ Anthony: "Job market so bad already, how can I survive?"
 
 <<jump 1_1_2_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 1
 __PrivCrochet_position: 2156,-805
 __PrivCrochet_tags: 
 title: 1_1_2_2
@@ -460,8 +460,8 @@ Anthony: "Yeah. Drawing and video games... but there's no time to do them."
     Anthony: "And don't even get me started on art club. So weird in there."
 <<jump 1_1_2_options>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 2279,-596
+__PrivCrochet_colorID: 1
+__PrivCrochet_position: 2379,-759
 __PrivCrochet_tags: 
 title: 1_1_2_3
 ---
@@ -498,7 +498,7 @@ Anthony: "All some people know how to do is complain. I hope you're not like tha
     You: "That the system we're in is rigid, but we are flexible. Go and explore." (+10 XP) 
 <<jump 1_1_2_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 2
 __PrivCrochet_position: 2511,-527
 __PrivCrochet_tags: 
 title: 1_2_1_1
@@ -532,7 +532,7 @@ Anthony: "So easy for you to say."
         Anthony: "Fine. I'll just rot."
 <<jump 1_2_1_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 2
 __PrivCrochet_position: 2607,-304
 __PrivCrochet_tags: 
 title: 1_2_1_2
@@ -586,7 +586,7 @@ Anthony: "I knew it. I'm just weak." (-5% Anthony relationship)
     Anthony: "Never gonna get girlfriend, never gonna be worth anything..." (-5% Anthony relationship)
 <<jump 1_2_1_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 2
 __PrivCrochet_position: 2627,-87
 __PrivCrochet_tags: 
 title: 1_2_1_3
@@ -615,7 +615,7 @@ Anthony: "Yeah, why would they give up their thing to come help me?"
         You: "You won't know if you don't try."
 <<jump 1_2_1_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 2
 __PrivCrochet_position: 2244,-318
 __PrivCrochet_tags: 
 title: 1_2_1_options
@@ -630,7 +630,7 @@ What do you say?
 -> "Let's talk about something else."    
     <<jump 1_2>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 2
 __PrivCrochet_position: 2726,499
 __PrivCrochet_tags: 
 title: 1_2_3_options
@@ -645,8 +645,8 @@ What do you say?
 -> "Let's talk about something else."
     <<jump 1_2>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 2769,252
+__PrivCrochet_colorID: 2
+__PrivCrochet_position: 2988,229
 __PrivCrochet_tags: 
 title: 1_2_3_1
 ---
@@ -671,8 +671,8 @@ Anthony: "It's true. Those games don't do well."
     Anthony: "And I definitely prefer a good game compared to some woke trash pandering to the SJWs."
 <<jump 1_2_3_options>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 2952,501
+__PrivCrochet_colorID: 2
+__PrivCrochet_position: 3042,504
 __PrivCrochet_tags: 
 title: 1_2_3_2
 ---
@@ -681,17 +681,19 @@ Anthony: "I like the shiok feeling of landing headshots."
 Anthony: "Or seeing my empire expand across the map."
 You: "There, that was a lot better than all the flaws, right?"
 You: "Why focus so much on the hate?"
+<<jump 1_2_3_options>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 2810,731
+__PrivCrochet_colorID: 2
+__PrivCrochet_position: 2960,827
 __PrivCrochet_tags: 
 title: 1_2_3_3
 ---
 Anthony: "Waste money only."
 Anthony: "For like 1% chance of getting some hot waifu, I need to spend thousands of dollars?"
 Anthony: "Just search on Google Images if you're so despo."
+<<jump 1_2_3_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 3
 __PrivCrochet_position: 2101,599
 __PrivCrochet_tags: 
 title: 1_3_options
@@ -706,8 +708,8 @@ What do you say?
 -> "Let's talk about something else."
     <<jump 1_options>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1584,982
+__PrivCrochet_colorID: 3
+__PrivCrochet_position: 1588,900
 __PrivCrochet_tags: 
 title: 1_3_1_options
 ---
@@ -721,8 +723,8 @@ What do you say?
 -> "Let's talk about something else."
     <<jump 1_3_options>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1343,1044
+__PrivCrochet_colorID: 3
+__PrivCrochet_position: 1319,1017
 __PrivCrochet_tags: 
 title: 1_3_1_1
 ---
@@ -730,7 +732,7 @@ Anthony: "Right? They're so unreasonable."
 Anthony: "How am I supposed to get a girlfriend if all of them just keep rejecting?"
 <<jump 1_3_1_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 3
 __PrivCrochet_position: 1410,1251
 __PrivCrochet_tags: 
 title: 1_3_1_2
@@ -759,7 +761,7 @@ Anthony: "So you tell me. What should I feel?"
     You: "Hope you find your own happiness sometime, somewhere."
 <<jump 1_3_1_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 3
 __PrivCrochet_position: 1631,1233
 __PrivCrochet_tags: 
 title: 1_3_1_3
@@ -824,8 +826,8 @@ Anthony: "Girls really damn hard to talk to."
             You: "But there's a LOT of steps you need before you get there."
 <<jump 1_3_1_options>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1892,1206
+__PrivCrochet_colorID: 3
+__PrivCrochet_position: 1939,1188
 __PrivCrochet_tags: 
 title: 1_3_2_options
 ---
@@ -836,8 +838,10 @@ What do you say?
     <<jump 1_3_2_2>>
 -> "I'm sorry to hear that."
     <<jump 1_3_2_3>>
+-> "Let's talk about something else."
+    <<jump 1_3_options>>
 ===
-__PrivCrochet_colorID: 0
+__PrivCrochet_colorID: 3
 __PrivCrochet_position: 1742,1469
 __PrivCrochet_tags: 
 title: 1_3_2_1
@@ -864,8 +868,8 @@ Anthony: "So you degraded."
         Anthony is silently considering your words.
 <<jump 1_3_2_options>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 1964,1477
+__PrivCrochet_colorID: 3
+__PrivCrochet_position: 1962,1476
 __PrivCrochet_tags: 
 title: 1_3_2_2
 ---
@@ -889,8 +893,8 @@ Anthony: "You mean from those who shove their lifestyle in my face?"
     You: "When you're ready to start thinking beyond yourself, you'll remember this moment."
 <<jump 1_3_2_options>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 2210,1317
+__PrivCrochet_colorID: 3
+__PrivCrochet_position: 2209,1317
 __PrivCrochet_tags: 
 title: 1_3_2_3
 ---

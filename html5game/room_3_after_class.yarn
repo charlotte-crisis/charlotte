@@ -63,12 +63,12 @@ title: wardrobe
 <<openWardrobeMenu()>>
 ===
 __PrivCrochet_colorID: 8
-__PrivCrochet_position: 681,-161
+__PrivCrochet_position: 680,-160
 __PrivCrochet_tags: 
 title: after
 ---
 // Welcome back! Remember to interact with your BED, CLOSET and DESK.
-<<set $canGoToBed == true>>
+<<set $canGoToBed = true>>
 // Commented out for now.
 ===
 __PrivCrochet_colorID: 0
@@ -83,5 +83,6 @@ __PrivCrochet_position: 680,80
 __PrivCrochet_tags: 
 title: 0
 ---
+<<set $canGoToBed = false>>
 Good morning, {$name}. Prepare your look in the CLOSET, check your Stats at the DESK, and off you go!
 ===
