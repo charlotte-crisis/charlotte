@@ -682,7 +682,7 @@ Nadia: "Do you think being Charlotte halted your professional development?"
         <<jump 1_1_2_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 42,-414
+__PrivCrochet_position: 14,-309
 __PrivCrochet_tags: 
 title: 1_2_options
 ---
@@ -739,6 +739,8 @@ What will you say?
     <<jump 1_2_1_3>>
 -> "Give me something unconventional."
     <<jump 1_2_1_4>>
+-> "Let's talk about something else."
+    <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 419,-1173
