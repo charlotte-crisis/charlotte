@@ -197,7 +197,7 @@ Joanne: "Except maybe alternative news media, like Rice Media, that isn't relate
 Sage begins typing furiously on her phone. 
 <<set $diceroll = diceRoll($emp)>>
 <<if $diceroll >= 10>>
-    [i]She looks worried.[/i]
+    She looks worried.
 <<endif>>
 
 -> Ask Sage if she is okay
@@ -341,8 +341,8 @@ title: 9
 Sage: "Just... Never mind all that. Let's just continue with the discussion."
 Chenjie: "Oh... Okay then."
 Chenjie: "Um... So... let's move to the next question?"
-[i]Your group moves on, but Sage hardly speaks.[/i]
-[i]In fact, she occasionally lowers her head, typing away at her phone.[/i]
+Your group moves on, but Sage hardly speaks.
+In fact, she occasionally lowers her head, typing away at her phone.
 Chenjie: "All this talk reminds me why I want to move overseas honestly."
 Joanne: "Why?"
 Chenjie: "I mean, isn't it just so suffocating here? There are so many close-minded people here..."
@@ -364,13 +364,13 @@ Sage: "He has a poly diploma so he could have started working already but..."
 -> "How did his family find out that he's gay?"
     Sage: "His cousin told on him to his parents after seeing a TikTok of him at Pink Dot."
     You: "Oh..."
-    [i]Doesn't that sound familiar to you?[/i] 
+    Doesn't that sound familiar to you? 
     <<set $diceroll = diceRoll($int)>>
     <<if $diceroll >= 10>>
-        [i]The irony also doesn't escape your notice.[/i]
+        The irony also doesn't escape your notice.
         <<changeConfidence(-5)>>
         <<addExperience(5)>>
-        [i]Pink Dot was supposed to be one of the few "safe spaces" for queer people.[/i] (-5% confidence) (+5 XP)
+        Pink Dot was supposed to be one of the few "safe spaces" for queer people. (-5% confidence) (+5 XP)
     <<endif>>
     Joanne: "He really should have been more careful..."
     -> "By hiding himself at all times?"
@@ -386,11 +386,11 @@ Sage: "He has a poly diploma so he could have started working already but..."
         Sage: "I guess so..."
         <<changeRelationship("S", -5)>>
         Sage: "God, it was his first time there too... I feel awful for suggesting to go..." (-5% Sage relationship)
-        [i]This is really weighing on Sage.[/i]
+        This is really weighing on Sage.
 
     -> Say nothing
         Sage: "God, it was his first time there too... I feel awful for suggesting to go..."
-        [i]This is really weighing on Sage.[/i]
+        This is really weighing on Sage.
 
 -> "How is he paying for uni?"
     Sage: "He's on a full-ride scholarship."
@@ -403,9 +403,9 @@ Sage: "He has a poly diploma so he could have started working already but..."
 -> "Why did he text you just now?"
     Sage: "He is trying to sneak home to get some of his stuff from his room."
     Sage: "He's worried his parents might change the locks so he said he's doing it tonight."
-    [i]Just thinking about it makes you sick.[/i]
+    Just thinking about it makes you sick.
     <<changeConfidence(-5)>>
-    [i]The finality and rejection of changing the locks to keep your own son out of the house.[/i] (-5% confidence)
+    The finality and rejection of changing the locks to keep your own son out of the house. (-5% confidence)
 
 -> "Makes you wonder if being queer in Singapore..." #skillcheck #emp # 10
     <<set $diceroll = diceRoll($emp)>>
@@ -515,11 +515,11 @@ title: 12
 Joanne: "I think you are being too pessimistic. There's no use in wallowing, you know."
 Joanne: "The thing is that allies should band together and fight for justice!"
 Joanne: "There are more of us than you think." 
-[i]Sage's eye twitches and she holds her breath.[/i]
-[i]Something breaks.[/i] 
+Sage's eye twitches and she holds her breath.
+Something breaks. 
 Sage: "You know, you say all that when you completely reject trans people or anyone who doesn't fit the gender binary."
 <<addExperience(5)>>
-[i]Joanne's face turns red with rage? Embarrassment?[/i] (+5 XP)
+Joanne's face turns red with rage? Embarrassment? (+5 XP)
 -> "Hey, let's not fight."
     You: "I don't think it's something we can see eye-to-eye on."
     You: "So yelling at each other about it won't help things."
@@ -531,7 +531,7 @@ Sage: "You know, you say all that when you completely reject trans people or any
     <<changeConfidence(5)>>
     Crisis averted. (+5% confidence)
     Chenjie: "Let's just move on to the next discussion question...?"
-    [i]Before you could, however...[/i]
+    Before you could, however...
     <<jump 15>>
 -> "Sage is right."
     Joanne: "This is all your fault!" (-5% confidence) 
@@ -585,8 +585,8 @@ Prof Lim: "Alright, class! It seems a lot of your discussions were quite fruitfu
 Prof Lim: "Let's hear from some groups..."
 After calling on some groups, she gets to yours.
 Prof Lim: "Your group seemed to have a rather passionate discussion. Anything from you?"
-[i]Most of the things you discussed were already touched upon by other groups... [/i]
-[i]The other stuff you talked about aren't exactly related to the discussion questions.[/i]
+Most of the things you discussed were already touched upon by other groups... 
+The other stuff you talked about aren't exactly related to the discussion questions.
 Chenjie: "The same as the other groups actually."
 Prof Lim: "I see. Alright then, moving on..."
 The lesson continues.

@@ -32,8 +32,8 @@ __PrivCrochet_position: 998,118
 __PrivCrochet_tags: 
 title: 5
 ---
-[i]There's a few pieces of paper and a box of colour pencils before you.[/i]
-[i]Before you can ask what you should do with them, a girl you've never seen before enters the room.[/i]
+There's a few pieces of paper and a box of colour pencils before you.
+Before you can ask what you should do with them, a girl you've never seen before enters the room.
 Eleanor: "Hi! Wait. I don't think I've seen you before..."
 You: "Hi, I'm {$name}."
 Eleanor: "Hello! I'm Eleanor. I kind of keep this club going, I guess."
@@ -56,14 +56,14 @@ __PrivCrochet_position: 1000,360
 __PrivCrochet_tags: 
 title: 6
 ---
-[i]You take out your phone for a reference image. Is it going to be your male, or female self?[/i]
+You take out your phone for a reference image. Is it going to be your male, or female self?
 
 -> Male
     <<set $drawing = "Male">>
 -> Female
     <<set $drawing = "Female">>
 
-[i]You start drawing. Before you know it, 20 minutes have passed.[/i]
+You start drawing. Before you know it, 20 minutes have passed.
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
@@ -95,7 +95,7 @@ Eleanor: "Wanna show it to the rest of us?"
 
     -> "No and stop asking."
         Eleanor: "Okay, whatever you're comfortable with."
-        [i]The rest of the session passes uneventfully. Awkward...[/i]
+        The rest of the session passes uneventfully. Awkward...
         <<jump end>>
     
     -> "Okay, fine."
@@ -140,7 +140,7 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll < 6>>
-        [i]Really? That's the best you could come up with?[/i] (-5% confidence)    
+        Really? That's the best you could come up with? (-5% confidence)    
         <<changeConfidence(-5)>>    
     <<endif>>
     Anthony: "Yeah, can tell. Your voice is as low as mine - "
@@ -156,7 +156,7 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
         Nadia: "Yeah, that was my only intent. I didn't want to offend you personally."
         Nadia: "I can recommend some websites where I learned to draw, maybe they would help?" (+ 5 XP) 
         <<addExperience(5)>>
-        [i]Anthony smirks.[/i]
+        Anthony smirks.
         Eleanor: "Thanks Nadia. Please remember, we're just here to create."
         Eleanor: "Oh dear, look at the time, we're almost done!"
     
@@ -208,7 +208,7 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
         Vera: "Love that for you! Be proud of your body." (+5% confidence) 
         <<changeConfidence(5)>>
         Nadia: "Of course. We're here for you, Charlotte."
-        [i]Anthony rolls his eyes.[/i]
+        Anthony rolls his eyes.
         Eleanor: "Okay looks like we're all out of time!"
     
     -> "I'll see what I can do to change that."
@@ -224,7 +224,7 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
     Nadia: "Charlotte, you don't have to share if you don't want to..."
     Vera: "Yeah, Anthony, can you be nicer to Charlotte?"
     Anthony: "Fine. I can't tell the truth as it is."
-    [i]He rolls his eyes.[/i]
+    He rolls his eyes.
 
     -> "I guess that's why my female drawing isn't that good..."
         Vera: "Hmm. It is a self portrait, right?"
@@ -248,17 +248,17 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
         [You rolled a {$diceroll}.]
         <<if $diceroll < 6>>
             <<changeConfidence(-5)>>
-            [i]You say that, but do you really feel it?[/i] (-5% confidence)
+            You say that, but do you really feel it? (-5% confidence)
             Vera: "Love that for you! Charlotte is who you really are."
-            [i]Nice to hear, but are you sure she's genuine?[/i]
+            Nice to hear, but are you sure she's genuine?
         <<else>>
-            [i]Yes, that's a good start.[/i]
+            Yes, that's a good start.
             Vera: "Love that for you! Charlotte is who you really are."
             <<changeConfidence(5)>>
-            [i]Aww, Vera... you're so nice.[/i] (+5% confidence)
+            Aww, Vera... you're so nice. (+5% confidence)
         <<endif>>
         Nadia: "You have our support."
-        [i]Anthony is looking at his phone, clearly eager for the session to end.[/i]
+        Anthony is looking at his phone, clearly eager for the session to end.
         Nadia: "You know, I'm trying to get better at drawing female bodies too." 
         Nadia: "Here's some videos that I'm procrastinating on watching. Hope they help you!"
         Eleanor: "Thanks Nadia. Anyway, our time is almost up, so..."
@@ -273,7 +273,7 @@ title: 11
 Eleanor: "Thanks for coming and see you next week!"
 
 <<goto_room_cca_1_seated_11()>>
-[i]As Nadia and Anthony leave, Vera stops you for a quick chat.[/i]
+As Nadia and Anthony leave, Vera stops you for a quick chat.
 Vera: "Hey Charlotte. Are you feeling okay?"
 
 -> "Yeah, I'm still fine."
@@ -448,7 +448,7 @@ Anthony: "Why do you feel female?"
     Anthony: "Fine. I stand by what I said."
     Vera: "Charlotte, don't listen to him. You're valid."
 
-Eleanor: "We didn't even get to comment on Charlotte's [i]art[/i]... if you want to talk about it, I can have a look later."
+Eleanor: "We didn't even get to comment on Charlotte's art... if you want to talk about it, I can have a look later."
 Eleanor: "Anyway, time's up for this week."
 <<jump 11>>
 ===
@@ -459,7 +459,7 @@ title: 15
 ---
 You: "Hi, I'm Charlotte, but this is how I usually look like."
 Anthony: "So you're actually a guy."
-[i]You're really being put on the spot here. How will you respond?[/i]
+You're really being put on the spot here. How will you respond?
 
 -> "Yeah..."
     Anthony: "Is this some kind of fetish?"
@@ -558,7 +558,7 @@ Eleanor: "Get to know each other, yeah?"
 
 <<goto_room_cca_1_seated_18()>>
 
-[i]Vera and Nadia leave first, Anthony waits for them to go before he comes over to you.[/i]
+Vera and Nadia leave first, Anthony waits for them to go before he comes over to you.
 Anthony: "Hey. Didn't you realise something was... off about that girl?"
 
 -> "Like what?"
@@ -641,7 +641,7 @@ Anthony: "Maybe she's an ah gua."
                 Anthony: "What to do? The world sucks."
                 Anthony: "Should just lie down and rot."
                 You: "If that's what you want, I guess."
-                [i]You realise you can't really continue from here. It's time to leave.[/i]
+                You realise you can't really continue from here. It's time to leave.
             <<endif>>
 
         -> "But it's just what people say, isn't it? Do you listen to everything other people say?" #skilcheck #int # 6
@@ -677,10 +677,10 @@ Anthony: "Maybe she's an ah gua."
             <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
             <<if $diceroll >= 6>>
-                [i]Anthony wants to say something, but can't bring himself to say it.[/i]
+                Anthony wants to say something, but can't bring himself to say it.
                 <<addExperience(10)>>
                 You: "That's what I thought." (+10 XP) 
-                [i]It's time to leave.[/i]
+                It's time to leave.
             <<else>>
                 Anthony: "Why should I care that they want to be delusional and PC?"
                 Anthony: "You should let go of being woke also. Before it's too late."
