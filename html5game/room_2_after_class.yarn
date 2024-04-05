@@ -43,7 +43,7 @@ title: bed
         Get some more sleep! Sleep fixes everything. (+5% confidence)
 
     <<goto_room_bedroom_day()>>
-    <<jump 0>>
+    <<jump afterbed>>
 <<else>>
     <<jump 0_revisit>>
 <<endif>>
@@ -81,7 +81,7 @@ Well, no use going back to bed.
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 680,80
 __PrivCrochet_tags: 
-title: 0
+title: afterbed
 ---
 <<set $canGoToBed = false>>
 Good morning, {$name}. Prepare your look in the CLOSET, check your Stats at the DESK, and off you go!

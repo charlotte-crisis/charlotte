@@ -4,7 +4,7 @@
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1120,-160
 __PrivCrochet_tags: 
-title: 0
+title: afterbed
 ---
 <<set $canGoToBed = false>>
 
@@ -28,13 +28,6 @@ title: door
     -> No (Go back)
 
     -> Yes (Go to school) #continue
-        // GenderMeter Check
-        <<if $name == "Charlotte">>
-            <<changeGenderMeter(10)>>
-        <<else>>
-            <<changeGenderMeter(-10)>>
-        <<endif>>
-
         <<goto_room_cca_1()>>        
 <<endif>>
 ===
@@ -74,7 +67,7 @@ title: bed
     You toss and turn a bit before going to sleep.
 
     <<goto_room_bedroom_day()>>
-    <<jump 0>>
+    <<jump afterbed>>
 <<else>>
     <<jump 0_revisit>>
 <<endif>>
@@ -99,8 +92,8 @@ Who will you ask out?
     <<goto_room_hangout_v()>>
 
 -> On second thought, nevermind.
-    Hmm… you don't seem to be friendly enough with anyone.
-    You can stay in today, but please try to understand and befriend people around you…
+    Hmm... you don't seem to be friendly enough with anyone.
+    You can stay in today, but please try to understand and befriend people around you...
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1600,-400

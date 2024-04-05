@@ -562,6 +562,7 @@ Chenjie: "And so today's lecture got me thinking about, well, if my physical app
 
 -> Try to offer advice #skillcheck #cha # 8
     <<set $diceroll = diceRoll($cha)>>
+    [You rolled a {$diceroll}.]
     <<if $diceroll >= 8>>
         You: "I think you should build up your self-confidence. Don't beat yourself up for something like this."
         You: "You are a cool and kind guy so it's a shame that you don't see how amazing you are."

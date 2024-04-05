@@ -286,7 +286,7 @@ You: "Yeah, so feminism to me is..."
         Sage: "Yeah. And supporting people in your life who are LGBTQ+. Or maybe even participating in Pink Dot and such."
         <<jump 19>>
         
-    -> "I guess so…"
+    -> "I guess so..."
         You: "It's a chicken and egg problem."
         You: "People don't want to come out because it's risky to be out."
         You: "But also, it's risky because not enough LGBT people are coming out to talk about their experiences."
@@ -576,7 +576,7 @@ Shit. Your sister definitely knows you've read the message already.
         You: "It feels comfortable being a girl once in a while."
         You: "I'll explain when I come home for the weekend, okay?"
         Sister: "Sure. Let's talk on Saturday."
-        You were the one who suggested to talk but… what do you plan to say to her?
+        You were the one who suggested to talk but... what do you plan to say to her?
     <<else>>
         Sister: "But why?"
         Your sister's status is typing for a good 30 seconds. But then, the message that follows is short.
@@ -646,7 +646,7 @@ Chenjie: "Right?"
             <<changeRelationship("J", -5)>>
             Joanne: "It makes you wonder if they have ulterior motives." (-5% Joanne relationship)
             Joanne glances at you.
-            But before you could process that split-second reaction…)
+            But before you could process that split-second reaction...)
         <<else>>
             <<changeRelationship("J", 5)>>
             You: "It's hard to support feminists if they constantly cause a huge fuss about things that don't matter in the grand scheme." (+5% Joanne relationship)

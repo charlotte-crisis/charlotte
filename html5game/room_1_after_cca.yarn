@@ -4,7 +4,7 @@
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 640,160
 __PrivCrochet_tags: 
-title: 0
+title: afterbed
 ---
 <<set $canGoToBed = false>>
 
@@ -85,7 +85,7 @@ title: bed
     You can feel her annoyance, her frustration, even through a simple line of text.
     It's a wonder your bedsheets haven't been pulled off, what with all this tossing and turning.
     <<goto_room_bedroom_day()>>
-    <<jump 0>>
+    <<jump afterbed>>
 <<else>>
     <<jump 0_revisit>>
 <<endif>>
