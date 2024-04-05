@@ -4,7 +4,7 @@ __PrivCrochet_position: -183,-676
 __PrivCrochet_tags: 
 title: 1_1
 ---
-Nadia: "Well, uh… I'm in year 2 now! So things are getting more stressful, I guess?"
+Nadia: "Well, uh... I'm in year 2 now! So things are getting more stressful, I guess?"
 Nadia: "And apart from Art Club, I'm taking on more CCAs."
 Nadia: "So I'm going back quite late every night."
 <<jump 1_1_options>>
@@ -19,7 +19,7 @@ You: "Hey Nadia! Great to see you."
 Nadia: "Yeah, same. Let's get some food!"
 Nadia: "So, what are we talking about today?"
 
-<<jump 1>>
+<<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 130,-750
@@ -30,13 +30,13 @@ Nadia: "Oh yes, absolutely. I stay so far from school!"
 Nadia: "I'm cramming all my lessons into just 3 days to minimise travel time, you know?"
 Nadia: "And besides, I'm still in year 2. There's still time."
 -> "So what's stopping you?"
-    Nadia: "Can't get a room… It's super competitive."
+    Nadia: "Can't get a room... It's super competitive."
     Nadia: "And, to be honest, I dread having to move so many things."
-    Nadia: "So many heavy suitcases…"
+    Nadia: "So many heavy suitcases..."
 -> "You should go for it."
-    Nadia: "It's not that easy…"
+    Nadia: "It's not that easy..."
     Nadia: "I need to be super involved in the hall activities, right?"
-    Nadia: "And it's super expensive…"
+    Nadia: "And it's super expensive..."
     Nadia: "Whatever. I'll think about it later."
 Nadia: "Anyway! What about you? You're still staying on campus, right?"
 You: "Yep. Been here 4 years."
@@ -44,31 +44,32 @@ Nadia: "What's the best part about staying?"
 -> "There isn't really one."
     Nadia: "Really?"
     You: "Well, not anything that comes to mind."
-    Nadia: "Oh… then why did you stay all 4 years?"
-    You: "I don't know… felt consistent, I guess."
-    Nadia: "Okay…"
+    Nadia: "Oh... then why did you stay all 4 years?"
+    You: "I don't know... felt consistent, I guess."
+    Nadia: "Okay..."
     <<jump 1_1_options>>
 -> "The privacy."
     You: "Even before Charlotte, I appreciated being away from my family."
-    You: "There was one weekend where I really needed to finish a project…"
+    You: "There was one weekend where I really needed to finish a project..."
     You: "I just sat in my room and kept going at it until it was done."
     Nadia: "Right? Time flows differently when you don't have distractions."
-    You: "And when I discovered Charlotte, I also discovered I needed a space to be Charlotte…"
+    You: "And when I discovered Charlotte, I also discovered I needed a space to be Charlotte..."
     You: "So my room's the perfect place."
-    Nadia: "Ah, I see… I'm sorry to hear about your family."
+    Nadia: "Ah, I see... I'm sorry to hear about your family."
     Nadia: "But yes! Sounds like you're really enjoying yourself."
     -> "Would you enjoy time away from family, though?"
         You: "You seem pretty close to them."
         Nadia: "I mean, I could always call home."
-        Nadia: "Besides, it's not like we're in different countries…"
+        Nadia: "Besides, it's not like we're in different countries..."
         <<if $cha > 5>>
             You: "You sure? Travelling from east to west?"
-            Nadia: "Right, I need to bring passport!" (+5% Nadia relationship) <<changeRelationship("N", 5)>>
+            <<changeRelationship("N", 5)>>
+            Nadia: "Right, I need to bring passport!" (+5% Nadia relationship) 
         <<endif>>
         <<jump 1_1_options>>
     -> "Do you also need your own private space?"
         Nadia: "Hmm, kinda? We should all have that."
-        Nadia: "I'm currently still sharing a room with my siblings…"
+        Nadia: "I'm currently still sharing a room with my siblings..."
         Nadia: "So maybe it's time to change that up."
         You: "Yeah, with all the stuff you're doing in school, you definitely need that space."
         <<jump 1_1_options>>
@@ -76,7 +77,7 @@ Nadia: "What's the best part about staying?"
     You: "They're all super fun to be around."
     You: "And most importantly they accept Charlotte."
     Nadia: "Oh? No one gives you trouble?"
-    You: "Nah, people are kind. Not like in other places, though…"
+    You: "Nah, people are kind. Not like in other places, though..."
     Nadia: "Ah, I think I'd fit in well!"
     You: "You really would."
     <<jump 1_1_options>>
@@ -86,19 +87,19 @@ __PrivCrochet_position: -432,-920
 __PrivCrochet_tags: 
 title: 1_1_1
 ---
-Nadia: "Accountancy… well, it's stable enough, I guess."
+Nadia: "Accountancy... well, it's stable enough, I guess."
 Nadia: "Sometimes there's a whole lot of studying."
 Nadia: "You would not believe how many tax regulations I need to read weekly."
 Nadia: "Still, at least I'm not in the more cutthroat courses."
 
 -> "Do you enjoy it?"
     Nadia: "Enjoy? I don't really enjoy studying."
-    Nadia: "It's just kinda easy enough for me to do…"
+    Nadia: "It's just kinda easy enough for me to do..."
     Nadia: "And a source of employment."
 
 -> "What do you mean cutthroat?"
-    Nadia: "Those modules which take note of everything you do…"
-    Nadia: "Even your day-to-day appearance, not to mention your presentation attire…"
+    Nadia: "Those modules which take note of everything you do..."
+    Nadia: "Even your day-to-day appearance, not to mention your presentation attire..."
     Nadia: "Don't even get me started on the people."
     Nadia: "Like, it's not in the grading and all, but you can feel the pressure there."
     -> "But hey, you snooze, you lose, right?"
@@ -126,16 +127,16 @@ Nadia: "What about your major?"
 
 -> "Nothing remarkable about it."
     You: "I'm just a communications student."
-    Nadia: "Uh… I guess you can communicate better then?"
+    Nadia: "Uh... I guess you can communicate better then?"
     You: "Perhaps. But I don't see it."
     You: "At the end of the day, it's just a degree."
-    Nadia: "I guess so…"
+    Nadia: "I guess so..."
     <<jump 1_1_options>>
 -> "Kind of a waste of time, honestly."
     You: "Maybe I should have studied something more employable."
     Nadia: "Eh? I thought communications should have quite a lot of jobs?"
     You: "None that I'm interested in."
-    Nadia: "Hmm… well, hope you still found something useful."
+    Nadia: "Hmm... well, hope you still found something useful."
     You: "If not, those school fees are all going down the drain, right?"
     <<jump 1_1_options>>
 -> "It's great! I can study what I want."
@@ -373,12 +374,12 @@ What will you say?
 -> "Ever thought of staying on campus?"
     <<jump 1_1_3>>
 -> "Let's talk about something else."
-    <<jump 1>>
+    <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: -285,-421
 __PrivCrochet_tags: 
-title: 1
+title: 1_options
 ---
 What will you say?
 
@@ -722,7 +723,7 @@ What will you say?
         You: "I'm glad you found your happy place in anime."
         Nadia: "We all deserve our own happy places."
         Nadia: "I mean, your crossdressing is a happy place of its own, isn't it?"
-<<jump 1>>
+<<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 294,-458

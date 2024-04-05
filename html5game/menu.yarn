@@ -68,13 +68,3 @@ Use the arrow keys to navigate the stat menu.
 // Maybe have some splash art?
 <<openStatMenu()>>
 ===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: 360,120
-__PrivCrochet_tags: 
-title: 0
----
-It's the first day of the semester. You'd just moved into your school's hostel yesterday. (Spacebar to continue)
-It was a lot of stuff to move from home, but you're glad your belongings are safe here with you.
-And with that, your first class is today. You didn't waste much time (of which you had precious little to begin with) unpacking last night.
-TUTORIAL: Left and Right arrow keys to move. Press the up arrow near an object or person to interact.
-===

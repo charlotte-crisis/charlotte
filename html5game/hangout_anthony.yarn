@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1680,280
+__PrivCrochet_position: 1637,278
 __PrivCrochet_tags: 
 title: 0
 ---
@@ -11,7 +11,7 @@ You: "Hey Anthony."
 <<endif>>
 Anthony: "I don't know why you asked me here but... whatever."
 
-<<jump "1">>
+<<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1479,29
@@ -41,10 +41,10 @@ Anthony: "Just draw, play video games, maybe go gym once in a while."
     <<jump 1_2_3>>
 
 -> "Let's talk about something else."
-    <<jump 1>>
+    <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1859,600
+__PrivCrochet_position: 1857,597
 __PrivCrochet_tags: 
 title: 1_3
 ---
@@ -205,7 +205,7 @@ Anthony: "Why should I feel sorry for telling the truth?"
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1960,280
 __PrivCrochet_tags: 
-title: 1
+title: 1_options
 ---
 What do you say?
 -> "How's school?"
@@ -358,7 +358,7 @@ What do you say?
 -> "Was it your first choice?"
     <<jump 1_1_2>>
 -> "Let's talk about something else."
-    <<jump 1>>
+    <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2038,-499
@@ -594,19 +594,19 @@ title: 1_2_1_3
 Anthony: "How to get them? All the guys are above my strength level."
 -> "Well, you're right. Time to throw in the towel."
 Anthony: "Ya lor."
--> "I'm sure some of them are willing to help…"
+-> "I'm sure some of them are willing to help..."
 Anthony: "Yeah, why would they give up their thing to come help me?"
     -> "Won't know if you don't try."
     Anthony: "You try la! Say until so big."
     Anthony: "I bet you don't even go gym."
-        -> "Jeez, fine, sorry…"
+        -> "Jeez, fine, sorry..."
             <<changeRelationship("A", -5)>>
             Anthony doesn't look at you. (-5% Anthony relationship)
         -> "Well, I don't. But you do."
             You: "Think about it, has not having a gym buddy worked out?"
-            Anthony: "No…"
+            Anthony: "No..."
             You: "And has anyone outright rejected you for being weak?"
-            Anthony: "No…"
+            Anthony: "No..."
             You: "So maybe give it a try before just letting go."
     -> "Not everyone is selfish in this world."
         You: "I'm sure some of them also want to see you grow stronger."
@@ -704,7 +704,7 @@ What do you say?
 -> "Yeah, you need to own up to your behaviour."
     <<jump 1_3_3>>
 -> "Let's talk about something else."
-    <<jump 1>>
+    <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1584,982
@@ -722,7 +722,7 @@ What do you say?
     <<jump 1_3_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1344,1045
+__PrivCrochet_position: 1343,1044
 __PrivCrochet_tags: 
 title: 1_3_1_1
 ---
@@ -792,34 +792,36 @@ Anthony: "Girls really damn hard to talk to."
             Anthony silently contemplates your words.
         -> "Well, if they don't know..."
             Anthony: "There's nothing I can do."
-    -> "That's terrible. They suck."
-        Anthony: "I know. But there's nothing we can do to change it."
-        -> "Then maybe you should just give up."
-            Anthony: "Yeah, yeah, I know, I'm hopeless."
-            -> "Giving up doesn't need to be bad."
-                Anthony: "Everyone else has a girlfriend already."
-                Anthony: "I'm the odd one out."
-                You: "I meant you can be a single and happy person!"
-                You: "It isn't the end if you're single."
-                You: "You think relationships are all just sunshine and rainbows too?"
-            -> "Girls suck. Focus on yourself."
-                Anthony: "Well, I guess that's what the influencers say too."
-                Anthony: "It's time to grind. Women are distractions anyway."
-        -> "So why bother?"
-            Anthony: "Because I want a girlfriend!"
-            You: "Why?"
-            Anthony: "Because... I don't want to be lonely."
-            -> "That's all a girlfriend is to you?"
-                You: "Just to fulfil that specific emotional need?"
-                You: "Honestly that's kinda selfish."
-                Anthony: "You wouldn't understand."
-            -> "What about your friends?"
-                Anthony: "I don't have any."
-                You: "Hmm. I wonder why."
-                You: "Seriously, look at your actions and the people you've talked to..."
-                You: "Reflect a bit and you'll see why you're lonely."
-                You: "A girlfriend isn't needed to feel complete..."
-                You: "But there's a LOT of steps you need before you get there."
+-> "That's terrible. They suck."
+    Anthony: "I know. But there's nothing we can do to change it."
+    -> "Then maybe you should just give up."
+        Anthony: "Yeah, yeah, I know, I'm hopeless."
+        -> "Giving up doesn't need to be bad."
+            Anthony: "Everyone else has a girlfriend already."
+            Anthony: "I'm the odd one out."
+            You: "I meant you can be a single and happy person!"
+            You: "It isn't the end if you're single."
+            You: "You think relationships are all just sunshine and rainbows too?"
+        -> "Girls suck. Focus on yourself."
+            Anthony: "Well, I guess that's what the influencers say too."
+            <<changeRelationship("A",5)>>
+            Anthony: "It's time to grind. Women are distractions anyway." (+5% Anthony relationship)
+    -> "So why bother?"
+        Anthony: "Because I want a girlfriend!"
+        You: "Why?"
+        Anthony: "Because... I don't want to be lonely."
+        -> "That's all a girlfriend is to you?"
+            You: "Just to fulfil that specific emotional need?"
+            You: "Honestly that's kinda selfish."
+            <<changeRelationship("A",-5)>>
+            Anthony: "You wouldn't understand." (-5% Anthony relationship)
+        -> "What about your friends?"
+            Anthony: "I don't have any."
+            You: "Hmm. I wonder why."
+            You: "Seriously, look at your actions and the people you've talked to..."
+            You: "Reflect a bit and you'll see why you're lonely."
+            You: "A girlfriend isn't needed to feel complete..."
+            You: "But there's a LOT of steps you need before you get there."
 <<jump 1_3_1_options>>
 ===
 __PrivCrochet_colorID: 0

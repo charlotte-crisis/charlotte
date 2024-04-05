@@ -11,7 +11,7 @@ Charlotte: "I'm you, dumbass."
 Charlotte: "Why did you keep me hidden away this week?"
 Charlotte: "Ashamed of me, is it?"
 
--> "I'm sorry…"
+-> "I'm sorry..."
     Charlotte: "It's fine."
     Charlotte: "Is what I would say if I didn't feel repressed right now."
     Charlotte: "In fact, this is your repression."
@@ -19,7 +19,7 @@ Charlotte: "Ashamed of me, is it?"
     <<goto_splash_boss2_2()>>
     //<<jump 2>>
 
--> "I just didn't have the chance…"
+-> "I just didn't have the chance..."
     Charlotte: "Don't lie to me."
     Charlotte: "Or, rather, don't lie to yourself."
     Charlotte: "You had at least 3 chances to let me out this week."
@@ -48,7 +48,7 @@ title: 2
 Charlotte: "First things first. The fun stuff."
 Charlotte: "What happened? Not feeling the rush anymore when you see a nice outfit?"
 
--> "Have is have, but…"
+-> "Have is have, but..."
     <<jump 2_1>>
 
 -> "Yes, I don't feel it anymore." (-5% gender meter) <<changeGenderMeter(-5)>>
@@ -61,7 +61,7 @@ title: 2_1
 ---
 You: "Life gets in the way, you know?"
 You: "Just because I see it and I like it, doesn't mean that I instantly need to let you out."
-Charlotte: "Okay, I wasn't asking for that…"
+Charlotte: "Okay, I wasn't asking for that..."
 Charlotte: "But still, doesn't it ache inside, not being able to dress how you want?"
 -> "I'm a task focused person."
     <<jump 2_1_1>>
@@ -109,9 +109,9 @@ Charlotte: "Then when is my time to shine? Do you not want me anymore?"
     <<if $diceroll >= 9>>
         Charlotte: "I'd be satisfied with that if I wasn't already in your head."
         Charlotte: "I know what you're trying to do here."
-        Charlotte: "You're trying to be stoic and rational, assessing the pros and cons of letting me out…"
+        Charlotte: "You're trying to be stoic and rational, assessing the pros and cons of letting me out..."
         Charlotte: "I appreciate that part of you, I really do."
-        Charlotte: "But not everything can be reasoned out…"
+        Charlotte: "But not everything can be reasoned out..."
         Charlotte: "And that, unfortunately, includes me."
         <<jump 3>>
     <<else>>
@@ -128,11 +128,11 @@ Charlotte: "Then when is my time to shine? Do you not want me anymore?"
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 9>>
             You: "Do you know how much effort it takes?"
-            You: "Every 30 minute dress up session to get you out there…"
-            You: "Every stare from some random person…"
-            You: "And every time I endure nonsense from the family…"
+            You: "Every 30 minute dress up session to get you out there..."
+            You: "Every stare from some random person..."
+            You: "And every time I endure nonsense from the family..."
             You: "That's all for you."
-            Charlotte: "Well, if you put it that way, I guess…"
+            Charlotte: "Well, if you put it that way, I guess..."
             You: "Please. Think about how tough it can be sometimes." (+ 10 XP) <<addExperience(10)>>
             <<jump 3>>
         <<else>>
@@ -146,7 +146,7 @@ Charlotte: "Then when is my time to shine? Do you not want me anymore?"
         Charlotte: "Doesn't dressing up make you happy anymore?"
         You: "Ugh, it's just so much effort!"
         <<changeGenderMeter(-5)>>
-        Charlotte: "We weren't always like this. I wonder what changed…" (-5% gender meter) 
+        Charlotte: "We weren't always like this. I wonder what changed..." (-5% gender meter) 
         <<jump 3>>
     
     -> "This is precisely why I'm unhappy with you." #skillcheck #emp # 9
@@ -160,7 +160,7 @@ Charlotte: "Then when is my time to shine? Do you not want me anymore?"
             You: "But, this doesn't mean I'm giving in totally."
             You: "I know you want to be let out, and I appreciate the fun times we've had together."
             Charlotte: "If you really felt that way, you'd have let me out this week."
-            You: "I know how painful it feels to be trapped inside…"
+            You: "I know how painful it feels to be trapped inside..."
             You: "But at the same time, you gotta understand that you're hurting me, too."
             You: "Can I just get your cooperation on this, please?"
             You: "If I can't present as female due to external circumstances, don't make it hurt for me."
@@ -193,7 +193,7 @@ Charlotte: "Do you, really?"
     You: "You'll always be a part of me, and I feel no shame about that."
     You: "And I hope you understand that I can't bring you out all the time either."
     You: "We gotta care for each other this way, okay?"
-    Charlotte: "Well, okay… that sounds reasonable."
+    Charlotte: "Well, okay... that sounds reasonable."
     Charlotte: "I'm glad that you don't totally want to repress me."
     You: "Yeah, after all, who else is gonna give me the sweet endorphins when I see a nice outfit?"
     <<changeGenderMeter(5)>>
@@ -222,7 +222,7 @@ You: "Hate to say it this way, but you're not the only source of my happiness."
 [You rolled a {$diceroll}.]
 <<if $diceroll >= 9>>
     Charlotte: "Well, as long as you're happy."
-    Charlotte: "I should be glad, I guess…"
+    Charlotte: "I should be glad, I guess..."
     Charlotte: "You're not so reliant on me that you can't function."
     <<addExperience(10)>>
     You: "And even if it reaches that stage, there's still hope." (+ 10 XP) 
@@ -241,21 +241,21 @@ __PrivCrochet_tags:
 title: 2_1_4
 ---
 Charlotte: "What does that even mean?"
-Charlotte: "How are you going to convince the rest of the world that I'm here…"
+Charlotte: "How are you going to convince the rest of the world that I'm here..."
 Charlotte: "If you're not looking femme at all?"
 -> "It's not rocket science." #skillcheck #int # 9
     <<set $diceroll = diceRoll($int)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll >= 9>>
-        You: "Sure, there are parts of my body that look masculine…"
+        You: "Sure, there are parts of my body that look masculine..."
         You: "But it's also acceptable for women to have them, right?"
         You: "Short hair, broad shoulders, all that."
         You: "But no one's gonna call them out for not being femme."
         You: "And these are things that can't be changed, so why bother?"
-        Charlotte: "Okay, true… guess those gender studies classes do help after all."
+        Charlotte: "Okay, true... guess those gender studies classes do help after all."
         <<jump 3>>
     <<else>>
-        You: "I don't know… probably just something I heard in gender studies class."
+        You: "I don't know... probably just something I heard in gender studies class."
         Charlotte: "Listen to me. You need to dress up."
         Charlotte: "It's your only way of passing in this world."
         Charlotte: "If not, you're just stuck as a guy 100% of the time. Can you imagine that?" (-10% confidence) <<changeConfidence(-10)>>
@@ -264,20 +264,20 @@ Charlotte: "If you're not looking femme at all?"
 
 -> "Women don't dress up nicely all the time either."
     Charlotte: "They don't need to."
-    Charlotte: "They don't have mannish jawlines or square faces to hide…"
+    Charlotte: "They don't have mannish jawlines or square faces to hide..."
     Charlotte: "But you do."
     -> "Then let's stop stalling. It's time to transition."
         Charlotte: "Hey hey hey wait let's not go so fast ah - "
         You: "Huh? I thought you would tell me to transition!"
         You: "Don't you want to be Charlotte everyday?"
-        Charlotte: "I mean, it's nice…"
+        Charlotte: "I mean, it's nice..."
         Charlotte: "But, like, are you really ready, dude?"
         -> "I've been waiting a long time for this."
-            Charlotte: "Uh… okay."
+            Charlotte: "Uh... okay."
             Charlotte: "I guess my presence wasn't just a hobby for you, after all."
-            Charlotte: "But please… do your research, okay? Don't do anything you'd regret."
-            Charlotte: "Damn… I guess it's my turn to take over."
-            Charlotte: "And who would have known you'd only think about this after being repressed…"
+            Charlotte: "But please... do your research, okay? Don't do anything you'd regret."
+            Charlotte: "Damn... I guess it's my turn to take over."
+            Charlotte: "And who would have known you'd only think about this after being repressed..."
             You: "Repression just means hitting back twice as hard."
             <<changeGenderMeter(5)>>
             Charlotte: "You'd better be ready." (+5% gender meter) 
@@ -287,15 +287,15 @@ Charlotte: "If you're not looking femme at all?"
             You: "You'll need to be, Charlotte."
             You: "Ready to take centre stage in my life and my body?"
             Charlotte: "No!"
-            Charlotte: "I mean… don't you think that we should wait…"
+            Charlotte: "I mean... don't you think that we should wait..."
             You: "Heh. So you too know this can't be the way things should be."
             Charlotte: "Damn, you tricked me."
-            Charlotte: "You're able to trick your own subconscious? That's… impressive."
-            You: "Yeah. So I'm not tricking you when I say…"
+            Charlotte: "You're able to trick your own subconscious? That's... impressive."
+            You: "Yeah. So I'm not tricking you when I say..."
             You: "Please chill out and let me present as male for a while." (+ 10 XP) <<addExperience(10)>>
             <<jump 3>>
 
-    -> "That's pretty harsh…"
+    -> "That's pretty harsh..."
         Charlotte: "That's what people see if you don't do your makeup properly."
         Charlotte: "They see a man in a dress."
         -> "So what?" #skillcheck #cha # 9
@@ -306,25 +306,25 @@ Charlotte: "If you're not looking femme at all?"
                 You: "Let them laugh."
                 You: "At the end of the day, I still looked exactly how I felt."
                 You: "And there's no reason why I should feel shame from that." (+ 10 XP)
-                Charlotte: "You make a convincing argument…"
+                Charlotte: "You make a convincing argument..."
                 Charlotte: "Let's just hope you can walk the walk."
                 <<jump 3>>
             <<else>>
-                You: "I guess not…"
+                You: "I guess not..."
                 Charlotte: "There we go."
                 <<changeConfidence(-10)>>
                 Charlotte: "Passing is everything. You really want to get laughed at any more than you do now?" (-10% confidence) 
                 <<jump 3>>
             <<endif>>
 
-    -> "Look, I know you want to look pretty…"
+    -> "Look, I know you want to look pretty..."
         You: "But sometimes we need to stop judging ourselves."
         You: "We can't be scoring own goals against ourselves here."
-        You: "If the criticism is already so harsh from within…"
+        You: "If the criticism is already so harsh from within..."
         You: "How are we supposed to tahan it from outside?"
         You: "You gotta love yourself. And me."
         <<addExperience(10)>>
-        Charlotte: "I guess you're right…" (+ 10 XP) 
+        Charlotte: "I guess you're right..." (+ 10 XP) 
         <<jump 3>>
 
 -> "My inner world - this realm we are speaking in now - is no one else's." #skillcheck #cha # 9
@@ -332,7 +332,7 @@ Charlotte: "If you're not looking femme at all?"
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll >= 9>>
-        Charlotte: "Well, it seems like you're very confident about that…"
+        Charlotte: "Well, it seems like you're very confident about that..."
         Charlotte: "Then I guess we'll meet here more often."
         Charlotte: "I'm glad that you're not totally forgetting about me, I guess." (+ 10 XP) <<addExperience(10)>>
         <<jump 3>>
@@ -347,14 +347,14 @@ __PrivCrochet_position: 2041,122
 __PrivCrochet_tags: 
 title: 3
 ---
-Charlotte: "Well, regardless… it's also time to ask about family."
+Charlotte: "Well, regardless... it's also time to ask about family."
 Charlotte: "Since you're meeting me this week, instead of them."
 Charlotte: "Just to recap, you agreed to Sis that you would remain cis."
 Charlotte: "And Mother hates me, and wishes you would just remain male."
-Charlotte: "Now obviously, this makes me feel all kinds of negative emotions…"
+Charlotte: "Now obviously, this makes me feel all kinds of negative emotions..."
 Charlotte: "But I want to hear from you first."
 -> "Why me?"
-    Charlotte: "As much as I'd like to be the face of this body…" 
+    Charlotte: "As much as I'd like to be the face of this body..." 
     Charlotte: "Despite everything, it's still you."
     Charlotte: "I admit that I've only been here a short time."
     Charlotte: "Ultimately, for family stuff, you're still the one calling the shots."
@@ -378,7 +378,7 @@ __PrivCrochet_tags:
 title: 2_2_1
 ---
 You: "You've been corrupting me away from the right path."
-You: "It's almost like you're hijacking my decision-making…"
+You: "It's almost like you're hijacking my decision-making..."
 You: "And getting me addicted to the girl stuff."
 Charlotte: "Nonsense. I don't control your life fully."
 -> "You can't go a week without wanting to be let out?"
@@ -430,7 +430,7 @@ Charlotte: "Nonsense. I don't control your life fully."
             [You rolled a {$diceroll}.]
             <<if $diceroll >= 9>>
                 You: "Then who wants me? Your claim has no evidence."
-                Charlotte: "I guess I can't name any…"
+                Charlotte: "I guess I can't name any..."
                 You: "There we go. You need to stop affecting my life." (-5% gender meter) <<changeConfidence(-5)>>
                 <<jump 3>>
     
@@ -444,7 +444,7 @@ Charlotte: "Nonsense. I don't control your life fully."
             <<endif>>
 
         -> "Every minute I spent on you was time wasted." #skillcheck #cha # 9
-            You: "While I was exploring this useless hobby…"
+            You: "While I was exploring this useless hobby..."
             You: "My friends were doing projects, internships, and just succeeding in life."
             Charlotte: "Everyone is different. I'm sure you had fun too."
             <<set $diceroll = diceRoll($cha)>>
@@ -457,7 +457,7 @@ Charlotte: "Nonsense. I don't control your life fully."
                 You: "When I decided not to be a flighty, irresponsible little girl." (-5% gender meter) 
                 <<jump 3>>
             <<else>>
-                You: "Yeah, I guess…"
+                You: "Yeah, I guess..."
                 Charlotte: "You don't need to be hustling all the time."
                 Charlotte: "I thought you already knew how toxic the rat race was."
                 Charlotte: "If you suppress me, you get one step closer to being eaten alive by it." (-10% confidence) <<changeConfidence(-10)>>
@@ -512,16 +512,16 @@ Charlotte: "And are you saying women are not resilient?"
     Charlotte: "You weren't like this before."
     -> "That's just the way society is built."
         You: "Look at all the advantages men have in this world."
-        You: "Men are stronger, more stoic, more successful…"
+        You: "Men are stronger, more stoic, more successful..."
         You: "I'm not sacrificing all that just for you."
         Charlotte: "There are other ways to succeed, to live life."
         Charlotte: "Not whatever misogynistic nonsense you just described."
     
     -> "Women can only succeed through deception."
-        You: "Think about it. False sexual assault cases, crying about being abused by men…"
+        You: "Think about it. False sexual assault cases, crying about being abused by men..."
         You: "And this, trying to deceive other people into believing I am a woman."
         You: "This is not how society should be run."
-        Charlotte: "What the hell are you saying…"
+        Charlotte: "What the hell are you saying..."
     
     -> "No, I always have been."
         You: "All my interests are masculine coded."
@@ -563,7 +563,7 @@ Charlotte: "You are beautiful! We are beautiful together."
     Charlotte: "We never cared about that."
     You: "Well it's time to start!"
     -> "You think we can be pretty forever?" #skillcheck #int # 9
-        You: "You need to think long term. Hair loss, beard growth, face wrinkles…"
+        You: "You need to think long term. Hair loss, beard growth, face wrinkles..."
         You: "All of that will make me stand out. And not in the good way."
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
@@ -581,7 +581,7 @@ Charlotte: "You are beautiful! We are beautiful together."
         <<endif>>
 
     -> "You don't see how my masculine features stick out so much." #skillcheck #cha # 9
-        You: "My face, my Adam's apple… all of that can't be changed."
+        You: "My face, my Adam's apple... all of that can't be changed."
         You: "How much effort do I need to put in every time I let you out?"
         You: "It's quite clear to everyone that you, Charlotte, are not natural."
         <<set $diceroll = diceRoll($cha)>>
@@ -635,8 +635,8 @@ title: 4_1
 Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
 -> "Sorry, family comes first."
     Charlotte: "Heh. Do you really think that?"
-    Charlotte: "Even after all the Asian helicopter tiger parenting…"
-    Charlotte: "Even after asking you to get rid of me…"
+    Charlotte: "Even after all the Asian helicopter tiger parenting..."
+    Charlotte: "Even after asking you to get rid of me..."
     Charlotte: "Is this some high level Stockholm Syndrome?"
     -> "Blood is thicker than water." #skillcheck #emp # 9
         <<set $diceroll = diceRoll($cha)>>
@@ -669,7 +669,7 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
 
         -> "I will rely on my accomplishments."
             Charlotte: "Sounds like a good start, I guess. But you have to keep it up." 
-            Charlotte: "And a lot of your accomplishments don't involve me…"
+            Charlotte: "And a lot of your accomplishments don't involve me..."
             Charlotte: "So the moment you let me out, she'll still say 'why can't you be normal', right?" (-10% confidence <<changeConfidence(-10)>>
             <<jump 5>>
         
@@ -682,7 +682,7 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
             You: "Maybe it's not about what I say, but how I dress."
             You: "After all, you are a very big change for her."
             You: "I'll ease her into the whole Charlotte thing bit by bit."
-            Charlotte: "So that means…"
+            Charlotte: "So that means..."
             You: "More androgynous presentation."
             You: "No dresses, lighter makeup. Until she's ready for it."
             Charlotte: "I guess we can start from there." (+5% confidence) <<changeConfidence(5)>>
@@ -695,7 +695,7 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
         Charlotte: "Remember when Father disciplined you so hard you hid, crying, under the bed?"
         Charlotte: "I'm your escape away from those memories."
         Charlotte: "I am the transcended version of you."
-        Charlotte: "And if you throw me aside, just to return to their fold…"
+        Charlotte: "And if you throw me aside, just to return to their fold..."
         Charlotte: "That is the stupidest move of all." (-15% confidence) <<changeConfidence(-15)>>
         <<jump 5>>
 
@@ -720,7 +720,7 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
         Charlotte: "And in the long run, it's better for you both."
         <<jump 5>>
 
--> "I'm not financially independent yet…"
+-> "I'm not financially independent yet..."
     You: "If I'm in their house, I gotta play by their rules."
     Charlotte: "Heh. That's slick. Still, that's a short-term solution, isn't it?"
     -> "Yes, it is."
@@ -733,7 +733,7 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
     -> "Nope."
         You: "Housing is expensive. Even with a salary, house ownership remains a distant dream."
         Charlotte: "And you're just gonna accept the status quo, 'their house, their rules'?"
-        Charlotte: "That's kinda disappointing. 25 years of growth and experiences, of finding yourself…"
+        Charlotte: "That's kinda disappointing. 25 years of growth and experiences, of finding yourself..."
         <<changeConfidence(-10)>>
         Charlotte: "And you're still back in the same mould that your parents expect of you." (-10% confidence) 
         <<jump 5>>
@@ -743,13 +743,13 @@ __PrivCrochet_position: 2503,112
 __PrivCrochet_tags: 
 title: 4_2
 ---
-Charlotte: "Okay, that's a little harsh…"
+Charlotte: "Okay, that's a little harsh..."
 You: "This is my own choice."
 You: "Gender presentation is totally separate from what I think about family."
 You: "They are terrible people, but so are you."
 <<changeGenderMeter(-5)>>
 Charlotte: "You know what? That's not just harsh. It's just straight up hateful." (-5% gender meter) 
-Charlotte: "I guess I should have seen this coming…"
+Charlotte: "I guess I should have seen this coming..."
 Charlotte: "What with your whole 'don't dress femme' thing this week."
 <<jump 5>>
 ===
@@ -764,10 +764,10 @@ Charlotte: "Heh. It's gonna take more than that to convince me."
 Charlotte: "Didn't you make a promise to Sis?"
 -> "Screw that."
     Charlotte: "Hey hey. I don't want you to destroy that relationship immediately."
-    Charlotte: "I still think she could come around…"
+    Charlotte: "I still think she could come around..."
     -> "No, she's irredeemable."
         You: "She's just like Mother. Won't listen to me."
-        Charlotte: "Hmm… she could have been a good ally... but, still, it's your choice."
+        Charlotte: "Hmm... she could have been a good ally... but, still, it's your choice."
         <<jump 5>>
     
     -> "It would be extremely difficult."
@@ -778,7 +778,7 @@ Charlotte: "Didn't you make a promise to Sis?"
         <<jump 5>>
     
     -> "Can we really trust her?"
-        Charlotte: "Against my better judgement and paranoia… I'd say yes."
+        Charlotte: "Against my better judgement and paranoia... I'd say yes."
         Charlotte: "After all, is she really that bad?"
         Charlotte: "A lot of her concerns are actually Mother's, but she is her own person."
         Charlotte: "If there's anyone I'd give a second chance, it'd be her."
@@ -810,7 +810,7 @@ Charlotte: "So, in conclusion..."
 <<if $deltaCharlotte < 0 >>
     Charlotte: "I staged this intervention to get you back on the right track."
     Charlotte: "One where we could co-exist, not one where we live in fear."
-    Charlotte: "And yet… maybe this was the wrong choice."
+    Charlotte: "And yet... maybe this was the wrong choice."
     Charlotte: "Somehow you've distanced yourself from me even more."
     Charlotte: "And for what, really? Are you so afraid of me, or Mother, or what?"
     Charlotte: "It's either a path of fear or of ignorance. Maybe both." 
