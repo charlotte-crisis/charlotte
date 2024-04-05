@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1676,279
+__PrivCrochet_position: 1637,278
 __PrivCrochet_tags: 
 title: 0
 ---
@@ -11,7 +11,7 @@ You: "Hey Anthony."
 <<endif>>
 Anthony: "I don't know why you asked me here but... whatever."
 
-<<jump "1">>
+<<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1479,29
@@ -41,10 +41,10 @@ Anthony: "Just draw, play video games, maybe go gym once in a while."
     <<jump 1_2_3>>
 
 -> "Let's talk about something else."
-    <<jump 1>>
+    <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1859,600
+__PrivCrochet_position: 1857,597
 __PrivCrochet_tags: 
 title: 1_3
 ---
@@ -205,7 +205,7 @@ Anthony: "Why should I feel sorry for telling the truth?"
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1960,280
 __PrivCrochet_tags: 
-title: 1
+title: 1_options
 ---
 What do you say?
 -> "How's school?"
@@ -358,7 +358,7 @@ What do you say?
 -> "Was it your first choice?"
     <<jump 1_1_2>>
 -> "Let's talk about something else."
-    <<jump 1>>
+    <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2038,-499
@@ -704,7 +704,7 @@ What do you say?
 -> "Yeah, you need to own up to your behaviour."
     <<jump 1_3_3>>
 -> "Let's talk about something else."
-    <<jump 1>>
+    <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1584,982

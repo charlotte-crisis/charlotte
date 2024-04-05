@@ -19,7 +19,7 @@ You: "Hey Nadia! Great to see you."
 Nadia: "Yeah, same. Let's get some food!"
 Nadia: "So, what are we talking about today?"
 
-<<jump 1>>
+<<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 130,-750
@@ -374,12 +374,12 @@ What will you say?
 -> "Ever thought of staying on campus?"
     <<jump 1_1_3>>
 -> "Let's talk about something else."
-    <<jump 1>>
+    <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: -285,-421
 __PrivCrochet_tags: 
-title: 1
+title: 1_options
 ---
 What will you say?
 
@@ -723,7 +723,7 @@ What will you say?
         You: "I'm glad you found your happy place in anime."
         Nadia: "We all deserve our own happy places."
         Nadia: "I mean, your crossdressing is a happy place of its own, isn't it?"
-<<jump 1>>
+<<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 294,-458
