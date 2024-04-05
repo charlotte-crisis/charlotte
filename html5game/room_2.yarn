@@ -2,7 +2,7 @@
 # if you've already visited then it will show the concise version.
 # Interacting with mirror
 __PrivCrochet_colorID: 8
-__PrivCrochet_position: 921,40
+__PrivCrochet_position: 920,40
 __PrivCrochet_tags: 
 title: after
 ---
@@ -17,6 +17,12 @@ Ready to head out?
 -> No (Go back)
 
 -> Go to class #continue
+    // GenderMeter Check
+    <<if $name == "Charlotte">>
+        <<changeGenderMeter(10)>>
+    <<else>>
+        <<changeGenderMeter(-10)>>
+    <<endif>>
     <<goto_room_class_2()>>
 ===
 __PrivCrochet_colorID: 0

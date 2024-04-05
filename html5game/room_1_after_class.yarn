@@ -28,6 +28,13 @@ title: door
     -> No (Go back)
 
     -> Yes (Go to school) #continue
+        // GenderMeter Check
+        <<if $name == "Charlotte">>
+            <<changeGenderMeter(10)>>
+        <<else>>
+            <<changeGenderMeter(-10)>>
+        <<endif>>
+
         <<goto_room_cca_1()>>        
 <<endif>>
 ===

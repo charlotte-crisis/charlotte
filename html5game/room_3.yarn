@@ -17,6 +17,13 @@ Ready to head out?
 -> No (Go back)
 
 -> Go to class #continue
+
+    // GenderMeter Check
+    <<if $name == "Charlotte">>
+        <<changeGenderMeter(10)>>
+    <<else>>
+        <<changeGenderMeter(-10)>>
+    <<endif>>
     <<goto_room_class_3()>>
 ===
 __PrivCrochet_colorID: 0
