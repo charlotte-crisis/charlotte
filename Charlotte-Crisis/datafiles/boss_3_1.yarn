@@ -61,7 +61,7 @@ Mother: "So why you come back today?"
     Leave the house, go back to your room and we'll settle this. 
     //(Go to the door, cut to black. Load in hostel room and start BOSS 3.2)
 
--> "Actually, got something important I want to tell you…"
+-> "Actually, got something important I want to tell you..."
     Mother: "What happen?"
     Before you rip the bandaid off...
     -> "It's going to be a hard truth."#skillcheck #emp # 11
@@ -124,14 +124,14 @@ Mother: "So, what do you want to tell me?"
     <<jump 3_1>>
 -> "I got a girl pregnant!"
     Mother: "WHAT?"
-    You: "Uh…"
+    You: "Uh..."
     Mother: "Why you do that??"
     Mother: "Who is the girl?"
-    Mother: "Oh my god…"
+    Mother: "Oh my god..."
     -> "That's right. I'll get her an abortion."
-        Mother: "Okay… you cannot play around with girls like this in future hor."
-        Mother: "I know you need to do… things… but don't be so careless, can?"
-        Mother: "Later you kena AIDS or what… like the gays…"
+        Mother: "Okay... you cannot play around with girls like this in future hor."
+        Mother: "I know you need to do... things... but don't be so careless, can?"
+        Mother: "Later you kena AIDS or what... like the gays..."
         She keeps lecturing you about safe sex. There is no chance to tell the truth.
         But this isn't over. Charlotte still needs closure.
         Leave the house, go back to your room and we'll settle this. 
@@ -142,7 +142,7 @@ Mother: "So, what do you want to tell me?"
         Mother: "Har?"
         You: "Yes, no one is pregnant. I didn't have sex with anyone."
         Mother: "Why you lie to me?"
-        Mother: "Don't scare me like this leh…"
+        Mother: "Don't scare me like this leh..."
         You: "I'm sorry... but I promise, the news is not that bad."
         Mother: "I don't appreciate this."
         <<changeConfidence(-5)>>
@@ -160,14 +160,14 @@ You: "You know. The one where I wear dress and makeup."
 Mother is struggling to keep her feelings in.
 You: "So I just wanted to tell you, I am a crossdresser."
 Mother: "Why are you like this?"
--> "I don't know…"
+-> "I don't know..."
     Mother: "Don't know, don't know, everything also don't know..."
     Mother: "Just know how to disappoint me only."
 -> "I am who I am."
     You: "Why, don't like ah?"
     Mother: "Of course not la!"
     Mother: "You look until like ah gua like that, don't feel embarrassed meh?"
--> "Are you… okay?"
+-> "Are you... okay?"
     Mother: "I didn't raise you like this."
     Mother: "Why are you doing this to me?"
 -> "There's no need for you to feel sad."
@@ -830,7 +830,7 @@ __PrivCrochet_tags:
 title: 6
 ---
 Mother: "Then what about your future?"
-Mother: "You go to boys' school, NS… you were already trained to be a man."
+Mother: "You go to boys' school, NS... you were already trained to be a man."
 Mother: "But like this... how will you find a job? A girlfriend?"
 Mother: "Please. Don't throw away your future just to do this stupid thing."
 
