@@ -1,12 +1,12 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -80,-80
+__PrivCrochet_position: -76,-76
 __PrivCrochet_tags: 
 title: 1
 ---
 You: "Hey, Joanne!"
 Joanne: "Hello!"
-<<set $start_J_rs = getRelationship("J")>> //get joanne relationship
+<<set $start_J_rs = getRelationship("J")>>
 // For reference, this works <<set $start_sis_rs = getRelationship("Si")>>
 
 <<if $name == "Charlotte">>
@@ -318,7 +318,7 @@ Joanne: "Sorry for rambling on. I know guys don't get it, but it's really import
 <<jump 4>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 400,-200
+__PrivCrochet_position: 384,-205
 __PrivCrochet_tags: 
 title: 3
 ---
@@ -332,7 +332,7 @@ Maybe you were... (-5% confidence)
 <<stop>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 400,40
+__PrivCrochet_position: 405,49
 __PrivCrochet_tags: 
 title: 4
 ---

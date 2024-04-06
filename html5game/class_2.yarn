@@ -209,7 +209,7 @@ Chenjie: "Moving to the next question then... Who determines what beauty is?"
 <<jump 8_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1120,520
+__PrivCrochet_position: 1120,516
 __PrivCrochet_tags: 
 title: 9
 ---
@@ -221,174 +221,10 @@ Joanne: "Look, are we just going to straight up ignore the fact that you are a c
 You: "What...?"
 Joanne: "Us girls get made fun of for not looking girly enough, or looking too girly, or being too fat or not curvy enough."
 Joanne: "And you get to just dress up and pretend to be a girl for fun?"
-
--> "I know women face a lot of unfair criticism and scrutiny for their appearance."
-    You: "We need to stop forcing unrealistic beauty standards on women, and learn to accept the diversity in women."
-    You: "And I don't think my crossdressing works against this."
-    <<if getRelationship("CJ") >= 30>>
-        Chenjie: "Yeah, I don't think it's been easy for Charlotte either..."
-        Chenjie: "In a way, maybe she experienced some of the stuff you did too. Especially as a more masculine-looking person."
-        Chenjie: "No offence."
-        <<changeRelationship("CJ", 5)>>
-        You know he means well. (+5% Chenjie relationship)
-        Joanne: "It's not the same. He can just stop being female whenever it's convenient?"
-        Joanne: "Why does he get to just take off all his makeup and go back to being a dude whenever he wants?"
-        Chenjie: "Well... uh..."
-        Chenjie tries to think of a refutation, but in the end, all he could come up with is...
-        Chenjie: "I don't think it's that simple though..."
-    <<else>>
-        Sage: "Yeah, and I'm sure she has also faced a similar kind of scrutiny while she was presenting as Charlotte."
-        Sage: "In a sense, she's the same as us."
-        Joanne: "It's not the same! He can just stop being female whenever it's convenient."
-        Joanne: "Why does he get to just take off all his makeup and go back to being a dude whenever he wants?"
-        Sage: "It doesn't work that way!"
-        Joanne: "How so?"
-        Sage frowns, eyes twitching with anger, but she does not utter a word.
-    <<endif>>
-
--> "I'm not pretending to be a woman."
-    You: "I'm not trying to trick or mock anyone. That's not my intention."
-    You: "It's just that dressing like this feels natural and comfortable for me."
-    Joanne: "And what exactly is so natural and comfortable about it?"
-    Joanne: "You literally have no idea how much women like Sage and I had to suffer just by being women."
-    <<if ($emp >= 5) or (getRelationship("S") >= 30)>>
-        Sage squirms in uneasiness.
-    <<endif>>
-    Joanne: "I was always made fun of in school because I was boyish. And I had to deal with periods, and makeup, and clothes."
-    <<addExperience(5)>>
-    Joanne: "After women have suffered so much for the way they look, why do you get to feel comfortable dressing up like one?" (+5 XP)
-    Chenjie: "But don't we want everyone to feel comfortable however they choose to dress?" 
-    Joanne: "Okay, so a man's comfort should be prioritised over the very real problems women face." 
-    <<changeConfidence(-5)>>
-    <<changeRelationship("J", -5)>>
-    Joanne: "Amazing." (-5% confidence) (-5% Joanne relationship)
-
--> "We are fighting the same fight." #skillcheck #emp # 8
-    <<set $diceroll = diceRoll($emp)>>
-    [You rolled a {$diceroll}.]
-    <<if $diceroll >= 8>>
-        You can almost see it.
-        The image of a younger Joanne — struggling in her femininity, criticised for the way she looked and dressed, trying to find her place.
-        She is a lot like you in some ways. 
-        But she struggles to see that because most of her life, she understood the world as men vs women. 
-        <<addExperience(10)>>
-        Arguing with her any further would only make her more defensive. You see that now. (+10 XP)
-        You take a deep breath.
-        You: "I'm sorry you had to deal with so much criticism and hardships growing up as a girl." 
-        You: "It's awful that girls and women are constantly pressured to reach an impossible standard."
-        <<changeRelationship("J", 5)>>
-        Joanne: "Yeah, we shouldn't be expected to all look like supermodels or like we've done plastic surgery." (+5% Joanne relationship)
-        Joanne: "My family also frequently criticises me for not wearing any makeup, and say that I'm not putting any effort into myself."
-        You: "There are endless ways to be feminine, and all of them are valid." 
-        You: "Why can't we be accepted for the way we look, whether it's by our own choice or because we were born that way?"
-        You: "Aren't we essentially all fighting for acceptance for the way we express our femininity?"
-        Joanne hesitates.
-        <<changeConfidence(5)>>
-        You: "Maybe we won't see eye to eye on this. But this can be just food for thought." (+5% confidence)
-        Joanne: "Fine."
-        Chenjie: "Maybe we should get back to the discussion questions?"
-        <<jump 10>>
-    <<else>>
-        Joanne: "How so?"
-        You: "You want women to be less criticised for the way they look, right?" 
-        You: "Why not a woman who looks like a man or isn't conventionally feminine?"
-        Sage: "Yeah... I mean, isn't the whole point to be more accepting of all kinds of women?"
-        Joanne: "There has to be a limit." 
-        Chenjie: "Why?"
-        <<changeRelationship("J", -10)>>
-        Joanne: "Because men like him are a threat to what it means to be a woman. They dismiss all our sufferings." (-10% Joanne relationship)
-        Joanne: "He's encroaching the safe spaces built for women to avoid having to deal with sexist men in the first place."
-        
-        -> "I'm not trying to hurt anyone."
-            You: "I'm also trying to live my life. I'm not hurting anyone by simply existing, am I?"
-            Joanne: "You are disrespecting women."
-            Sage: "I don't think dressing femininely is a disrespect."
-            Sage: "Aren't we all just human beings trying to survive and find a way to live in this world? Why can't we treat others with more kindness and understanding?"
-            Joanne: "I don't think I can understand people like him."
-            Chenjie: "You can still treat someone with kindness even if you don't understand them, right?"
-            Chenjie: "You don't have to understand someone's religion in order to respect them, right?"
-            Joanne: "Ugh! I give up! This is a three-against-one anyway." 
-            Joanne huffs and crosses her arms.
-            It looks like that for the rest of the discussion, she won't be speaking.
-            Chenjie looks a bit at a loss. 
-            Chenjie: "Let's just... uh... continue with the class discussion."
-            <<jump 10>>
-            
-        -> "How does crossdressing dismiss your sufferings?"
-            Joanne: "It's not just crossdressing though, is it? It's that you are saying you're a woman."
-            Joanne: "You're speaking over the voices of real women."
-            You never once said to her that you were a woman. 
-            
-            -> "Don't put words in my mouth."
-                You: "I only said that I'm a crossdresser."
-                You: "Yes, I'm questioning my gender, but I never claimed once to be a woman."
-                Joanne: "So what?  You're still speaking over real women."
-                <<changeConfidence(-5)>>
-                Joanne: "I don't care if your gender is attack helicopter or whatever. People like you should be locked up in IMH." (-5% confidence)
-
-                <<goto_black_room()>>
-                <<changeRelationship("S", -5)>>
-                Sage stands up abruptly. (-5% Sage relationship)
-                Sage: "I need to use the toilet."
-                // ((Maybe have an animation of Sage leaving the room with no dialogue.))
-
-                <<goto_room_class_1_discussion_sageleft()>>
-                Joanne: "Was what I was saying so wrong?"
-                Chenjie: "Let's... uh... just continue without her first...?"
-                <<jump 11>>
-        
-            -> "How so?"
-                You: "I'm not dismissing your experiences with misogyny or sexism."
-                You: "I just want to add my own experiences as someone whose experience is different as a crossdresser."
-                Chenjie: "Yeah, let's not dismiss any of the experiences and opinions brought up here."
-                <<addExperience(5)>>
-                Sage: "In some ways, Charlotte may have some insight into gender and sexism that we haven't heard of." (+5 XP)
-                <<changeConfidence(5)>>
-                Sage: "And she probably has faced a lot of scrutiny while crossdressing too so if anything, I think she also understands how unfair beauty standards are." (+5% confidence)
-                Joanne: "Ugh! I give up! This is a three-against-one anyway."
-                Joanne huffs and crosses her arms.
-                It looks like that for the rest of the discussion, she won't be speaking.
-                Chenjie looks a bit at a loss.
-                Chenjie: "Let's just... uh... continue with the class discussion."
-                <<jump 10>>
-        
-        -> Stay silent
-            <<changeRelationship("S", 5)>>
-            Sage: "I don't think she is." (+5% Sage relationship)
-            Sage: "I think people like Charlotte deserve a safe space as much as cis women do."
-            Sage: "If anything, they face a lot of discrimination and they have to work hard to pass as women so they don't get targeted by bigots."
-            Chenjie: "Yeah, let's treat each other with kindness and respect."
-            Chenjie: "I think you've really hurt Charlotte with your remarks."
-            Joanne: "Ugh! I give up! This is a three-against-one anyway."
-            Joanne huffs and crosses her arms.
-            It looks like that for the rest of the discussion, she won't be speaking.
-            Chenjie looks a bit at a loss.
-            Chenjie: "Let's just... uh... continue with the class discussion."
-            <<jump 10>>
-
--> "I'm not going to argue with you about this."
-    Joanne: "Yeah, typical."
-    Joanne: "Running away from an argument you know you can't win." 
-    You try to tell yourself that there is no shame in refusing to argue with someone who refuses to change their mind.
-    Why exhaust yourself with a fruitless argument?
-    <<changeConfidence(-5)>>
-    But it doesn't work that well. (-5% confidence)
-    <<changeRelationship("CJ", 5)>>
-    Chenjie: "Hey, I don't think it's been easy for Charlotte either..." (+5% Chenjie relationship)
-    Joanne: "He can just stop being a 'girl' whenever he wants. How is it not easy for him?"
-    Sage: "Stopping is not as straightforward as you think."
-    <<addExperience(5)>>
-    Sage: "Gender dysphoria is something that is deeply uncomfortable, and questioning your identity takes a lot of work and courage." (+5 XP)
-    Sage: "There's really no harm in being compassionate to people, even if you don't 100% understand their troubles."
-    Joanne: "Ugh! I give up! This is a three-against-one anyway."
-    Joanne huffs and crosses her arms.
-    It looks like that for the rest of the discussion, she won't be speaking.
-    Chenjie looks a bit at a loss.
-    Chenjie: "Let's just... uh... continue with the class discussion."
-    <<jump 10>>
+<<jump 9_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1120,280
+__PrivCrochet_position: 1107,-228
 __PrivCrochet_tags: 
 title: 10
 ---
@@ -429,7 +265,7 @@ You: "We talked about..."
 <<jump 13>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1357,36
+__PrivCrochet_position: 1614,285
 __PrivCrochet_tags: 
 title: 13
 ---
@@ -458,7 +294,7 @@ Who will you walk with today?
     <<jump 16>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1360,520
+__PrivCrochet_position: 1369,532
 __PrivCrochet_tags: 
 title: 11
 ---
@@ -480,7 +316,7 @@ Prof Lim: "Perhaps, someone should check on her."
 <<jump 12>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1360,280
+__PrivCrochet_position: 1617,529
 __PrivCrochet_tags: 
 title: 12
 ---
@@ -518,7 +354,7 @@ She looks a bit exhausted.
 <<jump 13>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1600,40
+__PrivCrochet_position: 1857,289
 __PrivCrochet_tags: 
 title: 14
 ---
@@ -599,7 +435,7 @@ Chenjie: "And so today's lecture got me thinking about, well, if my physical app
 <<goto_room_bedroom_after_class2()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1600,280
+__PrivCrochet_position: 1857,529
 __PrivCrochet_tags: 
 title: 15
 ---
@@ -663,7 +499,7 @@ Joanne: "I mean, I didn't think my boyfriend would appreciate that."
 <<goto_room_bedroom_after_class2()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1619,518
+__PrivCrochet_position: 1854,749
 __PrivCrochet_tags: 
 title: 16
 ---
@@ -845,7 +681,7 @@ Joanne: "And makeup is actually so bad for your skin. Just caking your face with
     <<jump 10>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1576,767
+__PrivCrochet_position: 1856,983
 __PrivCrochet_tags: 
 title: 12_alone
 ---
@@ -923,10 +759,207 @@ Joanne: "That's basically a non-answer. Obviously it's society, but what part of
 <<jump 8_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1360,-240
+__PrivCrochet_position: 1619,28
 __PrivCrochet_tags: 
 title: debug_end
 ---
 Skipped to the end.
 <<jump 13>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1119,292
+__PrivCrochet_tags: 
+title: 9_options
+---
+What will you say?
+-> "I know women face a lot of unfair criticism and scrutiny for their appearance." <<if !optionChosen()>>
+    <<jump 9_1>>
+-> "I'm not pretending to be a woman." <<if !optionChosen()>>
+    <<jump 9_2>>
+-> "We are fighting the same fight." #skillcheck #emp # 8
+    <<jump 9_3>>
+-> "I'm not going to argue with you about this."
+    <<jump 9_4>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 892,33
+__PrivCrochet_tags: 
+title: 9_1
+---
+You: "We need to stop forcing unrealistic beauty standards on women, and learn to accept the diversity in women."
+You: "And I don't think my crossdressing works against this."
+<<if getRelationship("CJ") >= 30>>
+    Chenjie: "Yeah, I don't think it's been easy for Charlotte either..."
+    Chenjie: "In a way, maybe she experienced some of the stuff you did too. Especially as a more masculine-looking person."
+    Chenjie: "No offence."
+    <<changeRelationship("CJ", 5)>>
+    You know he means well. (+5% Chenjie relationship)
+    Joanne: "It's not the same. He can just stop being female whenever it's convenient?"
+    Joanne: "Why does he get to just take off all his makeup and go back to being a dude whenever he wants?"
+    Chenjie: "Well... uh..."
+    Chenjie tries to think of a refutation, but in the end, all he could come up with is...
+    Chenjie: "I don't think it's that simple though..."
+<<else>>
+    Sage: "Yeah, and I'm sure she has also faced a similar kind of scrutiny while she was presenting as Charlotte."
+    Sage: "In a sense, she's the same as us."
+    Joanne: "It's not the same! He can just stop being female whenever it's convenient."
+    Joanne: "Why does he get to just take off all his makeup and go back to being a dude whenever he wants?"
+    Sage: "It doesn't work that way!"
+    Joanne: "How so?"
+    Sage frowns, eyes twitching with anger, but she does not utter a word.
+<<endif>>
+<<jump 9_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1123,42
+__PrivCrochet_tags: 
+title: 9_2
+---
+You: "I'm not trying to trick or mock anyone. That's not my intention."
+You: "It's just that dressing like this feels natural and comfortable for me."
+Joanne: "And what exactly is so natural and comfortable about it?"
+Joanne: "You literally have no idea how much women like Sage and I had to suffer just by being women."
+<<if ($emp >= 5) or (getRelationship("S") >= 30)>>
+    Sage squirms in uneasiness.
+<<endif>>
+Joanne: "I was always made fun of in school because I was boyish. And I had to deal with periods, and makeup, and clothes."
+<<addExperience(5)>>
+Joanne: "After women have suffered so much for the way they look, why do you get to feel comfortable dressing up like one?" (+5 XP)
+Chenjie: "But don't we want everyone to feel comfortable however they choose to dress?" 
+Joanne: "Okay, so a man's comfort should be prioritised over the very real problems women face." 
+<<changeConfidence(-5)>>
+<<changeRelationship("J", -5)>>
+Joanne: "Amazing." (-5% confidence) (-5% Joanne relationship)
+<<jump 9_options>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1366,38
+__PrivCrochet_tags: 
+title: 9_3
+---
+<<set $diceroll = diceRoll($emp)>>
+[You rolled a {$diceroll}.]
+<<if $diceroll >= 8>>
+    You can almost see it.
+    The image of a younger Joanne — struggling in her femininity, criticised for the way she looked and dressed, trying to find her place.
+    She is a lot like you in some ways. 
+    But she struggles to see that because most of her life, she understood the world as men vs women. 
+    <<addExperience(10)>>
+    Arguing with her any further would only make her more defensive. You see that now. (+10 XP)
+    You take a deep breath.
+    You: "I'm sorry you had to deal with so much criticism and hardships growing up as a girl." 
+    You: "It's awful that girls and women are constantly pressured to reach an impossible standard."
+    <<changeRelationship("J", 5)>>
+    Joanne: "Yeah, we shouldn't be expected to all look like supermodels or like we've done plastic surgery." (+5% Joanne relationship)
+    Joanne: "My family also frequently criticises me for not wearing any makeup, and say that I'm not putting any effort into myself."
+    You: "There are endless ways to be feminine, and all of them are valid." 
+    You: "Why can't we be accepted for the way we look, whether it's by our own choice or because we were born that way?"
+    You: "Aren't we essentially all fighting for acceptance for the way we express our femininity?"
+    Joanne hesitates.
+    <<changeConfidence(5)>>
+    You: "Maybe we won't see eye to eye on this. But this can be just food for thought." (+5% confidence)
+    Joanne: "Fine."
+    Chenjie: "Maybe we should get back to the discussion questions?"
+    <<jump 10>>
+<<else>>
+    Joanne: "How so?"
+    You: "You want women to be less criticised for the way they look, right?" 
+    You: "Why not a woman who looks like a man or isn't conventionally feminine?"
+    Sage: "Yeah... I mean, isn't the whole point to be more accepting of all kinds of women?"
+    Joanne: "There has to be a limit." 
+    Chenjie: "Why?"
+    <<changeRelationship("J", -10)>>
+    Joanne: "Because men like him are a threat to what it means to be a woman. They dismiss all our sufferings." (-10% Joanne relationship)
+    Joanne: "He's encroaching the safe spaces built for women to avoid having to deal with sexist men in the first place."
+    
+    -> "I'm not trying to hurt anyone."
+        You: "I'm also trying to live my life. I'm not hurting anyone by simply existing, am I?"
+        Joanne: "You are disrespecting women."
+        Sage: "I don't think dressing femininely is a disrespect."
+        Sage: "Aren't we all just human beings trying to survive and find a way to live in this world? Why can't we treat others with more kindness and understanding?"
+        Joanne: "I don't think I can understand people like him."
+        Chenjie: "You can still treat someone with kindness even if you don't understand them, right?"
+        Chenjie: "You don't have to understand someone's religion in order to respect them, right?"
+        Joanne: "Ugh! I give up! This is a three-against-one anyway." 
+        Joanne huffs and crosses her arms.
+        It looks like that for the rest of the discussion, she won't be speaking.
+        Chenjie looks a bit at a loss. 
+        Chenjie: "Let's just... uh... continue with the class discussion."
+        <<jump 10>>
+        
+    -> "How does crossdressing dismiss your sufferings?"
+        Joanne: "It's not just crossdressing though, is it? It's that you are saying you're a woman."
+        Joanne: "You're speaking over the voices of real women."
+        You never once said to her that you were a woman. 
+        
+        -> "Don't put words in my mouth."
+            You: "I only said that I'm a crossdresser."
+            You: "Yes, I'm questioning my gender, but I never claimed once to be a woman."
+            Joanne: "So what?  You're still speaking over real women."
+            <<changeConfidence(-5)>>
+            Joanne: "I don't care if your gender is attack helicopter or whatever. People like you should be locked up in IMH." (-5% confidence)
+                <<goto_black_room()>>
+            <<changeRelationship("S", -5)>>
+            Sage stands up abruptly. (-5% Sage relationship)
+            Sage: "I need to use the toilet."
+            // ((Maybe have an animation of Sage leaving the room with no dialogue.))
+
+            <<goto_room_class_1_discussion_sageleft()>>
+            Joanne: "Was what I was saying so wrong?"
+            Chenjie: "Let's... uh... just continue without her first...?"
+            <<jump 11>>
+        
+        -> "How so?"
+            You: "I'm not dismissing your experiences with misogyny or sexism."
+            You: "I just want to add my own experiences as someone whose experience is different as a crossdresser."
+            Chenjie: "Yeah, let's not dismiss any of the experiences and opinions brought up here."
+            <<addExperience(5)>>
+            Sage: "In some ways, Charlotte may have some insight into gender and sexism that we haven't heard of." (+5 XP)
+            <<changeConfidence(5)>>
+            Sage: "And she probably has faced a lot of scrutiny while crossdressing too so if anything, I think she also understands how unfair beauty standards are." (+5% confidence)
+            Joanne: "Ugh! I give up! This is a three-against-one anyway."
+            Joanne huffs and crosses her arms.
+            It looks like that for the rest of the discussion, she won't be speaking.
+            Chenjie looks a bit at a loss.
+            Chenjie: "Let's just... uh... continue with the class discussion."
+            <<jump 10>>
+        
+    -> Stay silent
+        <<changeRelationship("S", 5)>>
+        Sage: "I don't think she is." (+5% Sage relationship)
+        Sage: "I think people like Charlotte deserve a safe space as much as cis women do."
+        Sage: "If anything, they face a lot of discrimination and they have to work hard to pass as women so they don't get targeted by bigots."
+        Chenjie: "Yeah, let's treat each other with kindness and respect."
+        Chenjie: "I think you've really hurt Charlotte with your remarks."
+        Joanne: "Ugh! I give up! This is a three-against-one anyway."
+        Joanne huffs and crosses her arms.
+        It looks like that for the rest of the discussion, she won't be speaking.
+        Chenjie looks a bit at a loss.
+        Chenjie: "Let's just... uh... continue with the class discussion."
+        <<jump 10>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1367,284
+__PrivCrochet_tags: 
+title: 9_4
+---
+Joanne: "Yeah, typical."
+Joanne: "Running away from an argument you know you can't win." 
+You try to tell yourself that there is no shame in refusing to argue with someone who refuses to change their mind.
+Why exhaust yourself with a fruitless argument?
+<<changeConfidence(-5)>>
+But it doesn't work that well. (-5% confidence)
+<<changeRelationship("CJ", 5)>>
+Chenjie: "Hey, I don't think it's been easy for Charlotte either..." (+5% Chenjie relationship)
+Joanne: "He can just stop being a 'girl' whenever he wants. How is it not easy for him?"
+Sage: "Stopping is not as straightforward as you think."
+<<addExperience(5)>>
+Sage: "Gender dysphoria is something that is deeply uncomfortable, and questioning your identity takes a lot of work and courage." (+5 XP)
+Sage: "There's really no harm in being compassionate to people, even if you don't 100% understand their troubles."
+Joanne: "Ugh! I give up! This is a three-against-one anyway."
+Joanne huffs and crosses her arms.
+It looks like that for the rest of the discussion, she won't be speaking.
+Chenjie looks a bit at a loss.
+Chenjie: "Let's just... uh... continue with the class discussion."
+<<jump 10>>
 ===
