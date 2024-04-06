@@ -39,7 +39,7 @@ __PrivCrochet_tags:
 title: 4
 ---
 You: "Morning!"
-<<if ($name == "Charlotte") or (getRelationship("J") < 10)>>
+<<if ($name == "Charlotte") or (getRelationship("J") < 30)>>
     Joanne: "Morning..."
     You: "How was your weekend?"
     Joanne: "Nothing special." 
@@ -446,15 +446,15 @@ Who will you walk with today?
     <<goto_room_bus()>>
     <<jump 12_alone>>
 
-// TODO: are these the correct thresholds?
+// adjusted with correct thresholds
 
--> Chenjie <<if getRelationship("CJ") >= 10>>
+-> Chenjie <<if getRelationship("CJ") >= 30>>
     <<jump 14>>
 
--> Joanne <<if getRelationship("J") >= 10>>
+-> Joanne <<if getRelationship("J") >= 30>>
     <<jump 15>>
 
--> Sage <<if getRelationship("S") >= 10>>
+-> Sage <<if getRelationship("S") >= 30>>
     <<jump 16>>
 ===
 __PrivCrochet_colorID: 0
