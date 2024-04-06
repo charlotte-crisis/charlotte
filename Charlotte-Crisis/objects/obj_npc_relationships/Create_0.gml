@@ -14,6 +14,7 @@ npc_relationships = {
 	"S":  50, // Sage
 	"Si": 50, // Sister
 	"M":  50, // Mother
+	"H":  50, // Helen
 }
 
 npc_knows = {
@@ -24,7 +25,8 @@ npc_knows = {
 	"N":  false, // Nadia
 	"S":  false, //Sage
 	"Si": true,  // Sister
-	"M":  false, // Mother
+	"M":  true, // Mother
+	"H":  true, // Helen
 }
 
 #region Setters and Getters
@@ -75,17 +77,3 @@ npc_knows = {
 	}
 
 #endregion
-
-
-
-
-
-
-
-
-
-
-
-
-
-
