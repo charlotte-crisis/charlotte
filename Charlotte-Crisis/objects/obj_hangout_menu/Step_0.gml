@@ -25,7 +25,10 @@ if (keyboard_check_pressed(vk_space)) {
 		}
 	} else {
 		obj_player.set_is_interacting(false);
-		script_execute(goto_functions[select_row][select_col]);
+		with (obj_chatterbox_control) {
+			other.goto_functions[other.select_row][other.select_col]();
+		}
+		
 		instance_destroy(self); // might not be needed as it's not persistent.
 	}
 }
