@@ -99,6 +99,7 @@ function draw_speaker_portrait(name) {
 			draw_sprite_ext(spr_cj_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);			
 			break;
 		case "ELEANOR":
+		case "NEW GIRL":
 			draw_sprite_ext(spr_e_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 			break;
 		case "HELEN":

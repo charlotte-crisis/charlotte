@@ -103,6 +103,11 @@ function open_wardrobe_menu() {
 	obj_player.set_is_interacting(true);
 }
 
+function open_hangout_menu() {
+	instance_create_layer(x, y, "Helpers", obj_hangout_menu);
+	obj_player.set_is_interacting(true);
+}
+
 function load_yarn_files() {
 	// TODO: Load all the chatterbox yarn source files at one go.
 	// Use file_find_first(working_directory + "*.yarn", fa_none);

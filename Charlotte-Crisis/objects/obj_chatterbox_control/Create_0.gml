@@ -64,6 +64,7 @@ BG_ALPHA = 0.9;
 	ChatterboxAddFunction("addExperience", add_experience);
 	
 	ChatterboxAddFunction("openStatMenu", open_stat_menu);
+	ChatterboxAddFunction("openHangoutMenu", open_hangout_menu);
 	ChatterboxAddFunction("openWardrobeMenu", open_wardrobe_menu);
 	
 	/// Door Functions here
