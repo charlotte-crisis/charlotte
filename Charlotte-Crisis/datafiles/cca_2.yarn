@@ -112,7 +112,7 @@ You: "Alright, here goes..."
             Eleanor shoots you a quick glare. (-5% confidence)
         <<endif>>
         
-    -> "Sunsets are nature's art." #skillcheck #int #8
+    -> "Sunsets are nature's art." #skillcheck #int # 8
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 8>>
@@ -260,7 +260,7 @@ Vera: "What's wrong with having a preference? At least she's got something to be
         Anthony: "Keep your nose out of other people's business." (-5% confidence)
         Vera rolls her eyes.
 
--> "It's Nadia's work. Respect it as you would expect us to respect yours." #skillcheck #cha #8
+-> "It's Nadia's work. Respect it as you would expect us to respect yours." #skillcheck #cha # 8
     <<set $diceroll = diceRoll($cha)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll >= 8>>
@@ -304,7 +304,7 @@ Nadia: "I guess so. I mean, maybe people will think we're some butterfly club."
         Vera: "It was never supposed to be only about gender. But I guess we see what we want to see, right?" (-5% confidence)
         Anthony: "I see a bad design." 
         Vera: "I'd pray for you if I still believed. Hope you can find yourself or whatever they say."
-    -> "It's not about gender." #skillcheck #int #8
+    -> "It's not about gender." #skillcheck #int # 8
         Anthony: "Oh yeah? What's it about then?"
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
@@ -324,7 +324,7 @@ Nadia: "I guess so. I mean, maybe people will think we're some butterfly club."
     -> (let's just move on...)
         You don't really feel like escalating this.
 
--> "I'm not a fan of the logo, but I appreciate Vera's efforts." #skillcheck #emp #8
+-> "I'm not a fan of the logo, but I appreciate Vera's efforts." #skillcheck #emp # 8
     It's Vera's turn to sigh.
     <<changeRelationship("V", 5)>>
     Vera: "Thanks, {$name}."
@@ -347,7 +347,7 @@ Nadia: "I guess so. I mean, maybe people will think we're some butterfly club."
         Vera: "Thanks, that was better than a fight." (+5% Vera relationship)
     <<endif>>
 
--> "Isn't there something else that can symbolise inclusivity?" #skillcheck #int #8
+-> "Isn't there something else that can symbolise inclusivity?" #skillcheck #int # 8
     Anthony: "Like what?"
     You think for a moment.
     <<set $diceroll = diceRoll($int)>>
@@ -407,7 +407,7 @@ Vera: "You can't possibly be serious right now."
 -> "Rainbows don't just mean LGBTQ+. Didn't you listen to what she said?"
     Vera: "Thanks, {$name}. At least you get it."
     Anthony: "I still can't shake the association. I don't think our future members will either."
-    -> "You know what else is rainbow coloured? Gaming PCs." #skillcheck #int #8
+    -> "You know what else is rainbow coloured? Gaming PCs." #skillcheck #int # 8
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 8>>
@@ -457,7 +457,7 @@ Vera: "You can't possibly be serious right now."
             Anthony: "Oh, of course. You praise her and then turn around to say she didn't mean that."
             Eleanor: "We don't want to see a club member go. Especially so early in the term - "
             Anthony: "So this is just about filling seats?"
-            -> "Fine. Anthony. We're sorry." #skillcheck #emp #8
+            -> "Fine. Anthony. We're sorry." #skillcheck #emp # 8
                 <<set $diceroll = diceRoll($emp)>>
                 [You rolled a {$diceroll}.]
                 <<if $diceroll < 8>>
@@ -480,7 +480,7 @@ Vera: "You can't possibly be serious right now."
                     You: "Then I know it's difficult to understand at first. And your first time getting to know a queer person, you got scolded."
                     You: "That must feel bad. So on behalf of Vera, I'd say sorry."
                     Vera: "I don't need you to apologise for me."
-                    -> "Of course. I want you to apologise to him." #skillcheck #int #8
+                    -> "Of course. I want you to apologise to him." #skillcheck #int # 8
                         <<set $diceroll = diceRoll($int)>>
                         [You rolled a {$diceroll}.]
                         <<if $diceroll >= 8>>
@@ -507,7 +507,7 @@ Vera: "You can't possibly be serious right now."
             He looks right at you.
             <<changeRelationship("A", -10)>>
             Anthony: "Good riddance." (-10% Anthony relationship)
-    -> "Uh, Vera, that was kind of rude..." #skillcheck #emp #8
+    -> "Uh, Vera, that was kind of rude..." #skillcheck #emp # 8
         You: "I know you're pissed off at Anthony. But we have to be the bigger person here."
         <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
@@ -581,7 +581,7 @@ Vera: "You can't possibly be serious right now."
     Vera: "Sorry. It's just... so hard to explain this sometimes, you know?"
     You realise the burden is now on you to explain.
 
-    -> "Anthony, no one's forcing you to wear this." #skillcheck #cha #8
+    -> "Anthony, no one's forcing you to wear this." #skillcheck #cha # 8
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 8>>        
@@ -606,7 +606,7 @@ Vera: "You can't possibly be serious right now."
             <<changeConfidence(-5)>>
             No one wants to hear that they need to calm down, especially when they're not calm. (-5% confidence)
         <<endif>>
-    -> "Anthony, we're sorry." #skillcheck #emp #8
+    -> "Anthony, we're sorry." #skillcheck #emp # 8
         <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 8>>
@@ -707,7 +707,7 @@ Vera: "What do you think we should do about him?"
 
 -> "Vera. You have to let this go."
     Vera: "Oh sure, let me just forget about the guy who's been making life so tough for us here. So simple!"
-    -> "Have you ever wanted to throw a hot coal at someone before?" #skillcheck #emp #8
+    -> "Have you ever wanted to throw a hot coal at someone before?" #skillcheck #emp # 8
         Vera: "That's oddly specific."
         You: "Well I haven't either. But the fact that you're holding it, means you're the one getting burned."
         Vera: "Then I'd just throw it already."
@@ -807,7 +807,7 @@ Anthony: "Haven't you seen? She is actually he. How can a woman be taller than m
         You: "If she doesn't want to bring attention to it, that is her right."
         Anthony: "So he's ashamed of what he does."
         You: "You know what? You're impossible to deal with. I'm done here."
-    -> "Why don't you bring that up to her face, huh? See how she reacts." #skillcheck #cha #8
+    -> "Why don't you bring that up to her face, huh? See how she reacts." #skillcheck #cha # 8
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 8>>
@@ -896,4 +896,12 @@ Do you wish to sit? (Will start the session)
     <<goto_room_cca_2_seated()>>
     <<jump 2>>
 //spawn in Nadia and Eleanor
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2840,720
+__PrivCrochet_tags: 
+title: debug_end
+---
+DEBUG: skipped to the end
+<<jump exit>>
 ===
