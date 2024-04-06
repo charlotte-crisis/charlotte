@@ -19,6 +19,9 @@ if (keyboard_check_pressed(vk_space)) {
 			instance_destroy(self);
 		} else if (select_row == 1) {
 			// skip to next scene
+			obj_player.set_is_interacting(false);
+			goto_room_bedroom_afterHangout();
+			instance_destroy(self);
 		}
 	} else {
 		obj_player.set_is_interacting(false);
