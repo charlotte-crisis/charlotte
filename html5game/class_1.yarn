@@ -27,7 +27,7 @@ You: "Hello!"
 Chenjie: "Hi! Class is starting soon. You should sit down."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 520,599
+__PrivCrochet_position: 519,598
 __PrivCrochet_tags: 
 title: 4
 ---
@@ -54,7 +54,7 @@ Bored, you start fiddling with your laptop.
 <<jump 5_tutorial>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1000,360
+__PrivCrochet_position: 1001,358
 __PrivCrochet_tags: 
 title: 6
 ---
@@ -96,14 +96,15 @@ But do you even want to be Charlotte, right now?
 -> Introduce yourself as both Charlotte and Charles.
     You: "I'm {$name}, Year 4. I'm a crossdresser actually so I go by both she/her and he/him pronouns."
     You: "It depends on if I'm dressed as Charlotte or Charles on that day."
-    <<changeConfidence(5)>>
     <<changeRelationship("S",5)>>
     Sage: "Oh! Crossdressing? That's honestly so cool." (+5% Sage relationship) 
-
+    <<changeConfidence(5)>>
+    Felt good to say that, right?
+    
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1240,360
+__PrivCrochet_position: 1236,356
 __PrivCrochet_tags: 
 title: 7
 ---
@@ -115,7 +116,7 @@ Joanne is silent.
     Joanne: "What? I didn't even say anything."
     You: "You look like you have something to say."
     <<changeRelationship("CJ", -5)>>
-    Chenjie: "Guys, come on. Let's chill, okay?" 
+    Chenjie: "Guys, come on. Let's chill, okay?" (-5% Chenjie relationship)
     Maybe it's best not to push it.
 
 -> Move on
@@ -143,7 +144,7 @@ You like playing table tennis, crossdressing and gaming. Which should you say he
     Joanne: "Yeah, it's a bit tricky arranging to play table tennis because you need equipment and an opponent, right?"
     You: "If any of you want, you could come to my RC. We have a table."
     <<changeRelationship("CJ", 5)>>
-    Chenjie: "Really? Sweet!" 
+    Chenjie: "Really? Sweet!" (+5% Chenjie relationship)
 
 -> Crossdressing
     Chenjie: "How did you start?"
@@ -154,7 +155,7 @@ You like playing table tennis, crossdressing and gaming. Which should you say he
     Joanne: "Don't you get weird stares?"
     You: "Sometimes... But I think it's bothering me less and less these days."
     <<changeRelationship("S", 5)>>
-    Sage: "That's nice." 
+    Sage: "That's nice." (+5% Sage relationship)
 
 -> Gaming
     Chenjie: "What kind of games?"
@@ -162,7 +163,7 @@ You like playing table tennis, crossdressing and gaming. Which should you say he
     Joanne: "Oh... I'm not really into that. I play cosy games."
     You: "Oh, like Stardew Valley or Spiritfarer?"
     <<changeRelationship("J", 5)>>
-    Joanne: "Yes! Both of those!" 
+    Joanne: "Yes! Both of those!" (+5% Joanne relationship)
     Joanne: " I logged sooo many hours into Stardew already."
     You: "I've played a bit of Spiritfarer but not Stardew Valley yet."
     Joanne: "If you need any tips and tricks or advice on what mods to use, just ask me."
@@ -195,7 +196,7 @@ Chenjie: "The semester's barely started and I already have a backlog."
 <<jump 10_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2200,360
+__PrivCrochet_position: 2197,356
 __PrivCrochet_tags: 
 title: 11
 ---
@@ -271,7 +272,8 @@ You: "Yeah, so feminism to me is..."
             Chenjie: "Dehumanising?"
             You: "Yeah. You're saying 'get used to' like LGBTQ people are a nuisance."
             Joanne: "I'm sure he didn't mean it that way."
-            Chenjie: "Yeah, man. Sorry, okay?" <<changeRelationship("CJ", -5)>>
+            <<changeRelationship("CJ", -5)>>
+            Chenjie: "Yeah, man. Sorry, okay?" (-5% Chenjie relationship) 
             Chenjie: "I don't really have much experience talking to gay and lesbian people. I don't know what the right way of saying things is."
         <<else>>
             You: "But you mean that you haven't personally seen many LGBTQ people out and about in Singapore often, right?"
@@ -355,7 +357,8 @@ Chenjie: "I hate cockroaches."
         You: "Women, am I right? They're always scared of cockroaches and stuff so you just have to man up."
         Chenjie hesitates for a second. 
         Chenjie: "What the hell does that even mean?"
-        Chenjie: "Why must you bring gender into this? Then are men who are scared of cockroaches effeminate?" <<changeRelationship("CJ", -5)>>
+        <<changeRelationship("CJ", -5)>>
+        Chenjie: "Why must you bring gender into this? Then are men who are scared of cockroaches effeminate?" (-5% Chenjie relationship)
         You: "I didn't say that."
         Chenjie: "You didn't have to. It's implied."
         Oops.
@@ -367,9 +370,9 @@ Chenjie: "I hate cockroaches."
         You: "I usually just smack them with a slipper. More direct that way."
         Chenjie: "I guess... I really hate seeing the squashed bits. Honestly, I can barely stomach it."
 	    <<changeRelationship("CJ", 5)>>
-        Chenjie: "A lot of people call me girly for that. But it's really too disgusting." 
-        You get the feeling he doesn't just tell this to anyone. (+5 XP) 
+        Chenjie: "A lot of people call me girly for that. But it's really too disgusting." (+5% Chenjie relationship)
         <<addExperience(5)>>
+        You get the feeling he doesn't just tell this to anyone. (+5 XP) 
         Chenjie: "Hey, look. My bus is here. See you next week."
         You: "See you!"
     <<endif>>
@@ -386,7 +389,7 @@ Chenjie: "I hate cockroaches."
     Chenjie: "Oh! That's my bus. See you next week!"
     You: "See you! And all the best with that cockroach."
     <<changeRelationship("CJ", 5)>>
-    Chenjie: "Thanks! Haha!" 
+    Chenjie: "Thanks! Haha!" (+5% Chenjie relationship)
 
 <<addExperience(30)>>
 (+30 XP)
@@ -442,9 +445,11 @@ Joanne: "Out of curiosity, what made you choose this course?"
 
     -> "No, I know I'm not a girl."
         You: "I just think dresses are nice."
-        Joanne: "Yeah... Being a girl isn't as simple as just putting on a dress though."
+        <<changeRelationship("J",5)>>
+        Joanne: "Yeah... Being a girl isn't as simple as just putting on a dress though." (-5% Joanne relationship)
         Joanne: "I mean, if it's just dressing up for a cosplay or something, it's probably fine."
-        You: "Yeah, you're right..." <<changeRelationship("J",5)>> <<changeConfidence(-5)>>
+        <<changeConfidence(-5)>>
+        You: "Yeah, you're right..." (-5% confidence)
         Joanne: "Is that your bus?"
         You: "Oh, yeah. I think it is. See you next week."
         Joanne: "Yeah, bye!"
@@ -472,7 +477,8 @@ Joanne: "Out of curiosity, what made you choose this course?"
         Joanne: "Yeah, you should properly evaluate your motivation behind pretending to be a girl."
         Joanne: "Women fought so hard just to get equal standing as men today. Being a girl is not as easy as just putting on a skirt."
         Joanne: "And also, you don't want people to mistake you for a pervert, right?"
-        You: "I..." <<changeConfidence(-5)>>
+        <<changeConfidence(-5)>>
+        You: "I..." (-5% confidence)
         You: "Um... I think that's my bus. Bye."
         Joanne: "Okay, bye."
         You: "Um, bye!"
@@ -617,7 +623,7 @@ Is your sister angry at you?
 <<jump 6>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2200,880
+__PrivCrochet_position: 2196,878
 __PrivCrochet_tags: 
 title: 16
 ---
@@ -630,7 +636,7 @@ Chenjie: "Right?"
 
 -> "Yeah, Singapore is not as bad as other countries."
     <<changeRelationship("S", -5)>>
-    Sage: "Admittedly, in some ways, Singapore is not as bad but... it's still not exactly equal either." 
+    Sage: "Admittedly, in some ways, Singapore is not as bad but... it's still not exactly equal either." (-5% Sage relationship)
     You: "You really haven't seen how bad it can get overseas."
     You: "In Japan, a lot of women can't even get high status jobs. A lot of them get stuck as clerks or something and don't get promoted."
     Chenjie: "I mean, granted, it's a complicated issue, right? You just can't please everyone in politics."
@@ -646,7 +652,7 @@ Chenjie: "Right?"
             <<changeRelationship("J", -5)>>
             Joanne: "It makes you wonder if they have ulterior motives." (-5% Joanne relationship)
             Joanne glances at you.
-            But before you could process that split-second reaction...)
+            But before you could process that split-second reaction...
         <<else>>
             <<changeRelationship("J", 5)>>
             You: "It's hard to support feminists if they constantly cause a huge fuss about things that don't matter in the grand scheme." (+5% Joanne relationship)
@@ -661,11 +667,11 @@ Chenjie: "Right?"
     -> "It depends..."
         You: "Discrimination still sometimes happens in Singapore."
         You: "I think it's about striking a good balance, and making sure that we hear out the problems and evaluate for ourselves if it's real discrimination or not."
-        <<changeRelationship("CJ", -5)>>
+        <<changeRelationship("CJ", 5)>>
         Chenjie: "Yeah. I mean, we should try to hear as many perspectives as possible." (+5% Chenjie relationship)
         Chenjie: "While it's not so bad in Singapore, those occasional instances of sexism need to be properly addressed."
-        You: "Exactly. It's a matter of perspective and trying to find a middle ground." (+5 XP)
         <<addExperience(5)>>
+        You: "Exactly. It's a matter of perspective and trying to find a middle ground." (+5 XP)
         Sage: "I guess so..."
         <<jump 12>>
 
@@ -679,7 +685,7 @@ Chenjie: "Right?"
     <<jump 16_NS>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2720,880
+__PrivCrochet_position: 2718,877
 __PrivCrochet_tags: 
 title: 17
 ---
@@ -694,7 +700,7 @@ Sage: "I don't think that's being realistic... You're discarding a lot of the re
     Joanne: "If some pervert says he feels like a girl, how are you going to fact check that? Because it's a feeling you just have to trust him?" (-5% confidence) 
     It was like an arrow had been aimed and shot at your mouth.
     Your tongue was pinned down.
-    Sage: "Are you seriously—"
+    Sage: "Are you seriously - "
     Chenjie: "Guys, calm down. No need to get so heated."
     Chenjie: "And, Joanne, you're oversimplifying what trans people go through."
     Chenjie: "It's not nice to deny things just because you yourself don't understand them."
@@ -843,7 +849,7 @@ Nonetheless, you head back to your room.
 <<goto_room_bedroom()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 800,-40
+__PrivCrochet_position: 800,-41
 __PrivCrochet_tags: 
 title: 5_tutorial
 ---
