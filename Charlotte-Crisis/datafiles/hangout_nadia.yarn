@@ -146,7 +146,7 @@ Nadia: "What about your major?"
     <<jump 1_1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -173,-1158
+__PrivCrochet_position: -179,-1171
 __PrivCrochet_tags: 
 title: 1_1_2
 ---
@@ -464,75 +464,75 @@ Nadia: "Who knows, I could be a girlboss someday!"
         You: "Some battles just aren't worth fighting."
         <<jump 1_1_2_options>>
     
-    -> "It must be difficult to understand."
-        Nadia: "Yeah, but I just need to keep working at it, right?"
-        -> "All the best with that."
-            You: "I know with your determination, you can do it!"
-            Nadia: "Aww, thanks!"
-            <<if $cha > 5>>
-                You: "When you make your first million, remember me ah?"
-                Nadia: "Onz! I buy you a nice dress~" (+5% Nadia relationship) 
-                <<changeRelationship("N", 5)>>
-            <<endif>>
+-> "It must be difficult to understand."
+    Nadia: "Yeah, but I just need to keep working at it, right?"
+    -> "All the best with that."
+        You: "I know with your determination, you can do it!"
+        Nadia: "Aww, thanks!"
+        <<if $cha > 5>>
+            You: "When you make your first million, remember me ah?"
+            Nadia: "Onz! I buy you a nice dress~" (+5% Nadia relationship) 
+            <<changeRelationship("N", 5)>>
+        <<endif>>
+        <<jump 1_1_2_options>>
+    -> "Don't burn yourself out."
+        Nadia: "But they're all working so hard..."
+        Nadia: "Some of them even don't care about their studies to do their fintech stuff."
+        Nadia: "If only I had their determination..."
+        -> "So are your school fees going towards fintech?"
+            Nadia: "What?"
+            You: "At the end of the day, are you studying for a degree or just to make friends with them?"
+            You: "A few thousand dollars per sem is a lot of money..."
+            Nadia: "Yeah... I guess I shouldn't just give up on my degree."
+            Nadia: "I know some of them are studying purely for that undergrad status..."
+            Nadia: "But I also want to do well conventionally."
+            You: "Yep. So you can't do that if all your attention is on which coin is going up or whatever they care about."
+            Nadia: "That's true."
             <<jump 1_1_2_options>>
-        -> "Don't burn yourself out."
-            Nadia: "But they're all working so hard..."
-            Nadia: "Some of them even don't care about their studies to do their fintech stuff."
-            Nadia: "If only I had their determination..."
-            -> "So are your school fees going towards fintech?"
-                Nadia: "What?"
-                You: "At the end of the day, are you studying for a degree or just to make friends with them?"
-                You: "A few thousand dollars per sem is a lot of money..."
-                Nadia: "Yeah... I guess I shouldn't just give up on my degree."
-                Nadia: "I know some of them are studying purely for that undergrad status..."
-                Nadia: "But I also want to do well conventionally."
-                You: "Yep. So you can't do that if all your attention is on which coin is going up or whatever they care about."
-                Nadia: "That's true."
-                <<jump 1_1_2_options>>
-            -> "You're not them."
-                You: "They don't know what it's like to be Nadia."
-                You: "And you might not have the capacity or resources to be investing like they do."
-                Nadia: "Yeah, I know, but..."
-                Nadia: "Can't I be like them?"
-                You: "Only if you really want to."
-                You: "Besides, what's wrong with being Nadia?"
-                You: "Just like, what's wrong with being Charlotte?"
-                Nadia: "That's true..."
-                Nadia: "Wow, being Charlotte really taught you a lot."
-                You: "Nah, not really."
-                You: "It was interacting with y'all that got me thinking, too."
-                <<jump 1_1_2_options>>
-            -> "Yeah, if only, right?"
-                Nadia: "Well, I'll try my best to reach there!"
-                Nadia: "But honestly, I'm starting to think if it's worth it at all..."
-                <<jump 1_1_2_options>>
-        -> "Do they at least try to explain to you how it works?"
-            Nadia: "Yeah, but still it's really hard to understand..."
-            Nadia: "At times I feel like they're still the ones holding all the knowledge."
-            -> "Huh... that's kinda sus."
-                Nadia: "Really?"
-                You: "I mean, they should at least share their secrets with you, right?"
-                You: "If not why are you even there? Just to fill seats?"
-                You: "It's not like this is some esoteric martial art or something..."
-                Nadia: "Heh, that would be funny."
-                Nadia: "'With this high kick you will profit off crypto!'"
-                You: "Still, I guess try to learn what you can?"
-                You: "Because if you're not learning much then what's the point, right?"
-                <<jump 1_1_2_options>>
-            -> "You'll get it with time."
-                Nadia: "I sure hope so..."
-                Nadia: "Sometimes I wonder if I'm just setting myself up for failure."
-                Nadia: "Accounting rules are hard enough to understand sometimes..."
-                Nadia: "Let alone all this web3 stuff."
-                <<jump 1_1_2_options>>
-            -> "You sure it's not just you?"
-                Nadia: "What do you mean?"
-                You: "If you're the only one struggling, I mean..."
-                You: "Maybe the issue is with you?"
-                Nadia: "Uh... I guess so..."
-                Nadia looks subdued. Did you say something wrong? (-5% Nadia relationship) 
-                <<changeRelationship("N", -5)>>
-                <<jump 1_1_2_options>>
+        -> "You're not them."
+            You: "They don't know what it's like to be Nadia."
+            You: "And you might not have the capacity or resources to be investing like they do."
+            Nadia: "Yeah, I know, but..."
+            Nadia: "Can't I be like them?"
+            You: "Only if you really want to."
+            You: "Besides, what's wrong with being Nadia?"
+            You: "Just like, what's wrong with being Charlotte?"
+            Nadia: "That's true..."
+            Nadia: "Wow, being Charlotte really taught you a lot."
+            You: "Nah, not really."
+            You: "It was interacting with y'all that got me thinking, too."
+            <<jump 1_1_2_options>>
+        -> "Yeah, if only, right?"
+            Nadia: "Well, I'll try my best to reach there!"
+            Nadia: "But honestly, I'm starting to think if it's worth it at all..."
+            <<jump 1_1_2_options>>
+    -> "Do they at least try to explain to you how it works?"
+        Nadia: "Yeah, but still it's really hard to understand..."
+        Nadia: "At times I feel like they're still the ones holding all the knowledge."
+        -> "Huh... that's kinda sus."
+            Nadia: "Really?"
+            You: "I mean, they should at least share their secrets with you, right?"
+            You: "If not why are you even there? Just to fill seats?"
+            You: "It's not like this is some esoteric martial art or something..."
+            Nadia: "Heh, that would be funny."
+            Nadia: "'With this high kick you will profit off crypto!'"
+            You: "Still, I guess try to learn what you can?"
+            You: "Because if you're not learning much then what's the point, right?"
+            <<jump 1_1_2_options>>
+        -> "You'll get it with time."
+            Nadia: "I sure hope so..."
+            Nadia: "Sometimes I wonder if I'm just setting myself up for failure."
+            Nadia: "Accounting rules are hard enough to understand sometimes..."
+            Nadia: "Let alone all this web3 stuff."
+            <<jump 1_1_2_options>>
+        -> "You sure it's not just you?"
+            Nadia: "What do you mean?"
+            You: "If you're the only one struggling, I mean..."
+            You: "Maybe the issue is with you?"
+            Nadia: "Uh... I guess so..."
+            Nadia looks subdued. Did you say something wrong? (-5% Nadia relationship) 
+            <<changeRelationship("N", -5)>>
+            <<jump 1_1_2_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 185,-1233
@@ -597,7 +597,7 @@ Nadia: "Who knows? It could help me with my own exchange in future."
     <<jump 1_1_2_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 60,-1015
+__PrivCrochet_position: 64,-1017
 __PrivCrochet_tags: 
 title: 1_1_2_4
 ---
@@ -677,12 +677,12 @@ Nadia: "Do you think being Charlotte halted your professional development?"
         Nadia: "Uh... I..."
         You: "Are you saying being Charlotte is a waste of time?"
         Nadia: "No, I..."
-        Nadia: "Never mind, I'm sorry. I shouldn't have asked that." (-5% Nadia relationship) 
         <<changeRelationship("N", -5)>>
+        Nadia: "Never mind, I'm sorry. I shouldn't have asked that." (-5% Nadia relationship)
         <<jump 1_1_2_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 14,-309
+__PrivCrochet_position: 13,-309
 __PrivCrochet_tags: 
 title: 1_2_options
 ---
@@ -817,7 +817,7 @@ Nadia: "I wouldn't want the world to see the BL that I draw."
 <<jump 1_2_1>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 607,-677
+__PrivCrochet_position: 606,-678
 __PrivCrochet_tags: 
 title: 1_2_1_4
 ---
