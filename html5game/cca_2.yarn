@@ -854,7 +854,7 @@ You feel... different, having gone through it all. (+30 XP)
 <<goto_room_bedroom_after_cca2()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 240,-40
+__PrivCrochet_position: 238,-41
 __PrivCrochet_tags: 
 title: anthony_pre
 ---
@@ -884,9 +884,9 @@ Vera: "Same stuff. Just scrolling through Pinterest. And Instagram. And TikTok."
     Vera: "I learn from trans content, at least."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 240,240
+__PrivCrochet_position: 238,240
 __PrivCrochet_tags: 
-title: chair
+title: pre-5
 ---
 Do you wish to sit? (Will start the session)
 
