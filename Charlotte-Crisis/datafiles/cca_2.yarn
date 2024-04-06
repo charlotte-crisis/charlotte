@@ -97,7 +97,7 @@ You: "Alright, here goes..."
     Nadia: "What do you mean?"
     Vera: "You'll see."
     Anthony: "How is a sunset related to art club? Are you saying we're going under?"
-    -> "Yeah. Bye!" #skillcheck #cha #8
+    -> "Yeah. Bye!" #skillcheck #cha # 8
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 6>>
@@ -894,5 +894,6 @@ Do you wish to sit? (Will start the session)
 
 -> Yes (continue...) #continue 
     <<goto_room_cca_2_seated()>>
+    <<jump 2>>
 //spawn in Nadia and Eleanor
 ===

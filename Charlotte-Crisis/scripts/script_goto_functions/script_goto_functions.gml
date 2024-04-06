@@ -330,7 +330,7 @@ function goto_room_bedroom_afterHangout(){
 			//obj_player.facing_direction = 1;
 			//obj_player.is_sitting = true;
 	
-			change_node(,"2");	
+			//change_node("cca_2.yarn","2");	
 		});
 	}
 	
