@@ -429,7 +429,7 @@ You: "We talked about..."
 <<jump 13>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1358,37
+__PrivCrochet_position: 1357,36
 __PrivCrochet_tags: 
 title: 13
 ---
@@ -444,6 +444,7 @@ Who will you walk with today?
 	You decide to head back to the hostel by yourself.
 	Slinking away to the door, you make a quiet exit.
     <<goto_room_bus()>>
+    <<jump 12_alone>>
 
 // TODO: are these the correct thresholds?
 
@@ -662,7 +663,7 @@ Joanne: "I mean, I didn't think my boyfriend would appreciate that."
 <<goto_room_bedroom_after_class2()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1600,520
+__PrivCrochet_position: 1619,518
 __PrivCrochet_tags: 
 title: 16
 ---
@@ -840,7 +841,7 @@ Joanne: "And makeup is actually so bad for your skin. Just caking your face with
     <<jump 10>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1600,760
+__PrivCrochet_position: 1576,767
 __PrivCrochet_tags: 
 title: 12_alone
 ---
