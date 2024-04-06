@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 80,-40
+__PrivCrochet_position: -422,-55
 __PrivCrochet_tags: 
 title: 1
 ---
@@ -45,7 +45,7 @@ Helen: "I'm not sure if that's bravery or recklessness."
 <<jump 2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 320,-40
+__PrivCrochet_position: -182,-55
 __PrivCrochet_tags: 
 title: 2
 ---
@@ -74,7 +74,7 @@ Helen: "So I guess your friends are all accepting?"
 <<jump 3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 560,-44
+__PrivCrochet_position: 58,-59
 __PrivCrochet_tags: 
 title: 3
 ---
@@ -113,7 +113,7 @@ Helen: "And the minute you open your mouth to speak, that's it. Everyone knows."
     Helen takes out her own phone, giving you a lecture about everything you're doing wrong.
     You're gradually overwhelmed by all the terms she's throwing around about skincare, fashion, and the like...
     <<set $diceroll = diceRoll($int)>>
-    <<if $diceRoll < 9>>
+    <<if $diceroll < 9>>
         You wonder how much of it actually went in.
     <<else>>
         <<addExperience(10)>>
@@ -131,7 +131,7 @@ Helen: "And the minute you open your mouth to speak, that's it. Everyone knows."
     <<jump 6>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1182,-43
+__PrivCrochet_position: 680,-58
 __PrivCrochet_tags: 
 title: 7
 ---
@@ -141,39 +141,10 @@ Helen: "I assume she hates it, and wants you to stop?"
 You: "Yep."
 Helen: "Hmm. Based on my experiences, there are a few options available."
 Helen: "You can either hide it entirely, come to a compromise, or move out."
-Helen: "Which would you like to hear?"
--> "Hide."
-    Helen: "That's what I do, for everyone except my wife."
-    Helen: "In my line of work, it's too risky for people to know about Helen."
-    Helen: "So, I keep my male and Helen social media accounts strictly separate."
-    Helen: "And all of Helen's stuff is stuffed in an obscure part of my wife's closet."
-    Helen: "That way, if my mum or my kid chance upon it, I can say it's hers."
-    Helen: "But you don't have a wife... so either get one, or get creative."
-    <<jump 7_1>>
-
--> "Compromise."
-    Helen: "This one is the hardest one emotionally."
-    Helen: "To be honest, I dread this confrontation also, with my own mother."
-    Helen: "But I've talked to other crossdressers and trans women who made it."
-    Helen: "I think one thing you could do is to ease her into it."
-    You: "What do you mean?"
-    Helen: "Change your wardrobe. Wear more gender-neutral clothing."
-    Helen: "Wear makeup more reminiscent of K-pop male idols, so not the strong stuff we're wearing now."
-    <<jump 7_2>>
-
--> "Move out."
-    Helen: "Do you have somewhere to go that's not home or school?"
-    You: "Uh... haven't thought about that..."
-    Helen: "Damn, I guess uni really doesn't prepare you for this, huh?"
-    Helen: "Well think about it. You could rent or buy resale, but that costs money, and takes time."
-    Helen: "Even I had to wait a few years before getting my flat with my wife."
-    <<jump 7_3>>
-
--> "Sign my adoption papers, mommy." #skillcheck #cha #9
-    <<jump 7_4>>
+<<jump 7_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 838,-271
+__PrivCrochet_position: 360,-277
 __PrivCrochet_tags: 
 title: 4
 ---
@@ -324,7 +295,7 @@ Helen: "Makes me think you want to be seen as a guy."
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 851,-52
+__PrivCrochet_position: 355,-73
 __PrivCrochet_tags: 
 title: 5
 ---
@@ -550,27 +521,27 @@ Helen: "And I'm sure not everyone in Gen Z is accepting, right?"
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 844,186
+__PrivCrochet_position: 353,136
 __PrivCrochet_tags: 
 title: 6
 ---
 Helen: "I'm just stating the facts, Charlotte."
 Helen: "And if you can't even take it from a fellow crossdresser..."
 Helen: "How are you going to deal with those who won't hold back?"
--> "Fine, I'll take it as constructive criticism."
+-> "Fine, I'll take it as constructive criticism." //checked
     Helen: "Oh, you shouldn't just do that."
     Helen: "You need to toughen yourself up to withstand criticism."
     Helen: "Being a woman itself is already tough enough."
     Helen: "Don't you see how women put each other down?"
     Helen: "Then talk about crossdressers, trans women... look at how many problems we have to face."
-    -> "Don't you think there's better ways we can communicate?"
+    -> "Don't you think there's better ways we can communicate?" //checked
         Helen: "What do you mean?"
         You: "Like, aren't we basically combining male bluntness with female beauty standards?"
         You: "How are we supposed to even talk to each other like that?"
         Helen: "You're not really giving a better solution here."
         Helen: "We either be brutally honest, or throw shade at each other."
     
-    -> "All the more we should band together."
+    -> "All the more we should band together." //checked
         Helen: "Yes, I understand..."
         Helen: "But even within these movements, people tear each other apart all the same."
         Helen: "I'm not gonna be the first, or last, person to comment on your appearance."
@@ -581,8 +552,8 @@ Helen: "How are you going to deal with those who won't hold back?"
     You: "Yes. I'm sorry that you had to go through discrimination, harassment, all that."
     You: "But in my opinion, you're continuing the cycle of harassment. And towards a fellow crossdresser some more."
     Helen: "I just want to see you improve."
-    You: "You didn't need to sink my morale so low before doing that."
-    -> "If I decided to just give up crossdressing after this, would you feel bad about it?" #skillcheck #emp #9
+    You: "You didn't need to sink my morale so low before doing that." //dieded
+    -> "If I decided to just give up crossdressing after this, would you feel bad about it?" #skillcheck #emp # 9
         <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 9>>       
@@ -594,7 +565,7 @@ Helen: "How are you going to deal with those who won't hold back?"
             Helen: "That's kind of your own problem."
             Helen: "I'm sorry your emotions are hurt, but you'll find what I said to be true."
         <<endif>>
-    -> "If 20-year-old Helen had heard all that you just said, would she continue crossdressing?" #skillcheck #int #9
+    -> "If 20-year-old Helen had heard all that you just said, would she continue crossdressing?" #skillcheck #int # 9
         Helen: "I've heard worse from people on the street."
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
@@ -608,13 +579,13 @@ Helen: "How are you going to deal with those who won't hold back?"
             Helen: "You haven't been through what I have."
         <<endif>>
 
--> "You're already not holding back on me."
+-> "You're already not holding back on me." //checked
     Helen: "I'm doing this so you can improve."
     Helen: "Don't you want to look pretty?"
     You: "Pretty isn't just about looks."
     Helen: "Yeah, we all know beauty isn't skin deep."
     Helen: "But can you honestly say you feel pretty with this look?"
-    -> "It's also about confidence."
+    -> "It's also about confidence." //checked
         You: "And right now don't you see you're making me very insecure?"
         You: "I can't expect Charlotte to be the best woman she can be if she is constantly being forced into a box."
         Helen: "I'm not the one doing that. Society is."
@@ -623,12 +594,12 @@ Helen: "How are you going to deal with those who won't hold back?"
         Helen is silent.
         Helen: "Yeah, fine... it wasn't easy when I started either."
     
-    -> "Yes, and I don't need your feedback on it."
+    -> "Yes, and I don't need your feedback on it." //dieded
         <<changeRelationship("H", -5)>>
         Helen: "Okay, fine... so angry for what..." (-5% Helen relationship)
         Helen: "Just telling you the truth only."
     
--> "Why are you playing so strictly to the rules, anyway?"
+-> "Why are you playing so strictly to the rules, anyway?" //checked
     Helen: "When I said you remind me of my past self, that wasn't nostalgia."
     Helen: "It was dysphoria."
     Helen: "It was seeing the mistakes that 20-year-old Helen made."
@@ -647,28 +618,28 @@ Helen: "How are you going to deal with those who won't hold back?"
             -> "I wonder if I look like that..."
                 Helen: "Girl, you're there now."
                 Helen: "I don't wanna call you a pig, but there's still a lot to improve on."
-                You: "Ugh. You might as well just have called me one."
+                You: "Ugh. You might as well just have called me one." //dieded
                 <<changeRelationship("H", -5)>>
                 Helen: "Truth hurts, doesn't it?" (-5% Helen relationship)
     
-    -> "You don't need to feel ashamed of your early pics."
-        Helen: "Yeah, I know, they're part of my journey and all that but..."
-        Helen: "If I was content with how I looked then, I wouldn't be the woman you see now."
-        Helen: "With enough time you'll reach there too."
-        Helen: "Able to see the difference between your earlier pics and your current ones."
-        -> "You were beautiful then and you were beautiful now."
-            Helen: "Thank you, but we know that's not true - "
-            You: "I'm not joking, Helen."
-            You: "As long as you felt like Helen even in your mismatched dresses and makeup or whatever..."
-            You: "That's valid."
-            You: "One girl felt happy and free, and that's worth celebrating."
-            Helen: "Well... I appreciate the effort."
-            <<changeRelationship("H", 5)>>
-            Helen: "Of all the compliments I've heard from other crossdressers... what you just said stands out." (+5% Helen relationship)
-        
-        -> "Yeah, maybe can do before-and-after."
-            Helen: "Nah... why would I expose my very amateurish past?"
-            Helen: "No one would want to see them."
+        -> "You don't need to feel ashamed of your early pics."
+            Helen: "Yeah, I know, they're part of my journey and all that but..."
+            Helen: "If I was content with how I looked then, I wouldn't be the woman you see now."
+            Helen: "With enough time you'll reach there too."
+            Helen: "Able to see the difference between your earlier pics and your current ones."
+            -> "You were beautiful then and you were beautiful now."
+                Helen: "Thank you, but we know that's not true - "
+                You: "I'm not joking, Helen."
+                You: "As long as you felt like Helen even in your mismatched dresses and makeup or whatever..."
+                You: "That's valid."
+                You: "One girl felt happy and free, and that's worth celebrating."
+                Helen: "Well... I appreciate the effort."
+                <<changeRelationship("H", 5)>>
+                Helen: "Of all the compliments I've heard from other crossdressers... what you just said stands out." (+5% Helen relationship)
+            
+            -> "Yeah, maybe can do before-and-after."
+                Helen: "Nah... why would I expose my very amateurish past?"
+                Helen: "No one would want to see them."
     
     -> "I am not you."
         Helen: "Sure. Then why did you seek me out in the first place?"
@@ -743,14 +714,14 @@ What will you say?
     <<jump 7_1_3>>
 -> "I changed my mind, let's hear another solution."
     Helen: "Okay, which one do you want?"
-    <<jump 7>>
+    <<jump 7_options>>
 -> "This sounds good."
     Helen: "It is what your instincts will tell you first, because we're scared of the consequences."
     Helen: "But sometimes, consequences catch up to us."
     <<jump 8>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1453,-103
+__PrivCrochet_position: 1337,-83
 __PrivCrochet_tags: 
 title: 7_2
 ---
@@ -763,7 +734,7 @@ What will you say?
     <<jump 7_2_3>>
 -> "I changed my mind, let's hear another solution."
     Helen: "Okay, which one do you want?"
-    <<jump 7>>
+    <<jump 7_options>>
 -> "This sounds good."
     Helen: "On paper it sounds like it has the most benefits."
     Helen: "But I don't know your mother, and I'm only going off what other people have experienced."
@@ -784,7 +755,7 @@ What will you say?
     <<jump 7_3_3>>
 -> "I changed my mind, let's hear another solution."
     Helen: "Okay, which one do you want?"
-    <<jump 7>>
+    <<jump 7_options>>
 -> "This sounds good."
     Helen: "On paper it sounds like it has the most benefits."
     Helen: "But I don't know your mother, and I'm only going off what other people have experienced."
@@ -803,7 +774,7 @@ title: 7_4
 Helen: "Girl, if I could, I would."
 Helen: "But I already have one kid and I'm not ready for another."
 Helen: "Let's get back to the real world, shall we?"
-<<jump 7>>
+<<jump 7_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1690,-439
@@ -816,7 +787,7 @@ Helen: "You could try that... unless your parents are the intrusive type."
 <<jump 7_1>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2179,-461
+__PrivCrochet_position: 1922,-448
 __PrivCrochet_tags: 
 title: 7_1_2
 ---
@@ -828,7 +799,7 @@ Helen: "So... sometimes the winning move is to not play at all."
 <<jump 7_1>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1909,-470
+__PrivCrochet_position: 2161,-419
 __PrivCrochet_tags: 
 title: 7_1_3
 ---
@@ -880,7 +851,7 @@ Still, a new week approaches...
 <<goto_room_bedroom_after_boss2()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1701,-177
+__PrivCrochet_position: 1694,-199
 __PrivCrochet_tags: 
 title: 7_2_1
 ---
@@ -892,7 +863,7 @@ Helen: "That's why it's a compromise."
 <<jump 7_2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1943,-173
+__PrivCrochet_position: 1956,-171
 __PrivCrochet_tags: 
 title: 7_2_2
 ---
@@ -905,7 +876,7 @@ Helen: "This is gonna sound super rebellious but, some sisters have cut off cont
 <<jump 7_2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2187,-166
+__PrivCrochet_position: 2217,-118
 __PrivCrochet_tags: 
 title: 7_2_3
 ---
@@ -940,7 +911,7 @@ Helen: "Then again, it is an added expense, one that you might not use as you ag
 <<jump 7_3>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2168,100
+__PrivCrochet_position: 2169,109
 __PrivCrochet_tags: 
 title: 7_3_3
 ---
@@ -957,7 +928,7 @@ Skipped to the end.
 <<jump 8>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -160,-40
+__PrivCrochet_position: -662,-55
 __PrivCrochet_tags: 
 title: 0
 ---
@@ -966,4 +937,40 @@ title: 0
     It shouldn't be hard.
     She'd stick out as much as you.
 <<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 991,-65
+__PrivCrochet_tags: 
+title: 7_options
+---
+Helen: "Which would you like to hear?"
+-> "Hide."
+    Helen: "That's what I do, for everyone except my wife."
+    Helen: "In my line of work, it's too risky for people to know about Helen."
+    Helen: "So, I keep my male and Helen social media accounts strictly separate."
+    Helen: "And all of Helen's stuff is stuffed in an obscure part of my wife's closet."
+    Helen: "That way, if my mum or my kid chance upon it, I can say it's hers."
+    Helen: "But you don't have a wife... so either get one, or get creative."
+    <<jump 7_1>>
+
+-> "Compromise."
+    Helen: "This one is the hardest one emotionally."
+    Helen: "To be honest, I dread this confrontation also, with my own mother."
+    Helen: "But I've talked to other crossdressers and trans women who made it."
+    Helen: "I think one thing you could do is to ease her into it."
+    You: "What do you mean?"
+    Helen: "Change your wardrobe. Wear more gender-neutral clothing."
+    Helen: "Wear makeup more reminiscent of K-pop male idols, so not the strong stuff we're wearing now."
+    <<jump 7_2>>
+
+-> "Move out."
+    Helen: "Do you have somewhere to go that's not home or school?"
+    You: "Uh... haven't thought about that..."
+    Helen: "Damn, I guess uni really doesn't prepare you for this, huh?"
+    Helen: "Well think about it. You could rent or buy resale, but that costs money, and takes time."
+    Helen: "Even I had to wait a few years before getting my flat with my wife."
+    <<jump 7_3>>
+
+-> "Sign my adoption papers, mommy." #skillcheck #cha # 9
+    <<jump 7_4>>
 ===
