@@ -5,7 +5,7 @@ __PrivCrochet_tags:
 title: 1
 ---
 You're a little early to the session today, and so are Anthony and Vera.
-They are sitting on opposite sides of the room. Seems like last session wasn't enough to bring them together.
+They are sitting apart from each other. Seems like last session wasn't enough to bring them together.
 Behind his laptop, Anthony buries his head in whatever he's drawing, occasionally looking up at his screen.
 Vera is scrolling through her phone casually.
 Go talk to them before the session starts!
@@ -51,6 +51,7 @@ __PrivCrochet_tags:
 title: 3
 ---
 Eleanor: "Alright then, let's design for about 30 minutes and we can share."
+//goto cca default room setup (all 4 sitting down and Eleanor standing all the way to the right)
 You scour the Internet for ideas, eventually settling between three choices.
 
 -> A paint blob with "Art Club" in the middle.
@@ -100,7 +101,7 @@ You: "Alright, here goes..."
     -> "Yeah. Bye!" #skillcheck #cha # 8
         <<set $diceroll = diceRoll($cha)>>
         [You rolled a {$diceroll}.]
-        <<if $diceroll >= 8>>
+        <<if $diceroll >= 6>>
             You expected people to take issue with that, but Eleanor laughs.
             <<changeConfidence(5)>>
             Eleanor: "As if we're going anywhere." (+5% confidence)
@@ -156,7 +157,7 @@ Eleanor: "Jokes aside, I'm a bit undecided about the ties."
 Anthony: "I mean, that's what logo finder dot com gave me when I put in the prompt."
 Vera: "You used AI to generate this?"
 Anthony: "What? Normal what. Now everyone is using ChatGPT for their assignments, right?"
-Nadia: "Touche. {$name}, what do you think?"
+Nadia: "Touché. {$name}, what do you think?"
 // Try touché without accent if cannot
 -> "I think it's cheating."
     <<changeRelationship("A", -5)>>
@@ -851,7 +852,6 @@ title: exit
 Well, that was certainly a furious argument. 
 <<addExperience(30)>>
 You feel... different, having gone through it all. (+30 XP)
-
 <<goto_room_bedroom_after_cca2()>>
 ===
 __PrivCrochet_colorID: 0
@@ -868,7 +868,7 @@ title: anthony_pre
     Anthony: "If I'm bitchless in real life, who can judge me for wanting a waifu? 2D over 3D any day."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 480,-40
+__PrivCrochet_position: 479,-41
 __PrivCrochet_tags: 
 title: vera_pre
 ---
@@ -899,7 +899,7 @@ Do you wish to sit? (Will start the session)
 //spawn in Nadia and Eleanor
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2920,720
+__PrivCrochet_position: 2840,720
 __PrivCrochet_tags: 
 title: debug_end
 ---
