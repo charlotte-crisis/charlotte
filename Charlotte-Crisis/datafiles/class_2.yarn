@@ -704,28 +704,32 @@ Sage seemingly regrets speaking of this at all.
 Sage: "What about you though? How's your weekend been?"
 
 -> "I had a talk with my sister about my crossdressing."
-    //if boss1 ending 2
-    You: "It went well. We had a good talk about my hobby and what it means to me."
-    Sage: "So she was accepting?"
-    You: "Yeah!"
-    <<changeRelationship("S", 5)>>
-    Sage: "That's a relief. I'm glad you have such a supportive sister." (+5% Sage relationship)
-    You: "I still have my mum to convince..."
-    Sage: "Yeah, it can be harder with parents..."
-    Sage: "And that's my bus! But all the best, okay?"
-    You: "Yeah, bye!"
-    // end
-
-    //else 
-    You: "It... went poorly. She doesn't really like that I crossdress."
-    Sage: "Oh dear... I'm so sorry for that."
-    Sage: "Take care, okay? I know it's tough to face rejection like that..."
-    You: "I hope things will get better with time... I wish there were more people who understood."
-    Sage: "I don't know if things will get better necessarily but... I think you'll definitely find people who understand." (+5% Sage relationship)
-    Sage: "You just have to know where to look." (+5% confidence)
-    You: "Thanks..."
-    Sage: "That's my bus. All the best, okay? Take care." 
-    You: "Bye."
+    // if boss1ending2
+    <<if visitedNode("ending_2", "boss_1.yarn")>>
+        You: "It went well. We had a good talk about my hobby and what it means to me."
+        Sage: "So she was accepting?"
+        You: "Yeah!"
+        <<changeRelationship("S", 5)>>
+        Sage: "That's a relief. I'm glad you have such a supportive sister." (+5% Sage relationship)
+        You: "I still have my mum to convince..."
+        Sage: "Yeah, it can be harder with parents..."
+        Sage: "And that's my bus! But all the best, okay?"
+        You: "Yeah, bye!"
+        // end
+    <<else>>
+        //else 
+        You: "It... went poorly. She doesn't really like that I crossdress."
+        Sage: "Oh dear... I'm so sorry for that."
+        Sage: "Take care, okay? I know it's tough to face rejection like that..."
+        You: "I hope things will get better with time... I wish there were more people who understood."
+        <<changeRelationship("S", 5)>>
+        Sage: "I don't know if things will get better necessarily but... I think you'll definitely find people who understand." (+5% Sage relationship)
+        <<changeConfidence(5)>>
+        Sage: "You just have to know where to look." (+5% confidence)
+        You: "Thanks..."
+        Sage: "That's my bus. All the best, okay? Take care." 
+        You: "Bye."
+    <<endif>>
 
 -> "It was okay. I didn't do much."
     You: "I did some work, I guess."
