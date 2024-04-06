@@ -64,7 +64,7 @@ Anthony: "Like that how to continue???"
 <<jump 1_2_1_options>>
 ===
 __PrivCrochet_colorID: 2
-__PrivCrochet_position: 2537,213
+__PrivCrochet_position: 2536,210
 __PrivCrochet_tags: 
 title: 1_2_2
 ---
@@ -80,32 +80,32 @@ Anthony: "But I also don't like that the club is so woke."
     Anthony: "All the rainbow shit."
     Anthony: "Why do they want to bring it into the art?"
     Anthony: "I just want to draw what I want."
-    -> "Then they also want to draw what they want."
-        Anthony: "They keep shoving it in my face."
-        Anthony: "I might as well draw a swastika one day."
-        -> "Yeah, I guess that's your right..."
-            Anthony: "Okay. Onz."
-        -> "I mean... for what purpose?"
-            Anthony: "Huh?"
-            You: "A swastika is different from the pride flag."
-            You: "They're drawing what they like, and you're drawing a hate symbol?"
-            You: "For what? Who feels good out of this?"
-            Anthony: "Me."
-            -> "So spiteful."
-                You: "You would really draw something so offensive just to troll others?"
-                <<changeRelationship("A", -5)>>
-                Anthony: "It's not me getting offended." (-5% Anthony relationship)
-            -> "You're just being an edgelord."
-                You: "I'm sure even the influencers you follow wouldn't put that up."
-                You: "You think anyone will respect you anymore after you draw that?"
-                Andrew: "People already don't respect me..."
-                Andrew: "But fine, whatever."
-        -> "You're drawing a hate symbol."
-            Anthony: "So?"
-            You: "If you do that, I'm sure Eleanor will take action."
-            You: "If she takes action, so will the school. Do you want to get expelled?" (+10 XP) <<addExperience(10)>>
-            Anthony sighs.
-            Anthony: "Fine. Too much trouble."
+    You: "Then they also want to draw what they want."
+    Anthony: "They keep shoving it in my face."
+    Anthony: "I might as well draw a swastika one day."
+    -> "Yeah, I guess that's your right..."
+        Anthony: "Okay. Onz."
+    -> "I mean... for what purpose?"
+        Anthony: "Huh?"
+        You: "A swastika is different from the pride flag."
+        You: "They're drawing what they like, and you're drawing a hate symbol?"
+        You: "For what? Who feels good out of this?"
+        Anthony: "Me."
+        -> "So spiteful."
+            You: "You would really draw something so offensive just to troll others?"
+            <<changeRelationship("A", -5)>>
+            Anthony: "It's not me getting offended." (-5% Anthony relationship)
+        -> "You're just being an edgelord."
+            You: "I'm sure even the influencers you follow wouldn't put that up."
+            You: "You think anyone will respect you anymore after you draw that?"
+            Anthony: "People already don't respect me..."
+            Anthony: "But fine, whatever."
+    -> "You're drawing a hate symbol."
+        Anthony: "So?"
+        You: "If you do that, I'm sure Eleanor will take action."
+        You: "If she takes action, so will the school. Do you want to get expelled?" (+10 XP) <<addExperience(10)>>
+        Anthony sighs.
+        Anthony: "Fine. Too much trouble."
 <<jump 1_2>>
 ===
 __PrivCrochet_colorID: 2
@@ -376,13 +376,13 @@ What do you say?
     <<jump 1_1_options>>
 ===
 __PrivCrochet_colorID: 1
-__PrivCrochet_position: 1941,-810
+__PrivCrochet_position: 1936,-810
 __PrivCrochet_tags: 
 title: 1_1_2_1
 ---
 Anthony: "Okay, then what other choices do I have?"
 Anthony: "Job market so bad already, how can I survive?"
--> "Transfer out, before it's too late." #skillcheck #int #7
+-> "Transfer out, before it's too late." #skillcheck #int # 7
     Anthony: "Siao ah. Like that means start from clean slate, you know?"
     <<set $diceroll = diceRoll($emp)>>
     [You rolled a {$diceroll}.]
@@ -505,11 +505,11 @@ title: 1_2_1_1
 ---
 Anthony: "How many times have you been to gym then?"
 -> "None..."
-Anthony: "Then you got the right to talk about this meh?"
-Anthony: "At least I tried."
+    Anthony: "Then you got the right to talk about this meh?"
+    Anthony: "At least I tried."
 -> "Not really at all, but..."
-You: "I know that if you want to succeed at something, you need to keep at it."
-Anthony: "So easy for you to say."
+    You: "I know that if you want to succeed at something, you need to keep at it."
+    Anthony: "So easy for you to say."
     -> "There are other things that I persist at."
         Anthony: "Oh, you mean like your gay thing."
         Anthony: "I didn't know that could be a good thing."
@@ -724,7 +724,7 @@ What do you say?
     <<jump 1_3_options>>
 ===
 __PrivCrochet_colorID: 3
-__PrivCrochet_position: 1319,1017
+__PrivCrochet_position: 1319,1014
 __PrivCrochet_tags: 
 title: 1_3_1_1
 ---

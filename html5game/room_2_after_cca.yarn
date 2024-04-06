@@ -114,6 +114,9 @@ __PrivCrochet_position: 640,-160
 __PrivCrochet_tags: 
 title: after
 ---
-Welcome back! Remember to interact with your BED, CLOSET and DESK.
+
 <<set $canGoToBed = true>>
+Welcome back! Remember to interact with your BED, CLOSET and DESK.
+
+
 ===

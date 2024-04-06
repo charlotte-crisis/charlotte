@@ -142,11 +142,12 @@ Either way, I'm gonna haunt you in your dreams.
 <<jump end>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 800,240
+__PrivCrochet_position: 797,236
 __PrivCrochet_tags: 
 title: 3_2
 ---
 <<changeGenderMeter(5)>>
+(+5% gender meter)
 Sister: "Yeah... I can empathise."
 Sister: "But ultimately we live in a society where happiness comes second."
 Sister: "Don't you know about the social contract?"
@@ -169,16 +170,17 @@ Sister: "You must give up some freedom, for security."
         Sister: "You really think you can just distance yourself from family like this?"
     <<endif>>
 
--> "Alright, fine. I choose security." (-5% gender meter)
+-> "Alright, fine. I choose security." 
     <<changeGenderMeter(-5)>>
-    Sister: "Finally. You're starting to listen."
+    Sister: "Finally. You're starting to listen." (-5% gender meter)
     Sister: "I know our family isn't perfect, but we can find happiness together, right?"
     Sister: "We shouldn't fight each other over small things like this."
     -> "But who's starting this fight?" #skillcheck #int # 7
         <<set $diceroll = diceRoll($int)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 7>>
-            You: "I am just presenting as I want to." <<changeGenderMeter(5)>>
+            <<changeGenderMeter(5)>>
+            You: "I am just presenting as I want to." (+5% gender meter)
             You: "I didn't shove it in Mother's face. She found out on her own."
             You: "And I'm not doing anything to aggravate her."
             You: "So much of her suffering is self-inflicted."
@@ -206,7 +208,7 @@ Sister: "You must give up some freedom, for security."
     <<if $diceroll >= 7>>
         You: "They're the only messages I can read without straining my eyes and brain..."
         You: "After all, they aren't marked as "forwarded many times", right?"
-        <<changeRelationship ("Si", 5)>>
+        <<changeRelationship("Si", 5)>>
         Sister chuckles. Your attempt at a joke has succeeded. (+5% Sister relationship) 
     <<endif>>
     You: "Anyway. Don't you have hobbies?"
@@ -376,8 +378,9 @@ Sister: "Why do you want to dress as a girl, anyway?"
     You: "Then, I decided to try crossdressing for a formal school event, and here we are."
     Sister: "Wow. That's... quite sudden."
     Sister: "So... a YouTube video converted you to trans?"
-    -> "I guess you could say that..." (-5% gender meter)
+    -> "I guess you could say that..." 
         <<changeGenderMeter(-5)>>
+        (-5% gender meter)
         Sister: "Damn. That's some pretty messed up brainwashing right there."
         <<changeConfidence(-10)>>
         Sister: "You'd better get some help to break free of it." (-10% confidence)
@@ -418,6 +421,7 @@ Sister: "Why do you want to dress as a girl, anyway?"
                 Sister: "Boys' school and army probably shoved it to the back of your head."
             -> "As if I'd tell the family about it."
                 Sister: "Uh... kinda makes me wonder." 
+                <<changeRelationship("Si", -5)>>
                 Sister: "What else are you hiding?" (-5% Sister relationship)
         <<endif>>
 Sister: "Anyway..."
@@ -497,9 +501,9 @@ Sister: "Can you really look good in clothes not designed for you?"
     <<jump 5>>
 
 
--> "Yeah, I guess it's not gonna work..." (-5% gender meter)
+-> "Yeah, I guess it's not gonna work..." 
     <<changeGenderMeter(-5)>>
-    Sister: "Don't worry about it, like I said, it's hard for women too."
+    Sister: "Don't worry about it, like I said, it's hard for women too." (-5% gender meter)
     Sister: "Mother always keeps talking about buying clothes for us, right?"
     Sister: "Why not just ask her to buy you some good male clothes?"
     Sister: "Then you can look good also."
@@ -677,8 +681,9 @@ Sister: "Well you gotta have some reason!"
 Sister: "What, you're telling me that you just woke up one day..."
 Sister: "And thought to yourself, I want to wear dresses now?"
 
--> "It just... feels right." (+5% gender meter)
+-> "It just... feels right." 
     <<changeGenderMeter(5)>>
+    (+5% gender meter)
     Sister: "Ugh. So this is a 'you say, she say' kind of thing."
     Sister: "You know what's the worst part?"
     Sister: "I asked Mother why she saw this as a problem. And she said that it hurts her."
@@ -689,8 +694,9 @@ Sister: "And thought to yourself, I want to wear dresses now?"
         Sister: "You need to follow her rules."
         Sister: "Didn't father beat that concept into you when you were young?"
         Sister: "Into both of us?"
-        -> "Yeah, I guess their word is law." (-5% gender meter)
+        -> "Yeah, I guess their word is law." 
             <<changeGenderMeter(-5)>>
+            (-5% gender meter)
             Sister: "I mean, not really..."
             Sister: "But there are some basic standards we need to follow."
             Sister: "It's for the good of the family."
@@ -723,9 +729,9 @@ Sister: "And thought to yourself, I want to wear dresses now?"
         Sister: "Would you really be able to follow absolutely everything?"
         You: "I guess it'd be extremely difficult."
 
--> "I guess not..." (-5% gender meter)
+-> "I guess not..." 
     <<changeGenderMeter(-5)>>    
-    Sister sighs.
+    Sister sighs. (-5% gender meter)
     Sister: "Well, if you're so unsure, that makes my job easier."
     Sister: "Mother probably won't be so angry when she meets you."
     Sister: "Hopefully your discussion with her will be fast."
@@ -741,8 +747,9 @@ You: "What about it?"
 Sister: "Everything about it. What job are you gonna get? How are you gonna find a partner?"
 Sister: "Call me old-fashioned, but you need to think of all this stuff, too."
 
--> "It's all about finding the right people." (+5% gender meter)
+-> "It's all about finding the right people." 
     <<changeGenderMeter(5)>>
+    (+5% gender meter)
     Sister: "That's not going to be easy, you know."
     Sister: "I mean, most girls want a real man, right?"
     Sister: "And that could extend to companies as well. They want good workers."
@@ -806,8 +813,9 @@ Sister: "Call me old-fashioned, but you need to think of all this stuff, too."
                 Sister: "No! Do NOT mention him ever again. You should know better." (-5% Sister relationship)
                 You: "Fine, sorry..."
             <<endif>>
-    -> "Don't you think being able to express myself would make me a good worker?" (+5% gender meter)
+    -> "Don't you think being able to express myself would make me a good worker?" 
         <<changeGenderMeter(5)>>
+        (+5% gender meter)
         You: "Like, if I was constantly stressed to maintain appearances..."
         You: "I wouldn't have enough brain power left for work, would I?"
         Sister: "You haven't met the HR people at my company."
@@ -819,8 +827,9 @@ Sister: "Call me old-fashioned, but you need to think of all this stuff, too."
             Sister: "You don't even know where you're gonna work after graduation!"
             Sister: "Well... wherever it is..."
             Sister: "I hope you'll be happy there."
-        -> "Oh... didn't know it was that bad out there..." (-5% gender meter)
+        -> "Oh... didn't know it was that bad out there..." 
             <<changeGenderMeter(-5)>>
+            (-5% gender meter)
             Sister: "Yes, so the best move is just to hide who you are."
             Sister: "Get with the program, and you'll benefit from it."
 -> "I'll just have to hide who I want to be."
@@ -840,8 +849,9 @@ Sister: "Call me old-fashioned, but you need to think of all this stuff, too."
         Sister: "And besides, if Mother already has such a big reaction to your crossdressing..." 
         Sister: "What about your partner or employer?"
         Sister: "It's gonna be tough."
--> "I didn't think about it this way..." (-5% gender meter)
+-> "I didn't think about it this way..." 
     <<changeGenderMeter(-5)>>
+    (-5% gender meter)
     Sister: "You'll start thinking about a lot of things pragmatically once you enter the workforce."
     Sister: "You're lucky you're the younger child."
     Sister: "Do you know how many things I had to go through before you did?"

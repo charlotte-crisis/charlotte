@@ -21,7 +21,7 @@ Vera: "Shoot."
 <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1299,464
+__PrivCrochet_position: 1300,461
 __PrivCrochet_tags: 
 title: 1_options
 ---
@@ -40,7 +40,7 @@ What do you want to talk about?
     <<goto_room_bedroom_afterHangout()>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1251,140
+__PrivCrochet_position: 1255,141
 __PrivCrochet_tags: 
 title: 1_1
 ---
@@ -364,15 +364,17 @@ Vera: "But all the folks I know have their own means of raising funds."
     Vera: "I told you, I don't want to share."
     Vera: "Just know that I get my medication, and you probably shouldn't use my way."
     -> "But I want to know."
-        Vera looks agitated. (-5% Vera relationship) <<changeRelationship("V", -5)>>
+        <<changeRelationship("V", -5)>>
+        Vera looks agitated. (-5% Vera relationship) 
         Vera: "Last chance, Charlotte."
         Vera: "I'm walking away if you keep pressing."
-        -> "What do you have to hide?" (-10% Vera relationship) <<changeRelationship("V", -10)>>
-            Vera slams her palm on the table.
+        -> "What do you have to hide?"  
+            <<changeRelationship("V", -10)>>
+            Vera slams her palm on the table. (-10% Vera relationship)
             Vera: "That's it."
             Vera: "If you can't respect my boundary on this, I'm sorry, we can't talk."
-            Vera walks off.
-            <<stop>>
+            Vera leaves.
+            <<goto_room_bedroom_afterHangout()>>
                 
         -> "Okay, fine..."
             Vera: "I'm sorry. I didn't mean to be rude."
@@ -397,7 +399,6 @@ Vera: "But I'm re-appropriating it."
 Vera: "Trans healthcare is the same as any other form of healthcare."
 
 <<jump 1_1_2_options>>
-#^all choices in this section are supposed to lead here except "what do you have to hide". if that don't work, create a new node
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1517,102
