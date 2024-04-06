@@ -51,7 +51,7 @@ __PrivCrochet_tags:
 title: 3
 ---
 Eleanor: "Alright then, let's design for about 30 minutes and we can share."
-//goto cca default room setup (all 4 sitting down and Eleanor standing all the way to the right)
+<<goto_room_cca_1_seated()>>
 You scour the Internet for ideas, eventually settling between three choices.
 
 -> A paint blob with "Art Club" in the middle.
