@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -422,-55
+__PrivCrochet_position: -423,-55
 __PrivCrochet_tags: 
 title: 1
 ---
@@ -926,17 +926,6 @@ title: debug_end
 ---
 Skipped to the end.
 <<jump 8>>
-===
-__PrivCrochet_colorID: 0
-__PrivCrochet_position: -662,-55
-__PrivCrochet_tags: 
-title: 0
----
-"You walk into the cafe, keeping an eye out for Helen."
-<<if getConfidence() < 30>>
-    It shouldn't be hard.
-    She'd stick out as much as you.
-<<endif>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 991,-65
