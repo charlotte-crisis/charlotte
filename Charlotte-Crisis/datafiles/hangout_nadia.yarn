@@ -723,7 +723,9 @@ What will you say?
         You: "I'm glad you found your happy place in anime."
         Nadia: "We all deserve our own happy places."
         Nadia: "I mean, your crossdressing is a happy place of its own, isn't it?"
-<<jump 1_options>>
+    <<jump 1_options>>
+-> "Let's talk about something else."
+    <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 294,-458
