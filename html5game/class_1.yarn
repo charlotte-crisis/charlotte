@@ -54,7 +54,7 @@ Bored, you start fiddling with your laptop.
 <<jump 5_tutorial>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1001,358
+__PrivCrochet_position: 997,354
 __PrivCrochet_tags: 
 title: 6
 ---
@@ -99,7 +99,7 @@ But do you even want to be Charlotte, right now?
     <<changeRelationship("S",5)>>
     Sage: "Oh! Crossdressing? That's honestly so cool." (+5% Sage relationship) 
     <<changeConfidence(5)>>
-    Felt good to say that, right?
+    Felt good to say that, right? (+5% confidence)
     
 <<jump 7>>
 ===
@@ -299,7 +299,7 @@ You: "Yeah, so feminism to me is..."
 <<jump 19>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2720,360
+__PrivCrochet_position: 2720,359
 __PrivCrochet_tags: 
 title: 12
 ---
@@ -838,7 +838,7 @@ Let's try the Skill Check here, while Prof is still rambling.
 <<jump 20>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2960,880
+__PrivCrochet_position: 2962,878
 __PrivCrochet_tags: 
 title: 12_alone
 ---
@@ -959,7 +959,7 @@ title: 16_3
     Joanne: "Must there be monetary value attached before that kind of work becomes valuable?"
     Sage: "No, but it's basically evidence of a certain type of worker or work being undervalued." 
     <<addExperience(5)>>
-    Sage: "It's both a cause and symptom of gender inequality." (+ 5 XP))
+    Sage: "It's both a cause and symptom of gender inequality." (+ 5 XP)
 <<else>>
     You: "Like, housewives who work for no pay?"
     Joanne: "That has nothing to do with the pay gap though?"
