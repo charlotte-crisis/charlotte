@@ -18,7 +18,7 @@ var _y_relationship_offset = 50;
 
 var _y_margin = 140;
 
-var _x_start = _x_origin - 306 + 45; // half width of the menu + padding of 45
+var _x_start = _x_origin - 306 + 60; // half width of the menu + padding of 45
 var _x_margin = 130;
 var _x_relationship_offset = 50;
 
@@ -40,9 +40,24 @@ for (var row = 0; row < MAX_ROW; row++) {
 	}
 }
 
-var _speech = string("Ask {0} to hang out? (Relationship level: {1}%)",
+// Draw the right buttons
+var _x_col = _x_start + (_x_margin * 3);
+var _y_row = _y_start;
+draw_sprite_ext(spr_button_icon_blue, (select_col == MAX_COL - 1 && select_row == 0), _x_col, _y_row, PORTRAIT_SCALE, PORTRAIT_SCALE, 0, c_white, 1);		
+
+_y_row = _y_start + _y_margin;
+draw_sprite_ext(spr_button_icon_red, (select_col == MAX_COL - 1 && select_row == 1), _x_col, _y_row, PORTRAIT_SCALE, PORTRAIT_SCALE, 0, c_white, 1);		
+
+var _speech = "";
+
+if (select_col == MAX_COL - 1) {
+	_speech = select_row ? "Do not hang out with anyone this week. (continue to next scene)"
+			: "Cancel selection. (go back to room)";
+} else {
+	_speech = string("Ask {0} to hang out? (Relationship level: {1}%)",
 				npc_names[select_row][select_col],
 				obj_npc_relationships.get_relationship(characters[select_row][select_col]));
+}
 draw_dialogue(_speech);
 
 

@@ -12,5 +12,13 @@ var _left_right_key = keyboard_check_pressed(vk_right) - keyboard_check_pressed(
 select_col = wrap(select_col + _left_right_key, 0, MAX_COL - 1);
 
 if (keyboard_check_pressed(vk_space)) {
-	// do something
+	if (select_col == MAX_COL - 1) {
+		if (select_row == 0) {
+			// cancel
+		} else if (select_row == 1) {
+			// skip to next scene		
+		}
+	} else {
+		
+	}
 }
