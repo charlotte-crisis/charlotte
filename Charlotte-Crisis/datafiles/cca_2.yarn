@@ -136,7 +136,6 @@ You: "Alright, here goes..."
         Anthony: "Many other things look pretty. Yours isn't that special." (-5% confidence)
         Vera: "Hate to say it, but yeah, I agree."
         Eleanor: "Then let's see what other pretty things you've drawn!"
-<<endif>>
 
 <<jump 5>>
 ===
@@ -157,7 +156,7 @@ Eleanor: "Jokes aside, I'm a bit undecided about the ties."
 Anthony: "I mean, that's what logo finder dot com gave me when I put in the prompt."
 Vera: "You used AI to generate this?"
 Anthony: "What? Normal what. Now everyone is using ChatGPT for their assignments, right?"
-Nadia: "Touché. {$name}, what do you think?"
+Nadia: "Touche. {$name}, what do you think?"
 // Try touché without accent if cannot
 -> "I think it's cheating."
     <<changeRelationship("A", -5)>>
