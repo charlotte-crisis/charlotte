@@ -41,6 +41,7 @@ BG_ALPHA = 0.9;
 	ChatterboxAddFunction("skillCheck", skill_check);
 	ChatterboxAddFunction("diceRoll", dice_roll);
 	ChatterboxAddFunction("calculateOdds", calculate_odds);
+	ChatterboxAddFunction("visitedNode", ChatterboxGetVisited);
 	
 	ChatterboxAddFunction("setGender", set_player_gender);
 	ChatterboxAddFunction("getIntelligence", get_intelligence);

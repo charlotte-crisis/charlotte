@@ -108,3 +108,10 @@ function load_yarn_files() {
 	// Use file_find_first(working_directory + "*.yarn", fa_none);
 	// https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/File_Handling/File_System/file_find_first.htm
 }
+
+function visited_node(_node, _source) {
+	if (is_undefined(_source)) {
+		return ChatterboxGetVisited(_node);
+	}
+	return ChatterboxGetVisited(_node, _source);
+}
