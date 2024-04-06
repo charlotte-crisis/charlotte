@@ -42,7 +42,7 @@ npc_knows = {
 		return _total;
 	}
 
-	function get_relationship(_name) {
+	get_relationship = function(_name) {
 		return npc_relationships[$ _name];	
 	}
 	

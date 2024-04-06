@@ -8,9 +8,6 @@ if instance_number(object_index) > 1 {
 select_row = 0;
 MAX_ROW = 2; // 0, 1, 2 -> Resume, Help, Save and Quit
 
-
-
-
 is_open = false;
 
 // 2 rows
