@@ -851,6 +851,7 @@ title: exit
 Well, that was certainly a furious argument. 
 <<addExperience(30)>>
 You feel... different, having gone through it all. (+30 XP)
+
 <<goto_room_bedroom_after_cca2()>>
 ===
 __PrivCrochet_colorID: 0
@@ -898,7 +899,7 @@ Do you wish to sit? (Will start the session)
 //spawn in Nadia and Eleanor
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2840,720
+__PrivCrochet_position: 2920,720
 __PrivCrochet_tags: 
 title: debug_end
 ---
