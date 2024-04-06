@@ -358,22 +358,43 @@ function goto_room_bedroom_afterHangout(){
 #region Hangouts
 	function goto_room_hangout_a() {
 		fade_room(rm_hangout_a,,, function() {
-			set_player_position(X_HANGOUT_DOOR, Y_HEIGHT, 1);
+			set_player_position(X_CAFE_SEATED, Y_CAFE_SEATED, 1, true);
 			change_node("hangout_anthony.yarn", "0");
 		});
 	}
 	
 	function goto_room_hangout_n() {
 		fade_room(rm_hangout_n,,, function() {
-			set_player_position(X_HANGOUT_DOOR, Y_HEIGHT, 1);
+			set_player_position(X_CAFE_SEATED, Y_CAFE_SEATED, 1, true);
 			change_node("hangout_nadia.yarn", "0");	
 		});
 	}
 	
 	function goto_room_hangout_v() {
 		fade_room(rm_hangout_v,,, function() {
-			set_player_position(X_HANGOUT_DOOR, Y_HEIGHT, 1);
+			set_player_position(X_CAFE_SEATED, Y_CAFE_SEATED, 1, true);
 			change_node("hangout_vera.yarn", "0");	
+		});
+	}
+	
+	function goto_room_hangout_cj() {
+		fade_room(rm_hangout_cj,,, function() {
+			set_player_position(X_CAFE_SEATED, Y_CAFE_SEATED, 1, true);
+			change_node("hangout_chenjie.yarn", "1");	
+		});
+	}
+	
+	function goto_room_hangout_s() {
+		fade_room(rm_hangout_s,,, function() {
+			set_player_position(X_CAFE_SEATED, Y_CAFE_SEATED, 1, true);
+			change_node("hangout_sage.yarn", "1");	
+		});
+	}
+	
+	function goto_room_hangout_j() {
+		fade_room(rm_hangout_j,,, function() {
+			set_player_position(X_CAFE_SEATED, Y_CAFE_SEATED, 1, true);
+			change_node("hangout_joanne.yarn", "1");	
 		});
 	}
 

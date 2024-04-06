@@ -19,7 +19,14 @@ npc_names =
 	["Anthony", "Vera", "Nadia"],
 ]
 
-characters = [
+characters = 
+[
 	["CJ", "S", "J"],
 	["A", "V", "N"]
 ];
+
+goto_functions = 
+[
+	[goto_room_hangout_cj, goto_room_hangout_s, goto_room_hangout_j],
+	[goto_room_hangout_a,  goto_room_hangout_v, goto_room_hangout_n]
+]
