@@ -7,6 +7,8 @@ title: 1
 You: "Hey, Joanne!"
 Joanne: "Hello!"
 <<set $start_J_rs = getRelationship("J")>>
+// For reference, this works <<set $start_sis_rs = getRelationship("Si")>>
+
 <<if $name == "Charlotte">>
     Joanne: "... Could you... wear something else?"
     You: "Like what?"

@@ -21,7 +21,9 @@ title: door
 <<else>>
     You feel like hanging out with a friend this week, for a quick meal.
     Who will you ask out? 
-    // TODO, add hangout menu. At least then we dont have to copy paste this again and again
+    <<openHangoutMenu()>>
+    <<stop>>
+    // TODO, add hangou7t menu. At least then we dont have to copy paste this again and again
     -> On second thought, nevermind. (Go back)
 
     -> Anthony <<if getRelationship("A") >= 30>>
