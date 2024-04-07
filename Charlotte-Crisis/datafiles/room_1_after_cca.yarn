@@ -31,46 +31,6 @@ title: door
     -> Ask someone out
         <<openHangoutMenu()>>
     <<stop>>
-    // TODO, add hangou7t menu. At least then we dont have to copy paste this again and again
-
-
-    -> Anthony <<if getRelationship("A") >= 30>>
-        You call Anthony up for a hangout.
-
-        // GenderMeter Check
-        <<if $name == "Charlotte">>
-            <<changeGenderMeter(10)>>
-        <<else>>
-            <<changeGenderMeter(-10)>>
-        <<endif>>
-        <<goto_room_hangout_a()>>
-    
-    -> Nadia <<if getRelationship("N") >= 30>>
-        You call Nadia up for a hangout.
-
-        // GenderMeter Check
-        <<if $name == "Charlotte">>
-            <<changeGenderMeter(10)>>
-        <<else>>
-            <<changeGenderMeter(-10)>>
-        <<endif>>
-        <<goto_room_hangout_n()>>
-    
-    -> Vera <<if getRelationship("V") >= 30>>
-        You call Vera up for a hangout.
-
-        // GenderMeter Check
-        <<if $name == "Charlotte">>
-            <<changeGenderMeter(10)>>
-        <<else>>
-            <<changeGenderMeter(-10)>>
-        <<endif>>
-        <<goto_room_hangout_v()>>
-    
-    -> Stay in today. #continue
-        Hmm... you don't seem to be friendly enough with anyone.
-        You can stay in today, but please try to understand and befriend people around you...
-        <<goto_room_bedroom_afterHangout()>>
     
 <<endif>>
 ===

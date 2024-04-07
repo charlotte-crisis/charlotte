@@ -22,7 +22,6 @@ Do you wish to continue?
 -> No (Close this dialogue)
 
 -> Yes (Start the game!) #continue
-    
     <<goto_room_class_1()>>
 ===
 __PrivCrochet_colorID: 1

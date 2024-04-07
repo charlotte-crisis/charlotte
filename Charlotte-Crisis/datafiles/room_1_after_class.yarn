@@ -28,6 +28,7 @@ title: door
     -> No (Go back)
 
     -> Yes (Go to school) #continue
+        <<genderMeterCheck()>>
         <<goto_room_cca_1()>>        
 <<endif>>
 ===
