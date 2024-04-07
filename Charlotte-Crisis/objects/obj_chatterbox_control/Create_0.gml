@@ -92,6 +92,7 @@ BG_ALPHA = 0.9;
 	ChatterboxAddFunction("goto_room_bedroom", goto_room_bedroom);
 	ChatterboxAddFunction("goto_room_bedroom_after_cca", goto_room_bedroom_after_cca);
 	ChatterboxAddFunction("goto_room_bedroom_after_cca2", goto_room_bedroom_after_cca2);
+	ChatterboxAddFunction("goto_room_bedroom_after_cca3", goto_room_bedroom_after_cca3);
 	ChatterboxAddFunction("goto_room_bedroom_frombed", goto_room_bedroom_frombed);
 	ChatterboxAddFunction("goto_room_bedroom_afterHangout", goto_room_bedroom_afterHangout);
 	ChatterboxAddFunction("goto_room_bedroom_after_class2", goto_room_bedroom_after_class2);
