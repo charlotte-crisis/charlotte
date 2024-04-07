@@ -21,15 +21,17 @@ if (is_open) {
 		if (select_row == 0) {
 			obj_player.set_is_interacting(false);
 			is_open = false;	
-		} else if (select_row == 2) {
+		} else if (select_row == 2) { //exit
 			save_game();
+			obj_player.set_is_interacting(false);
 			is_open = false;
-			// get rid of EVERYTHING
-			instance_destroy(obj_chatterbox_control);
-			obj_player.visible = false;
-			instance_destroy(obj_stats);
-			instance_destroy(); // self
-			fade_room(rm_main_menu);
+			fade_room(rm_main_menu,,, function() {
+				// get rid of EVERYTHING
+				instance_destroy(obj_chatterbox_control);
+				obj_player.visible = false;
+				instance_destroy(obj_stats);
+				instance_destroy(); // self	
+			});
 		}
 	}
 }
