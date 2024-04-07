@@ -441,7 +441,7 @@ function goto_room_bedroom_afterHangout(){
 	}
 	
 	function goto_room_boss_2_1_seated() {
-		fade_room(rm_boss_2_1, false,, function() {
+		fade_room(rm_boss_2_1,,, function() {
 			set_player_position(X_CAFE_SEATED, Y_CAFE_SEATED, 1, true);
 			camera_set_view_pos(view_camera[0], 124, 0);
 		});
