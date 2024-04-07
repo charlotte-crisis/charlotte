@@ -464,9 +464,10 @@ function goto_room_bedroom_afterHangout(){
 	}
 	
 	// More like pan the camera
-	function set_camera_boss3_1() {
-		set_player_position(254, 72, 1, true); // player sit down
-		camera_set_view_pos(view_camera[0], 144, 0);
+	function goto_room_boss_3_sat() {
+		fade_room(rm_boss_3_1_sat,,, function() {
+			set_player_position(254, 72, 1, true); // player sit down	
+		});
 	}
 	
 	function goto_room_boss_3_2() {
