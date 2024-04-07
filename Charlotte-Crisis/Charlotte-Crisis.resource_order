@@ -98,6 +98,7 @@
     {"name":"rm_black_screen","order":1,"path":"rooms/rm_black_screen/rm_black_screen.yy",},
     {"name":"rm_boss_1","order":1,"path":"rooms/rm_boss_1/rm_boss_1.yy",},
     {"name":"rm_boss_2_1","order":4,"path":"rooms/rm_boss_2_1/rm_boss_2_1.yy",},
+    {"name":"rm_boss_2_1_seated","order":8,"path":"rooms/rm_boss_2_1_seated/rm_boss_2_1_seated.yy",},
     {"name":"rm_boss_2_2","order":8,"path":"rooms/rm_boss_2_2/rm_boss_2_2.yy",},
     {"name":"rm_boss_3_1","order":2,"path":"rooms/rm_boss_3_1/rm_boss_3_1.yy",},
     {"name":"rm_boss_3_2","order":9,"path":"rooms/rm_boss_3_2/rm_boss_3_2.yy",},

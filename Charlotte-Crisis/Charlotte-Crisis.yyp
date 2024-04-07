@@ -155,6 +155,7 @@
     {"id":{"name":"rm_black_screen","path":"rooms/rm_black_screen/rm_black_screen.yy",},},
     {"id":{"name":"rm_boss_1","path":"rooms/rm_boss_1/rm_boss_1.yy",},},
     {"id":{"name":"rm_boss_2_1","path":"rooms/rm_boss_2_1/rm_boss_2_1.yy",},},
+    {"id":{"name":"rm_boss_2_1_seated","path":"rooms/rm_boss_2_1_seated/rm_boss_2_1_seated.yy",},},
     {"id":{"name":"rm_boss_2_2","path":"rooms/rm_boss_2_2/rm_boss_2_2.yy",},},
     {"id":{"name":"rm_boss_3_1","path":"rooms/rm_boss_3_1/rm_boss_3_1.yy",},},
     {"id":{"name":"rm_boss_3_2","path":"rooms/rm_boss_3_2/rm_boss_3_2.yy",},},
@@ -526,6 +527,7 @@
     {"roomId":{"name":"rm_hangout_cj","path":"rooms/rm_hangout_cj/rm_hangout_cj.yy",},},
     {"roomId":{"name":"rm_hangout_j","path":"rooms/rm_hangout_j/rm_hangout_j.yy",},},
     {"roomId":{"name":"rm_hangout_s","path":"rooms/rm_hangout_s/rm_hangout_s.yy",},},
+    {"roomId":{"name":"rm_boss_2_1_seated","path":"rooms/rm_boss_2_1_seated/rm_boss_2_1_seated.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
