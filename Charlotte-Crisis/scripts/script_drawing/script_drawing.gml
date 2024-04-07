@@ -123,6 +123,9 @@ function draw_speaker_portrait(name) {
 		case "VERA":
 			draw_sprite_ext(spr_v_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 			break;
+		case "CHARLOTTE":
+			draw_sprite_ext(spr_charlotte_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+			break;			
 	}
 	
 	// Overlay
