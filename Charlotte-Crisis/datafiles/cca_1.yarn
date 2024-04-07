@@ -4,7 +4,7 @@ __PrivCrochet_position: -200,40
 __PrivCrochet_tags: 
 title: 1
 ---
-<<if $name = "Charlotte">>
+<<if $name == "Charlotte">>
     <<setNPCKnows("A")>>
     <<setNPCKnows("N")>>
     <<setNPCKnows("V")>>
