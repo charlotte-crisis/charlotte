@@ -485,5 +485,7 @@ Being closeted like that...
     Once the truth is known, it cannot be unknown.
     <<addExperience(5)>>
     You might want to be careful.(+5 XP)
-<<stop>>
+
+
+<<goto_room_bedroom_afterHangout()>>
 ===
