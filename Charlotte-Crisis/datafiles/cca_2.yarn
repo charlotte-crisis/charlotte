@@ -853,6 +853,7 @@ title: exit
 Well, that was certainly a furious argument. 
 <<addExperience(30)>>
 You feel... different, having gone through it all. (+30 XP)
+incrementStage()
 <<goto_room_bedroom_after_cca2()>>
 ===
 __PrivCrochet_colorID: 0
