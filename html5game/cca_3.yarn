@@ -1294,5 +1294,6 @@ Go back to your room?
 -> Yes (continue)
     <<addExperience(30)>>
     (+30 XP)
+    <<incrementStage()>>
     <<goto_room_bedroom_after_cca3()>>
 ===

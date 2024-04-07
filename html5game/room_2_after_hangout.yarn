@@ -59,9 +59,8 @@ title: after
 ---
 <<incrementStage()>>
 
-It's the end of the school week, and you usually head home for the weekend.
-But this time, your sister is waiting for you. When you step out of this room tomorrow, you will face her.
-Have you learned enough from the previous days? We shall see.
+It's the end of the school week. Things sure have ramped up, right?
+But the week isn't quite over yet...
 
 <<set $canGoToBed = true>>
 ===
