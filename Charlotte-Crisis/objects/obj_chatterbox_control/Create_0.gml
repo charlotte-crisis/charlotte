@@ -41,7 +41,7 @@ BG_ALPHA = 0.9;
 	ChatterboxAddFunction("skillCheck", skill_check);
 	ChatterboxAddFunction("diceRoll", dice_roll);
 	ChatterboxAddFunction("calculateOdds", calculate_odds);
-	ChatterboxAddFunction("visitedNode", ChatterboxGetVisited);
+	ChatterboxAddFunction("visitedNode", visited_node);
 	
 	ChatterboxAddFunction("setGender", set_player_gender);
 	ChatterboxAddFunction("getIntelligence", get_intelligence);
@@ -123,6 +123,7 @@ BG_ALPHA = 0.9;
 	ChatterboxAddFunction("goto_room_boss_2_1_seated", goto_room_boss_2_1_seated);
 	ChatterboxAddFunction("goto_room_boss_2_2", goto_room_boss_2_2);
 	ChatterboxAddFunction("goto_splash_boss2_2", goto_splash_boss2_2);
+	ChatterboxAddFunction("goto_room_bedroom_after_boss2", goto_room_bedroom_after_boss2);
 	
 	ChatterboxAddFunction("goto_room_boss_3_1", goto_room_boss_3_1);
 	ChatterboxAddFunction("goto_room_boss_3_2", goto_room_boss_3_2);

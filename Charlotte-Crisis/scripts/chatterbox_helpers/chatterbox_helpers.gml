@@ -114,9 +114,13 @@ function load_yarn_files() {
 	// https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/File_Handling/File_System/file_find_first.htm
 }
 
-function visited_node(_node, _source) {
-	if (is_undefined(_source)) {
-		return ChatterboxGetVisited(_node);
+/// [node, source]
+function visited_node(_params) {
+	
+	with (obj_chatterbox_control) {
+		var _node = _params[0];
+		var _source = _params[1];
+		return ChatterboxGetVisited(_node, _source);	
 	}
-	return ChatterboxGetVisited(_node, _source);
+	
 }
