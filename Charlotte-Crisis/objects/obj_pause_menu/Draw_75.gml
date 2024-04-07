@@ -85,7 +85,7 @@ if (is_open) {
 						portrait_scale, portrait_scale, 0, c_white, 1);
 			
 				// Get character relationship
-				var _rs = obj_npc_relationships.get_relationship(characters[row][col]);
+				var _rs = obj_npc_relationships.get_relationship_level(characters[row][col]);
 				// Emote
 				draw_sprite_ext(spr_relationship_level, _rs, curr_x + _emote_offset, curr_y + _emote_offset,
 						portrait_scale, portrait_scale, 0, c_white, 1);		
