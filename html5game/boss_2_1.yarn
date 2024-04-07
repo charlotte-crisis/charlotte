@@ -102,6 +102,7 @@ Helen: "And the minute you open your mouth to speak, that's it. Everyone knows."
     Helen: "You see all these people in the cafe?"
     <<goto_splash_boss2(2)>>
     Helen: "From the other customers, to the cashier..."
+    <<changeConfidence(-10)>>
     Helen: "They're staring at you, not me." (-10% confidence)
     <<goto_room_boss_2_1_seated()>> // back to sitting
 <<endif>>
