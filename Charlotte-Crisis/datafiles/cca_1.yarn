@@ -4,6 +4,11 @@ __PrivCrochet_position: -200,40
 __PrivCrochet_tags: 
 title: 1
 ---
+<<if $name = "Charlotte">>
+    <<setNPCKnows("A")>>
+    <<setNPCKnows("N")>>
+    <<setNPCKnows("V")>>
+<<endif>>
 You enter the club room for the first time.
 The words "self-portrait" are projected onto the screen.
 You should probably explore what and who is in the club room first.
@@ -52,7 +57,7 @@ Eleanor: "Today's theme is quite simple: self-portrait."
 <<jump 6>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1000,360
+__PrivCrochet_position: 998,360
 __PrivCrochet_tags: 
 title: 6
 ---
