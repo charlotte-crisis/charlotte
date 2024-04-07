@@ -432,6 +432,7 @@ Chenjie: "And so today's lecture got me thinking about, well, if my physical app
 
 <<addExperience(30)>>
 (+30 XP)
+incrementStage()
 <<goto_room_bedroom_after_class2()>>
 ===
 __PrivCrochet_colorID: 0
