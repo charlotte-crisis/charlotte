@@ -3,6 +3,7 @@
 
 // cancel
 if (keyboard_check_pressed(vk_escape)) {
+	io_clear(); // disallow escape to trigger anything else
 	obj_player.set_is_interacting(false);
 	instance_destroy(self);
 }
