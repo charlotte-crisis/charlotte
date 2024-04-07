@@ -52,6 +52,7 @@ BG_ALPHA = 0.9;
 	ChatterboxAddFunction("getStage", get_stage);
 	
 	ChatterboxAddFunction("changeGenderMeter", change_gender_meter);
+	ChatterboxAddFunction("genderMeterCheck", gender_meter_check);
 	ChatterboxAddFunction("getGenderMeter", get_gender_meter);
 	
 	ChatterboxAddFunction("changeRelationship", change_npc_relationship);

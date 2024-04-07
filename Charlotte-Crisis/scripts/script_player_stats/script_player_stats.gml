@@ -148,3 +148,12 @@ function calculate_odds(_parameters) {
 function increment_stage() {
 	return obj_stats.increment_stage();	
 }
+
+function gender_meter_check() {
+	// charlotte
+	if (obj_player.get_player_gender()) {
+		change_gender_meter([10]);
+	} else {
+		change_gender_meter([-10]);	
+	}
+}

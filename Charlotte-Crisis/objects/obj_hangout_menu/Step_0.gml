@@ -28,6 +28,7 @@ if (keyboard_check_pressed(vk_space)) {
 		}
 	} else {
 		obj_player.set_is_interacting(false);
+		gender_meter_check(); // increment or decrement based on gender
 		with (obj_chatterbox_control) {
 			other.goto_functions[other.select_row][other.select_col]();
 		}
