@@ -10,7 +10,7 @@ You: "Hi, mum."
 Mother: "Look who finally decided to come home."
 // Change camera Here 
 // Actually exactly the same as in boss1 lol so i just reuse
-<<set_camera_boss1()>>
+<<goto_room_boss_3_sat()>>
 Mother: "You think this place hotel ah?"
 -> "Maybe it is!"
     Mother: "Siao ah. We raise you so long you still say things like this?"
@@ -181,6 +181,7 @@ __PrivCrochet_position: 635,-71
 __PrivCrochet_tags: 
 title: 4
 ---
+<<goto_splash_boss3_1()>>
 Mother is on the verge of... tears? Anger? Shock? You can't tell.
 -> "There's nothing to worry about."
     Mother: "Where got?"
@@ -565,6 +566,7 @@ __PrivCrochet_position: 865,-71
 __PrivCrochet_tags: 
 title: 5
 ---
+<<goto_room_boss_3_sat()>>
 Mother: "Do you know how confusing this is for everyone? Not just me."
 Mother: "What will your aunts and uncles think?"
 Mother: "Why have you suddenly become this person we don't know?"

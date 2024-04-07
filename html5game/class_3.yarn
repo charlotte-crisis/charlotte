@@ -108,7 +108,7 @@ Chenjie: "I think there are...?"
 -> "Don't we have a media policy or something?" #skillcheck #int # 10
     <<set $diceroll = diceRoll($int)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll > 10>>
+    <<if $diceroll >= 10>>
         You: "A media content policy not to portray non-heterosexual behaviour in a positive way." (+5 XP)
         Sage: "Don't remind me of that stupid rule. If I remember correctly, the exact phrasing is 'promotion of homosexuality'."  
         Sage: "What counts as 'promotion' anyway? Is normalising it 'promotion'? Is depicting a happy queer person?"
