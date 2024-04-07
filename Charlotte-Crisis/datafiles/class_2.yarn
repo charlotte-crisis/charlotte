@@ -712,7 +712,7 @@ title: 8_options
         Sage: "Basically, you maintain a male-dominated society by making sure people don't break the rules of that society."
         You: "Yeah, so women have to look pretty for the male gaze in order to stay in line."
         You: "And men have to look strong and manly to stay worthy of being a man."
-        <<changeConfidnce(5)>>
+        <<changeConfidence(5)>>
         Chenjie: "Yeah, I guess that makes sense." (+5% confidence)
     <<else>>
         You: "Men."
