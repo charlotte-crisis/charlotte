@@ -13,10 +13,13 @@ if (_space) {
 	
 	
 	if (select_row == 0) { // New game
-		fade_room(rm_bedroom_menu);
-		if (instance_exists(obj_player)) {
-			set_player_position(74, 74, 1)	
-		}
+		fade_room(rm_bedroom_menu,,, function() {
+			if (instance_exists(obj_player)) {
+				set_player_position(74, 74, 1)	
+				obj_player.visible = true;
+				obj_player.is_interacting = false;
+			}	
+		});	
 	}
 	
 	if (select_row == 1) { // Load

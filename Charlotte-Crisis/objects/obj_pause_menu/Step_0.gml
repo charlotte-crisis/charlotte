@@ -8,7 +8,7 @@ if (keyboard_check_pressed(vk_escape)) {
 	// But OK to pause while chatting.
 	} else if !(obj_player.is_interacting) {
 		obj_player.set_is_interacting(true);
-		is_open = true;	
+		is_open = true;
 	}
 }
 

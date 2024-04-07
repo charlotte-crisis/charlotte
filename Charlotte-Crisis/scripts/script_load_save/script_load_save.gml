@@ -62,6 +62,7 @@ function save_game(){
 	
 	if (obj_player.is_talking) {
 		ini_write_string("level", "chatterbox_node", ChatterboxGetCurrent(obj_chatterbox_control.chatterbox));	
+		obj_player.set_is_talking(false);
 	} else { // Overwrite
 		ini_write_string("level", "chatterbox_node", "");	
 	}
@@ -115,9 +116,9 @@ function load_game() {
 		current_clothes[0] = ini_read_real("player", "current_clothes_0", current_clothes[0]);
 		current_clothes[1] = ini_read_real("player", "current_clothes_1", current_clothes[1]);
 		current_clothes[2] = ini_read_real("player", "current_clothes_2", current_clothes[2]);
-		is_talking = ini_read_real("player", "is_talking", is_talking);
+		is_talking = ini_read_real("player", "is_talking", false);
 		// is_interacting = ini_read_real("player", "is_interacting", is_interacting);
-		is_sitting = ini_read_real("player", "is_sitting", is_sitting);
+		is_sitting = ini_read_real("player", "is_sitting", false);
 	}
 	
 	// Camera ================================================================
