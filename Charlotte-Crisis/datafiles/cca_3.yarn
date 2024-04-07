@@ -124,18 +124,22 @@ Try talking to them to figure out how they feel.
     Off you go.
 ===
 __PrivCrochet_colorID: 3
-__PrivCrochet_position: 765,167
+__PrivCrochet_position: 765,164
 __PrivCrochet_tags: 
 title: 3
 ---
 // Might use a different way to check veraKnows, like npcKnows("V") since
 // The same check is done with the other characters
+<<set ($visited_1_or_2) == false>>
+<<if !getNPCKnows("V") or getRelationship("V") <= 30>>
+    Vera: "Hey, Charles."
+<<elseif ($veraOffended) == true>>
+    Vera doesn't want to talk.
+<<else>>
+    Vera: "Hey, Charlotte."
+<<endif>>
 
-Vera: "Hey, Charlotte." <<if getNPCKnows("V")>>
-Vera: "Hey, Charles." <<if !getNPCKnows("V") or getRelationship("V") <= 30>>
-Vera doesn't want to talk. <<if ($veraOffended)>>
-
--> "You're always gonna call me Charlotte, huh?"
+-> "You're always gonna call me Charlotte, huh?" <<if getNPCKnows("V") and getRelationship("V") > 30>>
     Vera: "I see the woman within."
     You: "So mysterious."
     Vera: "It's relevant. It's on brand. I would have chosen that for today's task, but I had something better."
