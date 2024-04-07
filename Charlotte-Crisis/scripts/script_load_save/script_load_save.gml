@@ -116,6 +116,9 @@ function load_game() {
 		current_clothes[0] = ini_read_real("player", "current_clothes_0", current_clothes[0]);
 		current_clothes[1] = ini_read_real("player", "current_clothes_1", current_clothes[1]);
 		current_clothes[2] = ini_read_real("player", "current_clothes_2", current_clothes[2]);
+		
+		set_player_sprites(gender, current_clothes[0], current_clothes[1], current_clothes[2]);
+		
 		is_talking = ini_read_real("player", "is_talking", false);
 		// is_interacting = ini_read_real("player", "is_interacting", is_interacting);
 		is_sitting = ini_read_real("player", "is_sitting", false);
