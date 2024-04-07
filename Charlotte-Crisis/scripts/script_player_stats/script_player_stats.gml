@@ -73,6 +73,13 @@ function dice_roll(_parameters) {
 	
 }
 
+/// @param _parameters [Skill (int), total_diceroll (int)]
+/// return total - stat = dice outcome
+function get_dice_roll_outcome(_parameters) {
+	var _stat = obj_stats.stat_after_debuff(_parameters[0]);
+	return (_parameters[1]  - _stat);
+}
+
 /// @function				skill_check(_skill, _required)
 /// @description			Checks if static skill meets threshold
 ///	@param _parameters		[Skill, Threshold]
