@@ -124,15 +124,15 @@ Try talking to them to figure out how they feel.
     Off you go.
 ===
 __PrivCrochet_colorID: 3
-__PrivCrochet_position: 764,169
+__PrivCrochet_position: 765,167
 __PrivCrochet_tags: 
 title: 3
 ---
 // Might use a different way to check veraKnows, like npcKnows("V") since
 // The same check is done with the other characters
 
-Vera: "Hey, Charlotte." <<if $npcKnows("V")>>
-Vera: "Hey, Charles." <<if !$npcKnows("V") or getRelationship("V") <= 30>>
+Vera: "Hey, Charlotte." <<if getNPCKnows("V")>>
+Vera: "Hey, Charles." <<if !getNPCKnows("V") or getRelationship("V") <= 30>>
 Vera doesn't want to talk. <<if ($veraOffended)>>
 
 -> "You're always gonna call me Charlotte, huh?"
@@ -533,7 +533,7 @@ title: 5_1
     -> "Personally, I'm scared of making the first step."
         Nadia: "Ah, that's another way to see it."
         
-        <<if $npcKnows("N")>>
+        <<if getNPCKnows("N")>>
             Nadia: "Did that apply to Charlotte also?"
             You: "Yep."
             Nadia: "And here you are now. You made it!"
@@ -694,34 +694,34 @@ __PrivCrochet_tags:
 title: 4_2
 ---
 -> "I have some... personal stuff that I want to talk about."
-    <<if $npcKnows("A")>>
-    Anthony: "Oh, about the girl clothes thing?"
-    Anthony: "Tell you already. If you just acted normal, none of these problems would surface."
-    -> "I want to know how to be normal."
-        Anthony: "Did you watch the influencers I sent you?"
-        Anthony: "They will teach you how to be a man again."
-        Anthony: "Honestly, I've never seen anyone like you, but maybe they have."
-        Anthony: "Even if you have to spend $100 per month on their course, I think it's a worthy investment."
-    -> "Yeah, you know what? Never mind. Why did I even think you would help?"
-        Anthony: "You already know what I think. I'm not changing that."
-    <<jump anthony_options>>
+    <<if getNPCKnows("A")>>
+        Anthony: "Oh, about the girl clothes thing?"
+        Anthony: "Tell you already. If you just acted normal, none of these problems would surface."
+        -> "I want to know how to be normal."
+            Anthony: "Did you watch the influencers I sent you?"
+            Anthony: "They will teach you how to be a man again."
+            Anthony: "Honestly, I've never seen anyone like you, but maybe they have."
+            Anthony: "Even if you have to spend $100 per month on their course, I think it's a worthy investment."
+        -> "Yeah, you know what? Never mind. Why did I even think you would help?"
+            Anthony: "You already know what I think. I'm not changing that."
+        <<jump anthony_options>>
     <<else>>    
-    Anthony: "I'm not sure how I can help."
-    Anthony: "Why would you ask me?"
-    -> "Yeah, never mind."
-        
-    -> "You ever considered getting mental health support?"
-        Anthony: "What, is this a joke?"
-        Anthony: "My life sucks but I'm not getting some diagnosis that I'm crazy."
-        Anthony: "There's a reason why Redditors always call mental health support for crazy people on the site, right?"
-        Anthony: "I don't think therapy is the answer."
-        
-    -> "I wanted to tell you that I'm a crossdresser. Like, I wear girl clothes. And I feel bad about it."
-        Anthony: "Uh..."
-        Anthony: "That is just super weird."
-        Anthony: "Could you like, not put more of this LGBT stuff in my face?"
-        <<changeRelationship("A", -5)>>
-        Anthony: "If you could just be normal, that would be best." (-5% Anthony relationship)
+        Anthony: "I'm not sure how I can help."
+        Anthony: "Why would you ask me?"
+        -> "Yeah, never mind."
+            
+        -> "You ever considered getting mental health support?"
+            Anthony: "What, is this a joke?"
+            Anthony: "My life sucks but I'm not getting some diagnosis that I'm crazy."
+            Anthony: "There's a reason why Redditors always call mental health support for crazy people on the site, right?"
+            Anthony: "I don't think therapy is the answer."
+            
+        -> "I wanted to tell you that I'm a crossdresser. Like, I wear girl clothes. And I feel bad about it."
+            Anthony: "Uh..."
+            Anthony: "That is just super weird."
+            Anthony: "Could you like, not put more of this LGBT stuff in my face?"
+            <<changeRelationship("A", -5)>>
+            Anthony: "If you could just be normal, that would be best." (-5% Anthony relationship)
     <<endif>>
 
 -> "I'm about to confront my mother about something."
