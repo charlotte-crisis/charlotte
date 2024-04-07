@@ -202,7 +202,7 @@ Nadia: "Touché. {$name}, what do you think?"
 <<jump 6>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1436,237
+__PrivCrochet_position: 1435,237
 __PrivCrochet_tags: 
 title: 6
 ---
@@ -253,6 +253,7 @@ Vera: "What's wrong with having a preference? At least she's got something to be
         <<changeRelationship("N", 5)>>
         You: "Sounds like you're just insecure in your preferences. But can you not give Nadia shit over hers?" (+5% Nadia relationship)
         Nadia: "Anthony, I didn't know you liked anime too."
+        <<addExperience(10)>>
         Vera: "There's nothing wrong with that, Anthony. Not everything is cringe." (+ 10 XP)
         Anthony: "Let's... just move on."
     

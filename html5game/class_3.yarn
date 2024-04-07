@@ -673,7 +673,7 @@ Chenjie: "You really don't get to talk about this sort of stuff so openly often,
 -> "Fun for *you*. I found it uncomfortable."
     Chenjie: "What? Why?"
     You: "Everything was so tense! Sage and Joanne especially..."
-    <<if visited("13")>
+    <<if visited("13")>>
         Chenjie: "I mean... Yeah, Joanne leaving was... unpleasant."
     <<endif>>
     Chenjie: "But the topic itself is interesting, right?"
