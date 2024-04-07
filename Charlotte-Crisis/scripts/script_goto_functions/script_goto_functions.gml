@@ -84,6 +84,10 @@
 	function goto_splash_boss2_2() {
 		room_goto(rm_splash_boss2_2_cutscene); // Instant
 	}
+	
+	function goto_splash_boss3_1() {
+		fade_room(rm_splash_boss3_1);
+	}
 #endregion
 
 #region Classroom Gotos

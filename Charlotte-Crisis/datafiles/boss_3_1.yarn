@@ -181,6 +181,7 @@ __PrivCrochet_position: 635,-71
 __PrivCrochet_tags: 
 title: 4
 ---
+<<goto_splash_boss3_1()>>
 Mother is on the verge of... tears? Anger? Shock? You can't tell.
 -> "There's nothing to worry about."
     Mother: "Where got?"
