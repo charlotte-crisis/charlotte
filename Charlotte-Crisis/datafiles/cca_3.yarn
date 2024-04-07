@@ -4,6 +4,8 @@ __PrivCrochet_position: 238,395
 __PrivCrochet_tags: 
 title: 1
 ---
+<<set $NadiaEnded = false>>
+<<set $veraOffended = false>>
 It's that time of the week again. You're in the clubroom.
 But Eleanor... isn't? Everyone is kind of just doing their own thing.
 Nadia: "Oh. Hey, {$name}."
@@ -17,8 +19,8 @@ Nadia: "But please... try not to start another fight, okay?"
     <<changeRelationship("N", -5)>>
     Nadia: "Please. Don't suspect anything that hasn't been proven." (-5% Nadia relationship)
 -> "I didn't start it."
-Nadia: "Okay, sorry, I wasn't insinuating that..."
-Nadia: "Let's just maintain for today, alright?"
+    Nadia: "Okay, sorry, I wasn't insinuating that..."
+    Nadia: "Let's just maintain for today, alright?"
 -> "Okay, thanks for letting me know."
     Nadia: "Yeah..."
     Nadia doesn't seem as bubbly as usual. Perhaps something is affecting her?
@@ -37,7 +39,7 @@ Nadia: "Let's just maintain for today, alright?"
 <<jump 2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 500,357
+__PrivCrochet_position: 499,356
 __PrivCrochet_tags: 
 title: 2
 ---
@@ -122,7 +124,7 @@ Try talking to them to figure out how they feel.
     Off you go.
 ===
 __PrivCrochet_colorID: 3
-__PrivCrochet_position: 764,170
+__PrivCrochet_position: 764,169
 __PrivCrochet_tags: 
 title: 3
 ---
@@ -131,6 +133,7 @@ title: 3
 
 Vera: "Hey, Charlotte." <<if $npcKnows("V")>>
 Vera: "Hey, Charles." <<if !$npcKnows("V") or getRelationship("V") <= 30>>
+Vera doesn't want to talk. <<if ($veraOffended)>>
 
 -> "You're always gonna call me Charlotte, huh?"
     Vera: "I see the woman within."
@@ -496,14 +499,15 @@ __PrivCrochet_position: 706,635
 __PrivCrochet_tags: 
 title: 5
 ---
-<<if ($NadiaEnded)>> Nadia refuses to engage with you.
+<<if ($NadiaEnded)>> 
+    Nadia refuses to engage with you.
 <<else>>
-Nadia: "Hello, {$name}! I'm not done yet but feel free to chat."
+    Nadia: "Hello, {$name}! I'm not done yet but feel free to chat."
 <<endif>>
 <<jump 5_options>>
 ===
 __PrivCrochet_colorID: 1
-__PrivCrochet_position: 941,983
+__PrivCrochet_position: 939,981
 __PrivCrochet_tags: 
 title: 5_1
 ---
@@ -529,17 +533,17 @@ title: 5_1
     -> "Personally, I'm scared of making the first step."
         Nadia: "Ah, that's another way to see it."
         
-        //if Nadia knows
-        Nadia: "Did that apply to Charlotte also?"
-        You: "Yep."
-        Nadia: "And here you are now. You made it!"
-        Nadia: "Charlotte is inspiring af."
-        
-        //if Nadia doesn't know
-        Nadia: "You mean like... for uni and stuff?"
-        You: "Yeah. Applying here was a big first step."
-        Nadia: "Ah. Even though you're in year 4, you're still thinking about it..."
-        Nadia: "That must have been a super big decision for you."
+        <<if $npcKnows("N")>>
+            Nadia: "Did that apply to Charlotte also?"
+            You: "Yep."
+            Nadia: "And here you are now. You made it!"
+            Nadia: "Charlotte is inspiring af."
+        <<else>>
+            Nadia: "You mean like... for uni and stuff?"
+            You: "Yeah. Applying here was a big first step."
+            Nadia: "Ah. Even though you're in year 4, you're still thinking about it..."
+            Nadia: "That must have been a super big decision for you."
+        <<endif>>
         <<jump 5_options>>
 
     -> "Damn, your GPA must be crying." #skillcheck #cha # 10
@@ -570,7 +574,7 @@ Nadia: "Go ahead. I'll just continue to draw in the meantime."
     Nadia: "Just kidding. Whenever you're ready."
 ===
 __PrivCrochet_colorID: 3
-__PrivCrochet_position: 735,-83
+__PrivCrochet_position: 733,-86
 __PrivCrochet_tags: 
 title: vera_options
 ---
@@ -587,7 +591,7 @@ title: vera_options
     Vera: "Shoot."
     <<jump 3_4>>
 
--> "Alright, see ya." //if any of the above options selected
+-> "Alright, see ya."
     Vera: "Bye! Have fun with your own art piece."
 ===
 __PrivCrochet_colorID: 3
@@ -611,6 +615,7 @@ Vera: "I didn't think you'd say that, Charlotte." <<if $veraKnows>>
     <<changeRelationship("V", -10)>>
     Vera: "I hope you have something good to draw." (-10% Vera relationship)
     Vera returns to her drawing. She doesn't want to talk to you.
+    <<set ($veraOffended) = true>>
 <<set ($visited_1_or_2) = true>>
 ===
 __PrivCrochet_colorID: 3
@@ -689,7 +694,7 @@ __PrivCrochet_tags:
 title: 4_2
 ---
 -> "I have some... personal stuff that I want to talk about."
-    //if Anthony knows needed
+    <<if $npcKnows("A")>>
     Anthony: "Oh, about the girl clothes thing?"
     Anthony: "Tell you already. If you just acted normal, none of these problems would surface."
     -> "I want to know how to be normal."
@@ -700,23 +705,25 @@ title: 4_2
     -> "Yeah, you know what? Never mind. Why did I even think you would help?"
         Anthony: "You already know what I think. I'm not changing that."
     <<jump anthony_options>>
-        //if Anthony doesn't know
+    <<else>>    
     Anthony: "I'm not sure how I can help."
     Anthony: "Why would you ask me?"
     -> "Yeah, never mind."
         
     -> "You ever considered getting mental health support?"
-            Anthony: "What, is this a joke?"
-            Anthony: "My life sucks but I'm not getting some diagnosis that I'm crazy."
-            Anthony: "There's a reason why Redditors always call mental health support for crazy people on the site, right?"
-            Anthony: "I don't think therapy is the answer."
+        Anthony: "What, is this a joke?"
+        Anthony: "My life sucks but I'm not getting some diagnosis that I'm crazy."
+        Anthony: "There's a reason why Redditors always call mental health support for crazy people on the site, right?"
+        Anthony: "I don't think therapy is the answer."
         
-        -> "I wanted to tell you that I'm a crossdresser. Like, I wear girl clothes. And I feel bad about it." (if Anthony doesn't know)
-            Anthony: "Uh..."
-            Anthony: "That is just super weird."
-            Anthony: "Could you like, not put more of this LGBT stuff in my face?"
-            Anthony: "If you could just be normal, that would be best."
-        
+    -> "I wanted to tell you that I'm a crossdresser. Like, I wear girl clothes. And I feel bad about it."
+        Anthony: "Uh..."
+        Anthony: "That is just super weird."
+        Anthony: "Could you like, not put more of this LGBT stuff in my face?"
+        <<changeRelationship("A", -5)>>
+        Anthony: "If you could just be normal, that would be best." (-5% Anthony relationship)
+    <<endif>>
+
 -> "I'm about to confront my mother about something."
     Anthony: "Why are you asking me about this?"
     You: "I don't know. Thought you might have some insights."
@@ -839,24 +846,24 @@ title: 4_1_1_3
 Anthony: "Is it really being an asshole if it's true? We live in a society where people are cruel and stupid."
 Anthony: "Look at that chao ah gua Vera. Every day always complain oppression."
 Anthony: "What about me, huh?"
-    -> "Power to you."
-        Anthony: "Society needs to be put back on the right path for normal people like me."
-        Anthony: "Someday she will learn. All it takes is one bad day."
+-> "Power to you."
+    Anthony: "Society needs to be put back on the right path for normal people like me."
+    Anthony: "Someday she will learn. All it takes is one bad day."
         
-    -> "Yeah, she could be more empathetic..."
-        Anthony: "It's not about empathy. It's about the woke mindset. She's spreading it."
-        Anthony: "You should watch yourself also."
+-> "Yeah, she could be more empathetic..."
+    Anthony: "It's not about empathy. It's about the woke mindset. She's spreading it."
+    Anthony: "You should watch yourself also."
         
-    -> "What about you, huh?"
-        You: "Ever looked at yourself and wondered if you're the problem?"
-        Anthony: "Why would I do that?"
-        You: "Exactly. If everyone you speak to has problems with you... what's the common denominator here?"
-        Anthony: "I don't understand what this has to do with my art."
-        You: "You're trying to be the victim, but who is really doing the oppression?"
-        You: "Is it really everyone in society being dicks to you..."
-        <<addExperience(10)>>
-        You: "Or are you just making things difficult for yourself?" (+10 XP)
-        Anthony looks away.
+-> "What about you, huh?"
+    You: "Ever looked at yourself and wondered if you're the problem?"
+    Anthony: "Why would I do that?"
+    You: "Exactly. If everyone you speak to has problems with you... what's the common denominator here?"
+    Anthony: "I don't understand what this has to do with my art."
+    You: "You're trying to be the victim, but who is really doing the oppression?"
+    You: "Is it really everyone in society being dicks to you..."
+    <<addExperience(10)>>
+    You: "Or are you just making things difficult for yourself?" (+10 XP)
+    Anthony looks away.
 <<jump anthony_options>>
 ===
 __PrivCrochet_colorID: 2
@@ -917,7 +924,7 @@ title: 4_1_3
     <<jump 4_1_3_1>>
 
 -> "I think both are lame."
-Anthony: "Well thanks, if you don't like my art, why did you even come to me?"
+    Anthony: "Well thanks, if you don't like my art, why did you even come to me?"
     -> "You're one to talk." #skillcheck #int # 10
         You: "Look at what you've said to Vera and Nadia."
         Anthony: "They shoved it in everyone's face. I'm just drawing on my own."
@@ -975,7 +982,7 @@ Anthony: "Well thanks, if you don't like my art, why did you even come to me?"
             <<jump 4_1>>
 
 -> "I think both are edgy."
-Anthony: "That's just how the world is. A world of shit."
+    Anthony: "That's just how the world is. A world of shit."
     -> "Well, fair enough."
         Anthony: "Yeah, I still don't know what to draw."
         <<jump 4_1>>
@@ -1259,7 +1266,7 @@ Nadia: "You know how this school is. There's a thousand and one programmes to at
 <<jump 5_2>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 282,878
+__PrivCrochet_position: 281,877
 __PrivCrochet_tags: 
 title: 6_Exit
 ---
