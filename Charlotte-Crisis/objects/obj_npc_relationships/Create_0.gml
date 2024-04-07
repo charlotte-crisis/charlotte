@@ -31,7 +31,7 @@ npc_knows = {
 
 #region Setters and Getters
 
-	function change_relationship(_name, _amount) {
+	change_relationship = function(_name, _amount) {
 		var _total = npc_relationships[$ _name] + real(_amount);
 	
 		// Ensure doesn't go past 0 or 100.
@@ -66,13 +66,13 @@ npc_knows = {
 	/// @description the NPC's value will be set to "true"
 	/// to indicate they know about charlotte
 	/// @param {String} _name Name, initial e.g. "V"
-	function set_npc_knows(_name) {
+	set_npc_knows = function(_name) {
 		 npc_knows[$ _name] = true;
 	}
 
 	/// @description Returns true if npc knows about Charlotte
 	/// @param {String} _name Name, initial e.g. "V"
-	function get_npc_knows(_name) {
+	get_npc_knows = function(_name) {
 		return npc_knows[$ _name];
 	}
 
