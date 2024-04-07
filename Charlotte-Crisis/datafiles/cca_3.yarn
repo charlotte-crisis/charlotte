@@ -6,6 +6,7 @@ title: 1
 ---
 <<set $NadiaEnded = false>>
 <<set $veraOffended = false>>
+<<set ($visited_1_or_2) == false>>
 It's that time of the week again. You're in the clubroom.
 But Eleanor... isn't? Everyone is kind of just doing their own thing.
 Nadia: "Oh. Hey, {$name}."
@@ -130,7 +131,6 @@ title: 3
 ---
 // Might use a different way to check veraKnows, like npcKnows("V") since
 // The same check is done with the other characters
-<<set ($visited_1_or_2) == false>>
 <<if !getNPCKnows("V") or getRelationship("V") <= 30>>
     Vera: "Hey, Charles."
 <<elseif ($veraOffended) == true>>
@@ -158,6 +158,11 @@ __PrivCrochet_tags:
 title: 3_4
 ---
 -> "I'm going to confront my mother about Charlotte."
+    <<if !getNPCKnows("V")>>
+        Vera: "Wait, who's Charlotte?"
+        You give a quick summary of your experiences as Charlotte.
+        Vera: "Okay, so..."
+    <<endif>>
     Vera: "Why?"
     You: "Why what?"
     Vera: "Why bother? She's never gonna accept you. I know that from experience."
@@ -270,16 +275,16 @@ title: 3_4
                 Vera: "Huh. And I thought all Asian parents would take out the cane, or the slipper, at some point."
                 Vera: "Well, you're luckier than most."
                 Vera: "Sorry for assuming the worst from the get go."
-            <<set $diceroll = diceRoll($cha)>>
-            <<if $diceroll >= 10>>            
-                You: "It's okay, Vera. No need to keep saying sorry."
-                You: "What are you, Canadian?"
-                <<changeRelationship("V", 5)>>
-                Vera laughs. (+5% Vera relationship)
-                Vera: "Who knows, I might move there."
-            <<endif>>
-            Vera: "Well, either way, it might be best to not involve your dad at all."
-            Vera: "One aggravated parent is already enough..."
+                <<set $diceroll = diceRoll($cha)>>
+                <<if $diceroll >= 10>>            
+                    You: "It's okay, Vera. No need to keep saying sorry."
+                    You: "What are you, Canadian?"
+                    <<changeRelationship("V", 5)>>
+                    Vera laughs. (+5% Vera relationship)
+                    Vera: "Who knows, I might move there."
+                <<endif>>
+                Vera: "Well, either way, it might be best to not involve your dad at all."
+                Vera: "One aggravated parent is already enough..."
             
         -> "The one that minimises damage."
             Vera: "What? That's not possible."
