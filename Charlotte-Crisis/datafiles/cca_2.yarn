@@ -137,7 +137,7 @@ You: "Alright, here goes..."
         Anthony: "Many other things look pretty. Yours isn't that special." (-5% confidence)
         Vera: "Hate to say it, but yeah, I agree."
         Eleanor: "Then let's see what other pretty things you've drawn!"
-
+<<endif>>
 <<jump 5>>
 ===
 __PrivCrochet_colorID: 0
