@@ -457,6 +457,12 @@ function goto_room_bedroom_afterHangout(){
 		});
 	}
 	
+	function goto_room_boss_2_2_afterSplash() {
+		fade_room(rm_boss_2_2,,, function() {
+			change_node("boss_2_2.yarn","2");
+		});
+	}
+	
 	function goto_room_boss_3_1() {
 		fade_room(rm_boss_3_1,,, function() {
 			change_node("boss_3_1.yarn", "start");
