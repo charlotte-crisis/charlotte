@@ -133,7 +133,7 @@ title: 3
 // The same check is done with the other characters
 <<if !getNPCKnows("V") or getRelationship("V") <= 30>>
     Vera: "Hey, Charles."
-<<elseif ($veraOffended) == true>>
+<<elseif $veraOffended == true>>
     Vera doesn't want to talk.
 <<else>>
     Vera: "Hey, Charlotte."
@@ -508,7 +508,7 @@ __PrivCrochet_position: 706,635
 __PrivCrochet_tags: 
 title: 5
 ---
-<<if ($NadiaEnded)>> 
+<<if $NadiaEnded>> 
     Nadia refuses to engage with you.
 <<else>>
     Nadia: "Hello, {$name}! I'm not done yet but feel free to chat."
@@ -624,8 +624,8 @@ Vera: "I didn't think you'd say that, Charlotte." <<if $veraKnows>>
     <<changeRelationship("V", -10)>>
     Vera: "I hope you have something good to draw." (-10% Vera relationship)
     Vera returns to her drawing. She doesn't want to talk to you.
-    <<set ($veraOffended) = true>>
-<<set ($visited_1_or_2) = true>>
+    <<set $veraOffended = true>>
+<<set $visited_1_or_2 = true>>
 ===
 __PrivCrochet_colorID: 3
 __PrivCrochet_position: 482,-254
