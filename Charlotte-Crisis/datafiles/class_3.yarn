@@ -55,7 +55,7 @@ Do you wish to sit? (will start the class)
 
 -> Yes (continue...) #continue
     <<goto_room_class_1_seated()>>
-    // <<jump 5>>
+    <<jump 5>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: -560,240

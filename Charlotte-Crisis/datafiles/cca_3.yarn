@@ -1,12 +1,12 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 238,395
+__PrivCrochet_position: 240,400
 __PrivCrochet_tags: 
 title: 1
 ---
 <<set $NadiaEnded = false>>
 <<set $veraOffended = false>>
-<<set ($visited_1_or_2) = false>>
+<<set $visited_1_or_2 = false>>
 It's that time of the week again. You're in the clubroom.
 But Eleanor... isn't? Everyone is kind of just doing their own thing.
 Nadia: "Oh. Hey, {$name}."
