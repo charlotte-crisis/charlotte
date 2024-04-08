@@ -5,8 +5,7 @@ __PrivCrochet_tags:
 title: 1
 ---
 Charlotte: "We should not be here, but here we are nonetheless."
-//get confidence at start here
-//(if you were previously in BOSS 3.1)
+//fromJY: check if player had come from boss3.1 "No reason, just to visit" (node 2) or "That's right. I'll get her an abortion." (node 3)
 Charlotte: "Why didn't you pursue the talk with Mother?"
 -> "I'm sorry. I couldn't do it."
     Charlotte: "Yeah, you really couldn't."
@@ -18,7 +17,7 @@ Charlotte: "Why didn't you pursue the talk with Mother?"
     Charlotte: "Either way... this is gonna hurt."
     You: "For you."
 
-//(if you are here because your gender meter is < 30%)
+//fromJY: trigger this if the above condition not met (i.e., player did not go through BOSS3_1)
 Charlotte: "This is what happens when you don't let me out."
 You: "Then let this be the last time we ever do this."
 <<jump 2>>
@@ -990,6 +989,7 @@ __PrivCrochet_position: 634,-333
 __PrivCrochet_tags: 
 title: 5
 ---
+//fromJY: go to spr_splash_6_still_1.png
 <<set $endConfidence = getConfidence()>>
 
 // -1 for each 5% away from 25%. e.g. 20% -> 1; 15% -> 2; 10% -> 3, etc...
@@ -1033,6 +1033,7 @@ __PrivCrochet_position: 640,-120
 __PrivCrochet_tags: 
 title: 6
 ---
+//fromJY: go to spr_splash_6_still_2.png
 Charlotte: "Well, that was certainly one of the talks we've had."
 Charlotte: "But it wasn't the best ending we could have asked for."
 You: "Then what is?"
