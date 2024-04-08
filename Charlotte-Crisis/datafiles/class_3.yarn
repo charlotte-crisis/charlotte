@@ -45,7 +45,7 @@ Joanne: "Yeah, my boyfriend and I knew we wanted a BTO since JC. So we've been w
 Joanne: "Gosh, I'm so excited." (+5% Joanne relationship)
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 360,-80
+__PrivCrochet_position: 359,-81
 __PrivCrochet_tags: 
 title: pre-5
 ---
@@ -55,7 +55,7 @@ Do you wish to sit? (will start the class)
 
 -> Yes (continue...) #continue
     <<goto_room_class_1_seated()>>
-    <<jump 5>>
+    // <<jump 5>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: -560,240
@@ -85,7 +85,7 @@ Sage: "LGBTQ+ characters? In my Singaporean media?"
     <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -330,147
+__PrivCrochet_position: -321,153
 __PrivCrochet_tags: 
 title: 6
 ---
@@ -126,7 +126,7 @@ Chenjie: "I think there are...?"
 <<jump 8>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -333,378
+__PrivCrochet_position: -334,377
 __PrivCrochet_tags: 
 title: 7
 ---
@@ -410,7 +410,7 @@ Sage: "He has a poly diploma so he could have started working already but..."
 -> "Makes you wonder if being queer in Singapore..." #skillcheck #emp # 10
     <<set $diceroll = diceRoll($emp)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll < 10>>
+    <<if $diceroll >= 10>>
         You: "Makes you wonder if being queer in Singapore is possible at all."
         You: "You either have to work really hard to stay hidden and closeted, or you have to risk being confronted with discrimination and hurt."
         Chenjie: "Surely not. I mean, look at Sage and her friend!" 
@@ -641,7 +641,6 @@ title: 16
 ---
 <<addExperience(30)>>
 By the time class is over, the combination of last night's poor sleep and the eventfulness of this class has sapped a lot out of you. (+30 XP)
-<<incrementStage()>>
 Time to go home.
 Who will you walk with today?
 
