@@ -6,7 +6,7 @@ title: 1
 ---
 <<set $NadiaEnded = false>>
 <<set $veraOffended = false>>
-<<set ($visited_1_or_2) == false>>
+<<set ($visited_1_or_2) = false>>
 It's that time of the week again. You're in the clubroom.
 But Eleanor... isn't? Everyone is kind of just doing their own thing.
 Nadia: "Oh. Hey, {$name}."
