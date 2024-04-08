@@ -133,7 +133,10 @@ Sage: "I'm nonbinary."
         Looks like someone's in a "huge rush".
     <<endif>>
     Sage: "Bye. See you in class or something."
-    <<stop>>
+    //incrementStage() is in room after hangout
+    <<addExperience(30)>>
+    You return to your room... (+30 XP)
+    <<goto_room_bedroom_afterHangout()>>
 <<jump 4>>
 ===
 __PrivCrochet_colorID: 0
