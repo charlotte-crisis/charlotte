@@ -659,6 +659,7 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
             <<changeConfidence(-10)>>
             Charlotte: "What kind of life is that, suppressing who you truly are to be who they want you to be?" (-10% confidence) 
         <<endif>>
+        <<jump 5>>
 
 
     -> "I'm sure we can come to a compromise."
@@ -832,7 +833,7 @@ Charlotte: "So, in conclusion..."
 
 <<addExperience(30)>>
 (+30 XP)
-<<stop>>
+//there was a stop command here that i have removed so that the game will progress
 That was truly a difficult conversation.
 Still, a new week approaches...
 
