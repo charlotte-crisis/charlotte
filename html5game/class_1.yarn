@@ -567,38 +567,10 @@ You had wanted to make your debut as Charlotte, your "girl mode".
 But you had totally forgotten that your sister is close friends with one of your ex-classmates.
 <<goto_room_class_1_seated()>>
 Shit. Your sister definitely knows you've read the message already.
-
--> "I'm crossdressing."
-    Sister: "I know that. I have eyes."
-    The words over text feel sharp and angry.
-    No, it's okay. Your sister is just sharp-tongued sometimes.
-    She could just be impatient and shocked.
-
-
--> "I like dressing up that way." #skillcheck #emp # 6
-    <<set $diceroll = diceRoll($emp)>>
-    [You rolled a {$diceroll}.]
-    <<if $diceroll >= 6>>
-        You: "It feels comfortable being a girl once in a while."
-        You: "I'll explain when I come home for the weekend, okay?"
-        Sister: "Sure. Let's talk on Saturday."
-        You were the one who suggested to talk but... what do you plan to say to her?
-    <<else>>
-        Sister: "But why?"
-        Your sister's status is typing for a good 30 seconds. But then, the message that follows is short.
-        Sister: "We'll talk about this on Saturday."
-        Talk? What does she even want to talk about?
-    <<endif>>
-
--> Stay quiet.
-    Unfortunately, your sister won't do the same. She is typing again.    
-    Sister: "We'll talk about this on Saturday."
-    Talk? What does she even want to talk about?
-
-<<jump 21>>
+<<jump 20_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1000,760
+__PrivCrochet_position: 1318,756
 __PrivCrochet_tags: 
 title: 21
 ---
@@ -980,4 +952,41 @@ title: debug_end
 ---
 DEBUG: Skipped to the end.
 <<jump 12>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1055,763
+__PrivCrochet_tags: 
+title: 20_options
+---
+What do you say?
+
+-> "I'm crossdressing."
+    Sister: "I know that. I have eyes."
+    The words over text feel sharp and angry.
+    No, it's okay. Your sister is just sharp-tongued sometimes.
+    She could just be impatient and shocked.
+    <<jump 21>>
+
+-> "I like dressing up that way." #skillcheck #emp # 6
+    <<set $diceroll = diceRoll($emp)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll >= 6>>
+        You: "It feels comfortable being a girl once in a while."
+        You: "I'll explain when I come home for the weekend, okay?"
+        Sister: "Sure. Let's talk on Saturday."
+        You were the one who suggested to talk but... what do you plan to say to her?
+        <<jump 21>>
+    <<else>>
+        Sister: "But why?"
+        Your sister's status is typing for a good 30 seconds. But then, the message that follows is short.
+        Sister: "We'll talk about this on Saturday."
+        Talk? What does she even want to talk about?
+        <<jump 21>>
+    <<endif>>
+
+-> Stay quiet.
+    Unfortunately, your sister won't do the same. She is typing again.    
+    Sister: "We'll talk about this on Saturday."
+    Talk? What does she even want to talk about?
+    <<jump 21>>
 ===
