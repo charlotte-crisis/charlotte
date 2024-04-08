@@ -7,43 +7,48 @@ title: 1
 <<set $startMother = getRelationship("M")>>
 
 You: "Hi, mum."
-Mother: "Look who finally decided to come home."
-// Change camera Here 
-// Actually exactly the same as in boss1 lol so i just reuse
-<<goto_room_boss_3_sat()>>
-Mother: "You think this place hotel ah?"
--> "Maybe it is!"
-    Mother: "Siao ah. We raise you so long you still say things like this?"
-    Mother: "No manners."
-
--> "I told you I'm busy."
-    Mother: "Busy until cannot come home?"
-    Mother: "Aiya, how many things you doing in school?"
-    -> "You don't need to know."
-        You: "You probably don't understand anyway."
-        Mother: "I know I never go uni, but I can try to understand, what."
-        <<changeRelationship("M", -5)>>
-        Mother: "Why you so rude?" (-5% Mother relationship)
+<<if $name == "Charlotte">>
+    Mother: "WHAT!?"
+    <<jump 4>>
+<<else>>
+    // Change camera Here 
+    // Actually exactly the same as in boss1 lol so i just reuse
+    <<goto_room_boss_3_sat()>>
+    Mother: "Look who finally decided to come home."
+    Mother: "You think this place hotel ah?"
+    -> "Maybe it is!"
+        Mother: "Siao ah. We raise you so long you still say things like this?"
+        Mother: "No manners."
     
-    -> "Too many things."
-        Mother: "Aiyo, must take care of yourself ah."
-        Mother: "Got drink water? Eat fruit?"
-        You: "Yes mum, I'm doing all that."
+    -> "I told you I'm busy."
+        Mother: "Busy until cannot come home?"
+        Mother: "Aiya, how many things you doing in school?"
+        -> "You don't need to know."
+            You: "You probably don't understand anyway."
+            Mother: "I know I never go uni, but I can try to understand, what."
+            <<changeRelationship("M", -5)>>
+            Mother: "Why you so rude?" (-5% Mother relationship)
+        
+        -> "Too many things."
+            Mother: "Aiyo, must take care of yourself ah."
+            Mother: "Got drink water? Eat fruit?"
+            You: "Yes mum, I'm doing all that."
+        
+        -> "All you need to know is I'm happy."
+            Mother: "Okay, happy is good."
+            Mother: "Don't be like your sister, so stress."
+            Mother: "Got more than enough time to work in future."
     
-    -> "All you need to know is I'm happy."
-        Mother: "Okay, happy is good."
-        Mother: "Don't be like your sister, so stress."
-        Mother: "Got more than enough time to work in future."
-
--> "I'm sorry."
-    Mother: "Aiya, is okay."
-    Mother: "I know you're busy in school."
-    Mother: "But can you please come back home a bit more often?"
-
-Mother: "Here, got some fruit on the table for you."
-Mother: "I also cooked spaghetti. You still like, right?"
-You sit at the dining table with Mother.
-<<jump 2>>
+    -> "I'm sorry."
+        Mother: "Aiya, is okay."
+        Mother: "I know you're busy in school."
+        Mother: "But can you please come back home a bit more often?"
+    
+    Mother: "Here, got some fruit on the table for you."
+    Mother: "I also cooked spaghetti. You still like, right?"
+    You sit at the dining table with Mother.
+    <<jump 2>>
+<<endif>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 166,-73
@@ -177,7 +182,7 @@ And away we go.
 <<jump 4>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 635,-71
+__PrivCrochet_position: 633,-71
 __PrivCrochet_tags: 
 title: 4
 ---
