@@ -642,6 +642,7 @@ title: 16
 <<addExperience(30)>>
 By the time class is over, the combination of last night's poor sleep and the eventfulness of this class has sapped a lot out of you. (+30 XP)
 Time to go home.
+<<incrementStage()>>
 Who will you walk with today?
 
 -> Go back alone.
