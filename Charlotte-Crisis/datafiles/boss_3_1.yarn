@@ -64,7 +64,7 @@ Mother: "So why you come back today?"
     You: "Okay, I will."
     We need to talk.
     Leave the house, go back to your room and we'll settle this. 
-    //(Go to the door, cut to black. Load in hostel room and start BOSS 3.2)
+    //(fromJY: fade to black and start BOSS3.2)
 
 -> "Actually, got something important I want to tell you..."
     Mother: "What happen?"
@@ -140,8 +140,8 @@ Mother: "So, what do you want to tell me?"
         She keeps lecturing you about safe sex. There is no chance to tell the truth.
         But this isn't over. Charlotte still needs closure.
         Leave the house, go back to your room and we'll settle this. 
-        //(Go to the door, cut to black. Load in hostel room and start BOSS 3.2)
-        <<stop>>
+        //(fromJY: fade to black and start BOSS3.2)
+        //removed the stop here
     
     -> "Okay, relax, it's something else."
         Mother: "Har?"
@@ -1340,7 +1340,7 @@ Mother: "Please tell me you're not..."
             You: "I promise, if I do it, I will make sure I don't regret it."
             Mother: "I just hope you're right, for your sake..."
         
-    -> "If you suppress my desire, it will strike back 10 times harder." //(only if Helen was your second boss fight)
+    -> "If you suppress my desire, it will strike back 10 times harder."
         You: "I've seen what this is like for other crossdressers."
         You: "They're 10 years older than me and they cannot stop."
         Mother: "So sad... they got my pity, lah."
