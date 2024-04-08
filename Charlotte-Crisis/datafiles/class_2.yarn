@@ -387,53 +387,7 @@ You: "What brought this up?"
 Chenjie: "I don't know... It's just that I've never actually been in a serious relationship before even though it's literally my last schooling year."
 Chenjie: "And so today's lecture got me thinking about, well, if my physical appearance has something to do with it."
 
--> "What constitutes a serious relationship?"
-    Chenjie: "I guess saying officially that you are going out and dating?"
-    Chenjie: "So far, I've only ever gone out on maybe one or two dates with some girls."
-    Chenjie: "But that's about it..."
-    <<if $emp >= 5>>
-        He's keeping his descriptions pretty vague...
-        <<addExperience(5)>>
-        He mustn't like talking about his love life. (+5 XP)
-    <<endif>>
-
--> Try to offer advice #skillcheck #cha # 8
-    <<set $diceroll = diceRoll($cha)>>
-    [You rolled a {$diceroll}.]
-    <<if $diceroll >= 8>>
-        You: "I think you should build up your self-confidence. Don't beat yourself up for something like this."
-        You: "You are a cool and kind guy so it's a shame that you don't see how amazing you are."
-        You: "Besides, people are naturally drawn to those who carry themselves with confidence."
-        You: "So you just have to have faith in yourself, and good things will follow."
-        Chenjie smiles.
-        <<changeConfidence(5)>>
-        Chenjie: "That's nice to hear." (+5% confidence)
-        The bus arrives.
-        Chenjie: "Bye! See you!"
-        You: "See you!"
-    <<else>>
-        You: "Maybe you could get buff. Go to the gym."
-        <<changeRelationship("CJ", -5)>>
-        Chenjie: "You sound like one of my aunties or something. I literally go to the gym every other day already." (-5% Chenjie relationship)
-        You: "Oh... Maybe train different parts?"
-        Chenjie: "I've tried, okay?"
-        Chenjie: "It's not as easy as you think to build muscles in the right places."  
-        You: "I see..."
-        Chenjie: "Look. My bus is here. See you next week."
-        You: "Okay, bye."
-    <<endif>>
-
--> "You're a good guy. I'm sure you'll get a girl soon."
-    You: "You gotta trust."
-    Chenjie: "I guess."
-    The bus arrives.
-    Chenjie: "Bye! See you!"
-    You: "See you!"
-
-<<addExperience(30)>>
-(+30 XP)
-<<incrementStage()>>
-<<goto_room_bedroom_after_class2()>>
+<<jump 14_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1857,529
@@ -963,4 +917,61 @@ It looks like that for the rest of the discussion, she won't be speaking.
 Chenjie looks a bit at a loss.
 Chenjie: "Let's just... uh... continue with the class discussion."
 <<jump 10>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2097,291
+__PrivCrochet_tags: 
+title: 14_options
+---
+-> "What constitutes a serious relationship?"
+    Chenjie: "I guess saying officially that you are going out and dating?"
+    Chenjie: "So far, I've only ever gone out on maybe one or two dates with some girls."
+    Chenjie: "But that's about it..."
+    <<if $emp >= 5>>
+        He's keeping his descriptions pretty vague...
+        <<addExperience(5)>>
+        He mustn't like talking about his love life. (+5 XP)
+    <<endif>>
+    <<jump 14_options>>
+
+-> Try to offer advice #skillcheck #cha # 8
+    <<set $diceroll = diceRoll($cha)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll >= 8>>
+        You: "I think you should build up your self-confidence. Don't beat yourself up for something like this."
+        You: "You are a cool and kind guy so it's a shame that you don't see how amazing you are."
+        You: "Besides, people are naturally drawn to those who carry themselves with confidence."
+        You: "So you just have to have faith in yourself, and good things will follow."
+        Chenjie smiles.
+        <<changeConfidence(5)>>
+        Chenjie: "That's nice to hear." (+5% confidence)
+        The bus arrives.
+        Chenjie: "Bye! See you!"
+        You: "See you!"
+    <<else>>
+        You: "Maybe you could get buff. Go to the gym."
+        <<changeRelationship("CJ", -5)>>
+        Chenjie: "You sound like one of my aunties or something. I literally go to the gym every other day already." (-5% Chenjie relationship)
+        You: "Oh... Maybe train different parts?"
+        Chenjie: "I've tried, okay?"
+        Chenjie: "It's not as easy as you think to build muscles in the right places."  
+        You: "I see..."
+        Chenjie: "Look. My bus is here. See you next week."
+        You: "Okay, bye."
+    <<endif>>
+    <<addExperience(30)>>
+    (+30 XP)
+    <<incrementStage()>>
+    <<goto_room_bedroom_after_class2()>>
+
+-> "You're a good guy. I'm sure you'll get a girl soon."
+    You: "You gotta trust."
+    Chenjie: "I guess."
+    The bus arrives.
+    Chenjie: "Bye! See you!"
+    You: "See you!"
+    <<addExperience(30)>>
+    (+30 XP)
+    <<incrementStage()>>
+    <<goto_room_bedroom_after_class2()>>
 ===
