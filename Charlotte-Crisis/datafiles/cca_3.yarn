@@ -1120,7 +1120,11 @@ Do you want to tell Nadia more?
         Nadia: "Yeah, keep telling yourself that. Uh... I'm not being ironic. If you thought I was."
         Nadia: "If you ever want to tell me more, I'm all ears. And no mouth."
         <<jump 5_2>>
-    -> "I'm going to meet my mother about Charlotte." (option only available if Nadia knows)
+    -> "I'm going to meet my mother about Charlotte."
+        <<if !getNPCKnows("N")>>
+            Nadia: "Huh? Who's Charlotte?"
+            You quickly explain your situation to Nadia.
+        <<endif>>
         Nadia: "Oh... that's tough. It's always tough to get through to parents."
         Nadia: "I know my parents would be supportive, but I'm not sure about yours."
         -> "I mean, it's not like I'm their kid."
@@ -1139,10 +1143,10 @@ Do you want to tell Nadia more?
         <<jump 5_2>>
     
     -> "Recently I've been feeling more and more at odds with Charlotte."
-        //if Nadia doesn't know
-        // Nadia "Huh? Who's Charlotte?"
-        //You quickly explain your situation to Nadia.
-
+        <<if !getNPCKnows("N")>>
+            Nadia: "Huh? Who's Charlotte?"
+            You quickly explain your situation to Nadia.
+        <<endif>>
         Nadia: "Huh? But aren't you Charlotte?"
         You: "Exactly."
         Nadia: "I'm sorry... this is a gender dysphoria thing, isn't it?"
