@@ -472,8 +472,8 @@ Joanne: "How can I calm down when I'm being attacked on all sides?"
 Joanne: "Clearly, I'm not welcome here."
 Prof Lim chooses this moment to approach.
 Prof Lim: "Hello, is everything okay over here? Things sound a bit heated..."
-//need code to set J relationship == 0)
-Joanne: "Yeah, prof, is it possible to switch groups now?" (Goes to 0% Joanne relationship)
+<<changeRelationship("J", -100)>>
+Joanne: "Yeah, prof, is it possible to switch groups now?" (-100% Joanne relationship)
 Prof Lim: "Uh... May I know what has happened here?"
 No one looks away, unwilling to speak. Even Joanne is too angry to speak.
 
