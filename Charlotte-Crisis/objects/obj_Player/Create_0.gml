@@ -99,7 +99,7 @@ bottom_sprites = [
 /// @param {Real} _top		Top outfit
 /// @param {Real} _bottom	Pants outfit
 /// @param {Real} _shoes	Shoes outfit
-function set_player_sprites(_gender, _top, _bottom, _shoes) {
+set_player_sprites = function(_gender, _top, _bottom, _shoes) {
 	head_sprites = get_head_sprites(_gender);
 	top_sprites = get_top_sprites(_gender, _top);
 	bottom_sprites = get_bottom_sprites(_gender, _bottom);

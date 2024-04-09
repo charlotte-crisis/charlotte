@@ -18,6 +18,7 @@ if (_space) {
 				set_player_position(74, 74, 1)	
 				obj_player.visible = true;
 				obj_player.is_interacting = false;
+				obj_player.set_player_sprites(1, 1, 0, 2); // Default gender sprites
 			}	
 		});	
 	}
