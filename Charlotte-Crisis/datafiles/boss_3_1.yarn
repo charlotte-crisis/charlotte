@@ -575,39 +575,39 @@ Mother: "I know you muted the family WhatsApp chat right?"
             <<changeConfidence(-5)>>
             Wow, red packets were enough to sway you, huh? (-5% confidence)
         
-        -> "Okay, fine, I should be aware of this stuff."
-            Mother: "Yes, you should."
-            Mother: "You need to look out for family so that family will look out for you."
-            Mother goes into a short segue about this, and it leaves you wondering...
-            <<changeConfidence(-5)>>
-            What kind of family would stomp out the parts of you that made you special? (-5% confidence)
+    -> "Okay, fine, I should be aware of this stuff."
+        Mother: "Yes, you should."
+        Mother: "You need to look out for family so that family will look out for you."
+        Mother goes into a short segue about this, and it leaves you wondering...
+        <<changeConfidence(-5)>>
+        What kind of family would stomp out the parts of you that made you special? (-5% confidence)
         
-        -> "There's still a lot of spam."
-            Mother: "No one's asking you to read everything."
-            Mother: "But at least show a bit of respect to family, can?"
-            Mother: "Some of them very long never see you already."
-            -> "Nah, I don't care."
-                Mother: "How can you say that?"
-                You: "They're cringe. I'm embarrassed to associate with them."
-                Mother: "Ungrateful."
-                Mother: "Why don't you see how far in life you can get without family."
-            
-            -> "Fine, I'll be there for the big events." #skillcheck #cha # 11
-                You: "As long as there's food, I'll be there."
-                <<set $diceroll = diceRoll($cha)>>
-                [You rolled a {$diceroll}.]
-                <<if $diceroll < 11>>
-                    Mother: "Hmph. So you just come for food."
-                    Mother: "Can you please just try to connect back with us?"
-                    Mother: "It's for your own good."
-                <<else>>
-                    Mother: "Haha. Yes sure, we'll feed you well."
-                    Mother: "That's what family is about, isn't it?"
-                    No, family is about so much more. 
-                    <<changeConfidence(5)>>
-                    But this small joke has eased the tension a little. (+5% confidence)
-                <<endif>>
-                Mother: "But then hor..."
+    -> "There's still a lot of spam."
+        Mother: "No one's asking you to read everything."
+        Mother: "But at least show a bit of respect to family, can?"
+        Mother: "Some of them very long never see you already."
+        -> "Nah, I don't care."
+            Mother: "How can you say that?"
+            You: "They're cringe. I'm embarrassed to associate with them."
+            Mother: "Ungrateful."
+            Mother: "Why don't you see how far in life you can get without family."            
+
+        -> "Fine, I'll be there for the big events." #skillcheck #cha # 11
+            You: "As long as there's food, I'll be there."
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                Mother: "Hmph. So you just come for food."
+                Mother: "Can you please just try to connect back with us?"
+                Mother: "It's for your own good."
+            <<else>>
+                Mother: "Haha. Yes sure, we'll feed you well."
+                Mother: "That's what family is about, isn't it?"
+                No, family is about so much more. 
+                <<changeConfidence(5)>>
+                But this small joke has eased the tension a little. (+5% confidence)
+            <<endif>>
+            Mother: "But then hor..."
 
 Mother: "You're not the one facing these people."
 Mother: "You know your aunt, my sister, is already so particular."
