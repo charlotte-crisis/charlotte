@@ -1182,7 +1182,7 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1342,-71
+__PrivCrochet_position: 1360,-80
 __PrivCrochet_tags: 
 title: 7
 ---
@@ -1350,7 +1350,7 @@ Mother: "Please tell me you're not..."
                 Mother: "Well you're not respecting the body you were given."
                 You: "I didn't ask for this body!"
                 Woah woah. Pump the brakes. A shouting match won't go anywhere.
-                <<changeRelationship("M", -5)
+                <<changeRelationship("M", -5)>>
                 Mother's already about to lose it too. (-5% Mother relationship)
             <<else>>
                 You: "Put aside all your personal opinions. Let's talk as mother and child."
