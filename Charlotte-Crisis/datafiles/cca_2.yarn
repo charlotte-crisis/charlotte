@@ -366,6 +366,7 @@ Nadia: "I guess so. I mean, maybe people will think we're some butterfly club."
         You: "Win-win?" (+ 10 XP)
         Eleanor: "Hmm... we'd have to explain why our logo is an umbrella, though."
         Eleanor: "But it could just be one part of the design. Thanks, {$name}!"
+    <<endif>>
 
 -> "I think her logo is good. Yours could never compare."
     Anthony: "Then, as a guy, tell me, are you willing to wear this shirt?"
