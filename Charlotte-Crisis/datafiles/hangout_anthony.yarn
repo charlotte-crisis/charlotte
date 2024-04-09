@@ -382,7 +382,7 @@ title: 1_1_2_1
 ---
 Anthony: "Okay, then what other choices do I have?"
 Anthony: "Job market so bad already, how can I survive?"
--> "Transfer out, before it's too late." #skillcheck #int # 7
+-> "Transfer out, before it's too late." #skillcheck #emp # 7
     Anthony: "Siao ah. Like that means start from clean slate, you know?"
     <<set $diceroll = diceRoll($emp)>>
     [You rolled a {$diceroll}.]
