@@ -4,8 +4,6 @@ __PrivCrochet_position: -80,-80
 __PrivCrochet_tags: 
 title: 1
 ---
-<<set $startMother = getRelationship("M")>>
-
 You: "Hi, mum."
 <<if $name == "Charlotte">>
     Mother: "WHAT!?"
@@ -1590,4 +1588,5 @@ title: start
 ---
 // empty node
 // DO NOT DELETE
+<<set $startMother = getRelationship("M")>>
 ===
