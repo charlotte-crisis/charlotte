@@ -650,22 +650,19 @@ Vera: "Then again, maybe he's just like that."
     You: "He's clearly projecting some issues and covering up others."
     Vera: "Mhmm, like what?"
     You think back to the experiences you've had with Anthony.
-        // If did both anthony hangouts
-        // Need to use gm code
+    <<if visitedNode("1_options", "hangout_anthony.yarn")>>
         You: "He's another victim of the whole manosphere thing." 
         You: "No gf, watches sigma male influencers, feels bad about himself, hates people."
         You: "You know, a vicious cycle."
         Vera: "Well, he has my sympathy, I guess."
         Vera: "He's a fool following a larger fool."
         Vera: "But sympathy is different from forgiveness."
-        
-        // Else show this
+    <<else>>
         You: "Uh... he doesn't have a girlfriend? He likes to complain about that."
         Vera: "I don't have one either. And you don't see me harassing other people about it."
         Vera: "He always likes to say I made being trans my whole personality..."
         Vera: "While making inceldom his whole personality."
-        
-        // continue
+    <<endif>>
         Vera: "Regardless of what he thinks, I'll continue to represent myself how I want."
         Vera: "And I hope you will too."
         
