@@ -610,7 +610,7 @@ title: 3_2
 ---
 Vera: "I don't see a problem. I'm trans and proud to be."
 Vera: "What, are you uncomfortable with it?"
-Vera: "I didn't think you'd say that, Charlotte." <<if $veraKnows>>
+Vera: "I didn't think you'd say that, Charlotte." <<if getNPCKnows("V")>>
 -> "You're right. That was unkind of me to say. I'm sorry, Vera."
     Vera: "Thank you."
     Vera: "I get it, people get tired of activism and politics."
