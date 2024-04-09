@@ -36,6 +36,7 @@ get_player_clothes = function() {
 	return current_clothes;	
 }
 
+/// @description return 1 if female
 get_player_gender = function() {
 	return gender;
 }

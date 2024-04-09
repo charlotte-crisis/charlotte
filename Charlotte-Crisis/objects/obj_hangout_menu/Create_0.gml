@@ -30,3 +30,7 @@ goto_functions =
 	[goto_room_hangout_cj, goto_room_hangout_s, goto_room_hangout_j],
 	[goto_room_hangout_a,  goto_room_hangout_v, goto_room_hangout_n]
 ]
+
+rs_threshold = 30; // less than this cannot hang out
+
+portrait_alpha = 1;

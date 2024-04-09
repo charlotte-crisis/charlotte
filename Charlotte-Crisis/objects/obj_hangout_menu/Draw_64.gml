@@ -27,10 +27,25 @@ for (var row = 0; row < MAX_ROW; row++) {
 	for (var col = 0; col < MAX_COL - 1; col++) {
 		var _color = c_dkgray;
 		if ((select_col == col) && (select_row == row)) {
-			_color = c_white;
+			
+			if (obj_npc_relationships.get_relationship(characters[select_row][select_col]) < rs_threshold)
+			or (obj_player.get_player_gender() == 1) && (characters[select_row][select_col] == "J") {
+				_color = c_maroon;
+			} else {
+				_color = c_white;
+			}
 		}
 		var _x_col = _x_start + (_x_margin * col);
-		draw_sprite_ext(npc_sprites[row][col], 0, _x_col, _y_row, PORTRAIT_SCALE, PORTRAIT_SCALE, 0, _color, 1);		
+		
+		var current_portrait_alpha = 1;
+		if (row == select_row) && (col == select_col) {
+			current_portrait_alpha = portrait_alpha	
+		}
+		
+		draw_sprite_ext(npc_sprites[row][col], 0, 
+				_x_col, _y_row, 
+				PORTRAIT_SCALE, PORTRAIT_SCALE, 
+				0, _color, current_portrait_alpha);		
 		draw_sprite_ext(spr_portrait_bg, 1, _x_col, _y_row, PORTRAIT_SCALE, PORTRAIT_SCALE, 0, c_white, 1);		
 		
 		var _rs = obj_npc_relationships.get_relationship_level(characters[row][col]);
@@ -54,9 +69,21 @@ if (select_col == MAX_COL - 1) {
 	_speech = select_row ? "Do not hang out with anyone this week. (continue to next scene)"
 			: "Cancel selection. (go back to room)";
 } else {
-	_speech = string("Ask {0} to hang out? (Relationship level: {1}%)",
+	var _rs = obj_npc_relationships.get_relationship(characters[select_row][select_col]);
+	if (_rs < rs_threshold) {
+		_speech = string("Not on good terms with {0}. (Relationship level: {1}%)",
 				npc_names[select_row][select_col],
-				obj_npc_relationships.get_relationship(characters[select_row][select_col]));
+				_rs);
+	} else if (obj_player.get_player_gender() == 1) && (characters[select_row][select_col] == "J") {
+		// Joanne wont hang out with you.
+		_speech = string("{0} doesn't want to hang out with you while you're dressed like that. (Relationship level: {1}%)",
+				npc_names[select_row][select_col],
+				_rs);
+	} else { // Good enough relationship
+		_speech = string("Ask {0} to hang out? (Relationship level: {1}%)",
+				npc_names[select_row][select_col],
+				_rs);
+	}
 }
 draw_dialogue(_speech);
 

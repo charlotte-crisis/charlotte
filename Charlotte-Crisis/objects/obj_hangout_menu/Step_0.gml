@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (keyboard_check(vk_space)) {
+	portrait_alpha = 0.6;	
+} else {
+	portrait_alpha = 1;	
+}
+
 if (keyboard_check_pressed(vk_escape)) {
 	io_clear(); // disallow escape to trigger anything else
 	obj_player.set_is_interacting(false);
@@ -26,13 +32,18 @@ if (keyboard_check_pressed(vk_space)) {
 			}
 			instance_destroy(self);
 		}
-	} else {
-		obj_player.set_is_interacting(false);
-		gender_meter_check(); // increment or decrement based on gender
-		with (obj_chatterbox_control) {
-			other.goto_functions[other.select_row][other.select_col]();
+	} else { // Hangout
+		if (obj_npc_relationships.get_relationship(characters[select_row][select_col]) < rs_threshold) {
+			// Do nothing. does not meet rs threshold
+		} else if (obj_player.get_player_gender() == 1) && (characters[select_row][select_col] == "J") {
+			// Do nothing. Joanne wont hang out with CHARLOTTE
+		} else {
+			obj_player.set_is_interacting(false);
+			gender_meter_check(); // increment or decrement based on gender
+			with (obj_chatterbox_control) {
+				other.goto_functions[other.select_row][other.select_col]();
+			}
+			instance_destroy(self); // might not be needed as it's not persistent.	
 		}
-		
-		instance_destroy(self); // might not be needed as it's not persistent.
 	}
 }
