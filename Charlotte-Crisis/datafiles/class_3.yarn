@@ -215,7 +215,7 @@ You: "Is LGBT representation good in Singapore's news? Um..."
 Sage puts down her phone with a sigh.
 -> "All good?"
 -> "Are you rejoining us?"
--> Are you okay?"
+-> "Are you okay?"
 Sage nods.
 Sage: "What are we talking about?"
 You: "Featuring LGBTQ daily experiences on the news."
@@ -340,7 +340,7 @@ Sage: "He has a poly diploma so he could have started working already but..."
 <<jump 10_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 401,236
+__PrivCrochet_position: 400,240
 __PrivCrochet_tags: 
 title: 11
 ---
