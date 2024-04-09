@@ -991,7 +991,7 @@ __PrivCrochet_position: 634,-333
 __PrivCrochet_tags: 
 title: 5
 ---
-//fromJY: go to spr_splash_6_still_1.png
+<<goto_splash_boss3_2(1)>>
 <<set $endConfidence = getConfidence()>>
 
 // -1 for each 5% away from 25%. e.g. 20% -> 1; 15% -> 2; 10% -> 3, etc...
@@ -1035,7 +1035,7 @@ __PrivCrochet_position: 640,-120
 __PrivCrochet_tags: 
 title: 6
 ---
-//fromJY: go to spr_splash_6_still_2.png
+<<goto_splash_boss3_2(2)>>
 Charlotte: "Well, that was certainly one of the talks we've had."
 Charlotte: "But it wasn't the best ending we could have asked for."
 You: "Then what is?"
