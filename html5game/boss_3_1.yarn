@@ -4,46 +4,49 @@ __PrivCrochet_position: -80,-80
 __PrivCrochet_tags: 
 title: 1
 ---
-<<set $startMother = getRelationship("M")>>
-
 You: "Hi, mum."
-Mother: "Look who finally decided to come home."
-// Change camera Here 
-// Actually exactly the same as in boss1 lol so i just reuse
-<<goto_room_boss_3_sat()>>
-Mother: "You think this place hotel ah?"
--> "Maybe it is!"
-    Mother: "Siao ah. We raise you so long you still say things like this?"
-    Mother: "No manners."
-
--> "I told you I'm busy."
-    Mother: "Busy until cannot come home?"
-    Mother: "Aiya, how many things you doing in school?"
-    -> "You don't need to know."
-        You: "You probably don't understand anyway."
-        Mother: "I know I never go uni, but I can try to understand, what."
-        <<changeRelationship("M", -5)>>
-        Mother: "Why you so rude?" (-5% Mother relationship)
+<<if $name == "Charlotte">>
+    Mother: "WHAT!?"
+    <<jump 4>>
+<<else>>
+    // Change camera Here 
+    // Actually exactly the same as in boss1 lol so i just reuse
+    <<goto_room_boss_3_sat()>>
+    Mother: "Look who finally decided to come home."
+    Mother: "You think this place hotel ah?"
+    -> "Maybe it is!"
+        Mother: "Siao ah. We raise you so long you still say things like this?"
+        Mother: "No manners."
     
-    -> "Too many things."
-        Mother: "Aiyo, must take care of yourself ah."
-        Mother: "Got drink water? Eat fruit?"
-        You: "Yes mum, I'm doing all that."
+    -> "I told you I'm busy."
+        Mother: "Busy until cannot come home?"
+        Mother: "Aiya, how many things you doing in school?"
+        -> "You don't need to know."
+            You: "You probably don't understand anyway."
+            Mother: "I know I never go uni, but I can try to understand, what."
+            <<changeRelationship("M", -5)>>
+            Mother: "Why you so rude?" (-5% Mother relationship)
+        
+        -> "Too many things."
+            Mother: "Aiyo, must take care of yourself ah."
+            Mother: "Got drink water? Eat fruit?"
+            You: "Yes mum, I'm doing all that."
+        
+        -> "All you need to know is I'm happy."
+            Mother: "Okay, happy is good."
+            Mother: "Don't be like your sister, so stress."
+            Mother: "Got more than enough time to work in future."
     
-    -> "All you need to know is I'm happy."
-        Mother: "Okay, happy is good."
-        Mother: "Don't be like your sister, so stress."
-        Mother: "Got more than enough time to work in future."
-
--> "I'm sorry."
-    Mother: "Aiya, is okay."
-    Mother: "I know you're busy in school."
-    Mother: "But can you please come back home a bit more often?"
-
-Mother: "Here, got some fruit on the table for you."
-Mother: "I also cooked spaghetti. You still like, right?"
-You sit at the dining table with Mother.
-<<jump 2>>
+    -> "I'm sorry."
+        Mother: "Aiya, is okay."
+        Mother: "I know you're busy in school."
+        Mother: "But can you please come back home a bit more often?"
+    
+    Mother: "Here, got some fruit on the table for you."
+    Mother: "I also cooked spaghetti. You still like, right?"
+    You sit at the dining table with Mother.
+    <<jump 2>>
+<<endif>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 166,-73
@@ -57,9 +60,10 @@ Mother: "So why you come back today?"
     You: "Ya. Maybe I take some things from my room then go back already."
     Mother: "Orh... come back soon, okay?"
     You: "Okay, I will."
+    <<goto_black_room()>>
     We need to talk.
     Leave the house, go back to your room and we'll settle this. 
-    //(Go to the door, cut to black. Load in hostel room and start BOSS 3.2)
+    <<goto_room_boss_3_2()>>
 
 -> "Actually, got something important I want to tell you..."
     Mother: "What happen?"
@@ -132,11 +136,12 @@ Mother: "So, what do you want to tell me?"
         Mother: "Okay... you cannot play around with girls like this in future hor."
         Mother: "I know you need to do... things... but don't be so careless, can?"
         Mother: "Later you kena AIDS or what... like the gays..."
+        <<goto_black_room()>>
         She keeps lecturing you about safe sex. There is no chance to tell the truth.
         But this isn't over. Charlotte still needs closure.
         Leave the house, go back to your room and we'll settle this. 
-        //(Go to the door, cut to black. Load in hostel room and start BOSS 3.2)
-        <<stop>>
+        <<goto_room_boss_3_2()>>
+        // fade to black and start BOSS3.2)
     
     -> "Okay, relax, it's something else."
         Mother: "Har?"
@@ -177,7 +182,7 @@ And away we go.
 <<jump 4>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 635,-71
+__PrivCrochet_position: 633,-71
 __PrivCrochet_tags: 
 title: 4
 ---
@@ -1335,7 +1340,7 @@ Mother: "Please tell me you're not..."
             You: "I promise, if I do it, I will make sure I don't regret it."
             Mother: "I just hope you're right, for your sake..."
         
-    -> "If you suppress my desire, it will strike back 10 times harder." //(only if Helen was your second boss fight)
+    -> "If you suppress my desire, it will strike back 10 times harder."
         You: "I've seen what this is like for other crossdressers."
         You: "They're 10 years older than me and they cannot stop."
         Mother: "So sad... they got my pity, lah."
@@ -1583,4 +1588,5 @@ title: start
 ---
 // empty node
 // DO NOT DELETE
+<<set $startMother = getRelationship("M")>>
 ===

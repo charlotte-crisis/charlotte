@@ -51,7 +51,7 @@ Charlotte: "What happened? Not feeling the rush anymore when you see a nice outf
 -> "Have is have, but..."
     <<jump 2_1>>
 
--> "Yes, I don't feel it anymore." (-5% gender meter) <<changeGenderMeter(-5)>>
+-> "Yes, I don't feel it anymore." 
     <<jump 2_2>>
 ===
 __PrivCrochet_colorID: 0
@@ -80,6 +80,8 @@ __PrivCrochet_position: 1269,482
 __PrivCrochet_tags: 
 title: 2_2
 ---
+<<changeGenderMeter(-5)>>
+(-5% gender meter)
 You: "It's not normal."
 Charlotte: "Girl, since when have we cared about that?"
 You: "I want this for myself. Don't get in my way."
@@ -89,10 +91,10 @@ Charlotte: "More lies! What's gotten into you?"
 -> "You're a demon."
     <<jump 2_2_1>>
 
--> "It's time to reclaim my masculinity." (-5% gender meter) <<changeGenderMeter(-5)>>
+-> "It's time to reclaim my masculinity." 
     <<jump 2_2_2>>
 
--> "I will never be a woman, and it's time we accepted that." (-5% gender meter) <<changeGenderMeter(-5)>>
+-> "I will never be a woman, and it's time we accepted that." 
     <<jump 2_2_3>>
 ===
 __PrivCrochet_colorID: 0
@@ -502,6 +504,8 @@ __PrivCrochet_position: 1657,286
 __PrivCrochet_tags: 
 title: 2_2_2
 ---
+<<changeGenderMeter(-5)>>
+(-5% gender meter)
 You: "What do you think all my achievements have been built on? Mental and physical resilience."
 You: "Ever since letting you into my life, I've lost that. I've become soft."
 You: "And I'm playing life on hard mode."
@@ -555,6 +559,8 @@ __PrivCrochet_position: 1685,483
 __PrivCrochet_tags: 
 title: 2_2_3
 ---
+<<changeGenderMeter(-5)>>
+(-5% gender meter)
 You: "Look at how ugly you are! You look like someone shoved a square peg into a round hole."
 You: "When I let you out, you're using my body. And I don't want to look like a joke."
 Charlotte: "I don't understand how you're able to self-flagellate to this extent."
@@ -653,6 +659,7 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
             <<changeConfidence(-10)>>
             Charlotte: "What kind of life is that, suppressing who you truly are to be who they want you to be?" (-10% confidence) 
         <<endif>>
+        <<jump 5>>
 
 
     -> "I'm sure we can come to a compromise."
@@ -826,7 +833,7 @@ Charlotte: "So, in conclusion..."
 
 <<addExperience(30)>>
 (+30 XP)
-<<stop>>
+//there was a stop command here that i have removed so that the game will progress
 That was truly a difficult conversation.
 Still, a new week approaches...
 

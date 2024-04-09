@@ -954,7 +954,7 @@ DEBUG: Skipped to the end.
 <<jump 12>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1055,763
+__PrivCrochet_position: 1055,761
 __PrivCrochet_tags: 
 title: 20_options
 ---
@@ -965,7 +965,7 @@ What do you say?
     The words over text feel sharp and angry.
     No, it's okay. Your sister is just sharp-tongued sometimes.
     She could just be impatient and shocked.
-    <<jump 21>>
+    <<jump 20_options>>
 
 -> "I like dressing up that way." #skillcheck #emp # 6
     <<set $diceroll = diceRoll($emp)>>

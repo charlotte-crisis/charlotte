@@ -5,22 +5,23 @@ __PrivCrochet_tags:
 title: 1
 ---
 Charlotte: "We should not be here, but here we are nonetheless."
-//get confidence at start here
-//(if you were previously in BOSS 3.1)
-Charlotte: "Why didn't you pursue the talk with Mother?"
--> "I'm sorry. I couldn't do it."
-    Charlotte: "Yeah, you really couldn't."
-    Charlotte: "I really wanna side with you, but this is a mess we have to clean up."
-
--> "I side with her now. Not you."
-    Charlotte: "Okay, so you chickened out and now serve only Mother's interests."
-    Charlotte: "Or you bought wholesale into the alpha male ideology."
-    Charlotte: "Either way... this is gonna hurt."
-    You: "For you."
-
-//(if you are here because your gender meter is < 30%)
-Charlotte: "This is what happens when you don't let me out."
-You: "Then let this be the last time we ever do this."
+// check if player had come from boss3.1 "No reason, just to visit" (node 2) or "That's right. I'll get her an abortion." (node 3)
+<<if visitedNode("3", "boss_3_1.yarn") or visitedNode("2", "boss_3_1.yarn")>>
+    Charlotte: "Why didn't you pursue the talk with Mother?"
+    -> "I'm sorry. I couldn't do it."
+        Charlotte: "Yeah, you really couldn't."
+        Charlotte: "I really wanna side with you, but this is a mess we have to clean up."
+    
+    -> "I side with her now. Not you."
+        Charlotte: "Okay, so you chickened out and now serve only Mother's interests."
+        Charlotte: "Or you bought wholesale into the alpha male ideology."
+        Charlotte: "Either way... this is gonna hurt."
+        You: "For you."
+<<else>>
+    // trigger this if the above condition not met (i.e., player did not go through BOSS3_1)
+    Charlotte: "This is what happens when you don't let me out."
+    You: "Then let this be the last time we ever do this."
+<<endif>>
 <<jump 2>>
 ===
 __PrivCrochet_colorID: 0
@@ -208,7 +209,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
             Charlotte: "Where did you learn such disgusting thoughts..."
 
 -> "Look at what Vera is doing to herself."
-    Charlotte: "What did [i]she[/i] ever do!? Don't drag her into this!"
+    Charlotte: "What did she ever do!? Don't drag her into this!"
     -> "Too preachy."
         Charlotte: "What, because she wanted to offer advice and compassion?"
         Charlotte: "You're some special breed of messed up to reject even that."
@@ -266,11 +267,11 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
             <<endif>>
         -> "She's not even a real woman."
             Charlotte: "What is wrong with you!? Can't even respect her identity anymore?"
-            You: "[i]His[/i] identity."
+            You: "His identity."
             Charlotte: "I'm feeling sick even talking to you..."
             You: "I can't understand why you're offended by the truth."
             Charlotte: "Fine. Go ahead. Say that to her and see what happens. She'll knock your block off."
-            You: "As only a [i]man[/i] would."
+            You: "As only a man would."
         
         -> "How do you think she'd respond if I were to present as male permanently?" #skillcheck #cha # 11
             Charlotte: "Don't make her the villain. She would still accept you."
@@ -301,7 +302,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
             You: "This ends. Today."
 
 You: "Besides, you were holding me back from being who I really am."
-Charlotte: "I [i]am[/i] who you truly are!"
+Charlotte: "I am who you truly are!"
 Charlotte: "Why can't you just accept me?"
 -> "Where is your motivation, woman?"
     Charlotte: "Don't quote memes at me."
@@ -342,9 +343,9 @@ Charlotte: "Why can't you just accept me?"
             <<else>>
                 Charlotte: "Okay, fine. Extreme measures, let's go."
                 Charlotte: "Estrogen, surgeries, how far down this rabbit hole do you wanna go?"
-                Charlotte: "Remember, [i]I[/i] didn't ask for this. All I wanted was to look pretty."
+                Charlotte: "Remember, I didn't ask for this. All I wanted was to look pretty."
                 <<changeConfidence(-10)>>
-                Charlotte: "[i]You'[/i]re the one who wanted to femalemaxx." (-10% confidence)
+                Charlotte: "You're the one who wanted to femalemaxx." (-10% confidence)
             <<endif>>
     
     -> "I've wasted too much time on you."
@@ -725,7 +726,7 @@ Charlotte: "Why are we suddenly forced back into the closet again?"
 -> "Times change."
     You: "We're not gonna be in university forever."
     Charlotte: "Yes yes, I know, we have to find a job and all that."
-    -> "No, [i]I[/i] have to find a job."
+    -> "No, I have to find a job."
         You: "I can't possibly bring you into job interviews."
         You: "And besides, it takes effort to maintain your look."
         Charlotte: "That's fine. I'm okay not being at your workplace."
@@ -882,7 +883,7 @@ Charlotte: "How are you sure the next time won't be the same?"
             Charlotte: "I honestly wasn't expecting to hear that. But just one thing..."
             Charlotte: "Where was that bravery when you decided to talk to me instead?"
     -> "I don't know enough about you."
-        Charlotte: "I literally [i]am[/i] you. What are you talking about?"
+        Charlotte: "I literally am you. What are you talking about?"
         -> "What about your future?"
             You: "I'm not sure if I will transition. You know, make you a full time thing."
             You: "Or if you'll just eventually fade out of my life at some point."
@@ -899,7 +900,7 @@ Charlotte: "How are you sure the next time won't be the same?"
     Charlotte: "She's pretty disillusioned right now, as I see it."
     -> "I got the insurance policy card."
         Charlotte: "What? You're a financial advisor now?"
-        You: "I'll [i]advise[/i] her that if she disowns me, she's disowning her future [i]finances[/i]."
+        You: "I'll advise her that if she disowns me, she's disowning her future finances."
         Charlotte: "Uh, you have a sister who is still on good terms with her, you know..."
         You: "Damn. Well.."
     -> "We have to play to the correct emotions."
@@ -990,6 +991,7 @@ __PrivCrochet_position: 634,-333
 __PrivCrochet_tags: 
 title: 5
 ---
+//fromJY: go to spr_splash_6_still_1.png
 <<set $endConfidence = getConfidence()>>
 
 // -1 for each 5% away from 25%. e.g. 20% -> 1; 15% -> 2; 10% -> 3, etc...
@@ -1033,6 +1035,7 @@ __PrivCrochet_position: 640,-120
 __PrivCrochet_tags: 
 title: 6
 ---
+//fromJY: go to spr_splash_6_still_2.png
 Charlotte: "Well, that was certainly one of the talks we've had."
 Charlotte: "But it wasn't the best ending we could have asked for."
 You: "Then what is?"

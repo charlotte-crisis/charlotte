@@ -58,7 +58,7 @@ Do you wish to sit? (will start the class)
     <<jump 5>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -560,240
+__PrivCrochet_position: -704,157
 __PrivCrochet_tags: 
 title: 5
 ---
@@ -85,48 +85,16 @@ Sage: "LGBTQ+ characters? In my Singaporean media?"
     <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -321,153
+__PrivCrochet_position: -404,172
 __PrivCrochet_tags: 
 title: 6
 ---
 Sage: "I don't know... Is there any representation?"
 Chenjie: "I think there are...?"
--> "It's hard to even find any LGBTQ characters in Singapore media."
-    You: "I feel like we just sort of... ignore the existence of LGBTQ people in general, even in media."
-    Chenjie: "Yeah, that's why there are hardly any queer characters, and when they do appear, they're... perverts and stuff..." 
-    Joanne: "Yeah, representation just isn't great."
-
--> "But what good LGBTQ representation is there in Singapore?"
-    Sage: "I really don't think there are any."
-    Joanne: "I think there are... For example, influencers."
-    Chenjie: "Yeah, I think it's definitely more lax if you are an independent creator or something."
-    Sage: "Oh, right... Like Kumar maybe?"
-    Sage: "And I know there are also quite a few influencers on TikTok and Instagram who are very openly queer."
-    You: "Well, at least there are some... But any for fictional media?"
-    Chenjie: "Not that I can think of at least..."
-
--> "Don't we have a media policy or something?" #skillcheck #int # 10
-    <<set $diceroll = diceRoll($int)>>
-    [You rolled a {$diceroll}.]
-    <<if $diceroll >= 10>>
-        You: "A media content policy not to portray non-heterosexual behaviour in a positive way." (+5 XP)
-        Sage: "Don't remind me of that stupid rule. If I remember correctly, the exact phrasing is 'promotion of homosexuality'."  
-        Sage: "What counts as 'promotion' anyway? Is normalising it 'promotion'? Is depicting a happy queer person?"
-        Chenjie: "Let's not forget the film ratings. Any queer depiction immediately gets the M18 rating."
-    <<else>>
-        You: "Something about the depiction of non-heterosexuality..."
-        Joanne: "You mean the film ratings?"
-        Chenjie: "Right, any queer depiction immediately gets the M18 rating."
-        You: "No... Not just that... Sorry, it slipped my mind..."
-        Sage: "It's okay. It be like that sometimes."
-        Chenjie: "Yeah, you look really exhausted today too..."
-    <<endif>>
-
--> Keep silent
-<<jump 8>>
+<<jump 6_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -334,377
+__PrivCrochet_position: -374,431
 __PrivCrochet_tags: 
 title: 7
 ---
@@ -184,7 +152,7 @@ Sage: "Why?"
 <<jump 8>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: -88,226
+__PrivCrochet_position: -105,424
 __PrivCrochet_tags: 
 title: 8
 ---
@@ -360,117 +328,7 @@ Sage: "He rented a room. He had money he saved up from working part-time over th
 Sage: "But... he has to juggle work and uni now. And he's only in his first semester."
 Sage: "So he's thinking of dropping out."
 Sage: "He has a poly diploma so he could have started working already but..."
-
--> "How did his family find out that he's gay?"
-    Sage: "His cousin told on him to his parents after seeing a TikTok of him at Pink Dot."
-    You: "Oh..."
-    Doesn't that sound familiar to you? 
-    <<set $diceroll = diceRoll($int)>>
-    <<if $diceroll >= 10>>
-        The irony also doesn't escape your notice.
-        <<changeConfidence(-5)>>
-        <<addExperience(5)>>
-        Pink Dot was supposed to be one of the few "safe spaces" for queer people. (-5% confidence) (+5 XP)
-    <<endif>>
-    Joanne: "He really should have been more careful..."
-    -> "By hiding himself at all times?"
-        You: "How could you blame a guy for wanting to be among people like himself?" 
-        You: "He couldn't have predicted being spotted on TikTok of all places, and being told on."
-        <<changeConfidence(5)>>
-        <<addExperience(5)>>
-        Joanne: "I... I guess I didn't think of it that way." (+5% confidence) (+5 XP) 
-
-    -> "He shouldn't have gone to Pink Dot, I think."
-        <<changeRelationship("J", 5)>>
-        You: "Like, it's harsh but you have to be careful if you want to stay closeted." (+5% Joanne relationship)
-        Sage: "I guess so..."
-        <<changeRelationship("S", -5)>>
-        Sage: "God, it was his first time there too... I feel awful for suggesting to go..." (-5% Sage relationship)
-        This is really weighing on Sage.
-
-    -> Say nothing
-        Sage: "God, it was his first time there too... I feel awful for suggesting to go..."
-        This is really weighing on Sage.
-
--> "How is he paying for uni?"
-    Sage: "He's on a full-ride scholarship."
-    Chenjie: "Then he doesn't have to drop out, right?"
-    Sage: "That's what I told him too..."
-    Joanne: "But studying for uni while also trying to earn enough to make a living is still incredibly difficult." 
-    Joanne: "I can see why he would rather drop out and start working."
-    Sage: "... I guess so."
-
--> "Why did he text you just now?"
-    Sage: "He is trying to sneak home to get some of his stuff from his room."
-    Sage: "He's worried his parents might change the locks so he said he's doing it tonight."
-    Just thinking about it makes you sick.
-    <<changeConfidence(-5)>>
-    The finality and rejection of changing the locks to keep your own son out of the house. (-5% confidence)
-
--> "Makes you wonder if being queer in Singapore..." #skillcheck #emp # 10
-    <<set $diceroll = diceRoll($emp)>>
-    [You rolled a {$diceroll}.]
-    <<if $diceroll >= 10>>
-        You: "Makes you wonder if being queer in Singapore is possible at all."
-        You: "You either have to work really hard to stay hidden and closeted, or you have to risk being confronted with discrimination and hurt."
-        Chenjie: "Surely not. I mean, look at Sage and her friend!" 
-        Sage: "What do you mean?"
-        Chenjie: "Well, you're there for him, right?"
-        Sage: "I don't think I'm doing very much though. All I'm doing is sitting here texting him."
-        Chenjie: "You said you helped him move to a new place, right?"
-        Chenjie: "And don't underestimate being there for your friend."
-        Chenjie: "Knowing there is someone who you can talk to — who will worry about you — is comforting."
-        <<addExperience(5)>>
-        <<changeConfidence(5)>>
-        Chenjie: "I think it's support and care like that that makes being queer in Singapore possible." (+5% confidence) (+5 XP)
-        The frown on Sage's face softens.
-
-        -> "True, I've also received support and care for my crossdressing."
-            <<changeRelationship("CJ", 5)>>
-            You: "Over the past few weeks, things have been rough but I've had people in my corner who I can talk to." (+5% Chenjie relationship)
-            <<changeConfidence(5)>>
-            You: "It's really that support that gets me through the roughest times." (+5% confidence)
-            <<jump 14>>
-        
-        -> "Such a thing doesn't exist for me though."
-            You: "I don't have anyone who supports or cares about me." 
-            <<jump 14>>
-        
-        -> "But being LGBTQ in Singapore is still unbearable."
-            <<changeConfidence(-5)>>
-            You: "Care and support don't negate the insurmountable obstacles." (-5% confidence)
-            <<addExperience(5)>>
-            You: "How is the power of friendship going to solve the discrimination and microaggression that LGBTQ people face every day?" (+5 XP)
-            Sage: "Yeah... They're societal and structural issues. They're not that easy to deal with."
-            <<jump 12>>
-    <<else>>
-        It's like waiting for the inevitable moment you are caught red-handed for *something*.
-        You try to translate those emotions into words but nothing coherent forms.
-        <<changeConfidence(-5)>>
-        You: "Makes you wonder if being queer in Singapore is possible at all." (-5% confidence)
-        <<changeRelationship("J", -5)>>
-        Joanne: "What? Of course, gay people exist in Singapore." (-5% Joanne relationship)
-        Sage: "I think what {$name} is trying to say is that being queer in Singapore is difficult and impractical."
-        Joanne: "That's why Singaporeans have to fight for gay rights!"
-        Sage: "But for every push for equality, there's just as strong a pushback to return to the 'traditional' ways."
-        <<jump 12>>
-    <<endif>>
-
--> "I'm sorry he's going through such a rough time."
-    Joanne: "Yeah, what he's going through is just awful."
-    Joanne: "No one should ever have to go through what he is going through."
-    Sage smiles wryly. 
-    Sage: "Yeah, but this is the reality for a lot of queer folks."
-    <<addExperience(5)>>
-    Chenjie: "That's why a lot of them move overseas, right?" (+5 XP)
-    Joanne: "But that's provided they can afford it. Moving overseas requires a lot of money."
-    Sage: "And provided that moving overseas is really better."
-    Chenjie: "What do you mean?"
-    Sage: "Singapore's standard of living is quite high. Safety is high. Migrating is lonely and you lose a lot of your friends at once."
-    Sage: "It's about weighing the pros and cons of leaving."
-    Chenjie: "So I take it you don't intend to leave?"
-    Sage shakes her head.
-    <<jump 11>>
+<<jump 10_options>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 401,236
@@ -593,7 +451,7 @@ The lesson continues.
 <<jump 16>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 724,585
+__PrivCrochet_position: 703,582
 __PrivCrochet_tags: 
 title: 13
 ---
@@ -866,4 +724,167 @@ title: debug_end
 ---
 Skipped to the end.
 <<jump 16>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: -172,172
+__PrivCrochet_tags: 
+title: 6_options
+---
+-> "It's hard to even find any LGBTQ characters in Singapore media."
+    You: "I feel like we just sort of... ignore the existence of LGBTQ people in general, even in media."
+    Chenjie: "Yeah, that's why there are hardly any queer characters, and when they do appear, they're... perverts and stuff..." 
+    Joanne: "Yeah, representation just isn't great."
+    <<jump 6_options>>
+
+-> "But what good LGBTQ representation is there in Singapore?"
+    Sage: "I really don't think there are any."
+    Joanne: "I think there are... For example, influencers."
+    Chenjie: "Yeah, I think it's definitely more lax if you are an independent creator or something."
+    Sage: "Oh, right... Like Kumar maybe?"
+    Sage: "And I know there are also quite a few influencers on TikTok and Instagram who are very openly queer."
+    You: "Well, at least there are some... But any for fictional media?"
+    Chenjie: "Not that I can think of at least..."
+    <<jump 6_options>>
+
+-> "Don't we have a media policy or something?" #skillcheck #int # 10
+    <<set $diceroll = diceRoll($int)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll >= 10>>
+        You: "A media content policy not to portray non-heterosexual behaviour in a positive way." (+5 XP)
+        Sage: "Don't remind me of that stupid rule. If I remember correctly, the exact phrasing is 'promotion of homosexuality'."  
+        Sage: "What counts as 'promotion' anyway? Is normalising it 'promotion'? Is depicting a happy queer person?"
+        Chenjie: "Let's not forget the film ratings. Any queer depiction immediately gets the M18 rating."
+    <<else>>
+        You: "Something about the depiction of non-heterosexuality..."
+        Joanne: "You mean the film ratings?"
+        Chenjie: "Right, any queer depiction immediately gets the M18 rating."
+        You: "No... Not just that... Sorry, it slipped my mind..."
+        Sage: "It's okay. It be like that sometimes."
+        Chenjie: "Yeah, you look really exhausted today too..."
+        <<jump 8>>
+    <<endif>>
+
+-> Keep silent
+    <<jump 8>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 132,612
+__PrivCrochet_tags: 
+title: 10_options
+---
+-> "How did his family find out that he's gay?"
+    Sage: "His cousin told on him to his parents after seeing a TikTok of him at Pink Dot."
+    You: "Oh..."
+    Doesn't that sound familiar to you? 
+    <<set $diceroll = diceRoll($int)>>
+    <<if $diceroll >= 10>>
+        The irony also doesn't escape your notice.
+        <<changeConfidence(-5)>>
+        <<addExperience(5)>>
+        Pink Dot was supposed to be one of the few "safe spaces" for queer people. (-5% confidence) (+5 XP)
+    <<endif>>
+    Joanne: "He really should have been more careful..."
+    -> "By hiding himself at all times?"
+        You: "How could you blame a guy for wanting to be among people like himself?" 
+        You: "He couldn't have predicted being spotted on TikTok of all places, and being told on."
+        <<changeConfidence(5)>>
+        <<addExperience(5)>>
+        Joanne: "I... I guess I didn't think of it that way." (+5% confidence) (+5 XP) 
+        <<jump 10_options>>
+
+    -> "He shouldn't have gone to Pink Dot, I think."
+        <<changeRelationship("J", 5)>>
+        You: "Like, it's harsh but you have to be careful if you want to stay closeted." (+5% Joanne relationship)
+        Sage: "I guess so..."
+        <<changeRelationship("S", -5)>>
+        Sage: "God, it was his first time there too... I feel awful for suggesting to go..." (-5% Sage relationship)
+        This is really weighing on Sage.
+        <<jump 10_options>>
+
+    -> Say nothing
+        Sage: "God, it was his first time there too... I feel awful for suggesting to go..."
+        This is really weighing on Sage.
+        <<jump 10_options>>
+
+-> "How is he paying for uni?"
+    Sage: "He's on a full-ride scholarship."
+    Chenjie: "Then he doesn't have to drop out, right?"
+    Sage: "That's what I told him too..."
+    Joanne: "But studying for uni while also trying to earn enough to make a living is still incredibly difficult." 
+    Joanne: "I can see why he would rather drop out and start working."
+    Sage: "... I guess so."
+    <<jump 10_options>>
+
+-> "Why did he text you just now?"
+    Sage: "He is trying to sneak home to get some of his stuff from his room."
+    Sage: "He's worried his parents might change the locks so he said he's doing it tonight."
+    Just thinking about it makes you sick.
+    <<changeConfidence(-5)>>
+    The finality and rejection of changing the locks to keep your own son out of the house. (-5% confidence)
+    <<jump 10_options>>
+
+-> "Makes you wonder if being queer in Singapore..." #skillcheck #emp # 10
+    <<set $diceroll = diceRoll($emp)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll >= 10>>
+        You: "Makes you wonder if being queer in Singapore is possible at all."
+        You: "You either have to work really hard to stay hidden and closeted, or you have to risk being confronted with discrimination and hurt."
+        Chenjie: "Surely not. I mean, look at Sage and her friend!" 
+        Sage: "What do you mean?"
+        Chenjie: "Well, you're there for him, right?"
+        Sage: "I don't think I'm doing very much though. All I'm doing is sitting here texting him."
+        Chenjie: "You said you helped him move to a new place, right?"
+        Chenjie: "And don't underestimate being there for your friend."
+        Chenjie: "Knowing there is someone who you can talk to — who will worry about you — is comforting."
+        <<addExperience(5)>>
+        <<changeConfidence(5)>>
+        Chenjie: "I think it's support and care like that that makes being queer in Singapore possible." (+5% confidence) (+5 XP)
+        The frown on Sage's face softens.
+
+        -> "True, I've also received support and care for my crossdressing."
+            <<changeRelationship("CJ", 5)>>
+            You: "Over the past few weeks, things have been rough but I've had people in my corner who I can talk to." (+5% Chenjie relationship)
+            <<changeConfidence(5)>>
+            You: "It's really that support that gets me through the roughest times." (+5% confidence)
+            <<jump 14>>
+        
+        -> "Such a thing doesn't exist for me though."
+            You: "I don't have anyone who supports or cares about me." 
+            <<jump 14>>
+        
+        -> "But being LGBTQ in Singapore is still unbearable."
+            <<changeConfidence(-5)>>
+            You: "Care and support don't negate the insurmountable obstacles." (-5% confidence)
+            <<addExperience(5)>>
+            You: "How is the power of friendship going to solve the discrimination and microaggression that LGBTQ people face every day?" (+5 XP)
+            Sage: "Yeah... They're societal and structural issues. They're not that easy to deal with."
+            <<jump 12>>
+    <<else>>
+        It's like waiting for the inevitable moment you are caught red-handed for *something*.
+        You try to translate those emotions into words but nothing coherent forms.
+        <<changeConfidence(-5)>>
+        You: "Makes you wonder if being queer in Singapore is possible at all." (-5% confidence)
+        <<changeRelationship("J", -5)>>
+        Joanne: "What? Of course, gay people exist in Singapore." (-5% Joanne relationship)
+        Sage: "I think what {$name} is trying to say is that being queer in Singapore is difficult and impractical."
+        Joanne: "That's why Singaporeans have to fight for gay rights!"
+        Sage: "But for every push for equality, there's just as strong a pushback to return to the 'traditional' ways."
+        <<jump 12>>
+    <<endif>>
+
+-> "I'm sorry he's going through such a rough time."
+    Joanne: "Yeah, what he's going through is just awful."
+    Joanne: "No one should ever have to go through what he is going through."
+    Sage smiles wryly. 
+    Sage: "Yeah, but this is the reality for a lot of queer folks."
+    <<addExperience(5)>>
+    Chenjie: "That's why a lot of them move overseas, right?" (+5 XP)
+    Joanne: "But that's provided they can afford it. Moving overseas requires a lot of money."
+    Sage: "And provided that moving overseas is really better."
+    Chenjie: "What do you mean?"
+    Sage: "Singapore's standard of living is quite high. Safety is high. Migrating is lonely and you lose a lot of your friends at once."
+    Sage: "It's about weighing the pros and cons of leaving."
+    Chenjie: "So I take it you don't intend to leave?"
+    Sage shakes her head.
+    <<jump 11>>
 ===
