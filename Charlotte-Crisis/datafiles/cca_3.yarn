@@ -941,7 +941,8 @@ title: 4_1_3
         [You rolled a {$diceroll}.]
         <<if $diceroll < 10>>
             You: "I guess you're right..."
-            Anthony: "Whatever. I'm just gonna continue." (END)
+            Anthony: "Whatever. I'm just gonna continue."
+            <<stop>>
         <<else>>
             You: "They were just presenting their work to you. You chose to take offence."
             You: "You think you're so cool because you insult Vera for her identity and Nadia for liking anime."
