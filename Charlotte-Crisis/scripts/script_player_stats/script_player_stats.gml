@@ -101,6 +101,7 @@ function calculate_odds(_parameters) {
 	_needed = max(_needed, 0); //set to zero if it is negative
 	var _odds = (6 - _needed + 1)/6
 	var _percentage = min(round(_odds * 100), 100); // dont let it go over 100%
+	_percentage = max(_percentage, 0);				// dont let it go below 0%.
 	return _percentage;
 	
 }
