@@ -20,6 +20,7 @@ Chenjie: "Yeah, you have some serious eye bags... Did you sleep really poorly la
 You shrug. 
 Chenjie: "You stay on campus, right? You should nap after class or something." 
 Chenjie: "Recess week is coming soon! Hang in there!" (+5% confidence)
+//can we make the changeConfidence happen only on the first encounter i.e., cannot spam this option to farm confidence
 You: "Yeah, I will. Thanks."
 ===
 __PrivCrochet_colorID: 0
@@ -42,6 +43,7 @@ Joanne: "Yeah! Our BTO application got accepted!"
 You: "Wow. That's great!"
 Joanne: "Yeah, my boyfriend and I knew we wanted a BTO since JC. So we've been waiting a long time!" 
 <<changeRelationship("J", 5)>>
+//can we make the changeRelationship happen only on the first encounter i.e., cannot spam this option to farm relationship
 Joanne: "Gosh, I'm so excited." (+5% Joanne relationship)
 ===
 __PrivCrochet_colorID: 0
