@@ -19,7 +19,12 @@ You: "That obvious?"
 Chenjie: "Yeah, you have some serious eye bags... Did you sleep really poorly last night?" 
 You shrug. 
 Chenjie: "You stay on campus, right? You should nap after class or something." 
-Chenjie: "Recess week is coming soon! Hang in there!" (+5% confidence)
+<<if visited("3") < 2>>
+    <<changeConfidence(5)>>
+    Chenjie: "Recess week is coming soon! Hang in there!" (+5% confidence)
+<<else>>
+    Chenjie: "Recess week is coming soon! Hang in there!"
+<<endif>>
 You: "Yeah, I will. Thanks."
 ===
 __PrivCrochet_colorID: 0
@@ -41,8 +46,13 @@ You: "You're chipper today."
 Joanne: "Yeah! Our BTO application got accepted!"
 You: "Wow. That's great!"
 Joanne: "Yeah, my boyfriend and I knew we wanted a BTO since JC. So we've been waiting a long time!" 
-<<changeRelationship("J", 5)>>
-Joanne: "Gosh, I'm so excited." (+5% Joanne relationship)
+//can we make the changeRelationship happen only on the first encounter i.e., cannot spam this option to farm relationship
+<<if visited("4") < 2>>
+    <<changeRelationship("J", 5)>>
+    Joanne: "Gosh, I'm so excited." (+5% Joanne relationship)
+<<else>>
+    Joanne: "Gosh, I'm so excited."
+<<endif>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 359,-81
@@ -461,8 +471,8 @@ Joanne: "How can I calm down when I'm being attacked on all sides?"
 Joanne: "Clearly, I'm not welcome here."
 Prof Lim chooses this moment to approach.
 Prof Lim: "Hello, is everything okay over here? Things sound a bit heated..."
-//need code to set J relationship == 0)
-Joanne: "Yeah, prof, is it possible to switch groups now?" (Goes to 0% Joanne relationship)
+<<changeRelationship("J", -100)>>
+Joanne: "Yeah, prof, is it possible to switch groups now?" (-100% Joanne relationship)
 Prof Lim: "Uh... May I know what has happened here?"
 No one looks away, unwilling to speak. Even Joanne is too angry to speak.
 
@@ -753,6 +763,7 @@ title: 6_options
         Sage: "Don't remind me of that stupid rule. If I remember correctly, the exact phrasing is 'promotion of homosexuality'."  
         Sage: "What counts as 'promotion' anyway? Is normalising it 'promotion'? Is depicting a happy queer person?"
         Chenjie: "Let's not forget the film ratings. Any queer depiction immediately gets the M18 rating."
+        <<jump 8>>
     <<else>>
         You: "Something about the depiction of non-heterosexuality..."
         Joanne: "You mean the film ratings?"
