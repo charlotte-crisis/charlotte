@@ -63,7 +63,8 @@
 		fade_room(rm_splash_1);	
 	}
 	
-	function goto_splash_boss1(_num) {
+	function goto_splash_boss1(_params) {
+		var _num = _params[0];
 		if (_num == 1) {
 			fade_room(rm_splash_boss1_1);	
 		} else if (_num == 2) {
@@ -73,7 +74,8 @@
 		}
 	}
 	
-	function goto_splash_boss2(_num) {
+	function goto_splash_boss2(_params) {
+		var _num = _params[0];
 		if (_num == 1) {
 			fade_room(rm_splash_boss2_1_1);	
 		} else {
