@@ -663,8 +663,8 @@ Vera: "Then again, maybe he's just like that."
         Vera: "He always likes to say I made being trans my whole personality..."
         Vera: "While making inceldom his whole personality."
     <<endif>>
-        Vera: "Regardless of what he thinks, I'll continue to represent myself how I want."
-        Vera: "And I hope you will too."
+    Vera: "Regardless of what he thinks, I'll continue to represent myself how I want."
+    Vera: "And I hope you will too."
         
 -> "The signs were there from the beginning."
     Vera: "Yeah, right? Why are men like this?"
