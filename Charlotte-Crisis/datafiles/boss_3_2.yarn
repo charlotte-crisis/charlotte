@@ -198,16 +198,16 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
             <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
             <<if $diceroll >= 11>>
-            Charlotte: "Then remove it. That can be a long term goal."
-            You: "That's not what I meant!"
-            <<changeConfidence(-5)>>
-            Charlotte: "Oh, I'm getting under your skin, aren't I." (-5% confidence)
-            (CHA > 10)
-            Charlotte: "I never asked for - "
-            You: "Oh, and look at your face in the mirror next time, don't you?"
-            You: "You can put lipstick on a pig, it's still gonna be a pig."
-            Charlotte: "Where did you learn such disgusting thoughts..."
-
+                Charlotte: "Then remove it. That can be a long term goal."
+                You: "That's not what I meant!"
+                <<changeConfidence(-5)>>
+                Charlotte: "Oh, I'm getting under your skin, aren't I." (-5% confidence)
+            <<else>>
+                Charlotte: "I never asked for - "
+                You: "Oh, and look at your face in the mirror next time, don't you?"
+                You: "You can put lipstick on a pig, it's still gonna be a pig."
+                Charlotte: "Where did you learn such disgusting thoughts..."
+            <<endif>>
 -> "Look at what Vera is doing to herself."
     Charlotte: "What did she ever do!? Don't drag her into this!"
     -> "Too preachy."
@@ -223,7 +223,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
         -> "She was too political." #skillcheck #int # 11
             Charlotte: "That's no surprise, people want to take away her rights."
             Charlotte: "My existence is political too. So pick a side."
-            <<set $diceroll = diceRoll($cha)>>
+            <<set $diceroll = diceRoll($int)>>
             [You rolled a {$diceroll}.]
             <<if $diceroll >= 11>>
                 You: "Of course I want to make my life easy. I'd pick the side without you."
@@ -357,7 +357,7 @@ Charlotte: "Why can't you just accept me?"
         -> "I don't want pretty pictures. I want my life back." #skillcheck #int # 11
             Charlotte: "I never stopped you from living your life."
             Charlotte: "But you know you need me too. I'm your self-expression."
-            <<set $diceroll = diceRoll($cha)>>
+            <<set $diceroll = diceRoll($int)>>
             [You rolled a {$diceroll}.]
             <<if $diceroll >= 11>>
                 You: "There are so many other ways I could express myself."
@@ -479,7 +479,7 @@ Charlotte: "Why can't you just accept me?"
         You: "I don't love the attention, you do."
         -> "You do not fear danger?" #skillcheck #int # 11
             Charlotte: "Why don't you tell me exactly what I should be afraid of?"
-            <<set $diceroll = diceRoll($cha)>>
+            <<set $diceroll = diceRoll($int)>>
             [You rolled a {$diceroll}.]
             <<if $diceroll >= 11>>
                 You: "I can't guarantee your safety all the time."
@@ -541,7 +541,7 @@ Charlotte: "Why can't you just accept me?"
             Charlotte: "If they don't accept who you are, they aren't the right employer for you."
             You: "Easy for you to say. You're not the one on the frontline."
             Charlotte: "Well why don't you bring me out and we can give that a go?"
-            <<set $diceroll = diceRoll($cha)>>
+            <<set $diceroll = diceRoll($int)>>
             [You rolled a {$diceroll}.]
             <<if $diceroll >= 11>>
                 You: "I'm still the one suffering, you bitch!"
