@@ -189,7 +189,7 @@ __PrivCrochet_tags:
 title: 2_1_2
 ---
 Charlotte: "Do you, really?"
-<<set $diceroll = diceRoll($cha)>>
+<<set $diceroll = diceRoll($emp)>>
 [You rolled a {$diceroll}.]
 <<if $diceroll >= 9>>
     You: "You'll always be a part of me, and I feel no shame about that."
