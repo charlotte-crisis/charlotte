@@ -157,8 +157,7 @@ Eleanor: "Jokes aside, I'm a bit undecided about the ties."
 Anthony: "I mean, that's what logo finder dot com gave me when I put in the prompt."
 Vera: "You used AI to generate this?"
 Anthony: "What? Normal what. Now everyone is using ChatGPT for their assignments, right?"
-Nadia: "Touché. {$name}, what do you think?"
-// Try touché without accent if cannot
+Nadia: "Touche. {$name}, what do you think?"
 -> "I think it's cheating."
     <<changeRelationship("A", -5)>>
     Anthony: "Wow. Way to go, so direct." (-5% Anthony relationship)
