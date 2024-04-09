@@ -321,7 +321,7 @@ Mother is on the verge of... tears? Anger? Shock? You can't tell.
         -> "Are you more angry, or sad right now?" #skillcheck #emp # 11
             Mother: "Both."
             Mother: "I just cannot accept this."
-            <<set $diceroll = diceRoll($cha)>>
+            <<set $diceroll = diceRoll($emp)>>
             [You rolled a {$diceroll}.]
             <<if $diceroll < 11>> 
                 You: "Please, can you just put those feelings aside..."
@@ -399,7 +399,7 @@ Mother is on the verge of... tears? Anger? Shock? You can't tell.
         
         -> "The reason why I'm not happy is because of people like you." #skillcheck #emp # 11
             Mother flinches back.
-            <<set $diceroll = diceRoll($cha)>>
+            <<set $diceroll = diceRoll($emp)>>
             [You rolled a {$diceroll}.]
             <<if $diceroll < 11>> 
                 You: "You know it's true."
@@ -955,7 +955,8 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
             [You rolled a {$diceroll}.]
             <<if $diceroll < 11>>
                 Mother: "Why do you want to make things difficult... just stop doing it."
-                Well, that didn't work.
+                <<changeConfidence(-5)>>
+                Well, that didn't work. (-5% confidence)
             <<else>>
                 Mother: "Fine, I guess I can help you that way..."
                 Mother: "But I still can't let go of this idea."
@@ -1544,7 +1545,7 @@ title: 2_actually
 ---
 Mother: "What happen?"
 Before you rip the bandaid off...
--> "It's going to be a hard truth."#skillcheck #emp # 11
+-> "It's going to be a hard truth."#skillcheck #int # 11
     <<set $diceroll = diceRoll($int)>>
     [You rolled a {$diceroll}.]
     <<if $diceroll >= 11>>
