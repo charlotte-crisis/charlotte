@@ -131,6 +131,7 @@ BG_ALPHA = 0.9;
 	ChatterboxAddFunction("goto_room_boss_3_2", goto_room_boss_3_2);
 	ChatterboxAddFunction("goto_room_boss_3_sat", goto_room_boss_3_sat);
 	ChatterboxAddFunction("goto_splash_boss3_1", goto_splash_boss3_1);
+	ChatterboxAddFunction("goto_splash_boss3_2", goto_splash_boss3_2);
 #endregion
 
 

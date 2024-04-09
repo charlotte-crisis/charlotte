@@ -90,6 +90,16 @@
 	function goto_splash_boss3_1() {
 		fade_room(rm_splash_boss3_1);
 	}
+	
+	function goto_splash_boss3_2(_params) {
+		var _num = _params[0];
+		if (_num == 1) {
+			fade_room(rm_splash_boss3_2_6_1);	
+		} else {
+			fade_room(rm_splash_boss3_2_6_2);	
+		}
+		
+	}
 #endregion
 
 #region Classroom Gotos
