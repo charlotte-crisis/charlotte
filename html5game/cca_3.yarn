@@ -135,6 +135,7 @@ title: 3
     Vera: "Hey, Charles."
 <<elseif $veraOffended == true>>
     Vera doesn't want to talk.
+    <<stop>>
 <<else>>
     Vera: "Hey, Charlotte."
 <<endif>>
@@ -510,6 +511,7 @@ title: 5
 ---
 <<if $NadiaEnded>> 
     Nadia refuses to engage with you.
+    <<stop>>
 <<else>>
     Nadia: "Hello, {$name}! I'm not done yet but feel free to chat."
 <<endif>>
@@ -610,7 +612,7 @@ title: 3_2
 ---
 Vera: "I don't see a problem. I'm trans and proud to be."
 Vera: "What, are you uncomfortable with it?"
-Vera: "I didn't think you'd say that, Charlotte." <<if $veraKnows>>
+Vera: "I didn't think you'd say that, Charlotte." <<if getNPCKnows("V")>>
 -> "You're right. That was unkind of me to say. I'm sorry, Vera."
     Vera: "Thank you."
     Vera: "I get it, people get tired of activism and politics."
@@ -625,6 +627,7 @@ Vera: "I didn't think you'd say that, Charlotte." <<if $veraKnows>>
     Vera: "I hope you have something good to draw." (-10% Vera relationship)
     Vera returns to her drawing. She doesn't want to talk to you.
     <<set $veraOffended = true>>
+    <<stop>>
 <<set $visited_1_or_2 = true>>
 ===
 __PrivCrochet_colorID: 3
@@ -650,24 +653,21 @@ Vera: "Then again, maybe he's just like that."
     You: "He's clearly projecting some issues and covering up others."
     Vera: "Mhmm, like what?"
     You think back to the experiences you've had with Anthony.
-        // If did both anthony hangouts
-        // Need to use gm code
+    <<if visitedNode("1_options", "hangout_anthony.yarn")>>
         You: "He's another victim of the whole manosphere thing." 
         You: "No gf, watches sigma male influencers, feels bad about himself, hates people."
         You: "You know, a vicious cycle."
         Vera: "Well, he has my sympathy, I guess."
         Vera: "He's a fool following a larger fool."
         Vera: "But sympathy is different from forgiveness."
-        
-        // Else show this
+    <<else>>
         You: "Uh... he doesn't have a girlfriend? He likes to complain about that."
         Vera: "I don't have one either. And you don't see me harassing other people about it."
         Vera: "He always likes to say I made being trans my whole personality..."
         Vera: "While making inceldom his whole personality."
-        
-        // continue
-        Vera: "Regardless of what he thinks, I'll continue to represent myself how I want."
-        Vera: "And I hope you will too."
+    <<endif>>
+    Vera: "Regardless of what he thinks, I'll continue to represent myself how I want."
+    Vera: "And I hope you will too."
         
 -> "The signs were there from the beginning."
     Vera: "Yeah, right? Why are men like this?"
@@ -941,7 +941,8 @@ title: 4_1_3
         [You rolled a {$diceroll}.]
         <<if $diceroll < 10>>
             You: "I guess you're right..."
-            Anthony: "Whatever. I'm just gonna continue." (END)
+            Anthony: "Whatever. I'm just gonna continue."
+            <<stop>>
         <<else>>
             You: "They were just presenting their work to you. You chose to take offence."
             You: "You think you're so cool because you insult Vera for her identity and Nadia for liking anime."
@@ -1123,7 +1124,11 @@ Do you want to tell Nadia more?
         Nadia: "Yeah, keep telling yourself that. Uh... I'm not being ironic. If you thought I was."
         Nadia: "If you ever want to tell me more, I'm all ears. And no mouth."
         <<jump 5_2>>
-    -> "I'm going to meet my mother about Charlotte." (option only available if Nadia knows)
+    -> "I'm going to meet my mother about Charlotte."
+        <<if !getNPCKnows("N")>>
+            Nadia: "Huh? Who's Charlotte?"
+            You quickly explain your situation to Nadia.
+        <<endif>>
         Nadia: "Oh... that's tough. It's always tough to get through to parents."
         Nadia: "I know my parents would be supportive, but I'm not sure about yours."
         -> "I mean, it's not like I'm their kid."
@@ -1142,10 +1147,10 @@ Do you want to tell Nadia more?
         <<jump 5_2>>
     
     -> "Recently I've been feeling more and more at odds with Charlotte."
-        //if Nadia doesn't know
-        // Nadia "Huh? Who's Charlotte?"
-        //You quickly explain your situation to Nadia.
-
+        <<if !getNPCKnows("N")>>
+            Nadia: "Huh? Who's Charlotte?"
+            You quickly explain your situation to Nadia.
+        <<endif>>
         Nadia: "Huh? But aren't you Charlotte?"
         You: "Exactly."
         Nadia: "I'm sorry... this is a gender dysphoria thing, isn't it?"
@@ -1227,6 +1232,7 @@ Nadia: "You know how this school is. There's a thousand and one programmes to at
                 You: "You really think he deserves to stay?"
                 Nadia: "I... "
                 You: "We shouldn't be wasting any more time on him. He clearly doesn't want to get with our program."
+                <<changeRelationship("N", -5)
                 Nadia: "You're sounding quite extreme... I get where you're coming from, but is this really how it ends?" (-5% Nadia relationship)
             
             -> "That still doesn't justify his actions."
@@ -1260,13 +1266,15 @@ Nadia: "You know how this school is. There's a thousand and one programmes to at
                 Nadia: "Sure, they're flawed, but so is everyone else, and there's really no need to go so much into their issues."
                 <<changeRelationship("N", -10)>>
                 Nadia: "So you can take your hate and fuck off." (-10% Nadia relationship) <<set $NadiaEnded = true>>
-            
+                <<stop>>
+
             -> "Yeah, I guess she knew her place..."
                 Nadia: "That's... not how I'd put it, but sure."
                 Nadia: "Anyway, that's also a pretty harsh thing to say about her, isn't it?"
                 <<changeRelationship("N", -5)>>
                 Nadia: "You're starting to sound more like Anthony. I'd watch myself if I were you." (-5% Nadia relationship) <<set $NadiaEnded = true>>
-            
+                <<stop>>
+
         -> "I guess so..."
             Nadia: "Even for me, I've held CCA leadership before."
             Nadia: "But I've never had such fiery arguments happen in my organisations."
@@ -1300,7 +1308,7 @@ Go back to your room?
 
 -> No (stay here)
 
--> Yes (continue)
+-> Yes (continue) #continue
     <<addExperience(30)>>
     (+30 XP)
     <<incrementStage()>>

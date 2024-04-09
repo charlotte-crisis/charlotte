@@ -273,6 +273,7 @@ title: 13
 Lecture proceeds uneventfully after that. (+ 5 XP)
 Prof Lim: "And that's it for class! Thank you, everyone."
 That's it for class today. 
+<<incrementStage()>>
 Who will you walk with today?
 
 -> Go back alone.
@@ -284,13 +285,13 @@ Who will you walk with today?
 
 // adjusted with correct thresholds
 
--> Chenjie <<if getRelationship("CJ") >= 30>>
+-> Chenjie <<if getRelationship("CJ") >= 55>>
     <<jump 14>>
 
--> Joanne <<if getRelationship("J") >= 30 and $name != "Charlotte">>
+-> Joanne <<if getRelationship("J") >= 55 and $name != "Charlotte">>
     <<jump 15>>
 
--> Sage <<if getRelationship("S") >= 30>>
+-> Sage <<if getRelationship("S") >= 55>>
     <<jump 16>>
 ===
 __PrivCrochet_colorID: 0
@@ -335,7 +336,7 @@ She looks a bit exhausted.
 <<goto_room_class_1_discussion()>>
 
 -> "Are you okay?"
-    <<if getRelationship("S") >= 40>>
+    <<if getRelationship("S") >= 80>>
         Sage: "What Joanne said reminded me of something bad."
         Sage: "I'm better though. Thanks for worrying."
         You: "Okay... If there's anything you need me to do for you, let me know?"
@@ -487,7 +488,7 @@ Sage: "Yeah, or more like moving to a rented room."
     Sage: "It's complicated... He had a bit of a fight with his parents, and that's why he had to move out."
 
 Sage seemingly regrets speaking of this at all.
-<<if ($emp >= 6) or (getRelationship("S") >= 40)>>
+<<if ($emp >= 6) or (getRelationship("S") >= 80)>>
     <<addExperience(5)>>
     Like she had accidentally spilled someone else's secret. (+5 XP)
 <<endif>>
@@ -743,7 +744,7 @@ title: 9_1
 ---
 You: "We need to stop forcing unrealistic beauty standards on women, and learn to accept the diversity in women."
 You: "And I don't think my crossdressing works against this."
-<<if getRelationship("CJ") >= 30>>
+<<if getRelationship("CJ") >= 70>>
     Chenjie: "Yeah, I don't think it's been easy for Charlotte either..."
     Chenjie: "In a way, maybe she experienced some of the stuff you did too. Especially as a more masculine-looking person."
     Chenjie: "No offence."
@@ -774,7 +775,7 @@ You: "I'm not trying to trick or mock anyone. That's not my intention."
 You: "It's just that dressing like this feels natural and comfortable for me."
 Joanne: "And what exactly is so natural and comfortable about it?"
 Joanne: "You literally have no idea how much women like Sage and I had to suffer just by being women."
-<<if ($emp >= 5) or (getRelationship("S") >= 30)>>
+<<if ($emp >= 5) or (getRelationship("S") >= 70)>>
     Sage squirms in uneasiness.
 <<endif>>
 Joanne: "I was always made fun of in school because I was boyish. And I had to deal with periods, and makeup, and clothes."
@@ -961,7 +962,6 @@ title: 14_options
     <<endif>>
     <<addExperience(30)>>
     (+30 XP)
-    <<incrementStage()>>
     <<goto_room_bedroom_after_class2()>>
 
 -> "You're a good guy. I'm sure you'll get a girl soon."
@@ -972,6 +972,5 @@ title: 14_options
     You: "See you!"
     <<addExperience(30)>>
     (+30 XP)
-    <<incrementStage()>>
     <<goto_room_bedroom_after_class2()>>
 ===
