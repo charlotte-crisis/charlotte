@@ -10,7 +10,7 @@ Behind his laptop, Anthony buries his head in whatever he's drawing, occasionall
 Vera is scrolling through her phone casually.
 Go talk to them before the session starts!
 
-<<declare $satWithAnthony = false>>
+<<set $satWithAnthony = false>>
 //this scene should only have MC, Vera and Anthony
 ===
 __PrivCrochet_colorID: 0
@@ -692,6 +692,11 @@ __PrivCrochet_position: 2400,240
 __PrivCrochet_tags: 
 title: 10
 ---
+<<if getRelationship("V") < 30>>
+    Vera doesn't want to talk to you.
+    <<stop>>
+<<endif>>
+
 Vera: "I'm honestly still so angry at Anthony."
 Vera: "What do you think we should do about him?"
 
@@ -755,6 +760,11 @@ __PrivCrochet_position: 2399,479
 __PrivCrochet_tags: 
 title: 11
 ---
+<<if getRelationship("N") < 30>>
+    Nadia doesn't regard you.
+    <<stop>>
+<<endif>>
+
 Nadia: "Oh my goodness, what just happened?"
 Nadia: "We nearly lost a club member there!"
 -> "Relax, he's on his way out anyway."
@@ -794,6 +804,11 @@ __PrivCrochet_position: 2640,240
 __PrivCrochet_tags: 
 title: 12
 ---
+<<if getRelationship("A") < 30>>
+    The last thing Anthony wants right now is another problem.
+    <<stop>>
+<<endif>>
+
 Anthony: "That bitch, Vera."
 Anthony: "I'm so close to telling the whole world about her dirty little secret."
 You: "Wait, what's that?"
