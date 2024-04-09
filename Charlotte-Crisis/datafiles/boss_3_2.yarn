@@ -5,21 +5,23 @@ __PrivCrochet_tags:
 title: 1
 ---
 Charlotte: "We should not be here, but here we are nonetheless."
-//fromJY: check if player had come from boss3.1 "No reason, just to visit" (node 2) or "That's right. I'll get her an abortion." (node 3)
-Charlotte: "Why didn't you pursue the talk with Mother?"
--> "I'm sorry. I couldn't do it."
-    Charlotte: "Yeah, you really couldn't."
-    Charlotte: "I really wanna side with you, but this is a mess we have to clean up."
-
--> "I side with her now. Not you."
-    Charlotte: "Okay, so you chickened out and now serve only Mother's interests."
-    Charlotte: "Or you bought wholesale into the alpha male ideology."
-    Charlotte: "Either way... this is gonna hurt."
-    You: "For you."
-
-//fromJY: trigger this if the above condition not met (i.e., player did not go through BOSS3_1)
-Charlotte: "This is what happens when you don't let me out."
-You: "Then let this be the last time we ever do this."
+// check if player had come from boss3.1 "No reason, just to visit" (node 2) or "That's right. I'll get her an abortion." (node 3)
+<<if visitedNode("3", "boss_3_1.yarn") or visitedNode("2", "boss_3_1.yarn")>>
+    Charlotte: "Why didn't you pursue the talk with Mother?"
+    -> "I'm sorry. I couldn't do it."
+        Charlotte: "Yeah, you really couldn't."
+        Charlotte: "I really wanna side with you, but this is a mess we have to clean up."
+    
+    -> "I side with her now. Not you."
+        Charlotte: "Okay, so you chickened out and now serve only Mother's interests."
+        Charlotte: "Or you bought wholesale into the alpha male ideology."
+        Charlotte: "Either way... this is gonna hurt."
+        You: "For you."
+<<else>>
+    // trigger this if the above condition not met (i.e., player did not go through BOSS3_1)
+    Charlotte: "This is what happens when you don't let me out."
+    You: "Then let this be the last time we ever do this."
+<<endif>>
 <<jump 2>>
 ===
 __PrivCrochet_colorID: 0
