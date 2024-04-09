@@ -825,8 +825,8 @@ Anthony: "Haven't you seen? She is actually he. How can a woman be taller than m
             Anthony: "Maybe I will, huh? He would look so pathetic, crying on the floor."
             What did you just hear...
         <<endif>>
--> "It's just not right!"
-    Anthony: "If that's the only thing you can say, you don't have an argument."
+    -> "It's just not right!"
+        Anthony: "If that's the only thing you can say, you don't have an argument."
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2655,529
