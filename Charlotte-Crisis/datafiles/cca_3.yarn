@@ -135,6 +135,7 @@ title: 3
     Vera: "Hey, Charles."
 <<elseif $veraOffended == true>>
     Vera doesn't want to talk.
+    <<stop>>
 <<else>>
     Vera: "Hey, Charlotte."
 <<endif>>
@@ -510,6 +511,7 @@ title: 5
 ---
 <<if $NadiaEnded>> 
     Nadia refuses to engage with you.
+    <<stop>>
 <<else>>
     Nadia: "Hello, {$name}! I'm not done yet but feel free to chat."
 <<endif>>
@@ -625,6 +627,7 @@ Vera: "I didn't think you'd say that, Charlotte." <<if getNPCKnows("V")>>
     Vera: "I hope you have something good to draw." (-10% Vera relationship)
     Vera returns to her drawing. She doesn't want to talk to you.
     <<set $veraOffended = true>>
+    <<stop>>
 <<set $visited_1_or_2 = true>>
 ===
 __PrivCrochet_colorID: 3
@@ -1261,13 +1264,15 @@ Nadia: "You know how this school is. There's a thousand and one programmes to at
                 Nadia: "Sure, they're flawed, but so is everyone else, and there's really no need to go so much into their issues."
                 <<changeRelationship("N", -10)>>
                 Nadia: "So you can take your hate and fuck off." (-10% Nadia relationship) <<set $NadiaEnded = true>>
-            
+                <<stop>>
+
             -> "Yeah, I guess she knew her place..."
                 Nadia: "That's... not how I'd put it, but sure."
                 Nadia: "Anyway, that's also a pretty harsh thing to say about her, isn't it?"
                 <<changeRelationship("N", -5)>>
                 Nadia: "You're starting to sound more like Anthony. I'd watch myself if I were you." (-5% Nadia relationship) <<set $NadiaEnded = true>>
-            
+                <<stop>>
+
         -> "I guess so..."
             Nadia: "Even for me, I've held CCA leadership before."
             Nadia: "But I've never had such fiery arguments happen in my organisations."
