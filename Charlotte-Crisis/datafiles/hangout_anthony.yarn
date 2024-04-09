@@ -298,8 +298,8 @@ Anthony: "Oh and occasionally they will snake during group project."
         You: "Better than tanking the whole thing and not being happy."
         You: "Or, you know, maybe someone else will step up. And that solves your problem."
 -> "Yeah, people are terrible."
-Anthony: "Now you understand why I want to be alone."
-Anthony: "Maybe I just went to the wrong school. Or maybe I shouldn't have gone uni at all..."
+    Anthony: "Now you understand why I want to be alone."
+    Anthony: "Maybe I just went to the wrong school. Or maybe I shouldn't have gone uni at all..."
 <<jump 1_1_1_options>>
 ===
 __PrivCrochet_colorID: 1
