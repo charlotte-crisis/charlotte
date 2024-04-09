@@ -71,6 +71,7 @@ stage = 0;
 	}
 	
 	increment_stage = function() {
-		return ++stage;	
+		show_debug_message(string("Current stage: {0}", ++stage));
+		return stage;	
 	}
 #endregion

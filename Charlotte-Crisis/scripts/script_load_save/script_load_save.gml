@@ -141,6 +141,7 @@ function load_game() {
 		charisma = ini_read_real("stats", "cha", charisma);
 		empathy = ini_read_real("stats", "emp", empathy);
 		stage = ini_read_real("stats", "stage", stage);
+		show_debug_message(string("Load stage: {0}", stage))
 	}
 	
 	/// Create other objects =================================================
