@@ -287,7 +287,7 @@ Who will you walk with today?
 -> Chenjie <<if getRelationship("CJ") >= 30>>
     <<jump 14>>
 
--> Joanne <<if getRelationship("J") >= 30>>
+-> Joanne <<if getRelationship("J") >= 30 and $name != "Charlotte">>
     <<jump 15>>
 
 -> Sage <<if getRelationship("S") >= 30>>
