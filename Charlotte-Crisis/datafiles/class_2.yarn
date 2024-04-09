@@ -298,7 +298,7 @@ __PrivCrochet_position: 1369,532
 __PrivCrochet_tags: 
 title: 11
 ---
-<<goto_room_class_1_discussion()>>
+<<goto_room_class_1_discussion_nosage()>>
 However, Sage does not return even after the discussion.
 Prof Lim approaches your table.
 Prof Lim: "Sage has been gone for quite a while..."
