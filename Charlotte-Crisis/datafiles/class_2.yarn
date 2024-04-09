@@ -273,6 +273,7 @@ title: 13
 Lecture proceeds uneventfully after that. (+ 5 XP)
 Prof Lim: "And that's it for class! Thank you, everyone."
 That's it for class today. 
+<<incrementStage()>>
 Who will you walk with today?
 
 -> Go back alone.
@@ -961,7 +962,6 @@ title: 14_options
     <<endif>>
     <<addExperience(30)>>
     (+30 XP)
-    <<incrementStage()>>
     <<goto_room_bedroom_after_class2()>>
 
 -> "You're a good guy. I'm sure you'll get a girl soon."
@@ -972,6 +972,5 @@ title: 14_options
     You: "See you!"
     <<addExperience(30)>>
     (+30 XP)
-    <<incrementStage()>>
     <<goto_room_bedroom_after_class2()>>
 ===
