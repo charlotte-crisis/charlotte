@@ -425,23 +425,23 @@ Mother is on the verge of... tears? Anger? Shock? You can't tell.
         Mother: "I want one daughter and one son. Not two daughters."
         Mother: "Not one fake and one real daughter."
         -> "You call me fake!?"
-        Mother: "What else is there to call you?"
-        Mother: "I cannot keep calling you ah gua, right?"
-        Mother: "Only those gay freaks on TV are ah gua. Not my son."
+            Mother: "What else is there to call you?"
+            Mother: "I cannot keep calling you ah gua, right?"
+            Mother: "Only those gay freaks on TV are ah gua. Not my son."
         
         -> "What you want shouldn't be part of my life."
-        You: "My body, my rules."
-        Mother: "I raised you for 24 years and this is what I get?"
-        Mother: "I expected better of you. You're ruining everything."
+            You: "My body, my rules."
+            Mother: "I raised you for 24 years and this is what I get?"
+            Mother: "I expected better of you. You're ruining everything."
         
         -> "I'm still your son."
-        You: "Just a little different, that's all."
-        Mother: "My son would not wear dresses and makeup."
-        Mother: "He would understand his place as a man."
-        You: "And yet, I don't want to change my gender marker."
-        You: "I'm still okay with all the masculine stuff."
-        Mother: "Then why do you want to do the female stuff too?"
-        Mother: "I just don't understand..."
+            You: "Just a little different, that's all."
+            Mother: "My son would not wear dresses and makeup."
+            Mother: "He would understand his place as a man."
+            You: "And yet, I don't want to change my gender marker."
+            You: "I'm still okay with all the masculine stuff."
+            Mother: "Then why do you want to do the female stuff too?"
+            Mother: "I just don't understand..."
     
     -> "I'm an adult already."
         You: "I've been through school, NS, uni... you saying I'm not smart enough to make my own choices?"
@@ -519,6 +519,7 @@ __PrivCrochet_tags:
 title: 5
 ---
 <<goto_room_boss_3_sat()>>
+She takes a deep breath and looks up.
 Mother: "Do you know how confusing this is for everyone? Not just me."
 Mother: "What will your aunts and uncles think?"
 Mother: "Why have you suddenly become this person we don't know?"
@@ -582,9 +583,9 @@ Mother: "I know you muted the family WhatsApp chat right?"
             What kind of family would stomp out the parts of you that made you special? (-5% confidence)
         
         -> "There's still a lot of spam."
-        Mother: "No one's asking you to read everything."
-        Mother: "But at least show a bit of respect to family, can?"
-        Mother: "Some of them very long never see you already."
+            Mother: "No one's asking you to read everything."
+            Mother: "But at least show a bit of respect to family, can?"
+            Mother: "Some of them very long never see you already."
             -> "Nah, I don't care."
                 Mother: "How can you say that?"
                 You: "They're cringe. I'm embarrassed to associate with them."
