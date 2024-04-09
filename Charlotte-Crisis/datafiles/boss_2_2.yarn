@@ -645,7 +645,7 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
     Charlotte: "Even after asking you to get rid of me..."
     Charlotte: "Is this some high level Stockholm Syndrome?"
     -> "Blood is thicker than water." #skillcheck #emp # 9
-        <<set $diceroll = diceRoll($cha)>>
+        <<set $diceroll = diceRoll($emp)>>
         [You rolled a {$diceroll}.]
         <<if $diceroll >= 9>>
             You: "Don't you think everyone at home is suffering enough because of me?"
