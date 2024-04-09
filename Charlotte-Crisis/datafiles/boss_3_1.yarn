@@ -1321,47 +1321,48 @@ Mother: "Please tell me you're not..."
         Mother: "What compromise? You think you can bargain like market ah?" 
         Mother: "I raised you for 24 years and this is how you repay me?"
         
-        -> "Why should I?"
-            Mother: "Don't you understand? You look ugly when you put on a dress."
-            Mother: "You will never have a female body."
-            Mother: "Even with makeup people will still see a male face."
-            Mother: "If you can't do it well, why do it?"
-            -> "Okay, since I can't earn a million dollars, I'll just give up finding a job."
-                Mother: "What are you even saying?"
-                You: "If I can't do it well, why do it?"
-                Mother: "That's not what I meant..."
-                You: "Then I'm sure you don't mean that I shouldn't try dressing up either."
+    -> "Why should I?"
+        Mother: "Don't you understand? You look ugly when you put on a dress."
+        Mother: "You will never have a female body."
+        Mother: "Even with makeup people will still see a male face."
+        Mother: "If you can't do it well, why do it?"
+        -> "Okay, since I can't earn a million dollars, I'll just give up finding a job."
+            Mother: "What are you even saying?"
+            You: "If I can't do it well, why do it?"
+            Mother: "That's not what I meant..."
+            You: "Then I'm sure you don't mean that I shouldn't try dressing up either."
+            <<changeRelationship("M", -5)
+            <<changeConfidence(5)>>
+            <<addExperience(5)>>
+            Mother looks frustrated, but you know you're right. (-5% Mother relationship, +5% confidence, +5 XP)
+            
+        -> "Then I should transition to get a nice body, right?"
+            Mother: "No! Your body is already nice as it is."
+            Mother: "We gave you this body, why don't you accept it?"
+            That was pretty horrible, but at least you caught her off guard. Heh.
+            
+        -> "I think that's kinda hurtful to hear from you." #skillcheck #emp # 11
+            Mother: "Why leh?"
+            <<set $diceroll = diceRoll($emp)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                You: "You're just not respecting me as a person."
+                Mother: "Well you're not respecting the body you were given."
+                You: "I didn't ask for this body!"
+                Woah woah. Pump the brakes. A shouting match won't go anywhere.
                 <<changeRelationship("M", -5)
-                <<changeConfidence(5)>>
-                <<addExperience(5)>>
-                Mother looks frustrated, but you know you're right. (-5% Mother relationship, +5% confidence, +5 XP)
-            
-            -> "Then I should transition to get a nice body, right?"
-                Mother: "No! Your body is already nice as it is."
-                Mother: "We gave you this body, why don't you accept it?"
-                That was pretty horrible, but at least you caught her off guard. Heh.
-            
-            -> "I think that's kinda hurtful to hear from you." #skillcheck #emp # 11
-                Mother: "Why leh?"
-                <<set $diceroll = diceRoll($emp)>>
-                [You rolled a {$diceroll}.]
-                <<if $diceroll < 11>>
-                    You: "You're just not respecting me as a person."
-                    Mother: "Well you're not respecting the body you were given."
-                    You: "I didn't ask for this body!"
-                    Woah woah. Pump the brakes. A shouting match won't go anywhere.
-                    Mother's already about to lose it too. (-5% Mother relationship)
-                <<else>>
-                    You: "Put aside all your personal opinions. Let's talk as mother and child."
-                    You: "For 25 years I've enjoyed your love and care."
-                    You: "Things were rough sometimes, but never this rough."
-                    You: "And if we are to split over just this issue... it'd be really a shame, wouldn't it?"
-                    You: "I don't want to lose you, but I don't want to lose a part of me either."
-                    You: "The choice is yours."
-                    Mother: "Hmph. That's a nice speech."
-                    <<changeRelationship("M", 5)>>
-                    Mother looks away from you. She probably can't say what she wants to say. (+5% Mother relationship)
-                <<endif>>
+                Mother's already about to lose it too. (-5% Mother relationship)
+            <<else>>
+                You: "Put aside all your personal opinions. Let's talk as mother and child."
+                You: "For 25 years I've enjoyed your love and care."
+                You: "Things were rough sometimes, but never this rough."
+                You: "And if we are to split over just this issue... it'd be really a shame, wouldn't it?"
+                You: "I don't want to lose you, but I don't want to lose a part of me either."
+                You: "The choice is yours."
+                Mother: "Hmph. That's a nice speech."
+                <<changeRelationship("M", 5)>>
+                Mother looks away from you. She probably can't say what she wants to say. (+5% Mother relationship)
+            <<endif>>                    
     -> "That's boring."
         You: "We all need something in our life to keep us going."
         You: "Sister draws and plays guitar. You do middle aged woman stuff."
