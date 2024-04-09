@@ -19,7 +19,12 @@ You: "That obvious?"
 Chenjie: "Yeah, you have some serious eye bags... Did you sleep really poorly last night?" 
 You shrug. 
 Chenjie: "You stay on campus, right? You should nap after class or something." 
-Chenjie: "Recess week is coming soon! Hang in there!" (+5% confidence)
+<<if visited("3") < 2>>
+    <<changeConfidence(5)>>
+    Chenjie: "Recess week is coming soon! Hang in there!" (+5% confidence)
+<<else>>
+    Chenjie: "Recess week is coming soon! Hang in there!"
+<<endif>>
 You: "Yeah, I will. Thanks."
 ===
 __PrivCrochet_colorID: 0
@@ -41,8 +46,13 @@ You: "You're chipper today."
 Joanne: "Yeah! Our BTO application got accepted!"
 You: "Wow. That's great!"
 Joanne: "Yeah, my boyfriend and I knew we wanted a BTO since JC. So we've been waiting a long time!" 
-<<changeRelationship("J", 5)>>
-Joanne: "Gosh, I'm so excited." (+5% Joanne relationship)
+//can we make the changeRelationship happen only on the first encounter i.e., cannot spam this option to farm relationship
+<<if visited("4") < 2>>
+    <<changeRelationship("J", 5)>>
+    Joanne: "Gosh, I'm so excited." (+5% Joanne relationship)
+<<else>>
+    Joanne: "Gosh, I'm so excited."
+<<endif>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 359,-81
