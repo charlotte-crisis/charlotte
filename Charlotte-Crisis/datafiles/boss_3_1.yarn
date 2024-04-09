@@ -7,6 +7,10 @@ title: 1
 You: "Hi, mum."
 <<if $name == "Charlotte">>
     Mother: "WHAT!?"
+    You: "Mum, please, I can explain - "
+    Mother: "Why do you want to do this to me..."
+    <<changeConfidence(-10)>>
+    Perhaps this is too sudden for her. You feel as if you've done something terribly wrong. (-10% confidence)
     <<jump 4>>
 <<else>>
     // Change camera Here 
@@ -57,13 +61,16 @@ Mother: "So why you come back today?"
 -> "No reason. Just to visit."
     Wait. What? You're skipping out on this? I thought you were ready!
     Mother: "Har?"
-    You: "Ya. Maybe I take some things from my room then go back already."
-    Mother: "Orh... come back soon, okay?"
-    You: "Okay, I will."
-    <<goto_black_room()>>
-    We need to talk.
-    Leave the house, go back to your room and we'll settle this. 
-    <<goto_room_boss_3_2()>>
+    Last chance. Tell her the truth or I'm taking action.
+    -> "Ya. Maybe I take some things from my room then go back already."
+        Mother: "Orh... come back soon, okay?"
+        You: "Okay, I will."
+        <<goto_black_room()>>
+        We need to talk.
+        Leave the house, go back to your room and we'll settle this. 
+        <<goto_room_boss_3_2()>>
+    -> "Actually, got something important I want to tell you..."
+        That's more like it.
 
 -> "Actually, got something important I want to tell you..."
     Mother: "What happen?"
@@ -132,17 +139,23 @@ Mother: "So, what do you want to tell me?"
     Mother: "Why you do that??"
     Mother: "Who is the girl?"
     Mother: "Oh my god..."
-    -> "That's right. I'll get her an abortion."
-        Mother: "Okay... you cannot play around with girls like this in future hor."
-        Mother: "I know you need to do... things... but don't be so careless, can?"
-        Mother: "Later you kena AIDS or what... like the gays..."
+    -> (Lie) "That's right. I'll get her an abortion."
+        Mother won't hear it.
         <<goto_black_room()>>
-        She keeps lecturing you about safe sex. There is no chance to tell the truth.
-        But this isn't over. Charlotte still needs closure.
-        Leave the house, go back to your room and we'll settle this. 
-        <<goto_room_boss_3_2()>>
-        // fade to black and start BOSS3.2)
-    
+        She keeps lecturing you about safe sex, throwing in some homophobia at the same time.
+        There is no chance to tell the truth. No chance for Charlotte to get closure.
+        This wasn't the ending you expected...
+        // back to main menu, or any other action that reloads everything in boss3_1 thus far
+
+    -> (Lie) "We're keeping the baby."
+        You: "You always wanted grandkids, right? Be careful what you wish for!"
+        Mother: "Not like this... not like this..."
+        <<goto_black_room()>>
+        Oops, you broke her. Over a lie that wasn't even real.
+        There is no chance to tell the truth. No chance for Charlotte to get closure.
+        This wasn't the ending you expected...
+        // back to main menu, or any other action that reloads everything in boss3_1 thus far
+
     -> "Okay, relax, it's something else."
         Mother: "Har?"
         You: "Yes, no one is pregnant. I didn't have sex with anyone."
