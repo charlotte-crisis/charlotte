@@ -1331,7 +1331,7 @@ Mother: "Please tell me you're not..."
             You: "If I can't do it well, why do it?"
             Mother: "That's not what I meant..."
             You: "Then I'm sure you don't mean that I shouldn't try dressing up either."
-            <<changeRelationship("M", -5)
+            <<changeRelationship("M", -5)>>
             <<changeConfidence(5)>>
             <<addExperience(5)>>
             Mother looks frustrated, but you know you're right. (-5% Mother relationship, +5% confidence, +5 XP)
