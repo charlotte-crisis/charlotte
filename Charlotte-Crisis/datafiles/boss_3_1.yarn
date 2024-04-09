@@ -606,7 +606,8 @@ Mother: "I know you muted the family WhatsApp chat right?"
                     No, family is about so much more. 
                     <<changeConfidence(5)>>
                     But this small joke has eased the tension a little. (+5% confidence)
-                    Mother: "But then hor..."
+                <<endif>>
+                Mother: "But then hor..."
 
 Mother: "You're not the one facing these people."
 Mother: "You know your aunt, my sister, is already so particular."
@@ -726,14 +727,14 @@ Mother: "You really want to give them another reason to laugh at us?"
         You: "Why should I be affected by what they say?"
         Mother: "Who else will you rely on?"
         -> "I will rely on my friends."
-        Mother: "But at the end of the day who is giving you money and shelter?"
-        Mother: "I know it is nice to have friends but you can only really rely on family."
-        Mother: "Family won't sell you out."
+            Mother: "But at the end of the day who is giving you money and shelter?"
+            Mother: "I know it is nice to have friends but you can only really rely on family."
+            Mother: "Family won't sell you out."
         
         -> "I will rely on myself."
-        You: "Why do I need someone else's validation?"
-        <<changeRelationship("M", -5)>>
-        Mother: "Okay lor, don't care. You see how far you can go." (-5% Mother relationship)
+            You: "Why do I need someone else's validation?"
+            <<changeRelationship("M", -5)>>
+            Mother: "Okay lor, don't care. You see how far you can go." (-5% Mother relationship)
     
     -> "What if some of them are accepting too?"
         Mother: "What do you mean?"
@@ -800,10 +801,10 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
         Mother: "Finding a job, settling down..."
         Mother: "Why do you want to waste your life like this?"
         -> "It's not a waste of life!"
-        You: "How dare you say that."
-        You: "Don't you know how important this is for me?"
-        Mother: "It shouldn't be this way..."
-        You: "It has to be. I'm not going back on this."
+            You: "How dare you say that."
+            You: "Don't you know how important this is for me?"
+            Mother: "It shouldn't be this way..."
+            You: "It has to be. I'm not going back on this."
         
         -> "I can do both at the same time." #skillcheck #cha # 11
             You: "I'm not just gonna throw away my professional life for my personal life."
@@ -837,7 +838,8 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
                 You: "You have to know multiple points of view in life, right? And that includes gender."
                 You: "Else I'll just be like Dad. Rigid, stuck in his ways."
                 Mother: "Uh... okay. I'm not sure how, but just be better than us, okay?"
-        
+            <<endif>>
+
     -> "Then I reject those experiences."
         You: "Please never mention them in front of me again."
         Mother: "But they are part of who you are..."
@@ -1037,6 +1039,7 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
             Mother: "Exactly. This is the best solution."
             Mother: "And you must behave in front of her." 
             Mother: "She will run away if she sees you in a dress."
+            <<changeConfidence(-5)>>
             Cringe. (-5% confidence)
         
         -> "I've got, like, 50 years before I reach her age." #skillcheck #cha # 11
@@ -1129,25 +1132,25 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
                 Mother seems like she's heard this before.
             <<endif>>
         -> "Then I will find a girlfriend who accepts me for who I am."
-        Mother: "As if got such girl out there."
-        Mother: "Listen to me. I'm a woman, I know better than you about this."
-        Mother: "If not, why you don't have girlfriend yet?"
+            Mother: "As if got such girl out there."
+            Mother: "Listen to me. I'm a woman, I know better than you about this."
+            Mother: "If not, why you don't have girlfriend yet?"
     
     -> "I'm not seeing anyone now."
         Mother: "Must be because you do this."
         Mother: "You know, my colleague's daughter is single... do you want to know her?"
         -> "Sure, I guess."
-        As Mother goes off about this new girl, you wonder why she wants to do this.
-        <<set $diceroll = diceRoll($cha)>>
-        <<if $diceroll < 11>>
-            Is this some kind of weird arranged marriage?
-            You didn't know the ancient ways still had so much power.
-        <<else>>
-            But hey, getting to know a new friend never hurts.
-            Let's see if she accepts Charlotte.
-        <<endif>>
-        Mother: "And that is why you must stop dressing female."
-        Mother: "Because there is only one woman in this relationship."
+            As Mother goes off about this new girl, you wonder why she wants to do this.
+            <<set $diceroll = diceRoll($cha)>>
+            <<if $diceroll < 11>>
+                Is this some kind of weird arranged marriage?
+                You didn't know the ancient ways still had so much power.
+            <<else>>
+                But hey, getting to know a new friend never hurts.
+                Let's see if she accepts Charlotte.
+            <<endif>>
+            Mother: "And that is why you must stop dressing female."
+            Mother: "Because there is only one woman in this relationship."
         
         -> "No."
             Mother: "Why not?"
