@@ -1235,7 +1235,7 @@ Nadia: "You know how this school is. There's a thousand and one programmes to at
                 You: "You really think he deserves to stay?"
                 Nadia: "I... "
                 You: "We shouldn't be wasting any more time on him. He clearly doesn't want to get with our program."
-                <<changeRelationship("N", -5)
+                <<changeRelationship("N", -5)>>
                 Nadia: "You're sounding quite extreme... I get where you're coming from, but is this really how it ends?" (-5% Nadia relationship)
             
             -> "That still doesn't justify his actions."
