@@ -53,7 +53,7 @@ You: "Hi, mum."
 <<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 166,-73
+__PrivCrochet_position: 140,-79
 __PrivCrochet_tags: 
 title: 2
 ---
@@ -61,7 +61,7 @@ Mother: "So why you come back today?"
 -> "No reason. Just to visit."
     Wait. What? You're skipping out on this? I thought you were ready!
     Mother: "Har?"
-    Last chance. Tell her the truth or I'm taking action.
+    Last chance. Tell her the truth, right here, right now.
     -> "Ya. Maybe I take some things from my room then go back already."
         Mother: "Orh... come back soon, okay?"
         You: "Okay, I will."
@@ -71,59 +71,10 @@ Mother: "So why you come back today?"
         <<goto_room_boss_3_2()>>
     -> "Actually, got something important I want to tell you..."
         That's more like it.
+        <<jump 2_actually>>
 
 -> "Actually, got something important I want to tell you..."
-    Mother: "What happen?"
-    Before you rip the bandaid off...
-    -> "It's going to be a hard truth."#skillcheck #emp # 11
-        <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
-        <<if $diceroll >= 11>>
-            You: "What I'm about to tell you, is based on experience."
-            You: "My story, and the stories of others. And we are all still here."
-            Mother: "What are you saying?"
-            You: "I'm going to tell you the truth about me."
-            Mother: "Uh... okay, if you're being honest..." 
-            <<changeConfidence(5)>>
-            At least you know what you're talking about, right? (+5% confidence)
-        <<else>>
-            Mother: "What are you saying?"
-            Mother: "I don't know how worried I should be..."
-            <<changeConfidence(-5)>>
-            Maybe bashing your way through with Facts and Logic ain't gonna work. (-5% confidence)
-        <<endif>>
-    -> "Mom, I just want you to know that I've always loved you." #skillcheck #emp # 11
-        <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
-        <<if $diceroll >= 11>>
-            Mother: "Uh... okay?"
-            You: "I truly mean it, Mom."
-            You: "What I'm about to say may be distressing, but I don't mean to hurt you."
-            Mother: "Okay... you're my son, no matter what."
-            <<changeConfidence(5)>>
-            That was genuinely nice to hear. (+5% confidence)
-        <<else>>    
-            Mother: "What do you really want?"
-            Mother: "Oh my god, is it money..." 
-            <<changeConfidence(-5)>>
-            You pandered too hard... (-5% confidence)
-        <<endif>>
-    -> "Mom, I know this is going to be hard, but please, hear me out." #skillcheck #cha # 11
-        <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
-        <<if $diceroll >= 11>>        
-            Mother: "Why you so serious?"
-            You: "Maybe you're not gonna like it."
-            Mother: "Never mind la, just say it."
-            <<changeConfidence(5)>>
-            You feel the slightest tinge of optimism. (+5% confidence)
-        <<else>>
-            Mother: "Why hard? What did you do wrong now?"
-            <<changeConfidence(-5)>>
-            Hmm... that's not a good start. (-5% confidence)
-        <<endif>>
-    -> Just do it.
-<<jump 3>>
+    <<jump 2_actually>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 399,-72
@@ -1602,4 +1553,62 @@ title: start
 // empty node
 // DO NOT DELETE
 <<set $startMother = getRelationship("M")>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 251,-335
+__PrivCrochet_tags: 
+title: 2_actually
+---
+Mother: "What happen?"
+Before you rip the bandaid off...
+-> "It's going to be a hard truth."#skillcheck #emp # 11
+    <<set $diceroll = diceRoll($int)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll >= 11>>
+        You: "What I'm about to tell you, is based on experience."
+        You: "My story, and the stories of others. And we are all still here."
+        Mother: "What are you saying?"
+        You: "I'm going to tell you the truth about me."
+        Mother: "Uh... okay, if you're being honest..." 
+        <<changeConfidence(5)>>
+        At least you know what you're talking about, right? (+5% confidence)
+    <<else>>
+        Mother: "What are you saying?"
+        Mother: "I don't know how worried I should be..."
+        <<changeConfidence(-5)>>
+        Maybe bashing your way through with Facts and Logic ain't gonna work. (-5% confidence)
+    <<endif>>
+-> "Mom, I just want you to know that I've always loved you." #skillcheck #emp # 11
+    <<set $diceroll = diceRoll($emp)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll >= 11>>
+        Mother: "Uh... okay?"
+        You: "I truly mean it, Mom."
+        You: "What I'm about to say may be distressing, but I don't mean to hurt you."
+        Mother: "Okay... you're my son, no matter what."
+        <<changeConfidence(5)>>
+        That was genuinely nice to hear. (+5% confidence)
+    <<else>>    
+        Mother: "What do you really want?"
+        Mother: "Oh my god, is it money..." 
+        <<changeConfidence(-5)>>
+        You pandered too hard... (-5% confidence)
+    <<endif>>
+-> "Mom, I know this is going to be hard, but please, hear me out." #skillcheck #cha # 11
+    <<set $diceroll = diceRoll($cha)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll >= 11>>        
+        Mother: "Why you so serious?"
+        You: "Maybe you're not gonna like it."
+        Mother: "Never mind la, just say it."
+        <<changeConfidence(5)>>
+        You feel the slightest tinge of optimism. (+5% confidence)
+    <<else>>
+        Mother: "Why hard? What did you do wrong now?"
+        <<changeConfidence(-5)>>
+        Hmm... that's not a good start. (-5% confidence)
+    <<endif>>
+-> Just do it.
+    Charlotte hopes you're ready.
+<<jump 3>>
 ===
