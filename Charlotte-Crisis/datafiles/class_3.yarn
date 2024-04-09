@@ -19,12 +19,7 @@ You: "That obvious?"
 Chenjie: "Yeah, you have some serious eye bags... Did you sleep really poorly last night?" 
 You shrug. 
 Chenjie: "You stay on campus, right? You should nap after class or something." 
-<<if visited("3") < 2>>
-    <<changeConfidence(5)>>
-    Chenjie: "Recess week is coming soon! Hang in there!" (+5% confidence)
-<<else>>
-    Chenjie: "Recess week is coming soon! Hang in there!"
-<<endif>>
+Chenjie: "Recess week is coming soon! Hang in there!" (+5% confidence)
 You: "Yeah, I will. Thanks."
 ===
 __PrivCrochet_colorID: 0
@@ -46,13 +41,8 @@ You: "You're chipper today."
 Joanne: "Yeah! Our BTO application got accepted!"
 You: "Wow. That's great!"
 Joanne: "Yeah, my boyfriend and I knew we wanted a BTO since JC. So we've been waiting a long time!" 
-//can we make the changeRelationship happen only on the first encounter i.e., cannot spam this option to farm relationship
-<<if visited("4") < 2>>
-    <<changeRelationship("J", 5)>>
-    Joanne: "Gosh, I'm so excited." (+5% Joanne relationship)
-<<else>>
-    Joanne: "Gosh, I'm so excited."
-<<endif>>
+<<changeRelationship("J", 5)>>
+Joanne: "Gosh, I'm so excited." (+5% Joanne relationship)
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 359,-81
@@ -472,8 +462,8 @@ Joanne: "How can I calm down when I'm being attacked on all sides?"
 Joanne: "Clearly, I'm not welcome here."
 Prof Lim chooses this moment to approach.
 Prof Lim: "Hello, is everything okay over here? Things sound a bit heated..."
-<<changeRelationship("J", -100)>>
-Joanne: "Yeah, prof, is it possible to switch groups now?" (-100% Joanne relationship)
+//need code to set J relationship == 0)
+Joanne: "Yeah, prof, is it possible to switch groups now?" (Goes to 0% Joanne relationship)
 Prof Lim: "Uh... May I know what has happened here?"
 No one looks away, unwilling to speak. Even Joanne is too angry to speak.
 
@@ -520,13 +510,13 @@ Who will you walk with today?
     The soft mattress and pillows in your hostel calls to you like a siren.
     
 
--> Chenjie <<if getRelationship("CJ") > 10>> 
+-> Chenjie <<if getRelationship("CJ") > 55>> 
     <<jump 17>>
 
--> Joanne <<if (getRelationship("CJ") > 10) and ($name == "Charles")>>
+-> Joanne <<if (getRelationship("CJ") > 55) and ($name == "Charles")>>
     <<jump 18>>
 
--> Sage <<if getRelationship("CJ") > 10>> 
+-> Sage <<if getRelationship("CJ") > 55>> 
     <<jump 19>>
 ===
 __PrivCrochet_colorID: 0
