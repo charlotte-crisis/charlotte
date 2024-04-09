@@ -62,9 +62,10 @@ Mother: "So why you come back today?"
     You: "Ya. Maybe I take some things from my room then go back already."
     Mother: "Orh... come back soon, okay?"
     You: "Okay, I will."
+    <<goto_black_room()>>
     We need to talk.
     Leave the house, go back to your room and we'll settle this. 
-    //(fromJY: fade to black and start BOSS3.2)
+    <<goto_room_boss_3_2()>>
 
 -> "Actually, got something important I want to tell you..."
     Mother: "What happen?"
@@ -137,11 +138,12 @@ Mother: "So, what do you want to tell me?"
         Mother: "Okay... you cannot play around with girls like this in future hor."
         Mother: "I know you need to do... things... but don't be so careless, can?"
         Mother: "Later you kena AIDS or what... like the gays..."
+        <<goto_black_room()>>
         She keeps lecturing you about safe sex. There is no chance to tell the truth.
         But this isn't over. Charlotte still needs closure.
         Leave the house, go back to your room and we'll settle this. 
-        //(fromJY: fade to black and start BOSS3.2)
-        //removed the stop here
+        <<goto_room_boss_3_2()>>
+        // fade to black and start BOSS3.2)
     
     -> "Okay, relax, it's something else."
         Mother: "Har?"
