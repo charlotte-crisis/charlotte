@@ -471,7 +471,7 @@ Anthony: "All some people know how to do is complain. I hope you're not like tha
     Anthony: "Yes, but about things that matter, right? Not this... culture war bullshit."
     <<set $diceroll = diceRoll($int)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll > 7 >>    
+    <<if $diceroll < 7 >>    
         You: "It's important stuff!"
         Anthony: "It won't put food on the table."
         <<changeRelationship("A", -5)>>
