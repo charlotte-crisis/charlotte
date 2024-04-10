@@ -387,7 +387,7 @@ Anthony: "Job market so bad already, how can I survive?"
 -> "Transfer out, before it's too late." #skillcheck #emp # 7
     Anthony: "Siao ah. Like that means start from clean slate, you know?"
     <<set $diceroll = diceRoll($emp)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 7
     <<if $diceroll >= 7 >>
         You: "I know what that feels like... to start afresh."
         You: "And I know the example I'm using is gender, but hear me out."
@@ -416,7 +416,7 @@ Anthony: "Job market so bad already, how can I survive?"
     Anthony: "Say until so easy. Then I study for what?"
     Anthony: "Spend so much money for what? Just a paper?"
     <<set $diceroll = diceRoll($int)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 7
     <<if $diceroll > 7 >>
         You: "It's not just the engineering stuff. I'm sure you learned other things, right?"
         You: "You exercised those parts of your brain that were precise."
@@ -444,7 +444,7 @@ Anthony: "Yeah. Drawing and video games... but there's no time to do them."
     You: "I mean, I'm making time for crossdressing."
     Anthony: "Yeah, your little degen hobby..."
     <<set $diceroll = diceRoll($cha)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 7
     <<if $diceroll >= 7 >> 
         You: "If I'm a degen I wear that with pride. Charlotte isn't hurting anyone." (+10 XP) <<addExperience(10)>>
         You: "Anyway, I find chances wherever I can to bring Charlotte out."
@@ -472,7 +472,7 @@ Anthony: "All some people know how to do is complain. I hope you're not like tha
 -> "Complaining is literally what we do as a people." #skillcheck #int # 7
     Anthony: "Yes, but about things that matter, right? Not this... culture war bullshit."
     <<set $diceroll = diceRoll($int)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 7
     <<if $diceroll < 7 >>    
         You: "It's important stuff!"
         Anthony: "It won't put food on the table."
@@ -549,7 +549,7 @@ Anthony: "I knew it. I'm just weak." (-5% Anthony relationship)
         Anthony: "It's what I need in the sexual marketplace."
         You: "And why do you see it as a marketplace?"
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 7
         <<if $diceroll > 7>>
             You: "Doesn't really seem right to buy and sell people, does it?"
             Anthony: "I didn't set the rules - "
@@ -569,7 +569,7 @@ Anthony: "I knew it. I'm just weak." (-5% Anthony relationship)
         You: "How many times have you heard that guys are unreasonable about the girls they want to date?"
         You: "The inverse is true also. Your partner loves you for you, not who you could be."
         <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 7
         <<if $diceroll > 7>>
             Anthony: "Then what am I supposed to do?"
             You: "You gotta be patient. There is no other way."
