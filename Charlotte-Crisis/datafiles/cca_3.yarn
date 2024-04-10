@@ -603,7 +603,7 @@ title: vera_options
     Vera: "Shoot."
     <<jump 3_4>>
 
--> "Alright, see ya."
+-> "Alright, see ya." #continue
     Vera: "Bye! Have fun with your own art piece."
 ===
 __PrivCrochet_colorID: 3
@@ -697,7 +697,7 @@ title: anthony_options
     Anthony: "Yeah?"
     <<jump 4_2>>
 
--> "Alright, see ya."
+-> "Alright, see ya." #continue
     Anthony: "Okay."
 ===
 __PrivCrochet_colorID: 2
@@ -1094,7 +1094,7 @@ __PrivCrochet_position: 957,710
 __PrivCrochet_tags: 
 title: 5_options
 ---
--> "Okay, I'll leave you to it then."
+-> "Okay, I'll leave you to it then." #continue
     Nadia: "Sure. Feel free to come back any time."
 
 -> "I'm curious. What's your slogan?"
