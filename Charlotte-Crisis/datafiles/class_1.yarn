@@ -794,17 +794,6 @@ Let's try the Skill Check here, while Prof is still rambling.
         It's alright, laughing at memes is good enough.
     <<endif>>
 
--> Scroll through Shopee #skillcheck #emp # 6
-    The algorithm knows you too well. There's a long, dark blue skirt with small starry prints.
-    But the option is out of stock for your size...
-    <<set $diceroll = diceRoll($emp)>>
-    [You rolled a {$diceroll}.]
-    <<if $diceroll > 5>>
-        It's alright. There's always other clothes, and other ways for Charlotte to look pretty!
-    <<else>>
-        Of course it's out of stock. Why are you so big, anyway? 
-        You're never gonna fit into any skirt.
-    <<endif>>
 -> Pay attention!
     What else are you paying school fees for, right?
 <<jump 20>>
@@ -837,7 +826,7 @@ TUTORIAL: Would you like to repeat these instructions?
 -> Repeat this tutorial 
     <<jump 5_tutorial>>
 
--> Proceed.
+-> Proceed. #continue
     <<jump 5_options>>
 ===
 __PrivCrochet_colorID: 0
