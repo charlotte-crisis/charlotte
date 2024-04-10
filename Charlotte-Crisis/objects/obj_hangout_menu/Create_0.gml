@@ -31,6 +31,12 @@ goto_functions =
 	[goto_room_hangout_a,  goto_room_hangout_v, goto_room_hangout_n]
 ]
 
+yarn_files = 
+[
+	["hangout_chenjie.yarn", "hangout_sage.yarn", "hangout_joanne.yarn"],
+	["hangout_anthony.yarn", "hangout_vera.yarn", "hangout_nadia.yarn"]
+]
+
 rs_threshold = 30; // less than this cannot hang out
 
 portrait_alpha = 1;

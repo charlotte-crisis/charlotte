@@ -37,6 +37,8 @@ if (keyboard_check_pressed(vk_space)) {
 			// Do nothing. does not meet rs threshold
 		} else if (obj_player.get_player_gender() == 1) && (characters[select_row][select_col] == "J") {
 			// Do nothing. Joanne wont hang out with CHARLOTTE
+		} else if (ChatterboxGetVisited("0", yarn_files[select_row][select_col])) {
+			// Do nothing.
 		} else {
 			obj_player.set_is_interacting(false);
 			gender_meter_check(); // increment or decrement based on gender

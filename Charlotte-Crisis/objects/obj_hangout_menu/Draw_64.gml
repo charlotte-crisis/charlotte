@@ -29,8 +29,9 @@ for (var row = 0; row < MAX_ROW; row++) {
 		if ((select_col == col) && (select_row == row)) {
 			
 			if (obj_npc_relationships.get_relationship(characters[select_row][select_col]) < rs_threshold)
-			or (obj_player.get_player_gender() == 1) && (characters[select_row][select_col] == "J") {
-				_color = c_maroon;
+			or (obj_player.get_player_gender() == 1) && (characters[select_row][select_col] == "J") 
+			or (ChatterboxGetVisited("0", yarn_files[select_row][select_col])) {
+				_color = c_dkgray;
 			} else {
 				_color = c_white;
 			}
@@ -79,6 +80,8 @@ if (select_col == MAX_COL - 1) {
 		_speech = string("{0} doesn't want to hang out with you while you're dressed like that. (Relationship level: {1}%)",
 				npc_names[select_row][select_col],
 				_rs);
+	} else if (ChatterboxGetVisited("0", yarn_files[select_row][select_col])) {
+		_speech = string("You have already hung out with {0}.", npc_names[select_row][select_col]);
 	} else { // Good enough relationship
 		_speech = string("Ask {0} to hang out? (Relationship level: {1}%)",
 				npc_names[select_row][select_col],
