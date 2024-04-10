@@ -804,11 +804,11 @@ What do you say?
         Vera: "But damn, I didn't know you were the sort to take offence at rainbows." (-5% Vera relationship)
         // end Vera interaction
 
-    -> "Alright, I'll leave you be then."
+    -> "Alright, I'll leave you be then." #continue
         Vera: "See you."
         // end interaction
 
--> "Alright, I'll leave you be then."
+-> "Alright, I'll leave you be then." #continue
     Vera: "See you."
     // end interaction
 ===
@@ -829,7 +829,7 @@ What do you say?
     Anthony: "Ant-thony. Get it?"
     <<jump 2_2_options2>>
 
--> "Alright, I'll leave you be then."
+-> "Alright, I'll leave you be then." #continue
     Anthony: "Mm."
 ===
 __PrivCrochet_colorID: 0
@@ -868,7 +868,7 @@ What do you say?
     Nadia: "Oh, I'm just drawing myself."
     <<jump 2_3_options2>>
 
--> "Alright, I'll leave you be then."
+-> "Alright, I'll leave you be then." #continue
     Nadia: "Okay!"
 ===
 __PrivCrochet_colorID: 0
