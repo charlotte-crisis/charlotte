@@ -143,7 +143,7 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
 
 -> "I'm just built different." #skillcheck #cha # 6
     <<set $diceroll = diceRoll($cha)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 6
     <<if $diceroll < 6>>
         Really? That's the best you could come up with? (-5% confidence)    
         <<changeConfidence(-5)>>    
@@ -250,7 +250,7 @@ Nadia: "But your drawing seems a little more... rectangular? Like, it's not curv
 
     -> "The truth is that I'm Charlotte." #skillcheck #cha # 6
         <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 6
         <<if $diceroll < 6>>
             <<changeConfidence(-5)>>
             You say that, but do you really feel it? (-5% confidence)
@@ -361,7 +361,7 @@ Vera: "You know, trans women."
 
     -> "I'm proud of you for that." #skillcheck #emp # 6
         <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 6
         <<if $diceroll < 6>>        
             Vera: "Thanks."
         <<else>>
@@ -430,7 +430,7 @@ Anthony: "Why do you feel female?"
 
 -> "Cannot ah?" #skillcheck #cha # 6
     <<set $diceroll = diceRoll($cha)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 6
     <<if $diceroll >= 6>>
         You felt confident saying that. Anthony certainly doesn't, upon hearing it. (+5% confidence) 
         <<changeConfidence(5)>>
@@ -491,7 +491,7 @@ You're really being put on the spot here. How will you respond?
 
 -> "But what is a guy?" #skillcheck #int # 6
     <<set $diceroll = diceRoll($int)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 6
     Anthony: "What?"
     
     <<if $diceroll >= 5>>
@@ -634,7 +634,7 @@ Anthony: "Maybe she's an ah gua."
 
         -> "That didn't feel very good, did it?" #skillcheck #emp # 6
             <<set $diceroll = diceRoll($emp)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 6
             <<if $diceroll >= 6>>
                 Anthony: "Of course. I feel like shit every time I think of those stupid femoids who don't want to date me."
                 You: "Then if you don't want people to say you short, why you say Vera tall and all that?"
@@ -652,7 +652,7 @@ Anthony: "Maybe she's an ah gua."
         -> "But it's just what people say, isn't it? Do you listen to everything other people say?" #skilcheck #int # 6
             Anthony: "But it's proven what. Females aren't attracted to you if you're not 6-6-6."
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 6
             <<if $diceroll >= 6>>
                 You: "Then what about all the men below 6 feet who are married?"
                 Anthony: "They... they're the lucky few! Or they're rich! Or something!"
@@ -680,7 +680,7 @@ Anthony: "Maybe she's an ah gua."
 
         -> "Yeah, why don't you say that in front of Vera and Eleanor. I'm sure they'll absolutely love it." #skillcheck #cha # 6
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 6
             <<if $diceroll >= 6>>
                 Anthony wants to say something, but can't bring himself to say it.
                 <<addExperience(10)>>
@@ -699,7 +699,7 @@ Anthony: "Maybe she's an ah gua."
 
     -> "I mean, I dress up sometimes, too." #skillcheck #cha # 6
         <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 6
         Anthony: "Wow. Another one." (-5% Anthony relationship) <<changeRelationship("A", -5)>>
         Anthony: "You all are delusional."
         <<if $diceroll >= 6>>            
@@ -767,7 +767,7 @@ What do you say?
     -> "What do the rainbows mean?" <<if !optionChosen()>> #skillcheck #int # 6
         Vera: "Take a guess."
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 6
         <<if $diceroll >= 6>>
             <<addExperience(10)>>
             You: "It's an LGBT thing." (+10 XP)
@@ -886,7 +886,7 @@ Anthony shows you a picture of an anthill, with ants all around it.
 
 -> "Ooh, that's a cool way to depict yourself." <<if !optionChosen()>> #skillcheck #int # 6
     <<set $diceroll = diceRoll($int)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 6
     Anthony: "What?"
     <<if $diceroll >= 6>>
         You: "Yeah. Hardworking, can lift 100 times their body weight, all that stuff." 
@@ -902,7 +902,7 @@ Anthony shows you a picture of an anthill, with ants all around it.
 
 -> "Is everything okay?" <<if !optionChosen()>> #skillcheck #emp # 6
     <<set $diceroll = diceRoll($emp)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 6
     Anthony: "What would you know?"
     <<if $diceroll >= 6>>
         You: "Well, I know enough to ask about people who aren't feeling too good."
@@ -945,7 +945,7 @@ Nadia: "I'm still in the work-in-progress stage, though, so bear with me!"
 
 -> "You've got some hot guys on that sheet of paper too." <<if !optionChosen()>> #skillcheck #cha # 6
     <<set $diceroll = diceRoll($cha)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 6
     Nadia: "Huh? What? It's nothing! I'm just experimenting!"
     You: "Come on, I won't judge."
     <<if $diceroll >= 6>>
