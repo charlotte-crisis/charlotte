@@ -1300,8 +1300,10 @@ Mother: "Please tell me you're not..."
             You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll < 11>>
                 You: "After all, you and Dad will be dead by that time."
+                <<changeRelationship("M", -5)>>
                 Mother looks aghast. (-5% Mother relationship)
-                Mother: "So you're just waiting for us to die..." 
+                Mother: "So you're just waiting for us to die..."
+                <<changeConfidence(-5)>>
                 You realise you've become the bad guy in this scenario. (-5% confidence)
             <<else>>
                 You: "Lots of time for many adventures and a lot of fun."

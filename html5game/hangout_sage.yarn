@@ -2,10 +2,9 @@
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 419,93
 __PrivCrochet_tags: 
-title: 1
+title: 0
 ---
-Sage: "Over here!"
-You see Sage waving from the table and join her.
+You find Sage at the cafe table. Seems like she got here before you.
 <<if $name == "Charlotte">>
     Sage: "Cute outfit!"
 <<else>>

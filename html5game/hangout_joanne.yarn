@@ -2,12 +2,11 @@
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: -76,-76
 __PrivCrochet_tags: 
-title: 1
+title: 0
 ---
 You: "Hey, Joanne!"
 Joanne: "Hello!"
 <<set $start_J_rs = getRelationship("J")>>
-// For reference, this works <<set $start_sis_rs = getRelationship("Si")>>
 
 <<if $name == "Charlotte">>
     Joanne: "... Could you... wear something else?"

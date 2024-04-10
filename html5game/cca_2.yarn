@@ -728,6 +728,7 @@ Vera: "What do you think we should do about him?"
         <<if $diceroll >= 8>>
             Vera: "Fine. I'll give that a shot."
             Vera: "Surely that can't apply to all things, though."
+            <<addExperience(10)>>
             You: "I don't think it does. But in this case, I think you can afford to let the coal down." (+ 10 XP)
         <<else>>
             Vera: "Nope. You still don't understand what I'm going through."
