@@ -6,9 +6,9 @@ draw_set_valign(fa_top);
 draw_set_font(fnt_body);
 draw_set_color(c_white);
 
-draw_text(view_wport[0]/2, view_hport[0]/2, CREDITS);
+draw_text_ext(view_wport[0]/2, view_hport[0]/2 - 70, CREDITS, 25, view_wport[0]/2);
 
-if (keyboard_check_pressed(vk_space)) {
+if (keyboard_check_pressed(vk_escape)) {
 	save_game();
 	obj_player.set_is_interacting(false);
 	fade_room(rm_main_menu,,, function() {
