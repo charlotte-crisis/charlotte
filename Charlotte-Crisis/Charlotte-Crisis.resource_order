@@ -15,6 +15,7 @@
     {"name":"Fonts","order":7,"path":"folders/Fonts.yy",},
     {"name":"Notes","order":13,"path":"folders/Notes.yy",},
     {"name":"Objects","order":9,"path":"folders/Objects.yy",},
+    {"name":"Splash","order":7,"path":"folders/Objects/Splash.yy",},
     {"name":"Helper","order":3,"path":"folders/Objects/Helper.yy",},
     {"name":"Interactables","order":5,"path":"folders/Objects/Interactables.yy",},
     {"name":"Menu","order":6,"path":"folders/Objects/Interactables/Menu.yy",},
