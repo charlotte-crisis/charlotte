@@ -390,7 +390,7 @@ What will you say?
     Nadia: "Oh yes, what about it?"
     <<jump 1_2_options>>
 
--> "Well, I gotta go. Thanks for today!" <<if visited("1_1") or visited("1_2")>>
+-> "Well, I gotta go. Thanks for today!" <<if visited("1_1") or visited("1_2")>> #continue
     Nadia: "See you soon!"
     <<addExperience(30)>>
     (+30 XP)

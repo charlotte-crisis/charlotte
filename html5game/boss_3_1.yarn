@@ -1494,6 +1494,7 @@ You: "I think we've spoken enough."
     Mother: "Your sister already don't want kids, you better step up."
     Mother: "And one more thing, you better don't do this again."
     Mother: "If not, I'm telling your father."
+    <<goto_black_room()>>
     Well, can't say we didn't try. She really is a tough nut to crack.
     I'd say don't lose hope, you can try again and all that but...
     Not now. Now, you need to rest.
@@ -1514,6 +1515,7 @@ You: "I think we've spoken enough."
         You: "And I'm sorry to say this, but you failed."
         You: "So go ahead. Tell Dad about Charlotte all you want."
         You: "I'm done with you."
+        <<goto_black_room()>>
         So this is how it ends, huh? At least you stood up for yourself.
         Still, burning bridges with Mother... is that the best we can do?
     <<else>>
@@ -1524,10 +1526,13 @@ You: "I think we've spoken enough."
         You: "Knowing you're in my corner, that means a lot to me."
         You: "Oh, and one more thing..."
         You: "When I'm dressed as a girl, you can call me Charlotte."
+        <<goto_black_room()>>
         Boom, baby! 
         Okay, sorry, I was just excited. I never thought this day would come.
     <<endif>>
 <<endif>>
+
+<<goto_ending()>>
 ===
 __PrivCrochet_colorID: 8
 __PrivCrochet_position: 1600,-320

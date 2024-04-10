@@ -27,7 +27,7 @@ What will you say?
     <<jump 1_2>>
 -> "I'd like to ask you for some advice regarding my family situation..." <<if !optionChosen()>>
     <<jump 1_3>>
--> Not sure. Just go with the flow.
+-> Not sure. Just go with the flow. #continue
     <<jump 2>>
 ===
 __PrivCrochet_colorID: 0

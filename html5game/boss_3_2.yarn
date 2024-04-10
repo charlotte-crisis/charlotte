@@ -1029,6 +1029,8 @@ Well, this is it. // In case, to ensure the option shows up. It may not be neede
         Charlotte: "From everyone you've offended along this journey, yes, but most importantly...
         Charlotte: "From ME."
     <<endif>>
+
+<<goto_ending()>>
 ===
 __PrivCrochet_colorID: 3
 __PrivCrochet_position: 640,-120
@@ -1065,7 +1067,8 @@ Charlotte: "And I need your courage, your buy-in, before we can proceed."
     Charlotte: "You know what? I'm out of here. Enjoy the rest of your life as a man."
     Charlotte: "And when you inevitably dredge me up again, with all the shame and hatred that follows..."
     Charlotte: "Just know that this could have been a LOT easier."
-<<stop>>
+
+<<goto_ending()>>
 ===
 __PrivCrochet_colorID: 8
 __PrivCrochet_position: -80,40
