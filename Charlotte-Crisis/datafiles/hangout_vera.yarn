@@ -299,7 +299,7 @@ Vera: "I mean, you probably know a thing or two about that."
             
     -> "Come on, Vera. I already said I'm fine." #skillcheck #emp # 7
         <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 7
         <<if $diceroll >= 7>>
             Vera: "But don't you want to transition?"
             You: "Vera. Please. I'm not you."
