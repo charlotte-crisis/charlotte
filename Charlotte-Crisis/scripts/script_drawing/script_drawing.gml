@@ -140,6 +140,16 @@ function draw_speaker_portrait(name) {
 	}
 }
 
+/// @description Draw the diceroll sprite as a portrait.
+/// @param _value Should be a dice value ranging from 1 to 6.
+function draw_diceroll_portrait(_value) {
+	draw_sprite_ext(spr_portrait_bg, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+	// The sprite itself
+	draw_sprite_ext(spr_dice, _value - 1, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+	// Overlay
+	draw_sprite_ext(spr_portrait_bg, 1, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+}
+
 #region Stat menu
 	/// @description Draw a singular stat bar
 	/// To be used in draw step, not Draw GUI
