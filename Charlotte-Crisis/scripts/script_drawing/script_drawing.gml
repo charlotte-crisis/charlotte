@@ -71,9 +71,9 @@ function draw_option_box(_x, _y, _selected, _skillcheck=false) {
 	}
 }
 
-/// @function get_speaker_sprite(String name)
+/// @function draw_speaker_portrait(String name)
 /// @param name {String} Name of speaker
-/// @return {Asset.GMSprite} Sprite
+/// @description Draw a portrait if it's a valid speaker.
 function draw_speaker_portrait(name) {
 	var sprite_x = 8 * VIEWPORT_SCALE;
 	var sprite_y = view_hport[0] - (sprite_get_height(spr_dialogue_box) + 4) * VIEWPORT_SCALE;
