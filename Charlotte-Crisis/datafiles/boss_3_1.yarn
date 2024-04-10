@@ -77,7 +77,7 @@ Mother: "So why you come back today?"
     <<jump 2_actually>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 399,-72
+__PrivCrochet_position: 399,-73
 __PrivCrochet_tags: 
 title: 3
 ---
@@ -514,7 +514,7 @@ Mother is on the verge of... tears? Anger? Shock? You can't tell.
 <<jump 5>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 865,-71
+__PrivCrochet_position: 866,-76
 __PrivCrochet_tags: 
 title: 5
 ---
@@ -575,12 +575,23 @@ Mother: "I know you muted the family WhatsApp chat right?"
             <<changeConfidence(-5)>>
             Wow, red packets were enough to sway you, huh? (-5% confidence)
         
-    -> "Okay, fine, I should be aware of this stuff."
+    -> "Okay, fine, I should be aware of this stuff." #skillcheck #emp # 11
         Mother: "Yes, you should."
         Mother: "You need to look out for family so that family will look out for you."
-        Mother goes into a short segue about this, and it leaves you wondering...
-        <<changeConfidence(-5)>>
-        What kind of family would stomp out the parts of you that made you special? (-5% confidence)
+        <<set $diceroll = diceRoll($emp)>>
+        [You rolled a {$diceroll}.]
+        <<if $diceroll < 11>> 
+            Mother goes into a short segue about this, and it leaves you wondering...
+            <<changeConfidence(-5)>>
+            What kind of family would stomp out the parts of you that made you special? (-5% confidence)
+        <<else>>
+            You: "Then I need the family to look out for me too, right?"
+            Mother: "Of course. Since when did we not do that?"
+            You: "That includes letting me live the life that I want to."
+            You: "Don't you see how much stress you're causing me through your judgement?"
+            Mother: "We are only doing what's best for you..."
+            You can detect a faint sense of doubt behind her words.
+        <<endif>>
         
     -> "There's still a lot of spam."
         Mother: "No one's asking you to read everything."
@@ -613,6 +624,74 @@ Mother: "You're not the one facing these people."
 Mother: "You know your aunt, my sister, is already so particular."
 Mother: "Ever since you were a boy, she always compare her kids to you."
 Mother: "You really want to give them another reason to laugh at us?"
+-> "I can understand why you're so scared of this judgement." #skillcheck #emp # 11
+    <<set $diceroll = diceRoll($cha)>>
+    [You rolled a {$diceroll}.]
+    <<if $diceroll > 11>>
+        Mother: "Yes, it's because of you."
+        Mother: "Can you stop giving your mother extra stress?"
+        -> "You think I want to do that?"
+            Mother: "All you need to do is to think normally again."
+            You: "It doesn't work like that. My gender is not a switch I can turn on and off."
+            Mother: "Your gender is male! And if you don't follow the rules you're just going to get more criticism."
+            Mother: "Why is this so hard to understand?"
+            Back to square one, huh.
+        -> "The stress isn't just from me." #skillcheck #int # 11
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                Mother: "But unlike you, I'm normal. Because I don't do stupid things like you."
+                Mother: "Why don't you know how to be normal? You're smart. You're the one who go uni!"
+                Mother: "At least people judge me for valid reasons, not like you..."
+                <<changeConfidence(-5)>>
+                You didn't even get the chance to challenge that. (-5% confidence)
+            <<else>>
+                Mother: "What do you mean?"
+                You: "Think about it. Why does your sister judge you?"
+                Mother: "Because her family is better than ours."
+                You: "Because we're poorer than her! Because you and Dad argue more than her with her husband."
+                You: "And this judgement isn't going to stop, because that's just how we are."
+                Mother: "What are you trying to say?"
+                You: "She's not just judging you because of me, and she's judging you based on things that we can't change easily."
+                You: "So please, ease up on me and work on yourself first."
+                <<changeRelationship("M", -5)>>
+                Mother furrows her brow. Did you just make things worse? (-5% Mother relationship)
+                <<changeConfidence(5)>>
+                But you know you're right. It even felt cathartic to call out your aunt. (+5% confidence)
+            <<endif>>
+        -> "All the more we should stand together against the judgement." #skillcheck #emp # 11
+            Mother: "What do you mean?"
+            You: "I want your help."
+            <<set $diceroll = diceRoll($cha)>>
+            [You rolled a {$diceroll}.]
+            <<if $diceroll < 11>>
+                Mother: "Tell you how many times already, still don't want to listen."
+                Mother: "The best way I can help is to throw away all your dresses and makeup."
+                <<changeConfidence(-5)>>
+                It's hard to appeal to her emotions. (-5% confidence)
+            <<else>>
+                You: "Whatever we do, we will be judged. That's what I've learned as a crossdresser."
+                You: "And that applies to everyone. You and I both get judged by auntie, right?"
+                You: "I need you on my side, mum. We can still love each other, even if we are judged."
+                You: "And we will be stronger against those who want to harm us, only if we are united."
+                You: "Isn't that how a family should be? I don't want to tear us apart here."
+                <<changeConfidence(5)>>
+                Mother is silently considering your words. That's a start. (+5% confidence)
+            <<endif>>
+        -> "Okay, fine..."
+            Mother: "And the first step is to stop thinking you're a girl. You will NEVER be one."
+            Mother: "When you dress up, all I see is a monster in girl clothes."
+            <<changeConfidence(-10)>>
+            You stopped giving her stress, and took some for yourself. (-10% confidence)
+    <<else>>
+        Mother: "What would you know? Only know how to make problems for me."
+        You: "I could say the same about you!"
+        Mother: "Who raised you to where you are today? Who paid your school fees?"
+        Mother: "Don't you dare raise your voice at me, understand?"
+        <<changeRelationship("M", -5)>>
+        She's right. Pump the brakes. This shouldn't be a shouting competition. (-5% Mother relationship)
+    <<endif>>
+
 -> "Let them laugh."
     You: "Am I really scared of what the boomers think?"
     Mother: "If you heard what my sister asked me, you would care."
@@ -659,10 +738,10 @@ Mother: "You really want to give them another reason to laugh at us?"
             <<set $diceroll = diceRoll($cha)>>
             [You rolled a {$diceroll}.]
             <<if $diceroll < 11>>
-                Mother: "But you don't love us."
-                Mother: "I can feel it in your voice..."
+                Mother: "But you don't love us. I can feel it in your voice..."
+                Mother: "And if you really loved us, you would also come back home more often, right?"
                 <<changeConfidence(-5)>>
-                Ugh, this is going nowhere. (-5% confidence)
+                Damn, she got you. This is going nowhere. (-5% confidence)
             <<else>>
                 Mother: "I guess you're right..."
                 Mother: "It's just that your habit is very hard for me to accept."
