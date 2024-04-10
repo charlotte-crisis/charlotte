@@ -400,21 +400,21 @@ function goto_room_bedroom_afterHangout(){
 	function goto_room_hangout_cj() {
 		fade_room(rm_hangout_cj,,, function() {
 			set_player_position(X_CAFE_SEATED, Y_CAFE_SEATED, 1, true);
-			change_node("hangout_chenjie.yarn", "1");	
+			change_node("hangout_chenjie.yarn", "0");	
 		});
 	}
 	
 	function goto_room_hangout_s() {
 		fade_room(rm_hangout_s,,, function() {
 			set_player_position(X_CAFE_SEATED, Y_CAFE_SEATED, 1, true);
-			change_node("hangout_sage.yarn", "1");	
+			change_node("hangout_sage.yarn", "0");	
 		});
 	}
 	
 	function goto_room_hangout_j() {
 		fade_room(rm_hangout_j,,, function() {
 			set_player_position(X_CAFE_SEATED, Y_CAFE_SEATED, 1, true);
-			change_node("hangout_joanne.yarn", "1");	
+			change_node("hangout_joanne.yarn", "0");	
 		});
 	}
 
