@@ -64,7 +64,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
             You: "You're ogling girls, but not to dominate their body. No, it's because you want it."
             You: "And why would I take that risk when I'm old and decrepit and can no longer look pretty?"
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll >= 11>>
                 You: "It's clear to me. This ends today."
                 You: "I don't want to regret anything in my old age."
@@ -78,7 +78,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
             You: "If you're a ghost, go haunt someone else."
             Charlotte: "How many times do I need to repeat this? I AM you!"
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll >= 11>>
                 You: "You are not me. I never wanted to be a loser."
                 You: "I was confused, but now I am crystal clear."
@@ -101,7 +101,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
             You: "And I'm not going to bend to your will to subject my body to that."
             Charlotte: "Okay, fine, so you don't want it now. But you might want it in the future."
             <<set $diceroll = diceRoll($emp)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 11
             <<if $diceroll >= 11>>
                 You: "No. I need you to consider me. The male in this body."
                 You: "Why can't you just let me lead a normal life? I don't want to suffer any more."
@@ -115,7 +115,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
             You: "You're the problem here, why can't you see that?"
             Charlotte: "Trust me, it's gonna be more painful if you get rid of me."
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll >= 11>>
                 You: "If I kill you, what's gonna happen? Just a bit of mental damage is all."
                 You: "But if I let you live, you're gonna torment me with mental damage until I take physical damage."
@@ -134,7 +134,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
             You: "Why do I have to keep taking care of you like this?"
             You: "Like you're some dependent child who can't take care of herself."
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll >= 11>>
                 Charlotte: "Do you really hate me that much?"
                 You: "You're the one causing me pain, you tell me."
@@ -161,7 +161,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
         -> "I will seek help from other people." #skillcheck #int # 11
             Charlotte: "Heh. Like who?"
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll >= 11>>
                 You: "Mother wasn't enough for you? I'll call in Father."
                 You: "He will show me what a man should be like."
@@ -182,7 +182,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
         -> "I have seen the truth." #skillcheck #int # 11
             Charlotte: "Oh yeah? Why don't you tell me what truths you've learned?"
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll >= 11>>
                 You: "Women are the weaker sex. We're playing with a debuff in real life."
                 You: "So much time wasted pretending, for what?"
@@ -196,7 +196,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
             <<endif>>
         -> "I don't want to be a woman with a penis." #skillcheck #cha # 11
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll >= 11>>
                 Charlotte: "Then remove it. That can be a long term goal."
                 You: "That's not what I meant!"
@@ -224,7 +224,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
             Charlotte: "That's no surprise, people want to take away her rights."
             Charlotte: "My existence is political too. So pick a side."
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll >= 11>>
                 You: "Of course I want to make my life easy. I'd pick the side without you."
                 Charlotte: "If only it was that easy."
@@ -238,7 +238,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
         -> "You think a rich foreigner like her can relate to us?" #skillcheck #cha # 11
             Charlotte: "She represents opportunity. She represents freedom. She represents a better life!"
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll >= 11>>
                 You: "She's part of the liberal elite. She won't care for poor folk like me."
                 You: "She won't suffer if Mother and Father come after me."
@@ -256,7 +256,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
         -> "She exploited me to advance her trans agenda." #skillcheck #int # 11
             Charlotte: "Okay, since you're so sure she had an agenda, what is it?"
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll >= 11>>
                 You: "She wanted to make Charlotte a full-time thing."
                 You: "She would have converted me into you."
@@ -276,7 +276,7 @@ Charlotte: "I never asked you to. That was the deal, wasn't it?"
         -> "How do you think she'd respond if I were to present as male permanently?" #skillcheck #cha # 11
             Charlotte: "Don't make her the villain. She would still accept you."
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll >= 11>>
                 You: "No, she'd ask why I'm suddenly betraying the cause or whatever self-righteous thought she cooked up."
                 You: "In fact, maybe I should just cut off ties with her right away."
@@ -317,7 +317,7 @@ Charlotte: "Why can't you just accept me?"
             You: "You didn't go through boys' school and NS, I did."
             You: "You don't suffer the consequences when things go wrong. I do."
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll >= 11>>
                 You: "And what have you ever done? What have you accomplished?"
                 You: "Your values are degeneracy and rot."
@@ -334,7 +334,7 @@ Charlotte: "Why can't you just accept me?"
             You: "Do you really think you can look in the mirror and think you're a woman?"
             You: "That nagging feeling will always tell you that you are a man."
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll >= 11>>
                 You: "Who are you trying to fool with the makeup and dresses? You still look like a man."
                 You: "And when you have fun, you still do it in a masculine way."
@@ -358,7 +358,7 @@ Charlotte: "Why can't you just accept me?"
             Charlotte: "I never stopped you from living your life."
             Charlotte: "But you know you need me too. I'm your self-expression."
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll >= 11>>
                 You: "There are so many other ways I could express myself."
                 You: "I lost so much of my personality when I started making everything about you."
@@ -387,7 +387,7 @@ Charlotte: "Why can't you just accept me?"
             Charlotte: "That's bullshit and you know it."
             You: "Don't you know one corner of my room already stinks of makeup products because of you?"
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll >= 11>>
                 Charlotte: "That's not my fault."
                 You: "Then I'm clearing out all your stuff from my room."
@@ -404,7 +404,7 @@ Charlotte: "Why can't you just accept me?"
             You: "Once upon a time, I dreamed I was a girl, playing around with all these frivolous cosmetics..."
             You: "But I woke up. I realised that I will always be a man."
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll >= 11>>
                 You: "It's time to cut my losses and stop being an idiot."
             <<else>>
@@ -423,7 +423,7 @@ Charlotte: "Why can't you just accept me?"
         You: "You, with your victim mentality, place yourself first in every conversation."
         You: "I can't even talk about masculine things anymore."
         <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
         <<if $diceroll >= 11>>
             Charlotte: "As if you were ever able to. Admit it, you aren't interested in masculine coded interests."
             Charlotte: "And what's wrong with that?"
@@ -442,7 +442,7 @@ Charlotte: "Why can't you just accept me?"
             Charlotte: "Why is it even terrible?"
             Charlotte: "Don't tell me you're doing this to 'protect the sanctity of women' or whatever."
             <<set $diceroll = diceRoll($emp)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 11
             <<if $diceroll >= 11>>
                 You: "As a matter of fact, I am."
                 You: "Don't you see how much they suffer at the hands of predatory men?"
@@ -460,7 +460,7 @@ Charlotte: "Why can't you just accept me?"
             You: "You really want it, so you steal it. But she finds out and reports you to Campus Security."
             You: "What the hell do you think will happen then?"
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll >= 11>>
                 You: "I can already see the headline."
                 You: "Man arrested for stealing female student's underwear."
@@ -480,7 +480,7 @@ Charlotte: "Why can't you just accept me?"
         -> "You do not fear danger?" #skillcheck #int # 11
             Charlotte: "Why don't you tell me exactly what I should be afraid of?"
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll >= 11>>
                 You: "I can't guarantee your safety all the time."
                 You: "You think everyone's gonna be as accepting as in school?"
@@ -495,7 +495,7 @@ Charlotte: "Why can't you just accept me?"
         -> "You feel no shame?" #skillcheck #cha # 11
             Charlotte: "My existence is literally capital-P Pride. What's wrong with that?"
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll >= 11>>
                 You: "The world doesn't think so."
                 Charlotte: "To hell with what they think! I don't care. You shouldn't either."
@@ -542,7 +542,7 @@ Charlotte: "Why can't you just accept me?"
             You: "Easy for you to say. You're not the one on the frontline."
             Charlotte: "Well why don't you bring me out and we can give that a go?"
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll >= 11>>
                 You: "I'm still the one suffering, you bitch!"
                 You: "You think jobs just drop from the sky? What MNCs are just gonna let the poor queer person get on their payroll?"
@@ -564,7 +564,7 @@ Charlotte: "Why can't you just accept me?"
             You: "And then, maybe you will finally fade into the background."
             Charlotte: "Oh wow, slaving yourself to the rat race just so you can be normal."
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll >= 11>>
                 <<changeConfidence(-10)>>
                 Charlotte: "What kind of life is that? You know it's pathetic." (-10% confidence)
@@ -597,7 +597,7 @@ Charlotte: "Why can't you just accept me?"
         
         -> "I can live without you." #skillcheck #cha # 11
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll >= 11>>
                 You: "You're not a necessity like water or food or money."
                 You: "I won't die if I don't put on a dress. It's not a biological need."
@@ -631,7 +631,7 @@ Charlotte: "Why are we suddenly forced back into the closet again?"
             Charlotte: "That's just your paranoia at work."
             Charlotte: "I'm sure they will help us where they can."
             <<set $diceroll = diceRoll($emp)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 11
             <<if $diceroll >= 11>>
                 Charlotte: "Think about it. They will rally to our side emotionally, even if they can't do so physically."
                 Charlotte: "And don't underestimate that. Every decision you make is based on emotions, after all."
@@ -697,7 +697,7 @@ Charlotte: "Why are we suddenly forced back into the closet again?"
     -> "The ending of the story is where you choose it to be." #skillcheck #int # 11
         Charlotte: "What do you mean?"
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
         <<if $diceroll >= 11>>
             You: "There are so many other chances in life."
             You: "If this is the end of Charlotte's story in her family home..."
@@ -808,7 +808,7 @@ Charlotte: "How are you sure the next time won't be the same?"
         Charlotte: "I know. We aren't even earning any money, let alone enough money, yet."
         Charlotte: "But what's the game plan here?"
         <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
         <<if $diceroll >= 11>>
             You: "As soon as we earn money, we move out."
             Charlotte: "You speak with confidence, but I hope you've got a plan for that stage too."
@@ -835,7 +835,7 @@ Charlotte: "How are you sure the next time won't be the same?"
         -> "Talking to other people is different." #skillcheck #int # 11
             Charlotte: "How so? Some of them were even worse."
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll >= 11>>
                 You: "I think the family connection multiplies the difficulty."
                 You: "They've known only me, not you. They're obviously gonna take it hard."
@@ -851,7 +851,7 @@ Charlotte: "How are you sure the next time won't be the same?"
     -> "We must know Mother's opinions too." #skillcheck #int # 11
         Charlotte: "She's a boomer, she hates me, what else is relevant to this?"
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
         <<if $diceroll >= 11>>
             You: "Know yourself and know your enemy and you win a thousand battles."
             You: "For instance, we don't know what her experience with trans people is like."

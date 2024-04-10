@@ -560,7 +560,7 @@ title: 5_1
 
     -> "Damn, your GPA must be crying." #skillcheck #cha # 10
         <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 10
         <<if $diceroll >= 10>>
             Nadia laughs nervously.
             Nadia: "Here for a good time, not a long time, right?"
@@ -833,7 +833,7 @@ title: 4_1_1_2
 ---
 You: "Instead of just thinking about the ones you've had."
 <<set $diceroll = diceRoll($emp)>>
-[You rolled a {$diceroll}.]
+You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 10
 <<if $diceroll > 10>>
     Anthony: "Again, everyone gets bad days."
     You: "So it's okay for you to take it out on other people when you have a bad day?"
@@ -941,7 +941,7 @@ title: 4_1_3
         You: "Look at what you've said to Vera and Nadia."
         Anthony: "They shoved it in everyone's face. I'm just drawing on my own."
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 10
         <<if $diceroll < 10>>
             You: "I guess you're right..."
             Anthony: "Whatever. I'm just gonna continue."
@@ -956,7 +956,7 @@ title: 4_1_3
     -> "It's not your art that I'm critiquing." #skillcheck #emp # 10
         Anthony: "Then?"
         <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 10
         <<if $diceroll < 10>>
             Anthony: "Well great, you're just criticising me." 
             <<changeRelationship("A", -5)>>
@@ -977,7 +977,7 @@ title: 4_1_3
             You: "I mean, that's why I started crossdressing."
             Anthony: "Yeah, unlike you, I don't need a fetish. I'm normal."
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 10
             <<if $diceroll < 10>>
                 <<changeConfidence(-5)>>
                 <<changeRelationship("A", -5)>>
@@ -1007,7 +1007,7 @@ title: 4_1_3
         Anthony: "Oh, not this again. 'Just cheer up', 'everything will be okay'..."
         Anthony: "I'm sick of hearing all this bullshit. Can't people see that the world is messed up?"
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 10
         <<if $diceroll < 10>>
             You: "Well, suit yourself. I'm not the art police."
             You: "If that's how you see the world then so be it. I'm way past caring." 

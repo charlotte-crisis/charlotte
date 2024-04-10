@@ -100,7 +100,7 @@ You: "Alright, here goes..."
     Anthony: "How is a sunset related to art club? Are you saying we're going under?"
     -> "Yeah. Bye!" #skillcheck #cha # 8
         <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 8
         <<if $diceroll >= 8>>
             You expected people to take issue with that, but Eleanor laughs.
             <<changeConfidence(5)>>
@@ -115,7 +115,7 @@ You: "Alright, here goes..."
         
     -> "Sunsets are nature's art." #skillcheck #int # 8
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 8
         <<if $diceroll >= 8>>
             <<addExperience(10)>>
             You: "And when do we see the sunset? After a long day, we truly appreciate its natural beauty." (+10 XP)
@@ -263,7 +263,7 @@ Vera: "What's wrong with having a preference? At least she's got something to be
 
 -> "It's Nadia's work. Respect it as you would expect us to respect yours." #skillcheck #cha # 8
     <<set $diceroll = diceRoll($cha)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 8
     <<if $diceroll >= 8>>
         <<changeRelationship("V", 5)>>
         Anthony is thrown off by the strength in your statement, and keeps quiet.
@@ -308,7 +308,7 @@ Nadia: "I guess so. I mean, maybe people will think we're some butterfly club."
     -> "It's not about gender." #skillcheck #int # 8
         Anthony: "Oh yeah? What's it about then?"
         <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 8
         <<if $diceroll < 8>>
             You: "It's for everybody."
             Anthony: "Sounds like some woke nonsense to me. Stuff that shouldn't be on a logo."
@@ -334,7 +334,7 @@ Nadia: "I guess so. I mean, maybe people will think we're some butterfly club."
     Vera: "Still, I feel like there's some... other reason you don't like my logo, right, Anthony?"
     Anthony: "Don't put words into my mouth."
     <<set $diceroll = diceRoll($emp)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 8
     <<if $diceroll < 8>>
         You're taken aback, and so is Vera.
         Vera: "I never did that - "
@@ -352,7 +352,7 @@ Nadia: "I guess so. I mean, maybe people will think we're some butterfly club."
     Anthony: "Like what?"
     You think for a moment.
     <<set $diceroll = diceRoll($int)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 8
     <<if $diceroll < 8>>
         You: "Uh... Sorry. I'm not sure."
         Anthony: "Then we shouldn't make that the focus of the logo."
@@ -411,7 +411,7 @@ Vera: "You can't possibly be serious right now."
     Anthony: "I still can't shake the association. I don't think our future members will either."
     -> "You know what else is rainbow coloured? Gaming PCs." #skillcheck #int # 8
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 8
         <<if $diceroll >= 8>>
             You: "Do you game, Anthony?"
             Anthony: "Yeah, sometimes..."
@@ -461,7 +461,7 @@ Vera: "You can't possibly be serious right now."
             Anthony: "So this is just about filling seats?"
             -> "Fine. Anthony. We're sorry." #skillcheck #emp # 8
                 <<set $diceroll = diceRoll($emp)>>
-                [You rolled a {$diceroll}.]
+                You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 8
                 <<if $diceroll < 8>>
                     Vera: "Sorry for what? For allowing bigotry to run free here?"
                     Eleanor: "That's not what we meant, both of you!"
@@ -484,7 +484,7 @@ Vera: "You can't possibly be serious right now."
                     Vera: "I don't need you to apologise for me."
                     -> "Of course. I want you to apologise to him." #skillcheck #int # 8
                         <<set $diceroll = diceRoll($int)>>
-                        [You rolled a {$diceroll}.]
+                        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 8
                         <<if $diceroll >= 8>>
                             Vera: "You've made my jaw drop twice in one minute."
                             You: "Go ahead, pick it up. You've got something to say."
@@ -512,7 +512,7 @@ Vera: "You can't possibly be serious right now."
     -> "Uh, Vera, that was kind of rude..." #skillcheck #emp # 8
         You: "I know you're pissed off at Anthony. But we have to be the bigger person here."
         <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 8
         <<if $diceroll >= 8>>
             You: "Your feelings are valid. But we cannot stoop to his level."
             Nadia: "Honestly... I understand where he's coming from..."
@@ -585,7 +585,7 @@ Vera: "You can't possibly be serious right now."
 
     -> "Anthony, no one's forcing you to wear this." #skillcheck #cha # 8
         <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 8
         <<if $diceroll >= 8>>        
             Anthony: "But it's the club shirt. You think all of our members are gonna like the gay shit too?"
             You: "It's not just LGBTQ+. You gotta own the shirt. Make the design your own."
@@ -610,7 +610,7 @@ Vera: "You can't possibly be serious right now."
         <<endif>>
     -> "Anthony, we're sorry." #skillcheck #emp # 8
         <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 8
         <<if $diceroll >= 8>>
             Vera: "What!?"
             Anthony: "For once, I agree."
@@ -724,7 +724,7 @@ Vera: "What do you think we should do about him?"
         You: "And that means you don't get your revenge, but is it really worth it if it hurts you?"
         Vera stays silent for a moment.
         <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 8
         <<if $diceroll >= 8>>
             Vera: "Fine. I'll give that a shot."
             Vera: "Surely that can't apply to all things, though."
@@ -826,7 +826,7 @@ Anthony: "Haven't you seen? She is actually he. How can a woman be taller than m
         You: "You know what? You're impossible to deal with. I'm done here."
     -> "Why don't you bring that up to her face, huh? See how she reacts." #skillcheck #cha # 8
         <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 8
         <<if $diceroll >= 8>>
             Anthony stays silent.
             You: "You don't dare to."

@@ -146,7 +146,7 @@ Helen: "You can either hide it entirely, come to a compromise, or move out."
 <<jump 7_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 355,-277
+__PrivCrochet_position: 346,-279
 __PrivCrochet_tags: 
 title: 4
 ---
@@ -164,24 +164,23 @@ Helen: "Makes me think you want to be seen as a guy."
             Helen: "Well, you're not."
             You: "Says who?"
             Helen: "Fine. Don't take it from me. Take it from whichever actress or celebrity you're a fan of."
-            Helen: "Look at their flawless skin, their beautiful faces..."
-            Helen: "Tell me you don't want to look like them."
+            Helen: "Look at their flawless skin, their beautiful faces... Tell me you don't want to look like them."
             -> "Yeah. I don't." #skillcheck #cha # 9
                 <<set $diceroll = diceRoll($cha)>>
-                [You rolled a {$diceroll}.]
+                You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 9
                 <<if $diceroll < 9>>
                     <<changeConfidence(-10)>>
                     Helen: "Don't give me that overconfident facade. I see right through it." (-10% confidence)
                 <<else>>
-                    You: "Their rules were not how I defined pretty for myself. So why should I follow them?"
+                    <<addExperience(10)>>
+                    You: "Their rules were not how I defined pretty for myself. So why should I follow them?" (+10 XP)
                 <<endif>>
                 Helen: "Where does your definition of pretty come from?"
                 Helen: "From your mind, yes, but it's also from the media you take in."
                 Helen: "So there is no escape."
                 -> "The escape is from within." 
                     You: "I reject those beauty standards."
-                    Helen: "How to reject? The advertising is everywhere." 
-                    Helen: "It's affecting you even subconsciously."
+                    Helen: "How to reject? The advertising is everywhere. It's affecting you even subconsciously."
                     You: "Then why look to the media when we can look at each other?"
                     You: "We aren't perfect. But that's the most perfect of all."
                     Helen: "Is this some philosophy thing?"
@@ -204,19 +203,29 @@ Helen: "Makes me think you want to be seen as a guy."
             -> "There are limitations to how much we can look like them."
                 Helen: "Yes, I know. I'm not asking you to get plastic surgery like those K-pop idols."
                 Helen: "But at least, you should know how to look like a woman, right?"
-                -> "And what does a woman look like?"
-                    Helen: "Is this one of those philosophical questions?"
-                    You: "No. It's a simple question."
-                    Helen: "Ugh. I know where this is going."
-                    You: "Then you should be able to describe a woman in a way that doesn't exclude any women or include any non-women."
-                    Helen: "You're just baiting me to say 'anyone can be a woman', right?"
-                    Helen: "I actually do believe in that."
-                    Helen: "But remember, it's contextual. If you don't fit into the context, you'll always stand apart from them."
-                    You: "Then I make my own context."
-                    Helen: "Well... good luck to you, I guess. Form your own brand, be brave."
-                    <<changeConfidence(5)>>
-                    That wasn't ironic. (+5% confidence)
-
+                -> "And what does a woman look like?" #skillcheck #int # 9
+                    <<set $diceroll = diceRoll($int)>>
+                    You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 9
+                    <<if $diceroll < 9>>
+                        Helen: "Well, not like you. Don't you know people judge women so hard for being"
+                        Helen: "They'll think you're lazy for not doing your makeup properly, or stupid for doing it wrong."
+                        Helen: "You're telling me you really want that attention from hostile people?"
+                        <<changeConfidence(-10)>>
+                        Yeah, guess not... (-10% confidence)
+                    <<else>>
+                        Helen: "Is this one of those philosophical questions?"
+                        You: "No. It's a simple question."
+                        Helen: "Ugh. I know where this is going."
+                        You: "Then you should be able to describe a woman in a way that doesn't exclude any women or include any non-women."
+                        Helen: "You're just baiting me to say 'anyone can be a woman', right?"
+                        Helen: "I actually do believe in that."
+                        Helen: "But remember, it's contextual. If you don't fit into the context, you'll always stand apart from them."
+                        <<addExperience(10)>>
+                        You: "Then I make my own context." (+10 XP)
+                        Helen: "Well... good luck to you, I guess. Form your own brand, be brave."
+                        <<changeConfidence(5)>>
+                        That wasn't ironic. (+5% confidence)
+                    <<endif>>
                 -> "If everyone thought like you did, we wouldn't have fashion."
                     You: "Aren't fashion trends made by breaking the mould?"
                     You: "Where's the creativity, the self-expression in just following the rules?"
@@ -227,28 +236,92 @@ Helen: "Makes me think you want to be seen as a guy."
         -> "Fine, maybe it's not cruel. But it definitely is restrictive."
             Helen: "Yeah, but it's all worth it when you look in the mirror and see a perfect female face staring back."
             Helen: "So the question is, what are you going to do about it?"
-            You: "I don't know... I guess I'll just follow what you say." 
-            <<changeConfidence(-10)>>
-            Helen: "Yes, please just clean up your look and stop giving me second hand dysphoria." (-10% confidence)
+            -> "What is a perfect female face?" #skillcheck #int # 9
+                Helen: "Okay, fine, we don't say 'perfect'. But at least passable."
+                <<set $diceroll = diceRoll($int)>>
+                You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 9
+                <<if $diceroll < 9>>
+                    You: "Yeah, I guess that makes sense..."
+                    Helen: "And you're not being very passable now, Charlotte."
+                    Helen: "Are you really sure you want other people to judge you on your masculine traits?"
+                    <<changeConfidence(-5)>>
+                    You know you need to improve, but did she need to be so mean about it... (-5% confidence)
+                <<else>>
+                    You: "No, even being 'passable' is highly subjective."
+                    You: "I mean, what if there are women who are tall? Or with big hands?"
+                    You: "Or, if they have a square face or a slightly deeper voice..."
+                    You: "Are you going to tell them that they don't pass?"
+                    Helen: "Hmm, I don't think so..."
+                    You: "Exactly. So we shouldn't be so scared, should we?"
+                    Helen: "I get what you mean, but they are female and we... aren't."
+                    <<addExperience(10)>>
+                    You: "But if you're going by 'what they look like', what's the difference, right?" (+10 XP)
+                    Helen ponders your words for a moment.
+                <<endif>>
+            -> "I don't know... I guess I'll just follow what you say." 
+                Helen: "Yes, please just clean up your look. There's so many resources out there for you."
+                <<changeConfidence(-5)>>
+                Helen: "Stop giving me second hand dysphoria with how work-in-progress you look." (-5% confidence)
+            -> "I'll live on my own terms."
+                You: "Perfection looks different for everyone. There's no standard."
+                You: "Why stress yourself out so much just to please someone else?"
+                Helen: "It's not just about that..."
 
     -> "Fashion isn't inherently male or female."
         Helen: "Yeah, so?"
-        You: "So I don't mind being called a man in a dress."
-        You: "If anything, it's empowering to my friends who are gender non-conforming."
+        You: "So I don't mind being called a man in a dress. If anything, it's empowering to my friends who are gender non-conforming."
         Helen: "Aren't you scared of getting clocked?"
         You: "More people in society are accepting of gender diversity."
         Helen: "Then let's hope the world is more accepting of your... unconventional looks."
         -> "I can feel the scepticism in your tone."
             Helen: "Of course. Gender binary is still what I'm more comfortable with."
-            Helen: "And you'll find that the world is also"
+            Helen: "And you'll find that the world agrees."
+            -> "That's a you problem."
+                Helen: "So we're at an impasse."
+                Helen: "Then I hope the rest of the world is as patient as I am with you."
+                <<changeConfidence(-5)>>
+                Chilling images of discrimination flash across your mind. (-5% confidence)
+            -> "Do they, really?"
+                Helen: "I mean, why else would we call it 'marriage between a man and a woman', right?"
+                Helen: "We can't change this as easily as you think."
         -> "The world will move along."
             Helen: "Yes, of course it does... not like I want it to go back to the good old days, whatever they were."
             <<changeRelationship("H", -5)>>
             Helen: "Sigh... Guess I'm really behind the times." (-5% Helen relationship)
+            -> "What were they like?"
+                Helen: "Hmm, I think I mentioned them a bit just now, right?"
+                Helen: "I could not go out as Helen. Even in university, where I started to crossdress."
+                Helen: "I didn't want to get any judgement or bullying, so Helen was confined to her room."
+                Helen: "Those are the good old days that kept me down... I'm glad things are better now."
+                Helen: "But vestiges of those attitudes are still around. You need to be careful."
+            -> "I understand what it's like to be out of touch..." #skillcheck #emp # 9
+                <<set $diceroll = diceRoll($emp)>>
+                You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 9
+                <<if $diceroll < 9>>
+                    Helen: "As if you'd know. This is different from being a uni kid not understanding your secondary school juniors."
+                    You: "Well, can't say I didn't try to reach out to you."
+                    Helen: "Our experiences may be more different than you thought, after all..."
+                <<else>>
+                    You: "But being behind the times is a mindset, not an age thing."
+                    You: "And besides, it's nothing to be ashamed of."
+                    You: "You can still be kind and tolerant without understanding every new trend or piece of information."
+                    <<addExperience(10)>>
+                    You: "In fact, don't you think compassion is the way to understanding most of the time?" (+10 XP)
+                    Helen falls silent, as though reflecting on her earlier words to you.
+                <<endif>>
+            -> "It's people like you who keep us in those times."
+                Helen: "Excuse me?"
+                You: "You heard me. Why do you insist that only your way of crosdressing is valid?"
+                Helen: "It was never only my way. If anything, you're the odd one out."
+                Helen: "You know what, maybe the old ways aren't entirely bad after all."
+                <<changeRelationship("H", -5)>>
+                Helen: "If it keeps people looking pretty and not like... whatever you're dressed as." (-5% Helen relationship)
+                <<changeConfidence(5)>>
+                You've struck a nerve. (-5% confidence) 
         -> "This isn't just a future thing." #skillcheck #int # 9
             Helen: "What do you mean?"
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 9
             <<if $diceroll < 9>>
                 You: "I mean, didn't people dress differently back then..."
                 Helen: "Back then is back then, now is now. Can you please stop being so delulu?"
@@ -257,7 +330,8 @@ Helen: "Makes me think you want to be seen as a guy."
                 You: "Pink used to be a male colour, with blue being female."
                 You: "High heels used to be for men but now we can't get them in men's sizes."
                 Helen: "Where are you going with this?"
-                You: "The entire idea of what clothes should go with which gender can change."
+                <<addExperience(10)>>
+                You: "The entire idea of what clothes should go with which gender can change." (+10 XP)
                 You: "You don't need to pass 100% female before you can dress the way you want to."
                 Helen: "Sure, fine... gender neutral fashion exists, I guess."
                 Helen: "I personally still want to be coded as more feminine but if you want gender neutral, you do you."
@@ -280,7 +354,7 @@ Helen: "Makes me think you want to be seen as a guy."
             Helen: "It's the first step. First they see your head peaking above everyone else in a crowd."
             Helen: "Then they take a look at you in detail, and suddenly the spotlight is on you."
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 9
             <<if $diceroll < 9>>
                 You: "I mean, what are they gonna do then? Chop off my legs and make me woman-sized?"
                 You: "You know that's not gonna happen."
@@ -289,8 +363,9 @@ Helen: "Makes me think you want to be seen as a guy."
             <<else>>
                 You: "I know how to keep myself safe, don't worry."
                 Helen: "Don't you feel paiseh when people stare at you?"
-                You: "It's just a stare. Who knows, maybe they like what they see."
-                Helen: "Heh. Such confidence."
+                <<changeConfidence(5)>>
+                You: "It's just a stare. Who knows, maybe they like what they see." (+5% confidence)
+                Helen: "Heh. Such confidence. Hope it's not misplaced."
             <<endif>>
             
         -> "Then what is a tall cis woman supposed to do?"
@@ -358,6 +433,32 @@ Helen: "Makes me think you want to be seen as a guy."
     Helen: "It was dysphoria."
     Helen: "It was seeing the mistakes that 20-year-old Helen made."
     Helen: "I'm just telling the truth as it is, Charlotte."
+    -> "I'm sorry you feel that way..." #skillcheck #emp # 9
+        <<set $diceroll = diceRoll($emp)>>
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 9
+        <<if $diceroll >= 9>>
+            Helen: "It's a tough state to be in. I wouldn't wish it on anyone."
+            Helen: "But I guess this is just how life is for me, isn't it?"
+            -> "It doesn't need to be." 
+                You: "Look at us, two women chatting in a cafe."
+                You: "We're happy now, aren't we? Both of us presenting how we want to."
+                You: "Sure, I may not look totally good now, but I'm still enjoying my appearance and existence."
+                <<addExperience(10)>>
+                You: "And I hope someday you may reach that too." (+10 XP)
+                Helen silently considers your words for a moment.
+            -> "I can't pretend to understand your pain."
+                You: "I'm sure you're facing lots of internal self-conflict. That's like half of your blog's content."
+                You: "But please, while your pain is valid, don't invalidate what I'm facing too."
+                You: "Were you really being kind when you said all that just now?"
+                Helen: "Cruel to be kind."
+                You: "That's not really a justification, is it?"
+                Helen: "Sigh. We'll have to agree to disagree on this one."
+        <<else>>
+            Helen: "Please, spare me the pity. Don't just say that to be polite."
+            Helen: "Just clean up your look before you trigger me, or worse, yourself." 
+            <<changeConfidence(-5)>>
+            Damn, she sure cuts deep with her words. (-5% confidence)
+        <<endif>>
     -> "How bad was it?"
         Helen: "Ugh, I look at pictures from when I first started and I cringe so hard!"
         Helen: "I looked like a pig with lipstick."
@@ -372,7 +473,7 @@ Helen: "Makes me think you want to be seen as a guy."
             -> "I wonder if I look like that..."
                 Helen: "Girl, you're there now."
                 Helen: "I don't wanna call you a pig, but there's still a lot to improve on."
-                You: "Ugh. You might as well just have called me one." //dieded
+                You: "Ugh. You might as well just have called me one."
                 <<changeRelationship("H", -5)>>
                 Helen: "Truth hurts, doesn't it?" (-5% Helen relationship)
     
@@ -384,7 +485,7 @@ Helen: "Makes me think you want to be seen as a guy."
             -> "You were beautiful then and you were beautiful now." #skillcheck #emp # 9
                 Helen: "Thank you, but we know that's not true."
                 <<set $diceroll = diceRoll($emp)>>
-                [You rolled a {$diceroll}.]
+                You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 9
                 <<if $diceroll < 9>>
                     Helen: "If I was really beautiful, why did I feel the need to hide Helen?"
                     Helen: "Don't say things just for the sake of saying them. There are truths we can't deny."
@@ -412,10 +513,26 @@ Helen: "Makes me think you want to be seen as a guy."
                     Helen: "Yeah, after all I need to maintain my male persona. Helen is a closely guarded secret."
                     Helen: "Wait, we're not talking about me, we're talking about you!"
 
-                -> "It's about the journey."
+                -> "It's about the journey." #skillcheck #emp # 9
                     Helen: "Sure, maybe the real treasure was all the clockable, noob moments along the way, right?"
                     Helen: "Don't be silly. No one wants to see the work in progress stuff."
-    
+                    <<set $diceroll = diceRoll($emp)>>
+                    You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 9
+                    <<if $diceroll < 9>>
+                        You: "You're just being cruel to yourself. No wonder you're cruel to me."
+                        Helen: "So you're blaming me for your mistakes, huh?"
+                        <<changeRelationship("H", -5)>>
+                        You've hit a nerve. She's mad. Give her some time... (-5% Helen relationship)
+                    <<else>>
+                        You: "Yes, we do! And I promise, it's not to laugh or to cringe at."
+                        You: "We would cheer you on retrospectively."
+                        You: "We don't just look at the pretty woman before us now, but admire how much hard work she put in to get there."
+                        You: "And we are reminded that it's okay to not be perfect."
+                        <<addExperience(10)>>
+                        You: "Isn't that a nicer message to tell yourself and the world?" (+10 XP)
+                        <<changeRelationship("H", 5)>>
+                        Helen considers your words. (+5% Helen relationship)
+                    <<endif>>
     -> "I am not you."
         Helen: "Sure. Then why did you seek me out in the first place?"
         -> "You're right, this was a mistake. Let's move on."
@@ -426,16 +543,15 @@ Helen: "Makes me think you want to be seen as a guy."
             You: "Aren't we just the sum of the people around us?"
             You: "I take a little bit from you, a little bit from the cis women around me, a little bit even from my own family."
             You: "And from there, I form who I want Charlotte to be."
-            You: "I'm not saying your experiences aren't valid."
-            You: "I just don't want to be trapped by them."
+            <<addExperience(10)>>
+            You: "I'm not saying your experiences aren't valid. I just don't want to be trapped by them." (+10 XP)
             Helen: "Okay, fair..."
             Helen: "Then I hope this isn't just a huge waste of time."
     
     -> "I want to look like Charlotte."
         Helen: "As of now, Charlotte still looks like a man in a dress."
         You: "I'm okay with that."
-        Helen: "What... how... Fine. Whatever."
-        Helen: "Just don't say I didn't warn you."
+        Helen: "What... how... Fine. Whatever. Just don't say I didn't warn you."
         Helen: "You know what they're gonna say?"
         Helen: "'You have the right to dress how you please, and I have the right to laugh at you.'"
         Helen: "You really wanna hear that?"
@@ -478,7 +594,7 @@ Helen: "Makes me think you want to be seen as a guy."
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 357,-75
+__PrivCrochet_position: 344,-71
 __PrivCrochet_tags: 
 title: 5
 ---
@@ -494,8 +610,8 @@ Helen: "Meanwhile a random stranger like me can see right through you."
     -> "Wait, how many people are you out to, again?" #skillcheck #cha # 9
         Helen: "Just my wife. The queer community doesn't see my male side."
         <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
-        <<if $diceroll < 9>>
+        You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 9
+        <<if $diceroll >= 9>>
             You: "Right, I see it now."
             You: "You've been so stressed about hiding Helen that you see the whole world as a threat."
             Helen: "Why are you talking about me? We're talking about you."
@@ -518,7 +634,7 @@ Helen: "Meanwhile a random stranger like me can see right through you."
             <<changeRelationship("H", -5)>>
             Helen: "Can you please try to understand that?" (-5% Helen relationship)
             Helen: "And stop seeing my words as absolutes."
-        -> "That is a horrible feeling..."
+        -> "That is a horrible feeling..." 
             Helen: "Indeed. So why would you want to purposely seek it out?"
             Helen: "Still think you can handle it when you haven't felt it before..."
         -> "I know I'll have the validation of my friends and other kind people."
@@ -598,7 +714,7 @@ Helen: "Meanwhile a random stranger like me can see right through you."
         Helen: "Still, the thought that you'll always be seen as different..."
         Helen: "That doesn't bother you?"
         <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 9
         <<if $diceroll >= 9>>
             You: "Nope. Different doesn't always mean bad."
             You: "I'm gonna be Charlotte regardless of what other people tell me."
@@ -637,6 +753,22 @@ Helen: "Meanwhile a random stranger like me can see right through you."
     Helen: "No, but still, they're your friends. Even if they criticised you, they'd do so kindly."
     Helen: "You think strangers will have the patience for that?"
     Helen: "And I'm sure not everyone in Gen Z is accepting, right?"
+    -> "Have you been outed before...?" #skillcheck #emp # 9
+        <<set $diceroll = diceRoll($cha)>>
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 9
+        <<if $diceroll >= 9>>
+            Helen: "Once, in school, a photo of Helen dropped out of my bag."
+            Helen: "My classmates questioned it, but my then-girlfriend defended me and said it was just for a play."
+            You: "That's very nice of her."
+            Helen: "It shows how cruel the world can be."
+            You: "But your girlfriend wasn't cruel. She even convinced the others on your behalf."
+            <<addExperience(10)>>
+            You: "I wanna think that if you have just one person who believes in you, that's worth the whole world, isn't it?" (+10 XP)
+            Helen reflects on her own experiences with your words.
+        <<else>>
+            Helen: "Why are you probing? This is about you, not me."
+            Helen: "Just take it from me, you need to improve your look before you kena this kind of thing."
+        <<endif>>
     -> "If they don't accept Charlotte, they're not my friends."
         Helen: "Well, easier said than done."
         Helen: "You might find yourself in a bubble."
@@ -644,8 +776,7 @@ Helen: "Meanwhile a random stranger like me can see right through you."
         You: "Then I know who truly matters to me."
         Helen: "So you'd reject employers and family who don't accept Charlotte?"
         -> "I just don't need to tell them about Charlotte."
-            Helen: "True. That's what I do."
-            Helen: "Still, the stress gets to you."
+            Helen: "True. That's what I do. Still, the stress gets to you."
             Helen: "This is the first time I've brought Helen out in about half a year now?"
             Helen: "It's a difficult balance."
         
@@ -697,7 +828,7 @@ Helen: "Meanwhile a random stranger like me can see right through you."
                 You: "Yes, you're right, these kinds of things take generations to change."
                 You: "But even if I only manage to convince one person that I'm valid, that's still progress, right?"
                 <<set $diceroll = diceRoll($cha)>>
-                [You rolled a {$diceroll}.]
+                You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 9
                 <<if $diceroll >= 9>>
                     Helen: "Very idealistic."
                     Helen: "Well, for what it's worth, it seems logical."
@@ -732,7 +863,7 @@ Helen: "Meanwhile a random stranger like me can see right through you."
 <<jump 7>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 358,132
+__PrivCrochet_position: 353,128
 __PrivCrochet_tags: 
 title: 6
 ---
@@ -758,7 +889,7 @@ Helen: "How are you going to deal with those who won't hold back?"
 
         -> "Maybe I shouldn't have ascribed gender to talking styles." #skillcheck #int # 9
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 9
             <<if $diceroll >= 9>>
                 You: "I mean, not all men are blunt. As a man, I'm not blunt. I hope."
                 You: "Conversely, some women don't mince their words. I've met them in class and elsewhere."
@@ -794,7 +925,7 @@ Helen: "How are you going to deal with those who won't hold back?"
                 Helen: "Oh, I was being super objective there, wasn't I?
                 Helen: "Your wig, your clothes, they all don't match."
                 <<set $diceroll = diceRoll($int)>>
-                [You rolled a {$diceroll}.]
+                You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 9
                 <<if $diceroll >= 9>>
                     You: "Heh, I finally remembered what I wanted to say."
                     You: "Isn't beauty meant to be subjective? In the eye of the beholder and all that."
@@ -837,7 +968,7 @@ Helen: "How are you going to deal with those who won't hold back?"
 
     -> "We're only gonna make these problems worse by arguing amongst ourselves." #skillcheck #emp # 9
         <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 9
         <<if $diceroll >= 9>>
             You: "You said it yourself. We already face enough problems from the rest of the world."
             You: "Why do we want to keep tearing ourselves apart, as a community?"
@@ -859,7 +990,7 @@ Helen: "How are you going to deal with those who won't hold back?"
     You: "You didn't need to sink my morale so low before doing that."
     -> "If I decided to just give up crossdressing after this, would you feel bad about it?" #skillcheck #emp # 9
         <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 9
         <<if $diceroll >= 9>>       
             Helen falls silent.
             Helen: "Fine. I'm sorry."
@@ -872,7 +1003,7 @@ Helen: "How are you going to deal with those who won't hold back?"
     -> "If 20-year-old Helen had heard all that you just said, would she continue crossdressing?" #skillcheck #int # 9
         Helen: "I've heard worse from people on the street."
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 9
         <<if $diceroll >= 9>>
             You: "No. I meant, from someone within the community."
             <<addExperience(10)>>
@@ -891,7 +1022,7 @@ Helen: "How are you going to deal with those who won't hold back?"
     -> "How was I supposed to improve from what you said?" #skillcheck #int # 9
         Helen: "Well, if you had let me continue..."
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 9
         <<if $diceroll < 9>>
             Helen takes out her phone and gives you a long lecture on beauty.
             <<changeConfidence(-10)>>

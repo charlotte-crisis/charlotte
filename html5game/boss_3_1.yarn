@@ -269,7 +269,7 @@ Mother is on the verge of... tears? Anger? Shock? You can't tell.
             You: "When you look at my photos, you see someone hotter, someone prettier..."
             You: "It almost reminds me of Snow White. And you're the evil queen."
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll < 11>>            
                 Mother: "You stop this nonsense right now!"
                 Mother: "How can I be jealous of a boy who can't even apply makeup properly?"
@@ -322,7 +322,7 @@ Mother is on the verge of... tears? Anger? Shock? You can't tell.
             Mother: "Both."
             Mother: "I just cannot accept this."
             <<set $diceroll = diceRoll($emp)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 11
             <<if $diceroll < 11>> 
                 You: "Please, can you just put those feelings aside..."
                 You: "I cannot talk to you properly if you don't calm down."
@@ -400,7 +400,7 @@ Mother is on the verge of... tears? Anger? Shock? You can't tell.
         -> "The reason why I'm not happy is because of people like you." #skillcheck #emp # 11
             Mother flinches back.
             <<set $diceroll = diceRoll($emp)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 11
             <<if $diceroll < 11>> 
                 You: "You know it's true."
                 You: "Society is made of people like you, who hate people like me."
@@ -460,7 +460,7 @@ Mother is on the verge of... tears? Anger? Shock? You can't tell.
             Mother: "You don't use so chim words can?"
             Mother: "Can explain in Chinese or not?"
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll < 11>> 
                 You: "Well, if gender is constructed by other people, it can change, right?"
                 You: "It's not like men absolutely cannot wear skirts."
@@ -579,7 +579,7 @@ Mother: "I know you muted the family WhatsApp chat right?"
         Mother: "Yes, you should."
         Mother: "You need to look out for family so that family will look out for you."
         <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 11
         <<if $diceroll < 11>> 
             Mother goes into a short segue about this, and it leaves you wondering...
             <<changeConfidence(-5)>>
@@ -606,7 +606,7 @@ Mother: "I know you muted the family WhatsApp chat right?"
         -> "Fine, I'll be there for the big events." #skillcheck #cha # 11
             You: "As long as there's food, I'll be there."
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll < 11>>
                 Mother: "Hmph. So you just come for food."
                 Mother: "Can you please just try to connect back with us?"
@@ -626,7 +626,7 @@ Mother: "Ever since you were a boy, she always compare her kids to you."
 Mother: "You really want to give them another reason to laugh at us?"
 -> "I can understand why you're so scared of this judgement." #skillcheck #emp # 11
     <<set $diceroll = diceRoll($cha)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 11
     <<if $diceroll > 11>>
         Mother: "Yes, it's because of you."
         Mother: "Can you stop giving your mother extra stress?"
@@ -638,7 +638,7 @@ Mother: "You really want to give them another reason to laugh at us?"
             Back to square one, huh.
         -> "The stress isn't just from me." #skillcheck #int # 11
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll < 11>>
                 Mother: "But unlike you, I'm normal. Because I don't do stupid things like you."
                 Mother: "Why don't you know how to be normal? You're smart. You're the one who go uni!"
@@ -663,7 +663,7 @@ Mother: "You really want to give them another reason to laugh at us?"
             Mother: "What do you mean?"
             You: "I want your help."
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 11
             <<if $diceroll < 11>>
                 Mother: "Tell you how many times already, still don't want to listen."
                 Mother: "The best way I can help is to throw away all your dresses and makeup."
@@ -736,7 +736,7 @@ Mother: "You really want to give them another reason to laugh at us?"
             You: "Everyone deserves to be special."
             You: "And loving your family means you accept us, regardless of who we may be."
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll < 11>>
                 Mother: "But you don't love us. I can feel it in your voice..."
                 Mother: "And if you really loved us, you would also come back home more often, right?"
@@ -755,12 +755,12 @@ Mother: "You really want to give them another reason to laugh at us?"
     
     -> "So are you going to side with your sister or your child?"
         Mother: "Don't make this difficult... all we want is the best for you."
-        -> "You're the one who doesn't dare to answer this question."
+        -> "You're the one who doesn't dare to answer this question." #skillcheck #cha # 11
             Mother: "You think this is easy?"
             Mother: "Imagine you and your Sister disagree about me or your father..."
             Mother: "Like that how to decide?"
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll < 11>>
                 You: "I don't know, I'd just go with what I want."
                 You: "Actually have an opinion instead of just caving to what others want all the time."
@@ -823,7 +823,7 @@ Mother: "You really want to give them another reason to laugh at us?"
         -> "Okay, you really have to stop with this 'normal' label." #skillcheck #int # 11
             Mother: "What's wrong with it?"
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll < 11>>
                 You go off on a rant about how heterosexism and prejudice are harmful and straight people are really the problem.
                 Mother doesn't get it.
@@ -840,7 +840,7 @@ Mother: "You really want to give them another reason to laugh at us?"
             You: "My crossdressing doesn't affect them."
             You: "Look at Sister. She's definitely more open minded than you."
             <<set $diceroll = diceRoll($emp)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 11
             <<if $diceroll < 11>>
                 You: "For some reason, the only person affected is you. So you're the problem, right?"
                 Mother: "You dare call me the problem? I raised you."
@@ -890,7 +890,7 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
             You: "I know I can't earn money out of crossdressing."
             You: "But can you please let me have this one hobby for myself?"
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll < 11>>
                 Mother: "As long as you're in my house, this is not allowed."
                 Mother: "If I find any female products in your room, they're either going to your sister or I will throw them away."
@@ -905,7 +905,7 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
             Mother: "But you wasted time playing around as a woman."
             Mother: "Please, just take the right path in life and stop making your mother worried."
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll < 11>>
                 You: "Okay, fine, I didn't maximise my time."
                 Mother: "Good boy."
@@ -938,7 +938,7 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
             You: "Things your average cis male doesn't know, right?"
             Mother: "Okay, you learned about women. But it's time to return to being a man."
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll < 11>>
                 You: "Why?"
                 Mother: "This isn't something you can do long term."
@@ -976,7 +976,7 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
         You: "If we were stuck in these roles all the time, then we wouldn't be happy, right?"
         Mother: "If you follow the rules of society, you will be happy."
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
         <<if $diceroll < 11>>
             You: "But I refuse."
             Mother: "Fine. Do what you want and get judged outside."
@@ -1002,7 +1002,7 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
             Mother: "Where got so easy one?"
             Mother: "You look at the economy now. You are lucky to even have a job."
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll < 11>>
                 You: "Uh... I guess you're right..."
                 Mother: "You don't even have a job offer yet."
@@ -1018,7 +1018,7 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
             Mother describes Thai trans women with a word that you don't want to hear.
             Mother: "You really want to end up like them?"
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll < 11>>
                 You: "Uh... I guess not..."
                 Mother: "Exactly. You need to stop pretending to be something you're not."
@@ -1034,7 +1034,7 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
             You: "But for that to happen, I need a place to stay first."
             You: "I'm asking for your help here. Just one simple thing."
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll < 11>>
                 Mother: "Why do you want to make things difficult... just stop doing it."
                 <<changeConfidence(-5)>>
@@ -1085,7 +1085,7 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
             Mother: "You have people who accept you here..."
             Mother: "Why can't you understand that? We only want what's best for you."
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll < 11>>
                 You: "You don't. You just want me to play by your rules."
                 You: "You never accept me for who I am."
@@ -1125,7 +1125,7 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
             You: "Why don't you just let me live my life how I want to?"
             You: "I'll worry about the future later."
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll < 11>>
                 Mother: "You not worried about this ah?"
                 You: "I know that as long as I have a plan, I don't need to worry so much."
@@ -1156,7 +1156,7 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
             You: "If anything, this is me finding myself. Isn't that a good thing?"
             Mother: "I'm still concerned for you..."
             <<set $diceroll = diceRoll($emp)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 11
             <<if $diceroll < 11>>
                 You: "Don't need la. Just let me be."
                 Mother: "Okay lor..."
@@ -1169,7 +1169,7 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
             You: "And soon, my generation will be the one deciding"
             Mother: "So I'm too old for this, is it?"
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll < 11>>
                 You: "Yeah, kind of."
                 Mother: "Fine. Make all the mistakes you want."
@@ -1196,7 +1196,7 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
         -> "Do they, really?" #skillcheck #int # 11
             Mother: "Why not? Don't tell me this world become so weird already."
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll < 11>>
                 Mother: "At the end of the day, men must be men, women must be women."
                 Mother: "There's no point in fighting against what you are meant to be."
@@ -1244,7 +1244,7 @@ Mother: "Please. Don't throw away your future just to do this stupid thing."
             Mother: "Wouldn't you be happier with a girlfriend?"
             Mother: "When all your friends are already attached, and you're alone, don't you feel bad?"
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll < 11>>
                 You: "I guess you're right..."
                 Mother: "Exactly. So stop dressing up and start being a real man."
@@ -1297,7 +1297,7 @@ Mother: "Please tell me you're not..."
             You: "Maybe even some as senior citizens."
             You: "That gives me a lot of time, doesn't it?"
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
             <<if $diceroll < 11>>
                 You: "After all, you and Dad will be dead by that time."
                 Mother looks aghast. (-5% Mother relationship)
@@ -1311,7 +1311,7 @@ Mother: "Please tell me you're not..."
         -> "That stability will allow me to make better decisions." #skillcheck #int # 11
             Mother: "What do you mean?"
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll < 11>>
                 You: "I don't know... I guess I'd be more mature."
                 Mother: "Correct, you're not mature now."
@@ -1423,7 +1423,7 @@ Mother: "Please tell me you're not..."
         -> "I think that's kinda hurtful to hear from you." #skillcheck #emp # 11
             Mother: "Why leh?"
             <<set $diceroll = diceRoll($emp)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 11
             <<if $diceroll < 11>>
                 You: "You're just not respecting me as a person."
                 Mother: "Well you're not respecting the body you were given."
@@ -1455,7 +1455,7 @@ Mother: "Please tell me you're not..."
         
         -> "Crossdressing is socially acceptable." #skillcheck #int # 11
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
             <<if $diceroll < 11>>
                 You: "If society thinks it is okay to dress up, then it's okay."
                 You: "And society is always changing, right? Like, gender norms have changed."
@@ -1498,7 +1498,7 @@ Mother: "Please tell me you're not..."
         You: "Would you be happy, as a woman?"
         Mother: "But you are not a woman. Why do you care about our problems?"
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
         <<if $diceroll < 11>>
             You: "Uh... because it's the right thing to do?"
             Mother: "Can you please don't think until so deep?"
@@ -1639,7 +1639,7 @@ Mother: "What happen?"
 Before you rip the bandaid off...
 -> "It's going to be a hard truth."#skillcheck #int # 11
     <<set $diceroll = diceRoll($int)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
     <<if $diceroll >= 11>>
         You: "What I'm about to tell you, is based on experience."
         You: "My story, and the stories of others. And we are all still here."
@@ -1656,7 +1656,7 @@ Before you rip the bandaid off...
     <<endif>>
 -> "Mom, I just want you to know that I've always loved you." #skillcheck #emp # 11
     <<set $diceroll = diceRoll($emp)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 11
     <<if $diceroll >= 11>>
         Mother: "Uh... okay?"
         You: "I truly mean it, Mom."
@@ -1672,7 +1672,7 @@ Before you rip the bandaid off...
     <<endif>>
 -> "Mom, I know this is going to be hard, but please, hear me out." #skillcheck #cha # 11
     <<set $diceroll = diceRoll($cha)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 11
     <<if $diceroll >= 11>>        
         Mother: "Why you so serious?"
         You: "Maybe you're not gonna like it."
