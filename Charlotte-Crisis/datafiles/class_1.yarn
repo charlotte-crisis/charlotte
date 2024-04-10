@@ -771,28 +771,28 @@ title: 5_options
 ---
 Let's try the Skill Check here, while Prof is still rambling.
 // There MUST be a space for numbers. #5 cannot but # 5 can. Weird
--> Play "Connections" #skillcheck #int # 6
+-> Play some daily puzzles #skillcheck #int # 6
+    You log on to New York Times to play Connections.
     This game's about sorting 16 words into 4 groups of 4.
     <<set $diceroll = diceRoll($int)>>
-    [You rolled a {$diceroll}.] #dice_outcome #int
+    You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 6
     <<if $diceroll > 5>>
         You sorted them successfully! Check out the big brain on Charlotte.
     <<else>>
         You weren't able to find the 4 groups... Well, there's always next time.
     <<endif>>
+
 -> Scroll through Discord #skillcheck #cha # 6
     It's Meme Monday on one of the servers you're on. Want to try posting something?
-    -> Yes
-        You hastily mash a picture and text in Microsoft Paint, and hit send.
-        <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
-        <<if $diceroll > 5>>
-            You've gained quite a few upvotes from this! Not bad.
-        <<else>>
-            But nobody responded...
-        <<endif>>
-    -> No
+    You hastily mash a picture and text in Microsoft Paint, and hit send.
+    <<set $diceroll = diceRoll($cha)>>
+    You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 6
+    <<if $diceroll > 5>>
+        You've gained quite a few reactions from this! Not bad.
+    <<else>>
+        But nobody responded...
         It's alright, laughing at memes is good enough.
+    <<endif>>
 
 -> Scroll through Shopee #skillcheck #emp # 6
     The algorithm knows you too well. There's a long, dark blue skirt with small starry prints.

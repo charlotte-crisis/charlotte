@@ -40,6 +40,7 @@ BG_ALPHA = 0.9;
 #region ChatterboxAddFunction defined here
 	ChatterboxAddFunction("skillCheck", skill_check);
 	ChatterboxAddFunction("diceRoll", dice_roll);
+	ChatterboxAddFunction("diceRollOutcome", get_dice_roll_outcome);
 	ChatterboxAddFunction("calculateOdds", calculate_odds);
 	ChatterboxAddFunction("visitedNode", visited_node);
 	
