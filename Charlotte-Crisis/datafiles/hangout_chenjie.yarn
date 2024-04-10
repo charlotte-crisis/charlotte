@@ -2,9 +2,12 @@
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 380,-179
 __PrivCrochet_tags: 
-title: 1
+title: 0
 ---
-Chenjie: "Hey, dude! Sorry I'm a bit late!"
+Chenjie finds you at the table not long after you'd entered.
+He takes the seat opposite you and orders a drink.
+
+Chenjie: "Hey, dude! Sorry I was a bit late!"
 <<if $name == "Charlotte">> 
     Chenjie: "Wait, uh, or do you prefer if I don't call you 'dude'?"
     -> "Nah, it's fine."
@@ -12,7 +15,7 @@ Chenjie: "Hey, dude! Sorry I'm a bit late!"
     Chenjie: "Okay! Noted. Anyway..."
 <<endif>>
 Chenjie: "Thanks for waiting for me."
-He takes the seat opposite you and orders a drink.
+
 <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
