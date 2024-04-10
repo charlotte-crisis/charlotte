@@ -33,7 +33,7 @@ What do you want to talk about?
     <<jump 1_2>>
 -> "What do you like about Art Club?"
     <<jump 1_3>>
--> "Well, I gotta go. Thanks for today!" <<if visited("1_1") or visited("1_2") or visited("1_3")>>
+-> "Well, I gotta go. Thanks for today!" <<if visited("1_1") or visited("1_2") or visited("1_3")>> #continue
     Vera: "See you around, Charlotte."
     <<addExperience(30)>>
     (+30 XP)
