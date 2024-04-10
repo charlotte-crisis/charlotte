@@ -656,7 +656,7 @@ title: 8_options
 
 -> "Misogyny. Specifically..." #skillcheck #int # 8
     <<set $diceroll = diceRoll($int)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 8
     <<if $diceroll >= 8>>
         You: "The patriarchy."
         You: "Because patriarchy is the social system where men and masculinity have more power, right?"
@@ -794,7 +794,7 @@ __PrivCrochet_tags:
 title: 9_3
 ---
 <<set $diceroll = diceRoll($emp)>>
-[You rolled a {$diceroll}.]
+You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 8
 <<if $diceroll >= 8>>
     You can almost see it.
     The image of a younger Joanne — struggling in her femininity, criticised for the way she looked and dressed, trying to find her place.
@@ -937,7 +937,7 @@ title: 14_options
 
 -> Try to offer advice #skillcheck #cha # 8
     <<set $diceroll = diceRoll($cha)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 8
     <<if $diceroll >= 8>>
         You: "I think you should build up your self-confidence. Don't beat yourself up for something like this."
         You: "You are a cool and kind guy so it's a shame that you don't see how amazing you are."
