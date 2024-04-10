@@ -29,7 +29,6 @@ for (var row = 0; row < MAX_ROW; row++) {
 		if ((select_col == col) && (select_row == row)) {
 			
 			if (obj_npc_relationships.get_relationship(characters[select_row][select_col]) < rs_threshold)
-			or (obj_player.get_player_gender() == 1) && (characters[select_row][select_col] == "J") 
 			or (ChatterboxGetVisited("0", yarn_files[select_row][select_col])) {
 				_color = c_dkgray;
 			} else {
@@ -73,11 +72,6 @@ if (select_col == MAX_COL - 1) {
 	var _rs = obj_npc_relationships.get_relationship(characters[select_row][select_col]);
 	if (_rs < rs_threshold) {
 		_speech = string("Not on good terms with {0}. (Relationship level: {1}%)",
-				npc_names[select_row][select_col],
-				_rs);
-	} else if (obj_player.get_player_gender() == 1) && (characters[select_row][select_col] == "J") {
-		// Joanne wont hang out with you.
-		_speech = string("{0} doesn't want to hang out with you while you're dressed like that. (Relationship level: {1}%)",
 				npc_names[select_row][select_col],
 				_rs);
 	} else if (ChatterboxGetVisited("0", yarn_files[select_row][select_col])) {

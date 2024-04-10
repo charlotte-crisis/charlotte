@@ -35,10 +35,8 @@ if (keyboard_check_pressed(vk_space)) {
 	} else { // Hangout
 		if (obj_npc_relationships.get_relationship(characters[select_row][select_col]) < rs_threshold) {
 			// Do nothing. does not meet rs threshold
-		} else if (obj_player.get_player_gender() == 1) && (characters[select_row][select_col] == "J") {
-			// Do nothing. Joanne wont hang out with CHARLOTTE
 		} else if (ChatterboxGetVisited("0", yarn_files[select_row][select_col])) {
-			// Do nothing.
+			// Do nothing. Visited already
 		} else {
 			obj_player.set_is_interacting(false);
 			gender_meter_check(); // increment or decrement based on gender
