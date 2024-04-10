@@ -167,7 +167,7 @@ Helen: "Makes me think you want to be seen as a guy."
             Helen: "Look at their flawless skin, their beautiful faces... Tell me you don't want to look like them."
             -> "Yeah. I don't." #skillcheck #cha # 9
                 <<set $diceroll = diceRoll($cha)>>
-                [You rolled a {$diceroll}.]
+                You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 9
                 <<if $diceroll < 9>>
                     <<changeConfidence(-10)>>
                     Helen: "Don't give me that overconfident facade. I see right through it." (-10% confidence)
@@ -205,7 +205,7 @@ Helen: "Makes me think you want to be seen as a guy."
                 Helen: "But at least, you should know how to look like a woman, right?"
                 -> "And what does a woman look like?" #skillcheck #int # 9
                     <<set $diceroll = diceRoll($int)>>
-                    [You rolled a {$diceroll}.]
+                    You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 9
                     <<if $diceroll < 9>>
                         Helen: "Well, not like you. Don't you know people judge women so hard for being"
                         Helen: "They'll think you're lazy for not doing your makeup properly, or stupid for doing it wrong."
@@ -239,7 +239,7 @@ Helen: "Makes me think you want to be seen as a guy."
             -> "What is a perfect female face?" #skillcheck #int # 9
                 Helen: "Okay, fine, we don't say 'perfect'. But at least passable."
                 <<set $diceroll = diceRoll($int)>>
-                [You rolled a {$diceroll}.]
+                You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 9
                 <<if $diceroll < 9>>
                     You: "Yeah, I guess that makes sense..."
                     Helen: "And you're not being very passable now, Charlotte."
@@ -296,7 +296,7 @@ Helen: "Makes me think you want to be seen as a guy."
                 Helen: "But vestiges of those attitudes are still around. You need to be careful."
             -> "I understand what it's like to be out of touch..." #skillcheck #emp # 9
                 <<set $diceroll = diceRoll($emp)>>
-                [You rolled a {$diceroll}.]
+                You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 9
                 <<if $diceroll < 9>>
                     Helen: "As if you'd know. This is different from being a uni kid not understanding your secondary school juniors."
                     You: "Well, can't say I didn't try to reach out to you."
@@ -321,7 +321,7 @@ Helen: "Makes me think you want to be seen as a guy."
         -> "This isn't just a future thing." #skillcheck #int # 9
             Helen: "What do you mean?"
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 9
             <<if $diceroll < 9>>
                 You: "I mean, didn't people dress differently back then..."
                 Helen: "Back then is back then, now is now. Can you please stop being so delulu?"
@@ -354,7 +354,7 @@ Helen: "Makes me think you want to be seen as a guy."
             Helen: "It's the first step. First they see your head peaking above everyone else in a crowd."
             Helen: "Then they take a look at you in detail, and suddenly the spotlight is on you."
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 9
             <<if $diceroll < 9>>
                 You: "I mean, what are they gonna do then? Chop off my legs and make me woman-sized?"
                 You: "You know that's not gonna happen."
@@ -363,8 +363,9 @@ Helen: "Makes me think you want to be seen as a guy."
             <<else>>
                 You: "I know how to keep myself safe, don't worry."
                 Helen: "Don't you feel paiseh when people stare at you?"
-                You: "It's just a stare. Who knows, maybe they like what they see."
-                Helen: "Heh. Such confidence."
+                <<changeConfidence(5)>>
+                You: "It's just a stare. Who knows, maybe they like what they see." (+5% confidence)
+                Helen: "Heh. Such confidence. Hope it's not misplaced."
             <<endif>>
             
         -> "Then what is a tall cis woman supposed to do?"
@@ -434,7 +435,7 @@ Helen: "Makes me think you want to be seen as a guy."
     Helen: "I'm just telling the truth as it is, Charlotte."
     -> "I'm sorry you feel that way..." #skillcheck #emp # 9
         <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 9
         <<if $diceroll >= 9>>
             Helen: "It's a tough state to be in. I wouldn't wish it on anyone."
             Helen: "But I guess this is just how life is for me, isn't it?"
@@ -484,7 +485,7 @@ Helen: "Makes me think you want to be seen as a guy."
             -> "You were beautiful then and you were beautiful now." #skillcheck #emp # 9
                 Helen: "Thank you, but we know that's not true."
                 <<set $diceroll = diceRoll($emp)>>
-                [You rolled a {$diceroll}.]
+                You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 9
                 <<if $diceroll < 9>>
                     Helen: "If I was really beautiful, why did I feel the need to hide Helen?"
                     Helen: "Don't say things just for the sake of saying them. There are truths we can't deny."
@@ -516,7 +517,7 @@ Helen: "Makes me think you want to be seen as a guy."
                     Helen: "Sure, maybe the real treasure was all the clockable, noob moments along the way, right?"
                     Helen: "Don't be silly. No one wants to see the work in progress stuff."
                     <<set $diceroll = diceRoll($emp)>>
-                    [You rolled a {$diceroll}.]
+                    You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 9
                     <<if $diceroll < 9>>
                         You: "You're just being cruel to yourself. No wonder you're cruel to me."
                         Helen: "So you're blaming me for your mistakes, huh?"
@@ -609,8 +610,8 @@ Helen: "Meanwhile a random stranger like me can see right through you."
     -> "Wait, how many people are you out to, again?" #skillcheck #cha # 9
         Helen: "Just my wife. The queer community doesn't see my male side."
         <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
-        <<if $diceroll < 9>>
+        You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 9
+        <<if $diceroll >= 9>>
             You: "Right, I see it now."
             You: "You've been so stressed about hiding Helen that you see the whole world as a threat."
             Helen: "Why are you talking about me? We're talking about you."
@@ -713,7 +714,7 @@ Helen: "Meanwhile a random stranger like me can see right through you."
         Helen: "Still, the thought that you'll always be seen as different..."
         Helen: "That doesn't bother you?"
         <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 9
         <<if $diceroll >= 9>>
             You: "Nope. Different doesn't always mean bad."
             You: "I'm gonna be Charlotte regardless of what other people tell me."
@@ -754,7 +755,7 @@ Helen: "Meanwhile a random stranger like me can see right through you."
     Helen: "And I'm sure not everyone in Gen Z is accepting, right?"
     -> "Have you been outed before...?" #skillcheck #emp # 9
         <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 9
         <<if $diceroll >= 9>>
             Helen: "Once, in school, a photo of Helen dropped out of my bag."
             Helen: "My classmates questioned it, but my then-girlfriend defended me and said it was just for a play."
@@ -827,7 +828,7 @@ Helen: "Meanwhile a random stranger like me can see right through you."
                 You: "Yes, you're right, these kinds of things take generations to change."
                 You: "But even if I only manage to convince one person that I'm valid, that's still progress, right?"
                 <<set $diceroll = diceRoll($cha)>>
-                [You rolled a {$diceroll}.]
+                You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 9
                 <<if $diceroll >= 9>>
                     Helen: "Very idealistic."
                     Helen: "Well, for what it's worth, it seems logical."
@@ -888,7 +889,7 @@ Helen: "How are you going to deal with those who won't hold back?"
 
         -> "Maybe I shouldn't have ascribed gender to talking styles." #skillcheck #int # 9
             <<set $diceroll = diceRoll($int)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 9
             <<if $diceroll >= 9>>
                 You: "I mean, not all men are blunt. As a man, I'm not blunt. I hope."
                 You: "Conversely, some women don't mince their words. I've met them in class and elsewhere."
@@ -924,7 +925,7 @@ Helen: "How are you going to deal with those who won't hold back?"
                 Helen: "Oh, I was being super objective there, wasn't I?
                 Helen: "Your wig, your clothes, they all don't match."
                 <<set $diceroll = diceRoll($int)>>
-                [You rolled a {$diceroll}.]
+                You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 9
                 <<if $diceroll >= 9>>
                     You: "Heh, I finally remembered what I wanted to say."
                     You: "Isn't beauty meant to be subjective? In the eye of the beholder and all that."
@@ -967,7 +968,7 @@ Helen: "How are you going to deal with those who won't hold back?"
 
     -> "We're only gonna make these problems worse by arguing amongst ourselves." #skillcheck #emp # 9
         <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 9
         <<if $diceroll >= 9>>
             You: "You said it yourself. We already face enough problems from the rest of the world."
             You: "Why do we want to keep tearing ourselves apart, as a community?"
@@ -989,7 +990,7 @@ Helen: "How are you going to deal with those who won't hold back?"
     You: "You didn't need to sink my morale so low before doing that."
     -> "If I decided to just give up crossdressing after this, would you feel bad about it?" #skillcheck #emp # 9
         <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 9
         <<if $diceroll >= 9>>       
             Helen falls silent.
             Helen: "Fine. I'm sorry."
@@ -1002,7 +1003,7 @@ Helen: "How are you going to deal with those who won't hold back?"
     -> "If 20-year-old Helen had heard all that you just said, would she continue crossdressing?" #skillcheck #int # 9
         Helen: "I've heard worse from people on the street."
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 9
         <<if $diceroll >= 9>>
             You: "No. I meant, from someone within the community."
             <<addExperience(10)>>
@@ -1021,7 +1022,7 @@ Helen: "How are you going to deal with those who won't hold back?"
     -> "How was I supposed to improve from what you said?" #skillcheck #int # 9
         Helen: "Well, if you had let me continue..."
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 9
         <<if $diceroll < 9>>
             Helen takes out her phone and gives you a long lecture on beauty.
             <<changeConfidence(-10)>>
