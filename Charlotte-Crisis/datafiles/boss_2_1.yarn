@@ -104,7 +104,6 @@ Helen: "And the minute you open your mouth to speak, that's it. Everyone knows."
     Helen: "From the other customers, to the cashier..."
     <<changeConfidence(-10)>>
     Helen: "They're staring at you, not me." (-10% confidence)
-    <<goto_room_boss_2_1_seated()>> // back to sitting
 <<endif>>
 
 -> "I... I don't even know where to start..."
@@ -121,15 +120,19 @@ Helen: "And the minute you open your mouth to speak, that's it. Everyone knows."
         <<addExperience(10)>>
         But you can hold on to a few ideas. Might be useful for the future. (+10 XP)
     <<endif>>
+    <<goto_room_boss_2_1_seated()>> // back to sitting
     <<jump 7>>
 
 -> "You do realise I can't change some of this stuff, right?"
+    <<goto_room_boss_2_1_seated()>> // back to sitting
     <<jump 4>>
 
 -> "Let them stare. I don't care."
+    <<goto_room_boss_2_1_seated()>> // back to sitting
     <<jump 5>>
 
 -> "That may be true, but I really don't like the way you're talking to me."
+    <<goto_room_boss_2_1_seated()>> // back to sitting
     <<jump 6>>
 ===
 __PrivCrochet_colorID: 0
@@ -146,7 +149,7 @@ Helen: "You can either hide it entirely, come to a compromise, or move out."
 <<jump 7_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 346,-279
+__PrivCrochet_position: 400,-280
 __PrivCrochet_tags: 
 title: 4
 ---
