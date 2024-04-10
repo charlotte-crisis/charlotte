@@ -217,7 +217,7 @@ You: "Yeah, so feminism to me is..."
         Sage looks like she has something to add, but she is hesitating.
         -> Press her. #skillcheck #cha # 6
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 6
             You: "Sage, do you have something to add?"
             Sage: "What?"
             She stutters for a bit.
@@ -267,7 +267,7 @@ You: "Yeah, so feminism to me is..."
 
     -> "'Get used to them' sounds rather dehumanising." #skillcheck #cha # 6
         <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 6
         <<if $diceroll < 6>>
             Chenjie: "Dehumanising?"
             You: "Yeah. You're saying 'get used to' like LGBTQ people are a nuisance."
@@ -352,7 +352,7 @@ Chenjie: "I hate cockroaches."
 
 -> "But a man's gotta do what a man's gotta do." #skillcheck #emp # 6
     <<set $diceroll = diceRoll($emp)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 6
     <<if $diceroll < 6>>
         You: "Women, am I right? They're always scared of cockroaches and stuff so you just have to man up."
         Chenjie hesitates for a second. 
@@ -618,7 +618,7 @@ Chenjie: "Right?"
     
     -> "I agree. People are going too far." #skillcheck #int # 6
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 6
         <<if $diceroll < 6>>
             You: "A lot of people are just throwing the word feminism around."
             <<changeRelationship("J", -5)>>
@@ -857,7 +857,7 @@ What will you say?
 
 -> (joking) "That's it. I'm quitting to flip burgers for the rest of my life." #skillcheck #cha # 6
     <<set $diceroll = diceRoll($cha)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 6
     <<if $diceroll < 6>>
         Sage: "Come on. The readings aren't *that* bad."
         Chenjie: "We just have to suck it up."
@@ -912,8 +912,8 @@ __PrivCrochet_position: 2593,1142
 __PrivCrochet_tags: 
 title: 16_3
 ---
-<<set $diceroll = diceRoll($cha)>>
-[You rolled a {$diceroll}.]
+<<set $diceroll = diceRoll($int)>>
+You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 6
 <<if $diceroll > 5>>
     You: "Gender pay gaps exclude the women who are unemployed in order to do domestic labour."
     You: "Are they not also doing something for the nation by doing the labour that allows men to be in the workforce?"
@@ -958,7 +958,7 @@ What do you say?
 
 -> "I like dressing up that way." #skillcheck #emp # 6
     <<set $diceroll = diceRoll($emp)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 6
     <<if $diceroll >= 6>>
         You: "It feels comfortable being a girl once in a while."
         You: "I'll explain when I come home for the weekend, okay?"
