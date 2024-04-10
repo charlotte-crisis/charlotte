@@ -9,7 +9,7 @@ draw_set_color(c_white);
 draw_text_ext(view_wport[0]/2, view_hport[0]/2 - 70, CREDITS, 25, view_wport[0]/2);
 
 if (keyboard_check_pressed(vk_escape)) {
-	save_game();
+	save_ending();
 	obj_player.set_is_interacting(false);
 	fade_room(rm_main_menu,,, function() {
 		// get rid of EVERYTHING

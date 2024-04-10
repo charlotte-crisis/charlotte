@@ -174,3 +174,14 @@ function load_game() {
 	ChatterboxVariablesImport(_var_json);
 	
 }
+
+/// @description Save after ending but overwrite to go back to first room.
+function save_ending() {
+	save_game();
+	ini_open(SAVE_FILE);
+	// Reset save file.
+	ini_write_string("level", "room", "rm_bedroom_menu"); // room name as string
+	ini_write_string("level", "chatterbox_source", "room_1.yarn");
+	ini_write_string("level", "chatterbox_node", "0");	
+	ini_close();
+}
