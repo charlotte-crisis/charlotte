@@ -143,6 +143,9 @@ function draw_speaker_portrait(name) {
 /// @description Draw the diceroll sprite as a portrait.
 /// @param _value Should be a dice value ranging from 1 to 6.
 function draw_diceroll_portrait(_value) {
+	var sprite_x = 8 * VIEWPORT_SCALE;
+	var sprite_y = view_hport[0] - (sprite_get_height(spr_dialogue_box) + 4) * VIEWPORT_SCALE;
+	
 	draw_sprite_ext(spr_portrait_bg, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 	// The sprite itself
 	draw_sprite_ext(spr_dice, _value - 1, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);

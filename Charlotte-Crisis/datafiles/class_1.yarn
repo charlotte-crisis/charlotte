@@ -774,7 +774,7 @@ Let's try the Skill Check here, while Prof is still rambling.
 -> Play "Connections" #skillcheck #int # 6
     This game's about sorting 16 words into 4 groups of 4.
     <<set $diceroll = diceRoll($int)>>
-    [You rolled a {$diceroll}.]
+    [You rolled a {$diceroll}.] #dice_outcome #int
     <<if $diceroll > 5>>
         You sorted them successfully! Check out the big brain on Charlotte.
     <<else>>

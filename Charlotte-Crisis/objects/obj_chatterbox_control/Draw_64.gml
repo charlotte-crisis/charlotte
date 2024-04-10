@@ -18,6 +18,18 @@ if (IsChatterbox(chatterbox) && obj_player.is_talking) {
 	draw_dialogue(_dialogue, _is_narrator);
 	draw_speaker_portrait(speaker);
 	
+	var _content_metadata = ChatterboxGetContentMetadata(chatterbox, 0);
+	if (array_length(_content_metadata) > 0) {
+		if (_content_metadata[0] == "dice_outcome") {
+			var _stat = ChatterboxVariableGet(_content_metadata[1]);
+			var _diceroll = ChatterboxVariableGet("diceroll");
+			var _dice_value = get_dice_roll_outcome([_stat, _diceroll]);
+			draw_diceroll_portrait(_dice_value);	
+		}
+	}
+	
+	// If it is diceroll
+	
 	// Options
 	var _xx = view_wport[0] / 2;
 	var _width = view_wport[0] * 0.5;
