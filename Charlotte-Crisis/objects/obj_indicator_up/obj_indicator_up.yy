@@ -6,8 +6,8 @@
   "name":"obj_indicator_up",
   "overriddenProperties":[],
   "parent":{
-    "name":"Helper",
-    "path":"folders/Objects/Helper.yy",
+    "name":"Interactables",
+    "path":"folders/Objects/Interactables.yy",
   },
   "parentObjectId":null,
   "persistent":false,

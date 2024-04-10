@@ -8,8 +8,8 @@
   "name":"obj_boss2_splash",
   "overriddenProperties":[],
   "parent":{
-    "name":"Helper",
-    "path":"folders/Objects/Helper.yy",
+    "name":"Splash",
+    "path":"folders/Objects/Splash.yy",
   },
   "parentObjectId":null,
   "persistent":false,

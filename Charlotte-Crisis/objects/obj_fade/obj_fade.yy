@@ -10,8 +10,8 @@
   "name":"obj_fade",
   "overriddenProperties":[],
   "parent":{
-    "name":"Helper",
-    "path":"folders/Objects/Helper.yy",
+    "name":"Splash",
+    "path":"folders/Objects/Splash.yy",
   },
   "parentObjectId":null,
   "persistent":true,

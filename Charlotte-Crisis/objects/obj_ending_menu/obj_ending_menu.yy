@@ -9,8 +9,8 @@
   "name":"obj_ending_menu",
   "overriddenProperties":[],
   "parent":{
-    "name":"Helper",
-    "path":"folders/Objects/Helper.yy",
+    "name":"Menu",
+    "path":"folders/Objects/Interactables/Menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,

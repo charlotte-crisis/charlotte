@@ -11,8 +11,8 @@
   "name":"obj_pause_menu",
   "overriddenProperties":[],
   "parent":{
-    "name":"Player",
-    "path":"folders/Objects/Player.yy",
+    "name":"Menu",
+    "path":"folders/Objects/Interactables/Menu.yy",
   },
   "parentObjectId":null,
   "persistent":true,
