@@ -156,10 +156,11 @@ Anthony: "Why should I feel sorry for telling the truth?"
         You: "Every single NPC is the hero of their own story."
         You: "And you just repeating that you're so cool, it's kinda getting repetitive, right?"
         You: "So either accept you're an NPC, or that everyone's got their own story."
+        <<addExperience(10)>>
         You: "It's one or the other." (+10 XP)
         Anthony is silently considering your words.
     -> "That is so cringey."
-        <<changeRelationship(-5)>>
+        <<changeRelationship("A", -5)>>
         Anthony: "Then you're an NPC too." (-5% Anthony relationship)
 -> "You were hurting everyone's feelings."
     Anthony: "If they can't handle the truth, that's their problem."
@@ -170,7 +171,7 @@ Anthony: "Why should I feel sorry for telling the truth?"
     -> "Then you're just being a judgmental little bitch."
         You: "And you know what? Maybe we can't talk about this anymore."
         <<changeRelationship("A", -5)>>
-        Anthony: "Fine." (-5% Anthony relationship
+        Anthony: "Fine." (-5% Anthony relationship)
     -> "Can you stand in their perspective for a while?"
         Anthony: "I mean, I'm not mentally ill or addicted to anime."
         You: "Then I guess that's a no."
@@ -192,13 +193,14 @@ Anthony: "Why should I feel sorry for telling the truth?"
                 You: "Because I care."
                 You: "I don't care how weird you are, I want to listen."
                 <<addExperience(10)>>
-                You: "And maybe you could start by showing some appreciation just for that first."(+10 XP)
+                You: "And maybe you could start by showing some appreciation just for that first." (+10 XP)
         -> "Ugh, I can't believe I have to teach you basic empathy."
             Anthony: "You don't have to teach me anything."
             <<changeRelationship("A", -5)>>
             Anthony: "I know how the world works. You don't." (-5% Anthony relationship)
 -> "You know what, you've got a point."
     You: "They are the ones being over sensitive."
+    <<changeRelationship("A", 5)>>
     Anthony: "Exactly. Finally, someone who sees the truth." (+5% Anthony relationship)
 <<jump 1_3_options>>
 ===
@@ -298,8 +300,8 @@ Anthony: "Oh and occasionally they will snake during group project."
         You: "Better than tanking the whole thing and not being happy."
         You: "Or, you know, maybe someone else will step up. And that solves your problem."
 -> "Yeah, people are terrible."
-Anthony: "Now you understand why I want to be alone."
-Anthony: "Maybe I just went to the wrong school. Or maybe I shouldn't have gone uni at all..."
+    Anthony: "Now you understand why I want to be alone."
+    Anthony: "Maybe I just went to the wrong school. Or maybe I shouldn't have gone uni at all..."
 <<jump 1_1_1_options>>
 ===
 __PrivCrochet_colorID: 1
@@ -382,7 +384,7 @@ title: 1_1_2_1
 ---
 Anthony: "Okay, then what other choices do I have?"
 Anthony: "Job market so bad already, how can I survive?"
--> "Transfer out, before it's too late." #skillcheck #int # 7
+-> "Transfer out, before it's too late." #skillcheck #emp # 7
     Anthony: "Siao ah. Like that means start from clean slate, you know?"
     <<set $diceroll = diceRoll($emp)>>
     [You rolled a {$diceroll}.]
@@ -471,7 +473,7 @@ Anthony: "All some people know how to do is complain. I hope you're not like tha
     Anthony: "Yes, but about things that matter, right? Not this... culture war bullshit."
     <<set $diceroll = diceRoll($int)>>
     [You rolled a {$diceroll}.]
-    <<if $diceroll > 7 >>    
+    <<if $diceroll < 7 >>    
         You: "It's important stuff!"
         Anthony: "It won't put food on the table."
         <<changeRelationship("A", -5)>>
@@ -593,12 +595,12 @@ title: 1_2_1_3
 ---
 Anthony: "How to get them? All the guys are above my strength level."
 -> "Well, you're right. Time to throw in the towel."
-Anthony: "Ya lor."
+    Anthony: "Ya lor."
 -> "I'm sure some of them are willing to help..."
-Anthony: "Yeah, why would they give up their thing to come help me?"
+    Anthony: "Yeah, why would they give up their thing to come help me?"
     -> "Won't know if you don't try."
-    Anthony: "You try la! Say until so big."
-    Anthony: "I bet you don't even go gym."
+        Anthony: "You try la! Say until so big."
+        Anthony: "I bet you don't even go gym."
         -> "Jeez, fine, sorry..."
             <<changeRelationship("A", -5)>>
             Anthony doesn't look at you. (-5% Anthony relationship)

@@ -514,8 +514,9 @@ title: 5
     <<stop>>
 <<else>>
     Nadia: "Hello, {$name}! I'm not done yet but feel free to chat."
+    <<jump 5_options>>
 <<endif>>
-<<jump 5_options>>
+
 ===
 __PrivCrochet_colorID: 1
 __PrivCrochet_position: 939,981
@@ -612,7 +613,9 @@ title: 3_2
 ---
 Vera: "I don't see a problem. I'm trans and proud to be."
 Vera: "What, are you uncomfortable with it?"
-Vera: "I didn't think you'd say that, Charlotte." <<if getNPCKnows("V")>>
+<<if getNPCKnows("V")>>
+    Vera: "I didn't think you'd say that, Charlotte." 
+<<endif>>
 -> "You're right. That was unkind of me to say. I'm sorry, Vera."
     Vera: "Thank you."
     Vera: "I get it, people get tired of activism and politics."
@@ -1232,7 +1235,7 @@ Nadia: "You know how this school is. There's a thousand and one programmes to at
                 You: "You really think he deserves to stay?"
                 Nadia: "I... "
                 You: "We shouldn't be wasting any more time on him. He clearly doesn't want to get with our program."
-                <<changeRelationship("N", -5)
+                <<changeRelationship("N", -5)>>
                 Nadia: "You're sounding quite extreme... I get where you're coming from, but is this really how it ends?" (-5% Nadia relationship)
             
             -> "That still doesn't justify his actions."
