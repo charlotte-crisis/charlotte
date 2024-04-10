@@ -70,6 +70,7 @@ BG_ALPHA = 0.9;
 	
 	/// Door Functions here
 	ChatterboxAddFunction("goto_black_room", goto_black_room);
+	ChatterboxAddFunction("goto_ending", goto_ending);
 	ChatterboxAddFunction("goto_splash_1", goto_splash_1);
 	ChatterboxAddFunction("goto_splash_boss1", goto_splash_boss1);
 	ChatterboxAddFunction("goto_splash_boss2", goto_splash_boss2);

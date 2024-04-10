@@ -59,6 +59,10 @@
 		fade_room(rm_black_screen);	
 	}
 	
+	function goto_ending() {
+		fade_room(rm_ending);	
+	}
+	
 	function goto_splash_1() {
 		fade_room(rm_splash_1);	
 	}
