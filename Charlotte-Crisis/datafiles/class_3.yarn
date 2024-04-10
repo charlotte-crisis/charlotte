@@ -482,7 +482,7 @@ No one looks away, unwilling to speak. Even Joanne is too angry to speak.
     For the rest of class, the atmosphere is thick with discomfort.
 -> Explain #skillcheck #emp # 10
     <<set $diceroll = diceRoll($emp)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 10
     <<if $diceroll >= 10>>
         <<addExperience(5)>>
         Just as you open your mouth, everyone shoots you a glare and you get the message. (+5 XP)
@@ -757,7 +757,7 @@ title: 6_options
 
 -> "Don't we have a media policy or something?" #skillcheck #int # 10
     <<set $diceroll = diceRoll($int)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 10
     <<if $diceroll >= 10>>
         You: "A media content policy not to portray non-heterosexual behaviour in a positive way." (+5 XP)
         Sage: "Don't remind me of that stupid rule. If I remember correctly, the exact phrasing is 'promotion of homosexuality'."  
@@ -835,7 +835,7 @@ title: 10_options
 
 -> "Makes you wonder if being queer in Singapore..." #skillcheck #emp # 10
     <<set $diceroll = diceRoll($emp)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 10
     <<if $diceroll >= 10>>
         You: "Makes you wonder if being queer in Singapore is possible at all."
         You: "You either have to work really hard to stay hidden and closeted, or you have to risk being confronted with discrimination and hurt."
