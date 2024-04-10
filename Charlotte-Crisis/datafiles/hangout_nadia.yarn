@@ -112,7 +112,7 @@ Nadia: "Still, at least I'm not in the more cutthroat courses."
         You: "My sister is an accountant and she isn't doing too good."
         You: "I've seen her during crunch time and no one deserves to be like that."
         <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 7
         <<if $diceroll < 7 >>    
             Nadia: "Wah, got so jialat ah?"
             Nadia: "Oh no... maybe this is the wrong major..."
@@ -543,7 +543,7 @@ Nadia: "I'm always super intrigued by exchangers and their perspectives."
 Nadia: "Who knows? It could help me with my own exchange in future."
 -> "Sure you're not just there to find some hot exchanger guy?" #skillcheck #cha # 7
     <<set $diceroll = diceRoll($cha)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 7
     <<if $diceroll > 7>>
         <<changeRelationship("N", -5)>>
         Nadia: "Hey... I'm not that desperate..." (-5% Nadia relationship) 
