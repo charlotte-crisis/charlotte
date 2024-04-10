@@ -155,7 +155,7 @@ Sister: "You must give up some freedom, for security."
 
 -> "Those who give up liberty for security deserve neither." #skillcheck #cha # 7
     <<set $diceroll = diceRoll($cha)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 7
     <<if $diceroll >= 7>>
         Sister: "Yeah... I guess you're right."
         Sister: "It's hard to see it now, but I can empathise with that statement."
@@ -177,7 +177,7 @@ Sister: "You must give up some freedom, for security."
     Sister: "We shouldn't fight each other over small things like this."
     -> "But who's starting this fight?" #skillcheck #int # 7
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 7
         <<if $diceroll >= 7>>
             <<changeGenderMeter(5)>>
             You: "I am just presenting as I want to." (+5% gender meter)
@@ -223,7 +223,7 @@ Sister: "You must give up some freedom, for security."
     -> "If you enjoyed that time, it's not wasted." #skillcheck #emp # 7
         Sister: "Still, I missed out on time spent studying or doing a side hustle or - "
         <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 7
         <<if $diceroll >= 7>>
             You: "No. Stop."
             You: "None of that is as important as what you want."
@@ -252,7 +252,7 @@ Sister: "You must give up some freedom, for security."
         Sister: "But my colleagues - "
         You: "They're not you."
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 7
         <<if $diceroll >= 7>>        
             You: "We all have our own capacities, and our own needs."
             Sister: "I wish I had their resilience."
@@ -296,7 +296,7 @@ Sister: "Don't say I didn't warn you." (-5% confidence)
 
 -> "But I know you will be by my side." #skillcheck #emp # 7
     <<set $diceroll = diceRoll($emp)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 7
     <<if $diceroll < 7>>
         Sister sighs.
         Sister: "Yeah, as much as I want to..."
@@ -387,7 +387,7 @@ Sister: "Why do you want to dress as a girl, anyway?"
     -> "People don't just get converted to become LGBT." #skillcheck #int # 7
         Sister: "Really?"
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 7
         <<if $diceroll >= 7>>
             You: "I mean, wouldn't it be easier the other way if it was?"
             You: "You could just show me all the straight romance movies out there and then I'd be normal again."
@@ -407,7 +407,7 @@ Sister: "Why do you want to dress as a girl, anyway?"
         You: "Yes."
         Sister: "Oh..."
         <<set $diceroll = diceRoll($emp)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 7
         <<if $diceroll >= 7>>
             Sister: "Damn, that must really suck."
             <<changeRelationship("Si", 5)>>
@@ -449,7 +449,7 @@ Sister: "Can you really look good in clothes not designed for you?"
     -> "Look on Youtube and Douyin." #skillcheck #int # 7
         Sister: "Name me one creator who does this."
         <<set $diceroll = diceRoll($int)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 7
         <<if $diceroll >= 7>>
             You: "There's this guy who does Minecraft videos, called Finn."
             You: "He dresses as a girl to do his livestreams and he's very successful."
@@ -514,7 +514,7 @@ Sister: "Can you really look good in clothes not designed for you?"
     
     -> "What would a 50-year-old woman know about our generation's fashion?" #skillcheck #cha # 7
         <<set $diceroll = diceRoll($cha)>>
-        [You rolled a {$diceroll}.]
+        You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 7
         <<if $diceroll < 7>>
             Sister: "True, but just don't say that to her face."
             Sister: "She'll clamp down on you even harder if you do."
@@ -554,7 +554,7 @@ You: "Do you not see me as a woman?"
     Sister: "A woman... has a vagina."
     Sister: "Isn't it just basic biology?"
     <<set $diceroll = diceRoll($int)>>
-    [You rolled a {$diceroll}.]
+    You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 7
     <<if $diceRoll < 7>>
         You: "I guess so..."
         Sister: "I mean, come on. I've known you as a guy for more than 20 years."
@@ -629,7 +629,7 @@ You: "Do you not see me as a woman?"
             You: "Those online people definitely have more fun things to take videos of."
             Sister: "But... what if..."
             <<set $diceroll = diceRoll($emp)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 7
             <<if $diceRoll < 7>>
                 You: "Calm down, you're being paranoid again."
                 Sister: "You're telling me to calm down? You're the one who should be worried!"
@@ -652,7 +652,7 @@ You: "Do you not see me as a woman?"
             Sister: "You never know what could happen."
             Sister: "Maybe it'd be easier if you just... stopped..."
             <<set $diceroll = diceRoll($emp)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 7
             <<if $diceRoll < 7>>
                 You: "Damn, can you just get off my back for once? Let me live!"
                 <<changeRelationship("Si", -5)>>
@@ -705,7 +705,7 @@ Sister: "And thought to yourself, I want to wear dresses now?"
             Sister: "I guess parents will always see their offspring as kids."
             Sister: "And there's no changing that."
             <<set $diceroll = diceRoll($cha)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 7
             <<if $diceroll >= 7>>
                 You: "I guess..."
                 <<changeConfidence(-5)>>
@@ -801,7 +801,7 @@ Sister: "Call me old-fashioned, but you need to think of all this stuff, too."
         -> "Better to be free by myself..." #skillcheck #emp # 7
             You: "... than to be stuck with the wrong person."
             <<set $diceroll = diceRoll($emp)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 7
             <<if $diceroll >= 7>>
                 You: "At the end of the day, isn't it about being happy with someone you love?"
                 <<addExperience(10)>>
@@ -876,7 +876,7 @@ Sister: "You're not going to, you know, transition, right?"
         Sister: "I know, but..."
         -> "I know you'll support me no matter what." #skillcheck #emp # 7
             <<set $diceroll = diceRoll($emp)>>
-            [You rolled a {$diceroll}.]
+            You rolled {diceRollOutcome($emp, $diceroll)} (+ {$emp} EMP)\n Total = {$diceroll} #dice_outcome #emp # 7
             <<if $diceroll >= 7>>
                 <<changeRelationship("Si", 5)>>
                 You: "If it happens, I will let you know first." (+5% Sister relationship)
