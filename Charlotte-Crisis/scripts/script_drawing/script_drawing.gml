@@ -80,59 +80,62 @@ function draw_speaker_portrait(name) {
 	// Do comparisons only in uppercase.
 	name = string_upper(name);
 	// Do not draw if narrator
-	var _can_draw = (name != "YOU") && (name != ""); 
-	
-	if (_can_draw) {
-		draw_sprite_ext(spr_portrait_bg, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
-	}
-	
+	var _can_draw = true // (name != "YOU") && (name != ""); 
+	var _sprite_to_draw;
 	switch (name) {
 		case "DEBUG":
 		case "TIP":
 		case "TUTORIAL":
-			draw_sprite_ext(spr_tutorial_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+			_sprite_to_draw = spr_tutorial_portrait;
 			break;
 		case "ANTHONY":
-			draw_sprite_ext(spr_a_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+			_sprite_to_draw = spr_a_portrait;
 			break;
 		case "CHENJIE":
-			draw_sprite_ext(spr_cj_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);			
+			_sprite_to_draw = spr_cj_portrait;
 			break;
 		case "ELEANOR":
 		case "NEW GIRL":
-			draw_sprite_ext(spr_e_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+			_sprite_to_draw = spr_e_portrait;
 			break;
 		case "HELEN":
-			draw_sprite_ext(spr_h_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+			_sprite_to_draw = spr_h_portrait;
 			break;
 		case "JOANNE":
-			draw_sprite_ext(spr_j_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+			_sprite_to_draw = spr_j_portrait;
 			break;
 		case "PROF LIM":
-			draw_sprite_ext(spr_l_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+			_sprite_to_draw = spr_l_portrait;
 			break;
 		case "NADIA":
-			draw_sprite_ext(spr_n_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+			_sprite_to_draw = spr_n_portrait;
 			break;
 		case "SAGE":
-			draw_sprite_ext(spr_s_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+			_sprite_to_draw = spr_s_portrait;
 			break;
 		case "SISTER":
-			draw_sprite_ext(spr_si_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+			_sprite_to_draw = spr_si_portrait;
 			break;
 		case "VERA":
-			draw_sprite_ext(spr_v_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+			_sprite_to_draw = spr_v_portrait;
 			break;
 		case "CHARLOTTE":
-			draw_sprite_ext(spr_charlotte_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+			_sprite_to_draw = spr_charlotte_portrait;
 			break;			
 		case "MOTHER":
-			draw_sprite_ext(spr_m_portrait, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
-			break;	
+			_sprite_to_draw = spr_m_portrait;
+			break;
+		default:
+			_can_draw = false; // If it's none of the above, means no sprite, don't draw.
 	}
 	
-	// Overlay
+	
 	if (_can_draw) {
+		// Background
+		draw_sprite_ext(spr_portrait_bg, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+		// The sprite itself
+		draw_sprite_ext(_sprite_to_draw, 0, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
+		// Overlay
 		draw_sprite_ext(spr_portrait_bg, 1, sprite_x, sprite_y, VIEWPORT_SCALE, VIEWPORT_SCALE, 0, c_white, 1);
 	}
 }
