@@ -407,14 +407,14 @@ Chenjie: "It'd be really sad if things get messy because you never explained thi
             Chenjie: "Not sure how much this would mean, coming from someone you don't know that well, but..."
             Chenjie: "I'm proud of you for being yourself and being so brave."
             You: "Thank you."
-        -> "No, they don't love me."
-            Chenjie: "At all?"
-            <<changeRelationship("CJ", -5)>>
-            You: "Nope. They hate me." (-5% Chenjie relationship)
-            Chenjie: "I... I see..."
-            Chenjie: "I'm so sorry then..."
-            <<changeConfidence(-5)>>
-            There is pity in his eyes, and you squirm under that look. (-5% confidence)
+	-> "No, they don't love me."
+		Chenjie: "At all?"
+		<<changeRelationship("CJ", -5)>>
+		You: "Nope. They hate me." (-5% Chenjie relationship)
+		Chenjie: "I... I see..."
+		Chenjie: "I'm so sorry then..."
+		<<changeConfidence(-5)>>
+		There is pity in his eyes, and you squirm under that look. (-5% confidence)
 <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0
