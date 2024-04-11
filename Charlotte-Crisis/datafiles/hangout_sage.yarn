@@ -98,6 +98,8 @@ Sage: "I'm nonbinary."
             Looks like someone's in a "huge rush".
         <<endif>>
         Sage: "Bye. See you in class or something."
+		// Stop here.
+		<<goto_room_bedroom_afterHangout()>>
         <<stop>>
 
     -> "Actually, that sounds like me."
