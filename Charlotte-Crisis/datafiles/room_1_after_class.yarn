@@ -111,6 +111,7 @@ TUTORIAL: Repeat this tutorial?
     <<jump tut_wardrobe>>
 
 -> No (Continue) #continue
+    <<openWardrobeMenu()>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1120,320
