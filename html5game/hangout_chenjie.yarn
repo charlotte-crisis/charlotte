@@ -301,7 +301,7 @@ Chenjie: "It'd be really sad if things get messy because you never explained thi
         -> "Then, I shall stop. Entirely."
             Chenjie: "But that's so sad! You're going to completely stop?"
             Chenjie: "It's just awful... I don't think what you're doing is good for the long run."
-            <<changeRelationship(-5)>>
+            <<changeRelationship("CJ", -5)>>
             You: "This is my decision." (-5% Chenjie relationship)
             Chenjie: "Okay... Sighs..."
         
@@ -309,11 +309,11 @@ Chenjie: "It'd be really sad if things get messy because you never explained thi
             Chenjie: "How can you guarantee that?"
             You: "I'll take all the precautions." 
             Chenjie opens his mouth, pauses, and then closes it and shrugs.
-            <<changeRelationship(-5)>>
+            <<changeRelationship("CJ", -5)>>
             Chenjie obviously still wants to argue, but he held himself back. (-5% Chenjie relationship)
         
         -> "Maybe you're right."
-            <<changeRelationship(5)>>
+            <<changeRelationship("CJ", 5)>>
             Chenjie: "Yeah, just try talking to your family." (+5% Chenjie relationship)
             Chenjie: "Family is really important. It'd be sad if you were to lose them."
             It might end well... Who knows, right?
@@ -407,14 +407,14 @@ Chenjie: "It'd be really sad if things get messy because you never explained thi
             Chenjie: "Not sure how much this would mean, coming from someone you don't know that well, but..."
             Chenjie: "I'm proud of you for being yourself and being so brave."
             You: "Thank you."
-        -> "No, they don't love me."
-            Chenjie: "At all?"
-            <<changeRelationship("CJ", -5)>>
-            You: "Nope. They hate me." (-5% Chenjie relationship)
-            Chenjie: "I... I see..."
-            Chenjie: "I'm so sorry then..."
-            <<changeConfidence(-5)>>
-            There is pity in his eyes, and you squirm under that look. (-5% confidence)
+	-> "No, they don't love me."
+		Chenjie: "At all?"
+		<<changeRelationship("CJ", -5)>>
+		You: "Nope. They hate me." (-5% Chenjie relationship)
+		Chenjie: "I... I see..."
+		Chenjie: "I'm so sorry then..."
+		<<changeConfidence(-5)>>
+		There is pity in his eyes, and you squirm under that look. (-5% confidence)
 <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 0

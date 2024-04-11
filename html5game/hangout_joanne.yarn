@@ -30,6 +30,7 @@ Joanne: "Hello!"
         You feel sick to the stomach.
         <<changeConfidence(-10)>>
         You wished you had never asked her to hang out at all. (-10% confidence)
+		<<goto_room_bedroom_afterHangout()>>
         <<stop>>
 <<else>>
     <<jump 2>>
@@ -90,123 +91,123 @@ Joanne: "Sorry for rambling on. I know guys don't get it, but it's really import
     Joanne: "Yeah, it's a bit embarrassing."
     Joanne: "I know it's such a girly thing, and I look the type."
     Joanne: "But I can't help being a girls' girl, you know? I just want to help uplift other women."
-    -> "Uplifting women is really important."
-        Joanne: "Yeah. Society is still rather harsh on women... There are a lot of sexist assholes out there."
-        Joanne: "That's why it's important to learn more about the female perspective."
-        You: "I agree."
-        Joanne: "That's why you signed up for the feminism class, right?"
-        Joanne: "It's nice to see guys like you and Chenjie taking the effort to learn about the social movement."
-        <<changeConfidence(-5)>>
-        You feel a bit uncomfortable with the way she calls you a guy. (-5% confidence)
-        Joanne: "It's also hard to talk about these things outside of class though. Not without getting really heated and political."
-        You: "Yeah, everyone has such different opinions on the matter."
-        Joanne: " Yeah, if only everyone would just talk about things civilly."
-        Joanne: "Like you and me, right? It's nice that a guy like you understands."
-        She gives you a radiant grin, but it doesn't lessen the sting of the words "a guy like you".
-        -> "Could you not group me with other guys?"
-            Joanne: "Hm? Oh, of course, of course."
-            <<changeRelationship("J", 5)>>
-            Joanne: "Yeah, most men don't give these things much thought, but you're actually open-minded and willing to learn." (+5% Joanne relationship)
-            <<changeConfidence(-5)>>
-            Nope. It still doesn't feel better. (-5% confidence)
-        -> "Actually, I'm not really a guy."
-            Joanne: "Because you're a crossdresser...?"
-            You: "That's... one of the reasons. I'm still trying to figure out my own identity but..."
-            Joanne bites her lip in discomfort.
-            Joanne: "I think you're just confused... I mean, I get that dresses and stuff are pretty and all, but you don't actually want to be a girl."
-            You: "I don't?"
-            Joanne: "Yeah, maybe it's some sort of jealousy?"
-            Joanne: "Or because after you've become more knowledgeable on feminist issues, you've come to hate being lumped in with other men."
-            Joanne: "I get that... For me, sometimes, I worry I'm perpetuating sexist stereotypes..."
-            Joanne: "You know, I'm not good at maths, and I like flowery and cutesy things, and I play more cosy games than fighting games..."
-            Joanne: "But you shouldn't hate your own gender."
-            -> "This is different."
-                You: "I'm fairly certain that isn't why I feel this way."
-                You: "I'm questioning my identity because..."
-                -> "I am myself when I'm Charlotte."
-                -> "I'm tired of being Charles."
-                -> "I like myself as both Charles and Charlotte."
-                Joanne: "... Look, just... Don't be so quick to jump to conclusions."
-                Joanne: "I do hope you become more accepting of yourself..."
-                She doesn't get it, but at least she's not pushing you away entirely.
-            -> "Yeah, I should learn to accept myself for who I am."
-                Joanne: "I do hope you become more accepting of yourself..."
-                She flashes you a comforting smile. 
-                <<changeRelationship("J", 5)>>
-                You smile back. (+5% Joanne relationship)
+    You: "Uplifting women is really important."
+	Joanne: "Yeah. Society is still rather harsh on women... There are a lot of sexist assholes out there."
+	Joanne: "That's why it's important to learn more about the female perspective."
+	You: "I agree."
+	Joanne: "That's why you signed up for the feminism class, right?"
+	Joanne: "It's nice to see guys like you and Chenjie taking the effort to learn about the social movement."
+	<<changeConfidence(-5)>>
+	You feel a bit uncomfortable with the way she calls you a guy. (-5% confidence)
+	Joanne: "It's also hard to talk about these things outside of class though. Not without getting really heated and political."
+	You: "Yeah, everyone has such different opinions on the matter."
+	Joanne: " Yeah, if only everyone would just talk about things civilly."
+	Joanne: "Like you and me, right? It's nice that a guy like you understands."
+	She gives you a radiant grin, but it doesn't lessen the sting of the words "a guy like you".
+	-> "Could you not group me with other guys?"
+		Joanne: "Hm? Oh, of course, of course."
+		<<changeRelationship("J", 5)>>
+		Joanne: "Yeah, most men don't give these things much thought, but you're actually open-minded and willing to learn." (+5% Joanne relationship)
+		<<changeConfidence(-5)>>
+		Nope. It still doesn't feel better. (-5% confidence)
+	-> "Actually, I'm not really a guy."
+		Joanne: "Because you're a crossdresser...?"
+		You: "That's... one of the reasons. I'm still trying to figure out my own identity but..."
+		Joanne bites her lip in discomfort.
+		Joanne: "I think you're just confused... I mean, I get that dresses and stuff are pretty and all, but you don't actually want to be a girl."
+		You: "I don't?"
+		Joanne: "Yeah, maybe it's some sort of jealousy?"
+		Joanne: "Or because after you've become more knowledgeable on feminist issues, you've come to hate being lumped in with other men."
+		Joanne: "I get that... For me, sometimes, I worry I'm perpetuating sexist stereotypes..."
+		Joanne: "You know, I'm not good at maths, and I like flowery and cutesy things, and I play more cosy games than fighting games..."
+		Joanne: "But you shouldn't hate your own gender."
+		-> "This is different."
+			You: "I'm fairly certain that isn't why I feel this way."
+			You: "I'm questioning my identity because..."
+			-> "I am myself when I'm Charlotte."
+			-> "I'm tired of being Charles."
+			-> "I like myself as both Charles and Charlotte."
+			Joanne: "... Look, just... Don't be so quick to jump to conclusions."
+			Joanne: "I do hope you become more accepting of yourself..."
+			She doesn't get it, but at least she's not pushing you away entirely.
+		-> "Yeah, I should learn to accept myself for who I am."
+			Joanne: "I do hope you become more accepting of yourself..."
+			She flashes you a comforting smile. 
+			<<changeRelationship("J", 5)>>
+			You smile back. (+5% Joanne relationship)
 
-        -> Leave it.
-            You smile back.
-            <<changeRelationship("J", 5)>>
-            You: "Thanks. It's nice to hear that I'm being a good ally to women." (+5% Joanne relationship)
+	-> Leave it.
+		You smile back.
+		<<changeRelationship("J", 5)>>
+		You: "Thanks. It's nice to hear that I'm being a good ally to women." (+5% Joanne relationship)
 
-        -> "But what about trans women?"
-            Joanne: "Okay, to be very clear, I don't hate on trans women."
-            Joanne: "Like, there is a big difference between a trans woman and a man in a dress."
-            Joanne: "But if you go through the big surgery, then yeah, I guess you become a trans woman."
-            Joanne: "No man would ever mutilate himself like that."
-            Joanne: "Just putting on a dress, putting on a ton of makeup and changing your pronouns is just..."
-            Joanne: "Anyone can just pretend, you know?"
-            You: "But what about those who are beginning their transition or are unsure?"
-            Joanne: "Then be unsure somewhere else, not the girls' toilet, you know?"
-            -> "I guess so..."
-                Joanne: "Like, if you went into the girls' toilet, you can't blame us girls being panicked about it, right?"
-                You feel singled out. Is it because of Charlotte?
-            -> "It's not just about the girls' toilet or surgery though."
-                You: "I think you're oversimplifying what trans people go through."
-                You: "A lot of trans people go through quite a lot of stress because people refuse to respect their experience."
-                You: "I get that you're worried about safety."
-                You: "It's hurtful when you simplify things to whether or not someone is using the right toilet or not."
-                Joanne: "You're concerned about these issues because you're also a man who wears a dress, right?"
-                -> "So what if I am?"
-                    You: "I still feel that we should not invalidate the experiences or identity of trans people."
-                    <<set $diceroll = diceRoll($int)>>
-                    <<if $diceroll >= 7>>
-                        You: "Even if I was just a man wearing a dress, I'm not harming anyone, am I?"
-                        <<addExperience(5)>>
-                        You: "If anything, I'm breaking gender stereotypes, and isn't that something that helps the feminist cause?" (+5 XP))
-                    <<endif>>
-                    <<set $diceroll = diceRoll($emp)>>
-                    <<if $diceroll >= 7>>
-                        You: "We should treat each other with kindness and understanding."
-                        <<addExperience(5)>>
-                        You: "We're all just humans trying to get by." (+5 XP))
-                    <<endif>>
-                    You: "People can simply be a different gender from what they're assigned at birth."
-                    Joanne: "I guess I'm just not the type to take other people's BS."
-                    Joanne: "I'll only accept someone is a transwoman if there is ample evidence that he is."
-                    Joanne: "That's just the way I am." (-5% Joanne relationship)
-                    <<set $diceroll = diceRoll($int)>>
-                    <<if $diceroll >= 7>> 
-                    She's using he/him pronouns even when talking about trans women...)
-                    It seems like she won't budge on this issue.
-                    But neither will you.
-                    <<endif>>
-                -> "I'm not just a man who wears a dress."
-                    You: "I think I'm trans, and I'm trying to figure things out myself."
-                    You: "So hearing you say these things hurts my feelings."
-                    Joanne: "Then seek mental help. Go get your surgery."
-                    <<changeRelationship("J", -5)>>
-                    Joanne: "What are you doing sitting here arguing with me?" (-5% Joanne relationship) 
-                    Joanne: "You just hate hearing someone who disagrees with you."
-                    You: "That's not true."
-                    Joanne: "Look, you obviously don't care about what real women feel." 
-                    Joanne: "So let me be clear. You can't just say you're a woman and become a woman."
-                    This whole conversation is leaving a very bad taste in your mouth.
-                    <<changeConfidence(-5)>>
-                    You regret bringing up the fact that you're questioning your gender. (-5% confidence)
-            -> "But not everyone can go through extensive surgery." //(Vera Relationship > 70%) we need code for this
-                You: "The procedures are long and complicated, so it requires a lot of money and time that not everyone can afford."
-                You: "And it requires the trans person to be physically fit for such procedures."
-                Joanne: "Okay. But, like, how else are we going to tell if someone is actually trans or not?"
-                Joanne: "Are we just supposed to believe any guy who says he's actually a woman?"
-                You: "I'd rather believe someone than misgender them or deny their existence."
-                She huffs loudly and rolls her eyes.
-                <<changeRelationship("J", -5)>>
-                Joanne: "Men. They never understand." (-5% Joanne relationship)
-                It seems like she won't budge on this issue.
-                <<addExperience(5)>>
-                But neither will you. (+5 XP)
+	-> "But what about trans women?"
+		Joanne: "Okay, to be very clear, I don't hate on trans women."
+		Joanne: "Like, there is a big difference between a trans woman and a man in a dress."
+		Joanne: "But if you go through the big surgery, then yeah, I guess you become a trans woman."
+		Joanne: "No man would ever mutilate himself like that."
+		Joanne: "Just putting on a dress, putting on a ton of makeup and changing your pronouns is just..."
+		Joanne: "Anyone can just pretend, you know?"
+		You: "But what about those who are beginning their transition or are unsure?"
+		Joanne: "Then be unsure somewhere else, not the girls' toilet, you know?"
+		-> "I guess so..."
+			Joanne: "Like, if you went into the girls' toilet, you can't blame us girls being panicked about it, right?"
+			You feel singled out. Is it because of Charlotte?
+		-> "It's not just about the girls' toilet or surgery though."
+			You: "I think you're oversimplifying what trans people go through."
+			You: "A lot of trans people go through quite a lot of stress because people refuse to respect their experience."
+			You: "I get that you're worried about safety."
+			You: "It's hurtful when you simplify things to whether or not someone is using the right toilet or not."
+			Joanne: "You're concerned about these issues because you're also a man who wears a dress, right?"
+			-> "So what if I am?"
+				You: "I still feel that we should not invalidate the experiences or identity of trans people."
+				<<set $diceroll = diceRoll($int)>>
+				<<if $diceroll >= 7>>
+					You: "Even if I was just a man wearing a dress, I'm not harming anyone, am I?"
+					<<addExperience(5)>>
+					You: "If anything, I'm breaking gender stereotypes, and isn't that something that helps the feminist cause?" (+5 XP)
+				<<endif>>
+				<<set $diceroll = diceRoll($emp)>>
+				<<if $diceroll >= 7>>
+					You: "We should treat each other with kindness and understanding."
+					<<addExperience(5)>>
+					You: "We're all just humans trying to get by." (+5 XP)
+				<<endif>>
+				You: "People can simply be a different gender from what they're assigned at birth."
+				Joanne: "I guess I'm just not the type to take other people's BS."
+				Joanne: "I'll only accept someone is a transwoman if there is ample evidence that he is."
+				<<changeRelationship("J", -5)>>
+				Joanne: "That's just the way I am." (-5% Joanne relationship)
+				<<if $int > 4>>
+					She's using he/him pronouns even when talking about trans women...
+					It seems like she won't budge on this issue.
+					But neither will you.
+				<<endif>>
+			-> "I'm not just a man who wears a dress."
+				You: "I think I'm trans, and I'm trying to figure things out myself."
+				You: "So hearing you say these things hurts my feelings."
+				Joanne: "Then seek mental help. Go get your surgery."
+				<<changeRelationship("J", -5)>>
+				Joanne: "What are you doing sitting here arguing with me?" (-5% Joanne relationship) 
+				Joanne: "You just hate hearing someone who disagrees with you."
+				You: "That's not true."
+				Joanne: "Look, you obviously don't care about what real women feel." 
+				Joanne: "So let me be clear. You can't just say you're a woman and become a woman."
+				This whole conversation is leaving a very bad taste in your mouth.
+				<<changeConfidence(-5)>>
+				You regret bringing up the fact that you're questioning your gender. (-5% confidence)
+		-> "But not everyone can go through extensive surgery." <<if getRelationship("V") >= 70>>
+			You: "The procedures are long and complicated, so it requires a lot of money and time that not everyone can afford."
+			You: "And it requires the trans person to be physically fit for such procedures."
+			Joanne: "Okay. But, like, how else are we going to tell if someone is actually trans or not?"
+			Joanne: "Are we just supposed to believe any guy who says he's actually a woman?"
+			You: "I'd rather believe someone than misgender them or deny their existence."
+			She huffs loudly and rolls her eyes.
+			<<changeRelationship("J", -5)>>
+			Joanne: "Men. They never understand." (-5% Joanne relationship)
+			It seems like she won't budge on this issue.
+			<<addExperience(5)>>
+			But neither will you. (+5 XP)
 
 -> "I think that's a lot of stereotyping."
     You: "It's not every single girls' dream to get married, and not all guys are uncaring about weddings."
@@ -328,6 +329,7 @@ Joanne grabs her stuff and stands up huffily.
 Oh no... Were you mansplaining in the end?
 <<changeConfidence(-5)>>
 Maybe you were... (-5% confidence)
+<<goto_room_bedroom_afterHangout()>>
 <<stop>>
 ===
 __PrivCrochet_colorID: 0
