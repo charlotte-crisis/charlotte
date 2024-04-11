@@ -30,6 +30,7 @@ Joanne: "Hello!"
         You feel sick to the stomach.
         <<changeConfidence(-10)>>
         You wished you had never asked her to hang out at all. (-10% confidence)
+		<<goto_room_bedroom_afterHangout()>>
         <<stop>>
 <<else>>
     <<jump 2>>
@@ -328,6 +329,7 @@ Joanne grabs her stuff and stands up huffily.
 Oh no... Were you mansplaining in the end?
 <<changeConfidence(-5)>>
 Maybe you were... (-5% confidence)
+<<goto_room_bedroom_afterHangout()>>
 <<stop>>
 ===
 __PrivCrochet_colorID: 0
