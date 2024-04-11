@@ -712,7 +712,7 @@ Vera: "What do you think we should do about him?"
         Vera: "I mean, I'm not so hateful that I would actively ask him to get lost."
         Vera: "But there are other ways to achieve that goal. We'll see what we can do."
 
--> "Vera. You have to let this go."
+-> "Vera. You have to let this go." <<if !optionChosen()>>
     Vera: "Oh sure, let me just forget about the guy who's been making life so tough for us here. So simple!"
     -> "Have you ever wanted to throw a hot coal at someone before?" #skillcheck #emp # 8
         Vera: "That's oddly specific."
@@ -755,6 +755,9 @@ Vera: "What do you think we should do about him?"
         Vera: "It's easy to say men are trash. Unfortunately, we must continue to interact with them."
         Vera: "But you know, if this whole school, this whole country, is gonna be so hostile..."
         Vera: "Maybe it's not worth staying here long-term."
+
+-> "I don't want to talk about this right now." #continue
+    Vera: "Okay."
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 2399,479
@@ -768,40 +771,10 @@ title: 11
 
 Nadia: "Oh my goodness, what just happened?"
 Nadia: "We nearly lost a club member there!"
--> "Relax, he's on his way out anyway."
-    Nadia: "Well, we're still down to only 3 people. Excluding Eleanor."
-    -> "I know how you feel, but we'll get over this."
-        <<jump 11_knowHow>>
-
-    -> "That's her problem, not ours."
-        Nadia: "How can you say that? We should help her to solve this too."
-        Nadia: "Not just because we're her club members, but because we're her friends too."
-        Nadia: "And Anthony could have been a friend too. But look what happened."
-
-    -> "You're telling me you seriously want a guy who insulted everyone in the club to stay?"
-        Nadia is silent for a moment.
-        Nadia: "Well, if you put it that way... I guess not, but still..."
-        -> "You've got a good heart, Nadia."
-            You: "But you also need to draw boundaries and recognise who's being problematic."
-            Nadia: "Thanks... let's hope any future members we get aren't as toxic as he is."
-        
-        -> "Told you so."
-            Nadia sighs and turns away.
-
--> "I think it's a damn shame if he leaves."
-    Nadia: "I wouldn't call it that, but..."
-    You: "Vera is to blame. Look at how she was aggravating him."
-    Nadia: "I'm not sure about that either, didn't he start it?"
-    You: "He was perfectly in the right to express his opinion. That's a level of assertiveness we should aspire to."
-    You: "If not, who's to say we won't get cancelled for the smallest thing next?"
-    Nadia: "I guess..."
-    You can tell she's not entirely convinced, but this is about as far as it goes.
-
--> "I know how you feel, but we'll get over this."
-    <<jump 11_knowHow>>
+<<jump 11_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2640,240
+__PrivCrochet_position: 2635,238
 __PrivCrochet_tags: 
 title: 12
 ---
@@ -814,38 +787,17 @@ Anthony: "That bitch, Vera."
 Anthony: "I'm so close to telling the whole world about her dirty little secret."
 You: "Wait, what's that?"
 Anthony: "Haven't you seen? She is actually he. How can a woman be taller than me, and have such a deep voice?"
--> "Yes, you should spread the word. The people must know."
-    Anthony: "I'll spread it among my friends. We're all losers, but we can all laugh at him."
--> "What the fuck, Anthony?"
-    Anthony: "What? Don't tell me you also cannot handle the truth."
-    You: "No, this just isn't right."
-    Anthony: "Sure, tell me why."
-    -> "Don't people have the right to secrets anymore?"
-        Anthony: "So you're telling me he's not proud to be an ah gua?"
-        You: "If she doesn't want to bring attention to it, that is her right."
-        Anthony: "So he's ashamed of what he does."
-        You: "You know what? You're impossible to deal with. I'm done here."
-    -> "Why don't you bring that up to her face, huh? See how she reacts." #skillcheck #cha # 8
-        <<set $diceroll = diceRoll($cha)>>
-        You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 8
-        <<if $diceroll >= 8>>
-            Anthony stays silent.
-            You: "You don't dare to."
-            Anthony: "It's not worth my time. Maybe he will start crying."
-            You: "You're just making excuses. All you dare to do is talk shit behind her back."
-            <<changeRelationship("A", -5)>>
-            Anthony walks off. (-5% Anthony relationship)
-            <<changeConfidence(5)>>
-            Well done. You've exposed him for the coward he is. (+5% confidence)
-        <<else>>
-            Anthony: "Maybe I will, huh? He would look so pathetic, crying on the floor."
-            What did you just hear...
-        <<endif>>
-    -> "It's just not right!"
-        Anthony: "If that's the only thing you can say, you don't have an argument."
+-> "Yes, you should spread the word. The people must know." <<if !visitedNode("12_1", "cca_2.yarn") and !visitedNode("12_2, cca_2.yarn")>>
+    <<jump 12_1>>
+    
+-> "What the fuck, Anthony?" <<if !visitedNode("12_1", "cca_2.yarn") and !visitedNode("12_2, cca_2.yarn")>>
+    <<jump 12_2>>
+
+-> "I don't want to talk about this right now." #continue
+    Anthony: "Fine."
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2655,529
+__PrivCrochet_position: 2645,943
 __PrivCrochet_tags: 
 title: 11_knowHow
 ---
@@ -854,7 +806,7 @@ Nadia: "I guess so... let's hope that T-shirt design works."
     Nadia: "I really don't want the club to shut down. It's a great place to make friends."
     You: "Yeah, we can only hope."
 
--> "Your idea might just save us all."
+-> "Your idea might just save us all." <<if !optionChosen()>>
     Nadia: "What do you mean?"
     You: "Your design. It's cute, it appeals to a lot of people, and we can all tell you put effort into it."
     Nadia smiles a bit.
@@ -923,4 +875,98 @@ title: debug_end
 ---
 DEBUG: skipped to the end
 <<jump exit>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2439,712
+__PrivCrochet_tags: 
+title: 11_options
+---
+What will you say?
+-> "Relax, he's on his way out anyway." <<if !visitedNode("11_1", "cca_2.yarn") and !visitedNode("11_2, cca_2.yarn")>>
+    Nadia: "Well, we're still down to only 3 people. Excluding Eleanor."
+    <<jump 11_1>>
+
+-> "I think it's a damn shame if he leaves." <<if !visitedNode("11_1", "cca_2.yarn") and !visitedNode("11_2, cca_2.yarn")>>
+    <<jump 11_2>>
+
+-> "I know how you feel, but we'll get over this."
+    <<jump 11_knowHow>>
+
+-> "I don't even know what to say." #continue
+    Nadia: "I understand..."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2019,850
+__PrivCrochet_tags: 
+title: 11_1
+---
+-> "I know how you feel, but we'll get over this."
+    <<jump 11_knowHow>>
+
+-> "That's her problem, not ours."
+    Nadia: "How can you say that? We should help her to solve this too."
+    Nadia: "Not just because we're her club members, but because we're her friends too."
+    Nadia: "And Anthony could have been a friend too. But look what happened."
+
+-> "You're telling me you seriously want a guy who insulted everyone in the club to stay?"
+    Nadia is silent for a moment.
+    Nadia: "Well, if you put it that way... I guess not, but still..."
+    -> "You've got a good heart, Nadia."
+        You: "But you also need to draw boundaries and recognise who's being problematic."
+        Nadia: "Thanks... let's hope any future members we get aren't as toxic as he is."
+        
+    -> "Told you so."
+        Nadia sighs and turns away.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2324,956
+__PrivCrochet_tags: 
+title: 11_2
+---
+Nadia: "I wouldn't call it that, but..."
+You: "Vera is to blame. Look at how she was aggravating him."
+Nadia: "I'm not sure about that either, didn't he start it?"
+You: "He was perfectly in the right to express his opinion. That's a level of assertiveness we should aspire to."
+You: "If not, who's to say we won't get cancelled for the smallest thing next?"
+Nadia: "I guess..."
+You can tell she's not entirely convinced, but this is about as far as it goes.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2836,0
+__PrivCrochet_tags: 
+title: 12_1
+---
+Anthony: "I'll spread it among my friends. We're all losers, but we can all laugh at him."
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 3089,172
+__PrivCrochet_tags: 
+title: 12_2
+---
+Anthony: "What? Don't tell me you also cannot handle the truth."
+You: "No, this just isn't right."
+Anthony: "Sure, tell me why."
+-> "Don't people have the right to secrets anymore?"
+    Anthony: "So you're telling me he's not proud to be an ah gua?"
+    You: "If she doesn't want to bring attention to it, that is her right."
+    Anthony: "So he's ashamed of what he does."
+    You: "You know what? You're impossible to deal with. I'm done here."
+-> "Why don't you bring that up to her face, huh? See how she reacts." #skillcheck #cha # 8
+    <<set $diceroll = diceRoll($cha)>>
+    You rolled {diceRollOutcome($cha, $diceroll)} (+ {$cha} CHA)\n Total = {$diceroll} #dice_outcome #cha # 8
+    <<if $diceroll >= 8>>
+        Anthony stays silent.
+        You: "You don't dare to."
+        Anthony: "It's not worth my time. Maybe he will start crying."
+        You: "You're just making excuses. All you dare to do is talk shit behind her back."
+        <<changeRelationship("A", -5)>>
+        Anthony walks off. (-5% Anthony relationship)
+        <<changeConfidence(5)>>
+        Well done. You've exposed him for the coward he is. (+5% confidence)
+    <<else>>
+        Anthony: "Maybe I will, huh? He would look so pathetic, crying on the floor."
+        What did you just hear...
+    <<endif>>
+-> "It's just not right!"
+    Anthony: "If that's the only thing you can say, you don't have an argument."
 ===
