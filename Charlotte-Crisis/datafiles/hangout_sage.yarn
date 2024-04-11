@@ -289,23 +289,23 @@ Sage: "And then everything clicked."
 -> "What sort of feelings?"
     Sage: "Hm... Do you know the story of the ugly duckling?"
     -> "Yes."
-    Sage: "Yeah, and that was how I felt. Like an ugly duckling."
-    Sage: "I was criticised a lot while I was growing up, and there was this constant sense that I was doing something wrong all the time."
-    Sage: "It felt like no matter how hard I tried, I would never become a real girl."
-    Sage: "I didn't understand why everyone else could just be — I don't know — normal? It's just that no one else felt like I did."
-    Sage: "So it was a huge sigh of relief when I realised that... I was just a swan that everyone called an ugly duckling."
-    You: "I see..." 
+		Sage: "Yeah, and that was how I felt. Like an ugly duckling."
+		Sage: "I was criticised a lot while I was growing up, and there was this constant sense that I was doing something wrong all the time."
+		Sage: "It felt like no matter how hard I tried, I would never become a real girl."
+		Sage: "I didn't understand why everyone else could just be — I don't know — normal? It's just that no one else felt like I did."
+		Sage: "So it was a huge sigh of relief when I realised that... I was just a swan that everyone called an ugly duckling."
+		You: "I see..." 
     
     -> "No."
-    Sage: "It's about a duckling who was bullied and made fun of for being an ugly duckling."
-    Sage: "But when it grows up, it realises that it was a beautiful swan and not an ugly duckling."
-    You: "I see..."
-    Sage: "Yeah, and that was how I felt. Like an ugly duckling."
-    Sage: "I was criticised a lot while I was growing up, and there was this constant sense that I was doing something wrong all the time."
-    Sage: "It felt like no matter how hard I tried, I would never become a real girl."
-    Sage: "I didn't understand why everyone else could just be — I don't know — normal? It's just that no one else felt like I did."
-    Sage: "So it was a huge sigh of relief when I realised that... I was just a swan that everyone called an ugly duckling."
-    You: "I see..."
+		Sage: "It's about a duckling who was bullied and made fun of for being an ugly duckling."
+		Sage: "But when it grows up, it realises that it was a beautiful swan and not an ugly duckling."
+		You: "I see..."
+		Sage: "Yeah, and that was how I felt. Like an ugly duckling."
+		Sage: "I was criticised a lot while I was growing up, and there was this constant sense that I was doing something wrong all the time."
+		Sage: "It felt like no matter how hard I tried, I would never become a real girl."
+		Sage: "I didn't understand why everyone else could just be — I don't know — normal? It's just that no one else felt like I did."
+		Sage: "So it was a huge sigh of relief when I realised that... I was just a swan that everyone called an ugly duckling."
+		You: "I see..."
 <<jump 4_options>>
 ===
 __PrivCrochet_colorID: 0
@@ -399,22 +399,22 @@ Sage: "I'm saying it's something you could do. For now."
 Sage: "If they ask you why you're dressed the way you are, you could just say it is a dare, or that you were going to a costume or cosplay event."
 
 -> "I guess I could do that..."
-<<jump 5>>
+	<<jump 5>>
 
 -> "I need to speak my truth. I won't hide who I am."
-Sage: "Like I said, it is just an option you can consider. I am by no means saying you definitely have to lie. Or that you have to do it forever."
-Sage: "I don't know your family or circumstances well so it's still your decision."
-Sage: "Will you hear me out on this?"
-    -> "Sure, let's hear it."
-    <<jump 5>>
-    
-    -> "But I don't want to lie about who I am."
-        Sage: "I see..."
-        <<changeRelationship("S", -5)>>
-        Sage looks rather frustrated at how quickly their suggestion was shot down. (-5% Sage relationship)
-        Sage: "Okay then. If you are so sure about that, then go ahead and do what you must."
-        Sage: "I will just cheer you on from the side."
-        <<jump 4_options>>
+	Sage: "Like I said, it is just an option you can consider. I am by no means saying you definitely have to lie. Or that you have to do it forever."
+	Sage: "I don't know your family or circumstances well so it's still your decision."
+	Sage: "Will you hear me out on this?"
+		-> "Sure, let's hear it."
+			<<jump 5>>
+		
+		-> "But I don't want to lie about who I am."
+			Sage: "I see..."
+			<<changeRelationship("S", -5)>>
+			Sage looks rather frustrated at how quickly their suggestion was shot down. (-5% Sage relationship)
+			Sage: "Okay then. If you are so sure about that, then go ahead and do what you must."
+			Sage: "I will just cheer you on from the side."
+			<<jump 4_options>>
 
 -> "Why would I want to do that?"
     <<jump 5>>
