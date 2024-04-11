@@ -165,17 +165,18 @@ Joanne: "Sorry for rambling on. I know guys don't get it, but it's really import
                     <<if $diceroll >= 7>>
                         You: "Even if I was just a man wearing a dress, I'm not harming anyone, am I?"
                         <<addExperience(5)>>
-                        You: "If anything, I'm breaking gender stereotypes, and isn't that something that helps the feminist cause?" (+5 XP))
+                        You: "If anything, I'm breaking gender stereotypes, and isn't that something that helps the feminist cause?" (+5 XP)
                     <<endif>>
                     <<set $diceroll = diceRoll($emp)>>
                     <<if $diceroll >= 7>>
                         You: "We should treat each other with kindness and understanding."
                         <<addExperience(5)>>
-                        You: "We're all just humans trying to get by." (+5 XP))
+                        You: "We're all just humans trying to get by." (+5 XP)
                     <<endif>>
                     You: "People can simply be a different gender from what they're assigned at birth."
                     Joanne: "I guess I'm just not the type to take other people's BS."
                     Joanne: "I'll only accept someone is a transwoman if there is ample evidence that he is."
+					<<changeRelationship("J", -5)>>
                     Joanne: "That's just the way I am." (-5% Joanne relationship)
                     <<set $diceroll = diceRoll($int)>>
                     <<if $diceroll >= 7>> 
@@ -196,7 +197,7 @@ Joanne: "Sorry for rambling on. I know guys don't get it, but it's really import
                     This whole conversation is leaving a very bad taste in your mouth.
                     <<changeConfidence(-5)>>
                     You regret bringing up the fact that you're questioning your gender. (-5% confidence)
-            -> "But not everyone can go through extensive surgery." //(Vera Relationship > 70%) we need code for this
+            -> "But not everyone can go through extensive surgery." <<if getRelationship("V") >= 70>>
                 You: "The procedures are long and complicated, so it requires a lot of money and time that not everyone can afford."
                 You: "And it requires the trans person to be physically fit for such procedures."
                 Joanne: "Okay. But, like, how else are we going to tell if someone is actually trans or not?"
