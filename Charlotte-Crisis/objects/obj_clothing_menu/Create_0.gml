@@ -4,7 +4,7 @@
 // Row 0: Name
 // Row 1, 2, 3: Clothes
 // Row 4: Confirm
-select_row = 1; // Set to 1 so when player interacts, it moves up to 0.
+select_row = 0;
 MAX_ROW = 4;
 
 // Top, Bottom, Shoes
