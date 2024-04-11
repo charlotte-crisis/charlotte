@@ -154,11 +154,11 @@ Vera turns her paper around.
 <<jump vera_options>>
 ===
 __PrivCrochet_colorID: 3
-__PrivCrochet_position: 1125,-375
+__PrivCrochet_position: 1124,-376
 __PrivCrochet_tags: 
 title: 3_4
 ---
--> "I'm going to confront my mother about Charlotte."
+-> "I'm going to confront my mother about Charlotte." <<if !optionChosen()>>
     <<if !getNPCKnows("V")>>
         Vera: "Wait, who's Charlotte?"
         You give a quick summary of your experiences as Charlotte.
@@ -351,7 +351,7 @@ title: 3_4
         Vera: "You know I'm not usually like this. But it needed to be said."
     <<jump vera_options>>
 
--> "I've recently felt quite at odds about being Charlotte."
+-> "I've recently felt quite at odds about being Charlotte." <<if !optionChosen()>>
     Vera: "Oh? Why?"
 
     -> "Being Charlotte is stressful."
@@ -437,7 +437,7 @@ title: 3_4
             Vera: "And if she doesn't like that, that's her problem."
     <<jump vera_options>>
 
--> "Are you okay after last week's fight?"
+-> "Are you okay after last week's fight?" <<if !optionChosen()>>
     Vera: "Honestly? Not the worst thrashing I've received."
     Vera: "And I've learned that there are some things, some people, that you just gotta ignore."
     -> "What about Eleanor?"
@@ -466,7 +466,7 @@ title: 3_4
         Vera: "He needs to figure this out on his own."
     <<jump vera_options>>
 
--> "Never mind."
+-> "Never mind." #continue
     Vera: "Uh, okay. Just let me know when you wanna talk."
 ===
 __PrivCrochet_colorID: 2
@@ -516,10 +516,9 @@ title: 5
     Nadia: "Hello, {$name}! I'm not done yet but feel free to chat."
     <<jump 5_options>>
 <<endif>>
-
 ===
 __PrivCrochet_colorID: 1
-__PrivCrochet_position: 939,981
+__PrivCrochet_position: 938,980
 __PrivCrochet_tags: 
 title: 5_1
 ---
@@ -581,7 +580,7 @@ Nadia: "Go ahead. I'll just continue to draw in the meantime."
     <<jump 5_2_1>>
 -> "What happened to Eleanor?"
     <<jump 5_2_2>>
--> "Never mind."
+-> "Never mind." #continue
     Nadia: "Don't spoil me like that!"
     Nadia: "Just kidding. Whenever you're ready."
 ===
@@ -596,7 +595,7 @@ title: vera_options
 -> "You just like attracting attention with this stuff, don't you?" <<if !visitedNode("3_1", "cca_3.yarn") and !visitedNode("3_2", "cca_3.yarn")>> //delete when 3_1 or 3_2 are done
     <<jump 3_2>>
 
--> "How fitting, considering recent events."
+-> "How fitting, considering recent events." <<if !optionChosen()>>
     <<jump 3_3>>
 
 -> "Actually, there's something else I wanted to talk about."
@@ -682,7 +681,7 @@ Vera: "Then again, maybe he's just like that."
 <<jump vera_options>>
 ===
 __PrivCrochet_colorID: 2
-__PrivCrochet_position: 1041,185
+__PrivCrochet_position: 1040,185
 __PrivCrochet_tags: 
 title: anthony_options
 ---
@@ -705,7 +704,7 @@ __PrivCrochet_position: 1212,-80
 __PrivCrochet_tags: 
 title: 4_2
 ---
--> "I have some... personal stuff that I want to talk about."
+-> "I have some... personal stuff that I want to talk about." <<if !optionChosen()>>
     <<if getNPCKnows("A")>>
         Anthony: "Oh, about the girl clothes thing?"
         Anthony: "Tell you already. If you just acted normal, none of these problems would surface."
@@ -735,13 +734,15 @@ title: 4_2
             <<changeRelationship("A", -5)>>
             Anthony: "If you could just be normal, that would be best." (-5% Anthony relationship)
     <<endif>>
+    <<jump anthony_options>>
 
--> "I'm about to confront my mother about something."
+-> "I'm about to confront my mother about something." <<if !optionChosen()>>
     Anthony: "Why are you asking me about this?"
     You: "I don't know. Thought you might have some insights."
     Anthony: "I don't like my parents. They keep stressing me out."
     Anthony: "I usually just hide stuff from them." 
     Anthony: "They will never understand me anyway, so why bother?"
+    <<jump anthony_options>>
     
 -> "What do you think about what happened last week?" <<if !optionChosen()>>
     Anthony: "That crazy transgender Vera, lah. Want to keep injecting the LGBT everywhere..."
@@ -790,7 +791,10 @@ title: 4_2
         Anthony: "Right?"
         Anthony: "I think if she goes out into the world like this, she confirm kena laughed at."
         Anthony: "Not sure why Eleanor can't see that, honestly."
-<<jump anthony_options>>
+    <<jump anthony_options>>
+
+-> "Never mind." #continue
+    Anthony: "Okay."
 ===
 __PrivCrochet_colorID: 2
 __PrivCrochet_position: 1450,333
@@ -1097,7 +1101,7 @@ title: 5_options
 -> "Okay, I'll leave you to it then." #continue
     Nadia: "Sure. Feel free to come back any time."
 
--> "I'm curious. What's your slogan?"
+-> "I'm curious. What's your slogan?" <<if !optionChosen()>>
     Nadia: "Uh... I'm not sure you'd understand it..."
     You: "Come on. We're all university students."
     Nadia: "No, I don't mean it's very pretentious or whatever! It's in Japanese..."
@@ -1120,14 +1124,14 @@ Nadia: "I mean, uh, sorry, that was not a good thing to ask."
 Nadia: "Anyway, about nerves, I guess so? It's natural, isn't it?"
 You: "Yeah."
 Do you want to tell Nadia more?
-    -> "I'm sorry... I don't think I can say more about it."
+    -> "I'm sorry... I don't think I can say more about it." <<if !optionChosen()>>
         Nadia: "No worries at all. We're all going through stuff."
         <<jump 5_2>>
     -> "I'm sure I'll get over this just like all the other conflicts."
         Nadia: "Yeah, keep telling yourself that. Uh... I'm not being ironic. If you thought I was."
         Nadia: "If you ever want to tell me more, I'm all ears. And no mouth."
         <<jump 5_2>>
-    -> "I'm going to meet my mother about Charlotte."
+    -> "I'm going to meet my mother about Charlotte." <<if !optionChosen()>>
         <<if !getNPCKnows("N")>>
             Nadia: "Huh? Who's Charlotte?"
             You quickly explain your situation to Nadia.
@@ -1149,7 +1153,7 @@ Do you want to tell Nadia more?
         Nadia: "Anyway, I guess all I can say is... good luck, listen to her but also listen to your heart."
         <<jump 5_2>>
     
-    -> "Recently I've been feeling more and more at odds with Charlotte."
+    -> "Recently I've been feeling more and more at odds with Charlotte." <<if !optionChosen()>>
         <<if !getNPCKnows("N")>>
             Nadia: "Huh? Who's Charlotte?"
             You quickly explain your situation to Nadia.
@@ -1222,7 +1226,7 @@ Nadia: "You know how this school is. There's a thousand and one programmes to at
         Nadia: "I'm not holding another leadership position. I just want to make friends here."
         Nadia: "But yeah, enough about me."
         
-    -> "She needed a backbone."
+    -> "She needed a backbone." <<if !optionChosen()>>
         Nadia: "That's not as easy as you make it sound."
         Nadia: "Even discounting all the politics, it's difficult to keep two very strong personalities under control."
         Nadia: "Both sides made good points, and it's hard to tell either of them to leave."

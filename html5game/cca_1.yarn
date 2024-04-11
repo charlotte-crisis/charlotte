@@ -787,22 +787,11 @@ What do you say?
         <<endif>>
         <<jump 2_1_options>>
     
-    -> "It looks nice!" <<if !optionChosen()>>
-        <<changeRelationship("V", 5)>>
-        Vera: "Thank you~ You like rainbows too?" (+5% Vera relationship)
-        You: "I don't see a lot of them around. But yours looks good."
-        Vera: "Yes, the world could do with a lot more colour."
-        Vera: "I guess that's what I want to say through my art, too."
-        Vera: "You should start your drawing! Don't wanna hold you up any longer."
-        // end Vera interaction
+    -> "It looks nice!" <<if !visitedNode("2_1_nice", "cca_1.yarn") and !visitedNode("2_1_excess", "cca_1.yarn")>>
+        <<jump 2_1_nice>>
 
-    -> "It looks excessive." <<if !optionChosen()>>
-        <<changeRelationship("V", -5)>>
-        Vera: "Excuse me?"
-        You: "Yeah. Too many rainbows. And you didn't finish your face."
-        Vera: "Okay, fine. It's just a work in progress."
-        Vera: "But damn, I didn't know you were the sort to take offence at rainbows." (-5% Vera relationship)
-        // end Vera interaction
+    -> "It looks excessive." <<if !visitedNode("2_1_nice", "cca_1.yarn") and !visitedNode("2_1_excess", "cca_1.yarn")>>
+        <<jump 2_1_excess>>
 
     -> "Alright, I'll leave you be then." #continue
         Vera: "See you."
@@ -966,4 +955,29 @@ title: debug_end
 ---
 Skipped to the end.
 <<jump end>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: -199,513
+__PrivCrochet_tags: 
+title: 2_1_nice
+---
+<<changeRelationship("V", 5)>>
+Vera: "Thank you~ You like rainbows too?" (+5% Vera relationship)
+You: "I don't see a lot of them around. But yours looks good."
+Vera: "Yes, the world could do with a lot more colour."
+Vera: "I guess that's what I want to say through my art, too."
+Vera: "You should start your drawing! Don't wanna hold you up any longer."
+// end Vera interaction
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 32,525
+__PrivCrochet_tags: 
+title: 2_1_excess
+---
+<<changeRelationship("V", -5)>>
+Vera: "Excuse me?"
+You: "Yeah. Too many rainbows. And you didn't finish your face."
+Vera: "Okay, fine. It's just a work in progress."
+Vera: "But damn, I didn't know you were the sort to take offence at rainbows." (-5% Vera relationship)
+// end Vera interaction
 ===
