@@ -358,9 +358,6 @@ Sister: "Why do you want to dress as a girl, anyway?"
     <<jump 4_1>>
 
 -> "I don't know."
-    Sister: "Well you gotta have some reason!"
-    Sister: "What, you're telling me that you just woke up one day..."
-    Sister: "And thought to yourself, I want to wear dresses now?"
     <<jump 4_2>>
 
 -> "Why cannot?"
