@@ -466,38 +466,38 @@ Charlotte: "Nonsense. I don't control your life fully."
                 <<jump 3>>
             <<endif>>
 
-        -> "It's very perverted."
-            Charlotte: "Okay, since when were you such a prude?"
-            Charlotte: "And even if I disappear, you're still gonna be attracted to girls."
-            Charlotte: "I'm just making it more fun for you."
-            -> "Normal guys don't do this." #skillcheck #int # 9
-                You: "Why can't I just be normal?"
-                Charlotte: "This is our normal. There's no need to feel ashamed."
-                <<set $diceroll = diceRoll($int)>>
-                You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 9
-                <<if $diceroll >= 9>>                  
-                    You: "Yeah, why don't you tell that to the rest of the world."
-                    You: "How kindly will they take to a man in a dress?"
-                    You: "You think you can change the whole world?"
-                    Charlotte: "I never wanted to - "
-                    You: "Then shut up and fall in line."
-                    <<jump 3>>
-                <<else>>
-                    You: "Yes, there is! This world is judging us and it's all your fault."
-                    You: "You know why? Because this isn't right. Men should be men, women should be women." 
-                    Charlotte: "You're going back to that nonsense after discovering me?" 
-                    <<changeConfidence(-10)>>
-                    Charlotte: "You truly didn't learn a damn thing." (-10% confidence) 
-                    <<jump 3>>
-                <<endif>>  
-    
-            -> "I don't want to be attracted to you."
-                You: "That's so weird and narcissistic."
-                Charlotte: "I never asked for that!"
-                You: "Then why are you so obsessed with feminine presentation?"
-                Charlotte: "It's for us. We can be different. We can be unique."
-                You: "No. It's just a fetish and you're denying it."
+    -> "It's very perverted."
+        Charlotte: "Okay, since when were you such a prude?"
+        Charlotte: "And even if I disappear, you're still gonna be attracted to girls."
+        Charlotte: "I'm just making it more fun for you."
+        -> "Normal guys don't do this." #skillcheck #int # 9
+            You: "Why can't I just be normal?"
+            Charlotte: "This is our normal. There's no need to feel ashamed."
+            <<set $diceroll = diceRoll($int)>>
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 9
+            <<if $diceroll >= 9>>                  
+                You: "Yeah, why don't you tell that to the rest of the world."
+                You: "How kindly will they take to a man in a dress?"
+                You: "You think you can change the whole world?"
+                Charlotte: "I never wanted to - "
+                You: "Then shut up and fall in line."
                 <<jump 3>>
+            <<else>>
+                You: "Yes, there is! This world is judging us and it's all your fault."
+                You: "You know why? Because this isn't right. Men should be men, women should be women." 
+                Charlotte: "You're going back to that nonsense after discovering me?" 
+                <<changeConfidence(-10)>>
+                Charlotte: "You truly didn't learn a damn thing." (-10% confidence) 
+                <<jump 3>>
+            <<endif>>  
+    
+        -> "I don't want to be attracted to you."
+            You: "That's so weird and narcissistic."
+            Charlotte: "I never asked for that!"
+            You: "Then why are you so obsessed with feminine presentation?"
+            Charlotte: "It's for us. We can be different. We can be unique."
+            You: "No. It's just a fetish and you're denying it."
+            <<jump 3>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1657,286
@@ -671,13 +671,15 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
             You: "What Mother knows won't hurt her."
             Charlotte: "I mean, yeah, that's a short term solution."
             Charlotte: "But you know how she insists on cleaning every part of the house, including your room."
-            Charlotte: "She will find our stuff. It's inevitable." (-10% confidence) <<changeConfidence(-10)>>
+            <<changeConfidence(-10)>>
+            Charlotte: "She will find our stuff. It's inevitable." (-10% confidence) 
             <<jump 5>>
 
         -> "I will rely on my accomplishments."
             Charlotte: "Sounds like a good start, I guess. But you have to keep it up." 
             Charlotte: "And a lot of your accomplishments don't involve me..."
-            Charlotte: "So the moment you let me out, she'll still say 'why can't you be normal', right?" (-10% confidence <<changeConfidence(-10)>>
+            <<changeConfidence(-10)>>
+            Charlotte: "So the moment you let me out, she'll still say 'why can't you be normal', right?" (-10% confidence) 
             <<jump 5>>
         
         -> "We can work out a proportion of time."
@@ -692,7 +694,8 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
             Charlotte: "So that means..."
             You: "More androgynous presentation."
             You: "No dresses, lighter makeup. Until she's ready for it."
-            Charlotte: "I guess we can start from there." (+5% confidence) <<changeConfidence(5)>>
+            <<changeConfidence(5)>>
+            Charlotte: "I guess we can start from there." (+5% confidence) 
             <<jump 5>>
     
     -> "I wouldn't sacrifice them for you."
@@ -703,7 +706,8 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
         Charlotte: "I'm your escape away from those memories."
         Charlotte: "I am the transcended version of you."
         Charlotte: "And if you throw me aside, just to return to their fold..."
-        Charlotte: "That is the stupidest move of all." (-15% confidence) <<changeConfidence(-15)>>
+        <<changeConfidence(-15)>>
+        Charlotte: "That is the stupidest move of all." (-15% confidence) 
         <<jump 5>>
 
 -> "I made a promise to Sis. I don't break promises."

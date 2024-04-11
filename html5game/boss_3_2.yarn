@@ -584,16 +584,19 @@ Charlotte: "Why can't you just accept me?"
             You: "Life could be easy. We could have followed societal norms."
             You: "But you chose to make it difficult for me."
         
-        -> "The only one lying here is you."
+        -> "The only one lying here is you." #skillcheck #int # 11
             You: "When people criticise my appearance, they aren't lying."
             You: "There's parts of me I can't change, and they'll target those."
-            (INT < 10)
-            Charlotte: "Then live with them. Take pride in that."
-            Charlotte: "Why should you be faulted for being who you are?"
-            (INT > 10)
-            You: "So why even start on this path? If the costs outweigh the benefits, don't start."
-            Charlotte: "Jokes on you, we've started already."
-            You: "Then I'll burn everything you've built to the ground. It's all me from here on out."
+            <<set $diceroll = diceRoll($int)>>
+            You rolled {diceRollOutcome($int, $diceroll)} (+ {$int} INT)\n Total = {$diceroll} #dice_outcome #int # 11
+            <<if $diceroll < 11>>
+                Charlotte: "Then live with them. Take pride in that."
+                Charlotte: "Why should you be faulted for being who you are?"
+            <<else>>
+                You: "So why even start on this path? If the costs outweigh the benefits, don't start."
+                Charlotte: "Jokes on you, we've started already."
+                You: "Then I'll burn everything you've built to the ground. It's all me from here on out."
+            <<endif>>
         
         -> "I can live without you." #skillcheck #cha # 11
             <<set $diceroll = diceRoll($cha)>>
@@ -710,9 +713,9 @@ Charlotte: "Why are we suddenly forced back into the closet again?"
             Charlotte: "What you don't know is whether you'll ever bring me out again." (-10% confidence)
         <<endif>>
     -> "Who said validation had to come from the family?"
-    You: "We have friends, communities that treasure us."
-    Charlotte: "Yes, and I truly appreciate that."
-    Charlotte: "But for things as crucial as shelter, how much can they really help?"
+        You: "We have friends, communities that treasure us."
+        Charlotte: "Yes, and I truly appreciate that."
+        Charlotte: "But for things as crucial as shelter, how much can they really help?"
         -> "All we need is a small boost."
             You: "It's not like being carried on their back. We will find our own way, eventually."
             You: "And, you underestimate the importance of just a shoulder to cry on."
@@ -917,9 +920,9 @@ Charlotte: "How are you sure the next time won't be the same?"
             You: "With enough waterworks I think we stand a chance."
             Charlotte: "Hmm... I'm not too sure about that, but okay. Better prepare your tear ducts."
     -> "I'm sure we can reach a compromise."
-    You: "Drawing the lines between me and you. Limiting your time out in the sun."
-    Charlotte: "Well, if that's what it takes... I guess that'll do."
-    Charlotte: "But you're giving her an inch here. Don't let her take a mile."
+        You: "Drawing the lines between me and you. Limiting your time out in the sun."
+        Charlotte: "Well, if that's what it takes... I guess that'll do."
+        Charlotte: "But you're giving her an inch here. Don't let her take a mile."
 -> "I'll improve my empathy."
     Charlotte: "This is the hardest one."
     Charlotte: "She wants me gone. How much more empathy can you provide to her?"
