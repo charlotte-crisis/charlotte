@@ -671,13 +671,15 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
             You: "What Mother knows won't hurt her."
             Charlotte: "I mean, yeah, that's a short term solution."
             Charlotte: "But you know how she insists on cleaning every part of the house, including your room."
-            Charlotte: "She will find our stuff. It's inevitable." (-10% confidence) <<changeConfidence(-10)>>
+            <<changeConfidence(-10)>>
+            Charlotte: "She will find our stuff. It's inevitable." (-10% confidence) 
             <<jump 5>>
 
         -> "I will rely on my accomplishments."
             Charlotte: "Sounds like a good start, I guess. But you have to keep it up." 
             Charlotte: "And a lot of your accomplishments don't involve me..."
-            Charlotte: "So the moment you let me out, she'll still say 'why can't you be normal', right?" (-10% confidence <<changeConfidence(-10)>>
+            <<changeConfidence(-10)>>
+            Charlotte: "So the moment you let me out, she'll still say 'why can't you be normal', right?" (-10% confidence) 
             <<jump 5>>
         
         -> "We can work out a proportion of time."
@@ -692,7 +694,8 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
             Charlotte: "So that means..."
             You: "More androgynous presentation."
             You: "No dresses, lighter makeup. Until she's ready for it."
-            Charlotte: "I guess we can start from there." (+5% confidence) <<changeConfidence(5)>>
+            <<changeConfidence(5)>>
+            Charlotte: "I guess we can start from there." (+5% confidence) 
             <<jump 5>>
     
     -> "I wouldn't sacrifice them for you."
@@ -703,7 +706,8 @@ Charlotte: "Really? Is that what you want? Your happiness comes before theirs."
         Charlotte: "I'm your escape away from those memories."
         Charlotte: "I am the transcended version of you."
         Charlotte: "And if you throw me aside, just to return to their fold..."
-        Charlotte: "That is the stupidest move of all." (-15% confidence) <<changeConfidence(-15)>>
+        <<changeConfidence(-15)>>
+        Charlotte: "That is the stupidest move of all." (-15% confidence) 
         <<jump 5>>
 
 -> "I made a promise to Sis. I don't break promises."
