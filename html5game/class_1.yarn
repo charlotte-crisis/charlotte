@@ -196,7 +196,7 @@ Chenjie: "The semester's barely started and I already have a backlog."
 <<jump 10_options>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 2197,356
+__PrivCrochet_position: 2198,356
 __PrivCrochet_tags: 
 title: 11
 ---
@@ -949,7 +949,7 @@ title: 20_options
 ---
 What do you say?
 
--> "I'm crossdressing."
+-> "I'm crossdressing." <<if !optionChosen()>>
     Sister: "I know that. I have eyes."
     The words over text feel sharp and angry.
     No, it's okay. Your sister is just sharp-tongued sometimes.

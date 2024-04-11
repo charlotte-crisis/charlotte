@@ -163,72 +163,7 @@ Chenjie: "Well, you see, the thing is I'm planning to do that thing where you wo
     Chenjie: "There are even some countries that give out digital nomad visas."
 Chenjie: "I've started some freelance as a graphic designer."
 Chenjie: "After graduation, I'll get a good momentum going, and the first place I want to go to is Switzerland!"
--> "Why Switzerland first?"
-    Chenjie smiles shyly.
-    Chenjie: "Actually, it's because it's my mom's dream vacation spot. So I want to go there with her before setting off on my digital nomad journey."
-    Chenjie: "She said she watched a cartoon as a kid about the Swiss Alps so she'd always dreamed of going there."
-    You: "That's so sweet of you."
-    Chenjie: "Well, my mom is the strongest pillar in my life. I wouldn't have been able to make it without her hard work."
-    Chenjie: "It's only right to repay her for everything she's done and sacrificed for me."
-    You: "You two sound close!"
-    Chenjie: "Yeah, we are. We talk a lot and have very similar tastes in music and movies."
-    Chenjie: "So I'll bet we'll have a blast in Switzerland together."
-    It seems Chenjie has a really good relationship with his mom.
-    -> Literally could not be me.
-        <<changeConfidence(-5)>>
-        <<changeRelationship("CJ", -5)>>
-        You find yourself jealous of Chenjie. (-5% confidence) (-5% Chenjie relationship)
-    -> Maybe things with my family will be the same if I open up?
-        <<changeConfidence(5)>>
-        You have hope things will work out well. (+5% confidence)
-    -> Maybe things with my family will be the same if I stop this Charlotte thing.
-        Who knows?
-    -> Maybe things with my family will be the same if I hide Charlotte.
-        Who knows?
--> "When do you think that would be?"
-    Chenjie: "Maybe a year or so from now?" 
-    Chenjie: "I've done a lot of part-time and freelance work before."
-    Chenjie: "So I have quite a bit saved up."
-    Chenjie: "I'm waiting till I can afford to travel about 9 months without income."
-    Chenjie: "That way I'll still have some savings if things get rough!"
-
--> "What made you choose that kind of lifestyle?"
-    Chenjie: "I don't know, isn't there just so much in the world you want to see?"
-    Chenjie: "Singapore is so small, but the world is so big!"
-    Chenjie: "I want to be able to experience what it's like living in different parts of the world while I'm young."
-    Chenjie: "There are so many different cultures, and different people. Staying in Singapore forever is too restrictive."
-    Chenjie: "You get me?"
-    
-    -> "Now I want to do that too."
-        Chenjie: "Haha! Yeah, it's going to be so exciting."
-        Chenjie: "You'll need to do a lot of research and preparation for it."
-        <<changeRelationship("CJ", 5)>>
-        Chenjie: "But it'll be so worth it." (+5% Chenjie relationship)
-    
-    -> "Many other countries are also more accepting of people like me."
-        Chenjie: "Exactly. Staying cooped up in Singapore. It's really not the most accepting."
-        <<addExperience(5)>>
-        Chenjie: "People like you might have a better time in places like Europe, Taiwan or something." (+5 XP)
-        Chenjie: "Not sure about America though. It sounds scary over there."
-        
-        -> "Yeah, it sounds volatile."
-            Chenjie: "Right?"
-        
-        -> "It's the land of the free though."
-            You: "It's way better than what Singapore has going on."
-            Chenjie: "In some ways, that is true."
-        
-        -> "Maybe, but it's worth it."
-            You: "Where there are opportunities, there will also be risk."
-            You: "It's about whether you'll take the leap of faith."
-            Chenjie: "That makes sense."
-    
-    -> "Nah, I'm quite happy in Singapore."
-        Chenjie: "Well, to each their own, right?"
-        Chenjie: "Singapore is also like no other place."
-        Chenjie: "If you like this country, it's hard to move out of it."
-        Chenjie: "There's still nowhere else like home."
-<<jump 1_options>>
+<<jump 1_2_1>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 904,-426
@@ -437,4 +372,88 @@ On that warm note, he leaves.
 <<addExperience(30)>>
 (+30 XP)
 <<goto_room_bedroom_afterHangout()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1080,-657
+__PrivCrochet_tags: 
+title: 1_2_1
+---
+-> "Why Switzerland first?" <<if !optionChosen()>>
+    Chenjie smiles shyly.
+    Chenjie: "Actually, it's because it's my mom's dream vacation spot. So I want to go there with her before setting off on my digital nomad journey."
+    Chenjie: "She said she watched a cartoon as a kid about the Swiss Alps so she'd always dreamed of going there."
+    You: "That's so sweet of you."
+    Chenjie: "Well, my mom is the strongest pillar in my life. I wouldn't have been able to make it without her hard work."
+    Chenjie: "It's only right to repay her for everything she's done and sacrificed for me."
+    You: "You two sound close!"
+    Chenjie: "Yeah, we are. We talk a lot and have very similar tastes in music and movies."
+    Chenjie: "So I'll bet we'll have a blast in Switzerland together."
+    It seems Chenjie has a really good relationship with his mom.
+    -> Literally could not be me.
+        <<changeConfidence(-5)>>
+        <<changeRelationship("CJ", -5)>>
+        You find yourself jealous of Chenjie. (-5% confidence) (-5% Chenjie relationship)
+        <<jump 1_2_1>>
+    -> Maybe things with my family will be the same if I open up?
+        <<changeConfidence(5)>>
+        You have hope things will work out well. (+5% confidence)
+        <<jump 1_2_1>>
+    -> Maybe things with my family will be the same if I stop this Charlotte thing.
+        Who knows?
+        <<jump 1_2_1>>
+    -> Maybe things with my family will be the same if I hide Charlotte.
+        Who knows?
+        <<jump 1_2_1>>
+-> "When do you think that would be?" <<if !optionChosen()>>
+    Chenjie: "Maybe a year or so from now?" 
+    Chenjie: "I've done a lot of part-time and freelance work before."
+    Chenjie: "So I have quite a bit saved up."
+    Chenjie: "I'm waiting till I can afford to travel about 9 months without income."
+    Chenjie: "That way I'll still have some savings if things get rough!"
+    <<jump 1_2_1>>
+
+-> "What made you choose that kind of lifestyle?" <<if !optionChosen()>>
+    Chenjie: "I don't know, isn't there just so much in the world you want to see?"
+    Chenjie: "Singapore is so small, but the world is so big!"
+    Chenjie: "I want to be able to experience what it's like living in different parts of the world while I'm young."
+    Chenjie: "There are so many different cultures, and different people. Staying in Singapore forever is too restrictive."
+    Chenjie: "You get me?"
+    
+    -> "Now I want to do that too." 
+        Chenjie: "Haha! Yeah, it's going to be so exciting."
+        Chenjie: "You'll need to do a lot of research and preparation for it."
+        <<changeRelationship("CJ", 5)>>
+        Chenjie: "But it'll be so worth it." (+5% Chenjie relationship)
+        <<jump 1_2_1>>
+    
+    -> "Many other countries are also more accepting of people like me."
+        Chenjie: "Exactly. Staying cooped up in Singapore. It's really not the most accepting."
+        <<addExperience(5)>>
+        Chenjie: "People like you might have a better time in places like Europe, Taiwan or something." (+5 XP)
+        Chenjie: "Not sure about America though. It sounds scary over there."
+        
+        -> "Yeah, it sounds volatile."
+            Chenjie: "Right?"
+            <<jump 1_2_1>>
+        
+        -> "It's the land of the free though."
+            You: "It's way better than what Singapore has going on."
+            Chenjie: "In some ways, that is true."
+            <<jump 1_2_1>>
+        
+        -> "Maybe, but it's worth it."
+            You: "Where there are opportunities, there will also be risk."
+            You: "It's about whether you'll take the leap of faith."
+            Chenjie: "That makes sense."
+            <<jump 1_2_1>>
+    
+    -> "Nah, I'm quite happy in Singapore."
+        Chenjie: "Well, to each their own, right?"
+        Chenjie: "Singapore is also like no other place."
+        Chenjie: "If you like this country, it's hard to move out of it."
+        Chenjie: "There's still nowhere else like home."
+        <<jump 1_2_1>>
+
+-> "Let's talk about something else."
+    <<jump 1_options>>
 ===
