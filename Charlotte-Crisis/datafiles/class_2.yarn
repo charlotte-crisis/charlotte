@@ -924,7 +924,7 @@ __PrivCrochet_position: 2097,291
 __PrivCrochet_tags: 
 title: 14_options
 ---
--> "What constitutes a serious relationship?"
+-> "What constitutes a serious relationship?" <<if !optionChosen()>>
     Chenjie: "I guess saying officially that you are going out and dating?"
     Chenjie: "So far, I've only ever gone out on maybe one or two dates with some girls."
     Chenjie: "But that's about it..."

@@ -739,13 +739,13 @@ __PrivCrochet_position: -172,172
 __PrivCrochet_tags: 
 title: 6_options
 ---
--> "It's hard to even find any LGBTQ characters in Singapore media."
+-> "It's hard to even find any LGBTQ characters in Singapore media." <<if !optionChosen()>>
     You: "I feel like we just sort of... ignore the existence of LGBTQ people in general, even in media."
     Chenjie: "Yeah, that's why there are hardly any queer characters, and when they do appear, they're... perverts and stuff..." 
     Joanne: "Yeah, representation just isn't great."
     <<jump 6_options>>
 
--> "But what good LGBTQ representation is there in Singapore?"
+-> "But what good LGBTQ representation is there in Singapore?" <<if !optionChosen()>>
     Sage: "I really don't think there are any."
     Joanne: "I think there are... For example, influencers."
     Chenjie: "Yeah, I think it's definitely more lax if you are an independent creator or something."
@@ -782,12 +782,11 @@ __PrivCrochet_position: 132,612
 __PrivCrochet_tags: 
 title: 10_options
 ---
--> "How did his family find out that he's gay?"
+-> "How did his family find out that he's gay?" <<if !optionChosen()>>
     Sage: "His cousin told on him to his parents after seeing a TikTok of him at Pink Dot."
     You: "Oh..."
     Doesn't that sound familiar to you? 
-    <<set $diceroll = diceRoll($int)>>
-    <<if $diceroll >= 10>>
+    <<if $int >= 6>>
         The irony also doesn't escape your notice.
         <<changeConfidence(-5)>>
         <<addExperience(5)>>
@@ -816,7 +815,7 @@ title: 10_options
         This is really weighing on Sage.
         <<jump 10_options>>
 
--> "How is he paying for uni?"
+-> "How is he paying for uni?" <<if !optionChosen()>>
     Sage: "He's on a full-ride scholarship."
     Chenjie: "Then he doesn't have to drop out, right?"
     Sage: "That's what I told him too..."
@@ -825,7 +824,7 @@ title: 10_options
     Sage: "... I guess so."
     <<jump 10_options>>
 
--> "Why did he text you just now?"
+-> "Why did he text you just now?" <<if !optionChosen()>>
     Sage: "He is trying to sneak home to get some of his stuff from his room."
     Sage: "He's worried his parents might change the locks so he said he's doing it tonight."
     Just thinking about it makes you sick.
