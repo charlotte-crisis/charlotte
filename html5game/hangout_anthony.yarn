@@ -24,7 +24,7 @@ Anthony: "Engineering."
 <<jump 1_1_options>>
 ===
 __PrivCrochet_colorID: 2
-__PrivCrochet_position: 2085,5
+__PrivCrochet_position: 2084,7
 __PrivCrochet_tags: 
 title: 1_2
 ---
@@ -34,7 +34,7 @@ Anthony: "Just draw, play video games, maybe go gym once in a while."
 -> "How often do you go to the gym?"
     <<jump 1_2_1>>
 
--> "Is that why you're in Art Club?"
+-> "Is that why you're in Art Club?" <<if !optionChosen()>>
     <<jump 1_2_2>>
 
 -> "What kind of games do you like to play?"
@@ -140,7 +140,7 @@ Anthony: "I just don't shove my lifestyle in other people's faces."
 <<jump 1_3_2_options>>
 ===
 __PrivCrochet_colorID: 3
-__PrivCrochet_position: 2317,865
+__PrivCrochet_position: 2316,862
 __PrivCrochet_tags: 
 title: 1_3_3
 ---
@@ -242,11 +242,11 @@ __PrivCrochet_tags:
 title: 1_1_1_options
 ---
 What do you say?
--> "Do you like it?"
+-> "Do you like it?" <<if !optionChosen()>>
     <<jump 1_1_1_1>>
--> "Do you like your friends there?"
+-> "Do you like your friends there?" <<if !optionChosen()>>
     <<jump 1_1_1_2>>
--> "Then why did you pick this?"
+-> "Then why did you pick this?" <<if !optionChosen()>>
     <<jump 1_1_1_3>>
 -> "Let's talk about something else."
     <<jump 1_1_options>>
@@ -367,12 +367,12 @@ __PrivCrochet_position: 2038,-499
 __PrivCrochet_tags: 
 title: 1_1_2_options
 ---
-What do you say?
--> "You're really limiting your choices."
+What do you say? 
+-> "You're really limiting your choices." <<if !optionChosen()>>
     <<jump 1_1_2_1>>
--> "There's gotta be stuff outside of work you can do, right?"
+-> "There's gotta be stuff outside of work you can do, right?" <<if !optionChosen()>>
     <<jump 1_1_2_2>>
--> "Don't you think there's something fundamentally wrong with the system, then?"
+-> "Don't you think there's something fundamentally wrong with the system, then?" <<if !optionChosen()>>
     <<jump 1_1_2_3>>
 -> "Let's talk about something else."
     <<jump 1_1_options>>
@@ -501,7 +501,7 @@ Anthony: "All some people know how to do is complain. I hope you're not like tha
 <<jump 1_1_2_options>>
 ===
 __PrivCrochet_colorID: 2
-__PrivCrochet_position: 2511,-527
+__PrivCrochet_position: 2511,-529
 __PrivCrochet_tags: 
 title: 1_2_1_1
 ---
@@ -589,7 +589,7 @@ Anthony: "I knew it. I'm just weak." (-5% Anthony relationship)
 <<jump 1_2_1_options>>
 ===
 __PrivCrochet_colorID: 2
-__PrivCrochet_position: 2627,-87
+__PrivCrochet_position: 2628,-87
 __PrivCrochet_tags: 
 title: 1_2_1_3
 ---
@@ -618,16 +618,16 @@ Anthony: "How to get them? All the guys are above my strength level."
 <<jump 1_2_1_options>>
 ===
 __PrivCrochet_colorID: 2
-__PrivCrochet_position: 2244,-318
+__PrivCrochet_position: 2238,-323
 __PrivCrochet_tags: 
 title: 1_2_1_options
 ---
 What do you say?
--> "You won't succeed if you give up."
+-> "You won't succeed if you give up." <<if !optionChosen()>>
     <<jump 1_2_1_1>>
--> "Yeah, maybe gymming isn't your thing."
+-> "Yeah, maybe gymming isn't your thing." <<if !optionChosen()>>
     <<jump 1_2_1_2>>
--> "Do you have gym buddies?"
+-> "Do you have gym buddies?" <<if !optionChosen()>>
     <<jump 1_2_1_3>>
 -> "Let's talk about something else."    
     <<jump 1_2>>
@@ -638,11 +638,11 @@ __PrivCrochet_tags:
 title: 1_2_3_options
 ---
 What do you say?
--> "Wow. That was a lot of complaints."
+-> "Wow. That was a lot of complaints." <<if !optionChosen()>>
     <<jump 1_2_3_1>>
--> "Maybe focus on what you like about those games?"
+-> "Maybe focus on what you like about those games?" <<if !optionChosen()>>
     <<jump 1_2_3_2>>
--> "You ever tried gacha games?"
+-> "You ever tried gacha games?" <<if !optionChosen()>>
     <<jump 1_2_3_3>>
 -> "Let's talk about something else."
     <<jump 1_2>>
@@ -674,7 +674,7 @@ Anthony: "It's true. Those games don't do well."
 <<jump 1_2_3_options>>
 ===
 __PrivCrochet_colorID: 2
-__PrivCrochet_position: 3042,504
+__PrivCrochet_position: 3040,502
 __PrivCrochet_tags: 
 title: 1_2_3_2
 ---
@@ -696,7 +696,7 @@ Anthony: "Just search on Google Images if you're so despo."
 <<jump 1_2_3_options>>
 ===
 __PrivCrochet_colorID: 3
-__PrivCrochet_position: 2101,599
+__PrivCrochet_position: 2100,599
 __PrivCrochet_tags: 
 title: 1_3_options
 ---
@@ -705,28 +705,28 @@ What do you say?
     <<jump 1_3_1>>
 -> "Your experiences being rejected must really hurt."
     <<jump 1_3_2>>
--> "Yeah, you need to own up to your behaviour."
+-> "Yeah, you need to own up to your behaviour." <<if !optionChosen()>>
     <<jump 1_3_3>>
 -> "Let's talk about something else."
     <<jump 1_options>>
 ===
 __PrivCrochet_colorID: 3
-__PrivCrochet_position: 1588,900
+__PrivCrochet_position: 1585,898
 __PrivCrochet_tags: 
 title: 1_3_1_options
 ---
 What do you say?
--> "Yeah, that does sound kinda unfair."
+-> "Yeah, that does sound kinda unfair." <<if !optionChosen()>>
     <<jump 1_3_1_1>>
--> "How does that make you feel?"
+-> "How does that make you feel?" <<if !optionChosen()>>
     <<jump 1_3_1_2>>
--> "You sure that's the only thing you did?"
+-> "You sure that's the only thing you did?" <<if !optionChosen()>>
     <<jump 1_3_1_3>>
 -> "Let's talk about something else."
     <<jump 1_3_options>>
 ===
 __PrivCrochet_colorID: 3
-__PrivCrochet_position: 1319,1014
+__PrivCrochet_position: 1319,1012
 __PrivCrochet_tags: 
 title: 1_3_1_1
 ---
@@ -764,7 +764,7 @@ Anthony: "So you tell me. What should I feel?"
 <<jump 1_3_1_options>>
 ===
 __PrivCrochet_colorID: 3
-__PrivCrochet_position: 1631,1233
+__PrivCrochet_position: 1629,1232
 __PrivCrochet_tags: 
 title: 1_3_1_3
 ---
@@ -834,11 +834,11 @@ __PrivCrochet_tags:
 title: 1_3_2_options
 ---
 What do you say?
--> "You know, it really isn't too late."
+-> "You know, it really isn't too late." <<if !optionChosen()>>
     <<jump 1_3_2_1>>
--> "Maybe you could learn from other people."
+-> "Maybe you could learn from other people." <<if !optionChosen()>>
     <<jump 1_3_2_2>>
--> "I'm sorry to hear that."
+-> "I'm sorry to hear that." <<if !optionChosen()>>
     <<jump 1_3_2_3>>
 -> "Let's talk about something else."
     <<jump 1_3_options>>
