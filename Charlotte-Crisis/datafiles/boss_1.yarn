@@ -19,7 +19,7 @@ Sister: "I have so many questions."
 
 -> "You'd better watch what you ask."
     <<changeRelationship("Si", -5)>>
-    Sister: "Woah, why so defensive?" // (-5% Sister relationship)
+    Sister: "Woah, why so defensive?" (-5% Sister relationship)
 
 Sister: "You're lucky our parents are out this weekend."
 Sister: "If not, there's no way we could meet like this, without their intervention."
@@ -80,7 +80,7 @@ Sister: "You wouldn't want things to blow up at home, would you?"
 -> "Screw her and screw you."
     Sister: "You weren't always like this. What happened?"
     <<changeRelationship("Si", -5)>>
-    Sister: "It's like I don't even have a brother anymore." // (-5% Sister relationship)
+    Sister: "It's like I don't even have a brother anymore." (-5% Sister relationship)
     Sister takes a while to compose herself, before asking the next question.
     <<jump 4>>
 ===
