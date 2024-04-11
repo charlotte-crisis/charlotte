@@ -180,9 +180,9 @@ Joanne: "Sorry for rambling on. I know guys don't get it, but it's really import
                     Joanne: "That's just the way I am." (-5% Joanne relationship)
                     <<set $diceroll = diceRoll($int)>>
                     <<if $diceroll >= 7>> 
-                    She's using he/him pronouns even when talking about trans women...)
-                    It seems like she won't budge on this issue.
-                    But neither will you.
+						She's using he/him pronouns even when talking about trans women...
+						It seems like she won't budge on this issue.
+						But neither will you.
                     <<endif>>
                 -> "I'm not just a man who wears a dress."
                     You: "I think I'm trans, and I'm trying to figure things out myself."
