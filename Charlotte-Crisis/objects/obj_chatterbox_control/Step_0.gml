@@ -25,7 +25,7 @@ if (obj_player.is_talking) && !obj_player.is_interacting {
 		}
 		
 	// only debug
-	} else if (ChatterboxIsWaiting(chatterbox) && keyboard_check_pressed(vk_enter)) {
+	} else if (ChatterboxIsWaiting(chatterbox) && keyboard_check_pressed(vk_backspace)) {
 		ChatterboxFastForward(chatterbox);
 		chatterbox_update();
 	}
