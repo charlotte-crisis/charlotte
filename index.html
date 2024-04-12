@@ -22,14 +22,18 @@
 
         <!-- Set the background colour of the document -->
         <style>
+            .warning {
+                color: red;
+            }
             body {
+				text-align: center;
                 background: #0;
-                color: #cccccc;
+                color: #000000;
                 margin: 0px;
                 padding: 0px;
                 border: 0px;
             }
-
+            
             canvas {
                 image-rendering: optimizeSpeed;
                 -webkit-interpolation-mode: nearest-neighbor;
@@ -46,6 +50,14 @@
             :-webkit-full-screen {
                 width: 100%;
                 height: 100%;
+            }
+            
+            #gm4html5_div_id:target {
+                display: block;
+            }
+            
+            #gm4html5_div_id {
+                display: none;
             }
             
             /* Custom Runner Styles */
@@ -90,16 +102,39 @@
     
 
     <body>
+		<h1>The Charlotte Crisis</h1>
+        <div>
+            <p>
+                The Charlotte Crisis is a game done for a Communications and New Media practice-based honours thesis.
+            </p>
+            <p>
+                Writer, Designer, Producer: Jiayu<br>
+                
+                Artist, Writer: Nicole<br>
+                
+                Designer, Programmer: Zhan Hong<br>
+                
+                Supervisor: Tan Kai En
+            </p>
+        </div>
+        <p class="warning">TRIGGER WARNING: This game contains depictions of transphobia and homophobia.</p>
+        <form action="#gm4html5_div_id">
+            <input type="submit" value="Play the Game" />
+        </form>
+
         <div class="gm4html5_div_class" id="gm4html5_div_id">
             
             <!-- Builtin injector for splash screen -->
             
 
             <!-- Create the canvas element the game draws to -->
-            <canvas id="canvas" width="960" height="720" style="position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; transform: translate(-50%, -50%);">
+            <canvas id="canvas" width="960" height="720" style="margin-top: 10%; margin-bottom: 10%">
                 <p>Your browser doesn't support HTML5 canvas.</p>
             </canvas>
         </div>
+        
+        <p><-- <a href="https://github.com/charlotte-crisis/charlotte">Back to GitHub Repository</a></p>
+        
 
         <!-- Run the game code -->
         <script type="text/javascript" src="html5game/Charlotte-Crisis.js?cachebust=529645441"></script>
