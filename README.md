@@ -17,8 +17,8 @@ Esc to pause the game.
 In menus: Arrow keys to select, Space to confirm
 
 ## Debug Controls:
-Press enter to skip through dialogue
-Stops at the next option.
+Press Backspace to skip through dialogue (Skips to the next option,
+may cause unintended interactions).
 
 S to Save
 L to Load
