@@ -3,9 +3,10 @@ The project file. Contains the source code, art assets, and other documentation.
 
 # Info
 We periodically release the game's executable under Releases.
-We also host the game on HTML5 on our github page: https://charlotte-crisis.github.io/charlotte/
+Download the latest `.exe` file: https://github.com/charlotte-crisis/charlotte/releases
+The game is also playable in rowsers (HTML5): https://charlotte-crisis.github.io/charlotte/
 
-Gamemaker project is under the file `Charlotte-Crisis`
+Gamemaker project is under the directory `Charlotte-Crisis`
 
 # Controls
 Arrow keys left and right to move.
