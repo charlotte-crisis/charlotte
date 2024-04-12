@@ -1,5 +1,5 @@
-# charlotte
-The project file
+# The Charlotte Crisis
+The project file. Contains the source code, art assets, and other documentation.
 
 # Info
 We periodically release the game's executable under Releases.
