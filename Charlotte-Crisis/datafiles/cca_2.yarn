@@ -787,10 +787,10 @@ Anthony: "That bitch, Vera."
 Anthony: "I'm so close to telling the whole world about her dirty little secret."
 You: "Wait, what's that?"
 Anthony: "Haven't you seen? She is actually he. How can a woman be taller than me, and have such a deep voice?"
--> "Yes, you should spread the word. The people must know." <<if !visitedNode("12_1", "cca_2.yarn") and !visitedNode("12_2, cca_2.yarn")>>
+-> "Yes, you should spread the word. The people must know." <<if !visitedNode("12_1", "cca_2.yarn") and !visitedNode("12_2, "cca_2.yarn")>>
     <<jump 12_1>>
     
--> "What the fuck, Anthony?" <<if !visitedNode("12_1", "cca_2.yarn") and !visitedNode("12_2, cca_2.yarn")>>
+-> "What the fuck, Anthony?" <<if !visitedNode("12_1", "cca_2.yarn") and !visitedNode("12_2, "cca_2.yarn")>>
     <<jump 12_2>>
 
 -> "I don't want to talk about this right now." #continue
@@ -882,11 +882,11 @@ __PrivCrochet_tags:
 title: 11_options
 ---
 What will you say?
--> "Relax, he's on his way out anyway." <<if !visitedNode("11_1", "cca_2.yarn") and !visitedNode("11_2, cca_2.yarn")>>
+-> "Relax, he's on his way out anyway." <<if !visitedNode("11_1", "cca_2.yarn") and !visitedNode("11_2, "cca_2.yarn")>>
     Nadia: "Well, we're still down to only 3 people. Excluding Eleanor."
     <<jump 11_1>>
 
--> "I think it's a damn shame if he leaves." <<if !visitedNode("11_1", "cca_2.yarn") and !visitedNode("11_2, cca_2.yarn")>>
+-> "I think it's a damn shame if he leaves." <<if !visitedNode("11_1", "cca_2.yarn") and !visitedNode("11_2, "cca_2.yarn")>>
     <<jump 11_2>>
 
 -> "I know how you feel, but we'll get over this."
