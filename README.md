@@ -10,17 +10,6 @@ The game is playable on Web currently and require keyboard inputs.
 
 Gamemaker project is under the directory `Charlotte-Crisis`
 
-## Known Issues
-The current release of the game on HTML5 and the executable are updated
-as of 12 April 2024, 1200hrs, corresponding to the final deadline
-of our thesis submission. However, some known issues have been found, which
-we will list down here and address after the grading period.
-
-Note that the bugs have been fixed in the source code. If you wish to play
-the game without these issues, you may run the game in GameMaker.
-
-1. Week 2 CCA: Talking to Anthony or Nadia at the end will cause the game to crash.
-
 # Controls
 Arrow keys left and right to move.
 Space to advance dialogue
